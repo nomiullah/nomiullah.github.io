@@ -172,7 +172,6 @@ function collisionDetection(b){
 
 // Copyright Year
 var cYear = new Date().getFullYear();
-console.log(cYear);
 $('.footnote .highlight').append(cYear);
 
 // Swiper Slider

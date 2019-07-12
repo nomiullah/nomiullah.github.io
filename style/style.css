@@ -1485,6 +1485,10 @@ footer .footnote .highlight {
 }
 
 @media screen and (max-width: 768px) {
+  section {
+    line-height: 18pt;
+    font-size: 12pt;
+  }
   .flex .me {
     width: 280px;
     height: auto !important;
@@ -1509,5 +1513,27 @@ footer .footnote .highlight {
   }
   .achievements h5 {
     line-height: 29px;
+  }
+  nav .link-wrap div {
+    line-height: 15px;
+  }
+  #portfolio .filter {
+    font-size: 9pt;
+    padding: 0 14px;
+  }
+  .modal-wrap .modal {
+    max-width: 100% !important;
+  }
+  .carousel-wrap {
+    width: 100% !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #about .flex.row {
+    flex-wrap: wrap;
+  }
+  #about .flex.bullet-wrap {
+    margin-bottom: 20px;
   }
 }
