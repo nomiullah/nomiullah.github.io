@@ -868,19 +868,21 @@ section .container {
   cursor: pointer;
   transition: opacity .5s;
 }
+@media screen and (min-width:600px){
+  #portfolio #gallery .mix:hover .card {
+    opacity: 0;
+  }
+  
+  #portfolio #gallery .mix:hover .text {
+    opacity: 1;
+    top: 24%;
+  }
 
-#portfolio #gallery .mix:hover .card {
-  opacity: 0;
-}
+  #portfolio #gallery .mix:hover .button {
+    opacity: 1;
+    bottom: 24%;
+  }
 
-#portfolio #gallery .mix:hover .text {
-  opacity: 1;
-  top: 24%;
-}
-
-#portfolio #gallery .mix:hover .button {
-  opacity: 1;
-  bottom: 24%;
 }
 
 section .flex-50-gt-sm {
