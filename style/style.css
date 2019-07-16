@@ -428,13 +428,12 @@ nav .active {
 }
 
 .modal-wrap .close {
-  bottom: 25px;
-  right: 10px;
   color: #bbb;
   font-size: 20pt;
-  position: absolute;
   font-weight: 800;
   cursor: pointer;
+  position: absolute;
+  right: 16px;
 }
 
 .modal-wrap .info-box {
@@ -442,6 +441,10 @@ nav .active {
   padding: 15px 10px 85px 10px;
   box-sizing: border-box;
   color: #444;
+}
+
+.modal-wrap .info-box .left-title {
+  width: 90%;
 }
 
 .modal-wrap .title {
@@ -1477,6 +1480,10 @@ footer .footnote .highlight {
   padding: 10px 20px;
 }
 
+#portfolio #gallery .mix .button i {
+  display: none;
+}
+
 @media screen and (min-width: 1280px) {
   #blog .blog-wrap {
     width: 270px;
@@ -1526,6 +1533,34 @@ footer .footnote .highlight {
   }
   .carousel-wrap {
     width: 100% !important;
+  }
+}
+@media screen and (max-width: 599px) {
+  #portfolio #gallery .mix .button {
+    opacity: 1;
+    font-size: 0;
+    background: #08d827;
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    right: 0;
+    left: auto;
+    bottom: 0;
+  }
+  #portfolio #gallery .mix:hover .button {
+    bottom: 1;
+  }
+  #portfolio #gallery .mix .button i {
+    display: inline-block;
+    margin-top: 3px;
+    font-size: 44px;
+    color: #fff;
+  }
+  #portfolio #gallery .mix:hover .card {
+    display: none;
+  }
+  #portfolio #gallery .mix:hover .text {
+    display: none;
   }
 }
 
