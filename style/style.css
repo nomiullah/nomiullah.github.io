@@ -1131,6 +1131,9 @@ footer .footnote .highlight {
     right: 0;
     margin: 0 auto;
   }
+  nav.fixed .link-wrap {
+    text-align: right;
+  }
   nav .link-wrap .visible {
     height: initial;
   }
@@ -1486,13 +1489,50 @@ footer .footnote .highlight {
   display: none;
 }
 
+.logo {
+  position: fixed;
+  top: 30px;
+  -webkit-transition: all ease 0.1s;
+  -moz-transition: all ease 0.1s;
+  -ms-transition: all ease 0.1s;
+  -o-transition: all ease 0.1s;
+  transition: all ease 0.1s;
+}
+
+body.scroll-up nav:not(.fixed) .logo {
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+  transform: scale(0);
+}
+
+nav.fixed.desk .link-wrap {
+  text-align: right;
+}
+nav.fixed .logo {
+  position: absolute;
+  left: 15%;
+  top: 10px;
+}
+
+@media screen and (max-width: 1400px) {
+  nav.fixed .logo {
+    left: 7%;
+  }
+}
+
 @media screen and (min-width: 1280px) {
   #blog .blog-wrap {
     width: 270px;
     margin: 0 0 50px 20px;
   }
 }
-
+@media screen and (max-width: 1000px) {
+  nav.fixed .logo {
+    left: 2%;
+  }
+}
 @media screen and (max-width: 768px) {
   section {
     line-height: 18pt;
@@ -1523,9 +1563,6 @@ footer .footnote .highlight {
   .achievements h5 {
     line-height: 29px;
   }
-  nav .link-wrap div {
-    line-height: 15px;
-  }
   #portfolio .filter {
     font-size: 9pt;
     padding: 0 14px;
@@ -1538,6 +1575,12 @@ footer .footnote .highlight {
   }
 }
 @media screen and (max-width: 599px) {
+  nav.fixed.desk .link-wrap {
+    text-align: left;
+  }
+  nav .link-wrap div {
+    line-height: 15px;
+  }
   #portfolio #gallery .mix .button {
     opacity: 1;
     font-size: 0;

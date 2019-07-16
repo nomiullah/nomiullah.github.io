@@ -169,22 +169,23 @@ $(function() {
 
 });
 
-// Resize Functions
-function resizeFunc(){
-  if($(window).width() <600){
-    // $('#portfolio #gallery .mix').each(function(){
-    //     $(this).wrap( "<div class='new-mix'></div>" );
-    // })
-    // $('#portfolio #gallery .mix').click(function(e){
-    //   e.preventDefault();
-    //   console.log('mix');
-    // });
-    // $('#portfolio #gallery .card').click(function(b){
-    //   b.preventDefault();
-    //   console.log('card');
-    // });
+// scroll function 
+function scrollFunction(){
+  if($(window).scrollTop() > 100){
+   $('body').addClass('scroll-up');
+  }else{
+    $('body').removeClass('scroll-up');
   }
 }
+
+// Resize Functions
+function resizeFunc(){
+  
+}
+
+$(window).scroll(function(){
+  scrollFunction();
+});
 
 $(document).ready(function(){
   resizeFunc();
