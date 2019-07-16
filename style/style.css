@@ -800,7 +800,6 @@ section .container {
 }
 
 #portfolio #gallery .mix {
-  display: none;
   position: relative;
 }
 
@@ -869,10 +868,13 @@ section .container {
   transition: opacity .5s;
 }
 @media screen and (min-width:600px){
+  #portfolio #gallery .mix {
+    display: none;
+  }
   #portfolio #gallery .mix:hover .card {
     opacity: 0;
   }
-  
+
   #portfolio #gallery .mix:hover .text {
     opacity: 1;
     top: 24%;
