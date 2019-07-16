@@ -800,6 +800,7 @@ section .container {
 }
 
 #portfolio #gallery .mix {
+  display: none;
   position: relative;
 }
 
@@ -868,9 +869,6 @@ section .container {
   transition: opacity .5s;
 }
 @media screen and (min-width:600px){
-  #portfolio #gallery .mix {
-    display: none;
-  }
   #portfolio #gallery .mix:hover .card {
     opacity: 0;
   }
@@ -1559,9 +1557,6 @@ footer .footnote .highlight {
     margin-top: 3px;
     font-size: 44px;
     color: #fff;
-  }
-  #portfolio #gallery .mix:hover .card {
-    display: none;
   }
   #portfolio #gallery .mix:hover .text {
     display: none;
