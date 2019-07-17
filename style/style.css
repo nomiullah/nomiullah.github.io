@@ -329,7 +329,7 @@ nav .link-wrap div:hover {
   color: #08d827;
 }
 
-nav .mdi-menu {
+nav .mdi-menu, nav a.skype {
   position: absolute;
   right: 5vw;
   margin: auto 0;
@@ -1131,9 +1131,6 @@ footer .footnote .highlight {
     right: 0;
     margin: 0 auto;
   }
-  nav.fixed .link-wrap {
-    text-align: right;
-  }
   nav .link-wrap .visible {
     height: initial;
   }
@@ -1231,6 +1228,12 @@ footer .footnote .highlight {
   }
   #contact form {
     min-width: 500px;
+  }
+}
+
+@media screen and (max-width: 960px) and (min-width: 600px) {
+  nav .link-wrap div {
+    margin: 0 7px;
   }
 }
 
@@ -1507,18 +1510,25 @@ body.scroll-up nav:not(.fixed) .logo {
   transform: scale(0);
 }
 
-nav.fixed.desk .link-wrap {
-  text-align: right;
-}
 nav.fixed .logo {
   position: absolute;
   left: 15%;
   top: 10px;
 }
+nav a.skype {
+  right: 15%;
+}
+
+nav:not(.fixed) a.skype {
+  display: none;
+}
 
 @media screen and (max-width: 1400px) {
   nav.fixed .logo {
     left: 7%;
+  }
+  nav a.skype {
+    right: 7%;
   }
 }
 
@@ -1531,6 +1541,9 @@ nav.fixed .logo {
 @media screen and (max-width: 1000px) {
   nav.fixed .logo {
     left: 2%;
+  }
+  nav a.skype {
+    right: 2%;
   }
 }
 @media screen and (max-width: 768px) {
@@ -1575,11 +1588,17 @@ nav.fixed .logo {
   }
 }
 @media screen and (max-width: 599px) {
+  nav a.skype {
+    display: none;
+  }
   nav.fixed.desk .link-wrap {
     text-align: left;
   }
   nav .link-wrap div {
     line-height: 15px;
+  }
+  nav.fixed .logo {
+    left: 5%;
   }
   #portfolio #gallery .mix .button {
     opacity: 1;
