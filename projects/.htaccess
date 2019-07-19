@@ -1,2 +1,7 @@
-Order deny,allow
-Deny from all
+RewriteEngine On
+# check if request is for subdomain
+RewriteCond %{HTTP_HOST} ^nomiullah.github.io/projects$ [NC]
+# check if  'test' isnt part of request
+RewriteCond %{REQUEST_URI} !^/test/?(.*)$ [NC]
+# if subdomain and no 'test' part, redirect to main domain...
+RewriteRule ^(.*)$ https://www.nomiullah.github.io/$1 [R,L]
