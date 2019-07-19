@@ -550,6 +550,15 @@ section .container {
   line-height: 20pt;
   z-index: 1;
   pointer-events: none;
+  min-height: 80px;
+}
+
+#home .text-type {
+  text-align: center;
+}
+
+#home .text-type b {
+  color: #08d827;
 }
 
 #home .hexagon {
@@ -1553,7 +1562,7 @@ nav:not(.fixed) a.skype {
     font-size: 12pt;
   }
   .flex .me {
-    width: 280px;
+    width: 240px;
     height: auto !important;
   }
   #home .button {
