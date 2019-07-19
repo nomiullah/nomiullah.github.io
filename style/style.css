@@ -1604,6 +1604,7 @@ nav:not(.fixed) a.skype {
   }
   #home .text {
     margin-bottom: 10px;
+    font-size: 15pt;
   }
 }
 @media screen and (max-width: 599px) {
