@@ -1,2 +1,1 @@
-Order allow,deny
-Deny from all
+Redirect 301 / www.google.com/
