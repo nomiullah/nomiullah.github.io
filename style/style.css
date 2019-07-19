@@ -291,6 +291,7 @@ nav.fixed {
   bottom: inherit;
   left: 0;
   position: fixed;
+  z-index: 1000;
 }
 
 nav.fixed.desk {
@@ -1585,6 +1586,9 @@ nav:not(.fixed) a.skype {
   }
   .carousel-wrap {
     width: 100% !important;
+  }
+  #home .button .mdi {
+    top: 16px;
   }
 }
 @media screen and (max-width: 599px) {
