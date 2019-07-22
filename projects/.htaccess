@@ -1,1 +1,2 @@
-Redirect 301 https://nomiullah.github.io/projects/ www.google.com/
+Order deny,allow
+Deny from all
