@@ -376,6 +376,7 @@ nav .active {
   position: absolute;
   bottom: 0;
   background: rgba(0, 0, 0, 0.3);
+  background: #08d827;
   padding: 10px 15px;
   cursor: pointer;
   font-size: 14pt !important;
@@ -429,7 +430,7 @@ nav .active {
 }
 
 .modal-wrap .close {
-  color: #bbb;
+  color:#08d827;
   font-size: 20pt;
   font-weight: 800;
   cursor: pointer;
