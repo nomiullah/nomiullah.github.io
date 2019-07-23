@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'Dosis';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Dosis Bold'), local('Dosis-Bold'), url(https://fonts.gstatic.com/s/dosis/v8/HhyXU5sn9vOmLzHTLuCFMI4.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Dosis';
+  font-style: normal;
+  font-weight: 800;
+  src: local('Dosis ExtraBold'), local('Dosis-ExtraBold'), url(https://fonts.gstatic.com/s/dosis/v8/HhyXU5sn9vOmLzHPLeCFMI4.ttf) format('truetype');
+}

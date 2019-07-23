@@ -1,0 +1,36 @@
+@font-face {
+  font-family: 'Gothic A1';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Gothic A1 Light'), local('GothicA1-Light'), url(https://fonts.gstatic.com/s/gothica1/v7/CSR44z5ZnPydRjlCCwlCwOU6T_N-.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Gothic A1';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Gothic A1 Regular'), local('GothicA1-Regular'), url(https://fonts.gstatic.com/s/gothica1/v7/CSR94z5ZnPydRjlCCwlKa8cq.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Gothic A1';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Gothic A1 Medium'), local('GothicA1-Medium'), url(https://fonts.gstatic.com/s/gothica1/v7/CSR44z5ZnPydRjlCCwlCmOQ6T_N-.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Gothic A1';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Gothic A1 SemiBold'), local('GothicA1-SemiBold'), url(https://fonts.gstatic.com/s/gothica1/v7/CSR44z5ZnPydRjlCCwlCtOM6T_N-.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Gothic A1';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Gothic A1 Bold'), local('GothicA1-Bold'), url(https://fonts.gstatic.com/s/gothica1/v7/CSR44z5ZnPydRjlCCwlC0OI6T_N-.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Gothic A1';
+  font-style: normal;
+  font-weight: 800;
+  src: local('Gothic A1 ExtraBold'), local('GothicA1-ExtraBold'), url(https://fonts.gstatic.com/s/gothica1/v7/CSR44z5ZnPydRjlCCwlCzOE6T_N-.ttf) format('truetype');
+}
