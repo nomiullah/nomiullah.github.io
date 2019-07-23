@@ -1,2 +1,0 @@
-<br />
-<b>Fatal error</b>:  Interface 'WPSEO_Admin_Asset_Location' not found in <b>/home/junaida1/public_html/asifmajeed.com/projects/dmc/wp-content/plugins/wordpress-seo/admin/class-admin-asset-seo-location.php</b> on line <b>11</b><br />
