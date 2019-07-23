@@ -1,0 +1,81 @@
+.main_header {
+	position:fixed;
+	bottom:0;
+	width:100%;
+	height:80px;
+	background: #e72d8f; 
+	background: -moz-linear-gradient(-45deg, #e72d8f 0%, #e72d8f 49%, #ec6b5b 54%, #ec6b5b 100%); 
+	background: -webkit-linear-gradient(-45deg, #e72d8f 0%,#e72d8f 49%,#ec6b5b 54%,#ec6b5b 100%); 
+	background: linear-gradient(135deg, #e72d8f 0%,#e72d8f 49%,#ec6b5b 54%,#ec6b5b 100%); 
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e72d8f', endColorstr='#ec6b5b',GradientType=1 ); 
+	transition:all 300ms;
+	z-index:20;
+
+	.navbar-default {
+		min-height:0;
+		margin: 0;
+		background-color: transparent;
+		border:0;
+	}
+	.navbar-default .navbar-brand {
+		padding: 0;
+		margin: 28px 0 0 0;
+		height: auto;
+	
+		img {
+			width:150px;
+			height:25px;
+		}
+	}
+	.navbar-default .navbar-nav > li > a {
+		padding: 35px 48px 35px 0;
+		font-size: $body_FontSize - 6;
+		font-family: $primary_FontFamily;
+		color: $primary_TextColor;
+		text-transform: uppercase;
+		&:hover {
+			color: $body_Bg;
+			@media ( max-width:$tablet_Small ) { color:$primary_TextColor; background-color: #ff6600; }
+		}
+
+		@media ( max-width:$tablet_Wide ) { padding:35px 20px 35px 0; }
+		@media ( max-width:$tablet_Small ) { padding:10px 0 15px 15px; }
+	}
+	.navbar-default .navbar-nav > li:last-child {
+		padding-right: 0;
+	}
+	.navbar-default .navbar-toggle {
+		border-color: #b71b6d;
+		margin:25px 0 21px 0;
+	}
+	.navbar-default .navbar-toggle .icon-bar {
+		background-color:#fff;	
+	}
+	.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+		background-color: #e72d8f;
+	}
+	.collapse.in {
+		@media ( max-width:$tablet_Small ) { position:fixed !important; bottom:80px !important; width:95.5%; }
+		@media ( max-width:$phone_wide ) { width:94%; }
+		@media ( max-width:$phone_Medium ) { width:93%; }
+		@media ( max-width:$phone_Small ) { width:91%; }
+		
+	}
+	.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+		@media ( max-width:$tablet_Small ) { background-color: $body_Bg; border-color: transparent; }
+	}
+}
+
+.main_header.fixed {
+	background: #e72d8f; 
+	background: -moz-linear-gradient(-45deg,  #e72d8f 0%, #e7308c 19%, #e83e81 37%, #ea5270 51%, #ea5270 70%, #ea5270 83%, #ec6a5c 100%);
+	background: -webkit-linear-gradient(-45deg,  #e72d8f 0%,#e7308c 19%,#e83e81 37%,#ea5270 51%,#ea5270 70%,#ea5270 83%,#ec6a5c 100%); 
+	background: linear-gradient(135deg,  #e72d8f 0%,#e7308c 19%,#e83e81 37%,#ea5270 51%,#ea5270 70%,#ea5270 83%,#ec6a5c 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e72d8f', endColorstr='#ec6a5c',GradientType=1 );
+	.collapse.in {
+		position:relative !important;
+		width:initial !important;
+		bottom:0 !important;
+	}
+}
+

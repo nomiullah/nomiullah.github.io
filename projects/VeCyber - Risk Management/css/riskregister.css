@@ -1,0 +1,121 @@
+/*-------------------------------Risk management-------------------------------*/
+
+.content .risk-management-content { padding:0 24px; }
+.content .risk-management-content .risk-management-right { float:left;width:67.2%; max-width:100%; }
+.content .risk-management-content .risk-management-right .add-new { padding:23px 20.5px 21px 20.5px; text-align:right;}
+.content .risk-management-content .risk-management-right .add-new a {  opacity: 0.74;font-size: 14px;font-weight: 500;color: #000000; line-height:16px; text-decoration:none; }
+.content .risk-management-content .risk-management-right .risk-manage-table {background-color: #ffffff;box-shadow: -2px 2px 2px 0 rgba(119, 151, 178, 0.16); }
+.content .risk-management-content .risk-management-right .risk-manage-table table { width:100%;}
+.content .risk-management-content .risk-management-right .risk-manage-table table thead { border-bottom:1px solid #e4e4e4;}
+.content .risk-management-content .risk-management-right .risk-manage-table table .filters { display:inline-block; margin:0 0 0 9px; position:relative;}
+.content .risk-management-content .risk-management-right .risk-manage-table table .filters a { background:none; padding:0px; }
+.content .risk-management-content .risk-management-right .risk-manage-table table .filters ul { position:absolute;width: 94px;height: 131px;border-radius: 2px;background-color: #fafafa;box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.24), 0 0 2px 0 rgba(0, 0, 0, 0.12); z-index:9; top:23px; left:-15px;}
+.content .risk-management-content .risk-management-right .risk-manage-table table .filters ul li { display:block;}
+.content .risk-management-content .risk-management-right .risk-manage-table table .filters ul li a { line-height:32px;opacity: 0.54; font-size: 14px;text-align: left;color: #000000; padding:0 15px; display:block;}
+.content .risk-management-content .risk-management-right .risk-manage-table table .filters ul li a:hover { background-color: #eeeeee;  opacity: 0.87;}
+
+.content .risk-management-content .risk-management-right .risk-manage-table table th { padding:15px 0 14px 0;}
+.content .risk-management-content .risk-management-right .risk-manage-table table th a { opacity: 0.54; font-size: 14px; font-weight: 500;text-align: left;color: #000000; text-decoration:none; padding-right:16px; background:url(../images/sort-icon-1.png) right center no-repeat;}
+.content .risk-management-content .risk-management-right .risk-manage-table table th a.sortable { background:url(../images/sort-icon-2.png) right center no-repeat;}
+.content .risk-management-content .risk-management-right .risk-manage-table table th:first-child{ padding-left:23px; }
+
+.content .risk-management-content .risk-management-right .risk-manage-table table tr { border-bottom:1px solid #e4e4e4;}
+.content .risk-management-content .risk-management-right .risk-manage-table table td { padding:16px 0 15px 0; opacity: 0.8;font-size: 13px;color: #000000; }
+.content .risk-management-content .risk-management-right .risk-manage-table table tbody tr:hover { background:#f4f4f4; cursor:pointer;}
+.content .risk-management-content .risk-management-right .risk-manage-table table td:first-child{ padding-left:23px; }
+.content .risk-management-content .table-data { max-height:950px;}
+.content .risk-management-content .table-data .mCSB_inside > .mCSB_container { margin:0px;}
+.content .risk-management-content .table-data .mCSB_scrollTools { display:none; width:3px; background:transparent; right:3px; bottom:3px;}
+.content .risk-management-content .table-data .mCS-rounded.mCSB_scrollTools .mCSB_dragger { height:50px; background:#a4a4a4; border-radius:0px;}
+.content .risk-management-content .table-data .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar { display:none; }
+.content .risk-management-content .risk-management-left { width:31.15%;background-color: #ffffff;box-shadow: -2px 2px 2px 0 rgba(119, 151, 178, 0.16); float:left; margin:64px 0 0 16px; padding:0 24px;}
+.content .risk-management-content .risk-management-left .nav-tabs { margin-bottom:21px; border-bottom:1px solid #e4e4e4;}
+.content .risk-management-content .risk-management-left .nav-tabs li { margin:0px; padding:0px; width:50%;}
+.content .risk-management-content .risk-management-left .nav-tabs li a { padding:21px 12px 10px 12px; border:0px; border-radius:0px;opacity: 0.54; font-size: 12px;font-weight: 500;text-align: center;color: #000000; background:none; }
+.content .risk-management-content .risk-management-left .nav-tabs li.active a { border-bottom:2px solid #77c546; opacity: 0.8; margin-bottom:-1px;}
+.content .risk-management-content .risk-management-left .top-detail { margin-bottom:24px;}
+.content .risk-management-content .risk-management-left .top-detail label { opacity: 0.54;font-size: 12px;font-weight: 500; color: #000000; display:block; margin:0px;}
+.content .risk-management-content .risk-management-left .top-detail .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) { width:auto; vertical-align:top; margin-top:5px; }
+.content .risk-management-content .risk-management-left .top-detail .bootstrap-select>.dropdown-toggle { margin:0px; padding:0 12px 0 0; border:0px; background:url(../images/dropdown-arrow.png) right center no-repeat; line-height:12px; }
+.content .risk-management-content .risk-management-left .top-detail .bs-caret { display:none; }
+.top-detail  .btn-default.active.focus,.top-detail  .btn-default.active:focus, .top-detail .btn-default.active:hover, .top-detail .btn-default:active.focus,.top-detail  .btn-default:active:focus,.top-detail  .btn-default:active:hover, .top-detail .open>.dropdown-toggle.btn-default.focus,.top-detail  .open>.dropdown-toggle.btn-default:focus, .top-detail .open>.dropdown-toggle.btn-default:hover ,.top-detail .btn-default:hover ,.top-detail .btn-group.open .dropdown-toggle  ,.top-detail  .btn-default.focus, .top-detail  .btn-default:focus{ background:none; box-shadow:none; outline:none; }
+.top-detail .dropdown-menu { box-shadow:none; margin:0px; padding:0px; border:0px; outline:none;  width: 94px;
+border-radius: 2px;background-color: #fafafa;box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.24), 0 0 2px 0 rgba(0, 0, 0, 0.12); left:-15px; margin-top:9px;}
+.top-detail .dropdown-menu>li>a:focus,.top-detail  .dropdown-menu>li>a:hover { outline:none; }  
+.top-detail .dropdown-menu>li>a { opacity: 0.54;font-size: 14px;line-height:32px;text-align: left;color: #000000; }
+.top-detail .dropdown-menu>li>a:hover { background:#eeeeee; opacity:0.87;}
+.top-detail .btn-default.active,  .top-detail .btn-default:active,  .top-detail .open>.dropdown-toggle.btn-default {background:none;}
+.top-detail .bootstrap-select .dropdown-toggle:focus { outline: none !important;}
+.top-detail .status-detail { display:inline-block; width:72px; vertical-align:top;}
+.top-detail .bootstrap-select.btn-group .dropdown-toggle .filter-option { font-size:12px; font-weight:500;}
+.top-detail .bootstrap-select.btn-group .dropdown-menu li a { padding:0 15px; }
+.severity-detail { display:inline-block; width:79px;}
+.severity-detail .filter-option { font-size:12px; font-weight:500; color:#c62522;}
+.duedate-detail { display:inline-block; width:100px; position:relative;}
+.duedate-detail input[type="text"] { border:0px; margin:0px; padding:0px; opacity: 0.8;font-family: Roboto;font-size: 12px; padding-bottom: 3px;
+  font-weight: 500;color: #000000; outline:none; background:none; max-width:100%; }
+.title-detail { margin-bottom:12px; padding-bottom: 4px; min-height: 58px;}
+.title-detail.editable { border-bottom: 1px solid #e4e4e4; }
+.editable.empty { border-bottom: 0px; }
+.editable.empty label { border-bottom: 1px solid #e4e4e4; padding-bottom: 2px; }
+.title-detail label {opacity: 0.54;font-size: 12px;font-weight: 500;text-align: left;color: #000000; margin-bottom:3px; display: block; }
+.title-detail p { opacity: 0.8;font-size: 12px;font-weight: 500;line-height:16px;text-align: left;color: #000000; margin: 0px; }
+.desc-detail { margin-bottom:22px; min-height: 155px; position: relative; }
+.desc-detail label {opacity: 0.54;font-size: 12px;font-weight: 500;text-align: left;color: #000000;margin-bottom:3px;display: block; }
+.desc-detail p { opacity: 0.8;font-size: 12px;text-align: left;color: #000000; padding-bottom:4px; border-bottom:1px solid #e4e4e4; line-height:16px; }
+.creadtedby { width:126px; display:inline-block; margin-bottom:20px; }
+.creadtedby label {opacity: 0.54;font-size: 12px;font-weight: 500;text-align: left;color: #000000; display:block; margin-bottom:3px; }
+.creadtedby strong { opacity: 0.8;font-size: 12px;font-weight: 500;text-align: left;color: #000000; display:block;}
+.duedate-detail input[type="text"].date-pick { border-bottom:1px solid #e4e4e4; background: url(../images/callender-icon.png) right top no-repeat; }
+.form-action-btn { text-align: right; padding:0 27px; border-top:1px solid #e4e4e4; margin:0 -24px;  }
+.form-action-btn ul { margin: 0;padding:10px 4px;  }
+.form-action-btn ul li { margin:0 0 0 16px; display: inline-block; }
+.form-action-btn ul li a { opacity: 0.54;font-size: 12px;font-weight: 500;letter-spacing: 0px;color: #000000;text-decoration: none;}
+.form-action-btn ul li a.save{opacity: 0.74;font-size: 12px;font-weight: 500;letter-spacing: 0px;color: #000000;}
+.content .risk-management-content .risk-management-left label.error { position: absolute;font-size: 10px;text-align: left;color: #c62522; opacity: 1; padding-top: 3px; border: 0px; }
+.content .risk-management-content .risk-management-left .desc-detail label.error{padding-top: 0;}
+
+
+
+/*Callender Style*/
+.ui-datepicker,
+.ui-datepicker-material-header {  }
+.ui-datepicker-material-header { display: block; background-color: #284B72; color: white; text-align: center; width: 325px; }
+.ui-datepicker-material-header .ui-datepicker-material-day { background-color: #1F3A58; padding: 10px; font-size: 1rem; }
+.ui-datepicker-material-header .ui-datepicker-material-date { padding: 20px; }
+.ui-datepicker-material-header .ui-datepicker-material-date .ui-datepicker-material-month,
+.ui-datepicker-material-header .ui-datepicker-material-date .ui-datepicker-material-day-num,
+.ui-datepicker-material-header .ui-datepicker-material-date .ui-datepicker-material-year { padding: 5px; }
+.ui-datepicker-material-header .ui-datepicker-material-date .ui-datepicker-material-month { font-size: 2rem; text-transform: uppercase; }
+.ui-datepicker-material-header .ui-datepicker-material-date .ui-datepicker-material-day-num { font-size: 4.5rem; }
+.ui-datepicker-material-header .ui-datepicker-material-date .ui-datepicker-material-year { font-size: 1.8rem; font-weight: 200; color: rgba(255, 255, 255, 0.4); }
+.ui-datepicker { width: 335px; border-radius: 2px;background-color: #ffffff;box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.16), 0 2px 5px 0 rgba(0, 0, 0, 0.26);}
+.ui-corner-all { border-radius: 0; }
+.ui-widget-header { border: 0; }
+.ui-datepicker-header { text-align: center; background: white; padding-bottom: 15px; font-weight: 300; }
+.ui-datepicker-header .ui-datepicker-prev,
+.ui-datepicker-header .ui-datepicker-next,
+.ui-datepicker-header .ui-datepicker-title { border: none; outline: none; margin: 5px; }
+.ui-datepicker-prev.ui-state-hover,
+.ui-datepicker-next.ui-state-hover { border: none; outline: none; background: #b4cbe5; }
+.ui-datepicker-calendar .ui-state-default { background: none; border: none; text-align: center; height: 36px; width: 36px; line-height: 33px;opacity: 0.87;font-size: 13px;color: rgba(0, 0, 0, 0.87); }
+.ui-datepicker-calendar .ui-state-highlight { color: #284B72; }
+.ui-datepicker-calendar .ui-state-active { border-radius: 50%; background-color: #77c546; color: white; opacity:1;}
+.ui-datepicker-calendar thead th {opacity: 0.87;font-size: 13px;text-align: center;color: rgba(0, 0, 0, 0.87); }
+.ui-datepicker-buttonpane { border: none; }
+.ui-datepicker-buttonpane .ui-state-default { background: white; border: none; }
+.ui-datepicker-buttonpane .ui-datepicker-close,
+.ui-datepicker-buttonpane .ui-datepicker-current { background: white; color: #284B72; text-transform: uppercase; border: none; opacity: 1; font-weight: 200; outline: none; }
+.ui-datepicker-buttonpane .ui-datepicker-close:hover,
+.ui-datepicker-buttonpane .ui-datepicker-current:hover { background: #b4cbe5; }
+.ui-datepicker table thead { background-color: #eeeeee; }
+.ui-widget.ui-widget-content { padding:0px; }                                        
+ 
+
+@media only screen and (max-width:1280px) {
+	.content .risk-management-content .risk-management-left { width:100%; margin-left:0px;}
+	.content .risk-management-content .risk-management-right { width:100%;} 
+}
+
+
+ 

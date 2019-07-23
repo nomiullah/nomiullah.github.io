@@ -1,0 +1,43 @@
+header {
+  margin: 0px;
+  background: #fff;
+  position: fixed;
+  width: 100%;
+  z-index: 1; }
+  header .logo {
+    float: left;
+    width: 166px;
+    padding: 28px 0px 0 0; }
+  header .header-menu {
+    float: right;
+    width: 391px;
+    padding: 20px 0px 17px 0; }
+    header .header-menu ul {
+      margin: 0px;
+      padding: 0px; }
+      header .header-menu ul li {
+        float: left;
+        list-style: none;
+        margin-right: 32px; }
+        header .header-menu ul li:last-child {
+          margin: 0px; }
+        header .header-menu ul li a {
+          font-size: 14px;
+          text-decoration: none;
+          color: #575656;
+          text-transform: uppercase;
+          display: inline-block;
+          line-height: 43px; }
+          header .header-menu ul li a:hover {
+            color: #61c0bd; }
+      header .header-menu ul .joinus a {
+        color: #61c0bd;
+        padding: 0 24px;
+        border: 1px solid #61c0bd;
+        border-radius: 2px;
+        line-height: 38px; }
+        header .header-menu ul .joinus a:hover {
+          background: #61c0bd;
+          color: #fff; }
+
+/*# sourceMappingURL=header.css.map */

@@ -1,0 +1,119 @@
+ .header {
+     padding: 40px 40px 40px 33px;
+     position: fixed;
+     top: 0;
+     width: 100%;
+    z-index: 9;
+    transition: all ease 0.4s;
+    
+    @include tablet {
+        padding-left: 25px;
+        padding-right: 17px;
+    }
+    @include mobile {
+        padding:21px 6px; 
+    }
+     &__row {
+         @include flexbox;
+         @include justify-content(space-between);
+         @include align-items(center);
+         @include align-content(center);
+         @include mobile {
+             padding: 8px;
+            border-radius: 10px;
+            background-color: #79828b;
+         }
+     }
+
+     &__menu {
+         height: 50px;
+         border-radius: 25px;
+         background-color: rgba(0, 0, 0, 0.4);
+         width: calc(100% - 140px);
+         padding: 0 32px 0 19px;
+         @include flexbox;
+         @include justify-content(space-between);
+         @include align-items(center);
+         @include align-content(center);
+         @include tablet {
+             width: calc(100% - 107px);   
+             height: 40px;
+            }
+        @include mobile {
+            height: auto;
+            padding: 0 9px 0 0;
+            background: none;
+            width: calc(100% - 54px); 
+
+        }
+         ul {
+             margin: 0;
+             padding: 0;
+             font-size: 0;
+             li {
+                 display: inline-block;
+                 a {
+                     font-size: 17px;
+                     font-weight: bold;
+                     text-align: center;
+                     color: #ffffff;
+                     text-decoration: none;
+                     padding: 0 26px;
+                     text-transform: uppercase;
+                     @include transition(all ease 0.4s);
+                     &:hover {
+                         color: #ffeb00;
+                     }
+                     @include tablet-small {
+                        padding: 0 10px;
+                    }
+                     @include mobile {
+                        font-size: 13px;
+                        font-weight: 500;
+                    }
+                 }
+             }
+         }
+     }
+     &.header-scrolled { 
+        .header__menu {
+            background-color: #79828b;
+        }
+    }
+     &__btn {
+         border-radius: 24px;
+         background-color: #ffeb00;
+         min-width: 120px;
+         @include tablet {
+           min-width: 96px;  
+         }
+         @include mobile {
+            border-radius: 4px;
+            background-color: #f8e71c;
+            min-width: 48px;
+         }
+         a {
+             line-height: 50px;
+             padding: 0 30px;
+             display: block;
+             font-size: 19px;
+             font-weight: bold;
+             text-transform: uppercase;
+             text-decoration: none;
+             color: #010101;
+             background: url(../images/app-icon.svg) 72% center no-repeat;
+             background-size: 19px;
+             @include tablet { 
+                 padding: 0 15px;
+                 line-height: 40px;
+             }
+             @include mobile {
+                 font-size: 12px;
+                 line-height: 18px;
+                 background: url(../images/app-icon.svg) 93% center no-repeat;
+                padding: 0 5px;
+                background-size: 40%;
+             }
+         }
+     }
+ }

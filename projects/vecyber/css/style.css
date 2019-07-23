@@ -1,0 +1,209 @@
+* { margin:0px; padding:0px; box-sizing:border-box; }
+body { margin:0px; padding:0px; font-family: 'Roboto', sans-serif; background:#f1f1f1; }
+.clear { clear:both;}
+.wrapper {}
+
+
+/*------------------Header------------------*/
+
+header { background: #383949; min-height:64px; margin:0;}
+header .logo {  padding:12px 0 13px 30px; position:absolute; left:0; }
+header .header-menu { width:400px; margin:0 auto;}
+header .header-menu ul { margin:0px; padding:0px; }
+header .header-menu ul li { display:inline-block; margin:0 -4px 0 0; padding:0px; }
+header .header-menu ul li a { padding:21px 53px 16px 74px;font-size: 13px;line-height:24px;letter-spacing: normal;text-align: center;
+text-decoration:none; display:inline-block; border-bottom:3px solid transprent; color:#9b9b9b;}
+header .header-menu ul li a.msplink {background:url(../images/fill-2.png) 52px center no-repeat; }
+header .header-menu ul li.active a.msplink,header .header-menu ul li a.msplink:hover {background:url(../images/fill-1.png) 52px center no-repeat; border-bottom:3px solid #76c345; color:#ffffff; }
+header .header-menu ul li a.companies { background:url(../images/customers-icon-inactive.png) 52px center no-repeat;}
+header .header-menu ul li.active a.companies ,header .header-menu ul li a.companies:hover{ background:url(../images/customers-icon-active.png) 52px center no-repeat; border-bottom:3px solid #76c345; color:#ffffff; }
+header .header-menu ul li:last-child { margin-right:0px;}
+
+
+/*--------------------1-MSP-Existing----------------------*/
+
+.content {}
+.content .add-new-asp { text-align:right; margin:13px 0 11px 0; }
+.content .add-new-asp a { display:inline-block;opacity: 0.8;font-size: 14px;font-weight: normal;line-height:40px;color: #000000;/* background:url(../images/add-icon.png) left center no-repeat;*/ padding:0 10px 0 0; text-decoration:none; outline:none; }
+.content .asp-data-detail {background-color: #ffffff;box-shadow: -2px 2px 2px 0 rgba(119, 151, 177, 0.16); width:100%;}
+.content table { width:100%;}
+.content table tr { border-bottom:1px solid #e7e7e7;}
+.content table th { padding:16px 0 14px 20px; opacity: 0.54;font-size: 14px;font-weight: 500;font-style: normal; color: #000000; text-decoration:none; }
+.content table th a {font-size: 14px;font-weight: 500;font-style: normal; color: #000000; text-decoration:none; background:url(../images/sort-icon-1.png) right center no-repeat; padding:0 16px 0 0; display:inline-block;} 
+.content table th a.sortable { background:url(../images/sort-icon-2.png) right center no-repeat;}
+.content table td { padding:16px 0 15px 20px; opacity: 0.8; font-size: 13px;  font-weight: normal;  letter-spacing: normal; color: #000000; text-decoration:none; line-height:19px; } 
+
+
+/*--------------------Add New Msp Popup----------------------*/
+
+.modal-backdrop { background:none;}
+.modal { background-color:rgba(0,0,0,0.7); text-align:left; }
+.modal .modal-dialog {width: 612px; border-radius: 2px; background-color: #fafafa; box-shadow: 0 19px 38px 0 rgba(0, 0, 0, 0.3), 0 15px 12px 0 rgba(0, 0, 0, 0.22); border-style: solid;  border-width: 0.5px;border-image-source: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.4) 5%, rgba(255, 255, 255, 0) 20%, rgba(255, 255, 255, 0));border-image-slice: 1; margin-top:178px;}
+.modal .modal-dialog .modal-content { box-shadow:none; border:0px; border-radius:0px; background:transparent;}
+.modal .modal-dialog .modal-content .modal-header { background-color: #f1f1f1; font-size: 18px; font-weight: normal;color:rgba(0,0,0,0.8); padding:27px 0 25px 24px; text-align:left; border:0px; border-radius:2px 2px 0 0; }
+.modal .modal-dialog .modal-content .modal-body { padding:57px 25px;}
+.form-field { position:relative; margin:0 0 46px 0;}
+.form-field label {  opacity: 0.54;font-size: 14px;font-weight: normal; color: #000000; margin:0px; position:absolute; top:0px; left:0px;-moz-transition: color 0.3s, top 0.3s; -o-transition: color 0.3s, top 0.3s; -webkit-transition: color 0.3s, top 0.3s;transition: color 0.3s, top 0.3s;}
+.form-field label.error {  right:0; top:0; text-align:right; font-size:14px; color:#f00; left:auto;}
+.form-field input[type="text"] ,.form-field input[type="url"],.form-field input[type="tel"],.form-field input[type="email"],.form-field input[type="password"] { width:100% !important; background:none; opacity: 0.87;font-size: 14px;font-weight: normal;letter-spacing: normal;color: #000000; border:0px; outline:none; border-bottom: solid 2px rgba(0, 0, 0, 0.12); line-height:20px; padding:0 0 4px 0;}
+.form-field label.active { top:-20px;}
+.form-field input[type="text"]:focus ,.form-field input[type="tel"]:focus ,.form-field input[type="email"]:focus ,.form-field input[type="password"]:focus ,.form-field input[type="url"]:focus { border-color:#76c345;}
+.form-field.half-width { width:265px; display:inline-block; margin-right:23px; vertical-align:top;}
+.form-field.half-width.no-margin { margin-right:0px;}
+ .form-field.search-field { background:url(../images/search-icon.png) right top no-repeat;}
+.content .temp-password {}
+.content .temp-password a {font-size: 12px;font-weight: 500; line-height:12px;color: #444444; display:inline-block; text-decoration:none; text-transform:uppercase; padding-right:28px;}
+.content .temp-password strong { opacity: 0.8;font-size: 14px;font-weight: 500; line-height:23px;color: #000000; margin:14px 0 0 0; display:block; }
+.content .temp-password span {opacity: 0.8;font-size: 12px;line-height:14px;color: #000000; display:inline-block;}
+  
+  
+.modal .modal-footer { border:0px; padding:7px 25px 24px 25px; text-align:left;}
+button { line-height:36px; background:none; border:0px;font-size: 14px; font-weight: 500; letter-spacing: 0px; text-align: center; color: #444444; padding:0 23.5px; outline:none;}
+button.blue { border-radius:3px; background:#039be5; color:#fff;}
+.ui-widget.ui-widget-content { z-index:99999;max-height: 145px;border-radius: 2px;background-color: #f4f4f4;border: solid 1px #dbdbdb; overflow-y:scroll;}
+.form-field input[type="text"].select{ background:url(../images/ic-arrow-drop-down-icon.png) 98% center no-repeat; cursor:pointer;}
+.form-field .zip-field { position:relative; width:46px; float:left; margin:0 19px 0 0; }
+.form-field .city-field { position:relative; width:130px; float:left;margin:0 20px 0 0; }
+.form-field .state-field { position:relative; width:50px; float:left;margin:0; }
+.form-field.no-bottom-margin { margin-bottom:0px;}
+.form-field strong { margin-bottom:27px;  opacity: 0.8; font-size: 14px;font-weight: 500; display:block; color: #000000;}
+.form-field ul { margin:0px; padding:0px; }
+.form-field ul li { display:block; margin:0 0 10px 0; padding:0px; }
+.form-field ul li:last-child { margin-bottom:0px;}
+.form-field ul li a { margin:0 10px 0 0; padding:0px !important; background:none !important; float:right; line-height:12px !important;}
+.form-field ul li a:after { content:""; clear:both; display:block; }
+.form-field ul li p { display:inline-block; vertical-align:top;  opacity: 0.8;font-size: 14px;color: #000000; margin:0 0 0 18px; line-height:14px;}
+.primary-admin-detail {}
+.primary-admin-detail strong { opacity: 0.8;font-size: 12px;font-weight: 500;line-height: 14px; color: #000000; display:block; margin-bottom:33px; margin-top:-8px; }
+.primary-admin-detail .form-field.half-width { display:block;} 
+.primary-admin-detail .temp-password { margin:14px 0 0 0;}
+
+/*--------------------Temporary Password Popup----------------------*/
+
+.temp-password-detail { display:none;}
+.temporary-pass {} 
+.closebtn { display:none;}
+.temporary-pass .save { display:none;}
+.temporary-pass .cancel { display:none;}
+.temporary-pass .blue.closebtn { display:inline-block;} 
+.temporary-pass .temp-password-detail { display:block;}
+.temporary-pass form { display:none;}
+.temporary-pass .modal .modal-dialog .modal-content .modal-body { padding-top: 33px;padding-left: 22px; padding-bottom: 55px;} 
+.temporary-pass .modal .modal-dialog .modal-content .modal-body p {opacity: 0.87;font-size: 14px;font-weight: normal;line-height:23px;color: #000000; margin:0; max-width:400px;}
+.temporary-pass .modal .modal-dialog .modal-content .modal-body ul { margin:31px 0 0 3px; padding:0px;}
+.temporary-pass .modal .modal-dialog .modal-content .modal-body ul li { margin:0px; padding:0px; float:left; width:33%; list-style:none; }
+.temporary-pass .modal .modal-dialog .modal-content .modal-body ul li:first-child { width:138px;}
+.temporary-pass .modal .modal-dialog .modal-content .modal-body ul li:nth-child(2) { width:210px;}
+.temporary-pass .modal .modal-dialog .modal-content .modal-body ul li span { opacity: 0.54;font-size: 12px;font-weight: normal; color: #000000; margin:0px; display:block; }
+.temporary-pass .modal .modal-dialog .modal-content .modal-body ul li p { opacity:0.8; line-height:25px;}
+
+/*--------------------3 - MSP - Overview - Existing MSP----------------------*/
+
+.content .account-overview { margin:64px 0 0 0;}
+.content .account-overview .left-sidebar {  box-shadow: -2px 2px 2px 0 rgba(119, 151, 177, 0.16);  width:22%; float:left; background:#fff; padding:0 34px 37px 34px;}
+.content .account-overview .left-sidebar h1 { margin:0px; padding:28px 0;opacity: 0.54;font-size: 18px;font-weight: normal;line-height:22px;letter-spacing: normal;text-align: center;color: #000000; border-bottom:1px solid #e4e4e4; margin-bottom:19px; }
+.content .account-overview .left-sidebar ul { margin:0px; padding:0px;}
+.content .account-overview .left-sidebar ul li { display:block; line-height:40px;}
+.content .account-overview .left-sidebar ul li a {opacity: 0.8;font-size: 14px;font-weight: normal;color: #000000; line-height:20px; padding:0 0 0 16px; border-left:2px solid transparent; text-decoration:none; display:inline-block;}
+.content .account-overview .left-sidebar ul li span {opacity: 0.7;border-radius: 4px; background-color: #e4e4e4; display:inline-block; padding:0 5.6px; display:inline-block; line-height:19px; margin:0 0 0 10px;}
+.content .account-overview .left-sidebar ul li.active a , .content .account-overview .left-sidebar ul li a:hover { border-left:2px solid #76c345; font-weight:500;}
+.content .account-detail-right { padding:30px 50px 50px 50px; background:#fff;box-shadow: -2px 2px 2px 0 rgba(119, 151, 177, 0.16); width:76.32%; float:right; min-height:815px;}
+.content .account-detail-right h2 { margin:0px; opacity: 0.8;font-size: 18px;font-weight: normal;line-height: 19px;letter-spacing: normal;color: #000000; margin-bottom:80px;}
+.content .account-overview button.blue { margin:19px 0 0 0; padding:0 19px;}
+.content .account-detail-right .half-width { width:370px; display:inline-block;}
+.content .account-detail-right .full-width { width:370px; display:block;}
+.content .account-detail-right .form-field .zip-field {position: relative;width: 55px;float: left;margin: 0 19px 0 0;}
+.content .account-detail-right .form-field .city-field {position: relative;width: 198px;float: left;margin: 0 20px 0 0;}
+.content .account-detail-right .form-field .state-field {position: relative;width: 78px;float: left;margin: 0;}
+.content .user-detail .account-detail-right{ padding:0px;}
+
+/*--------------------4 - MSP - Assosiates - Existing MSP----------------------*/
+
+.content .account-overview.assosiates-detail  { margin:0px;}
+.content .account-overview.assosiates-detail .account-detail-right { padding:0px;min-height:0;}
+#myModal3.modal .modal-footer{ padding-top:7px;}
+.content  .pagination {background-color: #ffffff; box-shadow: -2px 2px 2px 0 rgba(119, 151, 177, 0.16);text-align:center; padding:41px 0; display:block; width:100%; margin:0px; border-top:0px solid #dddde0; }
+.content .pagination ul { display:inline-block;text-align:center;}
+.content  .pagination ul li { display:inline-block;}
+.content  .pagination ul li a{ display:inline-block; opacity: 0.55;font-size: 14px;font-weight: normal;font-style: normal;
+color: #000000; width:37px; text-align:center; line-height:37px; text-decoration:none; border: solid 1px transparent; border-radius:50%;}
+.content  .pagination ul li span{display:inline-block; opacity: 0.55;font-size: 14px;font-weight: normal;font-style: normal;
+color: #000000; width:17px; text-align:center; line-height:37px; text-decoration:none; border: solid 1px transparent;}
+.content  .pagination ul li a:hover ,.content .data-table .pagination ul li a.active{border: solid 1px #e4e4e4; }
+#myModal3.modal .temp-password a  , #myModal3.modal .temp-password span{ font-size:14px;}
+.form-left { float:left; width:266px; padding-bottom:5px;}
+.form-right { float:right; width:266px;}
+.form-right a.add-new {  opacity: 0.8;font-family: Roboto;font-size: 12px;font-weight: 500;line-height: 14px;color: #000000; display:block; margin-bottom:53px; margin-top:-29px; margin-left:1px;}
+.form-right .temp-password  { margin-bottom:45px; margin-top:-31px;}
+#myModal3.modal .form-right .temp-password a ,#myModal3.modal .form-right .temp-password span{ font-size:12px;}
+.form-right .admin-detail { margin-top:-10px;}
+.form-right .admin-detail strong { margin-bottom:11px;}
+
+
+
+/*--------------------Custom Select----------------------*/
+
+.bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) { width:100%;    background: url(../images/ic-arrow-drop-down-icon.png) 98% center no-repeat;}
+.bootstrap-select.open:not([class*=col-]):not([class*=form-control]):not(.input-group-btn){  background: url(../images/ic-arrow-drop-top-icon.png) 98% center no-repeat;}
+.bootstrap-select>.dropdown-toggle ,.btn-group.open .dropdown-toggle{ background:none; box-shadow:none; outline:none;    width: 100% !important;background: none; border: 0px;outline: none;border-bottom: solid 2px rgba(0, 0, 0, 0.12);line-height: 20px;padding: 0 0 4px 0; border-radius:0px; opacity: 0.8;font-size: 14px;font-weight: normal;
+  color: #000000;}
+.btn-default.active.focus, .btn-default.active:focus, .btn-default.active:hover, .btn-default:active.focus, .btn-default:active:focus, .btn-default:active:hover, .open>.dropdown-toggle.btn-default.focus, .open>.dropdown-toggle.btn-default:focus, .open>.dropdown-toggle.btn-default:hover,.bootstrap-select .dropdown-toggle:focus,.bootstrap-select.btn-group .dropdown-toggle .filter-option:focus { background:none; outline:none !important; border-color:rgba(0, 0, 0, 0.12);}
+div.dropdown-menu { width: 266px; border-radius:0 2px 2px 0;background-color: #fafafa; box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.24), 0 0 2px 0 rgba(0, 0, 0, 0.12);text-align:left !important; margin-top:-2px; border:0px;}
+div.dropdown-menu .form-control,div.dropdown-menu .form-control:focus { box-shadow:none !important; border:0px !important; padding:0px !important;margin:0px !important; height:auto !important;}
+.bootstrap-select.btn-group .dropdown-menu li a { float:none !important;}
+.bootstrap-select.btn-group .dropdown-toggle .caret { display:none;}
+ul.dropdown-menu { background:none !important; border:0px !important; padding:0!important;}
+.bootstrap-select.btn-group .dropdown-menu li { margin:0;}
+.bootstrap-select.btn-group .dropdown-menu li a span.text { opacity: 0.8;font-size: 14px; line-height:21px;letter-spacing: normal;color: #000000;}
+.bootstrap-select.btn-group .dropdown-menu li a { display:block; margin:0px;}
+.bootstrap-select.btn-group .dropdown-menu li a:focus { outline:none;}
+.bootstrap-select.btn-group .dropdown-menu li a span.text { display:block;opacity: 0.54;font-size: 15px;font-weight: normal;line-height:32px;text-align: left;color: #000000; padding:0 24px;}
+.bootstrap-select.btn-group .dropdown-menu li a:hover {background-color: #eeeeee !important; }
+.bootstrap-select {}
+
+
+
+/*--------------Add User Modal--------------*/
+.add-user-modal .modal .modal-dialog { width: 316px;border-radius: 2px;background-color: #fafafa;box-shadow: 0 19px 38px 0 rgba(0, 0, 0, 0.3), 0 15px 12px 0 rgba(0, 0, 0, 0.22);border-style: solid;border-width: 0.5px;border-image-source: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.4) 5%, rgba(255, 255, 255, 0) 20%, rgba(255, 255, 255, 0));border-image-slice: 1;}
+.add-user-modal .modal .modal-dialog .modal-content .modal-body { padding:36px 24px 36px 24px;}
+.add-user-modal .nav-tabs>li { margin:0px; width:50%; text-align:center;}
+.add-user-modal .nav-tabs>li>a { padding:10px 0 7px 0; margin:0px; border:0px; background:none;font-size: 12px;font-weight: 500;text-align: center;color: #444444; line-height:14px; border-bottom:2px solid #e5e5e5; display:block;}
+.add-user-modal .nav-tabs {border:0px; margin:0 0 46px 0; padding:0px;}
+.add-user-modal .nav-tabs>li.active>a,.add-user-modal .nav-tabs>li.active>a:focus,.add-user-modal .nav-tabs>li.active>a:hover {  border:0px; background:none; border-bottom:2px solid #a1d580;}
+.add-user-modal .temp-password { margin:-22px 0 19px 0;}
+.add-user-modal .temp-password a { font-size: 12px;font-weight: 500;color: #444444; letter-spacing:0.3px; opacity:1;}
+.add-user-modal .check-field { margin-left:-4px; margin-bottom:25px;}
+.add-user-modal .check-field label { margin:0px; padding:0px; }
+.add-user-modal .check-field label input[type="checkbox"]{ margin:0px; padding:0px; display:none; }
+.add-user-modal .check-field label span {  opacity: 0.8;font-size: 14px;font-weight: normal;color: #000000; line-height:22px; background:url(../images/checkbox.png) left center no-repeat; padding-left:35px; display:block; cursor:pointer;}
+.add-user-modal .check-field label input[type="checkbox"]:checked + span {background:url(../images/checkbox-checked.png) left center no-repeat; padding-left:35px;}
+
+/*--------------Manage User Modal--------------*/
+.admin-detail-modal .modal .modal-dialog { width:310px;}
+.admin-detail-modal .modal .modal-dialog .modal-content .modal-body { padding-left:0px; padding-right:0px; }
+.admin-detail-modal .manage-user {}
+.admin-detail-modal .manage-user strong { padding:10px 25px 6px 25px;opacity: 0.8;font-size: 14px;font-weight: 500;line-height: 16px;color: #000000; border-bottom:1px solid #e4e4e4; display:block; }
+.admin-detail-modal .manage-user ul { margin:0px; padding:0 0 7px 0; }
+.admin-detail-modal .manage-user ul li { margin:0px; padding:14px 29px 15px 25px; display:block; border-bottom:1px solid #e4e4e4; }
+.admin-detail-modal .manage-user ul li p { display:inline-block; vertical-align:top; margin:0px; padding:0 0 0 14px; line-height: 23px; opacity: 0.8;font-size: 14px;color: #000000; }
+.admin-detail-modal .manage-user ul li a { padding:0px; margin:0px; line-height:23px;}
+.admin-detail-modal .switchable-holder  { margin:5px 0 0 0;}
+  
+  
+/*--------------------Footer----------------------*/
+
+footer { margin:59px 0 0 0;}
+footer p { opacity: 0.54; font-size: 12px; font-weight: normal;  line-height: 63px;  letter-spacing: normal;  text-align: center;  color: #000000; margin:0px; border-top:1px solid rgba(0, 0, 0, 0.12); }
+
+
+@media only screen and (max-width: 1200px) {
+    .content .account-overview .left-sidebar {padding: 0 15px 37px 15px;}
+	.content .account-detail-right .half-width { width:295px; display:inline-block;}
+.content .account-detail-right .full-width { width:295px; display:block;}
+.content .account-detail-right .form-field .city-field { width:120px;}
+} 
+@media only screen and (max-width: 991px) {
+	.content .account-overview .left-sidebar { width:30%;}
+	.content .account-detail-right { width:68%; min-height:600px;} 
+.content .account-detail-right .full-width,.content .account-detail-right .half-width { width:100%; display:block;}
+}

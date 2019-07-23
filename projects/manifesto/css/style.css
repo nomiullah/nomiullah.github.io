@@ -1,0 +1,174 @@
+* { margin: 0px; padding: 0px; }
+body { margin: 0px; padding: 0px; font-family: 'Josefin Sans Regular';}
+.no-padding { padding: 0px; }
+.container { max-width: 1110px; }
+a:focus, a:hover {
+    color: #23527c;
+    text-decoration: none;
+}
+
+/*---------------------Fonts----------------------*/
+
+@font-face {
+	font-family: 'Josefin Sans Regular';
+	src: url('../fonts/JosefinSans.eot');
+	src: url('../fonts/JosefinSansd41d.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/JosefinSans.woff') format('woff'),
+		url('../fonts/JosefinSans.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Josefin Sans Thin';
+	src: url('../fonts/JosefinSans-Thin.eot');
+	src: url('../fonts/JosefinSans-Thind41d.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/JosefinSans-Thin.woff') format('woff'),
+		url('../fonts/JosefinSans-Thin.ttf') format('truetype');
+	font-weight: 100;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Josefin Sans LightItalic';
+	src: url('../fonts/JosefinSans-LightItalic.eot');
+	src: url('../fonts/JosefinSans-LightItalicd41d.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/JosefinSans-LightItalic.woff') format('woff'),
+		url('../fonts/JosefinSans-LightItalic.ttf') format('truetype');
+	font-weight: 300;
+	font-style: italic;
+}
+
+
+@font-face {
+	font-family: 'Josefin Sans Light';
+	src: url('../fonts/JosefinSans-Light.eot');
+	src: url('../fonts/JosefinSans-Lightd41d.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/JosefinSans-Light.woff') format('woff'),
+		url('../fonts/JosefinSans-Light.ttf') format('truetype');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Josefin Sans BoldItalic';
+	src: url('../fonts/JosefinSans-BoldItalic.eot');
+	src: url('../fonts/JosefinSans-BoldItalicd41d.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/JosefinSans-BoldItalic.woff') format('woff'),
+		url('../fonts/JosefinSans-BoldItalic.ttf') format('truetype');
+	font-weight: bold;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Josefin Sans Bold';
+	src: url('../fonts/JosefinSans-Bold.eot');
+	src: url('../fonts/JosefinSans-Boldd41d.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/JosefinSans-Bold.woff') format('woff'),
+		url('../fonts/JosefinSans-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Josefin Sans Thin_1';
+	src: url('../fonts/JosefinSans-Thin_1.eot');
+	src: url('../fonts/JosefinSans-Thin_1d41d.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/JosefinSans-Thin_1.woff') format('woff'),
+		url('../fonts/JosefinSans-Thin_1.ttf') format('truetype');
+	font-weight: 100;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Josefin Sans SemiBold';
+	src: url('../fonts/JosefinSans-SemiBold.eot');
+	src: url('../fonts/JosefinSans-SemiBoldd41d.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/JosefinSans-SemiBold.woff') format('woff'),
+		url('../fonts/JosefinSans-SemiBold.ttf') format('truetype');
+	font-weight: 600;
+	font-style: normal;
+}
+
+ 
+
+/*---------------------Header----------------------*/
+header { padding:24px 0 19px 0; background:#000000; position:fixed; width:100%; z-index:99; top:0px; }
+header .header-right { padding:18px 0 0 0; text-align:right;}
+header .header-right a {font-family: 'Josefin Sans Bold'; font-size:15px;color:#ffffff; text-decoration:underline; line-height:26px; display:inline-block; margin:0 44px 0 0;vertical-align:top; }
+header .header-right a:hover { color:#a37825;}
+header .header-right ul { margin:0px; padding:0px; display:inline-block; vertical-align:top; }
+header .header-right ul li{ margin:0 21px 0 0; padding:0px; float:left; list-style:none; width:26px; height:27px; }
+header .header-right ul li a { background:url(../images/social.png) top center no-repeat; background-position:0 0; display:inline-block; text-decoration:none; width:100%;}
+header .header-right ul li a:hover {  background-position:0 -40px;}
+header .header-right ul li+li { width:28px; height:27px;line-height:27px;}
+header .header-right ul li+li a { background-position:-48px 0;}
+header .header-right ul li+li a:hover { background-position:-48px -40px;}
+header .header-right ul li+li+li { width:34px; height:28px;}
+header .header-right ul li+li+li a { background-position:-95px 0;line-height:28px; margin-right:0px;}
+header .header-right ul li+li+li a:hover { background-position:-95px -40px;}
+header .header-right ul li:last-child { margin-right:0px;}
+
+/*---------------------Banner----------------------*/
+.banner { padding-top:100px;}
+.banner .item img { width:100%;}
+.banner .carousel-indicators { width:100%; left:0; text-align:right; margin:0px; padding-right:82px; box-sizing:border-box;}
+
+/*---------------------Content----------------------*/
+.content { padding:40px 0 64px 0; text-align:center;}
+.content .content-detail { padding:0 63px; text-align:left;}
+.content .content-detail .top-image { margin-bottom:40px; text-align:center;}
+.content .content-detail p{ font-size:30px; line-height:38px; color:#000000; margin-bottom:47px;}
+.content .content-detail p:last-child { margin-bottom:40px;}
+.content .content-detail .reservation-content { background:url(../images/border-strip.png) top repeat-x , url(../images/border-strip.png) bottom repeat-x; text-align:center; padding:48px 0 45px 0; margin-bottom:50px;}
+.content .content-detail .reservation-content h3 {font-size:30px; line-height:38px; font-family: 'Josefin Sans SemiBold'; margin:0 0 50px 0;}
+.content .content-detail .reservation-content h3:last-child { margin:0;}
+.content .content-detail .reservation-content a {font-size:30px; line-height:38px; font-family: 'Josefin Sans Bold'; color:#000; text-decoration:underline; margin:0 0 50px 0; display:inline-block; }
+.content .content-detail .tagline { text-align:center;}
+.content .content-detail .tagline img { text-align:center; display:inline-block; }
+
+
+
+
+/*---------------------Footer----------------------*/
+footer { padding:25px 0; background:#000;}
+footer p { line-height:28px; color:#fefffe; margin:0px;font-family: 'Josefin Sans Regular'; font-style:normal;}
+footer ul { margin:0px; padding:0px; display:inline-block; vertical-align:top; }
+footer ul li{ margin:0 21px 0 0; padding:0px; float:left; list-style:none; width:26px; height:27px; }
+footer ul li a { background:url(../images/social.png) top center no-repeat; background-position:0 0; display:inline-block; text-decoration:none; width:100%; line-height:27px;}
+footer ul li a:hover{display:inline-block; text-decoration:none; width:100%;}
+footer ul li a:hover {  background-position:0 -40px;}
+footer ul li+li { width:28px; height:27px;line-height:27px;}
+footer ul li+li a { background-position:-48px 0;}
+footer ul li+li a:hover { background-position:-48px -40px;}
+footer ul li+li+li { width:34px; height:28px;}
+footer ul li+li+li a { background-position:-95px 0;line-height:28px;}
+footer ul li+li+li a:hover { background-position:-95px -40px;}
+footer ul li:last-child { margin-right:0px;}
+
+
+
+
+
+@media screen and (max-width:992px) {
+	header .header-right { padding:8px 0 0 0;}
+	.content .content-detail { padding:0 40px;}
+	.content .content-detail p {font-size: 24px;line-height: 30px;}
+	.banner {
+    padding-top: 92px;
+}
+}
+@media screen and (max-width:767px) { 
+.banner { padding-top:120px;}
+	header { text-align:center;}
+	header a img { display:inline-block !important; text-align:center;}
+	header .header-right { text-align:center;}
+	header .header-right a { margin:0 20px 0 0;}
+	header .header-right ul li { margin:0 15px 0 0;}
+	.content .content-detail .top-image img { max-width:100%;}
+	.content .content-detail { padding:0px;}
+	.content .content-detail p {font-size: 18px;line-height: 24px;}
+	footer { text-align:center;}
+	footer p { margin-bottom:15px;}
+	.content .content-detail .reservation-content h3,.content .content-detail .reservation-content a {font-size: 24px;line-height: 28px; margin-bottom:20px;}
+}

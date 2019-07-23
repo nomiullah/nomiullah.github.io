@@ -1,0 +1,399 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Globals */
+body {
+    /*position: relative;*/
+    background: #1D1D1D;
+    font: 15px/25px 'Lato', sans-serif;
+    color: #fff;
+}
+
+a, a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+    opacity: 0.6;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #fff;
+    opacity: 0.5;
+}
+::-moz-placeholder { /* Firefox 19+ */
+    color: #fff;
+    opacity: 0.5;
+}
+:-ms-input-placeholder { /* IE 10+ */
+    color: #fff;
+    opacity: 0.5;
+}
+:-moz-placeholder { /* Firefox 18- */
+    color: #fff;
+    opacity: 0.5;
+}
+
+/* Language switcher */
+.language-switcher {
+    position: fixed;
+    top: 38px;
+    right: 40px;
+    line-height: 10px;
+}
+.language-switcher a {
+    font-size: 10px;
+    text-decoration: none;
+    display: inline-block;
+}
+/* Main content */
+.content {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 275px;
+    font-family: 'PT Sans', sans-serif;
+}
+
+.content .content-inner {
+    display: flex;
+    align-items: center;
+}
+
+.content .logo {
+    float: left;
+    width: 275px;
+    height: 330px;
+}
+
+.content .logo svg {
+    width: 100%;
+}
+
+.content .copy {
+    float: left;
+    margin-left: 115px;
+}
+
+.content .copy h1 {
+    font-size: 50px;
+    line-height: 50px;
+    font-weight: bold;
+}
+
+.content .copy h3 {
+    margin-top: 12px;
+    font-size: 25px;
+    line-height: 25px;
+}
+
+.content .email-optin {
+    margin-top: 53px;
+}
+
+.content .email-optin .optin-field-group {
+    position: relative;
+    width: 273px;
+    min-height: 43px;
+    border-bottom: 1px solid #ffffff50;
+}
+
+.content .email-optin input {
+    width: 100%;
+    height: 40px;
+    background-color: #1D1D1D;
+    border: none;
+    font: 15px/20px 'Lato', sans-serif;
+    color: #fff;
+    opacity: 0.5;
+}
+
+.content .email-optin input:focus,
+.content .email-optin input:active {
+    outline: none;
+}
+
+.content .email-optin button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 28px;
+    margin: 0;
+    background: transparent;
+    border: none;
+    padding: 0;
+    line-height: 43px;
+}
+
+.content .email-optin button svg {
+    max-height: 16px;
+    margin-top: 13px
+}
+
+.content .email-optin button svg.loading-icon {
+    display: none;
+    margin-top: 5px;
+    max-height: 25px;
+}
+
+.content .email-optin button.is-processing svg.check-icon {
+    display: none;
+}
+
+.content .email-optin button.is-processing svg.loading-icon {
+    display: block;
+}
+
+.content .email-optin button:hover {
+    cursor: pointer;
+}
+
+.content .email-optin #optin-result-status {
+    visibility: hidden;
+    position: absolute;
+    font-size: 12px;
+    color: #ff0000;
+    opacity: 0.7;
+}
+
+.content .email-optin #optin-result-success {
+    visibility: hidden;
+    position: absolute;
+    top: 10px;
+    padding-bottom: 7px;
+    opacity: 0.5;
+}
+
+/* Footer */
+footer {
+    position: fixed;
+    right: 40px;
+    bottom: 39px;
+    text-align: right;
+}
+
+footer .social-icons {
+    height: 23px;
+}
+
+footer .social-icons a {
+    font-size: 0;
+}
+
+footer .social-icons svg {
+    width: 23px;
+    height: 23px;
+}
+
+footer .address {
+    margin-top: 15px;
+}
+
+@media screen and (max-width: 1024px) {
+    /* mobile style
+    .content .content-inner {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .content .content-inner .logo,
+    .content .content-inner .copy {
+        float: none;
+    }
+
+    .content .content-inner .logo {
+        width: 245px;
+        height: 300px;
+    }
+
+    .content .content-inner .copy {
+        margin-left: auto;
+        margin-top: 65px;
+        text-align: center;
+    }
+
+    .content .email-optin .optin-field-group {
+        margin: auto;
+    }
+    */
+
+    .content .logo {
+        width: 205px;
+        height: 260px;
+    }
+
+    .content .copy {
+        margin-left: 85px;
+    }
+
+    .content .copy h1 {
+        font-size: 40px;
+        line-height: 40px;
+    }
+
+    .content .copy h3 {
+        font-size: 20px;
+        line-height: 20px;
+    }
+
+    .content .email-optin {
+        margin-top: 43px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .language-switcher {
+        top: 8px;
+        right: 11px;
+    }
+
+    .content .content-inner {
+        flex-direction: column;
+        margin-bottom: 80px;
+    }
+
+    .content .logo {
+        width: 54%;
+        height: auto;
+    }
+
+    .content .copy {
+        margin-top: 58px;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .content .copy h1 {
+        font-size: 35px;
+        line-height: 35px;
+    }
+
+    .content .copy h3 {
+        margin-top: 7px;
+        font-size: 18px;
+        line-height: 18px;
+    }
+
+    .content .email-optin {
+        margin-top: 19px;
+    }
+
+    .content .email-optin .optin-field-group {
+        width: 207px;
+        margin: auto;
+    }
+
+    footer {
+        position: absolute;
+        right: 0;
+        bottom: 27px;
+        left: 0;
+        font-size: 16px;
+        line-height: 26px;
+        text-align: center;
+    }
+ 
+    .content .copy h1 {
+        font-size: 30px;
+        line-height: 30px;
+    }
+
+    .content .copy h3 {
+        font-size: 16px;
+        line-height: 16px;
+    }
+
+    .content .email-optin .optin-field-group {
+        width: 207px;
+        display: inline-block;
+        border-bottom: 1px solid #e1e1e1;
+    }
+
+    footer {
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    footer .social-icons svg {
+        width: 20px;
+        height: 20px;
+    }
+ 
+    .content .content-inner {
+        margin-bottom: 112px;
+    }
+
+    .content .copy {
+        margin-top: 44px;
+    }
+
+    .content .copy h1 {
+        font-size: 25px;
+        line-height: 25px;
+    }
+
+    .content .copy h3 {
+        font-size: 13px;
+        line-height: 14px;
+    }
+    .content .email-optin input {
+        font-size: 13px;
+    }
+    footer {
+        bottom: 17px;
+        font-size: 12px;
+        line-height: 20px;
+    }
+}

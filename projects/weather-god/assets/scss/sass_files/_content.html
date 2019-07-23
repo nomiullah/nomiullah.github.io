@@ -1,0 +1,58 @@
+@import 'content_hero';
+@import 'weekly-weather';
+@import 'see-hear';
+@import 'benchmark';
+
+.title {
+    font-size: 28px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.18;
+    letter-spacing: normal;
+    text-align: center;
+    color: #000000;
+    margin: 0 0 60px 0;
+    @include mobile {
+        font-size: 22px;
+        line-height: 1.27;
+        margin-bottom: 36px;
+    }
+}
+.thumbnail {
+    margin: 0 0 52px 0;
+}
+.subheading {
+    font-size: 18px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.28;
+    letter-spacing: normal;
+    text-align: center;
+    color: #000000;
+    margin: 0 auto 40px auto;
+    max-width: 520px;
+    @include mobile {
+        font-size: 16px;
+        padding: 0 10px;
+        margin-bottom: 24px;
+    }
+}
+.copy {
+    font-size: 15px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #4a4a4a;
+    margin: 0 auto 29px auto;
+    max-width: 800px;
+    @include mobile {
+        font-size: 13px;
+        padding: 0 10px;
+        margin-bottom: 24px;
+    }
+}

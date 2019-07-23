@@ -1,0 +1,36 @@
+.general-page{
+	counter-reset: list-counter;
+	.top-content {
+		margin-bottom: 0px;
+	}
+	.general-content{
+		padding-bottom: 104px;
+		max-width: 830px;
+		margin: 0 0 0 96px;
+		dt {
+			padding-left: 96px;
+			position: relative;
+			p {
+				font-size: 18px;
+				line-height: 32px;
+				margin-bottom: 33px;
+			}
+			&:last-child{
+				p {
+					&:last-child{
+						margin-bottom: 0px;
+					}
+				}
+			}
+			&:before {
+			    content: counter(list-counter)".";
+			    counter-increment: list-counter;
+			    position: absolute;
+			    left: 0;
+			    top: 7px; 
+			    font-size: 24px;
+			    opacity: .4;
+			}
+		}
+	}
+}

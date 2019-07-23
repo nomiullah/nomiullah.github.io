@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="74px" height="74px" viewBox="0 0 74 74" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>item</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="pages" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="enterprise-page" transform="translate(-683.000000, -3423.000000)">
+            <g id="💪🏽-how-we-get-it-done" transform="translate(180.000000, 2546.000000)">
+                <g id="versionning" transform="translate(325.000000, 877.000000)">
+                    <g id="item" transform="translate(178.000000, 0.000000)">
+                        <g id="icon">
+                            <circle fill="#138EF2" cx="37" cy="37" r="37"></circle>
+                            <path d="M20,18 L54,18 L54,20.5 C54,21.8807119 52.8880894,23 51.4998988,23 L22.5001012,23 C21.1193334,23 20,21.8903379 20,20.5 L20,18 Z" stroke="#88C5F6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" transform="translate(37.000000, 20.500000) scale(1, -1) translate(-37.000000, -20.500000) "></path>
+                            <path d="M24,14 L50,14 L50,16 C50,17.1045695 49.1050211,18 48.0029953,18 L25.9970047,18 C24.8940894,18 24,17.1122704 24,16 L24,14 Z" stroke="#FFFFFF" stroke-width="2" opacity="0.2" stroke-linecap="round" stroke-linejoin="round" transform="translate(37.000000, 16.000000) scale(1, -1) translate(-37.000000, -16.000000) "></path>
+                            <rect stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" x="16" y="23" width="42" height="32" rx="3"></rect>
+                            <rect id="sep" fill="#FFFFFF" x="17" y="27" width="40" height="2"></rect>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,37 @@
+.modal-open {
+	padding-right:0 !important;
+}
+.resturant_modalbox {
+	width:1015px;
+
+	@media ( max-width:$desktop_Small ) { width:auto; }
+
+	.modal-dialog {
+		margin-top:220px;
+		@media ( max-height:$desktop_Height )  { margin-top:150px; }
+		@media ( max-width:$tablet_Wide ) { width:auto; margin:200px 30px 0 30px; }
+	}
+	.modal-content {
+		background:transparent;
+		box-shadow:none;
+		border:0;
+	}
+	ul.modalbox_logos {
+		li {
+			margin:0 0 165px 0;
+
+			@media ( max-height:$desktop_Height ) { margin:0 0 130px 0; }
+			@media ( max-height: $tablet_SmallHeight) { margin: 0 0 100px 0; }
+			@media ( max-width:$tablet_Wide ) { width:42%; }
+			@media ( max-width:$phone_Medium ) { margin:0 0 50px 0; }
+			a {
+				img {
+					@media ( max-width:$tablet_Wide ) { width:100%; }
+				}
+			}
+		}
+	}
+}
+.modal-backdrop.in {
+	opacity:.85 !important;
+}

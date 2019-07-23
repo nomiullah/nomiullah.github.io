@@ -1,0 +1,57 @@
+.sub_footer {
+	background-color:#ff6600;
+	padding:100px 0 125px 0;
+	@media ( max-width:$tablet_Small ) { padding: 80px 0 50px 0; }
+	
+	.footer_list {
+		@media ( max-width:$phone_wide ) { float:none !important; width:50%; margin:0 auto 50px auto; }
+		h6 {
+			color: $primary_TextColor;
+			font-size: $body_FontSize - 4;
+			padding:0 0 27px 0;
+			text-transform: uppercase;
+			@media ( max-width:$phone_wide ) { font-size: $body_FontSize - 7; }
+		}
+		ul {
+			li {
+				width:100%;
+				a {
+					color: $primary_TextColor;
+					font-size: $body_FontSize + 12;
+					line-height: $body_LineHeight;
+					text-transform: uppercase;
+					padding:0 0 0 35px;
+					font-family: 'Fjalla One', sans-serif;
+					background:url(../images/resturant_footer_arrow.png) left center no-repeat;
+					
+					@media ( max-width:$desktop_Small ) { font-size:$body_FontSize + 4; }
+					@media ( max-width:$tablet_Wide ) { font-size:$body_FontSize - 3; }
+
+					&:hover {
+						background:url(../images/resturant_footer_arrowhover.png) left center no-repeat;
+						color: $body_Bg;
+					}
+				}
+			}
+		}		
+	}
+	.copyright {
+		color: $primary_TextColor;
+		font-size: $body_FontSize - 6;
+		line-height: $body_LineHeight - 20;
+		margin:98px 0 0 0;
+		@media ( max-width:$tablet_Wide ) { margin:45px 0 0 0; font-size:$body_FontSize - 8; }
+		@media ( max-width:$phone_wide ) { text-align:center; }
+	}
+	.footer_logo {
+		display: inline-block;
+		img {
+			@media ( max-width:$tablet_Wide ) { width:100%; }
+			@media ( max-width:$phone_Medium ) { width:80%; }
+		}
+		@media ( max-width:$tablet_Small ) { margin:0 0 50px 0; }
+		@media ( max-width:$phone_Medium ) { width:100%; text-align:center; }
+
+	}
+
+}

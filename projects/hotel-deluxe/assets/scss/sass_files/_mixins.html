@@ -1,0 +1,23 @@
+@mixin small-desktop  {
+  @media only screen and (max-width: #{$small-desktop-width}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media only screen and (max-width: #{$tablet-width}) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media only screen and (max-width: #{$mobile-width}) {
+    @content;
+  }
+} 
+
+@mixin small-mobile {
+  @media only screen and (max-width: #{$smallmobile-width}) {
+    @content;
+  }
+} 

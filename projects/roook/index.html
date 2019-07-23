@@ -1,0 +1,634 @@
+<!doctype html>
+<html>
+
+<!-- Mirrored from asifmajeed.com/projects/roook/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 09 Jul 2019 21:23:50 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>REDROKK</title>
+	<link href='../../../fonts.googleapis.com/css6b7b.css?family=Raleway:300,400,700,500,600,300|Droid+Serif:400,400italic,700,700italic|Open+Sans:400,300,' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<link rel="stylesheet" type="text/css" href="css/responsive-style.css" />
+	<!--[if IE]>
+		<script type="text/javascript">
+			 var console = { log: function() {} };
+		</script>
+	<![endif]-->
+	<script src="../../../ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="../../../ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/jquery.slimscroll.min.js"></script>
+	<script type="text/javascript" src="js/jquery.fullPage.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			var fullpage_view = false;
+			$('input,textarea').focus(function(){
+			   $(this).data('placeholder',$(this).attr('placeholder'))
+					  .attr('placeholder','');
+			}).blur(function(){
+			   $(this).attr('placeholder',$(this).data('placeholder'));
+			});
+			
+			
+			$('.menu-section .men-icon').click(function(){
+				$('.menu-section .menu-cont').show('slide', {direction: 'right'}, 400);
+			});
+			$('.menu-section .close-icon').click(function(){
+				$('.menu-section .menu-cont').hide('slide', {direction: 'right'}, 400);
+			});
+			$("#fp-nav li a, .menu-section nav ul li a").click(function(){
+				var activeLink = $(this).attr('href');
+				var index_number = $(".menu-section nav ul li a").index(this);
+				activePage(activeLink,index_number);
+			});
+			
+			enablePlugin();
+			$( window ).resize(function(){
+				enablePlugin();
+			});
+			function enablePlugin()
+			{
+				if($( window ).width()<=979 || $( window ).height()<=675)
+				{
+					var anchor = document.location.hash;
+					var index_number = $(".menu-section nav ul li a").index($("a[href='"+anchor+"']"));
+					activePage(anchor,index_number);
+					fullpage_view = false;
+					$(".menu-section").show();
+					$("#fp-nav").hide();
+					$.fn.fullpage.destroy('all');
+				}
+				else
+				{
+					if(fullpage_view == false)
+					{
+						$('#fullpage').fullpage({
+							anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage', '5thPage', '6thPage', '7thPage'],
+							//sectionsColor: ['#C63D0F', '#1BBC9B', '#7E8F7C','#C63D0F', '#1BBC9B', '#7E8F7C','#C63D0F'],
+							navigation: true,
+							navigationPosition: 'right',
+							navigationTooltips: ['Home', 'ExploreSolutions', 'About', 'Head Shots', 'Capabilities', 'Work', 'Contact'],
+							responsiveWidth: 900
+						});
+						fullpage_view = true;
+					}
+				}
+			}
+			function activePage(activeLink,indexNum)
+			{
+				if(activeLink == "#firstPage" && fullpage_view == true)
+				{
+					$(".menu-section").hide();
+				}
+				else
+				{
+					
+					$(".menu-section").show();
+				}
+				$('.menu-section nav ul li a').removeClass('active');
+				$("a[href='"+activeLink+"']").addClass('active');
+				if($( window ).width()<=979 || $( window ).height()<=675)
+				{
+					$('html,body').animate({scrollTop: $("#section"+indexNum).offset().top},'slow');
+				}
+			}
+			$(window).bind( 'hashchange', function(e) { 
+				var anchor = document.location.hash;
+				activePage(anchor);
+			});
+			
+			
+		});
+		
+	</script>
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="menu-section">
+	<div class="men-icon"></div>
+	<div class="men-text">Menu</div>
+	<div class="menu-cont">
+		<div class="close-cont">
+			<div class="close-icon"></div>
+			<div class="close-text">Close</div>
+		</div>
+		<nav>
+			<ul>
+				<li><a href="#firstPage">Home</a></li>
+				<li><a href="#secondPage">ExploreSolutions</a></li>
+				<li><a href="#3rdPage">About</a></li>
+				<li><a href="#4thPage">Head Shots</a></li>
+				<li><a href="#5thPage">Capabilities</a></li>
+				<li><a href="#6thPage">Work</a></li>
+				<li><a href="#7thPage">Contact</a></li>
+			</ul>
+		</nav>
+		<div class="social-media">
+			<ul>
+				<li><a href="#"><img src="images/facebook-icon.png" alt="" title=""></a></li>
+				<li><a href="#"><img src="images/twitter-icon.png" alt="" title=""></a></li>
+				<li><a href="#"><img src="images/linkedin-icon.png" alt="" title=""></a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+	<div id="fullpage">
+		<div class="section first-sec" id="section0">
+			<header>
+				<div class="logo"><img src="images/logo.png" title=""></div>
+				<nav>
+					<ul>
+						<li class="active"><a href="#firstPage">Home</a></li>
+						<li><a href="#secondPage">ExploreSolutions</a></li>
+						<li><a href="#3rdPage">About</a></li>
+						<li><a href="#4thPage">Head Shots</a></li>
+						<li><a href="#5thPage">Capabilities</a></li>
+						<li><a href="#6thPage">Work</a></li>
+						<li><a href="#7thPage">Contact</a></li>
+					</ul>
+					<div class="hire-btn">
+						<a class="btn" href="#">Hire Us</a>
+						<div class="bottom-arrow"></div>
+					</div>
+				</nav>
+			</header>
+			<section class="home">
+				<div class="inner">
+					<h1>What are your eCommerce Pain Points?</h1>
+					<p>WOW, Really? we can help</p>
+					<div class="btn-line">
+						<a href="#" class="about-us">About Us</a>
+						<a href="#" class="see-results">See Results</a>
+					</div>
+				</div>
+			</section>
+		</div>
+		<div class="section" id="section1">
+			<section class="solution">
+				<div class="grid-cont">
+					<div class="grid-col">
+						<div class="tile-hover">
+							<a class="learn-btn" href="explorsolution.html">See Solutions</a>
+						</div>
+						<div class="detail-cont">
+							<div class="icon-cont"><img src="images/cart-icon.png" alt="" title=""></div>
+							<div class="text-cont">No one’s buying my product.</div>
+						</div>
+						<img src="images/sloution-img1.jpg" alt="">
+					</div>
+					<div class="grid-col">
+						<div class="tile-hover">
+							<a class="learn-btn" href="explorsolution.html">See Solutions</a>
+						</div>
+						<div class="detail-cont">
+							<div class="icon-cont"><img src="images/mail-icon.png" alt="" title=""></div>
+							<div class="text-cont">Will Email Marketing <br>work for me?</div>
+						</div>
+						<img src="images/sloution-img2.jpg" alt="">
+					</div>
+					<div class="grid-col">
+						<div class="tile-hover">
+							<a class="learn-btn" href="explorsolution.html">See Solutions</a>
+						</div>
+						<div class="detail-cont">
+							<div class="icon-cont"><img src="images/traffic-icon.png" alt="" title=""></div>
+							<div class="text-cont">How do I drive web traffic?</div>
+						</div>
+						<img src="images/sloution-img3.jpg" alt="">
+					</div>
+					<div class="grid-col">
+						<div class="tile-hover">
+							<a class="learn-btn" href="explorsolution.html">See Solutions</a>
+						</div>
+						<div class="detail-cont">
+							<div class="icon-cont"><img src="images/save-icon.png" alt="" title=""></div>
+							<div class="text-cont">My website is outdated.</div>
+						</div>
+						<img src="images/sloution-img4.jpg" alt="">
+					</div>
+					<div class="grid-col">
+						<div class="tile-hover">
+							<a class="learn-btn" href="explorsolution.html">See Solutions</a>
+						</div>
+						<div class="detail-cont">
+							<div class="icon-cont"><img src="images/launch-icon.png" alt="" title=""></div>
+							<div class="text-cont">I need to launch a product.</div>
+						</div>
+						<img src="images/sloution-img5.jpg" alt="">
+					</div>
+					<div class="grid-col">
+						<div class="tile-hover">
+							<a class="learn-btn" href="explorsolution.html">See Solutions</a>
+						</div>
+						<div class="detail-cont">
+							<div class="icon-cont"><img src="images/board-icon.png" alt="" title=""></div>
+							<div class="text-cont">What else can I do?</div>
+						</div>
+						<img src="images/sloution-img6.jpg" alt="">
+					</div>
+				</div>
+				<footer>
+					<div class="footer-logo"><img src="images/rr-icon.png"></div>
+					<div class="quotes">
+						<div class="text-cont">
+							Need help growing your ecommerce business?
+						</div>
+						<div class="hire-btn">
+							<a class="btn" href="#">Hire Us</a>
+							<div class="bottom-arrow"></div>
+						</div>
+					</div>
+				</footer>
+			</section>
+		</div>
+		<div class="section about-section" id="section2">
+			<section class="about-cont">
+				<div class="inner">
+					<h2>Red Rokk Experience</h2>
+					<h3>WOW, Really? we can help</h3>
+					<div class="detail-cont">
+						<div class="left-cont">
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc libero quam, gravida nec egestas vel, luctus eget velit. Aenean eget risus consectetur est dignissim vehicula ac vitae elit. Nulla facilisi. Cras pretium elit nisi, at bibendum justo lacinia ut. Fusce porta, nulla et interdum tempus, nibh risus pellentesque risus, sit amet sagittis eros augue eu mauris. Nunc id magna condimentum nulla ullamcorper rhoncus in at libero. Nulla nec ex sem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+							</p>
+						</div>
+						<div class="left-cont">
+							<p>
+								Vestibulum vitae dapibus enim. Vivamus scelerisque neque eget convallis efficitur. Nunc elementum vitae eros ac gravida. Nam luctus varius leo a elementum. Nam sed libero mauris. Suspendisse sed ex pharetra, tempus risus vitae, mattis nisl. Quisque vitae tellus sit amet velit blandit molestie. In tristique semper felis, at rutrum urna aliquam a. Nam porta nisi id nibh auctor semper. 
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<footer>
+					<div class="footer-logo"><img src="images/rr-icon.png"></div>
+					<div class="quotes">
+						<div class="text-cont">
+							Need help growing your ecommerce business?
+						</div>
+						<div class="hire-btn">
+							<a class="btn" href="#">Hire Us</a>
+							<div class="bottom-arrow"></div>
+						</div>
+					</div>
+				</footer>
+		</div>
+		<div class="section" id="section3">
+			<section class="headshots-cont">
+				<div class="grid-cont">
+					<div class="grid-col">
+						<div class="caption-cont">
+							<h2>Megan Cook</h2>
+							<h3>Graphic Designer</h3>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis finibus purus justo, varius vulputate quam lobortis a. Cras tortor erat, interdum nec semper pretium, tempor eleifend est. In molestie quam sed augue euismod consectetur. Aenean faucibus neque nec augue volutpat,.
+							</p>
+							<ul>
+								<li><a href="#"><img src="images/twitter-icon-cp.png" alt=""></a></li>
+								<li><a href="#"><img src="images/mail-icon-cp.png" alt=""></a></li>
+								<li><a href="#"><img src="images/linkedin-icon-cp.png" alt=""></a></li>
+							</ul>
+						</div>
+						<img src="images/people-img1.jpg" alt="">
+					</div>
+					<div class="grid-col">
+						<div class="caption-cont">
+							<h2>Megan Cook</h2>
+							<h3>Graphic Designer</h3>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis finibus purus justo, varius vulputate quam lobortis a. Cras tortor erat, interdum nec semper pretium, tempor eleifend est. In molestie quam sed augue euismod consectetur. Aenean faucibus neque nec augue volutpat,.
+							</p>
+							<ul>
+								<li><a href="#"><img src="images/twitter-icon-cp.png" alt=""></a></li>
+								<li><a href="#"><img src="images/mail-icon-cp.png" alt=""></a></li>
+								<li><a href="#"><img src="images/linkedin-icon-cp.png" alt=""></a></li>
+							</ul>
+						</div>
+						<img src="images/people-img2.jpg" alt="">
+					</div>
+					<div class="grid-col">
+						<div class="caption-cont">
+							<h2>Megan Cook</h2>
+							<h3>Graphic Designer</h3>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis finibus purus justo, varius vulputate quam lobortis a. Cras tortor erat, interdum nec semper pretium, tempor eleifend est. In molestie quam sed augue euismod consectetur. Aenean faucibus neque nec augue volutpat,.
+							</p>
+							<ul>
+								<li><a href="#"><img src="images/twitter-icon-cp.png" alt=""></a></li>
+								<li><a href="#"><img src="images/mail-icon-cp.png" alt=""></a></li>
+								<li><a href="#"><img src="images/linkedin-icon-cp.png" alt=""></a></li>
+							</ul>
+						</div>
+						<img src="images/people-img3.jpg" alt="">
+					</div>
+					<div class="grid-col">
+						<div class="caption-cont">
+							<h2>Megan Cook</h2>
+							<h3>Graphic Designer</h3>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis finibus purus justo, varius vulputate quam lobortis a. Cras tortor erat, interdum nec semper pretium, tempor eleifend est. In molestie quam sed augue euismod consectetur. Aenean faucibus neque nec augue volutpat,.
+							</p>
+							<ul>
+								<li><a href="#"><img src="images/twitter-icon-cp.png" alt=""></a></li>
+								<li><a href="#"><img src="images/mail-icon-cp.png" alt=""></a></li>
+								<li><a href="#"><img src="images/linkedin-icon-cp.png" alt=""></a></li>
+							</ul>
+						</div>
+						<img src="images/people-img4.jpg" alt="">
+					</div>
+					<div class="grid-col">
+						<div class="caption-cont">
+							<h2>Megan Cook</h2>
+							<h3>Graphic Designer</h3>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis finibus purus justo, varius vulputate quam lobortis a. Cras tortor erat, interdum nec semper pretium, tempor eleifend est. In molestie quam sed augue euismod consectetur. Aenean faucibus neque nec augue volutpat,.
+							</p>
+							<ul>
+								<li><a href="#"><img src="images/twitter-icon-cp.png" alt=""></a></li>
+								<li><a href="#"><img src="images/mail-icon-cp.png" alt=""></a></li>
+								<li><a href="#"><img src="images/linkedin-icon-cp.png" alt=""></a></li>
+							</ul>
+						</div>
+						<img src="images/people-img5.jpg" alt="">
+					</div>
+					<div class="grid-col">
+						<div class="caption-cont">
+							<h2>Megan Cook</h2>
+							<h3>Graphic Designer</h3>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis finibus purus justo, varius vulputate quam lobortis a. Cras tortor erat, interdum nec semper pretium, tempor eleifend est. In molestie quam sed augue euismod consectetur. Aenean faucibus neque nec augue volutpat,.
+							</p>
+							<ul>
+								<li><a href="#"><img src="images/twitter-icon-cp.png" alt=""></a></li>
+								<li><a href="#"><img src="images/mail-icon-cp.png" alt=""></a></li>
+								<li><a href="#"><img src="images/linkedin-icon-cp.png" alt=""></a></li>
+							</ul>
+						</div>
+						<img src="images/people-img6.jpg" alt="">
+					</div>
+					
+				</div>
+				<footer>
+					<div class="footer-logo"><img src="images/rr-icon.png"></div>
+					<div class="quotes">
+						<div class="text-cont">
+							Need help growing your ecommerce business?
+						</div>
+						<div class="hire-btn">
+							<a class="btn" href="#">Hire Us</a>
+							<div class="bottom-arrow"></div>
+						</div>
+					</div>
+				</footer>
+			</section>
+		</div>
+		<div class="section capabilities-sec" id="section4">
+			<section class="capabilities-section">
+				<div class="inner">
+					<h2>Red Rokk Capabilities</h2>
+					<h3>WOW, Really? we can help</h3>
+					<div class="detail-sec">
+						<div class="block-cont">
+							<h4><img src="images/cap-icon1.png" alt=""> Capability 1</h4>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc libero quam, gravida nec egestas vel, luctus eget velit. Aenean eget risus consectetur est dignissim vehicula ac vitae elit. </p>
+						</div>
+						<div class="block-cont">
+							<h4><img src="images/cap-icon2.png" alt=""> Capability 2</h4>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc libero quam, gravida nec egestas vel, luctus eget velit. Aenean eget risus consectetur est dignissim vehicula ac vitae elit. </p>
+						</div>
+						<div class="block-cont">
+							<h4><img src="images/cap-icon3.png" alt=""> Capability 3</h4>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc libero quam, gravida nec egestas vel, luctus eget velit. Aenean eget risus consectetur est dignissim vehicula ac vitae elit. </p>
+						</div>
+						<div class="block-cont">
+							<h4><img src="images/cap-icon4.png" alt=""> Capability 4</h4>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc libero quam, gravida nec egestas vel, luctus eget velit. Aenean eget risus consectetur est dignissim vehicula ac vitae elit. </p>
+						</div>
+						<div class="block-cont">
+							<h4><img src="images/cap-icon5.png" alt=""> Capability 5</h4>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc libero quam, gravida nec egestas vel, luctus eget velit. Aenean eget risus consectetur est dignissim vehicula ac vitae elit. </p>
+						</div>
+						<div class="block-cont">
+							<h4><img src="images/cap-icon6.png" alt=""> Capability 6</h4>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc libero quam, gravida nec egestas vel, luctus eget velit. Aenean eget risus consectetur est dignissim vehicula ac vitae elit. </p>
+						</div>
+						<div class="block-cont">
+							<h4><img src="images/cap-icon7.png" alt=""> Capability 7</h4>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc libero quam, gravida nec egestas vel, luctus eget velit. Aenean eget risus consectetur est dignissim vehicula ac vitae elit. </p>
+						</div>
+						<div class="block-cont">
+							<h4><img src="images/cap-icon8.png" alt=""> Capability 8</h4>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc libero quam, gravida nec egestas vel, luctus eget velit. Aenean eget risus consectetur est dignissim vehicula ac vitae elit. </p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<footer>
+					<div class="footer-logo"><img src="images/rr-icon.png"></div>
+					<div class="quotes">
+						<div class="text-cont">
+							Need help growing your ecommerce business?
+						</div>
+						<div class="hire-btn">
+							<a class="btn" href="#">Hire Us</a>
+							<div class="bottom-arrow"></div>
+						</div>
+					</div>
+				</footer>
+		</div>
+		<div class="section" id="section5">
+			<section class="portfolio-section">
+				<div class="grid-cont">
+					<div class="grid-col">
+						<div class="tile-hover">
+							<div>
+								<h4>WYPS — E-Commerce</h4>
+								<ul class="hidden-xs">
+									<li>UX Strategy</li>
+									<li>E-Commerce Design</li>
+									<li>Responsive Design</li>
+									<li>Front-End Development</li>
+									<li>Performance Optimization</li>
+								</ul>
+								<a class="learn-btn" href="#">Learn More</a>
+							</div>
+						</div>
+						<div class="caption-cont">
+							<div class="caption-icon"><img src="images/portfolio-logo-1.png" alt="" title=""></div>
+						</div>
+						<img src="images/sloution-img1.jpg" alt="">
+					</div>
+					<div class="grid-col">
+						<div class="tile-hover">
+							<div>
+								<h4>WYPS — E-Commerce</h4>
+								<ul class="hidden-xs">
+									<li>UX Strategy</li>
+									<li>E-Commerce Design</li>
+									<li>Responsive Design</li>
+									<li>Front-End Development</li>
+									<li>Performance Optimization</li>
+								</ul>
+								<a class="learn-btn" href="#">Learn More</a>
+							</div>
+						</div>
+						<div class="caption-cont">
+							<div class="caption-icon"><img src="images/portfolio-logo-2.png" alt="" title=""></div>
+						</div>
+						<img src="images/sloution-img2.jpg" alt="">
+					</div>
+					<div class="grid-col">
+						<div class="tile-hover">
+							<div>
+								<h4>WYPS — E-Commerce</h4>
+								<ul class="hidden-xs">
+									<li>UX Strategy</li>
+									<li>E-Commerce Design</li>
+									<li>Responsive Design</li>
+									<li>Front-End Development</li>
+									<li>Performance Optimization</li>
+								</ul>
+								<a class="learn-btn" href="#">Learn More</a>
+							</div>
+						</div>
+						<div class="caption-cont">
+							<div class="caption-icon"><img src="images/portfolio-logo-3.png" alt="" title=""></div>
+						</div>
+						<img src="images/sloution-img3.jpg" alt="">
+					</div>
+					<div class="grid-col">
+						<div class="tile-hover">
+							<div>
+								<h4>WYPS — E-Commerce</h4>
+								<ul class="hidden-xs">
+									<li>UX Strategy</li>
+									<li>E-Commerce Design</li>
+									<li>Responsive Design</li>
+									<li>Front-End Development</li>
+									<li>Performance Optimization</li>
+								</ul>
+								<a class="learn-btn" href="#">Learn More</a>
+							</div>
+						</div>
+						<div class="caption-cont">
+							<div class="caption-icon"><img src="images/portfolio-logo-4.png" alt="" title=""></div>
+						</div>
+						<img src="images/sloution-img4.jpg" alt="">
+					</div>
+					<div class="grid-col">
+						<div class="tile-hover">
+							<div>
+								<h4>WYPS — E-Commerce</h4>
+								<ul class="hidden-xs">
+									<li>UX Strategy</li>
+									<li>E-Commerce Design</li>
+									<li>Responsive Design</li>
+									<li>Front-End Development</li>
+									<li>Performance Optimization</li>
+								</ul>
+								<a class="learn-btn" href="#">Learn More</a>
+							</div>
+						</div>
+						<div class="caption-cont">
+							<div class="caption-icon"><img src="images/portfolio-logo-5.png" alt="" title=""></div>
+						</div>
+						<img src="images/sloution-img5.jpg" alt="">
+					</div>
+					<div class="grid-col">
+						<div class="tile-hover">
+							<div>
+								<h4>WYPS — E-Commerce</h4>
+								<ul class="hidden-xs">
+									<li>UX Strategy</li>
+									<li>E-Commerce Design</li>
+									<li>Responsive Design</li>
+									<li>Front-End Development</li>
+									<li>Performance Optimization</li>
+								</ul>
+								<a class="learn-btn" href="#">Learn More</a>
+							</div>
+						</div>
+						<div class="caption-cont">
+							<div class="caption-icon"><img src="images/portfolio-logo-6.png" alt="" title=""></div>
+						</div>
+						<img src="images/sloution-img6.jpg" alt="">
+					</div>
+				</div>
+			</section>
+			<footer>
+					<div class="footer-logo"><img src="images/rr-icon.png"></div>
+					<div class="quotes">
+						<div class="text-cont">
+							Need help growing your ecommerce business?
+						</div>
+						<div class="hire-btn">
+							<a class="btn" href="#">Hire Us</a>
+							<div class="bottom-arrow"></div>
+						</div>
+					</div>
+				</footer>
+		</div>
+		<div class="section contact-sec" id="section6">
+			<section class="contact-section">
+				<div class="inner">
+					<h2>Get in Touch</h2>
+					<h3>WOW, Really? we can help</h3>
+					<p>
+						Vestibulum vitae dapibus enim. Vivamus scelerisque neque eget convallis efficitur. Nunc elementum vitae eros ac gravida. Nam luctus varius leo a elementum. Nam sed libero mauris. Suspendisse sed ex pharetra, tempus risus vitae, mattis nisl. 
+					</p>
+					<form action="#" method="get">
+						<div class="form-line">
+							<input name="" type="text" placeholder="Name">
+							<input name="" type="text" placeholder="Email Address">
+						</div>
+						<div class="form-line">
+							<textarea name="" cols="" rows="" placeholder="Your Message"></textarea>
+						</div>
+						<div class="form-line">
+							<input name="" type="submit" value="Send Message">
+						</div>
+					</form>
+				</div>
+			</section>
+			<footer>
+					<div class="footer-logo last-logo"><img src="images/footer-logo.png" alt="" title=""></div>
+					<div class="copyright">&copy; 2015 Copyright Red Rokk</div>
+					<div class="quotes">
+						<div class="left-nav">
+							<ul>
+								<li><a href="#">About</a></li>
+								<li><strong>|</strong></li>
+								<li><a href="#">Careers</a></li>
+								<li><strong>|</strong></li>
+								<li><a href="#">Contact</a></li>
+								<li>|</li>
+								<li>360 747 7401</li>
+								<li>|</li>
+								<li class="lite"><a href="mailto:info@redrokk.com">info@redrokk.com</a></li>
+							</ul>
+						</div>
+						<div class="social-icons">
+							<ul>
+								<li><a href="#"><img src="images/facebook-icon-ft.png" alt="" title=""></a></li>
+								<li><a href="#"><img src="images/twitter-icon-ft.png" alt="" title=""></a></li>
+								<li><a href="#"><img src="images/linkedin-icon-ft.png" alt="" title=""></a></li>
+							</ul>
+						</div>
+						
+					</div>
+				</footer>
+		</div>
+
+	</div>
+</body>
+
+<!-- Mirrored from asifmajeed.com/projects/roook/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 09 Jul 2019 21:25:05 GMT -->
+</html>

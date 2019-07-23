@@ -1,0 +1,40 @@
+.banner {
+    position: relative;
+    background: url(../images/about-banner.png) left top no-repeat;
+    background-size:cover; 
+    margin-bottom: 26.5px;
+    img {
+        max-width: 100%;
+        vertical-align: bottom;
+    }
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.35);
+        z-index: 1;
+    }
+    .banner_text {
+    	position: relative;
+    	z-index: 2;
+    	padding: 129px 0 221px 0;
+        span {
+        	@include section_label;
+        }
+        h1 {
+            color: #FFFFFF;
+            font-size: 36px;
+            font-weight: 500;
+            line-height: 48px;
+            margin:0 0 19px 0;
+        }
+        p {
+        	margin: 0;
+            color: #FFFFFF;
+            font-size: 18px;
+            line-height: 30px;
+        }
+    }
+}

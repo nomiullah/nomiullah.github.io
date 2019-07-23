@@ -1,0 +1,86 @@
+
+
+<!-- =========================================
+VIEW: STEP 2- INPUT -->
+<form id='s2-input-form' method="post" class="content-form"  data-parsley-validate="true" data-parsley-excluded="input[type=hidden], [disabled], :hidden">
+<input type="hidden" name="action_ajax" value="2" />
+<input type="hidden" name="action_step" value="2" />
+<input type="hidden" name="archive_name"  value="" />
+<input type="hidden" name="logging" id="logging" value="1" />
+<input type="hidden" name="secure-pass" value="" />
+
+    <div class="dupx-logfile-link"><a href="installer-logbf57.html?now=" target="install_log">installer-log.txt</a></div>
+	<div class="hdr-main">
+        Step <span class="step">2</span> of 4: Install Database
+	</div>
+
+	<div class="s2-btngrp">
+		<input id="s2-basic-btn" type="button" value="Basic" class="active" onclick="DUPX.togglePanels('basic')" />
+		<input id="s2-cpnl-btn" type="button" value="cPanel" class="in-active" onclick="DUPX.togglePanels('cpanel')" />
+	</div>
+
+
+	<!-- =========================================
+	BASIC PANEL -->
+	<div id="s2-basic-pane">
+		<div class="hdr-sub1" data-type="toggle" data-target="#s2-area-setup">
+			<a href="javascript:void(0)"><i class="dupx-minus-square"></i> Setup</a>
+		</div>
+		<div id="s2-area-setup">
+			<table class="dupx-opts">
+				<tr>
+					<td>Action:</td>
+					<td>
+						<select name="dbaction" id="dbaction">
+							<option value="create">Create New Database</option>
+							<option value="empty" selected="true">Connect and Remove All Data</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>Host:</td>
+					<td>
+						<table class="s2-opts-dbhost">
+							<tr>
+								<td><input type="text" name="dbhost" id="dbhost" required="true" value="" placeholder="localhost" style="width:450px" /></td>
+								<td style="vertical-align:top">
+									<input id="s2-dbport-btn" type="button" onclick="DUPX.togglePort()" class="s2-small-btn" value="Port: " />
+									<input name="dbport" id="dbport" type="text" style="width:80px; display:none" value="" />
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td>Database:</td>
+					<td>
+						<input type="text" name="dbname" id="dbname"  required="true" value=""  placeholder="new or existing database name"  />
+						 <div id="s2-warning-emptydb">
+							 <label for="accept-warnings">Warning: The selected 'Action' above will remove <u>all data</u> from this database!</label>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>User:</td>
+					<td><input type="text" name="dbuser" id="dbuser" required="true" value="" placeholder="valid database username" /></td>
+				</tr>
+				<tr>
+					<td>Password:</td>
+					<td><input type="text" name="dbpass" id="dbpass" value=""  placeholder="valid database user password"   /></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+
+
+	<!-- =========================================
+	C-PANEL PANEL -->
+	<div id="s2-cpnl-pane">
+		<div class="s2-gopro">
+			<h2>cPanel Connectivity</h2>
+
+			<br />
+<b>Fatal error</b>:  Uncaught Error: Class 'DUPX_U' not found in /home/junaida1/public_html/asifmajeed.com/projects/dmc/wp-content/plugins/duplicator/installer/build/view.step2.php:86
+Stack trace:
+#0 {main}
+  thrown in <b>/home/junaida1/public_html/asifmajeed.com/projects/dmc/wp-content/plugins/duplicator/installer/build/view.step2.php</b> on line <b>86</b><br />

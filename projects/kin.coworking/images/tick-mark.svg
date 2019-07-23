@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="17px" viewBox="0 0 24 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>icon / forms / check copy 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M5.80473785,16.8619288 C5.54438833,16.6015793 5.12227834,16.6015793 4.86192881,16.8619288 C4.60157928,17.1222783 4.60157928,17.5443883 4.86192881,17.8047379 L11.5285955,24.4714045 C11.788945,24.731754 12.211055,24.731754 12.4714045,24.4714045 L27.1380712,9.80473785 C27.3984207,9.54438833 27.3984207,9.12227834 27.1380712,8.86192881 C26.8777217,8.60157928 26.4556117,8.60157928 26.1952621,8.86192881 L12,23.057191 L5.80473785,16.8619288 Z" id="path-1"></path>
+    </defs>
+    <g id="🖥-Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="about" transform="translate(-231.000000, -1270.000000)">
+            <g id="icon-/-forms-/-check" transform="translate(227.000000, 1262.000000)">
+                <g>
+                    <g id="elem-/-icon---placeholder">
+                        <rect id="placeholder" x="0" y="0" width="32" height="32"></rect>
+                    </g>
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <use id="Mask" fill="#323642" fill-rule="nonzero" xlink:href="#path-1"></use>
+                    <g id="elem-/-base-/-3-base" mask="url(#mask-2)" fill="#464B5C">
+                        <rect id="element-/-colour-/-base-/-3-base" x="0" y="0" width="32" height="32"></rect>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

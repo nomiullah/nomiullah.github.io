@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="454px" height="360px" viewBox="0 0 454 360" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>illustration</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="410" height="260" rx="4"></rect>
+        <rect id="path-3" x="152" y="127" width="236" height="50" rx="3"></rect>
+        <rect id="path-4" x="320" y="176" width="2" height="20" rx="1"></rect>
+        <rect id="path-5" x="22" y="27" width="118" height="70" rx="3"></rect>
+        <rect id="path-6" x="35" y="44" width="98" height="40" rx="1"></rect>
+        <rect id="path-7" x="35" y="40" width="98" height="40" rx="1"></rect>
+        <rect id="path-8" x="36" y="96" width="2" height="30" rx="1"></rect>
+        <rect id="path-9" x="139" y="198" width="29" height="2" rx="1"></rect>
+        <rect id="path-10" x="237" y="221" width="39" height="2" rx="1"></rect>
+        <rect id="path-11" x="22" y="128" width="118" height="110" rx="6"></rect>
+        <rect id="path-12" x="22" y="123" width="118" height="110" rx="6"></rect>
+        <circle id="path-13" cx="31" cy="224" r="1"></circle>
+        <circle id="path-14" cx="131" cy="224" r="1"></circle>
+        <circle id="path-15" cx="31" cy="132" r="1"></circle>
+        <rect id="path-16" x="52" y="153" width="58" height="50" rx="2"></rect>
+        <rect id="path-17" x="52" y="150" width="58" height="50" rx="2"></rect>
+        <rect id="path-18" x="270" y="188" width="118" height="50" rx="3"></rect>
+        <rect id="path-19" x="270" y="188" width="118" height="47" rx="3"></rect>
+        <rect id="path-20" x="313" y="198" width="10" height="2" rx="1"></rect>
+        <rect id="path-21" x="280" y="195" width="35" height="30" rx="2"></rect>
+        <rect id="path-22" x="280" y="192" width="35" height="30" rx="2"></rect>
+        <circle id="path-23" cx="260" cy="211" r="2"></circle>
+        <circle id="path-24" cx="260" cy="199" r="2"></circle>
+        <circle id="path-25" cx="377" cy="224" r="1"></circle>
+        <circle id="path-26" cx="377" cy="199" r="1"></circle>
+        <circle id="path-27" cx="24" cy="110" r="2"></circle>
+        <rect id="path-28" x="160" y="188" width="2" height="10" rx="1"></rect>
+        <rect id="path-29" x="177" y="188" width="2" height="10" rx="1"></rect>
+        <rect id="path-30" x="211" y="188" width="2" height="10" rx="1"></rect>
+        <rect id="path-31" x="228" y="188" width="2" height="10" rx="1"></rect>
+        <rect id="path-32" x="194" y="176" width="2" height="20" rx="1"></rect>
+        <path d="M152,195.9961 C152,194.3414 153.350855,193 154.997812,193 L235.002188,193 C236.657834,193 238,194.33426 238,195.9961 L238,225 L152,225 L152,195.9961 Z" id="path-33"></path>
+        <rect id="path-34" x="152" y="203" width="86" height="10"></rect>
+        <rect id="path-35" x="152" y="225" width="86" height="4" rx="2"></rect>
+        <rect id="path-36" x="160" y="228" width="2" height="10" rx="1"></rect>
+        <rect id="path-37" x="177" y="228" width="2" height="10" rx="1"></rect>
+        <rect id="path-38" x="211" y="228" width="2" height="10" rx="1"></rect>
+        <rect id="path-39" x="228" y="228" width="2" height="10" rx="1"></rect>
+        <rect id="path-40" x="194" y="228" width="2" height="10" rx="1"></rect>
+        <path d="M268,290 L112,290 L112,288 L50,288 L50,290 L41.990701,290 C40.8912672,290 40,289.109528 40,288.00123 L40,34.0058287 C40,31.7934706 41.7831378,30 43.9919157,30 L446.008084,30 C448.212758,30 450,31.7923353 450,34.0025257 L450,281.992451 C450,283.10119 449.10846,284 448.002708,284 L410,284 L410,290 L390,290 L390,287 L268,287 L268,290 Z" id="path-41"></path>
+        <path d="M0,4.00582873 C0,1.79347061 1.78313775,0 3.99191573,0 L406.008084,0 C408.212758,0 410,1.79912895 410,4.00582873 L410,258.00123 C410,259.10512 409.097117,260 407.999168,260 L2.00083168,260 C0.895802856,260 0,259.109528 0,258.00123 L0,4.00582873 Z" id="path-42"></path>
+        <path d="M0,3.99582624 C0,1.78899235 1.78313775,0 3.99191573,0 L406.008084,0 C408.212758,0 410,1.79652125 410,3.99582624 L410,12 L0,12 L0,3.99582624 Z" id="path-44"></path>
+        <filter x="-0.2%" y="-8.3%" width="100.5%" height="133.3%" filterUnits="objectBoundingBox" id="filter-45">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feColorMatrix values="0 0 0 0 0.137254902   0 0 0 0 0.160784314   0 0 0 0 0.184313725  0 0 0 1 0" type="matrix" in="shadowOffsetOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="pages" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="enterprise-page" transform="translate(-771.000000, -1513.000000)">
+            <g id="ℹ-how-readme-can-help" transform="translate(180.000000, 705.000000)">
+                <g id="🔄-stay-up-to-date" transform="translate(0.000000, 800.000000)">
+                    <g id="illustration" transform="translate(593.000000, 10.000000)">
+                        <g id="frame-complex" transform="translate(0.000000, 96.000000)">
+                            <mask id="mask-2" fill="white">
+                                <use xlink:href="#path-1"></use>
+                            </mask>
+                            <g id="bg">
+                                <use fill="#DCDCDC" fill-rule="evenodd" xlink:href="#path-1"></use>
+                                <rect stroke="#23292F" stroke-width="2" x="-1" y="-1" width="412" height="262" rx="4"></rect>
+                            </g>
+                            <rect id="bg" fill="#F7F7F7" mask="url(#mask-2)" x="0" y="5" width="410" height="255" rx="4"></rect>
+                            <g id="system" mask="url(#mask-2)">
+                                <use fill="#F6F6F7" fill-rule="evenodd" xlink:href="#path-3"></use>
+                                <rect stroke="#23292F" stroke-width="2" x="151" y="126" width="238" height="52" rx="3"></rect>
+                            </g>
+                            <g id="system" mask="url(#mask-2)">
+                                <use fill="#F6F6F7" fill-rule="evenodd" xlink:href="#path-4"></use>
+                                <rect stroke="#23292F" stroke-width="2" x="319" y="175" width="4" height="22" rx="2"></rect>
+                            </g>
+                            <g id="system" mask="url(#mask-2)">
+                                <use fill="#F6F6F7" fill-rule="evenodd" xlink:href="#path-5"></use>
+                                <rect stroke="#23292F" stroke-width="2" x="21" y="26" width="120" height="72" rx="3"></rect>
+                            </g>
+                            <g id="system" mask="url(#mask-2)">
+                                <use fill="#F6F6F7" fill-rule="evenodd" xlink:href="#path-6"></use>
+                                <rect stroke="#23292F" stroke-width="2" x="34" y="43" width="100" height="42" rx="1"></rect>
+                            </g>
+                            <g id="system" mask="url(#mask-2)">
+                                <use fill="#F6F6F7" fill-rule="evenodd" xlink:href="#path-7"></use>
+                                <rect stroke="#23292F" stroke-width="2" x="34" y="39" width="100" height="42" rx="1"></rect>
+                            </g>
+                            <g id="system" mask="url(#mask-2)">
+                                <use fill="#DBDBDB" fill-rule="evenodd" xlink:href="#path-8"></use>
+                                <rect stroke="#23292F" stroke-width="2" x="35" y="95" width="4" height="32" rx="2"></rect>
+                            </g>
+                            <g id="system" mask="url(#mask-2)">
+                                <use fill="#DBDBDB" fill-rule="evenodd" xlink:href="#path-9"></use>
+                                <rect stroke="#23292F" stroke-width="2" x="138" y="197" width="31" height="4" rx="2"></rect>
+                            </g>
+                            <g id="system" mask="url(#mask-2)">
+                                <use fill="#DBDBDB" fill-rule="evenodd" xlink:href="#path-10"></use>
+                                <rect stroke="#23292F" stroke-width="2" x="236" y="220" width="41" height="4" rx="2"></rect>
+                            </g>
+                            <g id="system" mask="url(#mask-2)">
+                                <use fill="#DBDBDB" fill-rule="evenodd" xlink:href="#path-11"></use>
+                                <rect stroke="#23292F" stroke-width="2" x="21" y="127" width="120" height="112" rx="6"></rect>
+                            </g>
+                            <g id="system" mask="url(#mask-2)">
+                                <use fill="#F6F6F7" fill-rule="evenodd" xlink:href="#path-12"></use>
+                                <rect stroke="#23292F" stroke-width="2" x="21" y="122" width="120" height="112" rx="6"></rect>
+                            </g>
+                            <g id="system" mask="url(#mask-2)">
+                                <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-13"></use>
+                                <circle stroke="#23292F" stroke-width="2" cx="31" cy="224" r="2"></circle>
+                            </g>
+                            <g id="system" mask="url(#mask-2)">
+                                <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-14"></use>
+                                <circle stroke="#23292F" stroke-width="2" cx="131" cy="224" r="2"></circle>
+                            </g>
+                            <g id="system" mask="url(#mask-2)">
+                                <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-15"></use>
+                                <circle stroke="#23292F" stroke-width="2" cx="31" cy="132" r="2"></circle>
+                            </g>
+                            <g id="system" mask="url(#mask-2)">
+                                <use fill="#DBDBDB" fill-rule="evenodd" xlink:href="#path-16"></use>
+                                <rect stroke="#23292F" stroke-width="2" x="51" y="152" width="60" height="52" rx="2"></rect>
+                            </g>
+                            <g id="system" mask="url(#mask-2)">
+                                <use fill="#F6F6F7" fill-rule="evenodd" xlink:href="#path-17"></use>
+                                <rect stroke="#23292F" stroke-width="2" x="51" y="149" width="60" height="52" rx="2"></rect>
+                            </g>
+                            <rect id="system" fill-opacity="0.300000012" fill="#23292F" mask="url(#mask-2)" x="73" y="180" width="4" height="5" rx="2"></rect>
+                            <rect id="system" fill-opacity="0.300000012" fill="#23292F" mask="url(#mask-2)" x="79" y="173" width="4" height="12" rx="2"></rect>
+                            <rect id="system" fill-opacity="0.300000012" fill="#23292F" mask="url(#mask-2)" x="85" y="165" width="4" height="20" rx="2"></rect>
+                            <g id="system" mask="url(#mask-2)">
+                                <use fill="#DBDBDB" fill-rule="evenodd" xlink:href="#path-18"></use>
+                                <rect stroke="#23292F" stroke-width="2" x="269" y="187" width="120" height="52" rx="3"></rect>
+                            </g>
+                            <g id="system" mask="url(#mask-2)">
+                                <use fill="#F6F6F7" fill-rule="evenodd" xlink:href="#path-19"></use>
+                                <rect stroke="#23292F" stroke-width="2" x="269" y="187" width="120" height="49" rx="3"></rect>
+                            </g>
+                            <g id="system" mask="url(#mask-2)">
+                                <use fill="#DBDBDB" fill-rule="evenodd" xlink:href="#path-20"></use>
+                                <rect stroke="#23292F" stroke-width="2" x="312" y="197" width="12" height="4" rx="2"></rect>
+                            </g>
+                            <g id="system" mask="url(#mask-2)">
+                                <use fill="#0E6AB5" fill-rule="evenodd" xlink:href="#path-21"></use>
+                                <rect stroke="#23292F" stroke-width="2" x="279" y="194" width="37" height="32" rx="2"></rect>
+                            </g>
+                            <g id="system" mask="url(#mask-2)">
+                                <use fill="#138EF2" fill-rule="evenodd" xlink:href="#path-22"></use>
+                                <rect stroke="#23292F" stroke-width="2" x="279" y="191" width="37" height="32" rx="2"></rect>
+                            </g>
+                            <path d="M48.008,215.12 C49.136,215.12 50.096,215.808 50.096,217.024 C50.096,217.848 49.648,218.432 49.016,218.72 L50.384,221 L48.96,221 L47.728,218.928 L46.92,218.928 L46.92,221 L45.704,221 L45.704,215.12 L48.008,215.12 Z M47.896,216.176 L46.92,216.176 L46.92,217.872 L47.896,217.872 C48.472,217.872 48.856,217.576 48.856,217.024 C48.856,216.48 48.472,216.176 47.896,216.176 Z M54.816,215.12 L51.016,215.12 L51.016,221 L54.88,221 L54.88,219.888 L52.24,219.888 L52.24,218.536 L54.472,218.536 L54.472,217.504 L52.24,217.504 L52.24,216.232 L54.816,216.232 L54.816,215.12 Z M58.08,215.016 L60.92,221 L59.576,221 L59.192,220.088 L56.936,220.088 L56.552,221 L55.208,221 L58.048,215.016 L58.08,215.016 Z M58.064,217.376 L57.32,219.136 L58.808,219.136 L58.064,217.376 Z M63.416,215.12 C65.424,215.12 66.632,216.2 66.632,218.056 C66.632,219.912 65.44,221 63.416,221 L61.544,221 L61.544,215.12 L63.416,215.12 Z M63.376,216.24 L62.768,216.24 L62.768,219.888 L63.376,219.888 C64.704,219.888 65.392,219.216 65.392,218.064 C65.392,216.904 64.696,216.24 63.376,216.24 Z M73.376,215.016 L73.344,215.016 L70.416,219.16 L67.48,215.016 L67.448,215.016 L67.448,221 L68.672,221 L68.672,218.528 L70.384,221.08 L70.448,221.08 L72.16,218.528 L72.16,221 L73.376,221 L73.376,215.016 Z M78.352,215.12 L74.552,215.12 L74.552,221 L78.416,221 L78.416,219.888 L75.776,219.888 L75.776,218.536 L78.008,218.536 L78.008,217.504 L75.776,217.504 L75.776,216.232 L78.352,216.232 L78.352,215.12 Z M83.776,215.016 C85.504,215.016 86.8,216.304 86.8,218.072 C86.8,218.904 86.504,219.632 86.016,220.16 L87.264,221.6 L85.792,221.6 L85.112,220.824 C84.712,221 84.264,221.104 83.776,221.104 C82.04,221.104 80.76,219.824 80.76,218.072 C80.76,216.304 82.04,215.016 83.776,215.016 Z M83.776,216.128 C82.728,216.128 81.992,216.936 81.992,218.072 C81.992,219.192 82.728,219.992 83.776,219.992 C83.968,219.992 84.152,219.968 84.32,219.912 L83.544,219.016 L84.4,218.296 L85.224,219.248 C85.432,218.928 85.56,218.528 85.56,218.072 C85.56,216.936 84.824,216.128 83.776,216.128 Z M92.072,215.12 L90.856,215.12 L90.856,218.808 C90.856,219.512 90.496,219.992 89.808,219.992 C89.112,219.992 88.768,219.512 88.768,218.808 L88.768,215.12 L87.544,215.12 L87.544,218.888 C87.544,220.224 88.328,221.104 89.808,221.104 C91.288,221.104 92.072,220.224 92.072,218.888 L92.072,215.12 Z M95.496,215.016 L98.336,221 L96.992,221 L96.608,220.088 L94.352,220.088 L93.968,221 L92.624,221 L95.464,215.016 L95.496,215.016 Z M95.48,217.376 L94.736,219.136 L96.224,219.136 L95.48,217.376 Z M100.184,215.12 L98.96,215.12 L98.96,221 L102.688,221 L102.688,219.928 L100.184,219.928 L100.184,215.12 Z M104.552,215.12 L103.328,215.12 L103.328,221 L104.552,221 L104.552,215.12 Z M110.304,215.12 L105.272,215.12 L105.272,216.192 L107.176,216.192 L107.176,221 L108.392,221 L108.392,216.192 L110.304,216.192 L110.304,215.12 Z M115.968,215.12 L114.552,215.12 L113.216,217.392 L111.88,215.12 L110.464,215.12 L112.616,218.616 L112.616,221 L113.832,221 L113.832,218.592 L115.968,215.12 Z" id="README-QUALITY" fill-opacity="0.1" fill="#23292F" mask="url(#mask-2)"></path>
+                            <g id="system" mask="url(#mask-2)">
+                                <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-23"></use>
+                                <circle stroke="#23292F" stroke-width="2" cx="260" cy="211" r="3"></circle>
+                            </g>
+                            <g id="system" mask="url(#mask-2)">
+                                <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-24"></use>
+                                <circle stroke="#23292F" stroke-width="2" cx="260" cy="199" r="3"></circle>
+                            </g>
+                            <g id="system" mask="url(#mask-2)">
+                                <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-25"></use>
+                                <circle stroke="#23292F" stroke-width="2" cx="377" cy="224" r="2"></circle>
+                            </g>
+                            <g id="system" mask="url(#mask-2)">
+                                <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-26"></use>
+                                <circle stroke="#23292F" stroke-width="2" cx="377" cy="199" r="2"></circle>
+                            </g>
+                            <g id="system" mask="url(#mask-2)">
+                                <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-27"></use>
+                                <circle stroke="#23292F" stroke-width="2" cx="24" cy="110" r="3"></circle>
+                            </g>
+                            <g id="system" mask="url(#mask-2)">
+                                <use fill="#F6F6F7" fill-rule="evenodd" xlink:href="#path-28"></use>
+                                <rect stroke="#23292F" stroke-width="2" x="159" y="187" width="4" height="12" rx="2"></rect>
+                            </g>
+                            <g id="system" mask="url(#mask-2)">
+                                <use fill="#F6F6F7" fill-rule="evenodd" xlink:href="#path-29"></use>
+                                <rect stroke="#23292F" stroke-width="2" x="176" y="187" width="4" height="12" rx="2"></rect>
+                            </g>
+                            <g id="system" mask="url(#mask-2)">
+                                <use fill="#F6F6F7" fill-rule="evenodd" xlink:href="#path-30"></use>
+                                <rect stroke="#23292F" stroke-width="2" x="210" y="187" width="4" height="12" rx="2"></rect>
+                            </g>
+                            <g id="system" mask="url(#mask-2)">
+                                <use fill="#F6F6F7" fill-rule="evenodd" xlink:href="#path-31"></use>
+                                <rect stroke="#23292F" stroke-width="2" x="227" y="187" width="4" height="12" rx="2"></rect>
+                            </g>
+                            <g id="system" mask="url(#mask-2)">
+                                <use fill="#F6F6F7" fill-rule="evenodd" xlink:href="#path-32"></use>
+                                <rect stroke="#23292F" stroke-width="2" x="193" y="175" width="4" height="22" rx="2"></rect>
+                            </g>
+                            <g id="system" mask="url(#mask-2)">
+                                <use fill="#138EF2" fill-rule="evenodd" xlink:href="#path-33"></use>
+                                <path stroke="#23292F" stroke-width="2" d="M151,195.9961 C151,193.791532 152.796144,192 154.997812,192 L235.002188,192 C237.212094,192 239,193.783943 239,195.9961 L239,226 L151,226 L151,195.9961 Z"></path>
+                            </g>
+                            <g id="system" opacity="0.185858243" mask="url(#mask-2)">
+                                <use fill="#138EF2" fill-rule="evenodd" xlink:href="#path-34"></use>
+                                <rect stroke="#23292F" stroke-width="2" x="151" y="202" width="88" height="12"></rect>
+                            </g>
+                            <path d="M286,202.008341 C286,200.899165 286.893583,200 287.992872,200 L294.5,200 C296.156854,200 297.5,201.342058 297.5,202.991394 L297.5,203 L297.5,216 L296.98495,215.098663 C296.164835,213.663461 294.159031,212.5 292.494141,212.5 L287.991511,212.5 C286.89163,212.5 286,211.601031 286,210.491659 L286,202.008341 Z M289,205.5 C289,205.768066 289.223522,206 289.499251,206 L295.000749,206 C295.283733,206 295.5,205.776142 295.5,205.5 C295.5,205.231934 295.276478,205 295.000749,205 L289.499251,205 C289.216267,205 289,205.223858 289,205.5 Z M289,207.5 C289,207.768066 289.223522,208 289.499251,208 L295.000749,208 C295.283733,208 295.5,207.776142 295.5,207.5 C295.5,207.231934 295.276478,207 295.000749,207 L289.499251,207 C289.216267,207 289,207.223858 289,207.5 Z M289,209.5 C289,209.768066 289.223522,210 289.499251,210 L295.000749,210 C295.283733,210 295.5,209.776142 295.5,209.5 C295.5,209.231934 295.276478,209 295.000749,209 L289.499251,209 C289.216267,209 289,209.223858 289,209.5 Z M309,202.008341 L309,210.491659 C309,211.601031 308.10837,212.5 307.008489,212.5 L302.505859,212.5 C300.840969,212.5 298.835165,213.663461 298.01505,215.098663 L297.5,216 L297.5,203 L297.5,202.991394 C297.5,201.342058 298.843146,200 300.5,200 L307.007128,200 C308.106417,200 309,200.899165 309,202.008341 Z M306,205.5 C306,205.223858 305.783733,205 305.500749,205 L299.999251,205 C299.723522,205 299.5,205.231934 299.5,205.5 C299.5,205.776142 299.716267,206 299.999251,206 L305.500749,206 C305.776478,206 306,205.768066 306,205.5 Z M306,207.5 C306,207.223858 305.783733,207 305.500749,207 L299.999251,207 C299.723522,207 299.5,207.231934 299.5,207.5 C299.5,207.776142 299.716267,208 299.999251,208 L305.500749,208 C305.776478,208 306,207.768066 306,207.5 Z M306,209.5 C306,209.223858 305.783733,209 305.500749,209 L299.999251,209 C299.723522,209 299.5,209.231934 299.5,209.5 C299.5,209.776142 299.716267,210 299.999251,210 L305.500749,210 C305.776478,210 306,209.768066 306,209.5 Z" id="readme" fill="#167BCE" mask="url(#mask-2)"></path>
+                            <g id="system" mask="url(#mask-2)">
+                                <use fill="#0E6AB5" fill-rule="evenodd" xlink:href="#path-35"></use>
+                                <rect stroke="#23292F" stroke-width="2" x="151" y="224" width="88" height="6" rx="2"></rect>
+                            </g>
+                            <g id="system" mask="url(#mask-2)">
+                                <use fill="#F6F6F7" fill-rule="evenodd" xlink:href="#path-36"></use>
+                                <rect stroke="#23292F" stroke-width="2" x="159" y="227" width="4" height="12" rx="2"></rect>
+                            </g>
+                            <g id="system" mask="url(#mask-2)">
+                                <use fill="#F6F6F7" fill-rule="evenodd" xlink:href="#path-37"></use>
+                                <rect stroke="#23292F" stroke-width="2" x="176" y="227" width="4" height="12" rx="2"></rect>
+                            </g>
+                            <g id="system" mask="url(#mask-2)">
+                                <use fill="#F6F6F7" fill-rule="evenodd" xlink:href="#path-38"></use>
+                                <rect stroke="#23292F" stroke-width="2" x="210" y="227" width="4" height="12" rx="2"></rect>
+                            </g>
+                            <g id="system" mask="url(#mask-2)">
+                                <use fill="#F6F6F7" fill-rule="evenodd" xlink:href="#path-39"></use>
+                                <rect stroke="#23292F" stroke-width="2" x="227" y="227" width="4" height="12" rx="2"></rect>
+                            </g>
+                            <g id="system" mask="url(#mask-2)">
+                                <use fill="#F6F6F7" fill-rule="evenodd" xlink:href="#path-40"></use>
+                                <rect stroke="#23292F" stroke-width="2" x="193" y="227" width="4" height="12" rx="2"></rect>
+                            </g>
+                        </g>
+                        <g id="Combined-Shape" opacity="0.155740489">
+                            <use fill="#23292F" fill-rule="evenodd" xlink:href="#path-41"></use>
+                            <path stroke="#23292F" stroke-width="2" d="M111,289 L51,289 L51,291 L41.990701,291 C40.3368989,291 39,289.659727 39,288.00123 L39,34.0058287 C39,31.2406983 41.2313303,29 43.9919157,29 L446.008084,29 C448.765533,29 451,31.2405384 451,34.0025257 L451,281.992451 C451,283.653056 449.661179,285 448.002708,285 L411,285 L411,291 L389,291 L389,288 L269,288 L269,291 L111,291 L111,289 Z"></path>
+                        </g>
+                        <g id="frame" transform="translate(40.000000, 0.000000)">
+                            <mask id="mask-43" fill="white">
+                                <use xlink:href="#path-42"></use>
+                            </mask>
+                            <g id="bg">
+                                <use fill="#F7F7F7" fill-rule="evenodd" xlink:href="#path-42"></use>
+                                <path stroke="#23292F" stroke-width="2" d="M-1,4.00582873 C-1,1.24069827 1.2313303,-1 3.99191573,-1 L406.008084,-1 C408.764097,-1 411,1.24588467 411,4.00582873 L411,258.00123 C411,259.655747 409.651071,261 407.999168,261 L2.00083168,261 C0.342563169,261 -1,259.660863 -1,258.00123 L-1,4.00582873 Z"></path>
+                            </g>
+                            <g id="card" mask="url(#mask-43)">
+                                <g transform="translate(18.000000, 160.000000)">
+                                    <rect id="bg" fill="#FFFFFF" x="0" y="0" width="118" height="82" rx="4"></rect>
+                                    <rect id="Rectangle" fill="#23292F" opacity="0.2" x="16" y="16" width="10" height="10" rx="2"></rect>
+                                    <rect id="bg" fill="#23292F" opacity="0.100000001" x="30" y="17" width="72" height="8" rx="2"></rect>
+                                    <rect id="bg" fill="#23292F" opacity="0.2" x="16" y="36" width="10" height="10" rx="2"></rect>
+                                    <rect id="bg" fill="#23292F" opacity="0.100000001" x="30" y="37" width="72" height="8" rx="2"></rect>
+                                    <rect id="bg" fill="#23292F" opacity="0.2" x="16" y="56" width="10" height="10" rx="2"></rect>
+                                    <rect id="bg" fill="#23292F" opacity="0.100000001" x="30" y="57" width="72" height="8" rx="2"></rect>
+                                </g>
+                            </g>
+                            <g id="card" mask="url(#mask-43)">
+                                <g transform="translate(146.000000, 160.000000)">
+                                    <rect id="bg" fill="#FFFFFF" x="0" y="0" width="118" height="82" rx="4"></rect>
+                                    <rect id="Rectangle" fill="#23292F" opacity="0.2" x="16" y="16" width="10" height="10" rx="2"></rect>
+                                    <rect id="bg" fill="#23292F" opacity="0.100000001" x="30" y="17" width="72" height="8" rx="2"></rect>
+                                    <rect id="bg" fill="#23292F" opacity="0.2" x="16" y="36" width="10" height="10" rx="2"></rect>
+                                    <rect id="bg" fill="#23292F" opacity="0.100000001" x="30" y="37" width="72" height="8" rx="2"></rect>
+                                    <rect id="bg" fill="#23292F" opacity="0.2" x="16" y="56" width="10" height="10" rx="2"></rect>
+                                    <rect id="bg" fill="#23292F" opacity="0.100000001" x="30" y="57" width="72" height="8" rx="2"></rect>
+                                </g>
+                            </g>
+                            <g id="card" mask="url(#mask-43)">
+                                <g transform="translate(274.000000, 160.000000)">
+                                    <rect id="bg" fill="#FFFFFF" x="0" y="0" width="118" height="82" rx="4"></rect>
+                                    <rect id="Rectangle" fill="#23292F" opacity="0.2" x="16" y="16" width="10" height="10" rx="2"></rect>
+                                    <rect id="bg" fill="#23292F" opacity="0.100000001" x="30" y="17" width="72" height="8" rx="2"></rect>
+                                    <rect id="bg" fill="#23292F" opacity="0.2" x="16" y="36" width="10" height="10" rx="2"></rect>
+                                    <rect id="bg" fill="#23292F" opacity="0.100000001" x="30" y="37" width="72" height="8" rx="2"></rect>
+                                    <rect id="bg" fill="#23292F" opacity="0.2" x="16" y="56" width="10" height="10" rx="2"></rect>
+                                    <rect id="bg" fill="#23292F" opacity="0.100000001" x="30" y="57" width="72" height="8" rx="2"></rect>
+                                </g>
+                            </g>
+                            <rect id="line" fill="#138EF2" mask="url(#mask-43)" x="0" y="12" width="410" height="130"></rect>
+                            <g id="status" mask="url(#mask-43)" fill="#FFFFFF">
+                                <g transform="translate(98.000000, 53.000000)" id="bg">
+                                    <rect x="55" y="0" width="104" height="12" rx="2"></rect>
+                                    <rect opacity="0.599999964" x="0" y="24" width="214" height="8" rx="2"></rect>
+                                    <rect opacity="0.599999964" x="25" y="40" width="164" height="8" rx="2"></rect>
+                                </g>
+                            </g>
+                            <g id="status" mask="url(#mask-43)">
+                                <use fill="black" fill-opacity="1" filter="url(#filter-45)" xlink:href="#path-44"></use>
+                                <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-44"></use>
+                            </g>
+                            <circle id="control" fill="#23292F" mask="url(#mask-43)" cx="7" cy="6" r="2"></circle>
+                            <circle id="control" fill="#23292F" mask="url(#mask-43)" cx="13" cy="6" r="2"></circle>
+                            <circle id="control" fill="#23292F" mask="url(#mask-43)" cx="19" cy="6" r="2"></circle>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

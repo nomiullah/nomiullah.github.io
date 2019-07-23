@@ -1,0 +1,2 @@
+User-agent: *
+Disallow: /http://masifmajeed.com/projects/front-range/

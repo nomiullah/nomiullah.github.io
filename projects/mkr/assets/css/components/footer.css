@@ -1,0 +1,23 @@
+.footer {
+  font-family: 'Lato', sans-serif;
+  background: #1D1D1D;
+  display: flex;
+  justify-content: space-between;
+  height: 100px;
+  padding-right: 50px;
+  color: white;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.footer-content {
+  padding-right: 50px;
+  padding-bottom: 50px;
+  display: block;
+  margin-left: auto;
+  text-align: right;
+  position: absolute; right: 0; width: 50%;
+}
+.footer-content input {
+  border:0;
+}

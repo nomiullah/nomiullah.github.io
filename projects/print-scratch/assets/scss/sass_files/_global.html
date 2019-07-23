@@ -1,0 +1,53 @@
+html, body {
+    font-family: $primaryfont;
+    font-size: 15px;
+    line-height: 1.5;
+    background:#34454f;
+}
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: $primaryfont;
+    font-weight: 400;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+} 
+.bold {
+    font-weight: bold;
+}
+img {
+    vertical-align: bottom;
+}
+a,
+button {
+    text-decoration: none;
+    color: inherit;
+    transition: all 300ms;
+}
+.container {
+    width: 100%;
+    max-width: 1330px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.flex-start {
+    justify-content: flex-start;
+}
+.hidden-desktop {
+    display: none !important;
+    @include mobile {
+        display: block !important;
+    }
+}
+.hidden-mobile {
+    @include mobile {
+        display: none !important;
+    }
+}

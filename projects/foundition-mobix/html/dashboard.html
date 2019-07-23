@@ -1,0 +1,377 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<!-- Mirrored from asifmajeed.com/projects/foundition-mobix/html/dashboard.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 10 Jul 2019 03:28:20 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MobiPPP Login</title>
+     <link href='../../../../fonts.googleapis.com/css2275.css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='../../../../fonts.googleapis.com/css7a41.css?family=Roboto:400,300,500,700,100,400italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/foundation.css" />
+    <link rel="stylesheet" href="css/app.css" />
+</head>
+<body onLoad="init()">
+<div class="off-canvas-wrapper">
+        <header>
+        	<div class="logo">
+            	<a href="index.html">MobiX</a>
+            </div>
+            <div class="right-cont">
+            	<a href="#" class="logout"><img src="images/logout-icon.png" alt="" title=""> Logout</a>
+            </div>
+        </header>
+  <div class="off-canvas-wrapper-inner dashboard-cont" data-off-canvas-wrapper>
+    <div class="off-canvas position-left reveal-for-large" id="my-info" data-off-canvas data-position="left">
+      <div class="">
+      	<div class="left-cont">
+            	<div class="user-detail">
+                	<div class="user-img"><img src="images/user-img.png" alt="" title=""></div>
+                    <div class="user-info">
+                    	<div class="name-number">213-5567-4567</div>
+                        <div class="balance-cont">Balance : $ 5,000 </div>
+                    </div>
+                </div>
+            	<nav>
+                	<ul id="tabs">
+                    	<li><a href="#paybill"><div class="icon-cont paybill"></div>  PAYBILL</a></li>
+                        <li><a href="#topyp"><div class="icon-cont topup"></div>  TOP UP</a></li>
+                        <li><a href="#transaction"><div class="icon-cont transaction"></div>  TRANSACTIONS</a></li>
+                        <li><a href="#myaccount"><div class="icon-cont myaccount"></div>  MY ACCOUNT</a></li>
+                    </ul>
+                </nav>
+            </div>
+      </div>
+    </div>
+    <div class="off-canvas-content" data-off-canvas-content>
+      <div class="title-bar hide-for-large">
+        <div class="title-bar-left">
+          <button class="menu-icon" type="button" data-open="my-info"></button>
+          <span class="title-bar-title">MobiX Menu</span> </div>
+      </div>
+      <div>
+      	<div class="right-cont">
+            	<div class="row">
+            	<div class="large-12 columns">
+                	<div class="tabContent" id="paybill">
+                    	<div class="paybill-sec1">
+                        	<h2>PAY BILL</h2>
+                            <div class="confirmpayment-cont">
+                                <form>
+                                    <div class="form-line">
+                                        <label>To<span class="error">*</span></label>
+                                    </div>
+                                    <div class="form-line">
+                                        <div class="large-7 medium-7 error-cont">
+                                            <select name="">
+                                                <option>Water Utility</option>
+                                                <option>Water Utility</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-line">
+                                        <label>Utility Account Number<span class="error">*</span></label>
+                                    </div>
+                                    <div class="form-line">
+                                        <div class="large-7 medium-7">
+                                            <input type="text" placeholder="Account No.">
+                                        </div>
+                                    </div>
+                                    <div class="form-line">
+                                        <label>Bill Amount<span class="error">*</span></label>
+                                    </div>
+                                    <div class="form-line">
+                                        <div class="large-7 medium-7">
+                                            <input type="text" placeholder="$ ">
+                                        </div>
+                                    </div>
+                                    <div class="form-line">
+                                        <label>Balance After Payment </label>
+                                    </div>
+                                    <div class="form-line">
+                                        <div class="large-7 medium-7">
+                                          <div class="paymen-total">$ 500</div>
+                                        </div>
+                                    </div>
+                                    <div class="form-line">
+                                        <label>Bill Due On<span class="error">*</span></label>
+                                    </div>
+                                    <div class="form-line">
+                                        <div class="large-7 medium-7">
+                                          <div class="clander"><img src="images/clander.png" alt="" title=""></div>
+                                          <input type="text" placeholder="mm/dd/yyyy" id="datepicker">
+                                        </div>
+                                    </div>
+                                    <div class="form-line">
+                                        <div class="large-7 medium-7">
+                                            <input type="submit" value="Pay Bill" id="pay-btn1">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="paybill-sec2">
+                        	<h2>CONFIRM PAYMENT</h2>
+                            <div class="confirmpayment-cont">
+                                <form>
+                                    <div class="form-line">
+                                        <label>To</label>
+                                    </div>
+                                    <div class="form-line">
+                                        <div class="large-7 medium-7 error-cont">
+                                            <select name="">
+                                                <option>DC Gas</option>
+                                                <option>DC Gas</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-line">
+                                        <label>Utility Account Number</label>
+                                    </div>
+                                    <div class="form-line">
+                                        <div class="large-7 medium-7">
+                                            <input type="text" value="1234-1234-1234">
+                                        </div>
+                                    </div>
+                                    <div class="form-line">
+                                        <label>Bill Amount</label>
+                                    </div>
+                                    <div class="form-line">
+                                        <div class="large-7 medium-7">
+                                            <input type="text" value="$ 500.25">
+                                        </div>
+                                    </div>
+                                    <div class="form-line">
+                                        <label>Bill Due On </label>
+                                    </div>
+                                    <div class="form-line">
+                                        <div class="large-7 medium-7">
+                                          <div class="clander"><img src="images/clander.png" alt="" title=""></div>
+                                          <input type="text" value="02/03/2015" id="datepicker">
+                                        </div>
+                                    </div>
+                                    <div class="form-line">
+                                        <label>Balance After Payment </label>
+                                    </div>
+                                    <div class="form-line">
+                                        <div class="large-7 medium-7">
+                                          <div class="paymen-total">$ 500</div>
+                                        </div>
+                                    </div>
+                                    <div class="form-line">
+                                        <div class="large-7 medium-7">
+                                            <input type="submit" value="Pay Bill">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="paybill-sec3">
+                        	<h2>Payment has been scheduled!</h2>
+                            <div class="payment-recipt">
+                                <p>
+                                    Your bill payment has been scheduled. Please allow 48 hours for the payment to clear.
+    This is your receipt. Please print it for your records.
+                                </p>
+                                <div class="recipt-box">
+                                    <div class="inner-cont">
+                                        <h3>Payment Receipt</h3>
+                                        <div class="line-cont">
+                                            <div class="title-cont">Account No.</div>
+                                            <div class="title-space">:</div>
+                                            <div class="title-value">1234-456-234</div>
+                                        </div>
+                                         <div class="line-cont">
+                                            <div class="title-cont">Payment to</div>
+                                            <div class="title-space">:</div>
+                                            <div class="title-value">DC Gas</div>
+                                        </div>
+                                         <div class="line-cont">
+                                            <div class="title-cont">Payment made</div>
+                                            <div class="title-space">:</div>
+                                            <div class="title-value">$ 500</div>
+                                        </div>
+                                         <div class="line-cont">
+                                            <div class="title-cont">Payment made on </div>
+                                            <div class="title-space">:</div>
+                                            <div class="title-value">5th July, 2015</div>
+                                        </div>
+                                         <div class="line-cont">
+                                            <div class="title-cont">Payment references #</div>
+                                            <div class="title-space">:</div>
+                                            <div class="title-value">1234-5678-4567</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="pass-btn">
+                                    <a href="#" id="pay-btn3">Done</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tabContent" id="topyp">
+                    	<div class="topup-sec1">
+                        	<h2>ACCOUNT TOPUP</h2>
+                            <div class="topup1-cont">
+                                <form>
+                                    <div class="form-line">
+                                        <label>Topup card serial number     :</label>
+                                    </div>
+                                    <div class="form-line ">
+                                        <div class="large-9 medium-9 error-cont">
+                                            <div class="cancel-btn">X</div>
+                                            <input type="text" placeholder="Card Serial Number">
+                                            <div class="error-message">Invalid serial number! Please try again.</div>
+                                        </div>
+                                    </div>
+                                    <div class="form-line">
+                                        <div class="large-9 medium-9">
+                                            <input type="submit" value="Submit">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="topup-sec2">
+                        	<h2>ACCOUNT TOPUP</h2>
+                            <div class="topup2-cont">
+                                <p class="green">
+                                    We've topped up $ 1,000 to your account!
+                                </p>
+                                <div class="done-btn">
+                                    <a href="#">Done</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tabContent" id="transaction">
+                    	<h2>TRANSACTIONS</h2>
+                        <div class="transactions-cont">
+                        	<div class="transactions-table">
+                            	<table>
+                                  <thead>
+                                    <tr>
+                                      <th width="15%">Type <img src="images/small-table-arrow.png" alt="" title=""></th>
+                                      <th width="23%">Date <img src="images/small-table-arrow2.png" alt="" title=""></th>
+                                      <th width="15%">Amount</th>
+                                      <th width="23%">Account #</th>
+                                      <th width="24%">Transaction ID</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td>Topup</td>
+                                      <td>12/12/15 9:31am</td>
+                                      <td>$ 1,500</td>
+                                      <td>N/A</td>
+                                      <td>1234-1234-1234</td>
+                                    </tr>
+                                    <tr>
+                                      <td>Bill Pay</td>
+                                      <td>12/12/15 9:31am</td>
+                                      <td>$ 1,000</td>
+                                      <td>1234-1234-1234</td>
+                                      <td>1234-ABBD-1234</td>
+                                    </tr>
+                                    <tr>
+                                      <td>Bill Pay</td>
+                                      <td>12/12/15 9:31am</td>
+                                      <td>$ 1,000</td>
+                                      <td>1234-1234-1234</td>
+                                      <td>1234-ABCD-1234</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tabContent" id="myaccount">
+                    	<h2>MY ACCOUNT</h2>
+                        <div class="myaccount-main-cont">
+                        	<div class="erroe-message"><img src="images/error-message-icon.png" alt="" title="">Error/confirmation box</div>
+                            <div class="option-line ">
+                              <div class="large-4 medium-4 columns">
+                              	<label>Email</label>
+                              </div>
+                              <div class="large-4 medium-4 columns">
+                              	<input name="" type="text">
+                              </div>
+                              <div class="large-4 medium-4 columns">
+                              	<input name="" type="button" value="Set">
+                             </div>
+                            </div>
+                            <div class="option-line ">
+                              <div class="large-4 medium-4 columns">
+                              	<label>Secret PIN</label>
+                              </div>
+                              <div class="large-4 medium-4 columns">
+                              	<input name="" type="text">
+                              </div>
+                              <div class="large-4 medium-4 columns">
+                              	<input name="" type="button" value="Set">
+                             </div>
+                            </div>
+                            <div class="option-line ">
+                              <div class="large-4 medium-4 columns">
+                              	<label>Notifications</label>
+                              </div>
+                              <div class="large-8 medium-8 columns">
+                              	<div class="question-cont">
+                                	Send me a message when I ...
+                                </div>
+                                <div class="answer-line">
+                                	<label>Pay a bill</label>
+                                    <input type="checkbox">
+                                </div>
+                                <div class="answer-line">
+                                	<label>Topup my balance</label>
+                                    <input type="checkbox">
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+      </div>
+    </div>
+  </div>
+  <footer>
+            <div class="row">
+                <div class="large-12 columns">
+                    <nav class="nav-footer">
+                        <ul>
+                            <li><a href="#">About</a></li>
+                            <li><a href="dashboard-faq.html">FAQs</a></li>
+                            <li><a href="#">Feedback</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Privacy</a></li>
+                            <li><a href="#">Terms</a></li>
+                            <li><a href="#">Legal</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </nav>
+                    <nav class="social-icon">
+                        <ul>
+                            <li><a href="#"><img src="images/facebook-iocn.png" alt="" title=""></a></li>
+                            <li><a href="#"><img src="images/twitter-icon.png" alt="" title=""></a></li>
+                            <li><a href="#"><img src="images/gplus-icon.png" alt="" title=""></a></li>
+                        </ul>
+                    </nav>
+                    <div class="copy-right">&copy; 2015 MobiPPP Company. All Right Reserved.</div> 
+                </div>
+        	</div>
+        </footer>
+</div>
+    <script src="js/vendor/jquery.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/vendor/what-input.min.js"></script>
+    <script src="js/foundation.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+<!-- Mirrored from asifmajeed.com/projects/foundition-mobix/html/dashboard.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 10 Jul 2019 03:28:20 GMT -->
+</html>

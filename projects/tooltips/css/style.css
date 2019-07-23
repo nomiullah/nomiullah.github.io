@@ -1,0 +1,49 @@
+* { margin:0px; padding:0px; box-sizing:border-box; }
+body { margin:0px; padding:0px; font-family: 'Roboto', sans-serif; }
+.wrapper {}
+.clear { clear:both;}
+
+
+/*Survey Newest*/
+.survery-tooltip { width:100%; max-width:1024px; background:#fff; margin:0 auto; position:relative; padding:39px 0 0 0; text-align:center; min-height:224px; }
+.survery-tooltip .cross-icon { position:absolute; top:10px; right:15px; }
+.survery-tooltip h1 { margin:0 0 27px 0; padding:0px; font-weight:300; color:#FF577D; font-size:18px; }
+.survery-tooltip .recomendtaion { margin:0px; padding:0px; display:inline-block; margin:0 auto; width:100%; max-width:532px; text-align:center; }
+.survery-tooltip .recomendtaion ul { margin:0 0 13px 0; padding:0px; display:inline-block; }
+.survery-tooltip .recomendtaion ul li { float:left; margin:0 8px 0 0; padding:0px; list-style:none; }
+.survery-tooltip .recomendtaion ul li a { padding:8px 14px; text-decoration:none; font-size:18px; color:#707EAA; border:1px solid #d3d9e3; border-radius:2px; display:inline-block;}
+.survery-tooltip .recomendtaion ul li:last-of-type { margin-right:0px;} 
+.survery-tooltip .recomendtaion span { font-size:15px; color:#AEAEAE; margin:0px; padding:0px; display:inline-block; font-weight:300;}
+.survery-tooltip .recomendtaion .recomendtaion-bottom { text-align:left;}
+.survery-tooltip .recomendtaion .recomendtaion-bottom span:last-of-type { float:right;}
+
+/*Tooltip*/
+.tooltip { padding:16px 15px; background:#fff; border:1px solid #cdd2e0; border-radius:3px; width:100%; max-width:424px; position:relative; margin:0 auto; margin-top:9px; }
+.tooltip:before { position:absolute; top:0; left:23px; background:url(../images/arrow-top.png) center center no-repeat; width:18px; height:9px; top:-9px; display:block; content:"";}
+.tooltip .cross-icon { position:absolute; top:10px; right:15px; }
+.tooltip span { font-size:18px; font-weight:500; color:#001453; display:block; margin-bottom:9px;}
+.tooltip p { color:#636363; font-weight:300; font-size:18px;line-height:24px; }
+.tooltip p strong { font-weight:500;}
+
+/*Sales Force Modal*/
+.sales-force-modal { border:1px solid #cdd2e0; border-radius:4px; width:513px; margin:0 auto; padding:68px 0 55px 0; text-align:center; max-width:100%; position:relative; }
+.sales-force-modal h1 { margin:0px; padding:0px; font-size:32px; color:#707EAA; font-weight:300; margin:17px 0 31px 0; }
+.sales-force-modal p { font-size:15px; color:#7E7E7E; margin:0px; padding:0px; font-weight:400; margin-bottom:33px; line-height:24px; }
+.sales-force-modal a { padding:0 26px; display:inline-block; line-height:40px; font-size:13px; color:#fff; text-decoration:none; font-weight:500; text-align:center; background:#5d699a; border-radius:3px;}
+.sales-force-modal  .cross-icon {position: absolute;top: 15px;right: 15px; background:none; padding:0px; margin:0px; line-height:normal;}
+
+
+/*Modal Window*/
+.modal-window { border:1px solid #cdd2e0; border-radius:4px; width:736px; margin:0 auto; padding:58px 0 55px 0; text-align:center; max-width:100%; position:relative; }
+.modal-window .cross-icon {position: absolute;top: 15px;right: 15px; background:none; padding:0px; margin:0px; line-height:normal;}
+.modal-window h1 { margin:0px; padding:0px; font-size:32px; color:#FF577D; font-weight:300; margin:77px 0 31px 0; }
+.modal-window p { font-size:15px; color:#7E7E7E; margin:0px; padding:0px; font-weight:400; margin-bottom:24px; line-height:24px; }
+.modal-window p span { display:block; color:#5D699A; }
+.modal-window a { padding:0 23.5px; margin-top:9px; display:inline-block; line-height:40px; font-size:13px; color:#fff; text-decoration:none; font-weight:500; text-align:center; background:#ff3b6a; border-radius:3px;}
+
+/*Video Modal*/
+.video-modal {  width:1024px; margin:0 auto; padding:58px 0 55px 0; text-align:center; max-width:100%; position:relative; }
+.video-modal .cross-icon {position: absolute;top: 15px;right: 15px; background:none; padding:0px; margin:0px; line-height:normal;}
+.video-modal h1 { margin:0px; padding:0px; font-size:20px; color:#FF577D; font-weight:300; margin:77px 0 31px 0; }
+.video-modal p { font-size:15px; color:#7E7E7E; margin:0px; padding:0px; font-weight:400; margin-bottom:24px; line-height:24px; }
+.video-modal p span { display:block; color:#5D699A; } 

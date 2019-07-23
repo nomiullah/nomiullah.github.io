@@ -1,0 +1,138 @@
+.footer {
+    text-align: center;
+    padding: 50px 20px 30px 20px;
+    background: url(../images/footer-bg.jpg) center center no-repeat;
+    background-size: cover;
+
+    .footer-row {
+        @include flexbox;
+        @include justify-content(center);
+        @include align-items(center);
+        @include align-content(center);
+        @include mobile {
+            flex-direction: column-reverse;
+        }
+        margin-bottom: 50px;
+
+        .left-col {
+            max-width: 660px;
+            margin-right: 47px;
+            @include mobile {
+                max-width: 100%;
+                margin-right: 0;
+                margin-top: -110px;
+            }
+            .logo {
+                margin-bottom: 33px;
+            }
+
+            p {
+                font-size: 16px;
+                font-weight: 500;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: normal;
+                letter-spacing: normal;
+                text-align: center;
+                color: #ffffff;
+                max-width: 480px;
+                margin: 0 auto;
+                margin-bottom: 20px;
+
+                strong {
+                    font-weight: bold
+                }
+            }
+
+            .price {
+                margin-top: 46px;
+                @include mobile {
+                    margin-top: 0;
+                    margin-bottom: 11px;
+                    img.hidden-desktop {
+                        width: 220px;
+                    }
+                }
+            }
+        }
+
+        .right-col {
+            max-width: 223px;
+            
+            @include mobile {
+                max-width: 288px;
+                img {
+                    max-width: 177px;
+                }
+                .logo  {
+                    margin-bottom: 30px;
+                }
+            }
+            .logo  {
+                img {
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+
+    .footer-bottom {
+        @include flexbox;
+        @include justify-content(space-between);
+        @include align-items(center);
+        @include align-content(center);
+        border-radius: 25px;
+        background-color: #000000;
+        padding: 11px 18px;
+        @include mobile {
+            justify-content: center;
+        }
+        p {
+            font-size: 17px;
+            font-weight: 500;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #ffffff;
+            text-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.5);
+            line-height: 28px;
+            display: inline-block;
+            @include tablet-small {
+                font-size: 14px;
+            }
+        }
+
+        .twitter {
+            font-size: 18px;
+            font-weight: bold; 
+            text-align: center;
+            color: #ffffff;
+            text-decoration: none;
+            padding-left: 20px;
+            background: url(../images/twitter.svg) left center no-repeat;
+            line-height: 28px;
+            display: inline-block;
+            @include tablet-small {
+                font-size: 14px;
+            }
+        }
+
+        .download {
+            font-size: 17px;
+            font-weight: 900; 
+            text-align: right;
+            color: #ffffff;
+            text-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.5);
+            text-transform: uppercase;
+            text-decoration: none;
+            padding-left: 20px;
+            line-height: 28px;
+            display: inline-block;
+            background: url(../images/btn-download.svg) left center no-repeat;
+            @include tablet-small {
+                font-size: 14px;
+            }
+        }
+    }
+}

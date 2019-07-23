@@ -1,0 +1,162 @@
+.vision_heroimg {
+	background:url(../images/home_bg1.png) center center no-repeat;
+	padding:298px 0 325px 0;
+	background-size:cover;
+
+	@media ( max-width:$tablet_Wide ) { padding:180px 0 210px 0; }
+	@media ( max-width:$phone_Medium ) { padding:100px 0 150px 0; }
+
+
+	h1 {
+		color: $primary_TextColor;
+		font-size:$body_FontSize + 62;
+		line-height: $body_LineHeight + 42;
+		text-transform: capitalize;
+		font-family: 'bariol_seriflight';
+		@media ( max-width:$phone_Medium ) { font-size:$body_FontSize + 30; }
+	}
+}
+.main_ourvision {
+	.container {
+		width:1250px;
+
+		@media ( max-width:$laptop ) { width:auto; }
+	}
+	.ourvision_top {
+		margin:90px 0 80px 0;
+		
+		@media ( max-width:$tablet_Small ) { margin:70px 0 50px 0; }
+
+		h2 {
+			color:$primary_TextColor;
+			font-size:$body_FontSize + 18;
+			line-height: $body_LineHeight + 10;
+			padding:0 50px 35px 0;
+			font-family: $secondary_FontFamily;
+			@media ( max-width:$tablet_Small ) { font-size:$body_FontSize + 10; }
+			@media ( max-width:$phone_wide ) { font-size:$body_FontSize + 2; line-height: $body_LineHeight - 8; }
+
+		}
+		h6 {
+			color:#999;
+			font-size:$body_FontSize - 6;
+			line-height:$body_LineHeight - 22;
+			padding:0 0 40px 0;
+			text-transform:uppercase;
+		}
+		ul {
+			width:95%;
+			margin:0 auto;
+			@media ( max-width:$tablet_Wide ) { padding: 0 25px; width:100%; }
+			li {
+				float:left;
+				display: list-item;
+				width:100%;
+				font-size: $body_FontSize;
+				line-height: $body_LineHeight - 3;
+				color:$secondary_color;
+				padding:0 0 12px 0;
+				@media ( max-width:$tablet_Small ) { font-size:$body_FontSize - 3; line-height: $body_LineHeight - 10; }
+				span {
+					display: block;
+					margin:0 0 0 38px;
+					color:$primary_TextColor;
+					@media ( max-width:$tablet_Small ) { margin:0 0 0 15px; }
+
+					br {
+						@media ( max-width:$desktop_Small ) { display:none; }
+					}
+
+				}
+			}
+		}
+	}
+
+	.ourvision_gallery {
+		font-size:0;
+		li {
+			display: inline-block;
+			position:relative;
+			width:285px;
+			margin: 0 0 18px 20px;
+			cursor:pointer;
+			z-index: 3;
+			
+			@media ( max-width:$desktop_medium ) { width:22.9%; }
+			@media ( max-width:$desktop_Small ) { width:22.4%; }
+			@media ( max-width:$tablet_Wide ) { width:45.9%; }
+			@media ( max-width:$phone_wide ) { width:100%; margin-left:0; }			
+
+			&:first-child {
+				
+			}
+			img { 
+				width:100%;
+			}
+			h3 {
+				position:absolute;
+				bottom:16px;
+				left:20px;
+				z-index: 3;
+				color:$primary_TextColor;
+				font-size:$body_FontSize;
+				line-height: $body_LineHeight - 20;
+			}	
+		}
+	}
+	.overlay {
+		position:absolute;
+		width:100%;
+		height:100%;
+		background-color:rgba( 0, 0, 0, .65 );
+		top:0;
+		left:0;
+		z-index: 2;
+	}
+	.visiongallery_content {
+		position:relative;
+		padding:100px 195px;
+		margin:0 0 20px 20px;
+		width:1200px;
+		height:auto;
+		float:left;
+		background-color:#fff;
+		display: none;
+		@media ( max-width:$desktop_medium ) { width:auto; margin:0 20px 20px 20px; }
+		@media ( max-width:$desktop_Small ) { padding:100px; }
+		@media ( max-width:$tablet_Wide ) { padding:80px 25px; }
+		@media ( max-width:$phone_wide ) { width:100%; margin:0 0 20px 0; }
+
+		img.vision_crossbtn {
+			position:absolute;
+			right:28px;
+			top: 28px;
+			cursor:pointer;
+		}
+		h2 {
+			color:$body_Bg;
+			font-size:$body_FontSize + 62;
+			line-height: $body_LineHeight + 20;
+			margin: 0 0 50px 0;
+			font-family: 'bariol_seriflight';
+			@media ( max-width:$tablet_Wide ) { font-size:$body_FontSize + 45; }
+			@media ( max-width:$phone_wide ) { font-size:$body_FontSize + 25; margin:0 0 25px 0; }
+			@media ( max-width:$phone_Medium ) { font-size:$body_FontSize + 12; }
+		}
+		h6 {
+			color: #999;
+			font-size: $body_FontSize - 6;
+			line-height:$body_LineHeight - 25;
+			margin: 0 0 45px 0;
+			@media ( max-width:$phone_Medium ) { margin: 0 0 25px 0; }
+		}
+		p {
+			color:$body_Bg;
+			font-size:$body_FontSize;
+			line-height:$body_LineHeight - 3;
+			margin: 0 0 35px 0;
+
+			@media ( max-width:$phone_Medium ) { font-size:$body_FontSize - 4; }
+		}
+	}
+}

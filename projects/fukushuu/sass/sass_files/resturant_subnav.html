@@ -1,0 +1,87 @@
+.sub_nav {
+	position:fixed;
+	width:0;	
+	top:0;
+	right:0;
+	background-color:#ff6600;
+	z-index:9;
+	transition:all 300ms;
+	
+	.subnav_inner {
+		padding:85px 352px 62px 168px;
+
+		@media ( max-width:$desktop_large ) { padding: 82px 198px 0 146px; }
+		@media ( max-width:$desktop ) { padding:82px 88px 0 92px; }
+		@media ( max-width:$desktop_wide ) { padding:82px 38px 0 92px; }
+		@media ( max-width:$laptop_wide ) { padding:82px 82px 0 50px; }
+		@media ( max-width:$laptop ) { padding:82px 42px 0 50px; }
+		@media ( max-width:$desktop_Small ) { padding:82px 28px 0 92px; }
+		@media ( max-width:$phone_wide ) { padding:78px 18px 0 50px; }
+		@media ( max-height: 360px ) { height:330px; overflow:scroll; }
+	}
+
+	img.nav_crossbtn {
+		display:none;
+		cursor: pointer;
+		margin: 0 0 62px 0;
+		@media ( max-width:$phone_wide ) { margin:0 0 30px 0; }
+	}
+	ul.primary_list {
+		li {
+			width:100%;
+			a {
+				display: inline-block;
+				width:100%;
+				text-align: right;
+				color: $primary_TextColor;
+				font-size:$body_FontSize + 42;
+				line-height: $body_LineHeight + 42;
+				text-transform: uppercase;
+				font-family: 'Fjalla One', sans-serif;
+
+				@media ( max-width:$desktop_Small ) { font-size:$body_FontSize + 28; line-height: $body_LineHeight + 18; }
+				@media ( max-width:$phone_wide ) { font-size:$body_FontSize + 8; line-height: $body_LineHeight - 10; }
+				
+				&:hover {
+					color: $body_Bg;
+				}
+			}
+		}
+	}
+	ul.secondary_list {
+		li {
+			width:100%;
+			@media ( max-width:$phone_wide ) { float:left; line-height:$body_LineHeight - 8; }
+			a {
+				display: inline-block;
+				width:100%;
+				text-align: right;
+				color: $primary_TextColor;
+				font-size:$body_FontSize ;
+				line-height: $body_LineHeight - 5;
+				text-transform: uppercase;
+				font-family: 'Fjalla One', sans-serif;
+				@media ( max-width:$phone_wide ) { font-size:$body_FontSize - 3; line-height: $body_LineHeight - 12; }
+				&:hover {
+					color: $body_Bg;
+				}
+			}
+		}
+	}
+}
+
+.show_nav {
+	width:850px;
+
+	@media ( max-width:$desktop_large ) { width:670px; }
+	@media ( max-width:$desktop ) { width:510px; }
+	@media ( max-width:$desktop_wide ) { width:460px; }
+	@media ( max-width:$laptop_wide ) { }
+	@media ( max-width:$laptop ) { }
+	@media ( max-width:$desktop_Small ) { width:380px; }
+	@media ( max-width:$phone_wide ) { width:300px; }
+
+	img.nav_crossbtn {
+		display:block;
+	}
+}

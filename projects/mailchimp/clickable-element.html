@@ -1,0 +1,28 @@
+<!-- This is the HTML element that, when clicked, will cause the popup to appear. -->
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from asifmajeed.com/projects/mailchimp/clickable-element.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 10 Jul 2019 04:54:08 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head> </head>
+<body>
+<button id="open-popup">Subscribe to our mailing list</button>
+<script type="text/javascript" src="../../../s3.amazonaws.com/downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script>
+<script>
+function showMailingPopUp() {
+    require(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us17.list-manage.com","uuid":"f9165ddcdeb8b2adaf4aab9b6","lid":"62c64d5974"}) })
+    document.cookie = "MCPopupClosed=; expires=Thu, 01 Jan 1970 00:00:00 UTC";
+};
+
+
+document.getElementById("open-popup").onclick = function() {
+	showMailingPopUp()
+	console.log('yes')
+};
+</script>
+</body>
+
+<!-- Mirrored from asifmajeed.com/projects/mailchimp/clickable-element.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 10 Jul 2019 04:54:09 GMT -->
+</html>
+
+

@@ -1,0 +1,106 @@
+.see-hear {
+    text-align: center;
+    padding: 50px 0 30px 0;
+    background: url(../images/touch-bg.jpg) center center no-repeat;
+    background-size: cover;
+    @include mobile {
+        padding-top: 32px;
+        .title {
+            margin-bottom: 56px;
+        }
+    }
+    .screenshots {
+        margin-bottom: 42px;
+        @include flexbox;
+        @include justify-content(center);
+        @include align-items(center);
+        @include align-content(center);
+        @include tablet-small {
+            img {
+                max-width: 70%;
+            }
+        }
+        @include tablet {
+            padding: 0 53px;
+        }
+        @include mobile {
+            padding: 0;
+            margin-top: 22px;
+        }
+        .voice-over {
+            margin: 0 56px 0 44px;
+            @include mobile {
+                margin: 0;
+                &:first-child {
+                    margin-right: 34px;
+                }
+            }
+            &:last-of-type {
+                margin-right: 0;
+            }
+            &:first-of-type {
+                margin-left: 0;
+            }
+            img {
+                margin: 0 0 20px 0;
+            }
+            strong {
+                display: block;
+                font-size: 16px;
+                font-weight: 600;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: normal;
+                letter-spacing: normal;
+                text-align: center;
+                color: #1b7bc0;
+                max-width: 144px;
+                text-align: centerl
+            }
+        }
+    }
+}
+
+.forecast {
+    background: url(../images/forecast-bg.jpg) center center no-repeat;
+    background-size: cover;
+    .title  {
+        @include mobile {
+            padding: 0 11px;
+            font-size: 22px;
+        }
+    }
+    .screenshots  {
+        @include mobile {
+            margin-top: 0;
+        }
+        img {
+            @include mobile {
+                max-width: 100%;
+            }
+        }
+    }
+    
+    .tag {
+        font-size: 28px;
+        font-weight: 400;
+        font-style: italic; 
+        line-height: 1.18; 
+        text-align: center;
+        color: #000000;
+        margin: 40px 0 0 ;
+        @include mobile {
+            font-size: 22px;
+            margin: 0;
+        }
+    }
+    .copy {
+        margin-bottom: 7px;
+    }
+    .title {
+        margin-bottom: 0;
+    }
+    .screenshots {
+        margin-bottom: 0;
+    }
+}

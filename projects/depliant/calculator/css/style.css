@@ -1,0 +1,27 @@
+/* Reset -------------------------------------------------- */
+ 
+article, aside, dialog, figure, footer, header, hgroup, nav, section { display:block; }
+blockquote:before, blockquote:after, q:before, q:after { content: ''; }
+blockquote, q { quotes: "" ""; }
+a img { border: none; }
+:focus { outline: 0; }
+.row { }
+/* Global -------------------------------------------------- */
+body {   background-color:#fff; font-family: 'Open Sans', sans-serif;  }
+h1, h2, h3, h4, h5, h6 { padding:0; margin:0; }
+h1 {}
+h2 {}
+h3 {}
+h4 {}
+h5 {}
+h6 {}
+p { }
+a:focus { outline:none; }
+ul, ul li, ul ol, ul li ul, ul li ul li { list-style:none; padding:0; margin:0; }
+
+
+
+/* calculator -------------------------------------------------- */
+.calculator-outer { background:#f6f6f6; padding:15px; border:1px solid #e4e4e4; max-width:290px; margin:0 auto;}
+.calculator-outer select { padding:0 10px; height:26px; width:100%; border:1px solid #d4d4d4; color:#2f2f2f; font-size:12px; font-weight:bold; margin-bottom:15px;}
+ .calculator-outer label { color:#2f2f2f; font-size:14px; font-weight:bold; display:block; margin-bottom:5px; padding:12px 0 0 0; border-top:1px solid #e4e4e4;} .calculator-outer label:first-child { border:0px;}

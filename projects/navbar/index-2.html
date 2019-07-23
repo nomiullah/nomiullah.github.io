@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<!-- Mirrored from asifmajeed.com/projects/navbar/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 10 Jul 2019 00:00:58 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Navbar</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css" >
+</head>
+
+<body>
+	<div class="toggle-menu clearfix">
+        	<span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="clear"></div>
+	<div class="navbar">
+    	
+    	<ul>
+            <li><a href="#">Home</a></li>
+            <li class="drop-down"><a href="#">Test</a>
+            <span></span>
+                <ul>
+                    <li><a href="#">Submenu Level 1</a></li>
+                    <li class="drop-down"><a href="#">Submenu Level 1</a>
+                    	<span></span>
+                    	<ul>
+                            <li><a href="#">Submenu Level 2</a></li>
+                            <li><a href="#">Submenu Level 2</a></li>
+                            <li><a href="#">Submenu Level 2</a></li>
+                            <li><a href="#">Submenu Level 2</a></li>
+                            <li><a href="#">Submenu Level 2</a></li>
+                            <li><a href="#">Submenu Level 2</a></li>
+                            <li><a href="#">Submenu Level 2</a></li>
+                        </ul>
+                        
+                    </li>
+                    <li><a href="#">Submenu Level 1</a></li>
+                    <li><a href="#">Submenu Level 1</a></li>
+                    <li><a href="#">Submenu Level 1</a></li>
+                    <li><a href="#">Submenu Level 1</a></li>
+                    <li><a href="#">Submenu Level 1</a></li>
+                </ul>
+            </li>
+             <li><a href="#">Divorce</a></li>
+              <li><a href="#">Divorce</a></li>
+               <li><a href="#">Divorce</a></li>
+              
+         </ul>
+    </div>
+	
+   <script src="../../../ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>
+	$( ".toggle-menu" ).click(function larg() {
+  $( ".navbar > ul " ).toggleClass('small-menu');
+});
+$( ".navbar ul li.drop-down span" ).click(function larg2() {
+  $(this).parent("li").children("ul").toggleClass('small-menu');
+});
+
+$(window).resize(function() {
+            if($(window).width() > 800){
+				  $( ".navbar > ul " ).removeClass('small-menu');
+					  $('.navbar ul li.drop-down span').parent("li").children("ul").removeClass('small-menu');
+
+				}
+            });
+ 	</script>
+</body>
+
+<!-- Mirrored from asifmajeed.com/projects/navbar/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 10 Jul 2019 00:00:58 GMT -->
+</html>

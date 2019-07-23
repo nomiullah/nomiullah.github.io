@@ -1,0 +1,5 @@
+<br />
+<b>Fatal error</b>:  Uncaught Error: Class 'DUPX_U' not found in /home/junaida1/public_html/asifmajeed.com/projects/dmc/wp-content/plugins/duplicator/installer/build/ctrls/ctrl.step3.php:16
+Stack trace:
+#0 {main}
+  thrown in <b>/home/junaida1/public_html/asifmajeed.com/projects/dmc/wp-content/plugins/duplicator/installer/build/ctrls/ctrl.step3.php</b> on line <b>16</b><br />

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="44px" height="71px" viewBox="0 0 44 71" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
+    <title>Mic</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Illustration/Speech" transform="translate(-35.000000, -21.000000)">
+            <g id="Mic" transform="translate(37.000000, 23.000000)">
+                <rect id="Rectangle-3" stroke="#FFFFFF" stroke-width="3.5" x="8" y="0" width="24.5454545" height="45.4545455" rx="12.2727273"></rect>
+                <path d="M40.2376153,36 C40.2376153,46.0415409 31.0415409,54.1818182 21,54.1818182 C10.9584591,54.1818182 0,46.0415409 0,36" id="Rectangle-3-Copy" stroke="#FFFFFF" stroke-width="3.5"></path>
+                <path d="M20.5454545,55 L20.5454545,66.8181818" id="Line" stroke="#FFFFFF" stroke-width="3.5"></path>
+                <path d="M20,16 L28,16 C28.5522847,16 29,16.4477153 29,17 L29,17 C29,17.5522847 28.5522847,18 28,18 L20,18 C19.4477153,18 19,17.5522847 19,17 L19,17 C19,16.4477153 19.4477153,16 20,16 Z" id="Rectangle" fill="#FFFFFF"></path>
+                <rect id="Rectangle-Copy" fill="#FFFFFF" x="22" y="12" width="7" height="2" rx="1"></rect>
+                <rect id="Rectangle-4" fill="#FFFFFF" x="12.8181818" y="64.4545455" width="15.4545455" height="3.63636364" rx="1.81818182"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

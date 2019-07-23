@@ -1,0 +1,33 @@
+@import 'fonts';
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $primary-font-family;
+}
+img {
+    font-size: 0;
+    vertical-align: bottom;
+    max-width: 100%;
+}
+.container {
+    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto;     
+}
+.hidden-desktop {
+    display: none;
+    @include mobile {
+        display: inline-block !important; 
+    }
+}
+img {
+    &.hidden-desktop{
+        width: 100%;
+    }
+}
+.hidden-mobile { 
+    @include mobile {
+        display: none !important;
+    }
+}

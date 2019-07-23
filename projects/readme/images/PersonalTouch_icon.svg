@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="76px" height="76px" viewBox="0 0 76 76" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="pages" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="enterprise-page" transform="translate(-682.000000, -3992.000000)">
+            <g id="🦉-personal-touch" transform="translate(0.000000, 3755.000000)">
+                <g id="line-1" transform="translate(180.000000, 238.000000)">
+                    <g id="item" transform="translate(360.000000, 0.000000)">
+                        <g id="icon" transform="translate(143.000000, 0.000000)">
+                            <circle stroke-opacity="0.2" stroke="#FFFFFF" stroke-width="2" cx="37" cy="37" r="37"></circle>
+                            <path d="M19,25 C19,24.4477153 19.455173,24 20.0004194,24 L53.9995806,24 C54.552097,24 55,24.4438648 55,25 C55,25.5522847 54.544827,26 53.9995806,26 L20.0004194,26 C19.447903,26 19,25.5561352 19,25 Z M39,24 L51,24 L51,26 L39,26 L39,24 Z M19,49 C19,48.4477153 19.455173,48 20.0004194,48 L53.9995806,48 C54.552097,48 55,48.4438648 55,49 C55,49.5522847 54.544827,50 53.9995806,50 L20.0004194,50 C19.447903,50 19,49.5561352 19,49 Z M23,48 L35,48 L35,50 L23,50 L23,48 Z M19,37 C19,36.4477153 19.455173,36 20.0004194,36 L53.9995806,36 C54.552097,36 55,36.4438648 55,37 C55,37.5522847 54.544827,38 53.9995806,38 L20.0004194,38 C19.447903,38 19,37.5561352 19,37 Z M31,36 L43,36 L43,38 L31,38 L31,36 Z" id="line" fill="#FFFFFF" opacity="0.5"></path>
+                            <rect stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" x="42" y="22" width="6" height="6" rx="3"></rect>
+                            <rect stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" x="26" y="46" width="6" height="6" rx="3"></rect>
+                            <rect stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" x="34" y="34" width="6" height="6" rx="3"></rect>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,303 @@
+.content {
+    .intro-text {
+        padding: 78px 0 64px 0;
+        text-align: center;
+        background: #fff;
+
+        h2 {
+            margin: 0;
+            padding: 0 16px 26px 16px;
+            font-size: 36px;
+            color: $secondary_color;
+            border-bottom: 1px solid $secondary_color;
+            display: inline-block;
+            margin-bottom: 18px;
+            line-height: 26px;
+            @include mobile {
+                font-size: 26px;
+                padding-bottom: 16px;
+                line-height: 24px;
+            }
+            @include small-mobile {
+                font-size: 20px;
+                line-height: 20px;
+            }
+        }
+        p {
+            font-size: 16px;
+            line-height: 30px;
+            color: $text_color;
+            margin: 0;
+            font-family: $secondary-font-family;
+            max-width: 620px;
+            display: inline-block;
+            @include mobile {
+                padding: 0 15px;
+                font-size: 14px;
+                line-height: 24px;
+            }
+        }
+    }
+
+    .feature-text {
+        padding: 82px 0;
+        background: url(../images/pattern-bg.png)#fff repeat;
+        .container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            @include mobile {
+                flex-direction: column;
+            }
+        }
+        .feature-thumbnail {
+            flex: 0 0 430px;
+            @include mobile {
+                margin-bottom: 30px;
+            }
+            @include small-desktop {
+                flex: 0 0 400px;
+            }
+            @include tablet {
+                flex: 0 0 45%;
+            }
+            img {
+                max-width: 100%;
+                -webkit-filter: grayscale(100%);
+                -ms-filter: grayscale(100%);
+                -moz-filter: grayscale(100%);
+                filter: grayscale(100%);
+            }
+        }
+        .feature-description {
+            padding: 0 47px;
+            flex: 0 0 544px;
+            text-align: center;
+            @include small-desktop {
+                flex: 0 0 514px;
+                padding: 0 30px;
+            }
+            @include tablet {
+                flex: 0 0 50%;
+            }
+            p {
+                font-size: 16px;
+                line-height: 24px;
+                color: $text_color;
+                margin: 0;
+                font-family: $secondary-font-family;
+                display: inline-block;
+                margin-bottom: 40px;
+            }
+            span {
+                display: block;
+                font-size: 17px;
+                color: $secondary_color;
+                font-family: $secondary-font-family;
+                font-weight: 400;
+                margin-bottom: 13px;
+                line-height: 12px;
+            }
+            strong {
+                font-size: 16px;
+                line-height: 24px;
+                color: $text_color;
+                margin: 0;
+                font-family: $secondary-font-bold;
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    .bottom-content {
+
+        background: url(../images/lines-bg.png)center 192px no-repeat #fff;
+        background-size: cover;
+        .feature-box-row {
+            padding: 57px 0 46px;
+            text-align: center;
+            @include small-mobile {
+                padding: 30px 15px;
+            }
+            .feature-box {
+                width: 413px;
+                position: relative;
+                overflow: hidden;
+                margin: 0 20px 0 0;
+                display: inline-block;
+
+                @include tablet {
+                    width: 46%;
+                }
+                @include small-mobile {
+                    width: 100%;
+                    margin: 0 0 15px 0;
+                }
+                &:last-child {
+                    margin: 0;
+                }
+                img {
+                    max-width: 100%;
+                    width: 100%;
+                }
+                .overlay {
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    background: rgba(0, 0, 0, .31);
+                }
+                a {
+                    position: absolute;
+                    top: 50%;
+                    font-size: 36px;
+                    color: #fff;
+                    font-family: $secondary-font-family;
+                    font-weight: 400;
+                    z-index: 1;
+                    text-align: center;
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    left: 0;
+                    right: 0;
+                    transform: translateY(-50%);
+                    @include mobile {
+                        font-size: 26px;
+                    }
+                }
+            }
+        }
+        .building-detail {
+            text-align: center;
+            padding: 25px 0 0 0;
+            .building-inner {
+                width: 1314px;
+                max-width: 100%;
+                margin: 0 auto;
+                position: relative;
+                @include small-desktop {
+                    width: 992px;
+                }
+                @include tablet {
+                    width: 580px;
+                }
+                @include mobile {
+                    width: 320px;
+                }
+            }
+            img {
+                max-width: 100%;
+                max-height: 1314px;
+            }
+            .residential-detail {
+                text-align: left;
+                position: absolute;
+                top: 30%;
+                left: 12%;
+                @include small-desktop {
+                    left: 4%;
+                }
+                @include tablet {
+                    left: -15%;
+                }
+                @include small-mobile {
+                    display: none;
+                }
+                &:after {
+                    content: "";
+                    background: url(../images/resedential-shape.png) right center no-repeat;
+                    width: 149px;
+                    height: 53px;
+                    right: -160px;
+                    position: absolute;
+                    top: -17px;
+                    margin: auto;
+                    @include mobile {
+                        display: none;
+                    }
+                }
+                h4 {
+                    margin: 0;
+                    padding: 0;
+                    font-size: 22px;
+                    font-weight: 400;
+                    text-transform: uppercase;
+                    color: $secondary_color;
+                    margin-bottom: 18px;
+                    line-height: 16px;
+                    @include mobile {
+                        font-size: 16px;
+                        margin-bottom: 0;
+                    }
+                }
+                a {
+                    font-size: 12px;
+                    color: #666666;
+                    text-transform: uppercase;
+                    text-decoration: none;
+                }
+                &.offices-detail {
+                    top: auto;
+                    bottom: 20%;
+                    padding: 19px;
+                    background: rgba(255, 255, 255, .9);
+                    &:after {
+                        top: 17px;
+                    }
+                    @include tablet {
+                        bottom: 13%;
+                    }
+                }
+                &.showrooms-detail {
+                    padding: 19px;
+                    background: rgba(255, 255, 255, .9);
+                    right: 12%;
+                    left: auto;
+                    top: auto;
+                    bottom: 10%;
+                    @include small-desktop {
+                        bottom: 11%;
+                        right: 5%;
+                    }
+                    @include tablet {
+                        bottom: 11%;
+                        right: -14%;
+                    }
+                    h4 {
+                        margin-bottom: 0;
+                    }
+                    &:after {
+                        background: url(../images/showrooms-shape.png) left center no-repeat;
+                        left: -113px;
+                        right: auto;
+                        top: 2px;
+                    }
+                }
+                &.amenities-detail {
+                    right: 18%;
+                    left: auto;
+                    top: 52%;
+                    @include small-desktop {
+                        top: 48%;
+                        right: 12%;
+                    }
+                    @include tablet {
+                        top: 32%;
+                        right: -4%;
+                    }
+                    &:after {
+                        background: url(../images/aminties-sahpe.png) left center no-repeat;
+                        left: -130px;
+                        right: auto;
+                        top: 2px;
+                        bottom: -206px;
+                        margin: 0;
+                        width: 118px;
+                        height: 206px;
+                    }
+                }
+            }
+        }
+    }
+}

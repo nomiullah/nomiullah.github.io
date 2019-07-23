@@ -1,0 +1,339 @@
+/*----------------- Landing Page -----------------*/
+body { font-family: 'Roboto', sans-serif; font-size:16px; font-weight:400; }
+h1, h2, h3, h4, h5, h6 { font-family: 'Roboto', sans-serif; font-weight:400; }
+
+
+/*----------------- header -----------------*/
+header { background:#fff; min-height:90px; }
+header::after { clear:both; content:''; display:block; }
+header .logo { padding:14px 0 0 52px; float:left; }
+header .logo  a {font-family: 'Kaushan Script', cursive; color:#125688; font-size:44px;}
+header .right-cont { float:right; }
+header .right-cont .logout {  display:block; line-height:46px; font-size:22px; color:#125688; margin:20px 54px 0 0;  }
+
+
+/*----------------- Content -----------------*/
+.landing-section { background:url(../images/banner-img.jpg) 0 0 no-repeat; background-size:cover; padding:114px 0 180px 0; }
+.landing-section h1 { font-size:52px; text-align:center; color:#fff; text-shadow:0 0 5px rgba(0,0,0,.19); margin-bottom:1.3rem; }
+.landing-section p { font-size:26px; color:#fff; font-weight:300; line-height:43px; text-align:center; max-width:890px; margin:0 auto; text-shadow:0 0 5px rgba(0,0,0,.19);}
+.landing-section .btn-line { text-align:center; padding-top:36px; }
+.landing-section .btn-line .or-text { font-size:36px; color:#fff; width:89px; text-align:center; display:inline-block; text-shadow:0 0 5px rgba(0,0,0,.19);}
+.landing-section .btn-line a { display:inline-block; width:300px; border:5px solid #7cc576; box-sizing:border-box; font-size:28px; color:#fff; background:#7cc576; line-height:57px; }
+.landing-section .btn-line a.sign-in { background:none; border:5px solid #fff; }
+
+/*----------------- footer -----------------*/
+footer { background:#fff; text-align:center; padding-bottom:24px; }
+footer nav.nav-footer { text-align:center; padding:25px 0 0 0; }
+footer nav.nav-footer ul { list-style:none; margin:0; }
+footer nav.nav-footer ul li { display:inline-block; padding:0 16px; }
+footer nav.nav-footer ul li a { color:#125688; font-size:20px; }
+footer nav.social-icon { text-align:center; padding:20px 0 0 0; }
+footer nav.social-icon ul { list-style:none; margin:0; }
+footer nav.social-icon ul li { display:inline-block; padding:0 17px; }
+footer .copy-right { font-size:16px; text-align:center; color:#125688; padding:20px 0 0 0; }
+
+
+/*-----------------  Login Page -----------------*/
+.login-cont { padding:30px 0 0 0; }
+.login-cont .login-inner { margin:0 auto; max-width:543px; }
+.login-cont h1 { color:#125688; text-align:center; font-size:28px; }
+.login-cont .question-cont { width:340px; background:#eee; font-size:18px; color:#101010; font-weight:300; border-radius:13px; padding:5px 25px; margin:12px auto 0 auto; }
+.login-cont .question-cont a { color:#017fd4; }
+.login-cont form { }
+.login-cont form .form-line { margin:14px 0 0 0; }
+.login-cont form input[type="text"],.login-cont form input[type="number"] { border:1px solid #ccc; height:47px; padding:15px; margin:8px 0 0 0; }
+.login-cont form label { color:#101010; font-size:18px; line-height:24px; }
+.login-cont form label.check-label { font-size:18px; font-style:italic; }
+.login-cont form input[type="submit"] { color:#fff; background:#125688; border:0; font-size:26px; line-height:54px; width:100%; }
+.login-cont form input[type="checkbox"] { width:22px; height:22px; border:1px solid #808080; }
+.login-cont .forgot-pass { font-size:18px; color:#125688; padding:10px 0 0 0; }
+.login-cont .forgot-pass a {color:#125688; }
+
+
+/*----------------- Sign up Page -----------------*/
+.signup-cont { padding:30px 0; }
+.signup-cont h2 { color:#125688; text-align:left; font-size:28px; border-bottom:3px solid #c2c2c2; }
+.signup-cont form { padding-top:4px; }
+.signup-cont form .form-line { margin:0; position:relative; }
+.signup-cont form input[type="text"],.login-cont form input[type="number"] { border:1px solid #ccc; height:46px; padding:15px; margin:8px 0 0 0; width:90%; }
+.signup-cont form .error-message { font-size:18px; color:#f05757; font-weight:300; padding:3px 0 0 10px; display:none; }
+.signup-cont form .cancel-btn { width:10%; text-align:center; font-size:35px; line-height:63px; float:right; color:#f05757; display:none; }
+.signup-cont form label { color:#101010; font-size:18px; line-height:26px; padding-top:10px; }
+.signup-cont form label .error { color:#f05757; }
+.signup-cont form label.check-label { font-size:18px; font-style:italic; }
+.signup-cont form input[type="submit"] { color:#fff; background:#125688; border:0; font-size:26px; line-height:54px; width:70%; }
+.signup-cont form input[type="checkbox"] { width:22px; height:22px; border:1px solid #808080; }
+.signup-cont .terms-use { padding-top:22px; padding-bottom:22px; }
+
+.signup-cont form .error-cont input[type="text"] { border-color:#ff4c4c; }
+.signup-cont form .error-cont .cancel-btn { display:block; }
+.signup-cont form .error-cont .error-message { display:block; }
+
+
+/*----------------- Dashboard Container -----------------*/
+.dashboard-cont { position:relative; line-height:24px; min-height:550px; }
+.dashboard-cont .left-cont { position:absolute; background:#f3f3f3; bottom:0px; top:0; width:350px; }
+.dashboard-cont .right-cont { padding-top:49px;  width:100%; box-sizing:border-box; }
+.dashboard-cont .left-cont .user-detail { padding:40px 0 0 28px; }
+.dashboard-cont .left-cont .user-detail:after { display:block; clear:both; content:''; }
+.dashboard-cont .left-cont .user-img { float:left; width:79px; height:79px; margin-right:17px; }
+.dashboard-cont .left-cont .user-info { float:left; }
+.dashboard-cont .left-cont .name-number { color:#125688; font-size:18px; padding-top:18px; }
+.dashboard-cont .left-cont .balance-cont { font-size:18px; color:#101010; line-height:36px; padding-top:2px; }
+.dashboard-cont .left-cont nav { padding-top:48px; }
+.dashboard-cont .left-cont nav ul { list-style:none; margin:0; padding:0; }
+.dashboard-cont .left-cont nav ul li { margin:8px 0 0 0; font-size:18px; font-weight:300; line-height:31px; }
+.dashboard-cont .left-cont nav ul li a { padding:8px 40px; display:block; background:#e9e9e9; color:#4a4949; }
+.dashboard-cont .left-cont nav ul li a.selected { background:#125688; color:#fff; }
+.dashboard-cont .left-cont nav ul li .icon-cont { vertical-align:top; margin:0 8px 0 0; display:inline-block; width:31px; height:31px; }
+.dashboard-cont .left-cont nav ul li a .paybill { background:url(../images/pay-icon.png) no-repeat;  }
+.dashboard-cont .left-cont nav ul li a.selected .paybill { background:url(../images/pay-icon-active.png) no-repeat;  }
+.dashboard-cont .left-cont nav ul li a .topup { background:url(../images/topup-icon.png) no-repeat;  }
+.dashboard-cont .left-cont nav ul li a.selected .topup { background:url(../images/topup-icon-active.png) no-repeat;  }
+.dashboard-cont .left-cont nav ul li a .transaction { background:url(../images/transaction-icon.png) no-repeat;  }
+.dashboard-cont .left-cont nav ul li a.selected .transaction { background:url(../images/transaction-icon-active.png) no-repeat;  }
+.dashboard-cont .left-cont nav ul li a .myaccount { background:url(../images/account-icon.png) no-repeat;  }
+.dashboard-cont .left-cont nav ul li a.selected .myaccount { background:url(../images/account-icon-active.png) no-repeat;  }
+
+
+.dashboard-cont h2 { color:#125688; text-align:left; font-size:28px; border-bottom:3px solid #c2c2c2; padding:0 0 4px 0; }
+.dashboard-cont .faq-main-cont { padding-bottom:55px; }
+.dashboard-cont .faq-main-cont .faqs-box { border-bottom:3px solid #ebebeb; padding:20px 0 11px 0; }
+.dashboard-cont .faq-main-cont .faqs-box:last-child { border:0; }
+.dashboard-cont .faq-main-cont .faqs-box h3 { color:#125688; font-size:20px; }
+.dashboard-cont .faq-main-cont .faqs-box p { color:#101010; font-size:18px; line-height:29px; font-weight:300; }
+
+
+
+/*----------------- Tabs Contant -----------------*/
+div.tabContent.hide { display: none; }
+
+
+/*----------------- Feedback Contant -----------------*/
+.feedback-main-cont { padding-top:33px; padding-bottom:60px; }
+.feedback-main-cont p { font-size:18px; line-height:24px; color:#101010; margin-bottom:0px; }
+.feedback-main-cont form { padding-top:4px; }
+.feedback-main-cont form .form-line { margin:11px 0 0 0; position:relative; }
+.feedback-main-cont form input[type="text"],.feedback-main-cont form input[type="number"] { border:1px solid #ccc; font-size:18px; height:37px; padding:10px; margin:0; width:90%; }
+.feedback-main-cont form textarea { border:1px solid #ccc; font-size:18px; height:279px; padding:10px; margin:0; width:90%; resize:none;  }
+.feedback-main-cont form label { color:#101010; font-size:18px; line-height:26px; padding-top:0; }
+.feedback-main-cont form label .error { color:#125688; }
+.feedback-main-cont form label.check-label { font-size:24px; font-style:italic; }
+.feedback-main-cont form input[type="submit"] { color:#fff; background:#125688; border:0; font-size:26px; line-height:54px; width:175px; margin-top:30px; }
+.feedback-main-cont form .error-cont input[type="text"] { border-color:#125688; }
+
+
+
+/*----------------- My Account Contant -----------------*/
+.myaccount-main-cont { padding-top:33px; padding-bottom:200px; }
+.myaccount-main-cont .erroe-message { font-size:20px; color:#fa4a4a; padding:0 0 0 20px; line-height:34px; }
+.myaccount-main-cont .erroe-message img { margin-right:12px; }
+.myaccount-main-cont .option-line { border-top:2px solid #e1e1e1; margin-top:37px; }
+.myaccount-main-cont .option-line::after { clear:both; content:''; display:block; }
+.myaccount-main-cont .option-line label { color:#125688; font-size:20px;  margin-top:9px; }
+.myaccount-main-cont .option-line input[type="text"] { border-color:#e1e1e1; margin-top:23px; height:38px; }
+.myaccount-main-cont .option-line input[type="button"] { background:#125688; color:#fff; font-size:24px; width:76px; line-height:41px; margin:23px 70px 0 0; float:right; border:0; }
+.myaccount-main-cont .option-line input[type="text"]:focus { border-color:#125688; }
+.myaccount-main-cont .option-line .question-cont { font-size:18px; color:#101010; padding:22px 0 26px 0; }
+.myaccount-main-cont .answer-line { border-top:2px solid #e1e1e1; padding-bottom:13px; }
+.myaccount-main-cont .answer-line::after { clear:both; content:''; display:block; }
+.myaccount-main-cont .answer-line label { display:inline-block; font-size:18px; color:#101010; }
+.myaccount-main-cont .answer-line input[type="checkbox"] { float: right; border:1px solid #252525; width:22px; height:24px; margin:22px 90px 0 0; }
+
+
+
+/*----------------- Confirm payment Contant -----------------*/
+.confirmpayment-cont { padding-top:11px; padding-bottom:60px; }
+.confirmpayment-cont form { padding-top:4px; }
+.confirmpayment-cont form .form-line { margin:5px 0 0 0; position:relative; }
+.confirmpayment-cont form input[type="text"],.confirmpayment-cont form input[type="number"] { border:1px solid #ccc; font-size:18px; height:43px; font-size:18px; color:#101010; padding:10px; margin:0; width:85%; }
+.confirmpayment-cont form .clander { float:right; }
+.confirmpayment-cont form .clander img { max-width:100%; } 
+.confirmpayment-cont form select { border:1px solid #ccc;  height:43px; padding:3px 10px; margin:0; color:#101010; font-size:18px; width:85%; }
+.confirmpayment-cont form textarea { border:1px solid #ccc; font-size:18px; height:279px; padding:10px; margin:0; width:90%; resize:none;  }
+.confirmpayment-cont form label { color:#101010; font-size:18px; line-height:26px; padding-top:15px; }
+.confirmpayment-cont form label .error { color:#125688; }
+.confirmpayment-cont form label.check-label { font-size:24px; font-style:italic; }
+.confirmpayment-cont form input[type="submit"] { color:#fff; background:#125688; border:0; font-size:28px; line-height:54px; width:175px; margin-top:58px; }
+.confirmpayment-cont form .error-cont input[type="text"] { border-color:#125688; }
+.confirmpayment-cont .paymen-total { color:#e34141; font-size:20px; }
+
+
+
+/*----------------- Payment Receipt Contant -----------------*/
+.payment-recipt { padding-top:11px; padding-bottom:155px; }
+.payment-recipt p { font-size:18px; line-height:24px; color:#101010; }
+.payment-recipt .recipt-box { max-width:835px; border:1px solid #125688; margin:38px auto; padding:29px 15px 42px 15px; box-sizing:border-box; }
+.payment-recipt .recipt-box .inner-cont { max-width:665px; margin:0 auto; }
+.payment-recipt .recipt-box { font-size:30px; color:#101010; }
+.payment-recipt .line-cont { font-size:20px; font-weight:300; color:#101010; margin:12px 0 0 0; }
+.payment-recipt .line-cont::after { clear:both; content:''; display:block; }
+.payment-recipt .recipt-box .title-cont { float:left; width:270px; }
+.payment-recipt .recipt-box .title-space { float:left; width:70px; text-align:center; }
+.payment-recipt .recipt-box .title-value { float:left; width:270px; }
+.payment-recipt .pass-btn { text-align:center; padding-top:65px; }
+.payment-recipt .pass-btn a { width:270px; line-height:54px; color:#fff; font-size:28px; background:#125688; display:inline-block; }
+
+
+
+/*----------------- Topup Page1 -----------------*/
+.topup1-cont { padding:9px 0 100px 0; }
+.topup1-cont form .form-line { margin:0; position:relative; }
+.topup1-cont form input[type="text"] { border:1px solid #ccc; font-size:18px; height:52px; padding:15px; margin:26px 0 0 0; width:90%; }
+.topup1-cont form .error-message { font-size:18px; color:#f05757; padding:7px 0 0 5px; display:none; }
+.topup1-cont form .cancel-btn { width:10%; text-align:center; font-size:35px; line-height:52px; float:right; color:#f05757; display:none; }
+.topup1-cont form label { color:#101010; font-size:18px; line-height:36px; padding-top:30px; }
+.topup1-cont form label .error { color:#f05757; }
+.topup1-cont form input[type="submit"] { color:#fff; background:#125688; border:0; font-size:28px; line-height:54px; width:190px; margin-top:60px; }
+.topup1-cont form .error-cont input[type="text"] { border-color:#ff4c4c; }
+.topup1-cont form .error-cont .cancel-btn { display:block; }
+.topup1-cont form .error-cont .error-message { display:block; }
+
+
+
+/*----------------- Topup Page2 -----------------*/
+.topup2-cont { padding-top:33px; padding-bottom:60px; }
+.topup2-cont p { font-size:18px; line-height:28px; color:#101010; padding-top:25px; }
+.topup2-cont p.green { color:#69a16a; }
+.topup2-cont .done-btn { padding-top:26px; }
+.topup2-cont .done-btn a { width:166px; line-height:54px; color:#fff; font-size:28px; background:#125688; display:inline-block; text-align:center; }
+
+
+
+/*----------------- Transactions Page2 -----------------*/
+.transactions-cont { padding-top:33px; padding-bottom:60px; }
+.transactions-cont .transactions-table {}
+.transactions-cont .transactions-table table { width:100%; }
+.transactions-cont .transactions-table thead { background:transparent; border:0; }
+.transactions-cont .transactions-table th { border:0;  border-bottom:3px solid #125688; color:#125688; font-size:20px; font-weight:400; background:transparent; padding:10px 13px; }
+.transactions-cont .transactions-table td { font-size:18px; color:#101010; padding:12px 13px; }
+.transactions-cont .transactions-table tbody tr:nth-child(odd) { background:#ebebeb; }
+.transactions-cont .transactions-table tbody tr:nth-child(even) { background:#fff; }
+
+
+
+
+.off-canvas-content { box-shadow: none; }
+.ui-datepicker { background:#fff !important;}
+/**/
+.paybill-sec3, .paybill-sec2, .topup-sec2 { display:none; }
+
+
+
+/*1200*/
+@media screen and (max-width: 75em) {
+	.dashboard-cont h2 { font-size:35px; }
+	.signup-cont h2 { font-size:35px; }
+	.dashboard-cont .faq-main-cont .faqs-box h3 { font-size:25px; }
+	.dashboard-cont .faq-main-cont .faqs-box p { font-size:20px; line-height:25px; }
+	.dashboard-cont .faq-main-cont .faqs-box { padding:20px 0 0 11px; }
+	.dashboard-cont .left-cont nav ul li { font-size:25px; }
+	.transactions-cont .transactions-table td { font-size:16px; }
+	.transactions-cont .transactions-table th { font-size:18px; }
+}
+/*1024*/
+@media screen and (max-width: 64em) {
+	footer nav.nav-footer ul li a { font-size:20px; }
+}
+/*992*/
+@media screen and (max-width: 62em) {
+	.landing-section { padding:100px 0; }
+	.landing-section .btn-line { padding-top:28px; }
+	.landing-section .btn-line .or-text { font-size:25px; width:60px; }
+	.landing-section .btn-line a { font-size:25px; line-height:45px; width:270px; }
+	.landing-section h1 { font-size:50px; }
+	.landing-section p { font-size:25px; max-width:700px; line-height:30px; }
+	footer { padding:0 0 20px 0; }
+	footer .copy-right { font-size:17px; }
+	footer nav.nav-footer { padding:20px 0 0 0; }
+   .feedback-main-cont form input[type="text"], .feedback-main-cont form input[type="number"] { width:100%; }
+   .feedback-main-cont form textarea { width:100%; height:150px; }
+   .feedback-main-cont form input[type="submit"] { margin-top:20px; }
+   .feedback-main-cont form label { padding-top:0px; }
+   .signup-cont form .form-line { margin-top:0px; } 
+   .signup-cont form input[type="text"], .login-cont form input[type="number"] { height:37px; font-size:18px; }
+   .signup-cont form .cancel-btn { line-height:37px; font-size:18px; }
+   .payment-recipt .recipt-box .title-cont { width:250px; }
+   .payment-recipt .recipt-box .title-value { width:250px; }
+   .payment-recipt .line-cont { font-size:25px; }
+   .payment-recipt .recipt-box .inner-cont { max-width:570px; }
+   .topup1-cont form input[type="text"] { font-size:18px; height:37px; padding:10px; margin-top:20px; }
+   .topup1-cont form .cancel-btn { line-height:37px; font-size:18px; }
+   .confirmpayment-cont form select { font-size:18px; height:37px; }
+   .confirmpayment-cont form input[type="text"], .confirmpayment-cont form input[type="number"] { font-size:18px; height:37px; }
+   	
+}
+/*640*/
+@media screen and (max-width: 40em) {
+	.landing-section .btn-line .or-text { display:block; width:auto; }
+	footer .copy-right { font-size:15px; }
+	footer nav.nav-footer ul li { padding:0 10px; }
+	footer nav.nav-footer ul li a { font-size:16px; }
+	footer nav.social-icon ul li img { width:30px; }
+	.login-cont .question-cont { width:270px; padding:10px; font-size:17px; margin-top:15px; }
+	.login-cont h1 { font-size:40px; }
+	.login-cont form { padding-top:10px; }
+	.login-cont form label { font-size:20px; }
+	.login-cont form label.check-label { font-size:20px; }
+	.login-cont form input[type="text"], .login-cont form input[type="number"] { margin-top:0; }
+	.login-cont form input[type="submit"] { font-size:25px; line-height:50px; }
+	.login-cont .forgot-pass { font-size:20px; }
+	header .right-cont { float:none; text-align:center; padding-bottom:10px; }
+	header .right-cont a.logout { margin:0; font-size:20px; line-height:25px; }
+	header .right-cont a.logout img { width:20px; }
+	.dashboard-cont h2 { font-size:28px; }
+	.signup-cont h2 { font-size:28px; }
+	.dashboard-cont .left-cont { width:250px; }
+	.dashboard-cont .left-cont nav ul li { font-size:20px; }
+	.dashboard-cont .left-cont nav ul li a { padding:12px 10px; }
+	.off-canvas.position-left { left: -250px; top: 0; width: 250px; }
+    .is-open-left { -webkit-transform: translateX(250px); -ms-transform: translateX(250px); transform: translateX(250px); }
+    .off-canvas.position-right { right: -250px; top: 0; width: 250px; }
+    .is-open-right { -webkit-transform: translateX(-250px); -ms-transform: translateX(-250px); transform: translateX(-250px); }
+	.dashboard-cont .right-cont { padding-top:20px; }
+	.feedback-main-cont p { font-size:20px; line-height:25px; }
+	.feedback-main-cont form label { font-size:20px; line-height:25px; }
+	.confirmpayment-cont form label { font-size:20px; line-height:25px; padding-top:10px; }
+	.signup-cont form label  { font-size:20px; line-height:25px; padding-top:10px; }
+	.topup1-cont form label { font-size:20px; line-height:25px; }
+	.feedback-main-cont form input[type="submit"] { font-size:20px; line-height:45px; }
+	.signup-cont form input[type="submit"] { font-size:20px; line-height:45px; }
+	.myaccount-main-cont .option-line label { font-size:20px; line-height:25px; }
+	.myaccount-main-cont .option-line input[type="text"] { margin-top:10px; }
+	.myaccount-main-cont .option-line input[type="button"] { float:none; margin-top:0; }
+	.myaccount-main-cont .option-line { margin-top:15px; }
+	.myaccount-main-cont .answer-line input[type="checkbox"] { margin-right:20px; }
+	.myaccount-main-cont .option-line .question-cont { font-size:20px; line-height:25px; }
+	.myaccount-main-cont .erroe-message { font-size:20px; line-height:25px; }
+	.myaccount-main-cont .erroe-message img { width:20px; }
+	.signup-cont form .error-message { font-size:20px; line-height:25px; }
+	.signup-cont form label.check-label { font-size:20px; line-height:25px; }
+	.payment-recipt .recipt-box .title-space { display:none; }
+	.payment-recipt .recipt-box .title-cont { width:100%; }
+	.payment-recipt .recipt-box .title-value { width:100%; margin-top:10px; }
+	.payment-recipt .line-cont { font-size:20px; line-height:25px; } 
+	.payment-recipt .pass-btn { padding-top:20px; }
+	.payment-recipt .pass-btn a { width:100%; line-height:45px; font-size:20px; }
+	.topup1-cont form .error-message { font-size:18px; }
+	.topup1-cont form input[type="submit"] { margin-top:20px; line-height:45px; font-size:20px; width:90%; }
+	.confirmpayment-cont form input[type="submit"] { margin-top:20px; line-height:45px; font-size:20px; width:90%; }
+	.topup2-cont .done-btn a { width:100%; line-height:45px; font-size:20px }
+	.transactions-cont .transactions-table { overflow-x:scroll; }
+	.transactions-cont .transactions-table  table { width:640px; }
+	.topup1-cont form input[type="text"] { margin-top:10px; }
+
+}
+/*480*/
+@media screen and (max-width: 30em) {
+	header .logo { padding-left:0; text-align:center; float:none; } 
+	.landing-section { padding:50px 0; }
+	footer nav.nav-footer ul li { padding:0 8px; }
+	footer nav.nav-footer ul li a { font-size:14px; }
+	.landing-section h1 { font-size:30px; }
+	.landing-section p { font-size:18px; line-height:25px; }
+	.landing-section .btn-line a { font-size:20px; }
+	footer .copy-right { font-size:12px; }
+	.feedback-main-cont form input[type="submit"] { width:100%; }
+	.signup-cont form label.check-label { font-size:14px; }
+	.signup-cont form .error-message { font-size:12px; }
+}

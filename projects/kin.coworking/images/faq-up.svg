@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="10px" viewBox="0 0 18 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>icon / arrows / chevron-up</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M23.5285955,20.4714045 C23.788945,20.731754 24.211055,20.731754 24.4714045,20.4714045 C24.731754,20.211055 24.731754,19.788945 24.4714045,19.5285955 L16.4714045,11.5285955 C16.211055,11.268246 15.788945,11.268246 15.5285955,11.5285955 L7.52859548,19.5285955 C7.26824595,19.788945 7.26824595,20.211055 7.52859548,20.4714045 C7.78894501,20.731754 8.21105499,20.731754 8.47140452,20.4714045 L16,12.942809 L23.5285955,20.4714045 Z" id="path-1"></path>
+    </defs>
+    <g id="🖥-Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="FAQ" transform="translate(-1043.000000, -781.000000)">
+            <g id="Group-4" transform="translate(332.000000, 770.000000)">
+                <g id="icon-/-arrows-/-chevron-up" transform="translate(704.000000, 0.000000)">
+                    <g>
+                        <g id="elem-/-icon---placeholder">
+                            <rect id="placeholder" x="0" y="0" width="32" height="32"></rect>
+                        </g>
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <use id="Mask" fill="#323642" fill-rule="nonzero" xlink:href="#path-1"></use>
+                        <g id="elem-/-base-/-3-base" mask="url(#mask-2)" fill="#464B5C">
+                            <rect id="element-/-colour-/-base-/-3-base" x="0" y="0" width="32" height="32"></rect>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

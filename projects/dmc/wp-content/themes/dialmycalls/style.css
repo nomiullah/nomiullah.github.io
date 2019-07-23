@@ -1,0 +1,87 @@
+/*
+Theme Name: DialMyCalls
+Theme URI: https://dialmycalls.com
+Author: Asif Majeed
+Author URI: http://masifmajeed.com
+Description: Custom theme for DialMyCalls
+Version: 1.0.0
+Text Domain: dmc
+*/
+
+/*Customizer CSS*/
+textarea{
+	width:70%;
+}
+.custom p.comment-form-email {
+    padding-left: 25px;
+}
+.custom {
+    display: inline-flex;
+}
+p.comment-form-comment {
+    margin-top: 160px;
+}
+img.avatar.avatar-100.photo {
+    display: none;
+}
+#comments {
+    padding-top: 125px;
+}
+h2.comments-title {
+    display: none;
+}
+.comment-metadata {
+    float: right;
+    margin-top: -20px;
+}
+span.says {
+    display: none;
+}
+ol.comment-list {
+    list-style: none;
+}
+.comment-metadata a {
+    color: #000;
+}
+.comment-content {
+    margin-top: 10px;
+	line-height: 1.8em;
+}
+.reply {
+    padding-bottom: 20px;
+}
+.comment-content p {
+    border-top: 1px solid #eee;
+    font-size: 14px;
+    padding: 20px 0;
+}
+b.fn {
+    font-size: 15px;
+}
+ol.children {
+    list-style: none;
+}
+div.hentry div.the-content p a {
+    text-decoration: none;
+}
+.comments-count {
+    color: #0B99D7;
+    margin-right: 20px;
+    font-size: 15px;
+    margin-top: -28px;
+	display:inline-flex;
+}
+.cst-btn a {
+    color: #fff;
+    background: #0c7abf;
+	  padding-top: 0px;
+    padding-bottom: 0px;
+	  margin-left: 3px;
+}
+#wp-pagenavi {
+    height: 30px;
+    margin: 0 0 30px;
+    text-align: center;
+}
+/*End Customizer CSS*/
+

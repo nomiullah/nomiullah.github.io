@@ -1,0 +1,1205 @@
+<!DOCTYPE html>
+<html lang="">
+
+<!-- Mirrored from projectdemo.net/gritly/project-gritly/02-01-2018/client/client-profile-feed.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 15 Sep 2018 14:36:41 GMT -->
+
+<!-- Mirrored from asifmajeed.com/projects/gritly/client/client-profile-feed.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 10 Jul 2019 03:31:18 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8">
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<title>West Side Physiotherapy</title>
+<!-- Google fonts -->
+<link href="../../../../fonts.googleapis.com/css65a5.css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+<!-- Bootstrap CSS -->
+<link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<!-- Animate CSS -->
+<link rel="stylesheet" href="../../../code.jquery.com/ui/1.12.1/themes/base/jquery-ui.html">
+<link href="../css/animate.css" rel="stylesheet" type="text/css">
+<!-- Dashboard CSS -->
+<link href="../css/style.css" rel="stylesheet" type="text/css">
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+</head>
+<body class="sticky-header">
+<section> 
+  <!-- left side start-->
+        <div class="left-side sticky-left-side">
+            <!--logo and iconic logo start-->
+            <div class="logo">
+                <a href="#"></a>
+            </div>
+            <div class="logo-icon text-center">
+                <a href="index-2.html"><i class="lnr lnr-home"></i></a>
+            </div><!--logo and iconic logo end-->
+            <div class="left-side-inner">
+                <!--sidebar nav start-->
+                <ul class="nav custom-nav">
+                    <li class="">
+                        <a href="client-dashboard.html"><i class=""><img src="../images/dashboard-icon.png"></i><span>Dashboard</span></a>
+                    </li>
+                    <li class="menu-list drop-menu">
+                        <a href="client-profile-feed.html"><i class=""><img src="../images/nav-item-image3.png"></i> <span>Profile</span></a>
+                    </li>
+                    <li class="menu-list drop-menu">
+                        <a href="clients-program-page.html"><i class=""><img src="../images/programs-icon.png"></i> <span>Programs</span></a>
+                    </li>
+                    <li class="menu-list drop-menu">
+                        <a href="all-pain-points-page.html"><i class=""><img src="../images/pain-point-icon-nav.png"></i> <span>Pain Points</span></a>
+                    </li>
+                    <li class="menu-list drop-menu">
+                        <a href="client-tracker-page.html"><i class=""><img src="../images/tracker-nav-icon.png"></i> <span>Trackers</span></a>
+                    </li>
+                    <li class="menu-list drop-menu">
+                        <a href="client-team-page.html"><i class=""><img src="../images/users-group.png"></i> <span>Team</span></a>
+                    </li>
+                    <li class="menu-list drop-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class=""><img src="../images/refferasl-nav-icon.png"></i> <span>Referrals</span><span class="drop-icon"><img alt="" src="../images/dropdown-icon.png"></span></a>
+                        <ul class="dropdown-menu sub-menu-list">
+                            <li>
+                                <a href="client-referral-page.html">Reffered to Me</a>
+                            </li>
+                            <li>
+                                <a href="#">Reffered by Me</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-list drop-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class=""><img src="../images/invite-nav-icon.png"></i> <span>Invites</span><span class="drop-icon"><img alt="" src="../images/dropdown-icon.png"></span></a>
+                        <ul class="dropdown-menu sub-menu-list">
+                            <li>
+                                <a href="client-organization-invite.html">Organization Invite</a>
+                            </li>
+                            <li>
+                                <a href="#">Team Invites</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!--sidebar nav end-->
+                </ul><!--sidebar nav end-->
+            </div>
+            <footer class="aside-footer text-center">
+                <img alt="" class="hidden-collapsed footer-logo" src="../images/gritly-logo.png"> <img alt="" class="hidden-wide footer-logo" src="../images/gritly-mini-logo.png">
+                <ul class="list-inline copy-right hidden-collapsed">
+                    <li>
+                        <a href="#">2017 © Gritly</a>
+                    </li>
+                    <li>
+                        <a href="#">FAQ’s</a>
+                    </li>
+                    <li>
+                        <a href="#">Report Bugs</a>
+                    </li>
+                </ul>
+            </footer>
+        </div><!-- left side end-->
+  <!-- main content start-->
+  <div class="main-content"> 
+    <!-- header-starts -->
+            <header class="header-section">
+                <!--notification menu start -->
+                <div class="menu-right">
+                    <!--toggle button start-->
+                    <a class="toggle-btn  menu-collapsed-btn">
+                        <img src="../images/menu-icon.png" alt="">
+                    </a>
+                    <!--toggle button end-->
+                    <div class="main-menu">
+                        <div class="row">
+                            <div class="col-xs-7 col-sm-9 search-column">
+                                <div class="input-group border-less-group">
+                                    <div class="menu-list dropdown">
+                                        <input type="text" class="form-control header-search" placeholder="Search for a client at West Side Physiotherapy" data-toggle="dropdown" aria-expanded="false">
+                                        <img class="search-trigger" src="../images/search-icon.png" alt="">
+                                        <ul class="dropdown-menu">
+                                            <li>
+                                                <a href="#">
+                                                    <div class="user_img"><img src="../images/list-item-img1.png" alt=""></div>
+                                                    <div class="notification_desc">
+                                                        <p>Orograms Created by me</p>
+                                                    </div>
+                                                    <div class="clearfix"></div>
+                                                </a>
+                                            </li>
+                                            <li class="odd">
+                                                <a href="#">
+                                                    <div class="user_img"><img src="../images/list-item-img2.png" alt=""></div>
+                                                    <div class="notification_desc">
+                                                        <p>Tracker Assigned by me</p>
+                                                    </div>
+                                                    <div class="clearfix"></div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <div class="user_img"><img src="../images/list-item-img-3.png" alt=""></div>
+                                                    <div class="notification_desc">
+                                                        <p>Clients Refferedto me</p>
+                                                    </div>
+                                                    <div class="clearfix"></div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-5 col-sm-3 notification-wrap">
+                                <div class="user-panel-top">
+                                    <ul class="nofitications-dropdown list-inline">
+                                        <li class="dropdown">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><img src="../images/envelope-icon.png" alt=""><span class="badge">3</span></a>
+                                            <div class="dropdown-menu message">
+                                                <div class="recent-notif">
+                                                    <p>Recent <span>(1)</span></p>
+                                                    <a href="#">New Message</a>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                                <ul>
+                                                <li>
+                                                    <a href="#">
+                                                        <div class="user_img"><img src="../images/1.png" alt=""></div>
+                                                        <div class="notification_desc">
+                                                            <p>Chris Novakova Assigned you a new program.</p>
+                                                            <span>Oct 5</span>
+                                                        </div>
+                                                        <div class="clearfix"></div>
+                                                    </a>
+                                                </li>
+                                                <li class="odd">
+                                                    <a href="#">
+                                                        <div class="user_img"><img src="../images/1.png" alt=""></div>
+                                                        <div class="notification_desc">
+                                                            <p>Chris Novakova Assigned you a new program.</p>
+                                                            <span>Oct 5</span>
+                                                        </div>
+                                                        <div class="clearfix"></div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <div class="user_img"><img src="../images/1.png" alt=""></div>
+                                                        <div class="notification_desc">
+                                                            <p>Chris Novakova Assigned you a new program.</p>
+                                                            <span>Oct 5</span>
+                                                        </div>
+                                                        <div class="clearfix"></div>
+                                                    </a>
+                                                </li>
+                                                <li class="odd">
+                                                    <a href="#">
+                                                        <div class="user_img"><img src="../images/1.png" alt=""></div>
+                                                        <div class="notification_desc">
+                                                            <p>Chris Novakova Assigned you a new program.</p>
+                                                            <span>Oct 5</span>
+                                                        </div>
+                                                        <div class="clearfix"></div>
+                                                    </a>
+                                                </li>
+                                                
+                                                </ul>
+                                                <div class="notification_bottom">
+                                                    <a href="#">View all notification</a>
+                                                </div>    
+                                            </div>
+                                        </li>
+                                        <li class="dropdown">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true"><img src="../images/notification-icon.png" alt=""><span class="badge blue">3</span></a>
+                                            
+                                            <ul class="dropdown-menu notifications">
+                                                <li>
+                                                    <div class="notification_header">
+                                                        <h3><span><img src="../images/notification-icon.png" alt=""></span>notification</h3>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="recent-notif">
+                                                        <p>Recent <span>(10)</span></p>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <div class="user_img"><img src="../images/1.png" alt=""></div>
+                                                        <div class="notification_desc">
+                                                            <p>Chris Novakova Assigned you a new program.</p>
+                                                            <span>Oct 5</span>
+                                                        </div>
+                                                        <div class="clearfix"></div>
+                                                    </a>
+                                                </li>
+                                                <li class="odd">
+                                                    <a href="#">
+                                                        <div class="user_img"><img src="../images/1.png" alt=""></div>
+                                                        <div class="notification_desc">
+                                                            <p>Nina Williams invited you to her team North Champions</p>
+                                                            <span>Oct 5</span>
+                                                        </div>
+                                                        <div class="clearfix"></div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <div class="user_img"><img src="../images/1.png" alt=""></div>
+                                                        <div class="notification_desc">
+                                                            <p>Chris Novakova Assigned you a new program.</p>
+                                                            <span>Oct 5</span>
+                                                        </div>
+                                                        <div class="clearfix"></div>
+                                                    </a>
+                                                </li>
+                                                <li class="odd">
+                                                    <a href="#">
+                                                        <div class="user_img"><img src="../images/1.png" alt=""></div>
+                                                        <div class="notification_desc">
+                                                            <p>Chris Novakova Assigned you a new program.</p>
+                                                            <span>Oct 5</span>
+                                                        </div>
+                                                        <div class="clearfix"></div>
+                                                    </a>
+                                                </li>
+                                                <div class="notification_bottom">
+                                                    <a href="#">View all notification</a>
+                                                </div>
+                                            </ul>
+                                        </li>
+                                        <div class="clearfix"></div>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /input-group -->
+                    </div>
+                    <div class="login-menu">
+                        <ul class="list-unstyled">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                    <div class="profile_img">
+                                        <div class="media">
+                                            <span class="pull-left">
+                                                 <img class="media-object" src="../images/1.png" alt="">
+                                              </span>
+                                            <div class="media-body">
+                                                <p class="user-name">George</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li> <a href="#">My profile</a> </li>
+                                    <li> <a href="#">Setting</a></li>
+                                    <li>
+                                        <hr>
+                                    </li>
+                                    <li> <a href="#"><span class="muted">Switch as</span></a></li>
+                                    <li> <a href="#">West side physio</a></li>
+                                    <li> <a href="#">Orginization 2</a></li>
+                                    <li> <a href="#">Profile 2</a></li>
+                                    <li>
+                                        <hr>
+                                    </li>
+                                    <li> <a href="#">Logout</a></li>
+                                </ul>
+                            </li>
+                            <div class="clearfix"> </div>
+                        </ul>
+                    </div>
+                </div>
+                <!--notification menu end -->
+            </header>
+            <!-- //header-ends -->
+    <div class="page-warp"> 
+      <!-- body wrapper start-->
+      <div class="client-profile-feed">
+        <div class="filter-header">
+          <div class="custom-container">
+            <div class="row">
+              <div class="col-xs-5 filter-left col-sm-4 col-lg-4">
+                  <div class="transparent-dropdown">
+                      <div class="btn-group">
+                          <button class="btn p-l-0" type="button">Carol’s Profile</button> <button class="btn dropdown-toggle" data-toggle="dropdown" type="button"><img alt="" src="../images/drop-button-icon.png"></button>
+                          <ul class="dropdown-menu">
+                              <li>
+                                  <a href="#">Action</a>
+                              </li>
+                              <li>
+                                  <a href="#">Another action</a>
+                              </li>
+                              <li>
+                                  <a href="#">Something else here</a>
+                              </li>
+                              <li class="divider"></li>
+                              <li>
+                                  <a href="#">Separated link</a>
+                              </li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-xs-7 filter-right col-sm-8 text-right">
+                <button class="btn p-l-0 switch-coch" type="button">Switch to Coach</button>
+              </div>
+            </div>
+            <div class="row">
+              <div class="inner-page-nav">
+                <div class="col-md-12">
+                  <nav class="navbar navbar-default">
+                    <div class="custom-contain"> 
+                      <!-- Brand and toggle get grouped for better mobile display -->
+                      <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+                        <a class="navbar-brand" href="#">
+                        <div class="inner-page-logo"> <span><img src="../images/inner-page-logo-img.png" alt=""></span>
+                          <p>Carol Anderson<span>Shared Profile</span></p>
+                        </div>
+                        </a> </div>
+                      
+                      <!-- Collect the nav links, forms, and other content for toggling -->
+                      <div class="collapse navbar-collapse" id="navbar-collapse-1">
+                        <ul class="nav navbar-nav navbar-right">
+                          <li class="active"><a href="client-profile-feed.html"><span><img src="../images/nav-item-image1.png" alt="" /></span>Feed</a></li>
+                          <li><a href="clients-program-page.html"><span><img src="../images/nav-item-image3.png" alt="" /></span>Program<sup></sup></a></li>
+                          <li><a href="client-profile-about.html"><span><img src="../images/nav-item-image3.png" alt="" /></span>About</a></li>
+                          <li><a href="client-matrics.html"><span><img src="../images/nav-item-image3.png" alt="" /></span>Matrics</a></li>
+                          <li><a href="#"><span><img src="../images/nav-item-image3.png" alt="" /></span>Notes<sup></sup></a></li>
+                          <li><a href="clien-profile-all-msg.html"><span><img src="../images/nav-item-image4.png" alt="" /></span>Messages</a></li>
+                        </ul>
+                      </div>
+                      <!-- /.navbar-collapse --> 
+                    </div>
+                    <!-- /.container --> 
+                  </nav>
+                  <!-- /.navbar --> 
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="content">
+          <div class="views-wrap">
+            <div class="custom-container grid-view">
+              <div class="row">
+                <div class="col-sm-6 col-md-3 col-lg-3">
+                  <div class="content-side-bar"> 
+                    <button class="btn collapsed" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                    <h3 class="header-title"><span class="drop-icon"><img src="../images/drop-button-icon.png" alt=""></span> USER GROUPS</h3>
+                    <a href="#" class="edit-pencil-icon">
+                        <i class="glyphicon glyphicon-pencil"></i>
+                    </a>
+                    </button>
+                    <div class="clearfix"></div>
+                    <div class="collapse" id="collapseExample">
+                      <div class="well">
+                        <div class="user-group">
+                          <div class="groups-name">
+                            <button class="btn user-groups-btn football-XI" type="button">football XI</button>
+                            <button class="btn user-groups-btn heart-condition" type="button">heart condition</button>
+                            <button class="btn user-groups-btn nas-university" type="button">nashvile university</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="btn collapsed" role="button" data-toggle="collapse" href="#collapseExample1" aria-expanded="false" aria-controls="collapseExample">
+                    <h3 class="header-title"><span class="drop-icon"><img src="../images/drop-button-icon.png" alt=""></span>TEAMS</h3>
+                    <a href="#" class="edit-pencil-icon">
+                        <i class="glyphicon glyphicon-pencil"></i>
+                    </a>
+                    </button>
+                    <div class="clearfix"></div>
+                    <div class="collapse" id="collapseExample1">
+                      <div class="well">
+                        <div class="user-group team-members">
+                          <div class="groups-name">
+                            <ul>
+                              <li><a href="#"><img src="../images/team-img-small-1.png" alt=""></a></li>
+                              <li><a href="#"><img src="../images/team-img-small-2.png" alt=""></a></li>
+                              <li><a href="#"><img src="../images/team-img-small-3.png" alt=""></a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="btn collapsed" role="button" data-toggle="collapse" href="#collapseExample2" aria-expanded="false" aria-controls="collapseExample">
+                    <h3 class="header-title"><span class="drop-icon"><img src="../images/drop-button-icon.png" alt=""></span>GOALS</h3>
+                    <a href="#" class="edit-pencil-icon">
+                        <i class="glyphicon glyphicon-pencil"></i>
+                    </a>
+                    </button>
+                    <div class="clearfix"></div>
+                    <div class="collapse" id="collapseExample2">
+                      <div class="well">
+                        <div class="user-group team-members">
+                          <div class="groups-name">
+                            <p>Increase deadlift strength with out<br>
+                              any back pain. Increase stamina and<br>
+                              body mass index.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="btn collapsed" role="button" data-toggle="collapse" href="#collapseExample3" aria-expanded="false" aria-controls="collapseExample">
+                    <h3 class="header-title"><span class="drop-icon"><img src="../images/drop-button-icon.png" alt=""></span>OTHER SECTION</h3>
+                    <a href="#" class="edit-pencil-icon">
+                        <i class="glyphicon glyphicon-pencil"></i>
+                    </a>
+                    </button>
+                    <div class="clearfix"></div>
+                    <div class="collapse" id="collapseExample3">
+                      <div class="well">
+                        <div class="user-group team-members">
+                          <div class="groups-name">
+                            <p>Increase deadlift strength with out<br>
+                              any back pain. Increase stamina and<br>
+                              body mass index.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="btn collapsed" role="button" data-toggle="collapse" href="#collapseExample4" aria-expanded="false" aria-controls="collapseExample">
+                    <h3 class="header-title"><span class="drop-icon"><img src="../images/drop-button-icon.png" alt=""></span>OTHER SECTION2</h3>
+                    <a href="#" class="edit-pencil-icon">
+                        <i class="glyphicon glyphicon-pencil"></i>
+                    </a>
+                    </button>
+                    <div class="clearfix"></div>
+                    <div class="collapse" id="collapseExample4">
+                      <div class="well">
+                        <div class="user-group team-members">
+                          <div class="groups-name">
+                            <p>Increase deadlift strength with out<br>
+                              any back pain. Increase stamina and<br>
+                              body mass index.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="content-side-footer">
+                      <div class="card-footer">
+                        <ul class="list-inline">
+                          <li>
+                            <div class="transparent-dropdown drop-action">
+                              <div class="btn-group">
+                                <button class="btn dropdown-toggle" data-toggle="dropdown" type="button" aria-expanded="false"><span class="action-text"><img src="../images/message-icon.png"></span> <span class="badge"></span></button>
+                                <ul class="dropdown-menu custom-drop">
+                                  <li> <a href="#">View Prolfile</a> </li>
+                                  <li> <a href="#">View Metrics</a> </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="transparent-dropdown drop-action">
+                              <div class="btn-group">
+                                <button class="btn dropdown-toggle" data-toggle="dropdown" type="button" aria-expanded="false"><span class="action-text"><img src="../images/groupchat-icon.png"></span></button>
+                                <ul class="dropdown-menu custom-drop">
+                                  <li> <a href="#">View Prolfile</a> </li>
+                                  <li> <a href="#">View Metrics</a> </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="transparent-dropdown drop-action">
+                              <div class="btn-group">
+                                <button class="btn dropdown-toggle" data-toggle="dropdown" type="button" aria-expanded="false"><span class="action-text"><img src="../images/emotion-icon.png"></span> <span class="badge"></span></button>
+                                <ul class="dropdown-menu custom-drop">
+                                  <li> <a href="#">View Prolfile</a> </li>
+                                  <li> <a href="#">View Metrics</a> </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-md-6 col-lg-6">
+                  <div class="center-content text-center">
+                    <div class="post-filter-header">
+                      <div class="open-content">
+                        <button type="button" class="btn-primary floating-icon-sm-btn" data-toggle="collapse" data-target="#filter-panel"><img src="../images/add-icon.png" alt=""> </button>
+                      </div>
+                      <div class="post-tabs">
+                        <div class="card">
+                          <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">NEWEST</a></li>
+                            <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">TEAM</a></li>
+                            <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">COMPANY</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <button type="button" class="btn btn-primary filter-btn collapsed" data-toggle="collapse" data-target="#filter-panel1"> <img src="../images/tabs-search-filter-icon.png" alt=""> </button>
+                    </div>
+                    <div class="new-post-block open-content">
+                        <div id="filter-panel" class="collapse filter-panel">
+                          <div class="panel panel-default">
+                              <div class="panel-body">
+                                <div class="add-new-post">
+                                  <div class="new-note">
+                                      <textarea type="text" class="form-control border-less-input" placeholder="Type here to add note."></textarea>
+                                  </div>
+                                  <footer>
+                                    <div class="new-post-media">
+                                      <ul>
+                                        <li><a href="#"><img src="../images/new-img-add-icon.png" alt=""></a></li>
+                                        <li><a href="#"><img src="../images/libraries-icon.png" alt=""></a></li>
+                                        <li><a href="#"><img src="../images/emotions-icon.png" alt=""></a></li>
+                                      </ul>
+                                    </div>
+                                    <div class="new-feed-post-btn">
+                                       <div class="filter-left">
+                                          <div class="transparent-dropdown">
+                                              <div class="btn-group">
+                                                  <button class="btn p-l-0" type="button">Shared with: Alpha Team</button> <button class="btn dropdown-toggle" data-toggle="dropdown" type="button"><img alt="" src="../images/drop-button-icon.png"></button>
+                                                  <ul class="dropdown-menu">
+                                                      <li>
+                                                          <a href="#">Action</a>
+                                                      </li>
+                                                      <li>
+                                                          <a href="#">Another action</a>
+                                                      </li>
+                                                      <li>
+                                                          <a href="#">Something else here</a>
+                                                      </li>
+                                                      <li class="divider"></li>
+                                                      <li>
+                                                          <a href="#">Separated link</a>
+                                                      </li>
+                                                  </ul>
+                                              </div>
+                                          </div> 
+                                       </div> 
+                                        
+                                      <button type="submit" class="btn btn-default see-more-sm-btn"> Post </button>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                  </footer>
+                                </div>
+                              </div>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="fillter-search open-content">
+                        <div id="filter-panel1" class="collapse filter-panel">
+                            <div class="panel panel-default">
+                              <div class="panel-body">
+                                <form class="form-inline" role="form">
+                                  <label class="filter-col" for="pref-perpage">Filter By</label>
+                                  <div class="form-group">
+                                    <select id="pref-perpage" class="form-control">
+                                      <option value="" disabled selected>Name</option>
+                                      <option value="2">2</option>
+                                      <option value="3">3</option>
+                                      <option value="4">4</option>
+                                      <option value="5">5</option>
+                                      <option value="6">6</option>
+                                      <option value="7">7</option>
+                                      <option value="8">8</option>
+                                      <option value="9">9</option>
+                                    </select>
+                                  </div>
+                                  <!-- form group [rows] -->
+                                  <div class="form-group">
+                                    <div class="input-group date">
+                                      <input type="text" id="datetimepicker" class="form-control" />
+                                    </div>
+                                  </div>
+                                  <div class="form-group">
+                                    <input type="text" placeholder="Tags" class="form-control input-sm" id="pref-search">
+                                  </div>
+                                  <!-- form group [search] -->
+                                  <div class="apply-btn">
+                                    <div class="reset-filter"> <a href="#" id="reset-filter-btn">Reset</a> | <a href="#" id="hide-filter-btn">Hide Filters</a>
+                                      <div class="clearfix"></div>
+                                    </div>
+                                    <button type="submit" class="btn btn-default see-more-sm-btn"> Apply </button>
+                                  </div>
+                                </form>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                      <div role="tabpanel" class="tab-pane active" id="home">
+                        <div class="feeds-main-content">
+                            <div class="box text">
+                              <div class="box-header">
+                                <h3><a href="#"><img src="https://goo.gl/oOD0V2" alt="" /></a> </h3>
+                                <span class="active-hrs">Sep 5</span> </div>
+                              <div class="post-content-main">
+                                <div class="box-content">
+                                  <div class="content">
+                                    <div class="feeds-header"> <a href="#">Rick Grimes</a> <span><a href="#">Head Personal Trainer</a></span> </div>
+                                    <p>Lorem ipsum ad his scripta blandit partiendo, eum fastidii accumsan euripidis in, eum liber hendrerit an. Qui ut wisi vocibus suscipiantur, quo dicit ridens inciderint id. Quo mundi lobortis reformidans eu, legimus senserit definiebas an eos.</p>
+                                  </div>
+                                
+                                </div>
+                                <div class="box-click"><span><i class="ion-chatbox-working"></i> View 140 more comments</span></div>
+                                <div class="box-comments">
+                                  <div class="comment">
+                                    <div class="content box-header">
+                                      <h3><img src="https://goo.gl/oM0Y8G" alt=""></h3>
+                                      <div class="clearfix"></div>
+                                      <span class="active-hrs">5 hrs ago</span> </div>
+                                    <div class="comment-text">
+                                      <div class="feeds-header"> <a href="#">Rick Grimes</a> <span><a href="#">Head Personal Trainer</a></span> </div>
+                                      <p class="new-post-text">Lorem ipsum ad his scripta blandit partiendo, :D loll Lorem ipsum ad his scripta blandit partiendo, :D loll </p>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                  </div>
+                                  <div class="box-new-comment">
+                                    <div class="content"> <img src="https://goo.gl/oOD0V2" alt="">
+                                      <div class="row1">
+                                        <textarea placeholder="write a comment..."></textarea>
+                                      </div>
+                                      <div class="clearfix"></div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="clearfix"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="feeds-main-content">
+                            <div class="box picture-post">
+                              <div class="box-header">
+                                <h3><a href="#"><img src="../images/w-photo.png" alt="" /></a> </h3>
+                                <span class="active-hrs">Sep 7</span> </div>
+                              <div class="post-content-main">
+                                <div class="box-content">
+                                  <div class="content">
+                                    <div class="feeds-header"> <a href="#">West Side Physiotherapy</a> <span><a href="#">by Jason Stuart</a></span> </div>
+                                    <a href="#" class="post-image"><img src="../images/post-img-for-feed.png" alt=""></a>
+                                  </div>
+                                
+                                </div>
+                                <div class="box-click"><span><i class="ion-chatbox-working"></i> View 140 more comments</span></div>
+                                <div class="box-comments">
+                                  <div class="comment">
+                                    <div class="content box-header">
+                                      <h3><img src="https://goo.gl/oM0Y8G" alt=""></h3>
+                                      <div class="clearfix"></div>
+                                      <span class="active-hrs">5 hrs ago</span> </div>
+                                    <div class="comment-text">
+                                      <div class="feeds-header"> <a href="#">Rick Grimes</a> <span><a href="#">Head Personal Trainer</a></span> </div>
+                                      <p class="new-post-text">Lorem ipsum ad his scripta blandit partiendo, :D loll Lorem ipsum ad his scripta blandit partiendo, :D loll </p>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                  </div>
+                                  <div class="box-new-comment">
+                                    <div class="content"> <img src="https://goo.gl/oOD0V2" alt="">
+                                      <div class="row1">
+                                        <textarea placeholder="write a comment..."></textarea>
+                                      </div>
+                                      <div class="clearfix"></div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="clearfix"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="feeds-main-content">
+                            <div class="box carol-programs">
+                              <div class="box-header">
+                                <h3><a href="#"><img src="../images/new-member-img.png" alt="" /></a> </h3>
+                                <span class="active-hrs">Sep 2</span> </div>
+                              <div class="post-content-main">
+                                <div class="box-content">
+                                  <div class="content">
+                                    <div class="feeds-header"> <a href="#">Sarah Tancredi</a> <span><a href="#">Head Personal Trainer</a></span> </div>
+                                    <div class="assig-carol-progam">
+                                        <div class="program-title">
+                                            <h3><span class="program-icon"><img src="../images/nav-item-image2.png" alt=""></span>Assigned Carol a new program</h3>
+                                        </div>
+                                        <div class="program-content">
+                                             <label for="">Glute Strength</label>
+                                             <p>Improve Carol shoulder stabiltiy & strength<br/>12 Exercise, 12 Weeks</p>
+                                        </div>
+                                    </div>
+                                  </div>
+                                
+                                </div>
+                                <div class="box-click"> View 140 more comments</div>
+                                <div class="box-comments">
+                                  <div class="box-new-comment">
+                                    <div class="content"> <img src="https://goo.gl/oOD0V2" alt="">
+                                      <div class="row1">
+                                        <textarea placeholder="write a comment..."></textarea>
+                                      </div>
+                                      <div class="clearfix"></div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="clearfix"></div>
+                            </div>
+                        </div>
+
+                        <div class="feeds-main-content">
+                            <div class="box carol-programs">
+                              <div class="box-header">
+                                <h3><a href="#"><img src="../images/new-member-img.png" alt="" /></a> </h3>
+                                <span class="active-hrs">Sep 2</span> </div>
+                              <div class="post-content-main">
+                                <div class="box-content">
+                                  <div class="content">
+                                    <div class="feeds-header"> <a href="#">Sarah Tancredi</a> <span><a href="#">Head Personal Trainer</a></span> </div>
+                                    <div class="assig-carol-progam">
+                                        <div class="program-title">
+                                            <h3><span class="program-icon"><img src="../images/emotions-icon.png" alt=""></span>Reported pain during exercise</h3>
+                                        </div>
+                                        <div class="program-content">
+                                             <label for="">Glute Strength</label>
+                                             <p>Improve Carol shoulder stabiltiy & strength<br/>12 Exercise, 12 Weeks</p>
+                                        </div>
+                                    </div>
+                                  </div>
+                                
+                                </div>
+                                <div class="box-click"> View 140 more comments</div>
+                                <div class="box-comments">
+                                  <div class="box-new-comment">
+                                    <div class="content"> <img src="https://goo.gl/oOD0V2" alt="">
+                                      <div class="row1">
+                                        <textarea placeholder="write a comment..."></textarea>
+                                      </div>
+                                      <div class="clearfix"></div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="clearfix"></div>
+                            </div>
+                        </div>    
+                      
+                      </div>
+                      <div role="tabpanel" class="tab-pane" id="profile"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </div>
+                      <div role="tabpanel" class="tab-pane" id="messages"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-md-3 col-lg-3">
+                    <div class="right-sidebar">
+                      <div class="activity-matrics">
+                        <header>
+                          <div class="filter-left">
+                            <div class="transparent-dropdown">
+                                <div class="btn-group">
+                                    <button class="btn p-l-0" type="button">ACTIVITY MATRICS</button> 
+                                    <a href="#" class="btn dropdown-toggle" type="button"><img alt="" src="../images/drop-button-icon.png"></a>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div> 
+                         </div>
+                        </header>
+                        <div class="r-s-content">
+                            <div class="controllers">
+                              <button type="submit" class="btn btn-default new-task-btn"> VOLUME </button>
+                              <button type="submit" class="btn btn-default new-task-btn color-blue"> COMPLIANCE </button>
+                              <div class="clearfix"></div>
+                            </div>
+                            <div class="side-chrts">
+                              <div class="chart-container">
+                                <canvas id="current-last-week-chart" width="100%" height="80px"></canvas>
+                              </div>
+                            </div>
+                        </div>
+                        <footer>
+                          <div class="side-activities">
+                            <div class="activities">
+                              <label for="">Warmups<p>Planks<span><img src="../images/activity-up-arrow.png" alt="">+10s</span></p></label>
+                              <div class="canvas-img canvas">
+                                <img src="../images/list-graph-icon.png" alt="" />
+                              </div>
+                              <div class="clearfix"></div>
+                            </div>
+                            <div class="activities">
+                              <label for="">Stretches<p>Neck Stretches<span><img src="../images/activity-up-arrow.png" alt="">+10s</span></p></label>
+                              <div class="canvas-img canvas">
+                                <img src="../images/list-graph-icon.png" alt="" />
+                              </div>
+                              <div class="clearfix"></div>
+                            </div>
+                            <a href="#">3 more Program Assigned</a>
+                          </div>
+                        </footer>
+                      </div>
+                      <div class="activity-matrics activity-compliance">
+                        <header>
+                          <div class="filter-left">
+                            <div class="transparent-dropdown">
+                                <div class="btn-group">
+                                    <button class="btn p-l-0" type="button">ACTIVITY COMPLIANCE</button> 
+                                    <a href="#" class="btn dropdown-toggle" type="button"><img alt="" src="../images/drop-button-icon.png"></a>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div> 
+                         </div>
+                        </header>
+                        <div class="r-s-content">
+                           <div class="compliance-progress">
+                            <div class="progress-detail">
+                               <span><img src="../images/activity-up-arrow.png" alt=""></span>
+                                <div class="canvas-img canvas">
+                                  <div class="canvas1">
+                                      <div class="circle-sidebar" id="circles-1"></div>
+                                  </div>
+                                </div>   
+                               <h3>Deadlift</h3>
+                            </div>
+                            <div class="progress-detail">
+                               <span><img src="../images/activity-up-arrow.png" alt=""></span>
+                                <div class="canvas-img canvas">
+                                  <div class="canvas1">
+                                      <div class="circle-sidebar" id="circles-2"></div>
+                                  </div>
+                                </div>   
+                               <h3>Pullups</h3>
+                            </div>
+                            <div class="progress-detail">
+                               <span><img src="../images/activity-red-down-arrow.png" alt=""></span>
+                                <div class="canvas-img canvas">
+                                  <div class="canvas1">
+                                      <div class="circle-sidebar" id="circles-3"></div>
+                                  </div>
+                                </div>   
+                               <h3>Chinuos</h3>
+                            </div>
+                            <div class="progress-detail">
+                               <span><img src="../images/activity-up-arrow.png" alt=""></span>
+                                <div class="canvas-img canvas">
+                                  <div class="canvas1">
+                                      <div class="circle-sidebar" id="circles-4"></div>
+                                  </div>
+                                </div>   
+                               <h3>Sprint</h3>
+                            </div>
+                            <div class="progress-detail">
+                               <span><img src="../images/activity-red-down-arrow.png" alt=""></span>
+                                <div class="canvas-img canvas">
+                                  <div class="canvas1">
+                                      <div class="circle-sidebar" id="circles-5"></div>
+                                  </div>
+                                </div>   
+                               <h3>Landmine Rainbows</h3>
+                            </div>
+                           </div> 
+                        </div>
+                      </div>
+                      <div class="activity-matrics assigned-trackers">
+                        <header>
+                          <div class="filter-left">
+                            <div class="transparent-dropdown">
+                                <div class="btn-group">
+                                    <button class="btn p-l-0" type="button">ASSIGNED TRACKERS</button> 
+                                    <a href="#" class="btn dropdown-toggle" type="button"><img alt="" src="../images/drop-button-icon.png"></a>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div> 
+                         </div>
+                        </header>
+                        <footer>
+                          <div class="side-activities">
+                            <div class="activities">
+                              <label for="">Weight<p>165bs<span><img src="../images/activity-up-arrow.png" alt="">+10lbs</span></p></label>
+                              <div class="progress">
+                                <div id="dynamic" class="progress-bar progress-bar-lightblue active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+                                  <span id="current-progress"></span>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="activities">
+                              <label for="">Water intake<p>2ltr<span><img src="../images/activity-up-arrow.png" alt="">+0.2ltr</span></p></label>
+                              <div class="progress">
+                                <div id="dynamic1" class="progress-bar progress-bar-blue active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+                                  <span id="current-progress1"></span>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="activities">
+                              <label for="">Fatigue<p>2ltr<span><img src="../images/activity-up-arrow.png" alt="">+0.2ltr</span></p></label>
+                              <div class="progress">
+                                <div id="dynamic2" class="progress-bar progress-bar-purple active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+                                  <span id="current-progress2"></span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </footer>
+                      </div>
+                      <div class="activity-matrics pain-matrics">
+                        <header>
+                          <div class="filter-left">
+                            <div class="transparent-dropdown">
+                                <div class="btn-group">
+                                    <button class="btn p-l-0" type="button">PAIN MATRICS</button> 
+                                    <a href="#" class="btn dropdown-toggle" type="button"><img alt="" src="../images/drop-button-icon.png"></a>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div> 
+                         </div>
+                        </header>
+                        <div class="r-s-content">
+                            <div class="side-chrts">
+                              <div class="chart-container">
+                                <canvas id="pain-metrics-chart" width="100%" height="80px"></canvas>
+                              </div>
+                            </div>
+                        </div>
+                        <footer>
+                          <div class="side-activities">
+                            <div class="pain-matrics-progress">
+                              <label for="">Left Shoulder</label>
+                              <div class="progress">
+                                <div id="dynamic3" class="progress-bar progress-bar-red active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+                                  <span id="current-progress3"></span>
+                                </div>
+                              </div>
+                              <div class="clearfix"></div>
+                            </div>
+                            <div class="pain-matrics-progress">
+                              <label for="">Right Shoulder</label>
+                              <div class="progress">
+                                <div id="dynamic4" class="progress-bar progress-bar-lightred active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+                                  <span id="current-progress4"></span>
+                                </div>
+                              </div>
+                              <div class="clearfix"></div>
+                            </div>
+                            <div class="pain-matrics-progress">
+                              <label for="">Chest</label>
+                              <div class="progress">
+                                <div id="dynamic5" class="progress-bar progress-bar-green active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+                                  <span id="current-progress5"></span>
+                                </div>
+                              </div>
+                              <div class="clearfix"></div>
+                            </div>
+                            <div class="pain-matrics-progress">
+                              <label for="">Back</label>
+                              <div class="progress">
+                                <div id="dynamic6" class="progress-bar progress-bar-lightblue active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+                                  <span id="current-progress6"></span>
+                                </div>
+                              </div>
+                              <div class="clearfix"></div>
+                            </div>
+                          </div>
+                        </footer>
+                      </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Bottom add menu -->
+  <ul class="add-menu toggle-menu list-unstyled">
+    <li>
+      <ul class="add-menu-drop list-unstyled toggle-dropdown">
+        <li> <a class="circle-label" href="clients-program-page.html"><img alt="" src="../images/program-icon-white.png"><span class="radius-label label-icon">Program</span></a> </li>
+        <li> <a class="circle-label" href="#"><img alt="" src="../images/groups-icon-white.png"><span class="radius-label label-icon">Groups</span></a> </li>
+        <li> <a class="circle-label" href="#"><img alt="" src="../images/clients-icon-white.png"><span class="radius-label label-icon">Clients</span></a> </li>
+      </ul>
+      <div class="clearfix"></div>
+      <a class="circle-label lg toggle-trigger" href="#"><img alt="" src="../images/add-icon.png"></a> </li>
+  </ul>
+  <!--/ Bottom add menu -->
+  </div>
+  <!--body wrapper end-->
+  </div>
+  <!-- main content end--> 
+</section>
+<!-- jQuery --> 
+<script src="../vendor/jquery/jquery.js"></script> <!-- Bootstrap JavaScript --> 
+
+<script src="../vendor/bootstrap/js/bootstrap.min.js"></script> <!-- Plugins JavaScript --> 
+<script src="../js/jquery-ui.js"></script> 
+<script src="../vendor/circlejs/circles.min.js"></script> 
+<script src="../js/scripts.js"></script>
+<script src="../js/Chart-bundle.js"></script> 
+<script>
+
+/*--============= Progress Bar ================--*/
+
+$(document).ready(function() {
+  ShowProgress("dynamic",'80');
+  ShowProgress("dynamic1",'80');
+  ShowProgress("dynamic2",'30');
+
+  /*--========== js for pain matrics progress ===============*/
+  ShowProgress("dynamic3",'80');
+  ShowProgress("dynamic4",'60');
+  ShowProgress("dynamic5",'40');
+  ShowProgress("dynamic6",'20');
+
+});
+  
+
+  function ShowProgress(ele,prg){
+      var current_progress = 0;
+      var interval = setInterval(function() {
+          current_progress += 1;
+          $("#"+ele)
+          .css("width", current_progress + "%")
+          .attr("aria-valuenow", current_progress);
+          if (current_progress >= prg)
+              clearInterval(interval);
+      },);
+  }
+
+/*--================== Height script */
+
+var NewHight = $( window ).height();
+console.log( NewHight + " " );
+$(".user-panel-top .notifications").css( "height", NewHight);
+
+var HeaderHeight =  $( ".header-section" ).css( "height" );
+        HeaderHeight = HeaderHeight.replace("px","");
+        var NewHight = $( window ).height() - HeaderHeight;
+        //console.log( NewHight + "" );
+        $(".user-panel-top .message").css( "height", NewHight -130);
+
+/*--================== Date Picket ======================--*/
+
+  $( function() {
+    $( "#datetimepicker" ).datepicker({
+      showOn: "button",
+      buttonImage: "../images/calander-icon.png",
+      buttonImageOnly: true
+    });
+  });
+    
+/*--========================= Charts Js ===============--*/
+
+    var ctx = document.getElementById("current-last-week-chart");
+    const currentWeek = [4, 7, 8, 6, 5, 2, 3];
+    const lastWeek = [0, 3, 2, 4, 6, 5, 3];
+    var myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+            datasets: [{
+                label: 'Last Week',
+                data: lastWeek,
+                backgroundColor: ["rgba(23, 108, 214, 0.8)"],
+                borderColor: ["#176cd6"],
+                borderWidth: 1,
+                pointBackgroundColor: "#176cd6",
+                pointRadius: 7,
+                pointBorderColor: "#fff",
+                pointBorderWidth: 3,
+                pointHoverRadius: 7,
+                pointHoverBackgroundColor: "#fff",
+                pointHoverBorderColor: "#176cd6"
+            }, {
+                label: 'Current Week',
+                data: currentWeek,
+                backgroundColor: ["rgba(0, 232, 198, 0.8)"],
+                borderColor: ["#00e8c6"],
+                borderWidth: 1,
+                pointRadius: 0,
+                pointHoverRadius: 0
+            }]
+        },
+        options: {
+            legend: {
+                labels: {
+                    boxWidth: 12
+                }
+            },
+            scales: {
+                xAxes: [{
+                    gridLines: {
+                        display: false
+                    },
+                    ticks: {
+                        display: false
+                    }
+                }],
+                yAxes: [{
+                    gridLines: {
+                        display: false
+                    },
+                    ticks: {
+                        display: false,
+                        beginAtZero: true,
+                        min: 1,
+                        max: 10,
+                    }
+                }]
+            }
+        }
+    });
+
+    // Pain Metrics Chart 
+    
+    var ctx = document.getElementById("pain-metrics-chart");
+    const painMetrics = [6, 7, 2, 8, 6, 4, 0]
+    var myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ["M", "T", "W", "T", "F", "S", "S"],
+            datasets: [{
+                label: 'Last Week',
+                data: painMetrics,
+                backgroundColor: ["rgba(249, 233, 233, 0.8)"],
+                borderColor: ["#f2573c"],
+                borderWidth: 5,
+                pointBackgroundColor: "#f2573c",
+                pointRadius: 0,
+                pointHoverRadius: 0,
+
+            }]
+        },
+        options: {
+            legend: {
+                display: false,
+                labels: {
+                    display: true
+                }
+            },
+            scales: {
+                xAxes: [{
+                    gridLines: {
+                        display: false
+                    },
+                    ticks: {
+                        display: true,
+                        fontFamily: "Montserrat",
+                        fontColor: "#2c405a"
+                    }
+                }],
+                yAxes: [{
+                    gridLines: {
+                        display: false
+                    },
+                    ticks: {
+                        display: false,
+                        beginAtZero: true,
+                        min: 1,
+                        max: 10,
+                    }
+                }]
+            }
+        }
+    });
+</script>    
+</body>
+
+<!-- Mirrored from projectdemo.net/gritly/project-gritly/02-01-2018/client/client-profile-feed.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 15 Sep 2018 14:36:51 GMT -->
+
+<!-- Mirrored from asifmajeed.com/projects/gritly/client/client-profile-feed.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 10 Jul 2019 03:31:18 GMT -->
+</html>

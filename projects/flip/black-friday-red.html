@@ -1,0 +1,168 @@
+<html>
+
+
+<!-- Mirrored from asifmajeed.com/projects/flip/black-friday-red.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 09 Jul 2019 23:11:17 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/flipclock.css">
+    <script src="../../../ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="js/flipclock.min.js"></script>
+    <style type="text/css">
+    @import url('../../../fonts.googleapis.com/css7f5c.css?family=Montserrat:100,300,400,700');
+    @import url('../../../fonts.googleapis.com/cssba99.css?family=Oswald:400,600,700');
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .clock-outer {
+        width: 890px;
+        max-width: 100%;
+        background: url(images/red-bg.jpg) top center no-repeat;
+        text-align: center;
+        padding: 38px 0 60px 0;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .clock-outer h1 {
+        margin: 0px;
+        padding: 0px;
+        color: #eaf4f7;
+        text-transform: uppercase;
+        font-size: 72px;
+        line-height: 60px;
+        margin-bottom: 55px;
+        font-weight: 100;
+    }
+
+    .clock-outer h1 span {
+        display: block;
+        font-weight: bold;
+        color: #eaf4f7;
+    }
+
+    .flip-clock-wrapper {
+        margin: 0px;
+        width: auto;
+        display: inline-block;
+        font-family: 'Oswald', sans-serif;
+    }
+
+    .flip-clock-divider .flip-clock-label {
+        top: auto;
+        bottom: -26px;
+        color: #fff;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-shadow: none;
+        right: -70px;
+    }
+
+    .flip-clock-divider.minutes .flip-clock-label,
+    .flip-clock-divider.seconds .flip-clock-label {
+        right: -76px;
+    }
+
+    .flip-clock-wrapper ul {
+        box-shadow: none;
+        width: 50px;
+        height: 70px;
+        margin: 0 5px 0 0;
+        box-shadow: none;
+    }
+
+    .flip-clock-wrapper .flip {
+        box-shadow: none;
+    }
+
+    .flip-clock-wrapper ul li a div div.inn {
+        color: #eaf4f7;
+        font-family: 'Oswald', sans-serif;
+        font-size: 48px;
+        line-height: 70px;
+    }
+
+    .flip-clock-divider {
+        height: 70px;
+        margin: 0 5px 0 0;
+    }
+
+    .flip-clock-dot.top {
+        top: 15px;
+    }
+
+    .flip-clock-dot.bottom {
+        bottom: 20px;
+    }
+
+    .flip-clock-dot {
+        color: #fff;
+        border-radius: 0px;
+        background: #fff;
+    }
+
+    @media screen and (max-width: 640px) {
+        .clock-outer h1 {
+            font-size: 36px;
+        }
+        .flip-clock-wrapper ul {
+            width: 25px;
+            height: 50px;
+        }
+        .flip-clock-wrapper ul li a div div.inn {
+            font-size: 24px;
+            line-height: 50px;
+        }
+        .flip-clock-divider {
+            height: 50px;
+        }
+        .flip-clock-dot {
+            height: 6px;
+            width: 6px;
+        }
+        .flip-clock-divider .flip-clock-label {
+            right: -50px;
+        }
+        .flip-clock-divider.minutes .flip-clock-label,
+        .flip-clock-divider.seconds .flip-clock-label {
+            right: -54px;
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <div class="clock-outer">
+        <h1>BLACK FRIDAY <span>SALE</span></h1>
+        <div class="clock" "></div>
+		</div>
+
+
+		<script type="text/javascript ">
+			var clock;
+
+			$(document).ready(function() {
+
+				// Grab the current date
+				var date  = new Date(Date.UTC(2017, 10, 24, 12, 0, 0));
+				var now   = new Date();
+
+				// Set some date in the past. In this case, it's always been since Jan 1
+				var diff  = date.getTime()/1000 - now.getTime()/1000;
+ 
+
+				var clock = $('.clock').FlipClock(diff, {
+				    clockFace: 'DailyCounter',
+				    countdown: true
+				});
+
+
+			});
+		</script>
+		
+	</body>
+
+<!-- Mirrored from asifmajeed.com/projects/flip/black-friday-red.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 09 Jul 2019 23:11:32 GMT -->
+</html>

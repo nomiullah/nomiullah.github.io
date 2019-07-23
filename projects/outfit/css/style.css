@@ -1,0 +1,160 @@
+
+/*Global--------------------------------------------------*/
+*{ margin:0px; padding:0px; box-sizing:border-box; }
+body { font-size: 14px; line-height: 22px; color: #000; background: #ffffff; }
+.page-wrapper { width: 100%; }
+.container { margin: 0 auto; width:986px; padding:0 27px; max-width:100%;}
+.clear { clear: both; }
+ul, li { list-style: none; }
+img { border: 0px none; }
+.clearfx { clear: both; }
+@font-face {
+	font-family: 'GothamBold';
+	src: url('../fonts/GothamBold.eot');
+	src: url('../fonts/GothamBoldd41d.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/GothamBold.woff') format('woff'),
+		url('../fonts/GothamBold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Gotham Light';
+	src: url('../fonts/Gotham-Light.eot');
+	src: url('../fonts/Gotham-Lightd41d.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Gotham-Light.woff') format('woff'),
+		url('../fonts/Gotham-Light.ttf') format('truetype');
+	font-weight: 300;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Gotham Book';
+	src: url('../fonts/Gotham-Book.eot');
+	src: url('../fonts/Gotham-Bookd41d.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Gotham-Book.woff') format('woff'),
+		url('../fonts/Gotham-Book.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+}
+.padding { padding-bottom:396px !important;}
+/*Banner ==============*/
+.banner { background:#FFF;}
+.banner .banner-heading { border-bottom:2px solid #efeeee; margin-bottom:20px;}
+.banner .banner-heading h2 { padding:68px 0 20px 0; color:#464646; font-size:24px; font-weight:500; }
+.banner .banner-background { background:url(../images/banner-back.png) no-repeat; background-size:cover; width:100%; padding-bottom:198px; }
+.banner .banner-background .banner-detail { margin-left:197px; width:260px;}
+.banner .banner-background .banner-detail .banner-logo {  padding:48px 0;}
+.banner .banner-background .banner-detail .banner-logo  img { max-width:100%;}
+.banner .banner-background .form-banner { }
+.banner .banner-background .form-banner h3 { line-height:18px; margin-bottom:24px; font-weight:300; font-size:18px; color:#0c1217; text-align:left; font-family: 'Gotham Light';}
+.banner .banner-background .form-banner p { margin-bottom:20px; font-family: 'Gotham Light'; font-size:14px; color:#0b1117; 
+text-align:left; line-height:22px;}
+.banner .w3-radio { width:24px; height:24px; position: relative; top:7px; }
+.banner label { margin-left:7px; font-size:13px; font-family: 'Gotham Light'; color:#0c1217; display:block; margin-bottom:0px; }
+.banner input.email-addr {margin:16px 0; font-family: 'Gotham Light'; text-align: center; width: 100%; padding:16px 0px; color: #606163; font-size:13.5px; background: #eeeeee; border: 0px;}
+
+.banner .w3-half label input[type="checkbox"] { display:none;}
+.banner .w3-half label span { background:url(../images/uncheck.png) left center no-repeat; padding-left:20px; color:#0c1217; }
+.banner .w3-half label input[type="checkbox"]:checked + span { background:url(../images/checkbox-checked.png) left center no-repeat; padding-left:20px; }
+.banner .w3-half span {font-size: 13px; font-family: 'Gotham Light';}
+.banner label input[type="checkbox"] { display:none;}
+.banner label span { background:url(../images/checkbox-3.png) left center no-repeat; padding-left:20px; }
+.banner label input[type="checkbox"]:checked + span { background:url(../images/checkbox-2.png) left center no-repeat; padding-left:20px; }
+.banner span { font-size:13px; font-family: 'Gotham Light'; color:#0b1117;}
+
+.banner input.email-addr::-webkit-input-placeholder { color:  #8b8c8d; }
+.banner input.email-addr::-moz-placeholder { color:  #8b8c8d; }
+.banner input.email-addr:-ms-input-placeholder {  color:  #8b8c8d; }
+.banner input.email-addr:-moz-placeholder { color: #8b8c8d; }
+.banner input.w3-half {widt:before { content:""; display:inline-block; width:12px; height:12px; background:red; }h: 24px; height: 24px; position: relative; top:3px; }
+.w3-half #mail_checkbox::before { content:""; background:#fff; display:inline-block; width:12px; height:12px; border-radius: 50%; border: 7px solid #3b99fc; }
+.w3-half #mail_checkbox:checked::before { background:#fff; border-radius: 50%; border: 3px solid #acacac; }​
+.banner span { font-size:13.5px; font-family: 'Gotham Light'; color:#0c1217; font-weight:300; margin-left:3px;}
+.banner .button { background-color: transparent; border:2px solid #0b1117; color: #0b1117; padding:16px 0px; text-align: center; text-decoration: none;
+ display: inline-block; font-size:17px; cursor: pointer; width: 100%; font-family: 'GothamBold'; margin-top:23px;}
+ 
+/*Content ==============*/
+.content { }
+.content .top-detail { margin-bottom: 20px;}
+.content .top-detail p { font-size:11.5px;font-family: 'Gotham Light'; color:#0b1117; line-height:18px;}
+.content .content-detail { width:100%; display:inline-block; padding:0 25px 79px 25px; border-bottom:1px solid #dddddd; margin-bottom:40px; }
+.content .content-detail p { font-size:14px;font-family: 'Gotham Light'; color:#0b1117; line-height:22px;}
+
+/* Thanx Banner ==============*/
+.banner .title { }
+.banner .title h2 { color:#0b1117; font-size:18.32px; font-weight:700; font-family: 'GothamBold'; margin-bottom:25px;}
+.banner .social-icon { }
+.banner .social-icon p { color:#0b1117; font-family: 'GothamBold'; font-weight:700; font-size:11.85px; margin-bottom:24px;}
+.banner .social-icon img { margin-right:22px;} 
+.banner .social-icon a { text-decoration:none;}	
+
+/* Media Query ==============*/
+@media screen and ( max-width:1600px ) {
+ .banner .banner-background .banner-detail {
+     margin-left: 100px;
+    }
+    .banner .banner-background {
+     background-size:cover;
+ }
+ .padding {
+     padding-bottom: 600px !important;
+ }
+}
+@media screen and ( max-width:1400px ) {
+ .banner .banner-background .banner-detail {
+     margin-left: 85px;
+	 width:400px;
+ }
+.banner span {
+	font-size:19px;
+} 
+}
+@media screen and ( max-width:1240px ){
+ .banner .banner-background .banner-detail .banner-logo img {
+     max-width: 70%;
+ }
+ .padding {
+     padding-bottom: 320px !important;
+ }
+ .banner .title h2 {
+     font-size: 25px;
+    }
+    .banner .social-icon img {
+     margin-right: 25px;
+     width: 10%;
+ }
+}
+@media screen and ( max-width:1040px ){
+.padding { padding-bottom: 200px !important;}
+.banner .banner-background .banner-detail { width:350px; }
+.banner input.email-addr { font-size:18px;}
+.banner span { font-size:17px;}
+.banner .w3-half span { font-size:12px;}
+.banner .banner-background .banner-detail .banner-logo { padding: 60px 0; }
+}
+@media screen and ( max-width:990px ){
+.banner .banner-background .banner-detail { margin-left: 35px; }
+.banner .banner-background .banner-detail .banner-logo img { max-width: 50%; }
+.banner .title h2 { font-size: 19px; margin-bottom: 35px; }
+.banner .social-icon p { font-size: 18px; }
+.content .content-detail p { font-size:11.5px; }
+.banner .banner-heading h2 { font-size:25px; }
+ }
+@media screen and ( max-width:768px ){
+.banner .banner-background .banner-detail { margin-left:10px;}
+
+ }
+@media screen and ( max-width:680px ){
+.padding { padding-bottom:50px !important;}
+.banner .banner-background .banner-detail { width:100%;} 
+.banner .banner-background .banner-detail .banner-logo img { max-width:50%;}
+.banner .banner-background { padding-bottom:50px;}
+.container { padding:0 15px;}
+.content .content-detail { padding-left:0px; padding-bottom:0px; }
+.banner .banner-background {background-size:100%;}
+}
+@media screen and ( max-width:580px ){  
+.banner .banner-background .banner-detail { width:100%; margin-left:0px;}
+.banner .button {}
+}
+ 
+ 

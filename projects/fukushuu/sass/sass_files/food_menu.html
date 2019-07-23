@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather:300,400,700');
+.main_food_menu {
+	padding:100px 0 0 0;
+	@media ( max-width:$tablet_Wide ) { 
+		padding: 50px 0;
+	}
+	.food_menu_sidebar {
+		@extend .col-sm-3;
+		.food_menu_list {
+			@media ( max-width:$tablet_Small ) { 
+				margin-bottom: 50px;
+			}
+			li {
+				display:inline-block;
+				width:100%;
+				a {
+					display:inline-block;
+					color:#ff6600;
+					font-size:$body_FontSize + 12;
+					line-height:$body_LineHeight + 12;
+					font-family:'Fjalla One', sans-serif;
+					text-transform:uppercase;
+					letter-spacing:1px;
+					@media ( max-width:$tablet_Wide ) { 
+						font-size:20px;
+						line-height: 30px;
+					}
+					@media ( max-width:$tablet_Small ) { 
+						font-size: 24px;
+    					line-height: 40px;
+					}
+
+					&:hover {
+						color:#000;
+					}
+				}
+			}
+		}
+	}
+	.food_menu_detail {
+		@extend .col-sm-9;
+		h2 {
+			color:#000;
+			font-size:$body_FontSize + 62;
+			line-height:$body_LineHeight + 36;
+			padding:0 0 100px 0;
+			font-family:'Fjalla One', sans-serif;
+			text-transform:uppercase;
+			@media ( max-width:$desktop_Small ) { 
+				padding: 0 0 50px 0;
+				font-size: 60px;
+			}
+			@media ( max-width:$tablet_Wide ) { 
+				font-size:40px;
+				line-height:40px;
+			}
+		}
+		.food_menu_inner {
+			padding:0 0 0 100px;
+			border-left: 1px solid #ccc;
+			margin-bottom: 100px;
+			@media ( max-width:$desktop_Small ) { 
+				padding: 0 0 0 50px;
+				margin-bottom: 50px;
+			}
+			@media ( max-width:$tablet_Wide ) { 
+				padding: 0 0 0 20px;
+			}
+			h3 {
+				text-align:left;
+				color:#000;
+				font-size:$body_FontSize + 22;
+				line-height:$body_LineHeight;
+				padding-bottom:45px;
+				font-family: 'Merriweather', serif;
+				@media ( max-width:$tablet_Wide ) { 
+					font-size: 30px;
+				}
+			}
+			.title_description {
+				text-align:left;
+				color:#000;
+				font-size:20px;
+				padding-bottom:75px;
+				font-family: 'Merriweather', serif;
+				@media ( max-width:$tablet_Wide ) { 
+					padding-bottom:40px;
+				}
+			}
+			.item_title_outer {
+				@media ( max-width:$tablet_Small ) { 
+					padding-bottom:0;
+				}
+				.col-sm-6{
+					@media ( max-width:$tablet_Wide ) { 
+						margin-bottom: 30px;
+					}
+				}
+				padding:0 0 65px 0;
+				h4 {
+					color:#000;
+					font-size: 30px;
+					font-weight:700;
+					text-transform:uppercase;
+					letter-spacing:-1px;
+					line-height:$body_LineHeight - 8;
+					padding-bottom:20px;
+					@media ( max-width:$tablet_Wide ) { 
+					font-size: 22px;
+					}
+				}
+				.menu_item_description {
+					color:#000;
+					font-size:20px;
+					line-height:$body_LineHeight - 8;
+					font-family:'Merriweather', serif;
+					padding-bottom: 15px;
+					@media ( max-width:$tablet_Wide ) { 
+						font-size: 16px;
+						line-height: 24px;	
+					}
+				}
+				span {
+					color:#000;
+					font-size:$body_FontSize - 6;
+					font-weight:700;
+					display: block;
+    				line-height: 10px;
+				}
+				&:last-child{
+					padding-bottom: 0px;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,65 @@
+.restaurant_location_banner {
+
+	.restaurant_banner_inner {
+		background:url(../images/resturant_location_banner.png);
+		background-size:cover;
+		height:800px;
+		@media ( max-width:$desktop_Small ) { height: 600px;}
+	}
+	.container {
+		position:absolute;
+		top:68px;
+		left: 0;
+		right:0;
+		margin:0 auto;
+	}
+	.reservation {
+		margin:17px 0 0 0;
+		a {
+			display: inline-block;
+			font-size:$body_FontSize + 2;
+			line-height:$body_LineHeight - 18;
+			color: $primary_TextColor;
+			text-transform: uppercase; 
+			font-family: 'Fjalla One', sans-serif;
+			@media ( max-width:$phone_Medium ) { font-size:$body_FontSize - 5; }
+		}
+		@media ( max-width:$phone_wide ) { margin:12px 0 0 0; line-height:$body_LineHeight - 20; }
+		
+
+	}
+	.obon_logo {
+		margin:0 0 0 410px;
+		@media ( max-width:$desktop_medium ) { margin:0 0 0 370px; }
+		@media ( max-width:$desktop_Small ) { margin:0 0 0 272px; }
+		@media ( max-width:$tablet_Wide ) { margin:0 0 0 160px; }
+		@media ( max-width:$tablet_Small ) { margin:0 0 0 105px; }
+		@media ( max-width:$phone_wide ) { margin:0 0 0 60px; }
+		@media ( max-width:$phone_Medium ) { width:135px; margin: 0 0 0 18px; }
+		@media ( max-width:$phone_Small ) { width:132px; margin: 0 0 0 12px; }
+
+		a {
+			display: inline-block;
+			img {
+				@media ( max-width:$phone_wide ) { width:75%; }
+				@media ( max-width:$phone_Medium ) { width:100%; }
+			}
+		}
+	}
+	.sub_navbtn {
+		margin:17px 0 0 0;
+		height:17px;
+		cursor: pointer;
+		@media ( max-width:$phone_wide ) { margin:12px 0 0 0; }
+		span {
+			display: inline-block;
+			color: $primary_TextColor;
+			font-size:$body_FontSize + 2;
+			line-height: $body_LineHeight - 22;
+			font-family: 'Fjalla One', sans-serif;
+			margin: 0 18px 0 0;
+			text-transform: uppercase;
+			@media ( max-width:$phone_Medium ) { font-size:$body_FontSize - 4; margin:0 10px 0 0; }
+		}
+	}
+}
