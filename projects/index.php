@@ -6,6 +6,6 @@
 	<title>Projects Files</title>
 </head>
 <body>
-	Projects show changes here...
+	<?php echo 'Projects PHP show changes here...' ?>
 </body>
 </html>
