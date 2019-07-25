@@ -376,6 +376,7 @@ nav .active {
   position: absolute;
   bottom: 0;
   background: rgba(0, 0, 0, 0.3);
+  background: #188038;
   padding: 10px 15px;
   cursor: pointer;
   font-size: 14pt !important;
@@ -429,7 +430,7 @@ nav .active {
 }
 
 .modal-wrap .close {
-  color: #bbb;
+  color: #188038;
   font-size: 20pt;
   font-weight: 800;
   cursor: pointer;
@@ -481,7 +482,7 @@ nav .active {
   font-size: 10pt;
   transition: all .5s;
   cursor: pointer;
-  background: #08d827;
+  background: #188038;
   color: #fff;
   font-weight: 600;
   border: 0;
@@ -498,8 +499,8 @@ nav .active {
 }
 
 .modal-wrap .button:hover {
-  color: #08d827;
-  background: #fff;
+  background: #08d827;
+  color: #fff;
 }
 
 .modal-wrap .carousel {
@@ -755,7 +756,7 @@ section .container {
   overflow: hidden;
   height: 25px;
   border-radius: 1px;
-  background: #08d827;
+  background: #188038;
   transition: all .5s ease-in-out;
 }
 
@@ -963,6 +964,7 @@ section .flex-50-gt-sm {
 
 #contact .button:hover {
   background: #08d827;
+  border-color: #08d827;
 }
 
 #contact #success {
