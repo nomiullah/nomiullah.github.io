@@ -1,0 +1,241 @@
+@import "variable.scss";
+@import "mixins.scss";
+@import "fonts.scss";
+
+html,body{
+	font-size: 13px;
+}
+body, input{
+	color: $themeColor;
+	font-family: $fontProximaRegular;
+}
+body{
+	background: #f8fbff;
+}
+h1,h2,h3,h4,h5,h6{
+	font-weight: bold;
+	font-family: $fontProximaBold;
+	color: $blackColor;
+	line-height: 1.2;
+}
+h2{
+	font-size: 26px;
+	margin: 0 0 10px;
+}
+p{
+	line-height: 1.4;
+	margin: 0 0 25px;
+}
+a{
+	color: $linkColor;
+	&:hover{
+		text-decoration: none;
+	}
+}
+img{
+	max-width: 100%;
+	height: auto;
+}
+input, button, select, optgroup, textarea {
+	outline: none;
+}
+@media (min-width: 1200px) {
+	.container{
+		max-width: 1200px;
+	}
+}
+
+#header-wrap {
+	border-bottom: 1px solid $lightergray;
+	background: $whiteColor;
+	#header{
+		display: flex;
+		flex-wrap: wrap;
+	    align-items: center;
+	    padding: rems(20) 0;
+		.nav-wrap{
+			padding-top: 10px;
+			.navbar{
+				padding: 0;
+				.navbar-nav{		
+					.nav-item{
+						padding-left: 20px;
+					}
+					.nav-link{
+						color: $secondaryColor;
+						font-weight: normal;
+						font-size: 16px;
+						padding: 0;
+						&:hover{
+							color: $linkColor;
+						}
+					}
+					.active{
+						.nav-link{
+							color: $linkColor;
+							font-weight: bold;
+						}
+					}
+				}
+			}
+		}
+		.heder-right{
+			display: flex;
+			flex-wrap: wrap;
+		    align-items: center;
+		    margin-left: auto;
+		    padding-top: 10px;
+		    > a{
+		    	color: $darkgrayColor;
+		    	display: inline-block;
+		    	font-size: 26px;
+		    	position: relative;
+		    	margin: 0 rems(8);
+		    	&:hover,
+		    	&.active{
+		    		color: $blackColor;
+		    	}
+		    	.overlay-text{
+		    		position: absolute;
+		    		right: -7px;
+		    		top: -4px;
+		    		font-size: 10px;
+		    		border: 2px solid $whiteColor;
+		    		@include css3(border-radius, 50%);
+		    		width: 18px;
+		    		line-height: 15px;
+		    		height: 18px;
+		    		color: $whiteColor;
+		    		background: $dangerColor;
+		    		text-align: center;
+		    		font-weight: bold;
+		    		font-family: $fontProximaBold;
+		    	}
+		    }
+		    .user{
+		    	color: $secondaryGrayColor;
+		    	font-size: 16px;
+		    	width: 36px;
+		    	height: 36px;
+		    	line-height: 32px;
+		    	text-align: center;
+		    	display: inline-block;
+		    	border: 1px solid $lightGrayColor;
+		    	@include css3(border-radius, 50%);
+		    }
+		}
+	}
+	.dropdown{
+		margin-left: 10px;
+		.dropdown-toggle{
+			padding-right: 15px;
+			display: inline-block;
+			&:after{
+				font: normal normal normal 14px/1 FontAwesome;
+				content: "\f107";
+				position: absolute;
+				right: 0;
+				top: 35%;
+				border: 0;
+			}
+		}
+	}
+}
+
+.navbar-expand-lg {
+	.navbar-nav { 
+		width: 100%; 
+		justify-content: center;
+		.nav-link {
+			padding-right: rems(19);
+			padding-left: rems(19);
+		}
+	 }
+}
+
+@media screen and (max-width: 1200px) {
+	#header-wrap #header .nav-wrap .navbar .navbar-nav .nav-item{
+		padding-left: 11px;
+	}
+	#header-wrap #header .nav-wrap .navbar .navbar-nav .nav-link{
+		font-size: 14px;
+	}
+	#header-wrap #header .heder-right > a{
+		font-size: 20px;
+		margin: 0 5px;
+	}
+	#header{
+		.dropdown-menu.show{
+			left: -100% !important;
+		}
+	}
+}
+
+@media screen and (max-width: 992px) {
+	#header-wrap{
+		#header{
+			position: relative;
+			padding: 10px 70px 10px 0;
+			.nav-wrap{
+				padding-top: 0;
+			}
+		}
+		.navbar,
+		.container,
+		.row > div{
+			position: static;
+		}
+		.navbar-toggler{
+			position: absolute;
+			right: 0;
+			top: 20px;
+			background: $grayColor;
+			display: inline-block;
+			@include css3(box-shadow, 0 1px 4px rgba(0,0,0, 0.25));
+		}
+		.navbar-collapse{
+			position: absolute;
+			left: 0;
+			top: 100%;
+			width: 100%;
+			background: #fff;
+			z-index: 4;
+			@include css3(box-shadow, 0 1px 4px rgba(0,0,0, 0.25));
+		}
+		#header .nav-wrap .navbar .navbar-nav .nav-item{
+			padding:7px 20px;
+		}
+		#header .nav-wrap .navbar .navbar-nav .nav-link{
+			font-size: 16px;
+		}
+		#header .heder-right{
+			padding-top: 0;
+		}
+	}
+}
+@media screen and (max-width: 767px) {
+	.logo{
+		max-width: 100px;
+	}
+	#header-wrap .navbar-toggler{
+		top: 15px;
+	}
+}
+@media screen and (max-width: 340px) {
+	.logo{
+		max-width: 85px;
+	}
+	#header-wrap{
+		#header{
+			padding-right: 60px;
+		}
+		.navbar-toggler{
+			top: 13px;
+			right: -5px;
+			padding: 3px 9px;
+		}
+		.dropdown .dropdown-toggle{
+			padding-right: 5px;
+		}
+	}
+}

@@ -1,0 +1,1120 @@
+<!DOCTYPE html>
+<!--[if IE 6]>
+<html id="ie6">
+<![endif]-->
+<!--[if IE 7]>
+<html id="ie7">
+<![endif]-->
+<!--[if IE 8]>
+<html id="ie8">
+<![endif]-->
+<!--[if !(IE 6) | !(IE 7) | !(IE 8)  ]><!-->
+<html>
+<!--<![endif]-->
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    
+    <title>Information</title>
+    
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800,300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/jquery-ui.custom.min.css"/>
+    <link rel="stylesheet" href="css/ace.min.css"/>
+    
+    
+    <link type="text/css" rel="stylesheet" href="css/font-awesome.css" />
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
+    <link type="text/css" rel="stylesheet" href="css/circle.css" />
+    
+    
+    
+    
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+    
+    <!--[if lte IE 8]>
+    <link type="text/css" rel="stylesheet" href="css/ie.css" />
+    <script type="text/javascript" src="js/modernizr.min.js"></script>
+    <![endif]-->
+    
+    <!--[if lte IE 6]>
+    <script type="text/javascript" src="js/belated.js"></script>
+    <![endif]-->
+    
+     <link rel="stylesheet" href="jquery-ui/css/jquery.ui.all.css">
+	<script src="jquery-ui/js/jquery-1.8.3.js"></script>
+	<script src="jquery-ui/js/jquery.ui.core.js"></script>
+	<script src="jquery-ui/js/jquery.ui.widget.js"></script>
+	<script src="jquery-ui/js/jquery.ui.datepicker.js"></script>
+    
+    <script type="text/javascript">
+		$(function() {
+			$( ".datepicker" ).datepicker();
+		});
+	</script>
+    
+    <script src="js/assets/ace-extra.min.js"></script>
+    
+    <!--Guage -->
+    <!--
+    <script src="js/raphael.2.1.0.min.js"></script>
+    <script src="js/justgage.1.0.1.min.js"></script>
+    <script>
+      var g1;
+      window.onload = function(){
+        var g1 = new JustGage({
+          id: "g1", 
+          value: getRandomInt(0, 100), 
+          min: 0,
+          max: 100,
+          title: "Custom Colors",
+			label: "",  
+			levelColors: [
+			  "#ff0000",
+			  "#ffc334",
+			  "#87b87f"
+			]          
+        });
+		
+        setInterval(function() {
+          g1.refresh(getRandomInt(0, 100));
+        }, 2500);
+      };
+    </script> -->
+    
+    
+    
+    
+</head>
+
+<body id="page-name">
+
+<div id="container-fluid"> 
+
+<!--header start -->
+<div id="header-wrap">
+	<div class="">
+        <header id="header" class="clearfix">
+            <div id="header-left"><a href="index.html"><img src="images/logo.png" alt=""></a></div>
+            <div id="header-right">
+            	<a href="#" id="menu"><span class="fa fa-navicon"></span></a>
+            	<div id="nav">
+                	<ul class="clearfix">
+                    	<li><a href="index.html">Home</a></li>
+                        <li><a href="pet-search.html">Pet Search</a></li>
+                        <li><a href="pet-detail.html">My Pet</a></li>
+                        <li class="dropdown-menu">
+                        	<a href="organizations.html">
+                            	<em class="fa fa-angle-up nav-arrow"></em>
+                                <em class="fa fa-angle-down nav-arrow"></em>
+                            	Organizations 
+                            </a>
+                            <ul><li><a href="organization-content.html">Messages</a></li></ul>
+                        </li>
+                        <li><a class="popup-link" href="#popup">Login</a></li>
+                        <li class="right-item"><a href="#">Post a Pet</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+    </div>
+</div>
+<!--header end -->
+
+
+    
+
+
+
+<div class="inner-page default-section pt-30">
+<div class="content-width">
+
+	<h2>Post A Pet for Adoption</h2>
+    <div role="alert" class="alert alert-primary alert-dismissible fade in">
+        <button data-dismiss="alert" class="close" type="button">
+        	<span aria-hidden="true">×</span><span class="sr-only">Close</span>
+        </button>
+    	<h4>Adoption</h4>
+        <p>
+        	Bringing a pet you cannot keep to a shelter is heartbreaking. Finding a home for pet in need is difficult &amp;
+            time-consuming.
+        </p>
+        <p>
+        	PawsLikeMe has created the first online re-home service that offers all the tools &amp; services necessary for 
+            responsible owners and rescuers to re-home a pet(s). Best of all it's free!
+            <a href="#"><span class="fa fa-question-circle"></span> Learn more about Posting a Pet</a>
+        </p>
+    </div>
+    
+    
+    <div class="widget-body">
+        <div class="widget-main">
+            <div id="fuelux-wizard" data-target="#step-container">
+                <ul class="wizard-steps">
+                    <li data-target="#step1" class="active">
+                        <span class="step">1</span>
+                        <span class="title">Pet Info</span>
+                    </li>                    
+                    <li data-target="#step2">
+                        <span class="step">2</span>
+                        <span class="title">Preferences</span>
+                    </li>
+                    <li data-target="#step3">
+                        <span class="step">3</span>
+                        <span class="title">Account Info</span>
+                    </li>
+                    <li data-target="#step4">
+                        <span class="step">4</span>
+                        <span class="title">Posted!</span>
+                    </li>
+                </ul>
+            </div>
+            <hr />
+            <div class="step-content pos-rel" id="step-container">
+                <div class="step-pane active" id="step1">
+                
+                    <div class="row-fluid">
+                        <div class="span6">
+                            <div class="min-title min-title-small left">
+                                <h3>Upload Pet profile</h3>
+                                <div class="icon-contain">
+                                    <ul class="clearfix">
+                                        <li><a class="fa fa-minus" href="#"></a></li>
+                                        <li><a class="fa fa-expand" href="#"></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="drop-seciton">
+                                <a href="#"><img alt="" src="images/drop.png"></a>
+                            </div>
+                        </div>
+                        
+                        <div class="span6">
+                            <div class="min-title min-title-small left">
+                                <h3>Pet Personality Profile</h3>
+                                <div class="icon-contain">
+                                    <ul class="clearfix">
+                                        <li><a class="fa fa-minus" href="#"></a></li>
+                                        <li><a class="fa fa-expand" href="#"></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="well">
+                                <p>
+                                    Which (if any) of the following are regular of the household? <br>
+                                    (Check all that apply)
+                                </p>
+                                <div>
+                                    <input type="checkbox"> <span class="checkbox-label">Young children &gt; 6 year</span> <br>
+                                    <input type="checkbox"> <span class="checkbox-label">Children 6-12</span> <br>
+                                    <input type="checkbox"> <span class="checkbox-label">Adults</span> <br>
+                                    <input type="checkbox"> <span class="checkbox-label">Seniours 65+</span>
+                                </div>
+                            </div>
+                            
+                            <div class="progress-lg-wrap clearfix">
+                                <div class="progress progress-striped">
+                                    <div style="width: 70%;" class="bar bar-success"><span>70%</span></div>
+                                </div>
+                                <div class="btn-r"><a class="btn btn-blue" href="#">Next <span class="fa fa-arrow-right"></span></a></div>
+                            </div>    
+                            
+                        </div>
+                    </div>
+                    
+                <div class="min-title min-title-small left">
+                    <h3>
+                        <div class="row-fluid title-custom">
+                            <div class="span3">Pet Information</div>
+                            <div class="span4 mobile-hidden">
+                                <label>Select Pet Type:</label>
+                                <select>
+                                    <option>Dog</option>
+                                    <option>Cat</option>
+                                    <option>small</option>
+                                    <option>Animal</option>
+                                    <option>Bird</option>
+                                    <option>Farm</option>
+                                    <option>Animal</option>
+                                </select>
+                            </div>
+                        </div>
+                    </h3>
+                    <div class="icon-contain">
+                        <ul class="clearfix">
+                            <li><a class="fa fa-minus" href="#"></a></li>
+                            <li><a class="fa fa-expand" href="#"></a></li>
+                        </ul>
+                    </div>
+                </div>
+                    
+                <div class="row-fluid">
+                    <div class="span6">
+                        <div class="row-fluid">
+                            <div class="span3"><label>Pet Name</label></div>
+                            <div class="span9"><p><input type="text" value=""></p></div>
+                        </div>
+                        <div class="row-fluid">
+                            <div class="span3"><label>Gender</label></div>
+                            <div class="span9"><p><select><option></option> <option>Male</option> <option>Female</option></select></p></div>
+                        </div>
+                        <div class="row-fluid date-contain">
+                            <div class="span3"><label>Date of Birth</label></div>
+                            <div class="span9">
+                                <div class="row-fluid form-inline">
+                                	<div class="span4">
+                                    	<div class="date-wrap">
+                                            <p><input type="text" class="datepicker" value=""></p>
+                                            <img class="date-icon" alt="" src="images/datepicker.png">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="span8 mobile-hidden">
+                                    	<div class="age-contain">
+                                        	<p>
+                                                <span class="age">Age</span> <input type="text" value="0"> <span>Y</span>
+                                                <input type="text" value="0"> <span>M</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="for-mobile">
+                            <div class="age-contain">
+                            	<p>
+                                    <span class="age">Age</span> <input type="text" value="0"> <span>Y</span>
+                                    <input type="text" value="0"> <span>M</span>
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="row-fluid date-contain">
+                            <div class="span3"><label>Purebred?</label></div>
+                            <div class="span9"><p>
+                                <label class="v-m h-20">
+                                  <input type="checkbox" class="ace ace-switch" name="switch-field-1">
+                                  <span data-lbl="YES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NO" class="lbl"></span>
+                                </label>
+                            </p></div>
+                        </div>
+                        <div class="row-fluid">
+                            <div class="span3"><label>Breed(s)</label></div>
+                            <div class="span9">
+                                <div class="tag-breed">
+                                    <p>
+                                        <input type="text" name="tags" class="form-field-tags" value="" 
+                                        placeholder="Enter tags ..."/>
+                                    </p>    
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="row-fluid">
+                            <div class="span3"><label>Weight in lbs</label></div>
+                            <div class="span9">
+                            	<div class="row-fluid">
+                                	<div class="span5"><p><input type="text" placeholder=""></p></div>
+                                    <div class="span7">
+                                    	<div class="row-fluid">
+                                        	<div class="span4 right"><label class="mt-5">size</label></div>
+                                            <div class="span8">
+                                            	<p>
+                                                	<select>
+                                                		<option>Toy</option>
+                                                        <option>Small</option>
+                                                        <option>Medium</option>
+                                                        <option>Large</option>
+                                                        <option>Giant</option>
+                                                	</select>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="row-fluid hypo-contain">
+                            <div class="span3"><label>Hypoallergenic</label></div>
+                            <div class="span4"><p>
+                                <label class="v-m h-20">
+                                  <input type="checkbox" class="ace ace-switch" name="switch-field-1">
+                                  <span data-lbl="YES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NO" class="lbl"></span>
+                                </label>
+                                <span class="help-button v-m" title="" data-content="More details." 
+                                data-placement="left" data-trigger="hover" data-rel="popover">?</span>
+                            </p></div>
+                            <div class="span5">
+                                <div class="row-fluid coat-contain">
+                                    <div class="span6 right"><label class="mt-5">Coat Length</label></div>
+                                    <div class="span6">
+                                        <p>
+                                            <select>
+                                                <option></option>
+                                            </select>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="row-fluid">
+                            <div class="span3"><label>Color</label></div>
+                            <div class="span9">
+                            	<p>
+                                    <select>
+                                        <option></option>
+                                    </select>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="span6">
+                        <div class="row-fluid">
+                            <div class="span3"><label>Status</label></div>
+                            <div class="span9"><p><select><option></option> <option>active</option></select></p></div>
+                        </div>
+                        <div class="row-fluid">
+                            <div class="span3"><label>Microchip #</label></div>
+                            <div class="span9"><p><input type="text" value=""></p></div>
+                        </div>
+                        
+                        <div class="row-fluid special-contain">
+                            <div class="span3"><label>Special Needs?</label></div>
+                            <div class="span4"><p>
+                                <label class="v-m h-20">
+                                  <input type="checkbox" class="ace ace-switch" name="switch-field-1">
+                                  <span data-lbl="YES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NO" class="lbl"></span>
+                                </label>
+                                <span class="help-button v-m" title="" data-content="More details." 
+                                data-placement="left" data-trigger="hover" data-rel="popover">?</span>
+                            </p></div>
+                            <div class="span5 urgent-contain"><p>
+                                <label class="urgent">Urgent?</label>
+                                <label class="v-m h-20">
+                                  <input type="checkbox" class="ace ace-switch" name="switch-field-1">
+                                  <span data-lbl="YES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NO" class="lbl"></span>
+                                </label>
+                                <span class="help-button v-m" title="" data-content="More details." 
+                                data-placement="left" data-trigger="hover" data-rel="popover">?</span>
+                            </p></div>
+                        </div>
+                        
+                        <div class="row-fluid">
+                            <div class="span3"><label>Foster's Name</label></div>
+                            <div class="span9"><p><select><option></option> <option>active</option></select></p></div>
+                        </div>
+                        <div class="row-fluid">
+                            <div class="span3"><label>Intake Date</label></div>
+                            <div class="span9">
+                            	<div class="date-wrap">
+                                	<p><input type="text" value="" class="datepicker"></p>
+                                    <img src="images/datepicker.png" alt="" class="date-icon">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-fluid">
+                            <div class="span3"><label>Location</label></div>
+                            <div class="span9">
+                            	<p><input type="text" value="(choice of displaying full address or pinpoint on map)"></p>
+                            </div>
+                        </div>
+                        <div class="row-fluid inputspan-vmid">
+                            <div class="span3"><label>Restrictions</label></div>
+                            <div class="span9">
+                            	<p>
+                                	<input type="checkbox"> <span class="checkbox-label">Home without dogs</span> <br>
+                                    <input type="checkbox"> <span class="checkbox-label">Home without cats</span> <br>
+                                    <input type="checkbox"> <span class="checkbox-label">Home without small kids</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row-fluid">
+                            <div class="span3"><label>Why are you re-homing this dog?</label></div>
+                            <div class="span9">
+                            	<p>
+                                	<select>
+                                    	<option>Can no longer keep pet</option>
+                                        <option>Found pet as stray</option>
+                                        <option>Rescued pet from bad situation</option>
+                                        <option>Helping a family member that is ill or deceased</option>
+                                        <option>Other</option>
+                                    </select>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <h4>What is the Pets story? <a href="#">HINT</a></h4>
+                <p><textarea rows="5" cols="5"></textarea></p>
+                <p>
+                	<input type="checkbox">
+                    By checking this box, I certify that I am the rightful owner of the pet I am posting for adoption, or that the previous owner has not come forward to claim the pet in the last 7 days.
+                </p>
+                <p>
+                	<input type="checkbox">
+                    I understand that an adoption fee will be charged and paid to PawsLikeMe, and that PawsLikeMe will donate 50% of the fee to non-profit animal adoption organizations.
+                </p>
+                
+                    
+                </div><!--step1 -->
+                <div class="step-pane" id="step2">
+                	<h2>Select your Posting Preferences</h2>
+                    <div class="checkbox-list">
+                    	<ul>
+                        	<li>
+                            	<input type="checkbox" class="checkbox">
+                            	Allow potential adopters to contact me with questions about this pet
+                            </li>
+                            <li>
+                            	<input type="checkbox" class="checkbox">
+                            	Request 2 references from potential adopters
+                            </li>
+                            <li>
+                            	<input type="checkbox" class="checkbox">
+                            	Require a home visit with adoptive home
+                            </li>
+                            <li>
+                            	<input type="checkbox" class="checkbox">
+                            	Donate pet toys, food, beds medical coverage or other to new home
+                            </li>
+                        </ul>
+                    </div>
+                    <p><textarea rows="5" cols="5" placeholder="Specify items for donation"></textarea></p>
+                </div><!--step2 -->
+                <div class="step-pane" id="step3">
+                	<h2>Create your account</h2>
+                    <div class="well">
+                    	<div class="form-container">
+                        	<div class="row-fluid">
+                                <div class="span2"><label>Your Name</label></div>
+                                <div class="span7"><p><input type="text" value=""></p></div>
+                            </div>
+                            <div class="row-fluid">
+                                <div class="span2"><label>Email Address: <span class="star">*</span></label></div>
+                                <div class="span7"><p><input type="text" value=""></p></div>
+                            </div>
+                            <div class="row-fluid">
+                                <div class="span2"><label>Password: <span class="star">*</span></label></div>
+                                <div class="span7"><p><input type="password" value=""></p></div>
+                            </div>
+                            <div class="row-fluid">
+                                <div class="span2"><label>Verify Password: <span class="star">*</span></label></div>
+                                <div class="span7"><p><input type="password" value=""></p></div>
+                            </div>
+                            <div class="row-fluid">
+                                <div class="span2"><label>How did you hear about us?</label></div>
+                                <div class="span7">
+                                	<p>
+                                    	<select>
+                                        	<option>Please Select</option>
+                                        </select>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="row-fluid">
+                                <div class="span2"><label>Comments or Questions</label></div>
+                                <div class="span7">
+                                	<p><textarea rows="4" cols="4"></textarea></p>
+                                </div>
+                            </div>
+                            <div class="row-fluid">
+                            	<div class="span2">&nbsp;</div>
+                                <div class="span7">
+                                	<p>
+                                    	<button class="btn btn-danger" type="button"><i class="fa fa-trash-o"></i> Cancel</button>
+                                        <button class="btn btn-success" type="button"><i class="fa fa-share"></i> Submit</button>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!--step3 -->
+                <div class="step-pane" id="step4">
+                	<h2>Preview your Posting</h2>
+                    <div class="preview-wrap">
+                    	<div class="tabs-wrap">
+    	
+                            <div class="adopt-wrap">
+                                <p><a href="#" class="btn btn-blue">Apply to Adopt</a></p>
+                            </div>
+                            
+                            <div class="tabs tabs-inner" id="tabs-theme">
+                                <ul class="clearfix">
+                                    <li class="active"><a href="#content-a"><em class="fa fa-user"></em> <span>Profile</span></a></li>
+                                    <li><a href="#content-b"><em class="fa fa-file-sound-o"></em> <span>Match Details</span></a></li>
+                                    <li><a href="#content-d"><em class="fa fa-picture-o"></em> <span>Photos</span> <strong class="num">11</strong></a></li>
+                                </ul>
+                            </div>
+                            
+                            <div class="tabs-content" id="content-a" style="display:block;">
+                                
+                                <div class="pet-top">
+                                    <div class="row-fluid">
+                                        <div class="span3">
+                                        	<h2>Nick Nac</h2>
+                                            <div class="dog-img" style="max-height:248px; overflow:hidden;">
+                                                <img src="images/dog.jpg" alt="">
+                                                <div class="social-secondary">
+                                                    <a title="Add to Favourite" class="heart hr" href="#"><span class="fa fa-heart"></span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="span6">
+                                            <div class="dog-graph">
+                                                <div class="percentage-section-wrap">
+                                                    <div class="percentage"><div style="width:75%" class="percentage-inner"></div></div>
+                                                    <span>75%</span>
+                                                </div>
+                                                <p><a href="#" class="blue-link">View Score Details <span class="fa fa-arrow-circle-right"></span></a></p>
+                                                <div class="sidebar-section" style="padding-top:23px;">
+                                                    <div class="progress-compare-wrap">
+                                                        <div class="compare-title clearfix">
+                                                            <div class="left-title"><h2>The dog</h2></div>
+                                                            <div class="right-title"><h2>You</h2></div>
+                                                        </div>
+                                                        <div class="compare-section">
+                                                            <div class="compare-sep"></div>
+                                                            <div class="compare-contain clearfix">
+                                                                <div class="compare-label"><a data-target="#myModal1" data-toggle="modal" href="#">Energy</a></div>
+                                                                <div class="compare-left">
+                                                                    <div class="percentage-section-wrap">
+                                                                        <div class="percentage"><div style="width:0" class="percentage-inner">
+                                                                            <span class="txt">You are 60% higher</span>
+                                                                        </div></div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="compare-right left-to-right">
+                                                                    <div class="percentage-section-wrap progress-blue">
+                                                                        <div class="percentage"><div style="width:60%" class="percentage-inner"></div></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            
+                                                            <div class="compare-contain clearfix">
+                                                                <div class="compare-label"><a data-target="#myModal2" data-toggle="modal" href="#">Focus</a></div>
+                                                                <div class="compare-left">
+                                                                    <div class="percentage-section-wrap progress-pink">
+                                                                        <div class="percentage"><div style="width:45%" class="percentage-inner"></div></div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="compare-right">
+                                                                    <div class="percentage-section-wrap progress-orange">
+                                                                        <div class="percentage"><div style="width:100%" class="percentage-inner">
+                                                                            <span class="txt">You are 50% lower</span>
+                                                                        </div></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            
+                                                            <div class="compare-contain clearfix">
+                                                                <div class="compare-label"><a data-target="#myModal3" data-toggle="modal" href="#">Confidence</a></div>
+                                                                <div class="compare-left">
+                                                                    <div class="percentage-section-wrap progress-purple">
+                                                                        <div class="percentage"><div style="width:80%" class="percentage-inner"></div></div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="compare-right">
+                                                                    <div class="percentage-section-wrap progress-purple">
+                                                                        <div class="percentage"><div style="width:100%" class="percentage-inner">
+                                                                            <span class="txt">You are a close match</span>
+                                                                        </div></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            
+                                                            <div class="compare-contain clearfix">
+                                                                <div class="compare-label"><a data-target="#myModal4" data-toggle="modal" href="#">Independence</a></div>
+                                                                <div class="compare-left">
+                                                                    <div class="percentage-section-wrap progress-dark-blue">
+                                                                        <div class="percentage"><div style="width:20%" class="percentage-inner"></div></div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="compare-right">
+                                                                    <div class="percentage-section-wrap progress-dark-blue">
+                                                                        <div class="percentage"><div style="width:100%" class="percentage-inner">
+                                                                            <span class="txt">The dog is much lower</span>
+                                                                        </div></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            
+                                                        </div><!--compare-section -->
+                                                    </div>
+                            
+                                                </div>
+                                                
+                                            </div><!--dog-graph -->
+                                        </div>
+                                        <div class="span3">
+                                            <div class="social-secondary social-right">
+                                                <a href="#" class="tw" title="Like"><span class="fa fa-thumbs-up"></span></a>
+                                                <div class="share-wrap">
+                                                    <a href="#" class="fb share-link" title="Share"><span class="fa fa-share-alt"></span></a>
+                                                    <div class="share-item">
+                                                        <span class="fa fa-caret-up"></span>
+                                                        <ul>
+                                                            <li><a href="#"><span class="fa fa-facebook-square"></span> Facebook</a></li>
+                                                            <li><a href="#"><span class="fa fa-twitter-square"></span> Twitter</a></li>
+                                                            <li><a href="#"><span class="fa fa-google-plus-square"></span> Google +</a></li>
+                                                            <li><a href="#"><span class="fa fa-envelope-square"></span> E-Mail</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="map-info">
+                                                <p class="clearfix odd"><span class="fl">Gender:</span> <span class="fr">Spayed</span></p>
+                                                <p class="clearfix"><span class="fl">Age:</span> <span class="fr">Adult</span></p>
+                                                <p class="clearfix odd"><span class="fl">Color:</span> <span class="fr">Golden</span></p>
+                                                <p class="clearfix"><span class="fl">Size:</span> <span class="fr">Medium</span></p>
+                                                <p class="clearfix odd"><span class="fl">Breed(s):</span> <span class="fr">Corgi, Shepherd</span></p>
+                                                <p class="clearfix"><span class="fl">Restriction(s):</span> <span class="fr">No Cats</span></p>
+                                                <p class="clearfix"><span class="fl">Adoptable Form:</span> <span class="fr">Shelter</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!--pet-top -->    
+                                
+                                <div class="pet-mid-info">
+                                    <div class="row-fluid">
+                                        <div class="span3">
+                                            <h4>Actions:</h4>
+                                            <p>
+                                                <a href="#" class="blue-link"><span class="fa fa-heart"></span> Remove from favorites</a> <br>
+                                                <a href="#" class="blue-link"><span class="fa fa-question-circle"></span> Ask a question</a> <br>
+                                                <a href="#" class="blue-link"><span class="fa fa-edit"></span> Apply to Adopt</a><br>
+                                                <a href="#" class="blue-link"><span class="fa fa-envelope"></span> Send to Friend(s)</a>
+                                            </p>
+                                            <h4>Foster Contact:</h4>
+                                            <p>Ben Smith: Beverly Hills, CA</p>
+                                            <div class="pet-map"><p><img src="images/map-contact.png" alt=""></p></div>
+                                        </div>
+                                        <div class="span9">
+                                            <h4>Little About Me</h4>
+                                            <p>
+                                                I have been (or am scheduled to be) neutered/spayed, am up to date on Distemper/Parvo shots, de-wormed of tapeworms, hookworms and whipworms and heartworm tested.I have been (or am scheduled to be) neutered/spayed, am up to date on Distemper/Parvo shots, de-wormed of tapeworms, hookworms and whipworms and heartworm tested.I have been (or am scheduled to be) neutered/spayed, am up to date on Distemper/Parvo shots, de-wormed of tapeworms, hookworms and whipworms and heartworm tested.
+                                            </p>
+                                            <p>
+                                                I have been (or am scheduled to be) neutered/spayed, am up to date on Distemper/Parvo shots, de-wormed of tapeworms, hookworms and whipworms and heartworm tested.I have been (or am scheduled to be) neutered/spayed, am up to date on Distemper/Parvo shots, de-wormed of tapeworms, hookworms and whipworms and heartworm tested.I have been (or am scheduled to be) neutered/spayed, am up to date on Distemper/Parvo shots, de-wormed of tapeworms, hookworms and whipworms and heartworm tested.
+                                                I have been (or am scheduled to be) neutered/spayed, am up to date on Distemper/Parvo shots, de-wormed of tapeworms, hookworms and whipworms and heartworm tested.I have been (or am scheduled to be) neutered/spayed, am up to date on Distemper/Parvo shots, de-wormed of tapeworms.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div><!--pet-mid-info -->
+                            </div><!--tabs-content -->
+                            
+                            <div class="tabs-content" id="content-b">
+                                
+                                <div class="row-fluid fluid-tablet section-default-wrap">
+                                    <div class="span4">
+                                        <div class="section-defalt section-chart center">
+                                            <h3>Overall: Good Match</h3>
+                                            <p><img src="images/graph2.png" alt=""></p>
+                                        </div>
+                                    </div>
+                                    <div class="span8">
+                                        <div class="sidebar-section seciton-commen">
+                                            <h3>Your Match Profile</h3>
+                                            <div class="progress-compare-wrap">
+                                                <div class="compare-title clearfix">
+                                                    <div class="left-title"><h2>The dog</h2></div>
+                                                    <div class="right-title"><h2>You</h2></div>
+                                                </div>
+                                                <div class="compare-section">
+                                                    <div class="compare-sep"></div>
+                                                    <div class="compare-contain clearfix">
+                                                        <div class="compare-label"><a href="#" data-toggle="modal" data-target="#myModal1">Energy</a></div>
+                                                        <div class="compare-left">
+                                                            <div class="percentage-section-wrap">
+                                                                <div class="percentage"><div class="percentage-inner" style="width:0">
+                                                                    <span class="txt">You are 60% higher</span>
+                                                                </div></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="compare-right left-to-right">
+                                                            <div class="percentage-section-wrap progress-blue">
+                                                                <div class="percentage"><div class="percentage-inner" style="width:60%"></div></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <div class="compare-contain clearfix">
+                                                        <div class="compare-label"><a href="#" data-toggle="modal" data-target="#myModal2">Focus</a></div>
+                                                        <div class="compare-left">
+                                                            <div class="percentage-section-wrap progress-pink">
+                                                                <div class="percentage"><div class="percentage-inner" style="width:45%"></div></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="compare-right">
+                                                            <div class="percentage-section-wrap progress-orange">
+                                                                <div class="percentage"><div class="percentage-inner" style="width:100%">
+                                                                    <span class="txt">You are 50% lower</span>
+                                                                </div></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <div class="compare-contain clearfix">
+                                                        <div class="compare-label"><a href="#" data-toggle="modal" data-target="#myModal3">Confidence</a></div>
+                                                        <div class="compare-left">
+                                                            <div class="percentage-section-wrap progress-purple">
+                                                                <div class="percentage"><div class="percentage-inner" style="width:80%"></div></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="compare-right">
+                                                            <div class="percentage-section-wrap progress-purple">
+                                                                <div class="percentage"><div class="percentage-inner" style="width:100%">
+                                                                    <span class="txt">You are a close match</span>
+                                                                </div></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <div class="compare-contain clearfix">
+                                                        <div class="compare-label"><a href="#" data-toggle="modal" data-target="#myModal4">Independence</a></div>
+                                                        <div class="compare-left">
+                                                            <div class="percentage-section-wrap progress-dark-blue">
+                                                                <div class="percentage"><div class="percentage-inner" style="width:20%"></div></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="compare-right">
+                                                            <div class="percentage-section-wrap progress-dark-blue">
+                                                                <div class="percentage"><div class="percentage-inner" style="width:100%">
+                                                                    <span class="txt">The dog is much lower</span>
+                                                                </div></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </div><!--compare-section -->
+                                            </div>
+                    
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                
+                                <h3 class="blue">Canine Personality Overview</h3>
+                                <div class="strong-section">
+                                    <p>She enjoys being a couch potato and doesn't need much in the way of exercise to keep her content. She can be very focused on a task but can be distracted with a little bit of effort. She likes some order and a fairly regular routine. She is cautious and may take some time to accept new people, places, or things. She is more likely to cling to your side or go hide when presented with new situations. She can be very affectionate and will often show it, but isn't overly pushy about getting attention. She likes to be close to you as much as possible, but seems to know when you want to be left alone. </p>
+                                </div>
+                                <h3 class="blue">Your Ideal Dog</h3>
+                                <div class="strong-section">
+                                    <p>You enjoy light activity with your dog, such as a walk around the block. You prefer a dog that likes to be a couch potato, with little bursts of activity every now and then. You like a dog that is fairly easy to train to basic commands and a few fun tricks. The dog should be able to focus his attention on something for a decent amount of time. You want a dog with a lot of confidence but, you totally understand his feelings of insecurity at first. You don't mind taking a few minutes for your dog to check out a new person or place before he is relaxed. You like an affectionate dog that will snuggle with you, but you don't want him to be in your face trying to get attention constantly. </p>
+                                </div>
+                            </div><!--content-b -->
+                            
+                            
+                            <div class="tabs-content" id="content-d">
+                                
+                                <div class="clearfix">
+                                    <div class="fl"><h3 class="blue">My photo Album</h3></div>
+                                    <div class="fr"><a href="#" class="btn btn-success"><strong>Add Pics</strong></a></div>
+                                </div>
+                                
+                                <div class="drop-section-wrap">
+                                    <div class="drop-section">
+                                        
+                                    </div>
+                                </div>
+                                
+                                <div class="gallery-section">
+                                    <ul class="clearfix">
+                                        <li>
+                                            <a class="fancybox" href="images/gallery-1.jpg" data-fancybox-group="gallery" ><img src="images/gallery-1.jpg" alt=""></a>
+                                            <div class="gallery-overlay">
+                                                <a href="#" class="fa fa-file"></a>	<a href="#" class="fa fa-pencil"></a> <a href="#" class="cancel">x</a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a class="fancybox" href="images/gallery-2.jpg" data-fancybox-group="gallery" ><img src="images/gallery-2.jpg" alt=""></a>
+                                            <div class="gallery-overlay">
+                                                <a href="#" class="fa fa-file"></a>	<a href="#" class="fa fa-pencil"></a> <a href="#" class="cancel">x</a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a class="fancybox" href="images/gallery-3.jpg" data-fancybox-group="gallery" ><img src="images/gallery-3.jpg" alt=""></a>
+                                            <div class="gallery-overlay">
+                                                <a href="#" class="fa fa-file"></a>	<a href="#" class="fa fa-pencil"></a> <a href="#" class="cancel">x</a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a class="fancybox" href="images/gallery-4.jpg" data-fancybox-group="gallery" ><img src="images/gallery-4.jpg" alt=""></a>
+                                            <div class="gallery-overlay">
+                                                <a href="#" class="fa fa-file"></a>	<a href="#" class="fa fa-pencil"></a> <a href="#" class="cancel">x</a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a class="fancybox" href="images/gallery-5.jpg" data-fancybox-group="gallery" ><img src="images/gallery-5.jpg" alt=""></a>
+                                            <div class="gallery-overlay">
+                                                <a href="#" class="fa fa-file"></a>	<a href="#" class="fa fa-pencil"></a> <a href="#" class="cancel">x</a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a class="fancybox" href="images/gallery-6.jpg" data-fancybox-group="gallery" ><img src="images/gallery-6.jpg" alt=""></a>
+                                            <div class="gallery-overlay">
+                                                <a href="#" class="fa fa-file"></a>	<a href="#" class="fa fa-pencil"></a> <a href="#" class="cancel">x</a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a class="fancybox" href="images/gallery-4.jpg" data-fancybox-group="gallery" ><img src="images/gallery-4.jpg" alt=""></a>
+                                            <div class="gallery-overlay">
+                                                <a href="#" class="fa fa-file"></a>	<a href="#" class="fa fa-pencil"></a> <a href="#" class="cancel">x</a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a class="fancybox" href="images/gallery-5.jpg" data-fancybox-group="gallery" ><img src="images/gallery-5.jpg" alt=""></a>
+                                            <div class="gallery-overlay">
+                                                <a href="#" class="fa fa-file"></a>	<a href="#" class="fa fa-pencil"></a> <a href="#" class="cancel">x</a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a class="fancybox" href="images/gallery-6.jpg" data-fancybox-group="gallery" ><img src="images/gallery-6.jpg" alt=""></a>
+                                            <div class="gallery-overlay">
+                                                <a href="#" class="fa fa-file"></a>	<a href="#" class="fa fa-pencil"></a> <a href="#" class="cancel">x</a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a class="fancybox" href="images/gallery-1.jpg" data-fancybox-group="gallery" ><img src="images/gallery-1.jpg" alt=""></a>
+                                            <div class="gallery-overlay">
+                                                <a href="#" class="fa fa-file"></a>	<a href="#" class="fa fa-pencil"></a> <a href="#" class="cancel">x</a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a class="fancybox" href="images/gallery-2.jpg" data-fancybox-group="gallery" ><img src="images/gallery-2.jpg" alt=""></a>
+                                            <div class="gallery-overlay">
+                                                <a href="#" class="fa fa-file"></a>	<a href="#" class="fa fa-pencil"></a> <a href="#" class="cancel">x</a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a class="fancybox" href="images/gallery-3.jpg" data-fancybox-group="gallery" ><img src="images/gallery-3.jpg" alt=""></a>
+                                            <div class="gallery-overlay">
+                                                <a href="#" class="fa fa-file"></a>	<a href="#" class="fa fa-pencil"></a> <a href="#" class="cancel">x</a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a class="fancybox" href="images/gallery-4.jpg" data-fancybox-group="gallery" ><img src="images/gallery-4.jpg" alt=""></a>
+                                            <div class="gallery-overlay">
+                                                <a href="#" class="fa fa-file"></a>	<a href="#" class="fa fa-pencil"></a> <a href="#" class="cancel">x</a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a class="fancybox" href="images/gallery-5.jpg" data-fancybox-group="gallery" ><img src="images/gallery-5.jpg" alt=""></a>
+                                            <div class="gallery-overlay">
+                                                <a href="#" class="fa fa-file"></a>	<a href="#" class="fa fa-pencil"></a> <a href="#" class="cancel">x</a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a class="fancybox" href="images/gallery-6.jpg" data-fancybox-group="gallery" ><img src="images/gallery-6.jpg" alt=""></a>
+                                            <div class="gallery-overlay">
+                                                <a href="#" class="fa fa-file"></a>	<a href="#" class="fa fa-pencil"></a> <a href="#" class="cancel">x</a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a class="fancybox" href="images/gallery-4.jpg" data-fancybox-group="gallery" ><img src="images/gallery-4.jpg" alt=""></a>
+                                            <div class="gallery-overlay">
+                                                <a href="#" class="fa fa-file"></a>	<a href="#" class="fa fa-pencil"></a> <a href="#" class="cancel">x</a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a class="fancybox" href="images/gallery-5.jpg" data-fancybox-group="gallery" ><img src="images/gallery-5.jpg" alt=""></a>
+                                            <div class="gallery-overlay">
+                                                <a href="#" class="fa fa-file"></a>	<a href="#" class="fa fa-pencil"></a> <a href="#" class="cancel">x</a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a class="fancybox" href="images/gallery-6.jpg" data-fancybox-group="gallery" ><img src="images/gallery-6.jpg" alt=""></a>
+                                            <div class="gallery-overlay">
+                                                <a href="#" class="fa fa-file"></a>	<a href="#" class="fa fa-pencil"></a> <a href="#" class="cancel">x</a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a class="fancybox" href="images/gallery-6.jpg" data-fancybox-group="gallery" ><img src="images/gallery-6.jpg" alt=""></a>
+                                            <div class="gallery-overlay">
+                                                <a href="#" class="fa fa-file"></a>	<a href="#" class="fa fa-pencil"></a> <a href="#" class="cancel">x</a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a class="fancybox" href="images/gallery-4.jpg" data-fancybox-group="gallery" ><img src="images/gallery-4.jpg" alt=""></a>
+                                            <div class="gallery-overlay">
+                                                <a href="#" class="fa fa-file"></a>	<a href="#" class="fa fa-pencil"></a> <a href="#" class="cancel">x</a>
+                                            </div>
+                                        </li>
+                                        
+                                    </ul>
+                                </div>
+                            </div><!--content-d -->
+                            
+                        </div>
+                    </div><!--preview-wrap -->
+                </div><!--step4 -->
+            </div><!--step-container -->
+            
+            <hr />
+            <div class="wizard-actions">
+                <button class="btn btn-prev">
+                    <i class="ace-icon fa fa-arrow-left"></i> Prev
+                </button>
+                <button class="btn btn-success btn-next" data-last="Finish">
+                    Next<i class="ace-icon fa fa-arrow-right icon-on-right"></i>
+                </button>
+            </div>
+        </div><!-- /.widget-main -->
+    </div><!--widget-body -->
+    
+    
+</div>
+</div><!--inner-page -->
+
+
+<!--footer start -->
+<div id="footer-wrap">
+	<div class="content-width">
+        <footer id="footer" class="clearfix">
+        	<p> ©2014 Paws-Like-Me. All Rights Reserved</p>
+            <div class="footer-nav">
+            	<a href="privacy.html">Privacy Policy</a> <span>|</span>
+                <a href="privacy.html">Terms of use</a>
+            </div>
+            <div class="social-footer"><a href="#"><span class="fa fa-envelope"></span></a></div>
+            <div class="footer-logo"><img src="images/footer-logo.gif" alt=""></div>
+        </footer>
+    </div>
+</div>
+<!--footer end -->
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">Energy</h4>
+      </div>
+      <div class="modal-body">
+        <p>You are 60% higher.You are 60% higher.You are 60% higher.You are 60% higher.You are 60% higher.You are 60% higher.</p>
+        <p>You are 60% higher.You are 60% higher.You are 60% higher.You are 60% higher.You are 60% higher.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">Focus</h4>
+      </div>
+      <div class="modal-body">
+        <p>You are 50% lower.You are 50% lower.You are 50% lower.You are 50% lower.You are 50% lower.You are 50% lower.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">Confidence</h4>
+      </div>
+      <div class="modal-body">
+        <p>You are a close match.You are a close match.You are a close match.You are a close match.</p>
+        <p>You are a close match.You are a close match.You are a close match.You are a close match.a close match.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">Independence</h4>
+      </div>
+      <div class="modal-body">
+        <p>The dog is much lower.The dog is much lower.The dog is much lower.The dog is much lower.The dog is much lower.</p>
+        <p>The dog is much lower.The dog is much lower.The dog is much lower.The dog is much lower.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+</div><!--container-fluid -->
+
+<script src="js/jquery.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+
+
+
+<script type="text/javascript">
+  window.jQuery || document.write("<script src='js/assets/jquery.min.js'>" + "<" + "/script>");
+</script>
+<script type="text/javascript">
+	if('ontouchstart' in document.documentElement) document.write("<script src='js/assets/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+</script>
+        
+<script src="js/assets/bootstrap.min.js"></script>
+
+<!-- page specific plugin scripts -->
+<script src="js/assets/fuelux.wizard.min.js"></script>
+<script src="js/assets/select2.min.js"></script>
+
+
+<script src="js/assets/jquery-ui.custom.min.js"></script>
+<script src="js/assets/chosen.jquery.min.js"></script>
+<script src="js/assets/fuelux/fuelux.spinner.min.js"></script>
+<script src="js/assets/date-time/bootstrap-datepicker.min.js"></script>
+<script src="js/assets/date-time/bootstrap-timepicker.min.js"></script>
+<script src="js/assets/date-time/moment.min.js"></script>
+<script src="js/assets/date-time/daterangepicker.min.js"></script>
+<script src="js/assets/date-time/bootstrap-datetimepicker.min.js"></script>
+<script src="js/assets/bootstrap-colorpicker.min.js"></script>
+<script src="js/assets/jquery.knob.min.js"></script>
+<script src="js/assets/jquery.autosize.min.js"></script>
+<script src="js/assets/jquery.inputlimiter.1.3.1.min.js"></script>
+<script src="js/assets/jquery.maskedinput.min.js"></script>
+<script src="js/assets/bootstrap-tag.min.js"></script>
+
+<script src="js/assets/ace-elements.min.js"></script>
+<script src="js/assets/ace.min.js"></script>
+
+<script src="js/custom.js"></script>
+
+<script type="text/javascript">
+	jQuery(function($) {
+		var $validation = false;
+		$('#fuelux-wizard')
+		.ace_wizard({
+			//step: 2 //optional argument. wizard will jump to step "2" at first
+		})
+	
+	})
+</script>
+
+
+<script type="text/javascript" src="source/jquery.fancybox.js"></script>
+<link rel="stylesheet" type="text/css" href="source/jquery.fancybox.css" media="screen" />
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('.fancybox').fancybox();
+	});
+</script>
+
+</body>
+</html>

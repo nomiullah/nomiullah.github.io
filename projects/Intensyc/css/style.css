@@ -1,0 +1,602 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+body {
+	padding: 0;
+	margin: 0;
+	font-family: 'Open Sans', sans-serif;
+}
+.container {
+	max-width: 1740px;
+	margin: 0 auto;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+/*--- Boduy CSS End ---*/
+
+
+.atf {
+	background: url(../images/atf-bg.png) center center no-repeat;
+	background-size: cover;
+	min-height: 792px;
+	box-sizing: border-box;
+	width: 100%;
+}
+
+/*--- Content CSS Start ---*/
+
+/*-- Atf Bar CSS Start --*/
+.atf-bar {
+	background: #e4e2e3;
+	padding: 15px 0;
+	position: relative;
+}
+.atf-bar ul  {
+	text-align: center;
+}
+.atf-bar ul li {
+	display: inline-block;
+	vertical-align: middle;
+	text-align: center;
+	font-size: 28px;
+	line-height: 1.3;
+	text-transform: uppercase;
+	font-weight: 600;
+	color: #1979df;
+	padding: 0 30px;
+	position: relative;
+	font-family: 'Open Sans', sans-serif;
+}
+.atf-bar ul {
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+}
+.atf-bar ul li:before {
+	content: '';
+	width: 8px;
+	height: 8px;
+	background: #1979df;
+	border-radius: 50%;
+	display: inline-block;
+	position: absolute;
+	left: 0;
+	top: 15px;
+}
+.scrolldown-btn {
+	position: absolute;
+	left: 50%;
+	top: 66px;
+	-webkit-transform: translateX(-50%);
+	        transform: translateX(-50%);
+}
+/*-- Atf Bar CSS End --*/
+
+
+
+/*-- ContentIinfo CSS Start --*/
+.content-info-wrap {
+	padding: 90px 0 0 0;
+	background-color: #4995db;
+}
+.content-info p {
+	font-size: 24px;
+	color: #fff;
+	line-height: 1.4;
+	margin-bottom: 30px;
+	font-weight: 400;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.info-boxes {
+	margin-bottom: -100px;
+	margin-top: 40px;
+	font-size: 0;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+}
+.info-box {
+	width: 25%;
+	background: #fff;
+	margin-right: 15px;
+	text-align: center;
+	padding: 30px 5px 20px 5px;
+	box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.30);
+}
+.info-box:last-child {
+	margin-right: 0;
+}
+.info-box .box-icon {
+	margin-bottom: 40px;
+}
+.info-box h3 {
+	font-size: 30px;
+	color: #043d70;
+	line-height: 1.2;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+/*-- ContentIinfo CSS End --*/
+
+/*-- Services CSS Start --*/
+.services-sec {
+	background-color: #fff;
+	padding: 195px 0 0 0;
+}
+.sec-title {
+	font-size: 34px;
+	font-weight: 600;
+	line-height: 1.3;
+	padding-bottom: 15px;
+	margin-bottom: 65px;
+	text-align: center;
+	position: relative;
+	text-transform: uppercase;
+}
+.sec-title:after {
+	content: '';
+	width: 120px;
+	height: 1px;
+	background-color: #ff0000;
+	display: inline-block;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+}
+
+.services-row {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+}
+.services-box {
+	width: 32%;
+	margin: 0 10px 50px;
+	height: 100%;
+	box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.22);
+}
+.serv-img {
+	z-index: 5;
+	position: relative;
+	height: 345px;
+	margin-bottom: -35px;
+}
+.services-box img {
+	width: 100%;
+	height: 100%;
+}
+.serv-title {
+	background: url(../images/serv-title-bg.png) center center no-repeat;
+	background-size: cover;
+	z-index: 10;
+	position: relative;
+	height: 170px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	padding: 0 25px;
+}
+.serv-title h3 {
+	font-size: 36px;
+	color: #4098ea;
+	line-height: 1.3;
+	font-weight: 600;
+	text-transform: capitalize;
+	padding-top: 30px;
+}
+/*-- Services CSS End --*/
+
+
+/*-- ServicesBottom CSS Start --*/
+.services-bottom {
+	background: url(../images/pattern-bg.png) center center no-repeat;
+	background-size: cover;
+	padding: 120px 0 60px;
+}
+.services-bottom .serv-title {
+	background: url(../images/serv-title-bg2.png) center center no-repeat;
+	background-size: cover;
+	height: 240px;
+}
+.services-bottom .serv-title h3 {
+	color: #fff;
+}
+/*-- ServicesBottom CSS End --*/
+
+
+/*-- Tabs CSS Start --*/
+.tabs-sec {
+	background-color: #fff;
+	padding: 65px 0 0 0;
+}
+.tabs-row{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+.tabs-col {
+	width: 33.3%;
+}
+.tabs-title {
+	padding: 30px 0;
+	text-align: center;
+	background-image: -webkit-linear-gradient(left, #3f89dd, #3e8ae0, #3d8be4, #3c8ce7, #3b8deb);
+	background-image: linear-gradient(to right, #3f89dd, #3e8ae0, #3d8be4, #3c8ce7, #3b8deb);
+	font-size: 48px;
+	font-weight: 700;
+	color: #fff;
+	line-height: 1;
+	margin-bottom: 60px;
+}
+.videos {
+	background: rgba(0, 0, 0, 0.3);
+}
+.videos .tabs-title {
+	background-color: #002045;
+	background-image: none;
+}
+.blog .tabs-title {
+	background-color: #7cb9ff;
+}
+.tab-box {
+	max-width: 450px;
+	margin: 0 40px;
+	margin-right: 35px;
+	text-align: center;
+	margin-bottom: 60px;
+	min-height: 480px;
+}
+.tabs-col .tab-box.press {
+	margin-left: auto;
+}
+.videos .tab-box {
+	margin: 0 auto 60px;
+}
+.tabs-sec .tab-img {
+	margin-bottom: 60px;
+	height: 290px;
+	display: block;
+}
+.tab-box img {
+	width: 100%;
+	height: 100%;
+	-o-object-fit: cover;
+	   object-fit: cover;
+}
+.tabs-sec .tab-box p {
+	font-size: 30px;
+	font-weight: 600;
+	color: #000;
+	line-height: 1.3;
+}
+/*-- Tabs CSS End --*/
+
+
+/*-- SignUp CSS Start --*/
+.signup-sec {
+	background: url(../images/signup-bg.png) center center no-repeat;
+	background-size: cover;
+	padding: 70px 0;
+	position: relative;
+}
+.signup-sec:after {
+	content: '';
+	width: 100%;
+	height: 100%;
+	background: rgba(63, 137, 221, 0.8);
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: inline-block;
+	z-index: 10;
+}
+.signup-content {
+	text-align: center;
+	max-width: 1080px;
+	margin: 0 auto;
+	z-index: 50;
+	position: relative;
+}
+.signup-sec h3 {
+	font-size: 53px;
+	font-weight: 700;
+	color: #fff;
+	line-height: 1.4;
+	margin-bottom: 20px;
+}
+.signup-sec form {
+	max-width: 670px;
+	margin: 0 auto;
+}
+.signup-sec .mail {
+	padding: 20px 20px;
+	width: 100%;
+	font-size: 23px;
+	color: #4b4b4b;
+	line-height: 1.2;
+	margin-bottom: 80px;
+	border-color: #fff;
+	box-sizing: border-box;
+	border: none;
+}
+.signup-sec button {
+	width: 100%;
+	max-width: 235px;
+	background: #004daa;
+	font-size: 23px;
+	color: #fff;
+	padding: 20px 0;
+	text-align: center;
+	border: 3px solid #fff;
+	cursor: pointer;
+}
+
+
+/*-- SignUp CSS End --*/
+
+/*--- Content CSS End ---*/
+
+
+
+/*--- Responsive Start ---*/
+@media (max-width: 1600px) {
+	.services-box {
+		width: 31.9%;
+	}
+}
+
+@media (max-width: 1440px) {
+	.services-box {
+		width: 30.9%;
+	}
+	.tabs-title {
+		padding: 20px 0;
+		font-size: 40px;
+	}
+}
+
+@media (max-width: 1366px) {
+	.serv-title h3 {
+		font-size: 28px;
+	}
+	.services-bottom .serv-title {
+		height: 180px;
+	}
+	.tabs-sec .tab-img,
+	.tab-box {
+		margin-bottom: 30px;
+	}
+	.tabs-sec .tab-box p {
+		font-size: 24px;
+	}
+	.signup-sec h3 {
+		font-size: 42px;
+	}
+	.info-box h3 {
+		font-size: 22px;
+	}
+	.serv-img {
+		height: 275px;
+	}
+}
+
+
+@media (max-width: 1199px) {
+	.atf-bar ul li {
+		font-size: 22px;
+	}
+	.atf-bar ul li:before {
+		top: 10px;
+	}
+	.scrolldown-btn {
+		top: 58px;
+	}
+	.scrolldown-btn img {
+		width: 70%;
+	}
+	.content-info p {
+		font-size: 20px;
+	}
+	.info-boxes {
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
+	}
+	.info-box {
+		width: 30%;
+		margin-bottom: 30px;
+	}
+	.services-sec {
+	    padding: 150px 0 0 0;
+	}
+	.services-box {
+	    width: 47.1%;
+	}
+	.services-box:nth-child(2n+2) {
+		margin-right: 0;
+	}
+	.tabs-row {
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
+	}
+	.tabs-col {
+	    width: 50%;
+	    margin-bottom: 30px;
+	}
+	.videos {
+		margin-right: 0;
+	}
+	.tabs-title {
+		font-size: 34px;
+	}
+}
+
+@media (max-width: 991px) {
+	.info-box {
+		width: 46%;
+	}
+	.info-box:nth-child(2n+2) {
+		margin-right: 0;
+	}
+	.serv-title {
+		height: 110px;
+	}
+	.serv-title h3 {
+		padding-top: 10px;
+	}
+	.services-bottom .serv-title {
+	    height: 160px;
+	}
+	.atf-bar ul li {
+		padding: 0 15px;
+		font-size: 18px;
+	}
+	.atf-bar ul li:before {
+		top: 7px;
+	}
+	.scrolldown-btn {
+	    top: 54px;
+	}
+	.content-info-wrap {
+		padding: 65px 0 0 0;
+	}
+}
+
+@media (max-width: 767px) {
+	.tabs-col {
+		width: 100%;
+	}
+	.tabs-col .tab-box {
+		height: auto;
+		min-height: auto; 
+		margin: 0 auto;
+		margin-bottom: 35px;
+	}
+	.signup-sec h3 {
+	    font-size: 34px;
+	    line-height: 1.3;
+	}
+	.signup-sec .mail {
+		margin-bottom: 40px;
+	}
+	.services-box,
+	.services-box:nth-child(2n+2) {
+	    width: 70%;
+	    margin: 0 auto 35px;
+	}
+	.info-box .box-icon {
+	    margin-bottom: 20px;
+	}
+	.sec-title {
+		font-size: 26px;
+		margin-bottom: 40px;
+	}
+	.tabs-sec .tab-box p {
+	    font-size: 20px;
+	}
+	.tabs-sec .tab-box p {
+	    font-size: 20px;
+	}
+	.serv-title h3 {
+	    font-size: 24px;
+	}
+	.info-box h3 {
+	    font-size: 18px;
+	}
+	.tabs-title {
+	    font-size: 28px;
+	    padding: 15px 0;
+	}
+}
+
+@media (max-width: 640px) {
+	.info-box,
+	.info-box:nth-child(2n+2)  {
+    	width: 70%;
+	    margin: 0 auto 35px;
+	}
+	.services-box, .services-box:nth-child(2n+2) {
+	    width: 78%;
+	    margin: 0 auto 35px;
+	}
+	.signup-sec h3 {
+	    font-size: 28px;
+	    line-height: 1.3;
+	}
+	.signup-sec .mail {
+		padding: 12px 20px;
+		font-size: 20px;
+	}
+	.signup-sec button {
+		padding: 13px 0;
+		max-width: 180px;
+		font-size: 18px;
+	}
+	.atf-bar ul li {
+		margin-bottom: 10px;
+	}
+	.scrolldown-btn {
+	    top: 96px;
+	}
+	.atf-bar ul {
+		text-align: left;
+	}
+}
+
+@media (max-width: 480px) {
+	.content-info p {
+	    font-size: 16px;
+	    margin-bottom: 15px;
+	}
+	.scrolldown-btn {
+	    top: 129px;
+	}
+	.info-box, .info-box:nth-child(2n+2) {
+	    width: 100%;
+	}
+	.services-box, .services-box:nth-child(2n+2) {
+	    width: 100%;
+	}
+	.serv-title h3 {
+	    font-size: 20px;
+	}
+	.services-bottom .serv-title {
+	    height: 130px;
+	}
+	.serv-img {
+	    height: 215px;
+	}
+	.tabs-col .tab-box {
+		margin-left: 15px;
+		margin-right: 15px;
+	}
+	.tabs-sec .tab-img {
+		height: 170px;
+	}
+	.tabs-sec .tab-box p {
+	    font-size: 16px;
+	}
+	.signup-sec h3 {
+	    font-size: 20px;
+	}
+	.signup-sec .mail {
+	    padding: 12px 20px;
+	    font-size: 16px;
+	    border: none;
+	}
+	.signup-sec {
+		padding: 35px 0;
+	}
+}
+/*--- Responsive End ---*/

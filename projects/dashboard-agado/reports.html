@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>        
+        <!-- META SECTION -->
+        <title>Reports</title>            
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        
+        <link rel="icon" href="favicon.ico" type="image/x-icon" />
+        <!-- END META SECTION -->
+        
+        <!-- CSS INCLUDE -->
+        <link rel="stylesheet" type="text/css" href="css/ion/ion.rangeSlider.css"/>
+        <link rel="stylesheet" type="text/css" href="css/ion/ion.rangeSlider.skinFlat.css"/>
+        
+        <link rel="stylesheet" type="text/css" id="theme" href="css/theme-default.css"/>
+		<link rel="stylesheet" type="text/css" id="theme" href="css/style.css"/>
+        <!-- EOF CSS INCLUDE -->         
+    
+                                   
+    </head>
+    <body>
+        <!-- START PAGE CONTAINER -->
+        <div class="page-container">
+            
+            <!-- START PAGE SIDEBAR -->
+            <div class="page-sidebar">
+                <!-- START X-NAVIGATION -->
+                <ul class="x-navigation">
+                    <li class="xn-logo">
+                        <a href="#">Agodo</a>
+                        <a href="#" class="x-navigation-control"></a>
+                    </li>
+                    <li>
+                        <div class="social-item">
+                            <a href="#" class="fa fa-info"></a>
+                            <a href="#" class="fa fa-plus"></a>
+                            <a href="#" class="fa fa-envelope"></a>
+                        </div>
+                    </li>
+                    <li class="xn-title"><strong>Main Nav.</strong></li>
+                    <li>
+                        <a href="index.html"><em class="sp-sidebar dashboard-icon"></em> <span class="xn-text">Dashboard</span></a>                        
+                    </li>
+                    <li><a href="shipment.html"><em class="sp-sidebar shipment-overview-icon"></em> <span class="xn-text">Shipment Overview</span></a></li>
+                    <li><a href="manage-users.html"><em class="sp-sidebar users-icon"></em> <span class="xn-text">Manage Users</span></a></li>
+                    <li><a href="#"><em class="sp-sidebar messages-icon"></em> <span class="xn-text">Messages</span></a></li>
+                    <li class="active"><a href="reports.html"><em class="sp-sidebar reports-icon"></em> <span class="xn-text">Reports</span></a></li>
+
+                    <li class="xn-title">Settings</li>
+                    <li><a href="#"><em class="sp-sidebar setting-icon"></em> <span class="xn-text">Account Settings</span></a></li>
+                    <li><a href="#"><em class="sp-sidebar billing-icon"></em> <span class="xn-text">Billing</span></a></li>
+                    <li><a href="#"><em class="sp-sidebar password-icon"></em> <span class="xn-text">Change Password</span></a></li>
+
+
+                </ul>
+                <!-- END X-NAVIGATION -->
+            </div>
+            <!-- END PAGE SIDEBAR -->
+            
+            <!-- PAGE CONTENT -->
+            <div class="page-content">
+                
+                <!-- START X-NAVIGATION VERTICAL -->
+                <ul class="x-navigation x-navigation-horizontal x-navigation-panel">
+                    <!-- TOGGLE NAVIGATION -->
+                    <li class="xn-icon-button">
+                        <a href="#" class="x-navigation-minimize"><span class="fa fa-bars"></span></a>
+                    </li>
+                    <!-- END TOGGLE NAVIGATION -->
+                    <!-- SEARCH -->
+                    <li class="xn-search">
+                        <form role="form">
+                            <input type="text" name="search" placeholder="Search..."/>
+                        </form>
+                    </li>   
+                    <li class="logout-wrap pull-right">
+                        <a href="#">LOGOUT <img src="img/logout.png" alt=""></a>
+                    </li> 
+                </ul>
+                <!-- END X-NAVIGATION VERTICAL -->                     
+
+                                   
+                
+                <!-- PAGE CONTENT WRAPPER -->
+                <div class="page-content-wrap">
+                	
+                    <div class="top-space"></div>
+                
+                    <div class="row">
+                    	
+                        <div class="col-md-12">
+                        	<div class="panel panel-default">
+                                <div class="panel-heading">
+                                	<div class="header-icons clearfix">
+                                    
+                                    	<div class="select-wrap">
+                                        	<label>Select Account</label>
+                                            <select>
+                                            	<option>Agado Account 1</option>
+                                            </select>
+                                            <a class="btn btn-default" href="#">
+                                                <img alt="" src="img/icons/add.png">
+                                                Create Account
+                                            </a>
+                                        </div>
+                                        <div class="date-wrap">
+                                        	<input type="text" id="datepicker" class="datepicker-double" value="01-30-2014 ">
+                                            <span class="datepicker-icon"></span>
+                                        </div>
+                                        
+                                        <div class="shipment-search">
+                                        	<input type="text" class="field-search" placeholder="Search Shipment">
+                                            <input type="submit" class="submit-search" value="">
+                                        </div>
+                                        
+                                        <div class="tabs tabs-right margin-0">
+                                            <ul class="nav nav-tabs tabs-theme tabs-3item">
+                                                <li class="active"><a data-toggle="tab" href="#tab4" aria-expanded="true">Quick Report</a></li>
+                                                <li class=""><a data-toggle="tab" href="#tab5" aria-expanded="false">Design Report</a></li>
+                                                <li class=""><a data-toggle="tab" href="#tab6" aria-expanded="false">Stats</a></li>
+                                            </ul>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                
+                                <div class="panel-body tab-content padding-0">
+                                	
+                                    <div class="print-wrap">
+                                    	<div class="row">
+                                        	<div class="col-sm-7">
+                                            	<div class="prient-lg">
+                                                	<ul class="clearfix">
+                                                    	<li><a href="#"><img src="img/prient-1.png" alt=""> <span>Print &amp; Export</span></a></li>
+                                                        <li><a href="#"><img src="img/prient-2.png" alt=""> <span>Export</span></a></li>
+                                                        <li><a href="#"><img src="img/prient-3.png" alt=""> <span>Print</span></a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-5">
+                                            	<ul class="pagination pagination-sm pull-right">
+                                                    <li class="prev-pagi"><a href="#"><span class="fa fa-arrow-left"></span></a></li>
+                                                    <li><a href="#">1</a></li>
+                                                    <li><a href="#">2</a></li>
+                                                    <li><a href="#">3</a></li>
+                                                    <li class="next-pagi"><a href="#"><span class="fa fa-arrow-right"></span></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="report-inner">
+                                    	<div class="agodo-section clearfix">
+                                            <div class="agodo-logo"><a href="#"><img src="img/agado-dark.png" alt=""></a></div>
+                                            <div class="agodo-conent">
+                                                <h4>Analysis &amp; Reports for Agado</h4>
+                                                <p>1 July 2014  ---  1 August 2014</p>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="info-contain">
+                                        	<div class="row">
+                                            	<div class="col-sm-4">
+                                                	<div class="info-wrap clearfix">
+                                                    	<div class="info-img">
+                                                        	<img src="img/chart-1.png" alt="">
+                                                            <div class="month-info">
+                                                            	<span>July</span>
+                                                                <a href="#">20% <span class="fa fa-caret-up"></span></a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="info-txt">
+                                                        	<h3>462</h3>
+                                                            <h4>Shipments</h4>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-4">
+                                                	<div class="info-wrap clearfix">
+                                                    	<div class="info-img"><img src="img/chart-2.png" alt=""></div>
+                                                        <div class="info-txt txt2">
+                                                        	<h3><a href="#">95% <span class="fa fa-caret-up"></span></a></h3>
+                                                            <h4>Delivered on time</h4>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-4">
+                                                	<div class="info-wrap last clearfix">
+                                                    	<div class="info-img info-img-3"><img src="img/chart-3.png" alt=""></div>
+                                                        <div class="info-txt txt3">
+                                                        	<h3>14</h3>
+                                                            <h4>Exceptions</h4>
+                                                            <p>(In the time period)</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div><!--info-contain -->
+                                        
+                                        <div class="chart">
+                                        	<h2>General</h2>
+                                            <p><img src="img/chart-main.png" alt="" class="full-img"></p>
+                                        </div>
+                                        <div class="volume-wrap clearfix">
+                                        	<div class="row">
+                                            	<div class="col-sm-6">
+                                                	<div class="volume clearfix">
+                                                    	<div class="vol-img"><img src="img/volume-1.png" alt=""></div>
+                                                        <div class="vol-content">
+                                                        	<h3>Volume and Weight</h3>
+                                                            <div class="weight">
+                                                            	<p><span>Total Weight :</span> <strong>300 kg</strong></p>
+                                                                <p><span>Total Volume :</span> <strong>300 kg</strong></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                	<div class="volume clearfix">
+                                                    	<div class="vol-img"><img src="img/volume-2.png" alt=""></div>
+                                                        <div class="vol-content">
+                                                        	<h3>Volume and Weight</h3>
+                                                            <div class="weight">
+                                                            	<p><span>Total Weight :</span> <strong>300 kg</strong></p>
+                                                                <p><span>Total Volume :</span> <strong>300 kg</strong></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                         <div class="chart">
+                                        	<h2>Performance</h2>
+                                            <div class="row">
+                                            	<div class="col-sm-6">
+                                                	<h3>Courier: Delivery on time</h3>
+                                                    <p><img src="img/circle-1.png" alt=""></p>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                	<h3>Top 5 Countries with Exceptions (50)</h3>
+                                                    <p><img src="img/circle-2.png" alt=""></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="chart geographic">
+                                        	<h2>Geographic </h2>
+                                            <div class="row">
+                                            	<div class="col-sm-7">
+                                                	<h3>Top 5 Destination Countries</h3>
+                                                    <p><span>Germany :</span> (310)</p>
+                                                    <p><span>USA :</span> (100)</p>
+                                                    <p><span>China :</span> (95)</p>
+                                                    <p><span>Denmark :</span> (63)</p>
+                                                    <p><span>India :</span> (48)</p>
+                                                </div>
+                                                <div class="col-sm-5">
+                                                	<div class="map-sm">
+                                                    	<p><img src="img/map-sm.png" alt=""></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="bot-section">
+                                        	<div class="row">
+                                            	<div class="col-sm-6"><p>Report genrated using : Agado CMS</p></div>
+                                                <div class="col-sm-6 right"><p>Copyright &copy; 2015 Agado CMS</p></div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div><!--report-inner -->
+                                </div><!--panel-body -->
+                                
+                            </div>    
+                        </div>    
+                    </div>
+                    
+                        
+
+                    
+                    <!-- START DASHBOARD CHART -->
+                    <div class="block-full-width"  style="visibility:hidden; height:1px;">
+                        <div id="dashboard-chart" style="height: 250px; width: 100%; float: left;"></div>
+                        <div class="chart-legend">
+                            <div id="dashboard-legend"></div>
+                        </div>                                                
+                    </div>                    
+                    <!-- END DASHBOARD CHART -->
+                    
+                </div>
+                <!-- END PAGE CONTENT WRAPPER -->                                
+            </div>            
+            <!-- END PAGE CONTENT -->
+        </div>
+        <!-- END PAGE CONTAINER -->
+
+        <!-- MESSAGE BOX-->
+        <div class="message-box animated fadeIn" data-sound="alert" id="mb-signout">
+            <div class="mb-container">
+                <div class="mb-middle">
+                    <div class="mb-title"><span class="fa fa-sign-out"></span> Log <strong>Out</strong> ?</div>
+                    <div class="mb-content">
+                        <p>Are you sure you want to log out?</p>                    
+                        <p>Press No if youwant to continue work. Press Yes to logout current user.</p>
+                    </div>
+                    <div class="mb-footer">
+                        <div class="pull-right">
+                            <a href="pages-login.html" class="btn btn-success btn-lg">Yes</a>
+                            <button class="btn btn-default btn-lg mb-control-close">No</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END MESSAGE BOX-->
+        
+		 
+
+
+
+		
+		<script type="text/javascript" src="js/plugins/jquery/jquery.min.js"></script>
+        <script type="text/javascript" src="js/plugins/jquery/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="js/plugins/bootstrap/bootstrap.min.js"></script>        
+        
+        <script type='text/javascript' src='js/plugins/icheck/icheck.min.js'></script>
+        <script type="text/javascript" src="js/plugins/mcustomscrollbar/jquery.mCustomScrollbar.min.js"></script>
+        
+        <script type="text/javascript" src="js/plugins/datatables/jquery.dataTables.min.js"></script>    
+        <script type="text/javascript" src="js/plugins/bootstrap/bootstrap-datepicker.js"></script>     
+        
+        <script type="text/javascript" src="js/plugins/rangeslider/jQAllRangeSliders-min.js"></script>       
+        <script type="text/javascript" src="js/plugins/knob/jquery.knob.min.js"></script>
+        <script type="text/javascript" src="js/plugins/ion/ion.rangeSlider.min.js"></script>
+        
+        <script type="text/javascript" src="js/settings.js"></script>
+        
+        <script type="text/javascript" src="js/plugins.js"></script>        
+        <script type="text/javascript" src="js/actions.js"></script> 
+        <!-- END TEMPLATE -->
+        
+        <script type="text/javascript" src="js/demo_sliders.js"></script>
+        
+        
+        <script src="http://code.highcharts.com/highcharts.js"></script>
+        <script type="text/javascript">
+            $(function () {
+        
+            // Radialize the colors
+            Highcharts.getOptions().colors = Highcharts.map(Highcharts.getOptions().colors, function (color) {
+                return {
+                    radialGradient: { cx: 0.5, cy: 0.3, r: 0.7 },
+                    stops: [
+                        [0, color],
+                        [1, Highcharts.Color(color).brighten(-0.3).get('rgb')] // darken
+                    ]
+                };
+            });
+        
+            // Build the chart
+            $('#container').highcharts({
+                chart: {
+                    plotBackgroundColor: null,
+                    plotBorderWidth: null,
+                    plotShadow: false
+                },
+                title: {
+                    text: ''
+                },
+                tooltip: {
+                    pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                },
+                plotOptions: {
+                    pie: {
+                        allowPointSelect: true,
+                        cursor: 'pointer',
+                        dataLabels: {
+                            enabled: true,
+                            format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                            style: {
+                                color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                            },
+                            connectorColor: 'silver'
+                        }
+                    }
+                },
+                series: [{
+                    type: 'pie',
+                    name: 'Browser share',
+                    data: [
+                        ['Firefox',   45.0],
+                        ['IE',       26.8],
+                        {
+                            name: 'Chrome',
+                            y: 12.8,
+                            sliced: true,
+                            selected: true
+                        },
+                        ['Safari',    8.5],
+                        ['Opera',     6.2],
+                        ['Others',   0.7]
+                    ]
+                }]
+            });
+        });
+    </script>
+    
+     <script type="text/javascript">
+        $(function() {
+            $( "#datepicker" ).datepicker();
+            
+            $(".datatable-seciton tr").hover(function() {
+                $(this).children('.table-hover-icons').children(".table-in-icons").animate({right: "0"},200);
+            },
+                function() {
+                    $(this).children('.table-hover-icons').children(".table-in-icons").animate({right: "-104px"},200);
+                }
+            );
+        });
+    </script>
+        
+
+        <!-- END TEMPLATE -->
+    <!-- END SCRIPTS -->         
+    </body>
+</html>
+
+
+
+
+
+

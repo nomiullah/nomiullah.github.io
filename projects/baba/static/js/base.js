@@ -1,0 +1,46 @@
+$(function(){
+	var a = $('<div>').attr('class', 'row-fluid');
+	var b = $('<div>').attr('class', 'span4');
+	var c = $('<div>').attr('class', 'form-fields');
+	$('#del').click(function(e){
+		var c = confirm('It will delete all of your data.Are you sure?');
+		if(!c){
+			e.preventDefault();
+		}
+	});
+
+
+	// search_recipe page tabs functionality
+	$("#ingredient-section a").click(function () {
+		var newContens = $(this).attr('href').slice(1)
+		$(".tabs-content").hide();
+		$('#'+newContens).show();
+
+		$("#ingredient-section a").removeClass('active');
+		$(this).addClass('active');
+		return false;
+	});
+
+
+	// Add and Delete functionality of form pages(qualification page)
+	$(".add-language").click(function () {
+		var newSkills = $(".hidden-language-skills").html();
+		$(".language-section").append(newSkills);
+		return false;
+	});
+	$(".delete-skill").click(function () {
+		$(this).parents('.hidden-language-skills-inner').hide();
+		return false;
+	});
+
+	$('.change-avatar').click(function () {
+	    $("#profile_pic").trigger('click');
+	});
+
+	$("#profile_pic").change(function () {
+		var ni = $('#new-image');
+		ni.html('New Image: <strong>'+this.value.replace(/C:\\fakepath\\/i, "")+'</strong>')
+	});
+	
+});
+

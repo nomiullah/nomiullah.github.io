@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'PostNL';
+    src: url('PostNL-Medium.eot');
+    src: url('PostNL-Medium.eot?#iefix') format('embedded-opentype'),
+        url('PostNL-Medium.woff2') format('woff2'),
+        url('PostNL-Medium.woff') format('woff'),
+        url('PostNL-Medium.ttf') format('truetype'),
+        url('PostNL-Medium.svg#PostNL-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PostNL';
+    src: url('PostNL-Light.eot');
+    src: url('PostNL-Light.eot?#iefix') format('embedded-opentype'),
+        url('PostNL-Light.woff2') format('woff2'),
+        url('PostNL-Light.woff') format('woff'),
+        url('PostNL-Light.ttf') format('truetype'),
+        url('PostNL-Light.svg#PostNL-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PostNL';
+    src: url('PostNL-Bold.eot');
+    src: url('PostNL-Bold.eot?#iefix') format('embedded-opentype'),
+        url('PostNL-Bold.woff2') format('woff2'),
+        url('PostNL-Bold.woff') format('woff'),
+        url('PostNL-Bold.ttf') format('truetype'),
+        url('PostNL-Bold.svg#PostNL-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+

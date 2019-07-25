@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<!--[if IE 6]>
+<html id="ie6">
+<![endif]-->
+<!--[if IE 7]>
+<html id="ie7">
+<![endif]-->
+<!--[if IE 8]>
+<html id="ie8">
+<![endif]-->
+<!--[if !(IE 6) | !(IE 7) | !(IE 8)  ]><!-->
+<html>
+<!--<![endif]-->
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    
+    <title>Home Page</title>
+    
+    
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,400italic,300italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    
+    <link type="text/css" rel="stylesheet" href="mar-files/css/style.css" />
+    
+    <!--[if lte IE 8]>
+    <link type="text/css" rel="stylesheet" href="mar-files/css/ie.css" />
+    <script type="text/javascript" src="mar-files/js/modernizr.min.js"></script>
+    <![endif]-->
+    
+    <!--[if lte IE 6]>
+    <script type="text/javascript" src="mar-files/js/belated.js"></script>
+    <![endif]-->
+    
+    <script type="text/javascript" src="mar-files/js/jquery.js"></script>
+    <script type="text/javascript" src="http://cdn.jsdelivr.net/jquery.validation/1.14.0/jquery.validate.min.js"></script>
+    <!-- <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-17424521-3', 'auto');
+      ga('send', 'pageview');
+
+    </script> -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-17424521-7', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+<script type="text/javascript">
+    jQuery( document ).ready(function() {
+  // var l = Ladda.create( document.querySelector( '#regsubmit' ) );
+  document.getElementById("registrationform").reset(); 
+    
+});
+    
+    
+    jQuery(function(){
+         jQuery("#registrationform").validate({
+           
+            rules:{
+                fname: "required",
+                lname: "required",
+                company: "required",
+                title:"required",
+                phone:{
+                    required:true,
+                    digits: true,
+                    minlength:10
+                },
+                email:{
+                    required:true,
+                    email:true
+                }
+                /*
+                password:{
+                    required:true,
+                    minlength:5,
+                },
+                password2:{
+                    required:true,
+                    minlength:5,
+                    equalTo: "#password"
+                }
+                */
+            },
+            messages:{
+                fname:"Field is Required",
+                lname:"Field is Required",
+                company:"Field is Required",
+                title:"Field is Required",
+                phone:{
+                    required:"Field is Required",
+                    digits: "Please Enter Numeric Values only",
+                    minlength:"Minimum 10 Digit Phone Number Required"
+                },
+                email:{
+                    required:"Field is Required",
+                    email:"Enter Valid Email Address"
+                }
+                /*
+                password:{
+                    required:"Field is Required",
+                    minlength:"password must be minimum 5 characters Long",
+                },
+                password2:{
+                    required:"Field is Required",
+                    minlength:"password must be minimum 5 characters Long",
+                    equalTo: "Password mismatched"
+                }
+                */
+            },
+            submitHandler: function(form) {
+              //  form.preventDefault();
+                 document.getElementById("error-message1").innerHTML ="";
+                 $('#error-message1').hide();
+                 document.getElementById("regsubmit").value = "Loading..";
+                 document.getElementById("regsubmit").disabled = true;   
+                
+                jQuery.post( "tekcell-theme/v4config/processLanding.php",jQuery("#registrationform").serialize(),function( data ) {
+                      
+
+                      if(data!="Success")
+                      {  
+                        //document.getElementById("error-message1").innerHTML =data;
+						document.getElementById("error-message1").innerHTML ="This email address doesn't exists, please enter a valid email address.";
+                        $('#error-message1').show();
+
+                       // jQuery('#regMessage').text(data)
+                      // jQuery( ".popup-btn" ).trigger( "click" );
+                        document.getElementById("regsubmit").value = "SUBMIT";
+                        document.getElementById("regsubmit").disabled =false;   
+                      //  jQuery('#regsubmit').removeAttr('disabled');
+                       // jQuery("#regsubmit").attr('value', 'START CONFIGURING CABLE');
+                      }
+                      else
+                      {
+                         window.location = "thankyou.html";
+
+                      }
+
+              
+                  });
+                return false;
+
+            }
+         });
+    });
+
+    function saveData() {
+
+   //  jQuery.post( "processRegistration.php",jQuery("#registrationform").serialize())
+   //      .done(function( data ) {
+   //        alert( "Data Loaded: " + data );
+  
+   //    });
+         
+    }
+
+   </script> 
+   
+   <script type="text/javascript">
+		$(function () {
+			$(".signup").click(function() {
+				$('html, body').animate({
+					scrollTop: $("#main-lending-wrap").offset().top - 25
+				}, 800);
+				return false;
+			});
+		});
+   </script>
+    
+</head>
+
+<body id="page-name">
+
+<div id="container-fluid">
+
+<div id="banner-container">
+    <div class="content-width">
+        <header id="header" class="clearfix">
+            <div id="header-left">
+                <a href="#"><img src="mar-files/images/logo.png" alt=""></a>
+            </div>
+            <div id="header-right">
+                <a href="#" class="signup">Signup</a>
+            </div>
+        </header>
+        <div class="banner-in">
+            <h1>The cable you need is just clicks away.</h1>
+            <div class="banner-in-sub">
+                <p>
+                    Use Tekcell’s Visual CableBuilder<sup style="font-size:8px;">TM</sup> (VCB) to configure complex, high quality jumper and MTP®/MPO <br> 
+                    Single Mode and Multimode cables in minutes. It’s fast, convenient and cost-effective.  <br>
+                    Get real-time pricing and delivery timeframes instantly.
+                </p>
+            </div>
+            <div class="quote-section-wrap">
+            	<div class="quote-section">
+                	<img src="mar-files/images/quote-left.png" alt="">
+                    By far the easiest way to buy fiber cable jumpers. <br>
+                    Now we build what we want, quote it, and order when we need it.
+                    <img src="mar-files/images/quote-right.png" alt="">
+                </div>
+                <div class="quote-title">-K.M., Network Cables & Connectors</div>
+            </div>
+        </div>
+    </div>    
+</div><!--banner-container -->
+
+
+
+
+<!--main start -->
+<div id="main-lending-wrap">
+	<div class="content-width">
+        <div id="main-lending" class="clearfix">
+        
+        	<section id="contents-lending">
+            	<div class="article-icons-wrap clearfix">
+                	<div class="article-icon">
+                    	<div class="article-sep"></div>
+                    	<div class="article-img"><img src="mar-files/images/icon-1.png" alt=""></div>
+                    	<h3>Click</h3>
+                    	<p>Sign-up and select your cable.</p>
+                    </div>
+                    <div class="article-icon">
+                    	<div class="article-sep"></div>
+                    	<div class="article-img"><img src="mar-files/images/icon-2.png" alt=""></div>
+                    	<h3>Build</h3>
+                    	<p>Select your specs and quantity, confirm, then generate a quote or check out.</p>
+                    </div>
+                    <div class="article-icon">
+                    	<div class="article-img"><img src="mar-files/images/icon-3.png" alt=""></div>
+                    	<h3>ship</h3>
+                    	<p>Choose your timeframe as soon as next-day.</p>
+                    </div>    
+                </div>
+                <div class="photo-section">
+                	<img src="mar-files/images/img.png" alt="">
+                </div>
+            </section><!--contents -->
+            
+            <aside id="form-lending">
+            	<div class="form-section">
+                	<h3>Be among the first to try the Visual CableBuilder<sup style="font-size:10px;">TM</sup></h3>
+                    <h5>Sign up now for a pre-release demo Tuesday February 23, 2016</h5>
+                    
+                    <form novalidate="novalidate" id="registrationform" name="registrationform" method="post">
+                        <div class="login-inner section">
+                            <div class="field-outer">
+                            	<div class="field-outer clearfix">
+                                    <label>Email <span class="star">*</span></label>
+                                    <input type="text" value="" id="email" name="email" class="field">
+                                    <div class="error-message" id="error-message1"></div>
+                                </div>
+                                <div class="row clearfix">
+                                    <div class="col-sm-6">
+                                        <div class="field-outer clearfix">
+                                            <label>First Name <span class="star">*</span></label>
+                                            <input type="text" id="fname" name="fname" value="" class="field">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="field-outer clearfix">
+                                            <label>Last Name <span class="star">*</span></label>
+                                            <input type="text" id="lname" name="lname" value="" class="field">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="field-outer clearfix">
+                                    <label>Company Name <span class="star">*</span></label>
+                                    <input type="text" value="" id="company" name="company" class="field">
+                                </div>
+                                <div class="field-outer clearfix">
+                                    <label>Title <span class="star">*</span></label>
+                                    <input type="text" id="title" name="title" value="" class="field">
+                                </div>
+                                <div class="field-outer clearfix">
+                                    <label>Phone <span class="star">*</span></label>
+                                    <input type="text" value="" id="phone" name="phone" class="field">
+                                </div>
+                                <div class="section center mt-15">
+                                    <p>
+                                    <input type="submit" value="SIGNUP" id="regsubmit" name="regsubmit" class="btn btn-success">
+                                    </p>
+                                </div>
+                                
+                            </div>
+                        </div>
+
+           			</form>
+                    
+                </div>
+            </aside><!--form-lending -->
+        </div>
+    </div>
+</div>
+<!--main end -->
+
+
+<!--footer start -->
+<div id="footer-wrap">
+	<div class="content-width">
+        <footer id="footer" class="clearfix">
+        	<p>Copyright &copy; Tekcell. All rights reserved.</p>
+        </footer>
+    </div>
+</div>
+<!--footer end -->
+
+</div><!--container-fluid -->
+
+</body>
+</html>

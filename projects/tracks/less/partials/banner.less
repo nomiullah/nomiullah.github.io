@@ -1,0 +1,137 @@
+.banner {
+    height: 100vh;
+    background-color: @lightgray;
+    position: relative;
+    background-image: url('../images/background-curve.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+    @media @break-lg{
+        height: 630px;
+    }
+    @media @break-md{
+        height: 515px;
+    }
+    @media @break-sm{
+        height: 430px;
+    }
+    @media @break-mobile{
+        height: 645px;
+        background-position: left bottom;
+        overflow: hidden;
+        &:after {
+            content:'';
+            background-image: url(../images/mob-curve.png);
+            background-position: left bottom;
+            background-repeat: no-repeat;
+            background-size: 100%;
+            position: absolute;
+            bottom: -2px;
+            left:0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &__content {
+        max-width: 654px;
+        margin-top: 90px;
+        @media @break-lg{
+            max-width: 480px;
+        }
+        @media @break-md{
+            max-width: 400px;
+        }
+        @media @break-sm{
+            margin-top: 45px;
+        }
+        @media @break-mobile{
+            margin: 40px auto 0;
+            text-align: center;
+        }
+    }
+    &__heading {
+        font-size: 54px;
+        line-height: 1.2;
+        font-weight: 500;
+        color: @lightred;
+        letter-spacing: -0.2px;
+        margin-bottom: 25px;
+        @media @break-lg{
+           font-size: 42px;
+        }
+        @media @break-md{
+            font-size: 35px;
+         }
+    }
+    &__text {
+        font-size: 20px;
+        letter-spacing: -0.2px;
+        line-height: 1.4;
+        color: @lightgray;
+        max-width: 430px;
+        margin-bottom: 70px;
+        @media @break-lg{
+            font-size: 16px;
+            max-width: 300px;
+        }
+        @media @break-md{
+            font-size: 16px;
+            max-width: 254px;
+            margin-bottom: 45px;
+        }
+        @media @break-mobile{
+            margin: 0 auto 40px;
+        }
+    }
+    &__link {
+        font-size: 14px;
+        font-weight: 500;
+        color: @lightred;
+        text-transform: uppercase;
+        &:hover {
+            text-decoration: none;
+            color: @white;
+        }
+        &:before {
+            content:'';
+            background-image: url(../images/arrow-icon.png);
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 45%;
+            box-shadow: 0 8px 17px 0 rgba(19,23,32,0.1);
+            height: 34px;
+            width: 34px;
+            background-color: @lightred;
+            display: inline-block;
+            border-radius: 50%;
+            margin-right: 8px;
+            vertical-align: middle;
+            margin-bottom:4px;
+        }
+    }
+    &__imgWrapper {
+        position: absolute;
+        right:0;
+        top:140px;
+        width:54%;
+        @media @break-lg {
+            width: 65%;
+        }
+        @media @break-md {
+            width: 482px;
+        }
+        @media @break-sm {
+            width: 57%;
+            top: 110px;
+        }
+        @media @break-mobile {
+            width: 600px;
+            top: auto;
+            bottom: -178px;
+        }
+    }
+    &__img {
+        width: 100%;
+    }
+ 
+}

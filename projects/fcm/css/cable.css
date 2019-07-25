@@ -1,0 +1,334 @@
+.connector-left div{
+	float: left;
+}
+.connector-right div{
+	float: right;
+}
+.connector-right{
+	width: 30%;
+	float: left;
+}
+.connector-left{
+	width: 37%;
+  	float: left;
+  	margin: 0 -8% 0 0;
+}
+.male-female{
+	  width: 7.3%;
+  margin-right: -2.8%;
+  margin-top: -0.8%;
+}
+.keyup-down{
+	width: 15.8%;
+  	margin-right: -2.4%;
+  	margin-top: -0.7%;
+}
+.pullcovers{
+	width: 23.8%;
+  	margin-right: -0.85%;
+  	position: relative;
+}
+.noname{
+	width: 7.33%;
+  	margin-right: -2%;
+}
+.shape{
+	width: 50%;
+}
+.mpo-flat .shape{
+	margin-top: 1.8%;
+}
+/*.mpo-flat .noname{
+	width: 6.8%;
+}*/
+.connector-middle{
+	background: #a7d3d4 url("../images/mtp/gradient-r.png") repeat scroll left center;
+	float: left;
+	height: 34px;
+	margin-left: -8%;
+	margin-right: -8%;
+	margin-top: 3.0%;
+	position: relative;
+	width: 48%;
+	z-index: -1;
+}
+.connector-middle::after{
+	content: '';
+	background: url('../images/seperator.png')no-repeat;
+	position: absolute;
+	width: 90px;
+	height: 158px;
+	z-index: 55;
+	left: 50%;
+	margin-left: -45px;
+	top: -70%;
+	background-size: 100% auto;
+	-webkit-background-size: 100% auto;
+	-moz-background-size: 100% auto;
+}
+.mpo-flat .connector-middle{
+	 background: #ff7555 url("../images/mtp/gradient.png") repeat scroll left center;
+	 margin-top: 2.7%;
+}
+
+.connector-right{
+	width: 37%;
+    margin: 0 0 0 -10%;
+}
+
+.connector-right .male-female{
+	  width: 7.3%;
+	  margin-left: -0.3%;
+	  margin-top: -0.5%;
+}
+.connector-right .keyup-down{
+	width: 16.7%;
+  	margin-left: -2.5%;
+  	margin-top: -0.7%;
+}
+
+.connector-right .pullcovers{
+	width: 23.8%;
+  	margin-left: -0.85%;
+  	position: relative;
+  	z-index: 5;
+}
+.connector-right .noname{
+	width: 7.33%;
+  	margin-left: -2%;
+}
+.arrow{
+	width: 70px;
+	height: 120px;
+	display: block;
+	width:90px;
+	height:50px;
+  	
+}
+.top-left-arrow{
+	float: left;
+  	width: 5%;
+  	margin-left: 4%;
+}
+.top-left-arrow span{
+	position: relative;
+	left: -15px;
+	top: -5px;
+}
+.top_arrow-l{
+	background: url("../images/mtp/aerows_03.png") no-repeat scroll 0 0;
+	background-size: 100% auto;
+  	-webkit-background-size: 100% auto;
+  	-moz-background-size: 100% auto;
+	background-size:27px auto;
+}
+.top-right-arrow{
+	float: right;
+  	width: 5%;
+  	margin-right: 3%;
+}
+.top-right-arrow span{
+	display: block;
+	text-align: right;
+	  position: relative;
+	  right: -18px;
+	  top: -5px;
+}
+.top_arrow-r{
+	background: url("../images/mtp/aerows_05.png") no-repeat scroll 0 0;
+	background-size: 100% auto;
+  	-webkit-background-size: 100% auto;
+  	-moz-background-size: 100% auto;
+	background-size:27px auto;
+}
+.bottom-left-arrow{
+	float: left;
+  	width: 6%;
+  	position: relative;
+  	margin: 6% 0 0 0%;
+
+}
+.bottom_arrow-l{
+	background: url("../images/mtp/aerows_13.png") no-repeat scroll 0 0;
+	background-size: 100% auto;
+  	-webkit-background-size: 100% auto;
+  	-moz-background-size: 100% auto;
+	background-size:27px auto;
+}
+.bottom-left-arrow span{
+	position: relative;
+	left: -30px;
+}
+.bottom-right-arrow span{
+	position: relative;
+  	left: 30px;
+}
+.bottom-right-arrow{
+	float: right;
+  	width: 6%;
+    margin: 6% -2% 0 0;
+  	position: relative;
+}
+.bottom_arrow-r{
+	background: url("../images/mtp/aerows_16.png") no-repeat scroll 0 0;
+	background-size: 100% auto;
+  	-webkit-background-size: 100% auto;
+  	-moz-background-size: 100% auto;
+	background-size:27px auto;
+}
+.middle_arrow-1{
+	background: url("../images/mtp/aerows_13.png") no-repeat scroll 0 0;
+	background-size: 100% auto;
+  	-webkit-background-size: 100% auto;
+  	-moz-background-size: 100% auto;
+	background-size:27px auto;
+  	padding-bottom: 15px;
+}
+.middle_arrow-2{
+	background: url("../images/mtp/aerows_10.png") no-repeat scroll 0 0;
+	background-size: 100% auto;
+  	-webkit-background-size: 100% auto;
+  	-moz-background-size: 100% auto;
+  	width: 20px;
+  	padding-bottom: 15px;
+	
+	background-size:10px auto;
+	margin:0 auto;
+}
+.middle_arrow-3{
+	background: url("../images/mtp/aerows_16.png") no-repeat scroll 0 0;
+	background-size: 100% auto;
+  	-webkit-background-size: 100% auto;
+  	-moz-background-size: 100% auto;
+	background-size:27px auto;
+  	padding-bottom: 15px;
+}
+.middlearrows-holder .arow_1,
+.middlearrows-holder .arow_2,
+.middlearrows-holder .arow_3{
+	float: left;
+	width: 20%;
+}
+.middlearrows-holder{
+	margin: -8% 0 0 38%;
+	width: 55%;
+	overflow: hidden;
+}
+
+
+
+/*MTPROUND CSS*/
+
+.mtp-round .shape{
+	width: 52%;
+	margin-top: 1.8%;
+}
+.mtp-round .connector-right .noname{
+	margin-left: -1.5%;
+}
+.mtp-round .connector-middle{
+	background: #daae69 url("../images/mtp/gradient-r.png") repeat scroll left center;
+	height: 29px;
+	margin-top: 3.1%;
+}
+.mtp-round .connector-right .keyup-down{
+	  margin-top: 0.1%;
+}
+.mtp-round .male-female{
+  	margin-right: -2.8%;
+  	margin-top: -2.2%;
+}
+.mtp-round .connector-right .male-female{
+	margin-top: -0.2%;
+}
+
+/*MPOFLAT CSS*/
+.mpo-flat .connector-right .pullcovers{
+	  margin-left: -1%;
+}
+.connector-right .noname{
+	margin-left: -2%;
+  	margin-right: 0;
+}
+/*MTP-FLAT CSS*/
+.mtp-flat .male-female {
+    width: 7.3%;
+  	margin-right: -2.5%;
+  	margin-top: -1.5%;
+}
+.mtp-flat .connector-right .male-female{
+  margin-left: -0.2%;
+  margin-top: -0.5%;
+  width: 7.5%;
+}
+.mtp-flat  .connector-right .keyup-down{
+    margin-top: 0.2%;
+  width: 16%;
+}
+.mtp-flat .connector-middle{
+	background: #a7d3d4 url("../images/mtp/gradient-r.png") repeat scroll left center;
+}
+.mtp-flat .keyup-down{
+	  margin-right: -2.5%;
+}
+@media screen and (max-width:1340px) {
+	.connector-middle{
+		height: 28px;
+	}
+	.mtp-round .connector-middle {
+  height: 24px;
+}
+.connector-middle::after{
+		width: 75px;
+		margin-left: -37px;
+	}
+}
+@media screen and (max-width:1200px) {
+	.connector-middle{
+		height: 25px;
+	}
+	.mtp-round .connector-middle{
+		height: 20px;
+	}
+	.arrow{
+		width: 50px;
+		height: 95px;
+	}
+	.middle_arrow-2{
+		width: 13px;
+	}
+	.connector-middle::after{
+		width: 60px;
+		margin-left: -30px;
+	}
+
+}
+@media screen and (max-width:992px) {
+	.connector-middle{
+		height: 18px;
+	}
+	.mtp-round .connector-middle {
+	  height: 16px;
+	}
+	.middlearrows-holder{
+		  margin: -12% 0 0 38%;
+	}
+	.bottom-right-arrow{
+		  margin: 6% -1% 0 0;
+	}
+	.bottom-left-arrow{
+		  margin: 6% 0.5% 0 0%;
+	}
+	.connector-middle::after{
+		width: 45px;
+		margin-left: -20px;
+	}
+}
+@media screen and (max-width:767px) {
+	.connector-middle{
+		height: 12px;
+	}
+	.mtp-round .connector-middle {
+ 		 height: 12px;
+	}
+}

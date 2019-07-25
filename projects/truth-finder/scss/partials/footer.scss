@@ -1,0 +1,54 @@
+@import "variables.scss";
+@import "mixins.scss";
+
+
+// Footer Starts
+
+.footer{
+    background: rgba(16,32,65,0.60);
+    padding: 32px 0 30px;
+    &__copyright{
+        display: block;
+        text-align: left;
+    }
+    &__info{
+        color: $white;
+        font-size: 12px;
+        line-height: 18px;
+        font-weight: 400;
+        margin: 0;
+        font-family: $basefamily;
+    }
+    &__right{
+        display: block;
+        text-align: right;
+    }
+    &__lists{
+        display: block;
+        padding: 0;
+        margin: 0;
+    }
+    &__list{
+        display: inline-block;
+        vertical-align: top;
+        padding: 0 13px;
+        &:last-child{
+            padding-right: 0;
+        }
+    }
+    &__link{
+        color: $white;
+        font-size: 12px;
+        line-height: 18px;
+        font-weight: 400;
+        font-family: $basefamily;
+        transition: 0.2s all ease;
+        &:hover,
+        &:focus {
+            color: $green;
+            text-decoration: none;
+        }
+    }
+}
+
+// Footer Ends

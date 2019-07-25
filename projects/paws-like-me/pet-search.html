@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<!--[if IE 6]>
+<html id="ie6">
+<![endif]-->
+<!--[if IE 7]>
+<html id="ie7">
+<![endif]-->
+<!--[if IE 8]>
+<html id="ie8">
+<![endif]-->
+<!--[if !(IE 6) | !(IE 7) | !(IE 8)  ]><!-->
+<html>
+<!--<![endif]-->
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    
+    <title>Pet Search</title>
+    
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800,300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/jquery-ui.custom.min.css"/>
+    <link rel="stylesheet" href="css/ace.min.css"/>
+    
+    
+    <link type="text/css" rel="stylesheet" href="css/font-awesome.css" />
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
+    <link type="text/css" rel="stylesheet" href="css/circle.css" />
+    
+    
+    
+    
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+    
+    <!--[if lte IE 8]>
+    <link type="text/css" rel="stylesheet" href="css/ie.css" />
+    <script type="text/javascript" src="js/modernizr.min.js"></script>
+    <![endif]-->
+    
+    <!--[if lte IE 6]>
+    <script type="text/javascript" src="js/belated.js"></script>
+    <![endif]-->
+    
+    <script src="js/assets/ace-extra.min.js"></script>
+    
+
+    
+</head>
+
+<body id="page-name">
+
+<div id="container-fluid"> 
+
+<!--header start -->
+<div id="header-wrap">
+	<div class="">
+        <header id="header" class="clearfix">
+            <div id="header-left"><a href="index.html"><img src="images/logo.png" alt=""></a></div>
+            <div id="header-right">
+            	<a href="#" id="menu"><span class="fa fa-navicon"></span></a>
+            	<div id="nav">
+                	<ul class="clearfix">
+                    	<li><a href="index.html">Home</a></li>
+                        <li class="active"><a href="pet-search.html">Pet Search</a></li>
+                        <li><a href="pet-detail.html">My Pet</a></li>
+                        <li class="dropdown-menu">
+                        	<a href="organizations.html">
+                            	<em class="fa fa-angle-up nav-arrow"></em>
+                                <em class="fa fa-angle-down nav-arrow"></em>
+                            	Organizations 
+                            </a>
+                            <ul><li><a href="organization-content.html">Messages</a></li></ul>
+                        </li>
+                        <li><a class="popup-link" href="#popup">Login</a></li>
+                        <li class="right-item"><a href="#">Post a Pet</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+    </div>
+</div>
+<!--header end -->
+
+
+<div class="for-desktop1">
+
+	<div class="for-desktop"><br><br></div>
+    
+    <div class="top-section clearfix">
+        <div class="row-fluid row-rtl">
+            <div class="span7">
+                <div class="profile-match-wrap clearfix">
+                	<div class="profile-match clearfix">	
+                    	<label>Your matching profile</label>
+                        
+                        <div class="c100 p50 small green">
+                        <span>50%</span>
+                        <div class="slice">
+                        <div class="bar"></div>
+                        <div class="fill"></div>
+                        </div>
+                        </div>
+                        
+                    </div>
+                    <div class="match-detail">
+                    	<p>3 mins to better matches:</p>
+                        <div class="quiz-wrap">
+                            <div class="quiz"><a href="#modal-pet" class="modal-link btn btn-orange radius-5">Take the Quiz!</a></div>
+                            <a href="#">Complete profile to 100%</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="span5">
+            	<h3 class="blue mb0-m">You have <span>262</span> matches and <a href="#"><span>0</span> favorites.</a></h3>
+            </div>
+        </div>
+        
+        <div class="for-desktop">
+            <div class="sort-outer clearfix">
+                <div class="left-sort">
+                    <div class="sort-section">
+                        <span>Sort</span>
+                    </div>
+                    <div class="dropdown-section">
+                        <a href="#" class="dropdown"><span>Best Match</span></a>
+                        <div class="dropdown-list min-width-150">
+                            <ul>
+                                <li><a href="#"><label>Best Match</label></a></li>
+                                <li><a href="#"><label>Favourites</label></a></li>
+                                <li><a href="#"><label>Location</label></a></li>
+                                <li><a href="#"><label>Recently Searched</label></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="display-section">
+                    <label>Display</label>
+                    <div class="view-section clearfix">
+                        <a href="#content-1" class="active"><span class="fa fa-navicon"></span> <em>List</em></a>
+                        <a href="#content-2"><span class="fa fa-map-marker"></span> <em>Map</em></a>
+                    </div>
+                </div>
+            </div><!--sort-outer -->
+        </div>    
+        
+    </div><!--top-section -->
+</div>    
+
+
+
+<div class="content-outer clearfix" id="float-conttainer-wrap">
+
+<div class="sidebar-pet-search">
+<div id="wrap-in">
+
+	<div class="filter-title clearfix">
+        <a href="#" class="mobile-filter"><span class="fa fa-navicon"></span></a>
+        <h2><span>Filter</span></h2>
+        <div class="sort-outer clearfix">
+            <div class="left-sort">
+                <div class="dropdown-section">
+                    <a class="dropdown" href="#"><span>Best Match</span></a>
+                    <div class="dropdown-list min-width-150">
+                        <ul>
+                            <li><a href="#"><label>Best Match</label></a></li>
+                            <li><a href="#"><label>Favourites</label></a></li>
+                            <li><a href="#"><label>Location</label></a></li>
+                            <li><a href="#"><label>Recently Searched</label></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="display-section">
+                <div class="view-section clearfix">
+                    <a class="active" href="#content-1"><span class="fa fa-navicon"></span> <em>List</em></a>
+                    <a href="#content-2"><span class="fa fa-map-marker"></span> <em>Map</em></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+	
+<div id="scrollbar1">
+    <div class="scrollbar"><div class="track"><div class="thumb"><div class="end"></div></div></div></div>
+    <div class="viewport">
+    <div class="overview">
+        
+        <div class="for-desktop">
+        	<h2>Filter your results <a href="#" class="mobile-filter"><span class="fa fa-navicon"></span></a></h2>
+        </div>
+        <div class="sidebar-pet-in">
+            <div class="search-outer">
+            	<div class="search-in">
+                    <a href="#" id="arrow" class="active"></a>
+                    <input type="text" placeholder="Keyword search" class="search-field">
+                    <input type="submit" value="" class="submit-search">
+                </div>
+            </div>
+            
+            <div class="sidebar-link">
+                <ul>
+                    <li class="active">
+                        <a href="#">
+                            <em class="fa fa-camera"></em> Display Preferences
+                            <span class="fa fa-caret-right"></span><span class="fa fa-caret-down"></span>
+                        </a>
+                        <div class="accordion-content" style="display:block;">
+                            <div class="distence-slider">
+                                <h3>Distance in miles</h3>
+                                <div id="slider-eq" class="slider-range">
+                                    <span>55</span>
+                                  </div>
+                                <div class="slide-num">
+                                    <span> 50</span> <span> 100</span> <span> 200</span>
+                                    <span> 500</span> <span> >1000</span>
+                                </div>
+                            </div>
+                            <h3>Show only pets with</h3>
+                            <ul>
+                                <li><input type="checkbox"> Photo/video (253)</li>
+                                <li><input type="checkbox"> Personality Profile (234)</li>
+                                <li>
+                                    <input type="checkbox"> High Risk/ Urgent (36) 
+                                    <span title="" data-content="More details." data-placement="left" data-trigger="hover" 
+                                    data-rel="popover" class="help-button">?</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="#" class="active">
+                            <em class="fa fa-eye"></em>  Physical Traits
+                            <span class="fa fa-caret-right"></span><span class="fa fa-caret-down"></span>
+                        </a>
+                        <div class="accordion-content">
+                            <div class="distence-slider">
+                                <h3>Age <span>(201)</span></h3>
+                                
+                                <div id="slider-twoface" class="slider-range"></div>  
+                                <div class="slide-num slide-num4">
+                                	<span title="" data-rel="tooltip" data-original-title="0-6 months"> Baby</span>
+                                    <span title="" data-rel="tooltip" data-original-title="6 months to 3 years"> Young</span>
+                                    <span class="third" title="" data-rel="tooltip" data-original-title="3 to 7 years"> Adult</span>
+                                    <span title="" data-rel="tooltip" data-original-title="7+"> Senior</span>
+                                </div>
+                            </div>
+                            <div class="distence-slider">
+                                <h3>Size <span>(155)</span></h3>
+                                
+                                <div id="slider-twoface2" class="slider-range"></div>  
+                                <div class="slide-num slide-num5 slide-size">
+                                	<span title="" data-rel="tooltip" data-original-title="<10 lbs"> Toy</span>
+                                    <span title="" data-rel="tooltip" data-original-title="10 to 25 lbs"> Small</span>
+                                    <span title="" data-rel="tooltip" data-original-title="25 to 45 lbs"> Medium</span>
+                                    <span class="w-40" title="" data-rel="tooltip" data-original-title="46 to 80 lbs"> Large</span>
+                                    <span title="" data-rel="tooltip" data-original-title=">80 lbs"> Giant</span>
+                                </div>
+                            </div>
+                            <div class="distence-slider">
+                                <h3>Gender <span>(262)</span></h3>
+                                <div class="radio-wrap">
+                                    <input type="radio" name="gender"> <span>Any</span>
+                                    <input type="radio" name="gender"> <span>Female</span>
+                                    <input type="radio" name="gender"> <span>Male only</span>
+                                </div>
+                            </div>
+                            <div class="distence-slider">
+                                <h3>Only show selected Breeds <span>(45)</span></h3>
+    
+                                <div class="inline">
+                                    <p>
+                                        <input type="text" name="tags" class="form-field-tags" value="Tag Input Control" 
+                                        placeholder="Enter tags ..."/>
+                                    </p>    
+                                </div>
+    
+                                <p>
+                                    Purebred only? (31) 
+                                    <span title="" data-content="More details." data-placement="left" data-trigger="hover" 
+                                    data-rel="popover" class="help-button">?</span>
+                                    <label>
+                                      <input type="checkbox" class="ace ace-switch" name="switch-field-a">
+                                      <span class="lbl"></span>
+                                    </label>
+                                </p>
+                            </div>
+                            <div class="distence-slider last">
+                                <h3>Coat Length <span>(135)</span></h3>
+                                <div id="slider-twoface3" class="slider-range"></div>  
+                                <div class="slide-num slide-num3">
+                                    <span>Short</span> <span class="right">Medium</span> <span class="right">Long</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <li>
+                        <a href="#">
+                            <em class="fa fa-home"></em> Household Needs
+                            <span class="fa fa-caret-right"></span><span class="fa fa-caret-down"></span>
+                        </a>
+                        <div class="accordion-content">
+                            <div class="distence-slider">
+                                <h3>Must be good with</h3>
+                                <div class="row-fluid">
+                                    <div class="span4"><input type="checkbox"><br> <span>Children <br>(212)</span></div>
+                                    <div class="span4"><input type="checkbox"><br> <span>Dogs <br>(197)</span></div>
+                                    <div class="span4"><input type="checkbox"><br> <span>Cats <br>(179)</span></div>
+                                </div>
+                            </div>
+                            <div class="distence-slider">
+                                <h3>Must be housetrained <span>(170)</span></h3>
+                                <p><em class="italic">This will exclude all puppies</em></p>
+                                <label>
+                                  <input type="checkbox" class="ace ace-switch" name="switch-field-1">
+                                  <span class="lbl"></span>
+                                </label>
+                            </div>
+                            <div class="distence-slider">
+                                <h3>Low Shedding Hypoallergenic<span>(12)</span></h3>
+                                <label>
+                                  <input type="checkbox" class="ace ace-switch" name="switch-field-2">
+                                  <span class="lbl"></span>
+                                </label>
+                                <span title="" data-content="More details." data-placement="left" data-trigger="hover" 
+                                data-rel="popover" class="help-button">?</span>
+                            </div>
+                            <div class="distence-slider last">
+                                <h3>Special needs pets acceptable?<span>(19)</span></h3>
+                                <label>
+                                  <input type="checkbox" class="ace ace-switch" name="switch-field-3">
+                                  <span class="lbl"></span>
+                                </label>
+                                <span title="" data-content="More details." data-placement="left" data-trigger="hover" 
+                                data-rel="popover" class="help-button">?</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <em class="fa fa-search"></em> By Adoption Group
+                            <span class="fa fa-caret-right"></span><span class="fa fa-caret-down"></span>
+                        </a>
+                        <div class="accordion-content">
+                            <div class="distence-slider last">
+                                <h3>Filter by Shelter, Rescue Group, Humane Society or Organization: <span>(191)</span></h3>
+                                <div class="inline">
+                                    <p>
+                                        <input type="text" name="tags" class="form-field-tags" value="Arkansas" 
+                                        placeholder="Enter tags ..."/>
+                                    </p>    
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        
+    </div>
+    </div>
+</div><!--scrollbar1 -->
+
+</div>    
+</div><!--sidebar-pet-search -->
+
+    
+    
+    
+	<div id="contents" class="exp">
+    	<div id="content-1" class="map-section content-commen" style="display:block;">
+        	<div class="boxes-wrap clearfix">
+                <div class="box">
+                    <div class="pet-section">
+                        <div class="pet-img"><a href="pet-detail.html"><img src="images/gallery-7.jpg" alt=""></a></div>
+                        <div class="pet-inner">
+                            <div class="percentage-section-wrap">
+                                <div class="percentage"><div class="percentage-inner" style="width:75%"></div></div>
+                                <span>75%</span>
+                            </div>
+                        	<h3>Sage</h3>
+                        	<div class="pet-sub-inner">
+                                <p><strong>Male</strong> | <strong>Adult</strong></p>
+                                <p>Distance: 12 miles</p>
+                            </div>
+                            <div class="pet-para">
+                                <p>
+                                    Loves attention and loves to cuddle. He is mellow, gentle and excellent with children, other
+                                    dogs, and even cats! He travels well and...
+                                </p>
+                            </div>
+                            <div class="social-secondary">
+                            	<a href="#" class="tw" title="Like"><span class="fa fa-thumbs-up"></span></a>
+                            	<a href="#" class="heart hr" title="Add to Favourite"><span class="fa fa-heart"></span></a>
+                                <div class="share-wrap">
+                                	<a href="#" class="fb share-link" title="Share"><span class="fa fa-share-alt"></span></a>
+                                    <div class="share-item">
+                                        <span class="fa fa-caret-up"></span>
+                                        <ul>
+                                            <li><a href="#"><span class="fa fa-facebook-square"></span> Facebook</a></li>
+                                            <li><a href="#"><span class="fa fa-twitter-square"></span> Twitter</a></li>
+                                            <li><a href="#"><span class="fa fa-google-plus-square"></span> Google +</a></li>
+                                            <li><a href="#"><span class="fa fa-envelope-square"></span> E-Mail</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>    
+                </div>
+                
+                <div class="box">
+                    <div class="pet-section">
+                        <div class="pet-img"><a href="pet-detail.html"><img src="images/pet-1.png" alt=""></a></div>
+                        <div class="pet-inner">
+                            <div class="percentage-section-wrap">
+                                <div class="percentage"><div class="percentage-inner" style="width:75%"></div></div>
+                                <span>75%</span>
+                            </div>
+                        	<h3>Sage</h3>
+                        	<div class="pet-sub-inner">
+                                <p><strong>Male</strong> | <strong>Adult</strong></p>
+                                <p>Distance: 12 miles</p>
+                            </div>
+                            <div class="pet-para">
+                                <p>
+                                    Loves attention and loves to cuddle. He is mellow, gentle and excellent with children, other
+                                    dogs, and even cats! He travels well and...
+                                </p>
+                            </div>
+                            <div class="social-secondary">
+                            	<a href="#" class="tw" title="Like"><span class="fa fa-thumbs-up"></span></a>
+                            	<a href="#" class="heart hr" title="Add to Favourite"><span class="fa fa-heart"></span></a>
+                                <div class="share-wrap">
+                                	<a href="#" class="fb share-link" title="Share"><span class="fa fa-share-alt"></span></a>
+                                    <div class="share-item">
+                                        <span class="fa fa-caret-up"></span>
+                                        <ul>
+                                            <li><a href="#"><span class="fa fa-facebook-square"></span> Facebook</a></li>
+                                            <li><a href="#"><span class="fa fa-twitter-square"></span> Twitter</a></li>
+                                            <li><a href="#"><span class="fa fa-google-plus-square"></span> Google +</a></li>
+                                            <li><a href="#"><span class="fa fa-envelope-square"></span> E-Mail</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>    
+                </div>
+                
+                <div class="box">
+                    <div class="pet-section">
+                        <div class="pet-img"><a href="pet-detail.html"><img src="images/pet-3.png" alt=""></a></div>
+                        <div class="pet-inner">
+                            <div class="percentage-section-wrap">
+                                <div class="percentage"><div class="percentage-inner" style="width:25%"></div></div>
+                                <span>25%</span>
+                            </div>
+                        	<h3>Sage</h3>
+                        	<div class="pet-sub-inner">
+                                <p><strong>Male</strong> | <strong>Adult</strong></p>
+                                <p>Distance: 12 miles</p>
+                            </div>
+                            <div class="pet-para">
+                                <p>
+                                    Loves attention and loves to cuddle. He is mellow, gentle and excellent with children, other
+                                    dogs, and even cats! He travels well and...
+                                </p>
+                            </div>
+                            <div class="social-secondary">
+                            	<a href="#" class="tw" title="Like"><span class="fa fa-thumbs-up"></span></a>
+                            	<a href="#" class="heart hr" title="Add to Favourite"><span class="fa fa-heart"></span></a>
+                                <div class="share-wrap">
+                                	<a href="#" class="fb share-link" title="Share"><span class="fa fa-share-alt"></span></a>
+                                    <div class="share-item">
+                                        <span class="fa fa-caret-up"></span>
+                                        <ul>
+                                            <li><a href="#"><span class="fa fa-facebook-square"></span> Facebook</a></li>
+                                            <li><a href="#"><span class="fa fa-twitter-square"></span> Twitter</a></li>
+                                            <li><a href="#"><span class="fa fa-google-plus-square"></span> Google +</a></li>
+                                            <li><a href="#"><span class="fa fa-envelope-square"></span> E-Mail</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>    
+                </div>
+                
+                <div class="box">
+                    <div class="pet-section">
+                        <div class="pet-img">
+                        	<a href="pet-detail.html"><img src="images/pet-4.png" alt=""></a>
+                            <div class="top-in"><a href="#"><em class="fa fa-bolt"></em> <span>Urgent</span></a></div>
+                        </div>
+                        <div class="pet-inner">
+                            <div class="percentage-section-wrap yellow-percent">
+                                <div class="percentage"><div class="percentage-inner" style="width:50%"></div></div>
+                                <span>50%</span>
+                            </div>
+                        	<h3>Sage</h3>
+                        	<div class="pet-sub-inner">
+                                <p><strong>Male</strong> | <strong>Adult</strong></p>
+                                <p>Distance: 12 miles</p>
+                            </div>
+                            <div class="pet-para">
+                                <p>
+                                    Loves attention and loves to cuddle. He is mellow, gentle and excellent with children, other
+                                    dogs, and even cats! He travels well and...
+                                </p>
+                            </div>
+                            <div class="social-secondary">
+                            	<a href="#" class="tw" title="Like"><span class="fa fa-thumbs-up"></span></a>
+                            	<a href="#" class="heart hr" title="Add to Favourite"><span class="fa fa-heart"></span></a>
+                                <div class="share-wrap">
+                                	<a href="#" class="fb share-link" title="Share"><span class="fa fa-share-alt"></span></a>
+                                    <div class="share-item">
+                                        <span class="fa fa-caret-up"></span>
+                                        <ul>
+                                            <li><a href="#"><span class="fa fa-facebook-square"></span> Facebook</a></li>
+                                            <li><a href="#"><span class="fa fa-twitter-square"></span> Twitter</a></li>
+                                            <li><a href="#"><span class="fa fa-google-plus-square"></span> Google +</a></li>
+                                            <li><a href="#"><span class="fa fa-envelope-square"></span> E-Mail</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>    
+                </div>
+                
+                <div class="box">
+                    <div class="pet-section">
+                        <div class="pet-img"><a href="pet-detail.html"><img src="images/pet-2.png" alt=""></a></div>
+                        <div class="pet-inner">
+                            <div class="percentage-section-wrap">
+                                <div class="percentage"><div class="percentage-inner" style="width:50%"></div></div>
+                                <span>50%</span>
+                            </div>
+                        	<h3>Sage</h3>
+                        	<div class="pet-sub-inner">
+                                <p><strong>Male</strong> | <strong>Adult</strong></p>
+                                <p>Distance: 12 miles</p>
+                            </div>
+                            <div class="pet-para">
+                                <p>
+                                    Loves attention and loves to cuddle. He is mellow, gentle and excellent with children, other
+                                    dogs, and even cats! He travels well and...
+                                </p>
+                            </div>
+                            <div class="social-secondary">
+                            	<a href="#" class="tw" title="Like"><span class="fa fa-thumbs-up"></span></a>
+                            	<a href="#" class="heart hr" title="Add to Favourite"><span class="fa fa-heart"></span></a>
+                                <div class="share-wrap">
+                                	<a href="#" class="fb share-link" title="Share"><span class="fa fa-share-alt"></span></a>
+                                    <div class="share-item">
+                                        <span class="fa fa-caret-up"></span>
+                                        <ul>
+                                            <li><a href="#"><span class="fa fa-facebook-square"></span> Facebook</a></li>
+                                            <li><a href="#"><span class="fa fa-twitter-square"></span> Twitter</a></li>
+                                            <li><a href="#"><span class="fa fa-google-plus-square"></span> Google +</a></li>
+                                            <li><a href="#"><span class="fa fa-envelope-square"></span> E-Mail</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>    
+                </div>
+                
+                
+                
+                <div class="box">
+                    <div class="pet-section">
+                        <div class="pet-img"><a href="pet-detail.html"><img src="images/pet-2.png" alt=""></a></div>
+                        <div class="pet-inner">
+                            <div class="percentage-section-wrap">
+                                <div class="percentage"><div class="percentage-inner" style="width:75%"></div></div>
+                                <span>75%</span>
+                            </div>
+                        	<h3>Sage</h3>
+                        	<div class="pet-sub-inner">
+                                <p><strong>Male</strong> | <strong>Adult</strong></p>
+                                <p>Distance: 12 miles</p>
+                            </div>
+                            <div class="pet-para">
+                                <p>
+                                    Loves attention and loves to cuddle. He is mellow, gentle and excellent with children, other
+                                    dogs, and even cats! He travels well and...
+                                </p>
+                            </div>
+                            <div class="social-secondary">
+                            	<a href="#" class="tw" title="Like"><span class="fa fa-thumbs-up"></span></a>
+                            	<a href="#" class="heart hr" title="Add to Favourite"><span class="fa fa-heart"></span></a>
+                                <div class="share-wrap">
+                                	<a href="#" class="fb share-link" title="Share"><span class="fa fa-share-alt"></span></a>
+                                    <div class="share-item">
+                                        <span class="fa fa-caret-up"></span>
+                                        <ul>
+                                            <li><a href="#"><span class="fa fa-facebook-square"></span> Facebook</a></li>
+                                            <li><a href="#"><span class="fa fa-twitter-square"></span> Twitter</a></li>
+                                            <li><a href="#"><span class="fa fa-google-plus-square"></span> Google +</a></li>
+                                            <li><a href="#"><span class="fa fa-envelope-square"></span> E-Mail</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>    
+                </div>
+                
+                <div class="box">
+                    <div class="pet-section">
+                        <div class="pet-img"><a href="pet-detail.html"><img src="images/pet-1.png" alt=""></a></div>
+                        <div class="pet-inner">
+                            <div class="percentage-section-wrap">
+                                <div class="percentage"><div class="percentage-inner" style="width:75%"></div></div>
+                                <span>75%</span>
+                            </div>
+                        	<h3>Sage</h3>
+                        	<div class="pet-sub-inner">
+                                <p><strong>Male</strong> | <strong>Adult</strong></p>
+                                <p>Distance: 12 miles</p>
+                            </div>
+                            <div class="pet-para">
+                                <p>
+                                    Loves attention and loves to cuddle. He is mellow, gentle and excellent with children, other
+                                    dogs, and even cats! He travels well and...
+                                </p>
+                            </div>
+                            <div class="social-secondary">
+                            	<a href="#" class="tw" title="Like"><span class="fa fa-thumbs-up"></span></a>
+                            	<a href="#" class="heart hr" title="Add to Favourite"><span class="fa fa-heart"></span></a>
+                                <div class="share-wrap">
+                                	<a href="#" class="fb share-link" title="Share"><span class="fa fa-share-alt"></span></a>
+                                    <div class="share-item">
+                                        <span class="fa fa-caret-up"></span>
+                                        <ul>
+                                            <li><a href="#"><span class="fa fa-facebook-square"></span> Facebook</a></li>
+                                            <li><a href="#"><span class="fa fa-twitter-square"></span> Twitter</a></li>
+                                            <li><a href="#"><span class="fa fa-google-plus-square"></span> Google +</a></li>
+                                            <li><a href="#"><span class="fa fa-envelope-square"></span> E-Mail</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>    
+                </div>
+                
+                <div class="box">
+                    <div class="pet-section">
+                        <div class="pet-img"><a href="pet-detail.html"><img src="images/pet-3.png" alt=""></a></div>
+                        <div class="pet-inner">
+                            <div class="percentage-section-wrap">
+                                <div class="percentage"><div class="percentage-inner" style="width:25%"></div></div>
+                                <span>25%</span>
+                            </div>
+                        	<h3>Sage</h3>
+                        	<div class="pet-sub-inner">
+                                <p><strong>Male</strong> | <strong>Adult</strong></p>
+
+                                <p>Distance: 12 miles</p>
+                            </div>
+                            <div class="pet-para">
+                                <p>
+                                    Loves attention and loves to cuddle. He is mellow, gentle and excellent with children, other
+                                    dogs, and even cats! He travels well and...
+                                </p>
+                            </div>
+                            <div class="social-secondary">
+                            	<a href="#" class="tw" title="Like"><span class="fa fa-thumbs-up"></span></a>
+                            	<a href="#" class="heart hr" title="Add to Favourite"><span class="fa fa-heart"></span></a>
+                                <div class="share-wrap">
+                                	<a href="#" class="fb share-link" title="Share"><span class="fa fa-share-alt"></span></a>
+                                    <div class="share-item">
+                                        <span class="fa fa-caret-up"></span>
+                                        <ul>
+                                            <li><a href="#"><span class="fa fa-facebook-square"></span> Facebook</a></li>
+                                            <li><a href="#"><span class="fa fa-twitter-square"></span> Twitter</a></li>
+                                            <li><a href="#"><span class="fa fa-google-plus-square"></span> Google +</a></li>
+                                            <li><a href="#"><span class="fa fa-envelope-square"></span> E-Mail</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>    
+                </div>
+                
+                <div class="box">
+                    <div class="pet-section">
+                        <div class="pet-img"><a href="pet-detail.html"><img src="images/pet-4.png" alt=""></a></div>
+                        <div class="pet-inner">
+                            <div class="percentage-section-wrap yellow-percent">
+                                <div class="percentage"><div class="percentage-inner" style="width:50%"></div></div>
+                                <span>50%</span>
+                            </div>
+                        	<h3>Sage</h3>
+                        	<div class="pet-sub-inner">
+                                <p><strong>Male</strong> | <strong>Adult</strong></p>
+                                <p>Distance: 12 miles</p>
+                            </div>
+                            <div class="pet-para">
+                                <p>
+                                    Loves attention and loves to cuddle. He is mellow, gentle and excellent with children, other
+                                    dogs, and even cats! He travels well and...
+                                </p>
+                            </div>
+                            <div class="social-secondary">
+                            	<a href="#" class="tw" title="Like"><span class="fa fa-thumbs-up"></span></a>
+                            	<a href="#" class="heart hr" title="Add to Favourite"><span class="fa fa-heart"></span></a>
+                                <div class="share-wrap">
+                                	<a href="#" class="fb share-link" title="Share"><span class="fa fa-share-alt"></span></a>
+                                    <div class="share-item">
+                                        <span class="fa fa-caret-up"></span>
+                                        <ul>
+                                            <li><a href="#"><span class="fa fa-facebook-square"></span> Facebook</a></li>
+                                            <li><a href="#"><span class="fa fa-twitter-square"></span> Twitter</a></li>
+                                            <li><a href="#"><span class="fa fa-google-plus-square"></span> Google +</a></li>
+                                            <li><a href="#"><span class="fa fa-envelope-square"></span> E-Mail</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>    
+                </div>
+                
+                <div class="box">
+                    <div class="pet-section">
+                        <div class="pet-img"><a href="pet-detail.html"><img src="images/pet-2.png" alt=""></a></div>
+                        <div class="pet-inner">
+                            <div class="percentage-section-wrap">
+                                <div class="percentage"><div class="percentage-inner" style="width:50%"></div></div>
+                                <span>50%</span>
+                            </div>
+                        	<h3>Sage</h3>
+                        	<div class="pet-sub-inner">
+                                <p><strong>Male</strong> | <strong>Adult</strong></p>
+                                <p>Distance: 12 miles</p>
+                            </div>
+                            <div class="pet-para">
+                                <p>
+                                    Loves attention and loves to cuddle. He is mellow, gentle and excellent with children, other
+                                    dogs, and even cats! He travels well and...
+                                </p>
+                            </div>
+                            <div class="social-secondary">
+                            	<a href="#" class="tw" title="Like"><span class="fa fa-thumbs-up"></span></a>
+                            	<a href="#" class="heart hr" title="Add to Favourite"><span class="fa fa-heart"></span></a>
+                                <div class="share-wrap">
+                                	<a href="#" class="fb share-link" title="Share"><span class="fa fa-share-alt"></span></a>
+                                    <div class="share-item">
+                                        <span class="fa fa-caret-up"></span>
+                                        <ul>
+                                            <li><a href="#"><span class="fa fa-facebook-square"></span> Facebook</a></li>
+                                            <li><a href="#"><span class="fa fa-twitter-square"></span> Twitter</a></li>
+                                            <li><a href="#"><span class="fa fa-google-plus-square"></span> Google +</a></li>
+                                            <li><a href="#"><span class="fa fa-envelope-square"></span> E-Mail</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>    
+                </div>
+                
+                <div class="box">
+                    <div class="pet-section">
+                        <div class="pet-img"><a href="pet-detail.html"><img src="images/pet-4.png" alt=""></a></div>
+                        <div class="pet-inner">
+                            <div class="percentage-section-wrap yellow-percent">
+                                <div class="percentage"><div class="percentage-inner" style="width:50%"></div></div>
+                                <span>50%</span>
+                            </div>
+                        	<h3>Sage</h3>
+                        	<div class="pet-sub-inner">
+                                <p><strong>Male</strong> | <strong>Adult</strong></p>
+                                <p>Distance: 12 miles</p>
+                            </div>
+                            <div class="pet-para">
+                                <p>
+                                    Loves attention and loves to cuddle. He is mellow, gentle and excellent with children, other
+                                    dogs, and even cats! He travels well and...
+                                </p>
+                            </div>
+                            <div class="social-secondary">
+                            	<a href="#" class="tw" title="Like"><span class="fa fa-thumbs-up"></span></a>
+                            	<a href="#" class="heart hr" title="Add to Favourite"><span class="fa fa-heart"></span></a>
+                                <div class="share-wrap">
+                                	<a href="#" class="fb share-link" title="Share"><span class="fa fa-share-alt"></span></a>
+                                    <div class="share-item">
+                                        <span class="fa fa-caret-up"></span>
+                                        <ul>
+                                            <li><a href="#"><span class="fa fa-facebook-square"></span> Facebook</a></li>
+                                            <li><a href="#"><span class="fa fa-twitter-square"></span> Twitter</a></li>
+                                            <li><a href="#"><span class="fa fa-google-plus-square"></span> Google +</a></li>
+                                            <li><a href="#"><span class="fa fa-envelope-square"></span> E-Mail</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>    
+                </div>
+                
+                <div class="box">
+                    <div class="pet-section">
+                        <div class="pet-img"><a href="pet-detail.html"><img src="images/pet-2.png" alt=""></a></div>
+                        <div class="pet-inner">
+                            <div class="percentage-section-wrap">
+                                <div class="percentage"><div class="percentage-inner" style="width:50%"></div></div>
+                                <span>50%</span>
+                            </div>
+                        	<h3>Sage</h3>
+                        	<div class="pet-sub-inner">
+                                <p><strong>Male</strong> | <strong>Adult</strong></p>
+                                <p>Distance: 12 miles</p>
+                            </div>
+                            <div class="pet-para">
+                                <p>
+                                    Loves attention and loves to cuddle. He is mellow, gentle and excellent with children, other
+                                    dogs, and even cats! He travels well and...
+                                </p>
+                            </div>
+                            <div class="social-secondary">
+                            	<a href="#" class="tw" title="Like"><span class="fa fa-thumbs-up"></span></a>
+                            	<a href="#" class="heart hr" title="Add to Favourite"><span class="fa fa-heart"></span></a>
+                                <div class="share-wrap">
+                                	<a href="#" class="fb share-link" title="Share"><span class="fa fa-share-alt"></span></a>
+                                    <div class="share-item">
+                                        <span class="fa fa-caret-up"></span>
+                                        <ul>
+                                            <li><a href="#"><span class="fa fa-facebook-square"></span> Facebook</a></li>
+                                            <li><a href="#"><span class="fa fa-twitter-square"></span> Twitter</a></li>
+                                            <li><a href="#"><span class="fa fa-google-plus-square"></span> Google +</a></li>
+                                            <li><a href="#"><span class="fa fa-envelope-square"></span> E-Mail</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>    
+                </div>
+                
+                
+            </div><!--boxes-wrap -->
+        </div><!--content-1 -->
+        
+        <div id="content-2" class="map-section content-commen">
+        	<img src="images/map.jpg" alt="">
+        </div>
+        
+        
+        <div class="breadcrumb-section clearfix">
+            <div class="sort-section">
+                <span>Sort</span>
+            </div>    
+            <div class="breadcrumb">
+                <ul class="clearfix">
+                    <li><a href="#">&laquo;</a></li>
+                    <li><a href="#">1</a></li>
+                    <li class="active"><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">6</a></li>
+                    <li><a href="#">&raquo;</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <br><br><br><br>
+        
+    </div><!--contents -->
+</div><!--content-outer -->
+
+
+<!--footer start -->
+<div id="footer-wrap">
+	<div class="content-width">
+        <footer id="footer" class="clearfix">
+        	<p> ©2014 Paws-Like-Me. All Rights Reserved</p>
+            <div class="footer-nav">
+            	<a href="privacy.html">Privacy Policy</a> <span>|</span>
+                <a href="privacy.html">Terms of use</a>
+            </div>
+            <div class="social-footer"><a href="#"><span class="fa fa-envelope"></span></a></div>
+            <div class="footer-logo"><img src="images/footer-logo.gif" alt=""></div>
+        </footer>
+    </div>
+</div>
+<!--footer end -->
+
+
+<div class="overlay"></div>
+<div class="popup-section" id="popup">
+	<div class="popup-header">
+    	<a href="index.html" class="cancel">x</a>
+        <h3>Paws-Like-Me Login</h3>
+    </div>
+	<div class="popup-inner">
+   	  <p>
+        	<label>Your Email Address</label>
+            <input type="text" class="field">
+        </p>
+        <div class="fl-outer clearfix">
+            <label class="fl">Password</label>
+            <a href="#" class="fr">Forget Password</a>
+        </div>
+        <p>
+            <input type="password" class="field">
+        </p>
+    </div>
+    <div class="popup-footer clearfix">
+    	<div class="fl"><a href="#" class="btn btn-success">Create Account</a></div>
+    	<div class="fr">
+        	<a href="#" class="btn btn-blue">OK</a>
+        	<a href="#" class="btn btn-danger">Cancel</a>
+        </div>    
+    </div>
+</div>
+
+
+
+<div class="modal-overlay"></div>
+<div id="modal-pet" class="modal-custom modal-pet">
+	<a class="close" href="#">x</a>
+    <div class="quiz-expand">
+        <div class="pet-title">
+            <div class="row-fluid">
+                <div class="span4"><h2>Pet Compatibilit Quiz</h2></div>
+                <div class="span8">
+                    <div class="progress progress-striped">
+                        <div class="bar bar-success" style="width: 70%;"><span>70%</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pet-subtitle">
+            <h4>Complete the quiz to get matches. Estimated 2-3 minuts</h4>
+            <a class="btn btn-blue arrow-left" href="#"><span class="fa fa-arrow-left"></span> Prev</a>
+            <a class="btn btn-blue arrow-right" href="#">Next <span class="fa fa-arrow-right"></span></a>
+        </div>
+        <div class="quiz-info">
+            <h3>Which (if any) of the following are regular residental of your household?</h3>
+            <ul>
+                <li><input type="checkbox"> <span>Youn children (&gt; 6 years)</span></li>
+                <li><input type="checkbox"> <span>Children 6-12</span></li>
+                <li><input type="checkbox"> <span>Adults</span></li>
+                <li><input type="checkbox"> <span>Seniors 65+</span></li>
+                <li><input type="checkbox"> <span>People with mental or physical disabilies</span></li>
+            </ul>
+        </div>
+        <div class="quiz-btn">
+            <a class="btn btn-blue" href="#">Get Pet Matches!</a>
+        </div>
+    </div>
+</div>
+
+
+</div><!--container-fluid -->
+
+<script src="js/jquery.js"></script>
+
+<script src="js/jquery.flexslider.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+
+
+
+<script type="text/javascript">
+  window.jQuery || document.write("<script src='js/assets/jquery.min.js'>" + "<" + "/script>");
+</script>
+<script type="text/javascript">
+	if('ontouchstart' in document.documentElement) document.write("<script src='js/assets/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+</script>
+        
+<script src="js/assets/bootstrap.min.js"></script>
+
+<!-- page specific plugin scripts -->
+<script src="js/assets/jquery-ui.min.js"></script>
+<script src="js/assets/jquery.ui.touch-punch.min.js"></script>
+
+
+<script src="js/assets/jquery-ui.custom.min.js"></script>
+<script src="js/assets/chosen.jquery.min.js"></script>
+<script src="js/assets/fuelux/fuelux.spinner.min.js"></script>
+<script src="js/assets/date-time/bootstrap-datepicker.min.js"></script>
+<script src="js/assets/date-time/bootstrap-timepicker.min.js"></script>
+<script src="js/assets/date-time/moment.min.js"></script>
+<script src="js/assets/date-time/daterangepicker.min.js"></script>
+<script src="js/assets/date-time/bootstrap-datetimepicker.min.js"></script>
+<script src="js/assets/bootstrap-colorpicker.min.js"></script>
+<script src="js/assets/jquery.knob.min.js"></script>
+<script src="js/assets/jquery.autosize.min.js"></script>
+<script src="js/assets/jquery.inputlimiter.1.3.1.min.js"></script>
+<script src="js/assets/jquery.maskedinput.min.js"></script>
+<script src="js/assets/bootstrap-tag.min.js"></script>
+<script src="js/assets/ace-elements.min.js"></script>
+<script src="js/assets/ace.min.js"></script>
+
+<script src="js/custom.js"></script>
+
+
+<script type="text/javascript" src="js/scrool-bar.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#scrollbar1').tinyscrollbar();
+	});
+	
+	$(".sidebar-link > ul > li > a, .mobile-filter, #arrow").on("click", function() {
+		window.setTimeout( function() { 
+			$('#scrollbar1').tinyscrollbar_update();
+		} , 400 );
+	});
+	
+</script>
+
+
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		// slider
+		$('.flexslider').flexslider({
+			animation: "fade",
+			controlNav: false,
+			start: function(slider){
+			  $('body').removeClass('loading');
+			}
+		});
+		
+		
+	//slider example
+	$( "#slider-twoface" ).slider({
+		range: true,
+		min: 0,
+		max: 3,
+		values: [ 0, 3 ]
+	});
+	$( "#slider-twoface2" ).slider({
+		range: true,
+		min: 0,
+		max: 4,
+		values: [ 0, 4 ]
+	});
+	$( "#slider-twoface3" ).slider({
+		range: true,
+		min: 0,
+		max: 2,
+		values: [ 0, 2 ]
+	});
+		
+		
+	})
+</script>
+
+</body>
+</html>

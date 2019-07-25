@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Account Setting</title>
+    
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../static/lib/bootstrap/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../static/lib/chosen/chosen.css"/>
+    <link rel="stylesheet" href="../static/css/base.css"/>
+    
+    <script type="text/javascript" src="../static/lib/jquery/jquery-1.9.1.js"></script>
+    <script type="text/javascript" src="../static/lib/jquery/jquery-ui-1.10.2.custom.min.js"></script>
+    <script type="text/javascript" src="../static/lib/chosen/custom-form-elements.js"></script>
+    <script type="text/javascript" src="../static/lib/bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../static/lib/chosen/chosen.jquery.js"></script>
+    <script type="text/javascript" src="../static/js/base.js"></script>
+    
+    <script type="text/javascript">
+		
+		$(function () {
+			$("#setting-nav a").click(function() {
+				var newContents = $(this).attr('href');
+				$(".setting-detail").hide();
+				$(newContents).show();
+				
+				$("#setting-nav li").removeClass('active');
+				$(this).parent().addClass('active');
+				return false;
+			});
+			
+			// Delete functionality (Edit profile)
+			$("#delete-accout").click(function () {
+				$(".account-edit-profile-wrap").hide();
+				$(".delete-section").show();
+				return false;
+			});
+			$("#cancel-delete-section").click(function () {
+				$(".delete-section").hide();
+				$(".account-edit-profile-wrap").show();
+				return false;
+			});
+			
+			// Hibernate section
+			$("#hiber-link a").click(function () {
+				var newVal = $(this).children('span').html();
+				$(".status-section span").html(newVal);
+				
+				$("#hiber-link a").removeClass('active');
+				$(this).addClass('active');
+				
+				return false;
+			});
+			
+			// Privacy tab
+			$(".privacy-nav a").click(function() {
+				var newPriContent = $(this).attr('href');
+				$(".privacy-content").hide();
+				$(newPriContent).show();
+				
+				$(".privacy-nav li a").removeClass('active');
+				$(this).addClass('active');
+				return false;
+			});	
+			
+			
+		});
+	
+	</script>
+    
+</head>
+
+<body>
+
+<div class="header-wrap">
+    <div class="container">
+        <header class="clearfix">
+            <div class="header-two">
+            <div id="navigation">
+                <ul class="clearfix">
+                    <li>
+                    	<a href="/"><img alt="" src="../static/images/img/icon-12.png"> <span>Home</span> <em class="caret-downword"></em></a>
+                    </li>
+                    <li>
+                    	<a href="/users/pre_conf_search/"><img alt="" src="../static/images/img/icon-2.png"><span>Earth</span> <em class="caret-downword"></em></a> 
+                    </li>
+                    <li>
+                    	<a href="/users/search_recipe/"><img alt="" src="../static/images/img/icon-1.png"><span>Saturn</span> <em class="caret-downword"></em></a> 
+                    </li>
+                    <li>
+                    	<a href="/users/shuttle/"><img alt="" src="../static/images/img/icon-9.png"><span>Shuttle</span> <em class="caret-downword"></em></a>
+                    </li>
+                    <li>
+                    	<a href="/users/chef_finder/"><img alt="" src="../static/images/img/icon-5.png"><span>Chef Finder</span> <em class="caret-downword"></em></a> 
+                    </li>
+                    <li>
+                    	<a href="#"><img alt="" src="../static/images/img/icon-7.png"><span>Chef Bidder</span> <em class="caret-downword"></em></a> 
+                    </li>
+                    <li>
+                    	<a href="#"><img alt="" src="../static/images/img/icon-4.png"><span>Folder</span> <em class="caret-downword"></em></a> 
+                    </li>
+                    <li>
+                    	<a href="#"><img alt="" src="../static/images/img/icon-10.png"><span>Atom</span> <em class="caret-downword"></em></a> 
+                    </li>
+                    <li class="active">
+                    	<a href="/users/logout/"><img alt="" src="../static/images/img/icon-8.png"><span>Logout</span> <em class="caret-downword"></em></a>
+                    	<ul class="sub-dropdown">
+                            <li>
+                            	<ul>
+                                	<li><a href="#"><span></span> <strong>Homepage</strong></a></li>
+                                	<li class="menu-profile"><a href="#"><span></span> <strong>My Profile</strong></a></li>
+                                    <li class="menu-social"><a href="#"><span></span> <strong>My Social NW / Slab </strong></a></li>
+                                    <li class="menu-atom"><a href="#"><span></span> <strong>Atom</strong></a></li>
+                                </ul>
+                                <ul>
+                                	<li class="menu-basket"><a href="#"><span></span> <strong>Activity Basket</strong></a></li>
+                                    <li class="menu-notification"><a href="#"><span></span> <strong>Notifications</strong></a></li>
+                                    <li class="menu-referrals"><a href="#"><span></span> <strong>Referrals</strong></a></li>
+                                </ul>
+                                <ul>
+                                	<li class="menu-setting"><a href="#"><span></span> <strong>Account Settings</strong></a></li>
+                                    <li class="menu-help"><a href="#"><span></span> <strong>Help</strong></a></li>
+                                    <li class="menu-logout"><a href="#"><span></span> <strong>Log Out</strong></a></li>
+                                </ul>
+                            </li>
+                    	</ul>
+                    </li>
+                    <li>
+                    <a href="#"><img alt="" src="../static/images/img/icon-6.png"><span>Help</span> <em class="caret-downword"></em></a> 
+                    </li>
+                </ul>
+            </div>
+            </div>
+        
+        
+        </header>
+    </div>
+</div><!-- header-wrap -->
+
+<div class="main-wrap">
+    <div class="container">
+        
+        <div class="account-setting-wrap">
+        
+        	<div class="account-seting-title">
+            	<div class="setting-top">
+                	<h2><img src="../static/images/img/account-setting.png" alt=""> Account &amp; Profile Settings</h2>
+                </div>
+                <div class="setting-nav" id="setting-nav">
+                	<ul class="clearfix">
+                    	<li class="active"><a href="#content-1">Edit Profile</a></li>
+                        <li><a href="#content-2">Slab</a></li>
+                        <li><a href="#content-3">Hibernate</a></li>
+                        <li><a href="#content-4">Privacy</a></li>
+                        <li><a href="#content-5">Notifications</a></li>
+                        <li><a href="#content-6">Landing</a></li>
+                        <li><a href="#content-7">Referrals</a></li>              
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="setting-detail" id="content-1" style="display:block;">
+            	<div class="setting-content">
+                	<div class="row-fluid account-edit-profile-wrap">
+                    	<div class="span5">
+                        	<h3><img src="../static/images/img/setting-lock.png" alt=""> <span>Change Password</span></h3>
+                            <div class="account-pass-form">
+                            	<div class="row-fluid">
+                                	<div class="span4"><p><label>Old Password</label></p></div>
+                                    <div class="span8"><p><input type="password" value="password" class="field"></p></div>
+                                </div>
+                                <div class="row-fluid">
+                                	<div class="span4"><p><label>New Password</label></p></div>
+                                    <div class="span8"><p><input type="password" value="password123" class="field"></p></div>
+                                </div>
+                                <div class="row-fluid">
+                                	<div class="span4"><p><label>Confirm Password</label></p></div>
+                                    <div class="span8">
+                                    	<p><input type="password" value="password123" class="field">
+                                        <span class="min-num">Minimum 6 characters</span></p>
+                                    </div>
+                                </div>
+                                <div class="save-wrap"><input type="submit" value="Save Settings" class="btn btn-success bold"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="span7">
+                        	<div class="account-edit-profile">
+                        		<h3><img src="../static/images/img/setting-user.png" alt=""> <span>Edit Profile</span></h3>
+                                <div class="link-section">
+                                    <div class="row-fluid">
+                                        <div class="span6">
+                                            <ul>
+                                                <li><a href="#">Edit Name, User Name, E-Mail Address</a></li>
+                                                <li><a href="#">Edit Contact Details</a></li>
+                                                <li><a href="#">Edit Address</a></li>
+                                                <li><a href="#">Edit Service Profile</a></li>
+                                                <li><a href="#">Edit Education and Qualifications Details</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="span6">
+                                            <ul>
+                                                <li><a href="#">Edit Licenses and Qualification Details</a></li>
+                                                <li><a href="#">Edit Language Skills</a></li>
+                                                <li><a href="#">Edit Service Preferences</a></li>
+                                                <li><a href="#">Edit Social N/W Links</a></li>
+                                                <li><a href="#">Edit Attachments</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="delete-account">
+                                    	<a href="#" id="delete-accout"><strong>Delete Account</strong></a>
+                                    </div>
+                                    
+                                </div>
+                            </div>    
+                        </div>
+                    </div><!--account-edit-profile-wrap -->
+                    
+                    <div class="delete-section">
+                    	<div class="delete-title">
+                        	<h2><img src="../static/images/img/del-icon.png" alt=""> <span>Delete Account</span></h2>
+                        </div>
+                        <div class="delete-info">
+                        	<h3>What it means when you delete your account:</h3>
+                            <ul>
+                            	<li>Deleting your account will delete your Social Networking Profile.</li>
+                                <li>All of your content will be deleted.</li>
+                                <li>
+                                	All of your information, including transaction history, account details, contacts, 
+                                    connections, followers and followings, etc will be deleted.
+                                </li>
+                                <li>
+                                	<strong>Your information will not be retrievable</strong> and CGX will not be liable for
+                                    any damages that you may experience now or in the future as a result from any data loss you 
+                                    experience from this action. 
+                                    <div>
+                                    	Please view our user and service provider privacy agreement including our terms 
+                                        and conditions by clicking the following  link  Legal . 
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="agree-section">
+                            	<div class="agree-check"><input type="checkbox"></div>
+                                I agree with the Terms & Conditions and want to delete my account.
+                            </div>
+                            <a href="#" class="btn btn-danger">Delete My Account</a> &nbsp;
+                            <a href="#" class="btn" id="cancel-delete-section">Cancel</a>
+                        </div>
+                    </div><!--delete-section -->
+                    
+                </div>
+            </div><!--content-1 -->
+            
+            <div class="setting-detail" id="content-2">
+            	<div class="setting-content">
+                	<div class="slab-content">
+                    	<div class="row-fluid">
+                        	<div class="span9">
+                            	<div class="list-info">
+                                	<ul>
+                                    	<li>
+                                        	<div class="list-check"><input type="radio" name="privacy"></div>
+                                        	<strong>Customers</strong>  (Only your past Customers Activities post on your slab)
+                                        </li>
+                                        <li>
+                                        	<div class="list-check"><input type="radio" name="privacy"></div>
+                                        	<strong>Followings</strong>  (Only those you are Following's Activities post on 
+                                            your slab)
+                                        </li>
+                                        <li>
+                                        	<div class="list-check"><input type="radio" name="privacy"></div>
+                                        	<strong>Connections</strong> (Only your Connections Activities post on your slab)
+                                        </li>
+                                        <li>
+                                        	<div class="list-check"><input type="radio" name="privacy"></div>
+                                        	<strong>Connections & Followings Activities</strong> (Only these Activities 
+                                            post on your slab)
+                                        </li>
+                                        <li>
+                                        	<div class="list-check"><input type="radio" name="privacy"></div>
+                                        	<strong>Customers & Followings Activities</strong> (Only these Activities 
+                                            post on your slab)
+                                        </li>
+                                        <li>
+                                        	<div class="list-check"><input type="radio" name="privacy"></div>
+                                        	<strong>Connections & Customers Activities</strong> (Only these Activities 
+                                            post on your slab)
+                                        </li>
+                                        <li>
+                                        	<div class="list-check"><input type="radio" name="privacy"></div>
+                                        	<strong>Connections, Customers & Followings Activities</strong> (Only these 
+                                            Activities post on your slab)
+                                        </li>
+                                        <li>
+                                        	<div class="list-check"><input type="radio" name="privacy"></div>
+                                        	<strong>Private</strong> (Only your Activities & Interactions post on your slab)
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="span3">
+                            	<div class="note-section">
+                                	<h3>Note: </h3>
+                                    <p>
+                                    	Customers with active orders you have accepted will be able to see all your 
+                                        contact details as well as your feedback by dish posted on your slab 
+                                        irrespective of your privacy settings
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="btn-outer"><a href="#" class="btn btn-success bold">Save Settings</a></div>
+                        
+                    </div><!--slab-content -->
+                </div>
+            </div><!--content-2 -->
+            
+            <div class="setting-detail" id="content-3">
+            	<div class="setting-content">
+                	<div class="hibernate-section">
+                    
+                    	<div class="status-section"><strong>Current:</strong> <span>Active</span></div>
+                        <div class="hibernate-link" id="hiber-link">
+                        	<ul class="clearfix">
+                            	<li>
+                                	<a href="#" class="active">
+                                    	<img src="../static/images/img/hibernate-1.png" alt="">
+                                        <img src="../static/images/img/hibernate-1-active.png" alt="" class="dark">
+                                        <span>Active</span>
+                                    </a>
+                                </li>
+                                <li>
+                                	<a href="#">
+                                    	<img src="../static/images/img/hibernate-2.png" alt="">
+                                        <img src="../static/images/img/hibernate-2-active.png" alt="" class="dark">
+                                        <span>Deep Sleep (1 Week)</span>
+                                    </a>
+                                </li>
+                                <li>
+                                	<a href="#">
+                                    	<img src="../static/images/img/hibernate-3.png" alt="">
+                                        <img src="../static/images/img/hibernate-3-active.png" alt="" class="dark">
+                                        <span>Dormant (Indefinite)</span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="cl"></div>
+                        </div>
+                        
+                        <input type="submit" value="Save Settings" class="btn btn-success bold">
+                        
+                    </div><!--hibernate-section -->
+                </div>
+            </div><!--content-3 -->
+            
+            <div class="setting-detail" id="content-4">
+            	<div class="setting-content">
+                	<div class="privacy-nav">
+                    	<ul class="clearfix">
+                        	<li>
+                            	<a href="#content-a" class="active">
+                            		<img src="../static/images/img/tick-gray.png" alt=""> 
+                                    <img src="../static/images/img/tick-white.png" alt="" class="dark"> <span>Everyone</span>
+                                </a>
+                            </li>
+                            <li><a href="#content-b">Private</a></li>
+                            <li><a href="#content-c">Default</a></li>
+                            <li><a href="#content-d">Black Ops</a></li>
+                        </ul>
+                        <div class="cl"></div>
+                    </div>
+                    <div class="privacy-content" id="content-a" style="display:block;">
+                    	<p>
+                        	Everyone can see your activity and your contact details including your secondary details such as 
+                            email address, generic location details, anyone can comment on your slab including those following you
+                        </p>
+                    </div>
+                    <div class="privacy-content" id="content-b">
+                    	<p>
+                        	Everyone can see your activity and your contact details including your secondary details such as 
+                            email address, generic location details, anyone can comment on your slab including those following you
+                        </p>
+                        <p>
+                        	Everyone can see your activity and your contact details including your secondary details such as 
+                            email address, generic location details, anyone can comment on your slab including those following you
+                        </p>
+                    </div>
+                    <div class="privacy-content" id="content-c">
+                    	<p>
+                        	Everyone can see your activity and your contact details including your secondary details such as 
+                            email address, generic location details.
+                        </p>
+                    </div>
+                    <div class="privacy-content" id="content-d">
+                    	<p>
+                        	Everyone can see your activity and your contact details including your secondary details such as 
+                            email address, generic location details, anyone can comment on your slab including those following you
+                        </p>
+                        <p>
+                        	Everyone can see your activity and your contact details including your secondary details such as 
+                            email address, generic location details, anyone can comment on your slab including those following you
+                        </p>
+                        <p>
+                        	Everyone can see your activity and your contact details including your secondary details such as 
+                            email address, generic location details, anyone can comment on your slab including those following you
+                        </p>
+                    </div>
+                    
+                    <a href="#" class="btn btn-success bold">Save Settings</a>
+                    
+                </div>
+            </div><!--content-4 -->
+            
+            <div class="setting-detail" id="content-5">
+            	<div class="setting-content">
+                	<div class="row-fluid">
+                    	5555555555555
+                    </div>
+                </div>
+            </div><!--content-5 -->
+            
+            <div class="setting-detail" id="content-6">
+            	<div class="setting-content">
+                	<div class="list-info">
+                        <ul>
+                            <li><div class="list-check"><input type="radio" name="landing"></div> <strong>Notifications</strong></li>
+                            <li><div class="list-check"><input type="radio" name="landing"></div> <strong>Profile</strong></li>
+                            <li><div class="list-check"><input type="radio" name="landing"></div> <strong>Foodle</strong></li>
+                            <li><div class="list-check"><input type="radio" name="landing"></div> <strong>Earth</strong></li>
+                            <li><div class="list-check"><input type="radio" name="landing"></div> <strong>Slab</strong></li>
+                            <li><div class="list-check"><input type="radio" name="landing"></div> <strong>Atom</strong></li>
+                            <li><div class="list-check"><input type="radio" name="landing"></div> <strong>Activity Folder</strong></li>
+                            <li><div class="list-check"><input type="radio" name="landing"></div> <strong>Saturn</strong></li>
+                        </ul>
+                    </div>
+                    <div class="btn-outer"><a href="#" class="btn btn-success bold">Save Settings</a></div>
+                </div>
+            </div><!--content-6 -->
+            
+            <div class="setting-detail" id="content-7">
+            	<div class="setting-content">
+                	<div class="invite-section">
+                    	<h2>Inviting your friends to Chef Galaxy!</h2>
+                        <input type="text" value="Leonwum@gmail.com" class="invite-field">
+                        <input type="submit" value="Invite" class="submit-invite">
+                    </div>
+                    
+                    <div class="table-contain">
+                    	<table class="table">
+                        	<tr>
+                            	<th>Invited</th>
+                                <th>Invitee</th>
+                                <th>Rank</th>
+                                <th>Location</th>
+                                <th>E-Mail</th>
+                            </tr>
+                            <tr>
+                            	<td>Dec 11th 2014</td>
+                                <td><a href="#">Waseem Jan</a></td>
+                                <td>Master Chef</td>
+                                <td>London, England</td>
+                                <td>Janer@gmail.com</td>
+                            </tr>
+                            <tr>
+                            	<td>Dec 10th 2014</td>
+                                <td><a href="#">Leon Wu</a></td>
+                                <td>Pending</td>
+                                <td>London, England</td>
+                                <td><a href="#">Leonwu@gmail.com</a></td>
+                            </tr>
+                            <tr>
+                            	<td>Dec 11th 2014</td>
+                                <td><a href="#">Waseem Jan</a></td>
+                                <td>Master Chef</td>
+                                <td>London, England</td>
+                                <td>Janer@gmail.com</td>
+                            </tr>
+                            <tr>
+                            	<td>Dec 10th 2014</td>
+                                <td><a href="#">Leon Wu</a></td>
+                                <td>Pending</td>
+                                <td>London, England</td>
+                                <td><a href="#">Leonwu@gmail.com</a></td>
+                            </tr>
+                        </table>
+                    </div><!--table-contain -->
+                </div>
+            </div><!--content-1 -->
+            
+        </div><!--account-setting-wrap -->
+        
+    </div>
+</div><!--main-wrap -->
+
+
+<div class="footer-wrap">
+    <div class="container">
+    	<footer>Copyright &copy; 2013 CGX LLC.</footer>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,399 @@
+@import "variables.scss";
+@import "mixins.scss";
+
+// Tracker Starts //
+
+.tracker{
+    padding: 96px 0 80px;
+    text-align: center;
+    &__title{
+        color: $light_black;
+        font-size: rems(40);
+        line-height: 47px;
+        font-weight: 500;
+        font-family: $basefamily;
+        margin: 0 0 57px;
+    }
+    .tracker-box{
+        &__img-wrap{
+            display: block;
+        	max-width: 192px;
+            margin: 0 auto 40px;
+        }
+        &__img{
+            width: 100%;
+        }
+        &__count{
+            color: $light_black;
+            font-size: 48px;
+            line-height: 57px;
+            font-weight: 400;
+            text-transform: uppercase;
+            font-family: $basefamily;
+            margin: 0 0 15px;
+        }
+        &__paragraph{
+            color: $light_black;
+            font-size: 16px;
+            line-height: 24px;
+            font-weight: 400;
+            font-family: $basefamily;
+            margin: 0;
+        }
+    }
+}
+
+// Tracker Starts  //
+
+
+// Track-points Starts  //
+
+.track-points {
+    padding-bottom: 122px;
+    .row {
+        padding-bottom: 64px;
+        &:last-child {
+            padding-bottom: 0;
+        }
+        .col-md-6:first-child {
+            padding-right: 45px;
+        }
+    }
+    &__hackers-img {
+        max-width: 480px;
+        margin: 0 auto;
+    }
+    .points-info {
+        padding-top: 56px;
+        text-align: left;
+        &__icon {
+            display: block;
+            background: $light_pink;
+            height: 64px;
+            width: 64px;
+            text-align: center;
+            border-radius: 50%;
+            margin-bottom: 24px;
+        }
+        &__icon-img{
+            font-size: 22px;
+            line-height: 64px;
+        }
+        &__title {
+            color: $light_black;
+            font-size: 24px;
+            line-height: 28px;
+            font-weight: 500;
+            font-family: $basefamily;
+            margin: 0 0 16px;
+        }
+        &__paragraph {
+            color: $light_black;
+            font-size: 16px;
+            line-height: 24px;
+            font-weight: 400;
+            font-family: $basefamily;
+            margin: 0;
+            max-width: 475px;
+        }
+    }
+    .points-info--right-aligned {
+        text-align: right;
+        padding-top: 56px;
+        .points-info__icon,
+        .points-info__paragraph
+        {
+            margin-left: auto;
+        }
+    }
+}
+
+// Track-points Ends  //
+
+
+// Truthfinder-wrap Starts //
+
+.truthfinder-wrap {
+    background: url(../images/btm-bg.jpeg) center no-repeat;
+    background-size: cover;
+    padding-top: 87px;
+    .limited-time {
+        padding-bottom: 63px;
+        .row {
+            .col-md-6:first-child {
+                padding: 0 18px 0 0;
+            }
+            .col-md-6:last-child {
+                padding: 0 0 0 18px;
+            }
+        }
+        &__title {
+            color: $white;
+            font-size: 40px;
+            line-height: 47px;
+            font-weight: 500;
+            text-align: center;
+            font-family: $basefamily;
+            margin: 0 0 49px;
+        }
+        &__time-box {
+            .time-box-top {
+                border-radius: 2px 2px 0 0;
+                background-color: rgba(20,40,81,0.8);
+                padding: 48px 40px 40px;
+                text-align: left;
+                &__title {
+                    color: $white;
+                    font-size: 24px;
+                    line-height: 28px;
+                    font-weight: 500;
+                    font-family: $basefamily;
+                    margin: 0 0 20px;
+                }
+                &__price {
+                    position: relative;
+                    margin-bottom: 15px;
+                }
+                &__regular-price {
+                    padding: 12px 24px;
+                    background: $white;
+                }
+                &__rp-text {
+                    color: $light_black;
+                    font-size: 14px;
+                    line-height: 24px;
+                    font-weight: 400;
+                    font-family: $basefamily;
+                    margin: 0;
+                }
+                &__rp-text-bold {
+                    color: $light_black;
+                    font-family: $basefamily;
+                    font-size: 16px;
+                    font-weight: 500;
+                    line-height: 24px;
+                }
+                &__disconted-price {
+                    padding: 16px 24px 12px;
+                    background: $green;
+                    text-align: left;
+                }
+                &__off {
+                    color: $white;
+                    font-family: $basefamily;
+                    font-size: 14px;
+                    font-weight: 500;
+                    letter-spacing: 0.5px;
+                    line-height: 17px;
+                    text-transform: uppercase;
+                    margin: 0;
+                }
+                &__rate {
+                    color: $white;
+                    font-family: $basefamily;
+                    font-size: 24px;
+                    font-weight: 500;
+                    line-height: 28px;
+                    margin: 0;
+                }
+                &__tracking-tech {
+                    position: absolute;
+                    right: 0;
+                    max-width: 186px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    z-index: 99;
+                }
+                &__billed-text {
+                    color: $light_blue;
+                    font-family: $basefamily;
+                    font-size: 12px;
+                    line-height: 14px;
+                }
+                &__like {
+                    font-size: 14px;
+                    margin-left: 3px;
+                }
+            }
+            .time-box-bottom {
+                position: relative;
+                border-radius: 0 0 2px 2px;
+                background: $white;
+                padding: 70px 40px 48px;
+                text-align: left;
+                &::before{
+                    content: "";
+                    position: absolute;
+                    height: 42px;
+                    width: 100%;
+                    top: 0;
+                    left: 0;
+                    background: $white;
+                    transform: translateY(-50%) skewY(-4.4deg);
+                }
+                &__title {
+                    color: $light_black;
+                    font-size: 24px;
+                    line-height: 28px;
+                    font-weight: 500;
+                    font-family: $basefamily;
+                    margin: 0 0 12px;
+                }
+                &__info {
+                    color: $light_black;
+                    font-size: 16px;
+                    line-height: 24px;
+                    font-weight: 400;
+                    font-family: $basefamily;
+                    margin: 0 0 27px;
+                }
+                &__lists {
+                    display: block;
+                    width: 100%;
+                    margin: 0 0 25px;
+                    font-size: 0;
+                    padding: 0;
+                    min-height: 69px;
+                }
+                &__list-point {
+                    display: inline-block;
+                    vertical-align: top;
+                    width: 50%;
+                    text-align: left;
+                    padding-bottom: 14px;
+                }
+                &__check {
+                    display: inline-block;
+                    vertical-align: top;
+                    font-size: 16px;
+                }
+                &__check--green{
+                    display: inline-block;
+                    vertical-align: top;
+                    font-size: 16px;
+                    color: $green;
+                }
+                &__list-info {
+                    display: inline-block;
+                    vertical-align: top;
+                    padding-left: 10px;
+                    color: $light_black;
+                    font-size: 14px;
+                    line-height: 17px;
+                    font-weight: 400;
+                    font-family: $basefamily;
+                    margin: 0;
+                }
+                &__get-link {
+                    display: block;
+                    max-width: 288px;
+                    border-radius: 4px;
+                    background: $green;
+                    color: $white;
+                    font-family: $basefamily;
+                    font-size: 18px;
+                    font-weight: 500;
+                    letter-spacing: 0.5px;
+                    line-height: 48px;
+                    text-align: center;
+                    text-transform: uppercase;
+                    margin-right: auto;
+                    transition: 0.2s all ease;
+                    &:hover,
+                    &:focus {
+                        text-decoration: none;
+                        background: $dark_green;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Truthfinder-wrap Ends //
+
+
+// Featured-in Starts //
+
+.featured-in{
+    padding-bottom: 62px;
+    &__title{
+    	color: $white;
+        font-size: 32px;
+        font-weight: 500;
+        line-height: 38px;
+        text-align: center;
+        font-family: $basefamily;
+        margin: 0 0 48px;
+    }
+    &__tags{
+        display: block;
+        padding: 0;
+        margin: 0;
+    }
+    &__tag{
+        max-width: 379px;
+        margin: 0 auto;
+        padding: 0 18px 28px;
+        display: inline-block;
+        vertical-align: top;
+        min-height: 60px;
+        line-height: 60px;
+    }
+}
+
+// Featured-in Ends //
+
+// Magazine Starts //
+
+.magazine{
+    background: rgba(20,40,81,0.4);
+    padding: 80px 0 75px;
+    text-align: center;
+    .carousel-inner{
+        width: 80%;
+        margin: 0 auto;
+    }
+    .carousel-caption{
+        position: static;
+        padding: 0;
+    }
+    &_tag{
+        max-width: 212px;
+        margin: 0 auto 26px;
+    }
+    &_info{
+        color: $white;
+        font-size: 18px;
+        line-height: 27px;
+        font-weight: 400;
+        text-align: center;
+        font-family: $basefamily;
+        max-width: 775px;
+        margin: 0 auto 16px;
+    }
+    &_info-red{
+        color: $red;
+    }
+    &_caption{
+        color: $light_blue;
+        font-style: italic;
+        font-size: 14px;
+        line-height: 17px;
+        font-weight: 400;
+        text-align: center;
+        font-family: $basefamily;
+        margin: 0;
+    }
+
+    .carousel-control{
+        background: none;
+        height: 60px;
+        width: 60px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+}
+
+// Magazine Ends //

@@ -1,0 +1,908 @@
+	* {padding: 0;margin: 0;}
+body,input,textarea {font-size: 16px;color: #4e4e4e;font-family: 'Raleway';}
+h1,h2,h3,h4,h5,h6 {color: #292929;margin: 0;}
+h1 {font-size: 34px;color: #262b6a;font-weight: 400;}
+h2 {font-size: 28px;color: #292929;font-weight: 400;}
+h3 {font-size: 27px;color: #262b6a;font-weight: 700;}
+h4 {font-size: 22px;color: #292929;}
+h5 {font-size: 15px;color: #262b6a;font-weight: 700;}
+img {max-width: 100%;height: auto;}
+a {color: #262b6a;outline: none;transition: 0.3s all ease;display: inline-block;}
+a:hover,a:focus {text-decoration: none;}
+p {margin: 0;}
+ul {margin: 0;padding: 0;list-style-type: none;}
+a.checkbox-img {margin-bottom: 20px;}
+/* Container */
+.container {max-width: 1144px;margin: 0 auto;}
+.container-large {max-width: 1517px;margin: 0 auto;padding: 0 55px;}
+/* Container End */
+.no-padding>[class*=col-] {padding: 0;}
+/* Body CSS End */
+/* raleway fonts section starts here */
+@font-face {font-family: 'Raleway';src: url('../fonts/Raleway-ExtraBoldItalic.woff2') format('woff2'),url('../fonts/Raleway-ExtraBoldItalic.woff') format('woff');font-weight: 800;font-style: italic;}
+@font-face {font-family: 'Raleway';src: url('../fonts/Raleway-ExtraLightItalic.woff2') format('woff2'),url('../fonts/Raleway-ExtraLightItalic.woff') format('woff');font-weight: 200;font-style: italic;}
+@font-face {font-family: 'Raleway';src: url('../fonts/Raleway-SemiBold.woff2') format('woff2'),url('../fonts/Raleway-SemiBold.woff') format('woff');font-weight: 600;font-style: normal;}
+@font-face {font-family: 'Raleway';src: url('../fonts/Raleway-Italic.woff2') format('woff2'),url('../fonts/Raleway-Italic.woff') format('woff');font-weight: normal;font-style: italic;}
+@font-face {font-family: 'Raleway';src: url('../fonts/Raleway-SemiBoldItalic.woff2') format('woff2'),url('../fonts/Raleway-SemiBoldItalic.woff') format('woff');font-weight: 600;font-style: italic;}
+@font-face {font-family: 'Raleway';src: url('../fonts/Raleway-BlackItalic.woff2') format('woff2'),url('../fonts/Raleway-BlackItalic.woff') format('woff');font-weight: 900;font-style: italic;}
+@font-face {font-family: 'Raleway';src: url('../fonts/Raleway-LightItalic.woff2') format('woff2'),url('../fonts/Raleway-LightItalic.woff') format('woff');font-weight: 300;font-style: italic;}
+@font-face {font-family: 'Raleway';src: url('../fonts/Raleway-ThinItalic.woff2') format('woff2'),url('../fonts/Raleway-ThinItalic.woff') format('woff');font-weight: 100;font-style: italic;}
+@font-face {font-family: 'Raleway';src: url('../fonts/Raleway-ExtraBold.woff2') format('woff2'),url('../fonts/Raleway-ExtraBold.woff') format('woff');font-weight: 800;font-style: normal;}
+@font-face {font-family: 'Raleway';src: url('../fonts/Raleway-Regular.woff2') format('woff2'),url('../fonts/Raleway-Regular.woff') format('woff');font-weight: normal;font-style: normal;}
+@font-face {font-family: 'Raleway';src: url('../fonts/Raleway-Thin.woff2') format('woff2'),url('../fonts/Raleway-Thin.woff') format('woff');font-weight: 100;font-style: normal;}
+@font-face {font-family: 'Raleway';src: url('../fonts/Raleway-BoldItalic.woff2') format('woff2'),url('../fonts/Raleway-BoldItalic.woff') format('woff');font-weight: bold;font-style: italic;}
+@font-face {font-family: 'Raleway';src: url('../fonts/Raleway-Black.woff2') format('woff2'),url('../fonts/Raleway-Black.woff') format('woff');font-weight: 900;font-style: normal;}
+@font-face {font-family: 'Raleway';src: url('../fonts/Raleway-Light.woff2') format('woff2'),url('../fonts/Raleway-Light.woff') format('woff');font-weight: 300;font-style: normal;}
+@font-face {font-family: 'Raleway';src: url('../fonts/Raleway-MediumItalic.woff2') format('woff2'),url('../fonts/Raleway-MediumItalic.woff') format('woff');font-weight: 500;font-style: italic;}
+@font-face {font-family: 'Raleway';src: url('../fonts/Raleway-Medium.woff2') format('woff2'),url('../fonts/Raleway-Medium.woff') format('woff');font-weight: 500;font-style: normal;}
+@font-face {font-family: 'Raleway';src: url('../fonts/Raleway-ExtraLight.woff2') format('woff2'),url('../fonts/Raleway-ExtraLight.woff') format('woff');font-weight: 200;font-style: normal;}
+@font-face {font-family: 'Raleway';src: url('../fonts/Raleway-Bold.woff2') format('woff2'),url('../fonts/Raleway-Bold.woff') format('woff');font-weight: bold;font-style: normal;}
+/* raleway fonts section ends here */
+/* Montserrat font section starts here*/
+@font-face {font-family: 'Montserrat';src: url('../fonts/Montserrat-Medium.woff2') format('woff2'),url('../fonts/Montserrat-Medium.woff') format('woff');font-weight: 500;font-style: normal;}
+@font-face {font-family: 'Montserrat Alternates';src: url('../fonts/MontserratAlternates-SemiBold.woff2') format('woff2'),url('../fonts/MontserratAlternates-SemiBold.woff') format('woff');font-weight: 600;font-style: normal;}
+@font-face {font-family: 'Montserrat Alternates';src: url('../fonts/MontserratAlternates-SemiBoldItalic.woff2') format('woff2'),url('../fonts/MontserratAlternates-SemiBoldItalic.woff') format('woff');font-weight: 600;font-style: italic;}
+@font-face {font-family: 'Montserrat';src: url('../fonts/Montserrat-SemiBold.woff2') format('woff2'),url('../fonts/Montserrat-SemiBold.woff') format('woff');font-weight: 600;font-style: normal;}
+@font-face {font-family: 'Montserrat';src: url('../fonts/Montserrat-BoldItalic.woff2') format('woff2'),url('../fonts/Montserrat-BoldItalic.woff') format('woff');font-weight: bold;font-style: italic;}
+@font-face {font-family: 'Montserrat';src: url('../fonts/Montserrat-Thin.woff2') format('woff2'),url('../fonts/Montserrat-Thin.woff') format('woff');font-weight: 100;font-style: normal;}
+@font-face {font-family: 'Montserrat';src: url('../fonts/Montserrat-LightItalic.woff2') format('woff2'),url('../fonts/Montserrat-LightItalic.woff') format('woff');font-weight: 300;font-style: italic;}
+@font-face {font-family: 'Montserrat';src: url('../fonts/Montserrat-ThinItalic.woff2') format('woff2'),url('../fonts/Montserrat-ThinItalic.woff') format('woff');font-weight: 100;font-style: italic;}
+@font-face {font-family: 'Montserrat Alternates';src: url('../fonts/MontserratAlternates-Italic.woff2') format('woff2'),url('../fonts/MontserratAlternates-Italic.woff') format('woff');font-weight: normal;font-style: italic;}
+@font-face {font-family: 'Montserrat';src: url('../fonts/Montserrat-ExtraBoldItalic.woff2') format('woff2'),url('../fonts/Montserrat-ExtraBoldItalic.woff') format('woff');font-weight: 800;font-style: italic;}
+@font-face {font-family: 'Montserrat Alternates';src: url('../fonts/MontserratAlternates-ExtraBoldItalic.woff2') format('woff2'),url('../fonts/MontserratAlternates-ExtraBoldItalic.woff') format('woff');font-weight: 800;font-style: italic;}
+@font-face {font-family: 'Montserrat Alternates';src: url('../fonts/MontserratAlternates-ExtraBold.woff2') format('woff2'),url('../fonts/MontserratAlternates-ExtraBold.woff') format('woff');font-weight: 800;font-style: normal;}
+@font-face {font-family: 'Montserrat';src: url('../fonts/Montserrat-Italic.woff2') format('woff2'),url('../fonts/Montserrat-Italic.woff') format('woff');font-weight: normal;font-style: italic;}
+@font-face {font-family: 'Montserrat';src: url('../fonts/Montserrat-Bold.woff2') format('woff2'),url('../fonts/Montserrat-Bold.woff') format('woff');font-weight: bold;font-style: normal;}
+@font-face {font-family: 'Montserrat';src: url('../fonts/Montserrat-Black.woff2') format('woff2'),url('../fonts/Montserrat-Black.woff') format('woff');font-weight: 900;font-style: normal;}
+@font-face {font-family: 'Montserrat';src: url('../fonts/Montserrat-ExtraLightItalic.woff2') format('woff2'),url('../fonts/Montserrat-ExtraLightItalic.woff') format('woff');font-weight: 200;font-style: italic;}
+@font-face {font-family: 'Montserrat';src: url('../fonts/Montserrat-ExtraBold.woff2') format('woff2'),url('../fonts/Montserrat-ExtraBold.woff') format('woff');font-weight: 800;font-style: normal;}
+@font-face {font-family: 'Montserrat Alternates';src: url('../fonts/MontserratAlternates-Black.woff2') format('woff2'),url('../fonts/MontserratAlternates-Black.woff') format('woff');font-weight: 900;font-style: normal;}
+@font-face {font-family: 'Montserrat Alternates';src: url('../fonts/MontserratAlternates-MediumItalic.woff2') format('woff2'),url('../fonts/MontserratAlternates-MediumItalic.woff') format('woff');font-weight: 500;font-style: italic;}
+@font-face {font-family: 'Montserrat Alternates ExLight';src: url('../fonts/MontserratAlternates-ExtraLightItalic.woff2') format('woff2'),url('../fonts/MontserratAlternates-ExtraLightItalic.woff') format('woff');font-weight: 200;font-style: italic;}
+@font-face {font-family: 'Montserrat Alternates';src: url('../fonts/MontserratAlternates-Light.woff2') format('woff2'),url('../fonts/MontserratAlternates-Light.woff') format('woff');font-weight: 300;font-style: normal;}
+@font-face {font-family: 'Montserrat Alternates';src: url('../fonts/MontserratAlternates-ThinItalic.woff2') format('woff2'),url('../fonts/MontserratAlternates-ThinItalic.woff') format('woff');font-weight: 100;font-style: italic;}
+@font-face {font-family: 'Montserrat Alternates';src: url('../fonts/MontserratAlternates-LightItalic.woff2') format('woff2'),url('../fonts/MontserratAlternates-LightItalic.woff') format('woff');font-weight: 300;font-style: italic;}
+@font-face {font-family: 'Montserrat';src: url('../fonts/Montserrat-Regular.woff2') format('woff2'),url('../fonts/Montserrat-Regular.woff') format('woff');font-weight: normal;font-style: normal;}
+@font-face {font-family: 'Montserrat';src: url('../fonts/Montserrat-Light.woff2') format('woff2'),url('../fonts/Montserrat-Light.woff') format('woff');font-weight: 300;font-style: normal;}
+@font-face {font-family: 'Montserrat Alternates';src: url('../fonts/MontserratAlternates-Thin.woff2') format('woff2'),url('../fonts/MontserratAlternates-Thin.woff') format('woff');font-weight: 100;font-style: normal;}
+@font-face {font-family: 'Montserrat Alternates';src: url('../fonts/MontserratAlternates-Regular.woff2') format('woff2'),url('../fonts/MontserratAlternates-Regular.woff') format('woff');font-weight: normal;font-style: normal;}
+@font-face {font-family: 'Montserrat Alternates ExLight';src: url('../fonts/MontserratAlternates-ExtraLight.woff2') format('woff2'),url('../fonts/MontserratAlternates-ExtraLight.woff') format('woff');font-weight: 200;font-style: normal;}
+@font-face {font-family: 'Montserrat Alternates';src: url('../fonts/MontserratAlternates-Bold.woff2') format('woff2'),url('../fonts/MontserratAlternates-Bold.woff') format('woff');font-weight: bold;font-style: normal;}
+@font-face {font-family: 'Montserrat';src: url('../fonts/Montserrat-ExtraLight.woff2') format('woff2'),url('../fonts/Montserrat-ExtraLight.woff') format('woff');font-weight: 200;font-style: normal;}
+@font-face {font-family: 'Montserrat Alternates';src: url('../fonts/MontserratAlternates-Medium.woff2') format('woff2'),url('../fonts/MontserratAlternates-Medium.woff') format('woff');font-weight: 500;font-style: normal;}
+@font-face {font-family: 'Montserrat Alternates';src: url('../fonts/MontserratAlternates-BoldItalic.woff2') format('woff2'),url('../fonts/MontserratAlternates-BoldItalic.woff') format('woff');font-weight: bold;font-style: italic;}
+@font-face {font-family: 'Montserrat';src: url('../fonts/Montserrat-SemiBoldItalic.woff2') format('woff2'),url('../fonts/Montserrat-SemiBoldItalic.woff') format('woff');font-weight: 600;font-style: italic;}
+@font-face {font-family: 'Montserrat';src: url('../fonts/Montserrat-MediumItalic.woff2') format('woff2'),url('../fonts/Montserrat-MediumItalic.woff') format('woff');font-weight: 500;font-style: italic;}
+@font-face {font-family: 'Montserrat';src: url('../fonts/Montserrat-BlackItalic.woff2') format('woff2'),url('../fonts/Montserrat-BlackItalic.woff') format('woff');font-weight: 900;font-style: italic;}
+@font-face {font-family: 'Montserrat Alternates';src: url('../fonts/MontserratAlternates-BlackItalic.woff2') format('woff2'),url('../fonts/MontserratAlternates-BlackItalic.woff') format('woff');font-weight: 900;font-style: italic;}
+/* typography */
+.sec-heading {
+    text-align: center;
+}
+.sec-heading h2 {
+    color: #222222;
+    font-size: 36px;
+    line-height: 1.3;
+    padding-bottom: 27px;
+    position: relative;
+}
+.sec-heading p {
+    font-size: 19px;
+    line-height: 1.5;
+    color: #a5a5a5;
+    font-weight: 400;
+}
+/* components */
+.sec-heading h2:after {
+    content: '';
+    background: url(../images/services-after.png)center center no-repeat;
+    background-size: cover;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 32px;
+    height: 3px;
+}
+input.custom-btn.btn {
+    height: 64px;
+    border: 0;
+    border-radius: 0;
+    width: 194px;
+    display: inline-block;
+    color: #fff;
+    font-weight: bold;
+}
+/* Montserrat font section ends here */
+/* header section starts here */
+header{position: fixed;width: 100%;z-index: 10;top:0;}
+/* header top starts here */
+.header-top{padding: 12px 0;border-bottom: 1px solid #eaeaea;}
+.header-top .contact-info{font-size: 0;}
+.header-top .contact-info a{background: #1d6633;color: #ffffff;font-weight: 800;font-size: 16px;line-height: 22px;border-radius: 4px;padding: 12px 40px 13px 40px;border: 1px solid transparent;transition: 0.3s all ease;text-transform: uppercase;}
+.header-top .contact-info a:hover{background: transparent;color: #1d6633;border: 1px solid #1d6633;}
+.header-top .contact-info a:last-child{background: #000000;margin-left: 13px;}
+.header-top .contact-info a:hover{background: transparent;color: #000000;border: 1px solid #000000;}
+/* header top ends here */
+/* header navbae section starts here */
+.header-navbar .navbar{padding: 7px 0;}
+.navbar-nav .nav-item .nav-link{color: #fff;font-weight: 800;font-size: 15px;line-height: 21px;padding: 13px 10px;text-align: center;}
+.navbar-nav .nav-item .nav-link:hover { color: #fff;  }
+.navbar-nav .nav-item {margin: 0px 20px;border-top: 1px solid transparent;transition: 0.2s all ease-in;position: relative;}
+.navbar-nav .nav-item:hover {border-top: 1px solid #fff;}
+/* header navbae section ends here */
+/* header scroll js section starts here */
+.darkHeader{background: #ffffff;border-bottom: 1px solid #000000;transition: 0.2s all ease-in;}
+.darkHeader .navbar-nav .nav-item .nav-link { color: #333333;  }
+.darkHeader .navbar-nav .nav-item:hover {border-top: 1px solid #333;}
+.darkHeader .navbar-nav .nav-item .nav-link:hover { color: #333;  }
+/* header scroll js section ends here */
+/* header section ends here */
+/* banner section starts here */
+/* banner-bg section starts here */
+.banner .banner-bg{position: relative; background: url('../images/banner-background.png')center center no-repeat;background-size: cover;height: 100vh;}
+.banner .banner-bg:after {content: ''; background: rgba(0, 0, 0, 0.5); position: absolute; left: 0; top: 0; width: 100%; height: 100%;}
+.banner .banner-bg .banner-text {
+    z-index: 1000;
+    position: absolute; 
+    bottom: 154px;
+    right: 70px;
+}
+.banner .banner-bg .banner-text h1{font-family: 'Montserrat';font-weight: 700;font-size: 45px;line-height: 95px;color: #fff;text-transform: uppercase;}
+.banner .banner-bg .banner-text h1 span{font-weight: 700;font-size: 51px;line-height: 57px;color: #fff;display: block;text-transform: uppercase;}
+.banner #carouselExampleControls .carousel-control-prev span{background-image: url(../images/previous.png);background-size: cover;background-position: center center;background-repeat: no-repeat;position: absolute;left: 0;width: 65px;height: 66px;}
+.banner #carouselExampleControls .carousel-control-next span{background-image: url(../images/next.png);background-size: cover;background-position: center center;background-repeat: no-repeat;position: absolute;right: 1px;width: 65px;height: 66px;}
+.carousel-control-prev,.carousel-control-next{opacity: 1;width:5%;}
+.carousel-control-next:focus, .carousel-control-next:hover, .carousel-control-prev:focus, .carousel-control-prev:hover{opacity: 1;}
+/* banner-bg section ends here */
+/* banner section ends here */
+/* content section starts here */
+/* winch-repairs section starts here */
+.content .winch-repairs{background: rgba(255, 255, 255, 0.5);padding: 66px 0;z-index: 1;position: relative;}
+.winch-repairs .dream-house{background: #ffffff;border: 1px solid #ececec;padding: 40px 19px 39px 95px;position: relative;}
+.winch-repairs .dream-house::after{content: '';width: 0;height: 0;border-bottom: 43px solid #1d6633;border-left: 43px solid transparent;position: absolute;right: 0;bottom: 0;}
+.winch-repairs .dream-house h6{font-size: 18px;line-height: 24px;color: #282828;font-weight: 500;padding-bottom: 5px;position: relative;}
+.winch-repairs .dream-house h6::before{content: '';background: url('../images/house.png')center center no-repeat;background-position: cover;position: absolute;top: -1px;left: -66px;width: 36px;height: 34px;}
+.winch-repairs .dream-house p{font-size: 14px;line-height: 20px;color: #777777;font-weight: 400;}
+.winch-repairs a{position: relative;}
+.winch-repairs .dream-house span{position: absolute;color: #ffffff;right : 9px;bottom: 8px;z-index: 1;display: block;line-height: 16px;}
+.winch-repairs .row .col-md-4:nth-child(2) h6::before{background: url('../images/paints.png')center center no-repeat;background-position: cover;}
+.winch-repairs .row .col-md-4:nth-child(3) h6::before{background: url('../images/box.png')center center no-repeat;background-position: cover;}
+/* winch-repairs section starts here */
+/* lennox-welding section starts here */
+.content .lennox-welding{padding: 99px 0px 116px 0; background-color: #f8f8f8;}
+.content .lennox-welding .lennox-info{padding-top: 5px;padding-right: 55px;}
+.content .lennox-welding .lennox-info h5{font-weight: 700;color: #515252;font-size: 35px;line-height: 41px;padding-bottom: 10px;}
+.content .lennox-welding p{color: #4c4c4c;font-size: 17px;line-height: 23px;font-weight: 400;padding-bottom: 40px;}
+.content .lennox-welding .lennox-info p:nth-child(3){padding-bottom: 0px;}
+.content .lennox-welding .lennox-info ul{font-size: 0px;display: flex;padding-bottom: 80px;}
+.content .lennox-welding .lennox-info ul li{padding-left: 63px;position: relative;padding-right: 25px;}
+.content .lennox-welding .lennox-info ul li:nth-child(1)::before{content: '';background: url('../images/diamond.png')center center no-repeat;background-size: cover;position: absolute;left: 0;top: -19px;display:inline-block;width: 53px;height: 53px;}
+.content .lennox-welding .lennox-info ul li:nth-child(2)::before{content: '';background: url('../images/trophy.png')center center no-repeat;background-size: cover;width: 53px;height: 53px;display: inline-block;position: absolute;left: 0;top: -19px;}
+.content .lennox-welding .lennox-info ul li:nth-child(3)::before{content: '';background: url('../images/experienced.png')center center no-repeat;background-size: cover;width: 53px;height: 53px;display: inline-block;position: absolute;left: 0;top: -19px;}
+.content .lennox-welding .lennox-info ul p{color: #333333;font-weight: 700;font-size: 14px;line-height: 20px;padding: 0;}
+.content .lennox-welding .lennox-info a{display: inline-block;border: 1px solid #2d7041;background: transparent;color:#000000;padding: 12px 40px;border-radius: 3px;font-weight: 800;text-transform: uppercase;transition: 0.2s all ease-in}
+.content .lennox-welding .lennox-info a:hover{background:#2d7041;color: #ffffff; }
+/* lennox-welding section ends here */
+/* our-services section starts here */
+.content .our-services .row{justify-content: center;}
+.content .our-services{background: #f8f8f8;text-align: center;padding-top: 115px; padding-bottom: 65px;}
+.we-do{font-weight: 800;color: #1d6633;font-size: 16px;line-height: 22px;padding-bottom: 5px;display: block;}
+.services{color: #222222;font-size: 36px;line-height: 41px;padding-bottom: 27px;position: relative;}
+.services::after{content: '';background: url('../images/services-after.png')center center no-repeat;background-size: cover;position: absolute;bottom: 10px;left: 0;right: 0;margin: 0 auto;width: 32px;height: 3px;}
+.content .our-services p{max-width: 770px;margin: 0 auto;font-size: 19px;line-height: 29px;color: #a5a5a5;font-weight: 400;}
+.content .our-services .Hydraulic-Troubleshooting{padding: 55px 15px 0; }
+.content .our-services .Hydraulic-Troubleshooting h4{color: #282828;font-size: 24px;line-height: 30px;font-weight: 800;padding-top: 35px;padding-bottom: 30px;}
+.content .our-services .Hydraulic-Troubleshooting p{color: #000000;padding: 0 20px 0 23px;font-size: 17px;line-height: 29px;min-height: 116px;}
+.content .our-services .Hydraulic-Troubleshooting a {
+    color: #282828;
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 800;
+}
+.content .our-services .Hydraulic-Troubleshooting a i{color: #1d6633;    font: normal normal normal 20px/1 FontAwesome;line-height: 20px;padding-left: 15px;}
+.content .our-services .Hydraulic-Troubleshooting a:hover{color: #333333}
+.content .our-services .Hydraulic-Troubleshooting a:hover i{color: #333333;}
+/* our-services section ends here */
+/* testimonials section starts here */
+.testominials{text-align: center;padding: 85px 50px 65px 50px;}
+.testominials .testimonional-info{padding-top: 100px;}
+.testimonional-info .info-outer{display: flex;text-align: left;}
+.testimonional-info .info-outer .info-img{width: 15%}
+.testimonional-info .info-outer .info-img img{width: 60px}
+.owl-carousel .owl-stage-outer{padding-top: 49px;}
+.testimonional-info .info-outer .info-text{width: 85%;padding-left: 25px;padding-right: 35px;position: relative;}
+.testimonional-info .info-outer .info-text::before{content: '';background:url('../images/p-before.png')center center no-repeat;background-size: cover;position: absolute;left: 25px;top: -49px;width: 36px;height: 25px;}
+.testimonional-info .info-outer .info-text p{color: #9b9b9b;font-size: 18px;line-height: 28px;padding-bottom: 20px;position: relative;}
+.testimonional-info .info-outer .info-text h6{color: #282828;font-weight: 800;font-size: 17px;line-height: 25px;}
+.testimonional-info .info-outer .info-text span{color: #616161;display: block;font-size: 16px;line-height: 25px;}
+.testominials .testimonional-info .owl-dots {padding-top: 55px;padding-bottom: 60px;}
+.testominials .testimonional-info .owl-dots button{margin-right: 10px;}
+.testominials .testimonional-info .owl-dots .owl-dot{width: 8px;height: 8px;background: #646464;border-radius: 8px;outline: unset;}
+.testominials .testimonional-info .owl-dots .owl-dot.active{width: 13px;height: 13px;background: #1d6633;border-radius: 9px;outline: unset;}
+.testominials .testimonional-info a{background: #000000;color: #ffffff;font-weight: 800;font-size: 16px;line-height: 22px;border-radius: 4px;padding: 12px 40px 13px 40px;border: 1px solid transparent;transition: 0.3s all ease;text-transform: uppercase;}
+.testominials .testimonional-info a:hover{background: transparent;color: #000000;border: 1px solid #000000;}
+/* testimonials section ends here */
+/* content section ends here */
+/* footer section starts here */
+/* addres info section starts here */
+footer .address-info{margin: 0 auto;background: #ffffff;margin-top: -148px;position: relative;}
+footer .address-info .our-support{padding: 70px 85px 60px 85px;border-right: 2px solid #dbdbdb;text-align: center;height:100%;}
+footer .address-info .col-md-4:last-child .our-support{border-right: 2px solid transparent;}
+footer .address-info .our-support img{min-height: 39px;object-fit: scale-down;}
+footer .address-info .our-support h5{font-weight: 700;color: #222222;font-size: 22px;line-height: 28px;padding-top: 18px;padding-bottom: 8px;}
+footer .address-info .our-support p{color: #9b9b9b;font-weight: 400;font-size: 17px;line-height: 27px;padding-bottom: 17px;}
+footer .address-info .our-support a{display: inline-block;font-weight: 800;color: #1d6633;font-weight: 16px;line-height: 22px;text-transform: uppercase;transition: 0.2s all ease-in;}
+footer .address-info .our-support a:hover{color: #9b9b9b;}
+/* addres info section ends here */
+/* footer-main section starts here */
+footer .footer-wrapper{background: #222222;padding-top: 255px;padding-bottom: 42px;z-index: -1;margin-top: -176px;}
+.footer-wrapper .lennox-supply p{color: #9b9b9b;font-weight: 400;font-size: 16px;line-height: 26px;padding-top: 50px;padding-bottom: 22px;}
+.footer-wrapper .lennox-supply ul li span{font-weight: 400;color: #ffffff;font-size: 16px;line-height: 26px;}
+.footer-wrapper .lennox-supply ul li a{color: #9b9b9b;font-weight: 400;font-size: 16px;line-height: 26px;}
+.footer-wrapper .lennox-services h5{color: #ffffff;font-size: 16px;line-height: 22px;font-weight: 800;text-transform: uppercase;padding-bottom: 40px;}
+.footer-wrapper .lennox-services ul li a{color: #9b9b9b;font-size: 16px;line-height: 32px;font-weight: 400;}
+.footer-wrapper .lennox-services p{color: #9b9b9b;font-size: 16px;line-height: 27px;padding-bottom: 30px;}
+.footer-wrapper .lennox-services form .form-button-text{width:94%;background: transparent;border: 0;padding: 10px 5px;color: #ffffff;outline: none;text-transform: capitalize;margin-bottom: 0;}
+.footer-wrapper .lennox-services form input::placeholder{color: #717171;font-size: 16px;line-height: 22px;}
+.footer-wrapper .lennox-services form .form-button{background: url('../images/form-btn.png')center center no-repeat;width: 13px;height: 7px;border: none;cursor: pointer;outline: none;}
+.footer-wrapper .lennox-services form{position:relative;max-width: 325px;margin-bottom: 30px;}
+.footer-wrapper .lennox-services .request{ background: #000000;color: #ffffff;font-weight: 800;font-size: 16px;line-height: 22px;border-radius: 4px;padding: 12px 40px 13px 40px;border: 1px solid transparent;transition: 0.3s all ease;text-transform: uppercase;}
+.footer-wrapper .lennox-services .request:hover{    background: transparent;color: #ffffff;border: 1px solid #ffffff;}
+.footer-wrapper .lennox-services .get-connected{padding-bottom: 30px;}
+/* footer-main section ends here */
+/* footer bottom section starts here */
+footer .footer-bottom{background: #1f1f1f;padding: 17px 0;}
+footer .footer-bottom .copyrights{padding-top: 12px;}
+footer .footer-bottom .copyrights p{color: #9b9b9b;font-weight: 400;font-size: 16px;line-height: 22px;}
+footer .footer-bottom .col-md-7{display: flex;justify-content: flex-end;}
+footer .footer-bottom .social-links ul{display: flex;}
+footer .footer-bottom .social-links ul li{padding: 0 6px;}
+footer .footer-bottom .social-links ul li a i{font: normal normal normal 14px/1 FontAwesome;color: #ffffff;background: transparent;padding: 15px 17px;background: #2b2b2b;transition: 0.2s all ease-in;}
+footer .footer-bottom .social-links ul li a:hover i{color: #000000;background: #ffffff;}
+/* footer bottom section ends here */
+/* footer section ends here */
+
+/* contect page start css */
+.contact-wrapper .sec-heading h2 {
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #4a4a4a;
+}
+.contact-wrapper {
+    padding: 85px 0;
+}
+.contact-form {
+    margin-top: 5px;
+}
+.contact-form .form-control {
+    border-radius: 0;
+    height: 64px;
+    background-color: #e7e7e7;
+    border: 0;
+    margin-bottom: 30px;
+    padding:25px;
+}
+.contact-form .form-control:focus {
+    box-shadow: none;
+    background-color: #e7e7e7;
+}
+.contact-form .form-control::placeholder {
+    color: #a3a3a3;
+}
+.contact-form textarea {
+    min-height: 264px;
+}
+.contact-form .custom-btn.btn {
+    background-color: #1d6633;
+    margin-top:40px;
+}
+.contact-page-banner.banner .banner-bg {
+    height: 70vh;
+}
+
+/* aboutus page css */
+.about-page-content.content .lennox-welding {
+    padding: 99px 0px 45px 0;
+}
+.alert-box h3 {
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 800;
+    text-align: center;
+    color:#fff;
+    line-height: 1.3;
+}
+.alert-box h3 > span {
+    color: #ffde00;
+}
+.alert-box {
+    padding: 30px 15px;
+    background-color: #1d6633;
+    border-radius: 3px;
+    margin-bottom: 50px;
+}
+.about_photo-gallery {
+    max-width: 938px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+.gallery_img-content {
+    font-size: 15px;
+    font-weight: bold;
+    color: #000;
+    text-align: center;
+    padding-top:20px;
+}
+.about_photo-gallery .col-md-4 {
+    margin-bottom: 40px;
+}
+.about_photo-gallery-img img {
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* sub pages css */
+.header-pages {background-color:#fff; border-bottom:1px solid #ddd}
+.sub-pages {
+    margin-top: 96px;
+}
+.page-content {
+    padding: 120px 0 80px;
+}
+.page-content p {
+    padding-bottom: 20px;
+    line-height: 1.5;
+    font-size: 18px;
+}
+.page-heading {
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-bottom: 25px;
+    font-size: 38px;
+}
+.page-sub_heading {
+    font-size: 30px;
+    margin: 15px 0 20px;
+}
+.footer-wrapper .lennox-services form .es_textbox {
+    padding: 0;
+}
+
+.footer-wrapper .lennox-services form .es_button {
+    padding: 0;
+    border: none;
+    cursor: pointer;
+    outline: none;
+	position: absolute;
+    right: 0;
+    z-index: 10;
+    top: 14px;
+}
+
+.footer-wrapper .lennox-services form .es_button input[type="submit"] {
+    background-color: transparent;
+    border: 0;
+	background: url(../images/form-btn.png)center center no-repeat;
+    width: 13px;
+    height: 20px;
+}
+
+.footer-wrapper .lennox-services form .es_textbox input {
+    background-color: transparent;
+    border: 0;
+    height: 50px;
+	width:100%;
+	border-bottom: 3px solid #2f2f2f;
+}
+.footer-wrapper .lennox-services form .es_textbox input:focus {
+    outline:none;
+}
+.header-inner-page .header-top {
+    background-color: #fff;
+}
+.header-inner-page .navbar-nav .nav-item .nav-link {
+color:#000;
+}
+.header-inner-page .navbar-nav .nav-item .nav-link:hover {
+color:#1d6633;
+}
+.header-inner-page .header-navbar {
+    border-bottom: 1px solid #ddd;
+}
+.sub-pages .search-form {
+    padding: 40px;
+    border: 1px solid #ddd;
+}
+.sub-pages .search-form .search-submit span {
+    font-size: 16px;
+     color: #fff;
+}
+.sub-pages .search-form label .screen-reader-text {
+    font-size: 22px;
+    padding-right: 20px;
+    font-weight: bold;
+}
+.sub-pages .search-form .search-submit {
+    padding: 8px 20px;
+    border: none;
+    background-color: #1d6633;
+   
+}
+.sub-pages .search-form  input[type="search"] {
+    padding: 7px;
+    border: 1px solid #ddd;
+}
+.lennox-location iframe{height: 546px;}
+
+.banner .carousel-indicators {
+    bottom: 60px;
+}
+.banner .carousel-indicators li {
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+}
+.testimonional-info .owl-nav button {
+    position: absolute;
+    top: 32%;
+    font-size: 38px!important;
+}
+.testimonional-info .owl-nav button.owl-next {
+    right: -35px;
+}
+.testimonional-info .owl-nav button.owl-prev {
+    left: -35px;
+}
+.testimonional-info .owl-nav button:focus {
+    outline: none;
+}
+.our-services>p>a {
+    display: inline-block;
+    border: 1px solid #2d7041;
+    background: transparent;
+    color: #000000;
+    padding: 12px 40px;
+    border-radius: 3px;
+    font-weight: 800;
+    text-transform: uppercase;
+    transition: 0.2s all ease-in;
+    margin-bottom: 70px;
+}
+.our-services>p>a:hover {
+   background: #2d7041;
+    color: #ffffff;
+}
+
+.navbar-nav .nav-item > .sub-menu {
+    position: absolute;
+    top: 54px;
+    left: 0;
+    background-color: white;
+    border: 1px solid #ddd;
+    padding-bottom:22px;
+    display: none;
+}
+
+.navbar-nav .nav-item >.sub-menu .nav-item {
+    margin:0;
+}
+.navbar-nav .nav-item >.sub-menu .nav-item .nav-link {
+    padding: 18px 26px 0;
+    margin: 0;
+    text-align: left;
+    color: #000;
+}
+.page-id-248 footer .address-info {
+    display: none;
+}
+.left-cotanct-column h4 {
+    margin-bottom: 7px;
+}
+.contact-email {
+    padding: 20px 0;
+}
+.address-info .col-md-6:last-child .our-support {
+    border-right: none;
+}
+.product-row .elementor-widget-container ul {
+    padding-left: 22px;
+}
+.product-row .elementor-widget-container ul li {
+    list-style-type: disc;
+    padding-bottom: 5px;
+    font-size: 18px;
+}
+.product-row .elementor-widget-container {
+    margin-top: 0!important;
+}
+.product-row {
+    padding-bottom: 60px;
+}
+
+/* responisve section starts here */
+@media (max-width: 1709px){
+    footer .address-info {
+        max-width: 90%;
+    }
+    footer .address-info .our-support {
+        padding: 70px 70px 60px 70px;
+    }
+}
+@media (max-width: 1367px){
+    footer .address-info {
+        max-width: 86%;
+    }
+    footer .address-info .our-support {
+        padding: 60px 50px 50px 50px;
+    }
+    footer .address-info .our-support p {
+        font-size: 16px;
+    }
+    footer .footer-bottom .copyrights p {
+        font-size: 15px;
+    }
+    .banner .banner-bg .banner-text {
+        padding-left: 100px;
+    }
+}
+@media (max-width: 1999px){
+    .header-top .contact-info a {
+        padding: 12px 25px 13px 25px;
+    }
+    .navbar-nav .nav-item .nav-link {
+        padding: 13px 6px;
+    }
+    footer .address-info .our-support {
+        padding: 45px 30px 25px 30px;
+    }
+    footer .address-info {
+        max-width: 740px;
+    }
+    .copyrights p {
+        font-size: 13px;
+    }
+    .winch-repairs a >div {
+        height: 100%;
+    }
+    .winch-repairs a {
+        height: 100%;
+        display: block;
+    }
+    section.lennox-location{height: 500px;}
+    section.lennox-location iframe{height: 500px;}
+
+}
+@media (max-width: 1024px){
+    .header-top .contact-info a {
+        padding: 12px 17px 13px 17px;
+    }
+    .content .lennox-welding .lennox-info ul li {
+        padding-left: 61px;
+        padding-right: 13px;
+    }
+    .banner .banner-bg .banner-text {
+        padding-top: 270px;
+    }
+    .content .our-services .Hydraulic-Troubleshooting {
+        padding: 45px 0 0;
+    }
+    .container-large {
+        padding: 0 15px;
+    }
+    .testimonional-info .info-outer .info-text {
+        width: 85%;
+        padding-left: 14px;
+        padding-right: 20px;
+    }
+    footer .footer-bottom .copyrights p {
+        font-size: 12px;
+    }
+    section.lennox-location{height: 450px;}
+    section.lennox-location iframe{height: 450px;}
+}
+
+@media (max-width: 991px){
+    .navbar-nav .nav-item .nav-link:hover, .navbar-nav .nav-item .nav-link {
+        color: #000;
+    }
+    .navbar-nav .nav-item > .sub-menu {
+        position: static;
+        border: 0;
+        padding-bottom: 15px;
+    }
+    .navbar-nav .nav-item >.sub-menu .nav-item .nav-link {
+        padding: 7px 20px 0;
+        text-align: center;
+    }
+    .header-navbar .navbar-collapse {
+        background-color: #fff;
+        padding: 20px 0;
+    }
+    .contact-info {
+        position: absolute;
+        right: 50px;
+        width: 100%;
+        top: -4px;
+        z-index: 0;
+    }
+    .header-navbar .navbar-toggler{
+        position: absolute;
+        top: -60px;
+        right: 0;
+    }
+    .header-navbar .navbar-toggler:focus{
+        outline:none;
+    }
+    .header-navbar .navbar {
+        padding: 0;
+    }
+    .sub-pages {
+        margin-top: 0;
+    }
+}
+@media (max-width: 899px){
+    .header-top .contact-info a {
+        padding: 12px 12px 13px 12px;
+        font-size: 14px;
+    }
+    .content .lennox-welding .lennox-info ul li {
+        padding-left: 0;
+        padding-right: 32px;
+        padding-top: 46px;
+    }
+    .banner .banner-bg .banner-text h1 {
+        font-size: 30px;
+    }
+    banner .banner-bg .banner-text h1 span {
+        font-size: 42px;
+        line-height: 42px;
+    }
+    .banner #carouselExampleControls .carousel-control-prev span, 
+    .banner #carouselExampleControls .carousel-control-next span {
+        width: 44px;
+        height: 48px;
+    }
+    .winch-repairs .dream-house {
+        padding: 30px 15px 29px 83px;
+        position: relative;
+    }
+    .content .lennox-welding {
+        padding: 50px 0px 78px 0;
+    }
+    .content .lennox-welding .lennox-info h5 {
+        font-size: 28px;
+        line-height: 1.4;
+    }
+    .content .lennox-welding .lennox-info ul {
+        padding-bottom: 46px;
+    }
+    .content .our-services {
+        padding-top: 80px;
+    }
+    .content .our-services> p {
+        width: 90%;
+    }
+    .content .our-services .Hydraulic-Troubleshooting p {
+        padding: 0;
+    }
+    .testominials {
+        text-align: center;
+        padding: 74px 30px 65px 30px;
+    }
+    .testominials .testimonional-info {
+        padding-top: 50px;
+    }
+    footer .address-info .our-support {
+        padding: 35px 15px 36px 15px;
+    }
+    footer .address-info .our-support p {
+        font-size: 15px;
+        line-height: 1.5;
+    }
+    footer .address-info .our-support h5 {
+        font-size: 18px;
+        line-height: 1.5;
+        padding-top: 30px;
+        padding-bottom: 10px;
+    }
+    footer .address-info .our-support a {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+    .footer-wrapper .lennox-services .request {
+        white-space: nowrap;
+        padding: 12px 30px 13px 30px;
+    }
+    .banner #carouselExampleControls .carousel-control-next span {
+        right: 0;
+    }
+}
+@media (max-width: 767px){
+    .product-row-reverse .elementor-row {
+        display: flex;
+    }
+    .product-row-reverse .elementor-row > div:first-child {
+        order: 2;
+    }
+    .testimonional-info .owl-nav button {
+        display: none;
+    }
+    .contact-info {
+        display: none;
+    }
+    .header-navbar .navbar {
+        padding: 0;
+    }
+    .banner .banner-bg .banner-text {
+        padding-left: 42px;
+    }
+    .banner .banner-bg .banner-text h1 {
+        font-size: 28px;
+        line-height: 1.5;
+    }
+    .content .lennox-welding .lennox-info ul li {
+        padding-left: 57px;
+        padding-right: 0;
+        padding-top: 0;
+    }
+    .content .lennox-welding .lennox-info ul li:nth-child(1)::before, 
+    .content .lennox-welding .lennox-info ul li:nth-child(2)::before, 
+    .content .lennox-welding .lennox-info ul li:nth-child(3)::before {
+        background-size: 44px;
+    }
+    footer .address-info {
+        max-width: 95%;
+        border: 2px solid #ddd;
+    }
+    footer .address-info .our-support {
+        border-right:0;
+        border-bottom: 2px solid #ddd;
+        height: 100%;
+    }
+    footer .footer-bottom .copyrights {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .social-links {
+        margin: 0 auto;
+    }
+    .lennox-welding .col-md-5 {
+        text-align: center;
+        margin-bottom:40px;
+    }
+    .lennox-welding {
+        text-align: center;
+    }
+    .content .lennox-welding .lennox-info ul {
+        justify-content: space-evenly;
+    }
+    .content .lennox-welding .lennox-info {
+        padding-right: 0;
+    }
+    footer .address-info {
+        margin-top: 0;
+    }
+    .col-md-4 .about_photo-gallery-img, .col-md-4 .gallery_img-content {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    .lennox-location {
+        height: 300px;
+    }
+    .lennox-location img {
+        height: 100%;
+        width:100%;
+        object-fit: cover;
+    }
+	.footer-wrapper .lennox-services h5 {
+    padding-bottom: 20px;
+    padding-top: 40px;
+}
+}
+@media (max-width: 479px){
+    .content .lennox-welding .lennox-info ul li {
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 40px;
+    }
+    .content .lennox-welding .lennox-info ul li:nth-child(1)::before, 
+    .content .lennox-welding .lennox-info ul li:nth-child(2)::before, 
+    .content .lennox-welding .lennox-info ul li:nth-child(3)::before {
+        left: 50%;
+        top: -19px;
+        transform: translateX(-50%);
+    }
+    .lennox-logo {
+        max-width: 125px;
+    }
+    .header-navbar .navbar-toggler {
+        top: -52px;
+        padding: 0.15rem .5rem;
+    }
+    .banner #carouselExampleControls .carousel-control-prev span, .banner #carouselExampleControls .carousel-control-next span {
+        display: none;
+    }
+    .banner .banner-bg .banner-text h1 span {
+        font-size: 32px;
+    }
+    .banner .banner-bg .banner-text h1 {
+        font-size: 23px;
+    }
+    .navbar-nav .nav-item .nav-link {
+        padding: 8px 9px;
+    }
+    .content .lennox-welding .lennox-info h5 {
+        font-size: 24px;
+    }
+    .content .lennox-welding p, .content .our-services .Hydraulic-Troubleshooting p {
+        font-size: 16px;
+        padding-bottom: 25px;
+    }
+    .services {
+        font-size: 30px;
+    }
+    .content .our-services p {
+        font-size: 17px;
+        line-height: 24px;
+    }
+    .content .our-services .Hydraulic-Troubleshooting h4 {
+        font-size: 22px;
+        padding-top: 25px;
+        padding-bottom: 14px;
+    }
+    .content .our-services .Hydraulic-Troubleshooting a {
+        margin-top: 5px;
+    }
+    .banner .banner-bg .banner-text {
+        padding-left: 5px;
+    }
+    .banner .banner-bg .banner-text {
+        right: auto;
+        transform: translateX(-50%);
+        left: 50%;
+        width: 100%;
+        text-align: center;
+    }
+    /* contact page responsive css */
+    .sec-heading h2 {
+        font-size: 30px;
+    }
+    .sec-heading p {
+        font-size: 16px;
+    }
+    .contact-form .form-control {
+        height: 50px;
+        margin-bottom: 15px;
+        padding: 16px;
+    }
+    .contact-form .custom-btn.btn {
+        margin-top: 24px;
+        height: 50px;
+    }
+    .contact-form textarea {
+        min-height: 150px;
+    }
+    .page-heading {
+        margin-bottom: 16px;
+        font-size: 32px;
+    }
+    .page-content p {
+        padding-bottom: 12px;
+        font-size: 16px;
+    }
+    .page-sub_heading {
+        font-size: 24px;
+        margin: 10px 0 14px;
+    }
+    .sub-pages .search-form {
+    padding: 20px 0;
+    border: 0;
+}
+.sub-pages .search-form label {
+    display: block;
+}
+}
+/* responisve section ends here */

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<!--[if IE 6]>
+<html id="ie6">
+<![endif]-->
+<!--[if IE 7]>
+<html id="ie7">
+<![endif]-->
+<!--[if IE 8]>
+<html id="ie8">
+<![endif]-->
+<!--[if !(IE 6) | !(IE 7) | !(IE 8)  ]><!-->
+<html>
+<!--<![endif]-->
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    
+    <title>Lewan Page</title>
+
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,900,900i" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
+    
+    <!--[if lte IE 8]>
+    <link type="text/css" rel="stylesheet" href="css/ie.css" />
+    <script type="text/javascript" src="js/modernizr.min.js"></script>
+    <![endif]-->
+    
+    <!--[if lte IE 6]>
+    <script type="text/javascript" src="js/belated.js"></script>
+    <![endif]-->
+    
+</head>
+
+<body class="lewan-page">
+
+<div id="container-fluid">
+
+    <!--header start -->
+    <div id="header-wrap">
+    	<div class="content-width">
+            <header id="header" class="clearfix">
+                <div id="logo">
+                    <a href="#"><img src="images/lewan-logo.png" alt=""></a>
+                </div>
+                <div id="header-right">
+                    <h1>
+                        <span class="txt-block">Instantly Quote </span>
+                        Custom Cable Lengths
+                    </h1>
+                </div>
+            </header>
+        </div>
+    </div>
+    <!--header end -->
+
+
+    <!--main start -->
+    <div id="main-wrap">
+    	<div class="content-width">
+            <div id="main">
+
+                <div class="wrapper clearfix">
+                    <aside id="sidebar">
+                        <h3>
+                            <span class="txt-block">Not Registered ?</span>
+                            Request Access Now 
+                        </h3>
+                        <div class="form-section">
+                            <input type="text" placeholder="Email (used for login)" class="text-field">
+                            <div class="error-wrap hide">
+                                <label class="error">Please fill above email address.</label>
+                            </div>
+                            <input type="text" placeholder="First Name" class="text-field">
+                            <div class="error-wrap hide">
+                                <label class="error">Please fill above field</label>
+                            </div>
+                            <input type="text" placeholder="Last Name" class="text-field">
+                            <div class="error-wrap hide">
+                                <label class="error">Please fill above field</label>
+                            </div>
+                            <input type="text" placeholder="Company" class="text-field">
+                            <div class="error-wrap hide">
+                                <label class="error">Please fill above field</label>
+                            </div>
+                            <input type="text" placeholder="Phone (Optional)" class="text-field">
+                            <div class="error-wrap hide">
+                                <label class="error">Please fill above field</label>
+                            </div>
+                            <input type="submit" value="submit" class="btn-blue btn-block">
+                            <div class="error-wrap hide">
+                                <label class="error">This User already exist</label>
+                            </div>
+
+                            <div class="loader hide">
+                                <img src="images/loader.svg" alt="">
+                            </div>
+                        </div>
+                    </aside><!--sidebar -->
+
+                    <section id="contents">
+                        <div class="section-outer clearfix">
+                            <div class="section">
+                                <div class="section-title">
+                                    <h4>
+                                        <span class="txt-block">Custom Fiber Jumpers</span>
+                                        OM1, OM2, OM3 & OM4
+                                    </h4>
+                                </div>
+                                <div class="photo-cable">
+                                    <img src="images/cable-1.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="section">
+                                <div class="section-title">
+                                    <h4>
+                                        <span class="txt-block"></span>
+                                        MTP/MPO
+                                    </h4>
+                                </div>
+                                <div class="photo-cable">
+                                    <img src="images/cable-2.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </section><!--contents -->
+                </div><!-- wrapper -->
+
+                <div class="login-seciton">
+                    <label>Already Registered? LogIn Now</label>
+                    <input type="text" placeholder="Email" class="field-login">
+                    <input type="submit" value="Login" class="login-btn popup-link">
+                    <div class="error-wrap hide">
+                        <label class="error">Please enter Email address.</label>
+                    </div>
+
+                    <div class="loader hide">
+                        <img src="images/loader.svg" alt="">
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <!--main end -->
+
+<!--footer start -->
+<div id="footer-wrap">
+    <div class="content-width">
+        <footer id="footer">
+            <span>Powered by:</span>
+            <a href="#"><img src="images/net-patibles.png" alt=""></a>
+        </footer>
+    </div>
+</div>
+<!--footer end -->
+
+</div><!--container-fluid -->
+
+
+<div class="overlay"></div>
+<div class="popup-section">
+    <div class="popup-top">
+        <h3>Success Message</h3>
+        <a href="#" class="close-popup close"></a>
+    </div>
+    <div class="popup-inner">
+        <h4>Thanks your Message has been sent successfully please check your email you received an email from us.</h4>
+    </div>
+    <div class="popup-bot">
+        <a href="#" class="cancel-link close">Cancel</a>
+    </div>
+</div>
+
+
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $(".popup-link").click(function () {
+            $("#container-fluid").addClass("blur-text");
+            $(".popup-section").show();
+            return false;
+        });
+        $(".close").click(function () {
+            $("#container-fluid").removeClass("blur-text");
+            $(".popup-section").hide();
+            return false;
+        });
+    })
+</script>
+
+
+</body>
+</html>

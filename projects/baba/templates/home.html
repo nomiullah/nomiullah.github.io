@@ -1,0 +1,1775 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Home</title>
+    
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../static/lib/bootstrap/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../static/lib/chosen/chosen.css"/>
+    <link rel="stylesheet" href="../static/css/base.css"/>
+    
+    <script type="text/javascript" src="../static/lib/jquery/jquery-1.9.1.js"></script>
+    <script type="text/javascript" src="../static/lib/jquery/jquery-ui-1.10.2.custom.min.js"></script>
+    <script type="text/javascript" src="../static/lib/chosen/custom-form-elements.js"></script>
+    <script type="text/javascript" src="../static/lib/bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../static/lib/chosen/chosen.jquery.js"></script>
+    <script type="text/javascript" src="../static/js/base.js"></script>
+    
+    <script type="text/javascript">
+		$(function () {
+			
+			
+			// Dropdown for arrow down navigaiton
+			$(".dropdown-nav > li").hover(function() {
+				$(this).children('ul').show();
+			}, function () {
+				$(this).children('ul').hide();
+			});
+			
+			$(".dropdown-nav li ul a").click(function() {
+				var newVal = $(this).html();
+				$(this).parents('ul').prev().children().html(newVal);
+				$(this).parent().parent('ul').hide();
+				return false;
+			});
+			
+			// Dropdown activity
+			$(".activity-menu > li").hover(function() {
+				$(this).children('ul').show();
+			}, function () {
+				$(this).children('ul').hide();
+			});
+			
+			$(".activity-menu li ul a").click(function() {
+				var newVal = $(this).html();
+				$(this).parents('ul').prev().children().html(newVal);
+				$(this).parent().parent('ul').hide();
+				return false;
+			});
+			
+			// Show /hide
+			$(".cancel-compose").click(function() {
+				$(this).parents('.popup-hide-on-close').fadeOut();
+				return false;
+			});
+			$(".close-sub-popup").click(function() {
+				$(this).parent('.popup-hide-on-close').fadeOut();
+				return false;
+			});
+			
+			$(".nav-show a").click(function() {
+				var newContents = $(this).attr('href');
+				$(newContents).show();
+				return false;
+			});
+		});
+	</script>
+    
+    
+    <!--slider-new-files -->
+    <link href="../static/slider/css/mightyslider.css" rel="stylesheet">
+    <link href="../static/slider/css/custom.css" rel="stylesheet">
+    
+	<script src="../static/slider/js/jquery.easing-1.3.pack.js" type="text/javascript"></script>
+    <script src="../static/slider/js/jquery.mousewheel.js" type="text/javascript"></script>
+    <script src="../static/slider/js/mightyslider.min.js" type="text/javascript"></script>
+    <script src="../static/slider/js/slider.js" type="text/javascript"></script>
+    
+    <script src="../static/slider/js/jquery.bxslider.min.js"></script>
+    
+    <script type="text/javascript">
+		$(document).ready(function(){
+			$('.bxslider').bxSlider({
+				auto: true,
+				pager:false,
+				infiniteLoop: false,
+				hideControlOnEnd: true,
+				
+				onSlideAfter: function() {
+					if ( $(".bx-next").hasClass('disabled') ) {
+						$(".bx-wrap").addClass('bx-wrap-last');
+					}
+					else{
+						$(".bx-wrap").removeClass('bx-wrap-last');
+					}
+					
+					if ( $(".bx-prev").hasClass('disabled') ) {
+						$(".bx-wrap").addClass('bx-wrap-first');
+					}
+					else{
+						$(".bx-wrap").removeClass('bx-wrap-first');
+					}
+					
+				},
+				
+			});
+		});
+	</script>
+    
+    
+</head>
+
+<body>
+
+<div class="header-wrap">
+    <div class="container">
+        <header class="clearfix">
+            <div class="header-two">
+            <div id="navigation">
+                <ul class="clearfix">
+                    <li>
+                    	<a href="/"><img alt="" src="../static/images/img/icon-12.png"> <span>Home</span> <em class="caret-downword"></em></a>
+                    </li>
+                    <li>
+                    	<a href="/users/pre_conf_search/"><img alt="" src="../static/images/img/icon-2.png"><span>Earth</span> <em class="caret-downword"></em></a> 
+                    </li>
+                    <li>
+                    	<a href="/users/search_recipe/"><img alt="" src="../static/images/img/icon-1.png"><span>Saturn</span> <em class="caret-downword"></em></a> 
+                    </li>
+                    <li>
+                    	<a href="/users/shuttle/"><img alt="" src="../static/images/img/icon-9.png"><span>Shuttle</span> <em class="caret-downword"></em></a>
+                    </li>
+                    <li>
+                    	<a href="/users/chef_finder/"><img alt="" src="../static/images/img/icon-5.png"><span>Chef Finder</span> <em class="caret-downword"></em></a> 
+                    </li>
+                    <li>
+                    	<a href="#"><img alt="" src="../static/images/img/icon-7.png"><span>Chef Bidder</span> <em class="caret-downword"></em></a> 
+                    </li>
+                    <li>
+                    	<a href="#"><img alt="" src="../static/images/img/icon-4.png"><span>Folder</span> <em class="caret-downword"></em></a> 
+                    </li>
+                    <li>
+                    	<a href="#"><img alt="" src="../static/images/img/icon-10.png"><span>Atom</span> <em class="caret-downword"></em></a> 
+                    </li>
+                    <li class="active">
+                    	<a href="/users/logout/"><img alt="" src="../static/images/img/icon-8.png"><span>Logout</span> <em class="caret-downword"></em></a>
+                    	<ul>
+                            <li>
+                                <a href="/users/profile/2/">
+                            <span>Profile</span>
+                            </a>
+                            </li>
+                            <li>
+                                <a href="/users/service_provider_profile/2/"> <span>Service Profile</span></a>
+                            </li>
+                            <li>
+                                <a href="/users/edit/2/"><span>Edit</span></a> 
+                            </li>
+                    	</ul>
+                    </li>
+                    <li>
+                    <a href="#"><img alt="" src="../static/images/img/icon-6.png"><span>Help</span> <em class="caret-downword"></em></a> 
+                    </li>
+                </ul>
+            </div>
+            </div>
+        
+        
+        </header>
+    </div>
+</div><!-- header-wrap -->
+
+<div class="main-wrap">
+    <div class="container">
+        
+        <div class="profile-nav">
+        	<ul class="clearfix">
+            	<li class="active">
+                	<a href="#">
+                    	<img src="../static/images/img/profile-icon-1.png" alt="">
+                        <img src="../static/images/img/profile-icon-1-dark.png" alt="" class="dark-img">
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li>
+                	<a href="#">
+                    	<img src="../static/images/img/profile-icon-2.png" alt="">
+                        <img src="../static/images/img/profile-icon-2-dark.png" alt="" class="dark-img">
+                        <span>Profile</span>
+                    </a>
+                </li>
+                <li>
+                	<a href="#">
+                    	<img src="../static/images/img/profile-icon-3.png" alt="">
+                        <img src="../static/images/img/profile-icon-3-dark.png" alt="" class="dark-img">
+                        <span>Social N/W</span>
+                    </a>
+                </li>
+                <li>
+                	<a href="#">
+                    	<img src="../static/images/img/profile-icon-4.png" alt="">
+                        <img src="../static/images/img/profile-icon-4-dark.png" alt="" class="dark-img">
+                        <span>Foodle</span>
+                    </a>
+                </li>
+                <li>
+                	<a href="#">
+                    	<img src="../static/images/img/profile-icon-5.png" alt="">
+                        <img src="../static/images/img/profile-icon-5-dark.png" alt="" class="dark-img">
+                        <span>Atom</span>
+                    </a>
+                </li>
+                <li>
+                	<a href="#">
+                    	<img src="../static/images/img/profile-icon-6.png" alt="">
+                        <img src="../static/images/img/profile-icon-6-dark.png" alt="" class="dark-img">
+                        <span>People</span>
+                    </a>
+                </li>
+                <li>
+                	<a href="#">
+                    	<img src="../static/images/img/profile-icon-7.png" alt="">
+                        <img src="../static/images/img/profile-icon-7-dark.png" alt="" class="dark-img">
+                        <span>Notifications</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        
+        
+        <div class="top-wrap">
+        	<div class="row-fluid">
+            	<div class="span3">
+                	<div class="main-section main-section-dark m-h-360">
+                    	<div class="in">
+                        	<div class="home-left">
+                            	<div class="row-fluid mb-5">
+                                	<div class="span2"><img src="../static/images/img/profile-photo.png" alt=""></div>
+                                    <div class="span10">
+                                    	<h2>Liang Wu <a href="#"><img src="../static/images/img/def-icon-1.png" alt=""></a></h2>
+                                        <em>@Leon Wu</em>
+                                    </div>
+                                </div>
+                                <p>The Best Chef in all of East London and that's a fact! <a href="#"><img src="../static/images/img/edit.png" alt=""></a></p>
+                            </div>
+                            
+                            <div class="field-wrap">
+                            	<div class="row-fluid">
+                                	<div class="span2"><img src="../static/images/img/field-chef-sub-4.png" alt=""></div>
+                                    <div class="span10"><h2>Field Chefs</h2></div>
+                                </div>
+                            </div>
+                            
+                            <div class="desc-section">
+                                <ul>
+                                    <li>
+                                        <img alt="" src="../static/images/img/sm-1.png">
+                                        <span>Feedback Score</span>	<strong>90.8%</strong>
+                                        <div class="cl"></div>
+                                    </li>
+                                    <li>
+                                        <img alt="" src="../static/images/img/sm-2.png">
+                                        <span>Reliability Score</span>	<strong>85.0%</strong>
+                                        <div class="cl"></div>
+                                    </li>
+                                    <li>
+                                        <img alt="" src="../static/images/img/sm-3.png">
+                                        <span>Activity</span>	<strong>1,038</strong>
+                                        <div class="cl"></div>
+                                    </li>
+                                    <li>
+                                        <img alt="" src="../static/images/img/sm-4.png">
+                                        <span>Following</span>	<strong>120</strong>
+                                        <div class="cl"></div>
+                                    </li>
+                                    <li>
+                                        <img alt="" src="../static/images/img/sm-5.png">
+                                        <span>Followers</span>	<strong>45,098</strong>
+                                        <div class="cl"></div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="span9">
+                	<div class="main-section main-section-dark m-h-360">
+                    	<div class="slider-main slider-small">
+                            
+                          <div class="mightyslider_modern_skin black">
+                            <div class="frame" data-mightyslider="height: 500">
+                                    <div class="slide_element">
+                                        <div class="slide" data-mightyslider="cover: '../static/images/img/slide-1.png', title: 'Neque porro quisquam est qui', description: 'Integer viverra felis a nisl volutpat placerat. Donec et lorem mauris.'"></div>
+                                        
+                                        <div class="slide active" data-mightyslider="cover: '../static/images/img/slide-1.png', title: 'Integer viverra felis a nisl volutpat placerat', description: 'Proin pellentesque urna nulla. Nunc sed turpis semper, fermentum ipsum quis, ornare enim. Proin ut augue enim.'"></div>
+                                        
+                                        <div class="slide" data-mightyslider="cover: '../static/images/img/slide-1.png', title: 'Neque porro quisquam est qui', description: 'Nullam volutpat purus vel eleifend venenatis. Nulla bibendum mi sit amet elit convallis imperdiet.'"></div>
+                                        
+                                        <div class="slide" data-mightyslider="cover: '../static/images/img/slide-1.png', title: 'Integer viverra felis a nisl volutpat placera', description: 'Integer viverra felis a nisl volutpat placerat. Donec et lorem mauris.'"></div>
+                                        
+                                        <div class="slide" data-mightyslider="cover: '../static/images/img/slide-1.png', title: 'Donec dignissim est ut ligula', description: 'Proin pellentesque urna nulla. Nunc sed turpis semper, fermentum ipsum quis, ornare enim. Proin ut augue enim.'"></div>
+                                        
+                                    </div>
+                                    <div class="outer">
+                                        <a class="mSButtons mSPrev"></a>
+                                        <a class="mSButtons mSNext"></a>
+                                    </div>
+                                </div>
+                                <div class="details">
+                                    <h3 id="title"></h3>
+                                    <h4 id="photographer"></h4>
+                                    <p id="description"></p>
+                                </div>
+                            </div>
+                            
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!--top-wrap -->
+        
+        
+        <div class="profile-content-wrap">
+        	<div class="row-fluid">
+            	<div class="span3">
+                	<div class="main-section main-section-dark">
+                    	<div class="in">
+                        	
+                            <div class="bx-wrap">
+                            <ul class="bxslider">
+                            <li>
+                            	<div class="profile-gallery gallery-slider">
+                                    <div class="profile-gallery-photo">
+                                        <a href="#">
+                                            <img alt="" src="../static/images/img/earth-1.jpg">
+                                            <span>African</span>
+                                        </a>
+                                    </div>
+                                    <div class="gallery-info">
+                                        <ul>
+                                            <li>
+                                                <img alt="" src="../static/images/img/gallery-icon-1.png">
+                                                <span>Feedback Score </span>	<strong>98.7%</strong>
+                                                <div class="cl"></div>
+                                            </li>
+                                            <li>
+                                                <img alt="" src="../static/images/img/gallery-icon-2.png">
+                                                <span>Recipes</span>	<strong>172</strong>
+                                                <div class="cl"></div>
+                                            </li>
+                                            <li>
+                                                <img alt="" src="../static/images/img/gallery-icon-3.png">
+                                                <span>Events</span>	<strong>148</strong>
+                                                <div class="cl"></div>
+                                            </li>
+                                            <li>
+                                                <img alt="" src="../static/images/img/gallery-icon-4.png">
+                                                <span>Servings</span>	<strong>3,217</strong>
+                                                <div class="cl"></div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                            	<div class="profile-gallery gallery-slider">
+                                    <div class="profile-gallery-photo">
+                                        <a href="#">
+                                            <img alt="" src="../static/images/img/earth-2.jpg">
+                                            <span>African</span>
+                                        </a>
+                                    </div>
+                                    <div class="gallery-info">
+                                        <ul>
+                                            <li>
+                                                <img alt="" src="../static/images/img/gallery-icon-1.png">
+                                                <span>Feedback Score </span>	<strong>98.7%</strong>
+                                                <div class="cl"></div>
+                                            </li>
+                                            <li>
+                                                <img alt="" src="../static/images/img/gallery-icon-2.png">
+                                                <span>Recipes</span>	<strong>172</strong>
+                                                <div class="cl"></div>
+                                            </li>
+                                            <li>
+                                                <img alt="" src="../static/images/img/gallery-icon-3.png">
+                                                <span>Events</span>	<strong>148</strong>
+                                                <div class="cl"></div>
+                                            </li>
+                                            <li>
+                                                <img alt="" src="../static/images/img/gallery-icon-4.png">
+                                                <span>Servings</span>	<strong>3,217</strong>
+                                                <div class="cl"></div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                            	<div class="profile-gallery gallery-slider">
+                                    <div class="profile-gallery-photo">
+                                        <a href="#">
+                                            <img alt="" src="../static/images/img/earth-3.jpg">
+                                            <span>African</span>
+                                        </a>
+                                    </div>
+                                    <div class="gallery-info">
+                                        <ul>
+                                            <li>
+                                                <img alt="" src="../static/images/img/gallery-icon-1.png">
+                                                <span>Feedback Score </span>	<strong>98.7%</strong>
+                                                <div class="cl"></div>
+                                            </li>
+                                            <li>
+                                                <img alt="" src="../static/images/img/gallery-icon-2.png">
+                                                <span>Recipes</span>	<strong>172</strong>
+                                                <div class="cl"></div>
+                                            </li>
+                                            <li>
+                                                <img alt="" src="../static/images/img/gallery-icon-3.png">
+                                                <span>Events</span>	<strong>148</strong>
+                                                <div class="cl"></div>
+                                            </li>
+                                            <li>
+                                                <img alt="" src="../static/images/img/gallery-icon-4.png">
+                                                <span>Servings</span>	<strong>3,217</strong>
+                                                <div class="cl"></div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            </ul>
+                            
+                            <img src="../static/images/img/left-img.png" alt="" class="left-img">
+                            <img src="../static/images/img/right-img.png" alt="" class="right-img">
+                            
+                            </div><!--bx-wrap -->
+                                
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="span9">
+                    <div class="content-mid">
+                        
+                        <div class="content-top">
+                            <div class="title-contain">
+                            	<div class="row-fluid">
+                                	<div class="span8">
+                                    	<div class="title-in clearfix">
+                                    	<div class="title-photo"><img src="../static/images/img/profile-photo.png" alt=""></div>
+                                        <div class="title-info">
+                                        	<h3>Leon Wu</h3>
+                                            <p>
+                                            	Feeling Like a Million Dollars Today !!
+                                                <a href="#" class="edit-profile"><img src="../static/images/img/edit.png" alt=""></a>
+                                            </p>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    <div class="span4">
+                                    	<div class="alert-icon">
+                                        	<ul class="nav-show clearfix">
+                                            	<li><a href="#"><img src="../static/images/img/alert-1.png" alt=""></a></li>
+                                                <li><a href="#content-aa"><img src="../static/images/img/alert-2.png" alt=""></a></li>
+                                            </ul>
+                                            <div class="cl"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="profile-bot">
+                            	<div class="row-fluid">
+                                	<div class="span10">
+                                    	<div class="activity-breadcrumb">
+                                            <ul class="clearfix dropdown-nav">
+                                                <li>
+                                                    <a href="#"><span>Questions</span></a>
+                                                    <ul>
+                                                        <li><a href="#">Questions 1</a></li>
+                                                        <li><a href="#">Questions 2</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><span>Now</span></a>
+                                                    <ul>
+                                                        <li><a href="#">This Past Week</a></li>
+                                                        <li><a href="#">This Past Month</a></li>
+                                                        <li><a href="#">This Past Year</a></li>
+                                                        <li><a href="#">All Time</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><span>Chinese</span></a>
+                                                    <ul>
+                                                        <li><a href="#">Chinese 1</a></li>
+                                                        <li><a href="#">Chinese 2</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><span>Followers</span></a>
+                                                    <ul>
+                                                        <li><a href="#">Followers 1</a></li>
+                                                        <li><a href="#">Followers 2</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><span>Local</span></a>
+                                                    <ul>
+                                                        <li><a href="#">Local 1</a></li>
+                                                        <li><a href="#">Local 2</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="span2">
+                                    	<div class="activity-select">
+                                        	<ul class="activity-menu">
+                                            	<li>
+                                            		<a href="#"><span>Activity</span></a>
+                                                    <ul>
+                                                        <li><a href="#">Emotion</a></li>
+                                                        <li><a href="#">Photos</a></li>
+                                                        <li><a href="#">Time</a></li>
+                                                        <li><a href="#">People</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>    
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                
+                                <div class="compose-popup popup-hide-on-close" id="content-aa">
+                                	<div class="compose-section">
+                                    	<a href="#" class="cancel-compose">x</a>
+                                    	<label>Compose</label>
+                                        <textarea>Soy soaked lamb breast and dumplings...(Chinese, Appetizer) -  Feedback: 97%   -  Quantity: 6 Servings -  Event: Liang's New Year Party </textarea>
+                                        <div class="compose-btn clearfix">
+                                        	<div class="compose-left nav-show">
+                                            	<a href="#content-bb">
+                                                	<img src="../static/images/img/compose-icon-1.png" alt=""> <span>Add Photo</span>
+                                                </a>
+                                                <a href="#">
+                                                	<img src="../static/images/img/compose-icon-2.png" alt=""> <span>Add Location</span>
+                                                </a>
+                                            </div>
+                                            <div class="compose-right">
+                                            	<a href="#" class="btn btn-success">Publish</a>
+                                            </div>
+                                        </div>
+                                        
+<div style="width: auto;" class="sub-popop message-section no-padding popup-hide-on-close" id="content-bb">
+    <span class="caret-upword"></span>
+    <a class="close-sub-popup" href="#">x</a>
+    <div class="add-pic-section">
+        <ul class="clearfix">
+            <li>
+                <a href="#"><img alt="" src="../static/images/img/upload-photo.png"> <span>Upload</span></a>
+            </li>
+            <li>
+                <a href="#"><img alt="" src="../static/images/img/take-photo.png"> <span>Take Photo</span></a>
+            </li>
+            <li>
+                <a href="#"><img alt="" src="../static/images/img/web-link.png"> <span>Web Link</span></a>
+            </li>
+        </ul>
+    </div>
+</div>
+                                        
+                                    </div>
+                                </div><!--compose-popup -->
+                                
+                            </div>
+                        </div><!--content-top -->
+                        
+                        
+                        <div class="content-inner">
+                        	
+                            <div class="message-section link-message">
+                                <a href="#">2 Rencent Posts</a>
+                            </div>
+                            
+                            <div class="message-section">
+                                <div class="option-section">
+                                    <ul>
+                                        <li>
+                                            <a href="#"><img src="../static/images/img/arrow-down.png" alt=""></a>
+                                            <ul>
+                                                <li><a href="#">Delete</a></li>
+                                                <li><a href="#">Spam</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="row-fluid">
+                                    <div class="span10">
+                                        <div class="message clearfix">
+                                            <div class="message-photo"><img src="../static/images/img/profile-photo.png" alt=""></div>
+                                            <div class="message-info">
+                                                <div class="msg-time">
+                                                    <img src="../static/images/img/message-icon-1.png" alt="">
+                                                    <strong>Leonwu</strong> <span>41 mintues ago</span>
+                                                </div>
+                                                <p>
+                                                    <strong>Creations:</strong> Soy soaked lamb breast and dumplings
+                                                    ...(Chinese, Appetizer)
+                                                </p>
+                                                <p>-  Feedback: 97%   -  Quantity: 6 Servings</p>
+                                                <p>-  Event: Liang's New Year Party ... <a href="#">Read more</a></p>
+                                                
+                                                <div class="msg-icons">
+                                                    <ul class="nav-show clearfix">
+                                                        <li><a href="#content-1">Add Pic</a></li>
+                                                        <li><a href="#content-2">Question 1</a></li>
+                                                        <li><a href="#content-3">Comments 8</a></li>
+                                                        <li>
+                                                            <a href="#content-4">
+                                                                <img src="../static/images/img/msg-icon-dark-1.png" alt="">
+                                                                <span>52</span>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#content-5">
+                                                                <img src="../static/images/img/msg-icon-dark-2.png" alt="">
+                                                                <span>9</span>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#content-6">
+                                                                <img src="../static/images/img/msg-icon-dark-3.png" alt="">
+                                                                <span>1</span>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="span2">
+                                        <div class="msg-photo-right">
+                                            <a href="#"><img src="../static/images/img/photo.png" alt=""></a>
+                                            <p><img src="../static/images/img/message-icon-9.png" alt=""> <span>Atlanta, GA</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!--message-section -->
+                            
+                            
+                            <!--hidden-content -->
+                            <div id="content-1" class="message-section no-padding second-step popup-hide-on-close hide-info">
+                                <span class="caret-upword"></span>
+                                <a class="cancel-compose" href="#">x</a>
+                                
+                                <div class="add-pic-section">
+                                    <ul class="clearfix">
+                                        <li>
+                                            <a href="#"><img src="../static/images/img/upload-photo.png" alt=""> <span>Upload</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><img src="../static/images/img/take-photo.png" alt=""> <span>Take Photo</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><img src="../static/images/img/web-link.png" alt=""> <span>Web Link</span></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                
+                            </div><!--content-1 -->
+                            
+                            
+                            <div id="content-2" class="message-section second-step popup-hide-on-close hide-info">
+                                <span class="caret-upword"></span>
+                                <div class="option-section">
+                                    <ul>
+                                        <li>
+                                            <a href="#"><img alt="" src="../static/images/img/arrow-down.png"></a>
+                                            <ul>
+                                                <li><a href="#">Delete</a></li>
+                                                <li><a href="#">Spam</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="compose-section">
+                                    <a class="cancel-compose" href="#">x</a>
+                                    <textarea>Question</textarea>
+                                    <div class="compose-btn clearfix">
+                                        <div class="compose-left">
+                                            <a href="#">
+                                                <img src="../static/images/img/compose-icon-1.png" alt=""> <span>Add Photo</span>
+                                            </a>
+                                            <a href="#">
+                                                <img src="../static/images/img/compose-icon-2.png" alt=""> <span>Add Location</span>
+                                            </a>
+                                        </div>
+                                        <div class="compose-right">
+                                            <a href="#" class="btn btn-success">Publish</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!--content-2 -->
+                            
+                            <div id="content-3" class="message-section second-step popup-hide-on-close hide-info">
+                                <span class="caret-upword"></span>
+                                <div class="option-section">
+                                    <ul>
+                                        <li>
+                                            <a href="#"><img alt="" src="../static/images/img/arrow-down.png"></a>
+                                            <ul>
+                                                <li><a href="#">Delete</a></li>
+                                                <li><a href="#">Spam</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="compose-section">
+                                    <a class="cancel-compose" href="#">x</a>
+                                    <textarea>Comments</textarea>
+                                    <div class="compose-btn clearfix">
+                                        <div class="compose-left">
+                                            <a href="#">
+                                                <img src="../static/images/img/compose-icon-1.png" alt=""> <span>Add Photo</span>
+                                            </a>
+                                            <a href="#">
+                                                <img src="../static/images/img/compose-icon-2.png" alt=""> <span>Add Location</span>
+                                            </a>
+                                        </div>
+                                        <div class="compose-right">
+                                            <a href="#" class="btn btn-success">Publish</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!--content-3 -->
+                            
+                            <div class="message-section second-step popup-hide-on-close hide-info" id="content-4">
+                                <a class="cancel-compose" href="#">x</a>
+                                <div class="option-section">
+                                    <ul>
+                                        <li>
+                                            <a href="#"><img src="../static/images/img/arrow-down.png" alt=""></a>
+                                            <ul>
+                                                <li><a href="#">Delete</a></li>
+                                                <li><a href="#">Spam</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="message clearfix">
+                                    <div class="message-photo"><img src="../static/images/img/profile-photo.png" alt=""></div>
+                                    <div class="message-info">
+                                        <div class="msg-time">
+                                            <img src="../static/images/img/message-icon-4.png" alt="">
+                                            <strong>Bostan Bill </strong> <span>21 mintues ago </span>
+                                        </div>
+                                        <p><strong>Loves</strong> this</p>
+                                    </div>
+                                </div>
+                            </div><!--message-section -->
+                            
+                            <div class="message-section second-step popup-hide-on-close hide-info" id="content-5">
+                                <a class="cancel-compose" href="#">x</a>
+                                <div class="option-section">
+                                    <ul>
+                                        <li>
+                                            <a href="#"><img src="../static/images/img/arrow-down.png" alt=""></a>
+                                            <ul>
+                                                <li><a href="#">Delete</a></li>
+                                                <li><a href="#">Spam</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="message clearfix">
+                                    <div class="message-photo"><img src="../static/images/img/small-photo-2.png" alt=""></div>
+                                    <div class="message-info">
+                                        <div class="msg-time">
+                                            <img src="../static/images/img/message-icon-7.png" alt="">
+                                            <strong>Tom Colorline </strong> <span>10 mintues ago </span>
+                                        </div>
+                                        <p><strong>Likes</strong> this</p>
+                                    </div>
+                                </div>
+                            </div><!--message-section -->
+                            
+                            <div class="message-section second-step popup-hide-on-close hide-info" id="content-6">
+                                <a class="cancel-compose" href="#">x</a>
+                                <div class="option-section">
+                                    <ul>
+                                        <li>
+                                            <a href="#"><img src="../static/images/img/arrow-down.png" alt=""></a>
+                                            <ul>
+                                                <li><a href="#">Delete</a></li>
+                                                <li><a href="#">Spam</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="message clearfix">
+                                    <div class="message-photo"><img src="../static/images/img/profile-photo.png" alt=""></div>
+                                    <div class="message-info">
+                                        <div class="msg-time">
+                                            <img src="../static/images/img/message-icon-5.png" alt="">
+                                            <strong>BorgataAC</strong> <span>21 mintues ago </span>
+                                        </div>
+                                        <p><strong>Dislikes</strong> this</p>
+                                    </div>
+                                </div>
+                            </div><!--message-section -->
+                            <!--hidden-content-end -->
+                            
+                            
+                            
+                            <div class="message-section second-step">
+                                <span class="caret-upword"></span>
+                                <div class="option-section">
+                                    <ul>
+                                        <li>
+                                            <a href="#"><img src="../static/images/img/arrow-down.png" alt=""></a>
+                                            <ul>
+                                                <li><a href="#">Delete</a></li>
+                                                <li><a href="#">Spam</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="message clearfix">
+                                    <div class="message-photo"><img src="../static/images/img/small-photo-2.png" alt=""></div>
+                                    <div class="message-info">
+                                        <div class="msg-time">
+                                            <img src="../static/images/img/message-icon-2.png" alt="">
+                                            <strong>Andrew</strong> <span>35 mintues ago </span>
+                                        </div>
+                                        <p><strong>Questions:</strong> What are staple ingredients in your kitchen?</p>
+                                        <p>
+                                            It’s not ingredients, it’s a brush. It’s something I’ve had forever, 
+                                            since I was a kid. I paint on plates, for example. Anything is a vehicle 
+                                            for me to serve food on. I use tiles or glass bricks. –Leonwu
+                                        </p>
+                                        <div class="msg-icons">
+                                            <ul class="nav-show clearfix">
+                                                <li><a href="#content-7">Add Pic</a></li>
+                                                <li><a href="#content-8">Comment</a></li>
+                                                <li>
+                                                    <a href="#content-9"><img alt="" src="../static/images/img/msg-icon-dark-1.png"></a> &nbsp;
+                                                    <a href="#content-10"><img alt="" src="../static/images/img/msg-icon-dark-2.png"></a> &nbsp;
+                                                    <a href="#content-11"><img alt="" src="../static/images/img/msg-icon-dark-3.png"></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!--message-section -->
+                            
+                            
+                            <!--hidden-content -->
+                            <div id="content-7" class="message-section no-padding third-step popup-hide-on-close hide-info">
+                                <span class="caret-upword"></span>
+                                <a class="cancel-compose" href="#">x</a>
+                                
+                                <div class="add-pic-section">
+                                    <ul class="clearfix">
+                                        <li>
+                                            <a href="#"><img src="../static/images/img/upload-photo.png" alt=""> <span>Upload</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><img src="../static/images/img/take-photo.png" alt=""> <span>Take Photo</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><img src="../static/images/img/web-link.png" alt=""> <span>Web Link</span></a>
+                                        </li>
+                                    </ul>
+                                </div>    
+                            </div><!--content-7 -->
+                            
+                            <div id="content-8" class="message-section third-step popup-hide-on-close hide-info">
+                                <span class="caret-upword"></span>
+                                <div class="option-section">
+                                    <ul>
+                                        <li>
+                                            <a href="#"><img alt="" src="../static/images/img/arrow-down.png"></a>
+                                            <ul>
+                                                <li><a href="#">Delete</a></li>
+                                                <li><a href="#">Spam</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="compose-section">
+                                    <a class="cancel-compose" href="#">x</a>
+                                    <textarea>Comments</textarea>
+                                    <div class="compose-btn clearfix">
+                                        <div class="compose-left">
+                                            <a href="#">
+                                                <img src="../static/images/img/compose-icon-1.png" alt=""> <span>Add Photo</span>
+                                            </a>
+                                            <a href="#">
+                                                <img src="../static/images/img/compose-icon-2.png" alt=""> <span>Add Location</span>
+                                            </a>
+                                        </div>
+                                        <div class="compose-right">
+                                            <a href="#" class="btn btn-success">Publish</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!--content-8 -->
+                            
+                            <div class="message-section third-step popup-hide-on-close hide-info" id="content-9">
+                                <a class="cancel-compose" href="#">x</a>
+                                <div class="option-section">
+                                    <ul>
+                                        <li>
+                                            <a href="#"><img src="../static/images/img/arrow-down.png" alt=""></a>
+                                            <ul>
+                                                <li><a href="#">Delete</a></li>
+                                                <li><a href="#">Spam</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="message clearfix">
+                                    <div class="message-photo"><img src="../static/images/img/profile-photo.png" alt=""></div>
+                                    <div class="message-info">
+                                        <div class="msg-time">
+                                            <img src="../static/images/img/message-icon-4.png" alt="">
+                                            <strong>Bostan Bill </strong> <span>21 mintues ago </span>
+                                        </div>
+                                        <p><strong>Loves</strong> this</p>
+                                    </div>
+                                </div>
+                            </div><!--message-section -->
+                            
+                            <div class="message-section third-step popup-hide-on-close hide-info" id="content-10">
+                                <a class="cancel-compose" href="#">x</a>
+                                <div class="option-section">
+                                    <ul>
+                                        <li>
+                                            <a href="#"><img src="../static/images/img/arrow-down.png" alt=""></a>
+                                            <ul>
+                                                <li><a href="#">Delete</a></li>
+                                                <li><a href="#">Spam</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="message clearfix">
+                                    <div class="message-photo"><img src="../static/images/img/small-photo-2.png" alt=""></div>
+                                    <div class="message-info">
+                                        <div class="msg-time">
+                                            <img src="../static/images/img/message-icon-7.png" alt="">
+                                            <strong>Tom Colorline </strong> <span>10 mintues ago </span>
+                                        </div>
+                                        <p><strong>Likes</strong> this</p>
+                                    </div>
+                                </div>
+                            </div><!--message-section -->
+                            
+                            <div class="message-section third-step popup-hide-on-close hide-info" id="content-11">
+                                <a class="cancel-compose" href="#">x</a>
+                                <div class="option-section">
+                                    <ul>
+                                        <li>
+                                            <a href="#"><img src="../static/images/img/arrow-down.png" alt=""></a>
+                                            <ul>
+                                                <li><a href="#">Delete</a></li>
+                                                <li><a href="#">Spam</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="message clearfix">
+                                    <div class="message-photo"><img src="../static/images/img/profile-photo.png" alt=""></div>
+                                    <div class="message-info">
+                                        <div class="msg-time">
+                                            <img src="../static/images/img/message-icon-5.png" alt="">
+                                            <strong>BorgataAC</strong> <span>21 mintues ago </span>
+                                        </div>
+                                        <p><strong>Dislikes</strong> this</p>
+                                    </div>
+                                </div>
+                            </div><!--message-section -->
+                            <!--hidden-content-end -->
+                            
+                            
+                            
+                            
+                            <div class="message-section third-step">
+                                <span class="caret-upword"></span>
+                                <div class="option-section">
+                                    <ul>
+                                        <li>
+                                            <a href="#"><img src="../static/images/img/arrow-down.png" alt=""></a>
+                                            <ul>
+                                                <li><a href="#">Delete</a></li>
+                                                <li><a href="#">Spam</a></li>
+                                            </ul>
+        
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="message clearfix">
+                                    <div class="message-photo"><img src="../static/images/img/profile-photo.png" alt=""></div>
+                                    <div class="message-info">
+                                        <div class="msg-time">
+                                            <img src="../static/images/img/message-icon-3.png" alt="">
+                                            <strong>Leonwu </strong> <span>53 mintues ago </span>
+                                        </div>
+                                        <p>
+                                            <strong>Answer:</strong> Most vendors at farmer’s markets will let you taste their produce. 
+                                            Tasting the food is a great part of the market. Also buy small amounts of lots of different 
+                                            things...  Read more
+                                        </p>
+                                        <div class="msg-icons">
+                                            <ul class="nav-show clearfix">
+                                                <li><a href="#content-12">Add Pic</a></li>
+                                                <li><a href="#content-13">Comment</a></li>
+                                                <li>
+                                                    <a href="#content-14"><img alt="" src="../static/images/img/msg-icon-dark-1.png"></a> &nbsp;
+                                                    <a href="#content-15"><img alt="" src="../static/images/img/msg-icon-dark-2.png"></a> &nbsp;
+                                                    <a href="#content-16"><img alt="" src="../static/images/img/msg-icon-dark-3.png"></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!--message-section -->
+                            
+                            <!--hidden-content -->
+                            <div id="content-12" class="message-section no-padding third-step popup-hide-on-close hide-info">
+                                <span class="caret-upword"></span>
+                                <a class="cancel-compose" href="#">x</a>
+                                
+                                <div class="add-pic-section">
+                                    <ul class="clearfix">
+                                        <li>
+                                            <a href="#"><img src="../static/images/img/upload-photo.png" alt=""> <span>Upload</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><img src="../static/images/img/take-photo.png" alt=""> <span>Take Photo</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><img src="../static/images/img/web-link.png" alt=""> <span>Web Link</span></a>
+                                        </li>
+                                    </ul>
+                                </div>    
+                            </div><!--content-7 -->
+                            
+                            <div id="content-13" class="message-section third-step popup-hide-on-close hide-info">
+                                <span class="caret-upword"></span>
+                                <div class="option-section">
+                                    <ul>
+                                        <li>
+                                            <a href="#"><img alt="" src="../static/images/img/arrow-down.png"></a>
+                                            <ul>
+                                                <li><a href="#">Delete</a></li>
+                                                <li><a href="#">Spam</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="compose-section">
+                                    <a class="cancel-compose" href="#">x</a>
+                                    <textarea>Comments</textarea>
+                                    <div class="compose-btn clearfix">
+                                        <div class="compose-left">
+                                            <a href="#">
+                                                <img src="../static/images/img/compose-icon-1.png" alt=""> <span>Add Photo</span>
+                                            </a>
+                                            <a href="#">
+                                                <img src="../static/images/img/compose-icon-2.png" alt=""> <span>Add Location</span>
+                                            </a>
+                                        </div>
+                                        <div class="compose-right">
+                                            <a href="#" class="btn btn-success">Publish</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!--content-8 -->
+                            
+                            <div class="message-section third-step popup-hide-on-close hide-info" id="content-14">
+                                <a class="cancel-compose" href="#">x</a>
+                                <div class="option-section">
+                                    <ul>
+                                        <li>
+                                            <a href="#"><img src="../static/images/img/arrow-down.png" alt=""></a>
+                                            <ul>
+                                                <li><a href="#">Delete</a></li>
+                                                <li><a href="#">Spam</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="message clearfix">
+                                    <div class="message-photo"><img src="../static/images/img/profile-photo.png" alt=""></div>
+                                    <div class="message-info">
+                                        <div class="msg-time">
+                                            <img src="../static/images/img/message-icon-4.png" alt="">
+                                            <strong>Bostan Bill </strong> <span>21 mintues ago </span>
+                                        </div>
+                                        <p><strong>Loves</strong> this</p>
+                                    </div>
+                                </div>
+                            </div><!--message-section -->
+                            
+                            <div class="message-section third-step popup-hide-on-close hide-info" id="content-15">
+                                <a class="cancel-compose" href="#">x</a>
+                                <div class="option-section">
+                                    <ul>
+                                        <li>
+                                            <a href="#"><img src="../static/images/img/arrow-down.png" alt=""></a>
+                                            <ul>
+                                                <li><a href="#">Delete</a></li>
+                                                <li><a href="#">Spam</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="message clearfix">
+                                    <div class="message-photo"><img src="../static/images/img/small-photo-2.png" alt=""></div>
+                                    <div class="message-info">
+                                        <div class="msg-time">
+                                            <img src="../static/images/img/message-icon-7.png" alt="">
+                                            <strong>Tom Colorline </strong> <span>10 mintues ago </span>
+                                        </div>
+                                        <p><strong>Likes</strong> this</p>
+                                    </div>
+                                </div>
+                            </div><!--message-section -->
+                            
+                            <div class="message-section third-step popup-hide-on-close hide-info" id="content-16">
+                                <a class="cancel-compose" href="#">x</a>
+                                <div class="option-section">
+                                    <ul>
+                                        <li>
+                                            <a href="#"><img src="../static/images/img/arrow-down.png" alt=""></a>
+                                            <ul>
+                                                <li><a href="#">Delete</a></li>
+                                                <li><a href="#">Spam</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="message clearfix">
+                                    <div class="message-photo"><img src="../static/images/img/profile-photo.png" alt=""></div>
+                                    <div class="message-info">
+                                        <div class="msg-time">
+                                            <img src="../static/images/img/message-icon-5.png" alt="">
+                                            <strong>BorgataAC</strong> <span>21 mintues ago </span>
+                                        </div>
+                                        <p><strong>Dislikes</strong> this</p>
+                                    </div>
+                                </div>
+                            </div><!--message-section -->
+                            <!--hidden-content-end -->
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            <!--repeat-section -->
+                            
+                            
+                            
+                            
+                            
+                            
+                            <div class="message-section">
+                                <div class="option-section">
+                                    <ul>
+                                        <li>
+                                            <a href="#"><img src="../static/images/img/arrow-down.png" alt=""></a>
+                                            <ul>
+                                                <li><a href="#">Delete</a></li>
+                                                <li><a href="#">Spam</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="row-fluid">
+                                    <div class="span10">
+                                        <div class="message clearfix">
+                                            <div class="message-photo"><img src="../static/images/img/profile-photo.png" alt=""></div>
+                                            <div class="message-info">
+                                                <div class="msg-time">
+                                                    <img src="../static/images/img/message-icon-1.png" alt="">
+                                                    <strong>Leonwu</strong> <span>41 mintues ago</span>
+                                                </div>
+                                                <p>
+                                                    <strong>Creations:</strong> Soy soaked lamb breast and dumplings
+                                                    ...(Chinese, Appetizer)
+                                                </p>
+                                                <p>-  Feedback: 97%   -  Quantity: 6 Servings</p>
+                                                <p>-  Event: Liang's New Year Party ... <a href="#">Read more</a></p>
+                                                
+                                                <div class="msg-icons">
+                                                    <ul class="nav-show clearfix">
+                                                        <li><a href="#content-a">Add Pic</a></li>
+                                                        <li><a href="#content-b">Question 1</a></li>
+                                                        <li><a href="#content-c">Comments 8</a></li>
+                                                        <li>
+                                                            <a href="#content-d">
+                                                                <img src="../static/images/img/msg-icon-dark-1.png" alt="">
+                                                                <span>52</span>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#content-e">
+                                                                <img src="../static/images/img/msg-icon-dark-2.png" alt="">
+                                                                <span>9</span>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#content-f">
+                                                                <img src="../static/images/img/msg-icon-dark-3.png" alt="">
+                                                                <span>1</span>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="span2">
+                                        <div class="msg-photo-right">
+                                            <a href="#"><img src="../static/images/img/photo.png" alt=""></a>
+                                            <p><img src="../static/images/img/message-icon-9.png" alt=""> <span>Atlanta, GA</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!--message-section -->
+                            
+                            
+                            <!--hidden-content -->
+                            <div id="content-a" class="message-section no-padding second-step popup-hide-on-close hide-info">
+                                <span class="caret-upword"></span>
+                                <a class="cancel-compose" href="#">x</a>
+                                
+                                <div class="add-pic-section">
+                                    <ul class="clearfix">
+                                        <li>
+                                            <a href="#"><img src="../static/images/img/upload-photo.png" alt=""> <span>Upload</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><img src="../static/images/img/take-photo.png" alt=""> <span>Take Photo</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><img src="../static/images/img/web-link.png" alt=""> <span>Web Link</span></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                
+                            </div><!--content-1 -->
+                            
+                            
+                            <div id="content-b" class="message-section second-step popup-hide-on-close hide-info">
+                                <span class="caret-upword"></span>
+                                <div class="option-section">
+                                    <ul>
+                                        <li>
+                                            <a href="#"><img alt="" src="../static/images/img/arrow-down.png"></a>
+                                            <ul>
+                                                <li><a href="#">Delete</a></li>
+                                                <li><a href="#">Spam</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="compose-section">
+                                    <a class="cancel-compose" href="#">x</a>
+                                    <textarea>Question</textarea>
+                                    <div class="compose-btn clearfix">
+                                        <div class="compose-left">
+                                            <a href="#">
+                                                <img src="../static/images/img/compose-icon-1.png" alt=""> <span>Add Photo</span>
+                                            </a>
+                                            <a href="#">
+                                                <img src="../static/images/img/compose-icon-2.png" alt=""> <span>Add Location</span>
+                                            </a>
+                                        </div>
+                                        <div class="compose-right">
+                                            <a href="#" class="btn btn-success">Publish</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!--content-2 -->
+                            
+                            <div id="content-c" class="message-section second-step popup-hide-on-close hide-info">
+                                <span class="caret-upword"></span>
+                                <div class="option-section">
+                                    <ul>
+                                        <li>
+                                            <a href="#"><img alt="" src="../static/images/img/arrow-down.png"></a>
+                                            <ul>
+                                                <li><a href="#">Delete</a></li>
+                                                <li><a href="#">Spam</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="compose-section">
+                                    <a class="cancel-compose" href="#">x</a>
+                                    <textarea>Comments</textarea>
+                                    <div class="compose-btn clearfix">
+                                        <div class="compose-left">
+                                            <a href="#">
+                                                <img src="../static/images/img/compose-icon-1.png" alt=""> <span>Add Photo</span>
+                                            </a>
+                                            <a href="#">
+                                                <img src="../static/images/img/compose-icon-2.png" alt=""> <span>Add Location</span>
+                                            </a>
+                                        </div>
+                                        <div class="compose-right">
+                                            <a href="#" class="btn btn-success">Publish</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!--content-3 -->
+                            
+                            <div class="message-section second-step popup-hide-on-close hide-info" id="content-d">
+                                <a class="cancel-compose" href="#">x</a>
+                                <div class="option-section">
+                                    <ul>
+                                        <li>
+                                            <a href="#"><img src="../static/images/img/arrow-down.png" alt=""></a>
+                                            <ul>
+                                                <li><a href="#">Delete</a></li>
+                                                <li><a href="#">Spam</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="message clearfix">
+                                    <div class="message-photo"><img src="../static/images/img/profile-photo.png" alt=""></div>
+                                    <div class="message-info">
+                                        <div class="msg-time">
+                                            <img src="../static/images/img/message-icon-4.png" alt="">
+                                            <strong>Bostan Bill </strong> <span>21 mintues ago </span>
+                                        </div>
+                                        <p><strong>Loves</strong> this</p>
+                                    </div>
+                                </div>
+                            </div><!--message-section -->
+                            
+                            <div class="message-section second-step popup-hide-on-close hide-info" id="content-e">
+                                <a class="cancel-compose" href="#">x</a>
+                                <div class="option-section">
+                                    <ul>
+                                        <li>
+                                            <a href="#"><img src="../static/images/img/arrow-down.png" alt=""></a>
+                                            <ul>
+                                                <li><a href="#">Delete</a></li>
+                                                <li><a href="#">Spam</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="message clearfix">
+                                    <div class="message-photo"><img src="../static/images/img/small-photo-2.png" alt=""></div>
+                                    <div class="message-info">
+                                        <div class="msg-time">
+                                            <img src="../static/images/img/message-icon-7.png" alt="">
+                                            <strong>Tom Colorline </strong> <span>10 mintues ago </span>
+                                        </div>
+                                        <p><strong>Likes</strong> this</p>
+                                    </div>
+                                </div>
+                            </div><!--message-section -->
+                            
+                            <div class="message-section second-step popup-hide-on-close hide-info" id="content-f">
+                                <a class="cancel-compose" href="#">x</a>
+                                <div class="option-section">
+                                    <ul>
+                                        <li>
+                                            <a href="#"><img src="../static/images/img/arrow-down.png" alt=""></a>
+                                            <ul>
+                                                <li><a href="#">Delete</a></li>
+                                                <li><a href="#">Spam</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="message clearfix">
+                                    <div class="message-photo"><img src="../static/images/img/profile-photo.png" alt=""></div>
+                                    <div class="message-info">
+                                        <div class="msg-time">
+                                            <img src="../static/images/img/message-icon-5.png" alt="">
+                                            <strong>BorgataAC</strong> <span>21 mintues ago </span>
+                                        </div>
+                                        <p><strong>Dislikes</strong> this</p>
+                                    </div>
+                                </div>
+                            </div><!--message-section -->
+                            <!--hidden-content-end -->
+                            
+                            
+                            
+                            <div class="message-section second-step">
+                                <span class="caret-upword"></span>
+                                <div class="option-section">
+                                    <ul>
+                                        <li>
+                                            <a href="#"><img src="../static/images/img/arrow-down.png" alt=""></a>
+                                            <ul>
+                                                <li><a href="#">Delete</a></li>
+                                                <li><a href="#">Spam</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="message clearfix">
+                                    <div class="message-photo"><img src="../static/images/img/small-photo-2.png" alt=""></div>
+                                    <div class="message-info">
+                                        <div class="msg-time">
+                                            <img src="../static/images/img/message-icon-2.png" alt="">
+                                            <strong>Andrew</strong> <span>35 mintues ago </span>
+                                        </div>
+                                        <p><strong>Questions:</strong> What are staple ingredients in your kitchen?</p>
+                                        <p>
+                                            It’s not ingredients, it’s a brush. It’s something I’ve had forever, 
+                                            since I was a kid. I paint on plates, for example. Anything is a vehicle 
+                                            for me to serve food on. I use tiles or glass bricks. –Leonwu
+                                        </p>
+                                        <div class="msg-icons">
+                                            <ul class="nav-show clearfix">
+                                                <li><a href="#content-g">Add Pic</a></li>
+                                                <li><a href="#content-h">Comment</a></li>
+                                                <li>
+                                                    <a href="#content-i"><img alt="" src="../static/images/img/msg-icon-dark-1.png"></a> &nbsp;
+                                                    <a href="#content-j"><img alt="" src="../static/images/img/msg-icon-dark-2.png"></a> &nbsp;
+                                                    <a href="#content-k"><img alt="" src="../static/images/img/msg-icon-dark-3.png"></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!--message-section -->
+                            
+                            
+                            <!--hidden-content -->
+                            <div id="content-g" class="message-section no-padding third-step popup-hide-on-close hide-info">
+                                <span class="caret-upword"></span>
+                                <a class="cancel-compose" href="#">x</a>
+                                
+                                <div class="add-pic-section">
+                                    <ul class="clearfix">
+                                        <li>
+                                            <a href="#"><img src="../static/images/img/upload-photo.png" alt=""> <span>Upload</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><img src="../static/images/img/take-photo.png" alt=""> <span>Take Photo</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><img src="../static/images/img/web-link.png" alt=""> <span>Web Link</span></a>
+                                        </li>
+                                    </ul>
+                                </div>    
+                            </div><!--content-7 -->
+                            
+                            <div id="content-h" class="message-section third-step popup-hide-on-close hide-info">
+                                <span class="caret-upword"></span>
+                                <div class="option-section">
+                                    <ul>
+                                        <li>
+                                            <a href="#"><img alt="" src="../static/images/img/arrow-down.png"></a>
+                                            <ul>
+                                                <li><a href="#">Delete</a></li>
+                                                <li><a href="#">Spam</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="compose-section">
+                                    <a class="cancel-compose" href="#">x</a>
+                                    <textarea>Comments</textarea>
+                                    <div class="compose-btn clearfix">
+                                        <div class="compose-left">
+                                            <a href="#">
+                                                <img src="../static/images/img/compose-icon-1.png" alt=""> <span>Add Photo</span>
+                                            </a>
+                                            <a href="#">
+                                                <img src="../static/images/img/compose-icon-2.png" alt=""> <span>Add Location</span>
+                                            </a>
+                                        </div>
+                                        <div class="compose-right">
+                                            <a href="#" class="btn btn-success">Publish</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!--content-8 -->
+                            
+                            <div class="message-section third-step popup-hide-on-close hide-info" id="content-i">
+                                <a class="cancel-compose" href="#">x</a>
+                                <div class="option-section">
+                                    <ul>
+                                        <li>
+                                            <a href="#"><img src="../static/images/img/arrow-down.png" alt=""></a>
+                                            <ul>
+                                                <li><a href="#">Delete</a></li>
+                                                <li><a href="#">Spam</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="message clearfix">
+                                    <div class="message-photo"><img src="../static/images/img/profile-photo.png" alt=""></div>
+                                    <div class="message-info">
+                                        <div class="msg-time">
+                                            <img src="../static/images/img/message-icon-4.png" alt="">
+                                            <strong>Bostan Bill </strong> <span>21 mintues ago </span>
+                                        </div>
+                                        <p><strong>Loves</strong> this</p>
+                                    </div>
+                                </div>
+                            </div><!--message-section -->
+                            
+                            <div class="message-section third-step popup-hide-on-close hide-info" id="content-j">
+                                <a class="cancel-compose" href="#">x</a>
+                                <div class="option-section">
+                                    <ul>
+                                        <li>
+                                            <a href="#"><img src="../static/images/img/arrow-down.png" alt=""></a>
+                                            <ul>
+                                                <li><a href="#">Delete</a></li>
+                                                <li><a href="#">Spam</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="message clearfix">
+                                    <div class="message-photo"><img src="../static/images/img/small-photo-2.png" alt=""></div>
+                                    <div class="message-info">
+                                        <div class="msg-time">
+                                            <img src="../static/images/img/message-icon-7.png" alt="">
+                                            <strong>Tom Colorline </strong> <span>10 mintues ago </span>
+                                        </div>
+                                        <p><strong>Likes</strong> this</p>
+                                    </div>
+                                </div>
+                            </div><!--message-section -->
+                            
+                            <div class="message-section third-step popup-hide-on-close hide-info" id="content-k">
+                                <a class="cancel-compose" href="#">x</a>
+                                <div class="option-section">
+                                    <ul>
+                                        <li>
+                                            <a href="#"><img src="../static/images/img/arrow-down.png" alt=""></a>
+                                            <ul>
+                                                <li><a href="#">Delete</a></li>
+                                                <li><a href="#">Spam</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="message clearfix">
+                                    <div class="message-photo"><img src="../static/images/img/profile-photo.png" alt=""></div>
+                                    <div class="message-info">
+                                        <div class="msg-time">
+                                            <img src="../static/images/img/message-icon-5.png" alt="">
+                                            <strong>BorgataAC</strong> <span>21 mintues ago </span>
+                                        </div>
+                                        <p><strong>Dislikes</strong> this</p>
+                                    </div>
+                                </div>
+                            </div><!--message-section -->
+                            <!--hidden-content-end -->
+                            
+                            
+                            
+                            
+                            <div class="message-section third-step">
+                                <span class="caret-upword"></span>
+                                <div class="option-section">
+                                    <ul>
+                                        <li>
+                                            <a href="#"><img src="../static/images/img/arrow-down.png" alt=""></a>
+                                            <ul>
+                                                <li><a href="#">Delete</a></li>
+                                                <li><a href="#">Spam</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="message clearfix">
+                                    <div class="message-photo"><img src="../static/images/img/profile-photo.png" alt=""></div>
+                                    <div class="message-info">
+                                        <div class="msg-time">
+                                            <img src="../static/images/img/message-icon-3.png" alt="">
+                                            <strong>Leonwu </strong> <span>53 mintues ago </span>
+                                        </div>
+                                        <p>
+                                            <strong>Answer:</strong> Most vendors at farmer’s markets will let you taste their produce. 
+                                            Tasting the food is a great part of the market. Also buy small amounts of lots of different 
+                                            things...  Read more
+                                        </p>
+                                        <div class="msg-icons">
+                                            <ul class="nav-show clearfix">
+                                                <li><a href="#content-l">Add Pic</a></li>
+                                                <li><a href="#content-m">Comment</a></li>
+                                                <li>
+                                                    <a href="#content-n"><img alt="" src="../static/images/img/msg-icon-dark-1.png"></a> &nbsp;
+                                                    <a href="#content-o"><img alt="" src="../static/images/img/msg-icon-dark-2.png"></a> &nbsp;
+                                                    <a href="#content-p"><img alt="" src="../static/images/img/msg-icon-dark-3.png"></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!--message-section -->
+                            
+                            <!--hidden-content -->
+                            <div id="content-l" class="message-section no-padding third-step popup-hide-on-close hide-info">
+                                <span class="caret-upword"></span>
+                                <a class="cancel-compose" href="#">x</a>
+                                
+                                <div class="add-pic-section">
+                                    <ul class="clearfix">
+                                        <li>
+                                            <a href="#"><img src="../static/images/img/upload-photo.png" alt=""> <span>Upload</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><img src="../static/images/img/take-photo.png" alt=""> <span>Take Photo</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><img src="../static/images/img/web-link.png" alt=""> <span>Web Link</span></a>
+                                        </li>
+                                    </ul>
+                                </div>    
+                            </div><!--content-7 -->
+                            
+                            <div id="content-m" class="message-section third-step popup-hide-on-close hide-info">
+                                <span class="caret-upword"></span>
+                                <div class="option-section">
+                                    <ul>
+                                        <li>
+                                            <a href="#"><img alt="" src="../static/images/img/arrow-down.png"></a>
+                                            <ul>
+                                                <li><a href="#">Delete</a></li>
+                                                <li><a href="#">Spam</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="compose-section">
+                                    <a class="cancel-compose" href="#">x</a>
+                                    <textarea>Comments</textarea>
+                                    <div class="compose-btn clearfix">
+                                        <div class="compose-left">
+                                            <a href="#">
+                                                <img src="../static/images/img/compose-icon-1.png" alt=""> <span>Add Photo</span>
+                                            </a>
+                                            <a href="#">
+                                                <img src="../static/images/img/compose-icon-2.png" alt=""> <span>Add Location</span>
+                                            </a>
+                                        </div>
+                                        <div class="compose-right">
+                                            <a href="#" class="btn btn-success">Publish</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!--content-8 -->
+                            
+                            <div class="message-section third-step popup-hide-on-close hide-info" id="content-n">
+                                <a class="cancel-compose" href="#">x</a>
+                                <div class="option-section">
+                                    <ul>
+                                        <li>
+                                            <a href="#"><img src="../static/images/img/arrow-down.png" alt=""></a>
+                                            <ul>
+                                                <li><a href="#">Delete</a></li>
+                                                <li><a href="#">Spam</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="message clearfix">
+                                    <div class="message-photo"><img src="../static/images/img/profile-photo.png" alt=""></div>
+                                    <div class="message-info">
+                                        <div class="msg-time">
+                                            <img src="../static/images/img/message-icon-4.png" alt="">
+                                            <strong>Bostan Bill </strong> <span>21 mintues ago </span>
+                                        </div>
+                                        <p><strong>Loves</strong> this</p>
+                                    </div>
+                                </div>
+                            </div><!--message-section -->
+                            
+                            <div class="message-section third-step popup-hide-on-close hide-info" id="content-o">
+                                <a class="cancel-compose" href="#">x</a>
+                                <div class="option-section">
+                                    <ul>
+                                        <li>
+                                            <a href="#"><img src="../static/images/img/arrow-down.png" alt=""></a>
+                                            <ul>
+                                                <li><a href="#">Delete</a></li>
+                                                <li><a href="#">Spam</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="message clearfix">
+                                    <div class="message-photo"><img src="../static/images/img/small-photo-2.png" alt=""></div>
+                                    <div class="message-info">
+                                        <div class="msg-time">
+                                            <img src="../static/images/img/message-icon-7.png" alt="">
+                                            <strong>Tom Colorline </strong> <span>10 mintues ago </span>
+                                        </div>
+                                        <p><strong>Likes</strong> this</p>
+                                    </div>
+                                </div>
+                            </div><!--message-section -->
+                            
+                            <div class="message-section third-step popup-hide-on-close hide-info" id="content-p">
+                                <a class="cancel-compose" href="#">x</a>
+                                <div class="option-section">
+                                    <ul>
+                                        <li>
+                                            <a href="#"><img src="../static/images/img/arrow-down.png" alt=""></a>
+                                            <ul>
+                                                <li><a href="#">Delete</a></li>
+                                                <li><a href="#">Spam</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="message clearfix">
+                                    <div class="message-photo"><img src="../static/images/img/profile-photo.png" alt=""></div>
+                                    <div class="message-info">
+                                        <div class="msg-time">
+                                            <img src="../static/images/img/message-icon-5.png" alt="">
+                                            <strong>BorgataAC</strong> <span>21 mintues ago </span>
+                                        </div>
+                                        <p><strong>Dislikes</strong> this</p>
+                                    </div>
+                                </div>
+                            </div><!--message-section -->
+                            <!--hidden-content-end -->
+                            
+                            
+                            
+                            
+                            <div class="message-section link-message">
+                                <a href="#" class="link-black">Show more</a>
+                            </div>
+                            
+                            
+                        </div><!--content-inner -->
+                        
+                    </div><!--content-mid -->
+                    
+                </div>
+            </div>
+        </div><!--profile-content-wrap -->
+        
+        
+    </div>
+</div><!--main-wrap -->
+
+
+<div class="footer-wrap">
+    <div class="container">
+    	<footer>Copyright &copy; 2013 CGX LLC.</footer>
+    </div>
+</div>
+
+</body>
+</html>

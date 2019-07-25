@@ -1,0 +1,1139 @@
+<!DOCTYPE html>
+<!--[if IE 6]>
+<html id="ie6">
+<![endif]-->
+<!--[if IE 7]>
+<html id="ie7">
+<![endif]-->
+<!--[if IE 8]>
+<html id="ie8">
+<![endif]-->
+<!--[if !(IE 6) | !(IE 7) | !(IE 8)  ]><!-->
+<html>
+<!--<![endif]-->
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    
+    <title>Pet Search Keyword</title>
+    
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800,300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/jquery-ui.custom.min.css"/>
+    <link rel="stylesheet" href="css/ace.min.css"/>
+    
+    
+    <link type="text/css" rel="stylesheet" href="css/font-awesome.css" />
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
+    <link type="text/css" rel="stylesheet" href="css/circle.css" />
+    
+    
+    
+    
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+    
+    <!--[if lte IE 8]>
+    <link type="text/css" rel="stylesheet" href="css/ie.css" />
+    <script type="text/javascript" src="js/modernizr.min.js"></script>
+    <![endif]-->
+    
+    <!--[if lte IE 6]>
+    <script type="text/javascript" src="js/belated.js"></script>
+    <![endif]-->
+    
+    <script src="js/assets/ace-extra.min.js"></script>
+    
+    <!--Guage -->
+    <script src="js/raphael.2.1.0.min.js"></script>
+    <script src="js/justgage.1.0.1.min.js"></script>
+    <script>
+      var g1;
+      window.onload = function(){
+        var g1 = new JustGage({
+          id: "g1", 
+          value: getRandomInt(0, 100), 
+          min: 0,
+          max: 100,
+          title: "Custom Colors",
+			label: "",  
+			levelColors: [
+			  "#ff0000",
+			  "#ffc334",
+			  "#87b87f"
+			]          
+        });
+		
+        setInterval(function() {
+          g1.refresh(getRandomInt(0, 100));
+        }, 2500);
+      };
+    </script>
+    
+</head>
+
+<body id="page-name">
+
+<div id="container-fluid">
+
+<!--header start -->
+<div id="header-wrap">
+	<div class="">
+        <header id="header" class="clearfix">
+            <div id="header-left"><a href="index.html"><img src="images/logo.png" alt=""></a></div>
+            <div id="header-right">
+            	<a href="#" id="menu"><span class="fa fa-navicon"></span></a>
+            	<div id="nav">
+                	<ul class="clearfix">
+                    	<li><a href="index.html">Home</a></li>
+                        <li><a href="pet-search.html">Pet Search</a></li>
+                        <li class="active"><a href="pet-detail.html">My Pet</a></li>
+                        <li class="dropdown-menu">
+                        	<a href="organizations.html">
+                            	<em class="fa fa-angle-up nav-arrow"></em>
+                                <em class="fa fa-angle-down nav-arrow"></em>
+                            	Organizations 
+                            </a>
+                            <ul><li><a href="organization-content.html">Messages</a></li></ul>
+                        </li>
+                        <li><a class="popup-link" href="#popup">Login</a></li>
+                        <li class="right-item"><a href="#">Post a Pet</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+    </div>
+</div>
+<!--header end -->
+
+<div class="content-width">
+<div class="inner-page">
+	<div class="pet-detail-wrap">
+    	<p><a href="#" class="blue-link">Back to Search Results</a></p>
+    </div>
+    
+    <div class="tabs-wrap">
+        <div class="adopt-wrap clearfix">
+        	<div class="social-secondary">
+            	
+                <a href="#" class="fa fa-paw paw-link"></a><span class="paws-count">26 Paws-up!</span>
+                
+                <div class="share-wrap">
+                    <a href="#" class="fb share-link" title="Share"><span class="fa fa-share-alt"></span></a>
+                    <div class="share-item">
+                        <span class="fa fa-caret-up"></span>
+                        <ul>
+                            <li><a href="#"><span class="fa fa-facebook-square"></span> Facebook</a></li>
+                            <li><a href="#"><span class="fa fa-twitter-square"></span> Twitter</a></li>
+                            <li><a href="#"><span class="fa fa-google-plus-square"></span> Google +</a></li>
+                            <li><a href="#"><span class="fa fa-envelope-square"></span> E-Mail</a></li>
+                        </ul>
+                    </div>
+                    <span class="share-text">SHARE ME</span>
+                </div>
+            </div>
+        	<p><a href="#" class="btn btn-blue">Apply to Adopt</a></p>
+        </div>
+        
+    	<div class="tabs tabs-pet-detail" id="tabs-theme">
+        	<ul class="clearfix">
+            	<li><a href="#content-a"><em class="fa fa-paw"></em> <span>Profile</span></a></li>
+                <li class="active"><a href="#content-b"><em class="fa fa-signal"></em> <span>Match Details</span></a></li>
+                <li>
+                	<a href="#content-c"><em class="fa fa-users"></em> <span>Friends</span>
+                    <strong class="num num-blue">8</strong></a>
+                    <ul>
+                    	<li><a href="#content-c">List View</a></li>
+                        <li><a href="#content-cb">Map View</a></li>
+                    </ul>
+                </li>
+                <li>
+                	<a href="#content-d">
+                    	<em class="fa fa-picture-o"></em> <span>Photos</span>
+                		<strong class="num num-pink">11</strong>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="tabs-content" id="content-a">
+        	
+            <div class="pet-top">
+                <div class="row-fluid">
+                    <div class="span3">
+                    	<div class="dog-img">
+                        	<h3 class="normal">Nick Nac</h3>
+                            <div class="img-wrap">
+                                <img src="images/gallery-7.jpg" alt="">
+                                <div class="social-secondary">
+                                    <a title="Add to Favourite" class="heart hr" href="#"><span class="fa fa-heart"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <h4>Actions:</h4>
+                        <p>
+                        	<a href="#" class="blue-link"><span class="fa fa-heart"></span> Remove from favorites</a> <br>
+                        	<a href="#" class="blue-link"><span class="fa fa-question"></span> Ask a question</a> <br>
+                            <a href="#" class="blue-link"><span class="fa fa-edit"></span> Apply to Adopt</a> <br>
+                            <a href="#" class="blue-link"><span class="fa fa-envelope"></span> Send to Friend(s)</a>
+                        </p>
+                        
+                        <h4>Foster Contact:</h4>
+                		<p>Ben Smith: Beverly Hills, CA</p>
+                        <div class="pet-map"><img src="images/map-contact.png" alt=""></div>
+                    </div>
+                    
+                    <div class="span9">
+                    	<div class="row-fluid">
+                        	<div class="span8">
+                                <div class="what-relative">
+                                    <div class="row-fluid">
+                                        <div class="span6">
+                                            <div class="keyword">
+                                                <label>Keyword Rank:</label>
+                                                <div class="percentage-section-wrap">
+                                                    <div class="percentage"><div style="width:83%" class="percentage-inner"></div></div>
+                                                    <span>83%</span>
+                                                </div>	
+                                            </div>
+                                        </div>
+                                        <div class="span6">
+                                            <div class="what-outer">
+                                                <div class="what-wrap">
+                                                    <p>
+                                                        <a href="#" class="rank">What is "Keyword Rank"?</a>
+                                                        <span class="help-button question-rank">?</span>
+                                                    </p>
+                                                    <div class="what-popup">
+                                                        <a href="#" class="close-what">x</a>
+                                                        <p>
+                                                            When a facility or foster home has not created a personality profile for a pet,
+                                                            PawsLikeMe uses a temporary "Keyword Rank" that predicts the match score using 
+                                                            keywords in the pet description. What's the difference?
+                                                        </p>
+                                                        <div class="what-mid">
+                                                            <p>
+                                                                Keyword Rank accuracy: 50% to 70% <br>
+                                                                PawsLikeMe Matching Score accuracy: 90% to 100%
+                                                            </p>
+                                                        </div>
+                                                        <div class="what-bot"><a href="#">CLOSE WINDOW</a></div>
+                                                    </div>
+                                                </div><!--what-wrap -->
+                                                <p><a href="#">(why don't I see a matching score?)</a></p>
+                                                <p><a href="#" class="btn-purple-transparent">REQUEST SCORE</a></p>
+                                            </div><!--what-wrap -->    
+                                        </div>
+                                    </div>
+                                </div><!--what-relative -->    
+                                
+                                <div class="dog-graph">
+                                    <div class="sidebar-section section-sm secondary-color">
+                                        <div class="progress-compare-wrap">
+                                            <div class="compare-title clearfix">
+                                                <div class="left-title"><h2>The dog</h2></div>
+                                                <div class="right-title"><h2>You</h2></div>
+                                            </div>
+                                            <div class="compare-section">
+                                                <div class="compare-sep"></div>
+                                                <div class="compare-contain clearfix">
+                                                    <div class="compare-label"><a data-target="#myModal1" data-toggle="modal" href="#">Energy</a></div>
+                                                    <div class="compare-left">
+                                                        <div class="percentage-section-wrap">
+                                                            <div class="percentage"><div style="width:0" class="percentage-inner">
+                                                                <span class="txt">You are 60% higher</span>
+                                                            </div></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="compare-right left-to-right">
+                                                        <div class="percentage-section-wrap progress-blue">
+                                                            <div class="percentage"><div style="width:60%" class="percentage-inner"></div></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="compare-contain clearfix">
+                                                    <div class="compare-label"><a data-target="#myModal2" data-toggle="modal" href="#">Focus</a></div>
+                                                    <div class="compare-left">
+                                                        <div class="percentage-section-wrap progress-pink">
+                                                            <div class="percentage"><div style="width:45%" class="percentage-inner"></div></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="compare-right">
+                                                        <div class="percentage-section-wrap progress-orange">
+                                                            <div class="percentage"><div style="width:0" class="percentage-inner">
+                                                                <span class="txt">You are 50% lower</span>
+                                                            </div></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="compare-contain clearfix">
+                                                    <div class="compare-label"><a data-target="#myModal3" data-toggle="modal" href="#">Confidence</a></div>
+                                                    <div class="compare-left">
+                                                        <div class="percentage-section-wrap progress-purple">
+                                                            <div class="percentage"><div style="width:80%" class="percentage-inner"></div></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="compare-right">
+                                                        <div class="percentage-section-wrap progress-purple">
+                                                            <div class="percentage"><div style="width:0" class="percentage-inner">
+                                                                <span class="txt">You are a close match</span>
+                                                            </div></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="compare-contain clearfix">
+                                                    <div class="compare-label"><a data-target="#myModal4" data-toggle="modal" href="#">Independence</a></div>
+                                                    <div class="compare-left">
+                                                        <div class="percentage-section-wrap progress-dark-blue">
+                                                            <div class="percentage"><div style="width:20%" class="percentage-inner"></div></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="compare-right">
+                                                        <div class="percentage-section-wrap progress-dark-blue">
+                                                            <div class="percentage"><div style="width:0" class="percentage-inner">
+                                                                <span class="txt">The dog is much lower</span>
+                                                            </div></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                            </div><!--compare-section -->
+                                        </div>
+                
+                                    </div>
+                                    
+                                </div><!--dog-graph -->
+                            </div><!--span8 -->
+                            <div class="span4">
+                                <div class="map-info">
+                                    <p class="clearfix"><span class="fl">Location:</span> <span class="fr">Los Angeles, CA (US)</span></p>
+                                    <p class="clearfix odd"><span class="fl">Gender:</span> <span class="fr">Spayed</span></p>
+                                    <p class="clearfix"><span class="fl">Age Range:</span> <span class="fr">Adult</span></p>
+                                    <p class="clearfix odd"><span class="fl">Color:</span> <span class="fr">Golden</span></p>
+                                    <p class="clearfix"><span class="fl">Size Type:</span> <span class="fr">Medium</span></p>
+                                    <p class="clearfix odd"><span class="fl">Good with Pets?:</span> <span class="fr">Dogs, Cats</span></p>
+                                    <p class="clearfix"><span class="fl">Coat Length:</span> <span class="fr">Medium</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    	<div class="section-bdr">
+                        	<p>
+                            	Some organizations only create personality profiles by request. If you are interested in this
+                                pet and would like to see a true matching score, click 
+                                <a href="#" class="btn-purple-transparent">Request Score</a> tp send a message to the facility,
+                                foster home or guardian of this dog asking them to complete the profile.
+                            </p>
+                        </div>
+                    	<h4>Little About Me</h4>
+                        <p>
+                        	I have been (or am scheduled to be) neutered/spayed, am up to date on Distemper/Parvo shots, de-wormed of tapeworms, hookworms and whipworms and heartworm tested.I have been (or am scheduled to be) neutered/spayed, am up to date on Distemper/Parvo shots, de-wormed of tapeworms, hookworms and whipworms and heartworm tested.I have been (or am scheduled to be) neutered/spayed, am up to date on Distemper/Parvo shots, de-wormed of tapeworms, hookworms and whipworms and heartworm tested.
+                        </p>
+                        <div class="section-bdr section-gry">
+                        	<p>
+                            	Do you think the PawsLikeMe matching concept is cool? - Awesome, then help us grow and do 
+                                more cool stuff by "liking" us on Facebook. 
+                                <a title="Like" class="tw" href="#"><span class="social-square fa fa-thumbs-up"></span></a>
+                            </p>
+                        </div>
+                        
+                    </div>
+                    
+                    
+                    
+                </div>
+            </div><!--pet-top -->    
+            
+            
+            
+        </div><!--tabs-content -->
+        
+        <div class="tabs-content" id="content-b" style="display:block;">
+        	
+            <div class="row-fluid fluid-tablet section-default-wrap">
+            	<div class="span4">
+                	<div class="section-defalt section-chart center">
+                    	<h3>Overall: Good Match</h3>
+                        <div id="g1"></div>
+                    </div>
+                </div>
+                <div class="span8">
+                	<div class="sidebar-section seciton-commen">
+                        <h3>Your Match Profile</h3>
+                        <div class="progress-compare-wrap">
+                            <div class="compare-title clearfix">
+                                <div class="left-title"><h2>The dog</h2></div>
+                                <div class="right-title"><h2>You</h2></div>
+                            </div>
+                            <div class="compare-section">
+                                <div class="compare-sep"></div>
+                                <div class="compare-contain clearfix">
+                                    <div class="compare-label"><a href="#" data-toggle="modal" data-target="#myModal1">Energy</a></div>
+                                    <div class="compare-left">
+                                        <div class="percentage-section-wrap">
+                                            <div class="percentage"><div class="percentage-inner" style="width:0">
+                                                <span class="txt">You are 60% higher</span>
+                                            </div></div>
+                                        </div>
+                                    </div>
+                                    <div class="compare-right left-to-right">
+                                        <div class="percentage-section-wrap progress-blue">
+                                            <div class="percentage"><div class="percentage-inner" style="width:60%"></div></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="compare-contain clearfix">
+                                    <div class="compare-label"><a href="#" data-toggle="modal" data-target="#myModal2">Focus</a></div>
+                                    <div class="compare-left">
+                                        <div class="percentage-section-wrap progress-pink">
+                                            <div class="percentage"><div class="percentage-inner" style="width:45%"></div></div>
+                                        </div>
+                                    </div>
+                                    <div class="compare-right">
+                                        <div class="percentage-section-wrap progress-orange">
+                                            <div class="percentage"><div class="percentage-inner" style="width:100%">
+                                                <span class="txt">You are 50% lower</span>
+                                            </div></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="compare-contain clearfix">
+                                    <div class="compare-label"><a href="#" data-toggle="modal" data-target="#myModal3">Confidence</a></div>
+                                    <div class="compare-left">
+                                        <div class="percentage-section-wrap progress-purple">
+                                            <div class="percentage"><div class="percentage-inner" style="width:80%"></div></div>
+                                        </div>
+                                    </div>
+                                    <div class="compare-right">
+                                        <div class="percentage-section-wrap progress-purple">
+                                            <div class="percentage"><div class="percentage-inner" style="width:100%">
+                                                <span class="txt">You are a close match</span>
+                                            </div></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="compare-contain clearfix">
+                                    <div class="compare-label"><a href="#" data-toggle="modal" data-target="#myModal4">Independence</a></div>
+                                    <div class="compare-left">
+                                        <div class="percentage-section-wrap progress-dark-blue">
+                                            <div class="percentage"><div class="percentage-inner" style="width:20%"></div></div>
+                                        </div>
+                                    </div>
+                                    <div class="compare-right">
+                                        <div class="percentage-section-wrap progress-dark-blue">
+                                            <div class="percentage"><div class="percentage-inner" style="width:100%">
+                                                <span class="txt">The dog is much lower</span>
+                                            </div></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div><!--compare-section -->
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            
+            
+        	<h3 class="blue">Canine Personality Overview</h3>
+            <div class="strong-section">
+            	<p>She enjoys being a couch potato and doesn't need much in the way of exercise to keep her content. She can be very focused on a task but can be distracted with a little bit of effort. She likes some order and a fairly regular routine. She is cautious and may take some time to accept new people, places, or things. She is more likely to cling to your side or go hide when presented with new situations. She can be very affectionate and will often show it, but isn't overly pushy about getting attention. She likes to be close to you as much as possible, but seems to know when you want to be left alone. </p>
+            </div>
+            <h3 class="blue">Your Ideal Dog</h3>
+            <div class="strong-section">
+            	<p>You enjoy light activity with your dog, such as a walk around the block. You prefer a dog that likes to be a couch potato, with little bursts of activity every now and then. You like a dog that is fairly easy to train to basic commands and a few fun tricks. The dog should be able to focus his attention on something for a decent amount of time. You want a dog with a lot of confidence but, you totally understand his feelings of insecurity at first. You don't mind taking a few minutes for your dog to check out a new person or place before he is relaxed. You like an affectionate dog that will snuggle with you, but you don't want him to be in your face trying to get attention constantly. </p>
+            </div>
+        </div><!--content-b -->
+        
+        
+        <div class="tabs-content" id="content-c">
+            <div class="row-fluid">
+                <div class="span4">
+                    <div class="box-article">
+                        <h3>Dawn</h3>
+                        <div class="box-info clearfix">
+                            <div class="box-img"><img src="images/gallery-1.jpg" alt=""></div>
+                            <div class="box-in">
+                                <p>
+                                    <label>Playdates:</label>
+                                    <select>
+                                        <option>10</option>
+                                    </select>
+                                </p>
+                                <p><label>Messages:</label> <a href="#">2 News</a></p>
+                                <p><label>My Human:</label> <strong>Pierce Ronan</strong></p>
+                            </div>
+                        </div>
+                        <div class="box-article-bot">
+                            <div class="social-secondary">
+                            	<a title="Like" class="tw" href="#"><span class="fa fa-thumbs-up"></span></a>
+                                <div class="share-wrap">
+                                	<a title="Share" class="fb share-link" href="#"><span class="fa fa-share-alt"></span></a>
+                                    <div class="share-item">
+                                        <span class="fa fa-caret-up"></span>
+                                        <ul>
+                                            <li><a href="#"><span class="fa fa-facebook-square"></span> Facebook</a></li>
+                                            <li><a href="#"><span class="fa fa-twitter-square"></span> Twitter</a></li>
+                                            <li><a href="#"><span class="fa fa-google-plus-square"></span> Google +</a></li>
+                                            <li><a href="#"><span class="fa fa-envelope-square"></span> E-Mail</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <a class="apply auto-w" href="#">Send a Message <em class="fa fa-envelope"></em></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="span4">
+                    <div class="box-article">
+                        <h3>Sage</h3>
+                        <div class="box-info clearfix">
+                            <div class="box-img"><img src="images/gallery-3.jpg" alt=""></div>
+                            <div class="box-in">
+                                <p>
+                                     Paws-Like-Me creates a complex matching score by combining four core personality quadrants for and then applying.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="box-article-bot">
+                            <div class="social-secondary">
+                            	<a title="Like" class="tw" href="#"><span class="fa fa-thumbs-up"></span></a>
+                                <div class="share-wrap">
+                                	<a title="Share" class="fb share-link" href="#"><span class="fa fa-share-alt"></span></a>
+                                    <div class="share-item">
+                                        <span class="fa fa-caret-up"></span>
+                                        <ul>
+                                            <li><a href="#"><span class="fa fa-facebook-square"></span> Facebook</a></li>
+                                            <li><a href="#"><span class="fa fa-twitter-square"></span> Twitter</a></li>
+                                            <li><a href="#"><span class="fa fa-google-plus-square"></span> Google +</a></li>
+                                            <li><a href="#"><span class="fa fa-envelope-square"></span> E-Mail</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <a class="apply auto-w" href="#">Send a Message <em class="fa fa-envelope"></em></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="span4">
+                    <div class="box-article">
+                        <h3>Dawn</h3>
+                        <div class="box-info clearfix">
+                            <div class="box-img"><img src="images/gallery-1.jpg" alt=""></div>
+                            <div class="box-in">
+                                <p>
+                                    <label>Playdates:</label>
+                                    <select>
+                                        <option>10</option>
+                                    </select>
+                                </p>
+                                <p><label>Messages:</label> <a href="#">2 News</a></p>
+                                <p><label>My Human:</label> <strong>Pierce Ronan</strong></p>
+                            </div>
+                        </div>
+                        <div class="box-article-bot">
+                            <div class="social-secondary">
+                            	<a title="Like" class="tw" href="#"><span class="fa fa-thumbs-up"></span></a>
+                                <div class="share-wrap">
+                                	<a title="Share" class="fb share-link" href="#"><span class="fa fa-share-alt"></span></a>
+                                    <div class="share-item">
+                                        <span class="fa fa-caret-up"></span>
+                                        <ul>
+                                            <li><a href="#"><span class="fa fa-facebook-square"></span> Facebook</a></li>
+                                            <li><a href="#"><span class="fa fa-twitter-square"></span> Twitter</a></li>
+                                            <li><a href="#"><span class="fa fa-google-plus-square"></span> Google +</a></li>
+                                            <li><a href="#"><span class="fa fa-envelope-square"></span> E-Mail</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <a class="apply auto-w" href="#">Send a Message <em class="fa fa-envelope"></em></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!--row-fluid -->
+            
+            <div class="row-fluid">
+                <div class="span4">
+                    <div class="box-article">
+                        <h3>Dawn</h3>
+                        <div class="box-info clearfix">
+                            <div class="box-img"><img src="images/gallery-1.jpg" alt=""></div>
+                            <div class="box-in">
+                                <p>
+                                    <label>Playdates:</label>
+                                    <select>
+                                        <option>10</option>
+                                    </select>
+                                </p>
+                                <p><label>Messages:</label> <a href="#">2 News</a></p>
+                                <p><label>My Human:</label> <strong>Pierce Ronan</strong></p>
+                            </div>
+                        </div>
+                        <div class="box-article-bot">
+                            <div class="social-secondary">
+                            	<a title="Like" class="tw" href="#"><span class="fa fa-thumbs-up"></span></a>
+                                <div class="share-wrap">
+                                	<a title="Share" class="fb share-link" href="#"><span class="fa fa-share-alt"></span></a>
+                                    <div class="share-item">
+                                        <span class="fa fa-caret-up"></span>
+                                        <ul>
+                                            <li><a href="#"><span class="fa fa-facebook-square"></span> Facebook</a></li>
+                                            <li><a href="#"><span class="fa fa-twitter-square"></span> Twitter</a></li>
+                                            <li><a href="#"><span class="fa fa-google-plus-square"></span> Google +</a></li>
+                                            <li><a href="#"><span class="fa fa-envelope-square"></span> E-Mail</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <a class="apply auto-w" href="#">Send a Message <em class="fa fa-envelope"></em></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="span4">
+                    <div class="box-article">
+                        <h3>Sage</h3>
+                        <div class="box-info clearfix">
+                            <div class="box-img"><img src="images/gallery-3.jpg" alt=""></div>
+                            <div class="box-in">
+                                <p>
+                                     Paws-Like-Me creates a complex matching score by combining four core personality quadrants for and then applying.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="box-article-bot">
+                            <div class="social-secondary">
+                            	<a title="Like" class="tw" href="#"><span class="fa fa-thumbs-up"></span></a>
+                                <div class="share-wrap">
+                                	<a title="Share" class="fb share-link" href="#"><span class="fa fa-share-alt"></span></a>
+                                    <div class="share-item">
+                                        <span class="fa fa-caret-up"></span>
+                                        <ul>
+                                            <li><a href="#"><span class="fa fa-facebook-square"></span> Facebook</a></li>
+                                            <li><a href="#"><span class="fa fa-twitter-square"></span> Twitter</a></li>
+                                            <li><a href="#"><span class="fa fa-google-plus-square"></span> Google +</a></li>
+                                            <li><a href="#"><span class="fa fa-envelope-square"></span> E-Mail</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <a class="apply auto-w" href="#">Send a Message <em class="fa fa-envelope"></em></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="span4">
+                    <div class="box-article">
+                        <h3>Dawn</h3>
+                        <div class="box-info clearfix">
+                            <div class="box-img"><img src="images/gallery-1.jpg" alt=""></div>
+                            <div class="box-in">
+                                <p>
+                                    <label>Playdates:</label>
+                                    <select>
+                                        <option>10</option>
+                                    </select>
+                                </p>
+                                <p><label>Messages:</label> <a href="#">2 News</a></p>
+                                <p><label>My Human:</label> <strong>Pierce Ronan</strong></p>
+                            </div>
+                        </div>
+                        <div class="box-article-bot">
+                            <div class="social-secondary">
+                            	<a title="Like" class="tw" href="#"><span class="fa fa-thumbs-up"></span></a>
+                                <div class="share-wrap">
+                                	<a title="Share" class="fb share-link" href="#"><span class="fa fa-share-alt"></span></a>
+                                    <div class="share-item">
+                                        <span class="fa fa-caret-up"></span>
+                                        <ul>
+                                            <li><a href="#"><span class="fa fa-facebook-square"></span> Facebook</a></li>
+                                            <li><a href="#"><span class="fa fa-twitter-square"></span> Twitter</a></li>
+                                            <li><a href="#"><span class="fa fa-google-plus-square"></span> Google +</a></li>
+                                            <li><a href="#"><span class="fa fa-envelope-square"></span> E-Mail</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <a class="apply auto-w" href="#">Send a Message <em class="fa fa-envelope"></em></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!--row-fluid -->
+            
+            <div class="row-fluid">
+                <div class="span4">
+                    <div class="box-article">
+                        <h3>Dawn</h3>
+                        <div class="box-info clearfix">
+                            <div class="box-img"><img src="images/gallery-1.jpg" alt=""></div>
+                            <div class="box-in">
+                                <p>
+                                    <label>Playdates:</label>
+                                    <select>
+                                        <option>10</option>
+                                    </select>
+                                </p>
+                                <p><label>Messages:</label> <a href="#">2 News</a></p>
+                                <p><label>My Human:</label> <strong>Pierce Ronan</strong></p>
+                            </div>
+                        </div>
+                        <div class="box-article-bot">
+                            <div class="social-secondary">
+                            	<a title="Like" class="tw" href="#"><span class="fa fa-thumbs-up"></span></a>
+                                <div class="share-wrap">
+                                	<a title="Share" class="fb share-link" href="#"><span class="fa fa-share-alt"></span></a>
+                                    <div class="share-item">
+                                        <span class="fa fa-caret-up"></span>
+                                        <ul>
+                                            <li><a href="#"><span class="fa fa-facebook-square"></span> Facebook</a></li>
+                                            <li><a href="#"><span class="fa fa-twitter-square"></span> Twitter</a></li>
+                                            <li><a href="#"><span class="fa fa-google-plus-square"></span> Google +</a></li>
+                                            <li><a href="#"><span class="fa fa-envelope-square"></span> E-Mail</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <a class="apply auto-w" href="#">Send a Message <em class="fa fa-envelope"></em></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="span4">
+                    <div class="box-article">
+                        <h3>Sage</h3>
+                        <div class="box-info clearfix">
+                            <div class="box-img"><img src="images/gallery-3.jpg" alt=""></div>
+                            <div class="box-in">
+                                <p>
+                                     Paws-Like-Me creates a complex matching score by combining four core personality quadrants for and then applying.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="box-article-bot">
+                            <div class="social-secondary">
+                            	<a title="Like" class="tw" href="#"><span class="fa fa-thumbs-up"></span></a>
+                                <div class="share-wrap">
+                                	<a title="Share" class="fb share-link" href="#"><span class="fa fa-share-alt"></span></a>
+                                    <div class="share-item">
+                                        <span class="fa fa-caret-up"></span>
+                                        <ul>
+                                            <li><a href="#"><span class="fa fa-facebook-square"></span> Facebook</a></li>
+                                            <li><a href="#"><span class="fa fa-twitter-square"></span> Twitter</a></li>
+                                            <li><a href="#"><span class="fa fa-google-plus-square"></span> Google +</a></li>
+                                            <li><a href="#"><span class="fa fa-envelope-square"></span> E-Mail</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <a class="apply auto-w" href="#">Send a Message <em class="fa fa-envelope"></em></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="span4">
+                    <div class="box-article">
+                        <h3>Dawn</h3>
+                        <div class="box-info clearfix">
+                            <div class="box-img"><img src="images/gallery-1.jpg" alt=""></div>
+                            <div class="box-in">
+                                <p>
+                                    <label>Playdates:</label>
+                                    <select>
+                                        <option>10</option>
+                                    </select>
+                                </p>
+                                <p><label>Messages:</label> <a href="#">2 News</a></p>
+                                <p><label>My Human:</label> <strong>Pierce Ronan</strong></p>
+                            </div>
+                        </div>
+                        <div class="box-article-bot">
+                            <div class="social-secondary">
+                            	<a title="Like" class="tw" href="#"><span class="fa fa-thumbs-up"></span></a>
+                                <div class="share-wrap">
+                                	<a title="Share" class="fb share-link" href="#"><span class="fa fa-share-alt"></span></a>
+                                    <div class="share-item">
+                                        <span class="fa fa-caret-up"></span>
+                                        <ul>
+                                            <li><a href="#"><span class="fa fa-facebook-square"></span> Facebook</a></li>
+                                            <li><a href="#"><span class="fa fa-twitter-square"></span> Twitter</a></li>
+                                            <li><a href="#"><span class="fa fa-google-plus-square"></span> Google +</a></li>
+                                            <li><a href="#"><span class="fa fa-envelope-square"></span> E-Mail</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <a class="apply auto-w" href="#">Send a Message <em class="fa fa-envelope"></em></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!--row-fluid -->
+        </div><!--content-c -->
+        
+        <div class="tabs-content" id="content-cb">
+        	<div class="map-full" style="max-height:500px; overflow:hidden;"><img src="images/map2.jpg" alt=""></div>
+        </div><!--content-cb -->
+        
+        <div class="tabs-content" id="content-d">
+        	
+            <div class="clearfix">
+            	<div class="fl"><h3 class="blue">My photo Album</h3></div>
+                <div class="fr"><a href="#" class="btn btn-success"><strong>Add Pics</strong></a></div>
+            </div>
+            
+            <div class="drop-section-wrap">
+            	<div class="drop-section">
+                	
+                </div>
+            </div>
+            
+            <div class="gallery-section">
+            	<ul class="clearfix">
+                	<li>
+                        <a class="fancybox" href="images/gallery-1.jpg" data-fancybox-group="gallery" ><img src="images/gallery-1.jpg" alt=""></a>
+                        <div class="gallery-overlay">
+                        	<a href="#" class="fa fa-file"></a>	<a href="#" class="fa fa-pencil"></a> <a href="#" class="cancel">x</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="fancybox" href="images/gallery-2.jpg" data-fancybox-group="gallery" ><img src="images/gallery-2.jpg" alt=""></a>
+                        <div class="gallery-overlay">
+                        	<a href="#" class="fa fa-file"></a>	<a href="#" class="fa fa-pencil"></a> <a href="#" class="cancel">x</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="fancybox" href="images/gallery-3.jpg" data-fancybox-group="gallery" ><img src="images/gallery-3.jpg" alt=""></a>
+                        <div class="gallery-overlay">
+                        	<a href="#" class="fa fa-file"></a>	<a href="#" class="fa fa-pencil"></a> <a href="#" class="cancel">x</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="fancybox" href="images/gallery-4.jpg" data-fancybox-group="gallery" ><img src="images/gallery-4.jpg" alt=""></a>
+                        <div class="gallery-overlay">
+                        	<a href="#" class="fa fa-file"></a>	<a href="#" class="fa fa-pencil"></a> <a href="#" class="cancel">x</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="fancybox" href="images/gallery-5.jpg" data-fancybox-group="gallery" ><img src="images/gallery-5.jpg" alt=""></a>
+                        <div class="gallery-overlay">
+                        	<a href="#" class="fa fa-file"></a>	<a href="#" class="fa fa-pencil"></a> <a href="#" class="cancel">x</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="fancybox" href="images/gallery-6.jpg" data-fancybox-group="gallery" ><img src="images/gallery-6.jpg" alt=""></a>
+                        <div class="gallery-overlay">
+                        	<a href="#" class="fa fa-file"></a>	<a href="#" class="fa fa-pencil"></a> <a href="#" class="cancel">x</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="fancybox" href="images/gallery-4.jpg" data-fancybox-group="gallery" ><img src="images/gallery-4.jpg" alt=""></a>
+                        <div class="gallery-overlay">
+                        	<a href="#" class="fa fa-file"></a>	<a href="#" class="fa fa-pencil"></a> <a href="#" class="cancel">x</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="fancybox" href="images/gallery-5.jpg" data-fancybox-group="gallery" ><img src="images/gallery-5.jpg" alt=""></a>
+                        <div class="gallery-overlay">
+                        	<a href="#" class="fa fa-file"></a>	<a href="#" class="fa fa-pencil"></a> <a href="#" class="cancel">x</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="fancybox" href="images/gallery-6.jpg" data-fancybox-group="gallery" ><img src="images/gallery-6.jpg" alt=""></a>
+                        <div class="gallery-overlay">
+                        	<a href="#" class="fa fa-file"></a>	<a href="#" class="fa fa-pencil"></a> <a href="#" class="cancel">x</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="fancybox" href="images/gallery-1.jpg" data-fancybox-group="gallery" ><img src="images/gallery-1.jpg" alt=""></a>
+                        <div class="gallery-overlay">
+                        	<a href="#" class="fa fa-file"></a>	<a href="#" class="fa fa-pencil"></a> <a href="#" class="cancel">x</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="fancybox" href="images/gallery-2.jpg" data-fancybox-group="gallery" ><img src="images/gallery-2.jpg" alt=""></a>
+                        <div class="gallery-overlay">
+                        	<a href="#" class="fa fa-file"></a>	<a href="#" class="fa fa-pencil"></a> <a href="#" class="cancel">x</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="fancybox" href="images/gallery-3.jpg" data-fancybox-group="gallery" ><img src="images/gallery-3.jpg" alt=""></a>
+                        <div class="gallery-overlay">
+                        	<a href="#" class="fa fa-file"></a>	<a href="#" class="fa fa-pencil"></a> <a href="#" class="cancel">x</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="fancybox" href="images/gallery-4.jpg" data-fancybox-group="gallery" ><img src="images/gallery-4.jpg" alt=""></a>
+                        <div class="gallery-overlay">
+                        	<a href="#" class="fa fa-file"></a>	<a href="#" class="fa fa-pencil"></a> <a href="#" class="cancel">x</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="fancybox" href="images/gallery-5.jpg" data-fancybox-group="gallery" ><img src="images/gallery-5.jpg" alt=""></a>
+                        <div class="gallery-overlay">
+                        	<a href="#" class="fa fa-file"></a>	<a href="#" class="fa fa-pencil"></a> <a href="#" class="cancel">x</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="fancybox" href="images/gallery-6.jpg" data-fancybox-group="gallery" ><img src="images/gallery-6.jpg" alt=""></a>
+                        <div class="gallery-overlay">
+                        	<a href="#" class="fa fa-file"></a>	<a href="#" class="fa fa-pencil"></a> <a href="#" class="cancel">x</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="fancybox" href="images/gallery-4.jpg" data-fancybox-group="gallery" ><img src="images/gallery-4.jpg" alt=""></a>
+                        <div class="gallery-overlay">
+                        	<a href="#" class="fa fa-file"></a>	<a href="#" class="fa fa-pencil"></a> <a href="#" class="cancel">x</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="fancybox" href="images/gallery-5.jpg" data-fancybox-group="gallery" ><img src="images/gallery-5.jpg" alt=""></a>
+                        <div class="gallery-overlay">
+                        	<a href="#" class="fa fa-file"></a>	<a href="#" class="fa fa-pencil"></a> <a href="#" class="cancel">x</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="fancybox" href="images/gallery-6.jpg" data-fancybox-group="gallery" ><img src="images/gallery-6.jpg" alt=""></a>
+                        <div class="gallery-overlay">
+                        	<a href="#" class="fa fa-file"></a>	<a href="#" class="fa fa-pencil"></a> <a href="#" class="cancel">x</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="fancybox" href="images/gallery-6.jpg" data-fancybox-group="gallery" ><img src="images/gallery-6.jpg" alt=""></a>
+                        <div class="gallery-overlay">
+                        	<a href="#" class="fa fa-file"></a>	<a href="#" class="fa fa-pencil"></a> <a href="#" class="cancel">x</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="fancybox" href="images/gallery-4.jpg" data-fancybox-group="gallery" ><img src="images/gallery-4.jpg" alt=""></a>
+                        <div class="gallery-overlay">
+                        	<a href="#" class="fa fa-file"></a>	<a href="#" class="fa fa-pencil"></a> <a href="#" class="cancel">x</a>
+                        </div>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div><!--content-d -->
+        
+    </div><!--tabs-wrap -->
+    
+</div>
+</div>
+
+
+<!--footer start -->
+<div id="footer-wrap">
+	<div class="content-width">
+        <footer id="footer" class="clearfix">
+        	<p> ©2014 Paws-Like-Me. All Rights Reserved</p>
+            <div class="footer-nav">
+            	<a href="privacy.html">Privacy Policy</a> <span>|</span>
+                <a href="privacy.html">Terms of use</a>
+            </div>
+            <div class="social-footer"><a href="#"><span class="fa fa-envelope"></span></a></div>
+            <div class="footer-logo"><img src="images/footer-logo.gif" alt=""></div>
+        </footer>
+    </div>
+</div>
+<!--footer end -->
+
+
+<div class="overlay"></div>
+<div class="popup-section" id="popup">
+	<div class="popup-header">
+    	<a href="index.html" class="cancel">x</a>
+        <h3>Paws-Like-Me Login</h3>
+    </div>
+	<div class="popup-inner">
+    	<p>
+        	<label>Your Email Address</label>
+            <input type="text" class="field">
+        </p>
+        <div class="fl-outer clearfix">
+            <label class="fl">Password</label>
+            <a href="#" class="fr">Forget Password</a>
+        </div>
+        <p>
+            <input type="password" class="field">
+        </p>
+    </div>
+    <div class="popup-footer clearfix">
+    	<div class="fl"><a href="#" class="btn btn-success">Create Account</a></div>
+    	<div class="fr">
+        	<a href="#" class="btn btn-blue">OK</a>
+        	<a href="#" class="btn btn-danger">Cancel</a>
+        </div>    
+    </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">Energy</h4>
+      </div>
+      <div class="modal-body">
+        <p>You are 60% higher.You are 60% higher.You are 60% higher.You are 60% higher.You are 60% higher.You are 60% higher.</p>
+        <p>You are 60% higher.You are 60% higher.You are 60% higher.You are 60% higher.You are 60% higher.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">Focus</h4>
+      </div>
+      <div class="modal-body">
+        <p>You are 50% lower.You are 50% lower.You are 50% lower.You are 50% lower.You are 50% lower.You are 50% lower.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">Confidence</h4>
+      </div>
+      <div class="modal-body">
+        <p>You are a close match.You are a close match.You are a close match.You are a close match.</p>
+        <p>You are a close match.You are a close match.You are a close match.You are a close match.a close match.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">Independence</h4>
+      </div>
+      <div class="modal-body">
+        <p>The dog is much lower.The dog is much lower.The dog is much lower.The dog is much lower.The dog is much lower.</p>
+        <p>The dog is much lower.The dog is much lower.The dog is much lower.The dog is much lower.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+</div><!--container-fluid -->
+
+
+
+
+
+
+<script src="js/jquery.js"></script>
+
+<script src="js/jquery.flexslider.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+
+
+
+<script type="text/javascript">
+  window.jQuery || document.write("<script src='js/assets/jquery.min.js'>" + "<" + "/script>");
+</script>
+<script type="text/javascript">
+	if('ontouchstart' in document.documentElement) document.write("<script src='js/assets/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+</script>
+        
+<script src="js/assets/bootstrap.min.js"></script>
+
+<!-- page specific plugin scripts -->
+<script src="js/assets/jquery-ui.min.js"></script>
+<script src="js/assets/jquery.ui.touch-punch.min.js"></script>
+
+
+<script src="js/assets/jquery-ui.custom.min.js"></script>
+<script src="js/assets/chosen.jquery.min.js"></script>
+<script src="js/assets/fuelux/fuelux.spinner.min.js"></script>
+<script src="js/assets/date-time/bootstrap-datepicker.min.js"></script>
+<script src="js/assets/date-time/bootstrap-timepicker.min.js"></script>
+<script src="js/assets/date-time/moment.min.js"></script>
+<script src="js/assets/date-time/daterangepicker.min.js"></script>
+<script src="js/assets/date-time/bootstrap-datetimepicker.min.js"></script>
+<script src="js/assets/bootstrap-colorpicker.min.js"></script>
+<script src="js/assets/jquery.knob.min.js"></script>
+<script src="js/assets/jquery.autosize.min.js"></script>
+<script src="js/assets/jquery.inputlimiter.1.3.1.min.js"></script>
+<script src="js/assets/jquery.maskedinput.min.js"></script>
+<script src="js/assets/bootstrap-tag.min.js"></script>
+<script src="js/assets/ace-elements.min.js"></script>
+<script src="js/assets/ace.min.js"></script>
+<script src="js/custom.js"></script>
+
+
+<script type="text/javascript" src="source/jquery.fancybox.js"></script>
+<link rel="stylesheet" type="text/css" href="source/jquery.fancybox.css" media="screen" />
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('.fancybox').fancybox();
+	});
+	
+	$(function () {
+		$(".rank").click(function () {
+			$(".what-popup").fadeIn();
+			return false;
+		});
+		$(".close-what").click(function () {
+			$(".what-popup").fadeOut();
+			return false;
+		});
+	});
+	
+	$(function () {
+		$(".paw-link").click (function (){
+			if( $(this).hasClass('active')){
+				$(this).removeClass('active');
+			}
+			else{
+				$(this).addClass('active');
+			}
+			return false;
+		});
+		
+		// question hover
+		$(".question-rank").hover (function (){
+			$(".what-popup").stop(true,true).fadeIn();
+		},
+			function () {
+				$(".what-popup").stop(true,true).fadeOut();
+			}
+		);
+		
+		
+	});
+	
+	
+</script>
+
+
+
+
+</body>
+</html>

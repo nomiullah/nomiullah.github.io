@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>DATA CONSULATE</title>
+	
+    <!-- fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700|Montserrat:400,700' rel='stylesheet' type='text/css'>
+    
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- custon -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+  </head>
+  <body>
+    <div class="wrapper">
+    	<div class="main-login">
+        	<div class="login-outer">
+            	<div class="login-logo">
+                	<a href="#"><img src="images/login-logo.png" alt="" title="" ></a>
+                </div>
+                <form action="" method="get">
+                	<input name="" type="text" placeholder="Email">
+                    <input name="" type="text" placeholder="Password">
+                    <input name="" type="submit" value="LOGIN">
+                    <div class="loginform-row">
+                    	<div class="formrow-left">
+                        	<input name="" type="checkbox" value="">
+                            <label>Remember me</label>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="formrow-right">
+                        	<a href="#">Forgot Password?</a>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+	</div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    
+    <!-- activities donut chart -->
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.3.0/snap.svg-min.js'></script>
+    
+    <!-- highchart -->    
+    <script src="http://code.highcharts.com/highcharts.js"></script>
+	<script src="http://code.highcharts.com/modules/exporting.js"></script>
+    
+    <!-- chart.js -->
+    <script src="js/Chart.js"></script>
+
+	<script>
+		var programmingSkills = [
+			{		
+			   
+				value: 7,
+				label: '07%-Daniel',
+				color: '#50e89b'
+			},
+			{
+				value: 35,
+				label: '35%-Richard',
+				color: '#f77531'
+				
+			},
+			{
+				value: 46,
+				label: '46%-Jeff',
+				color: '#50e89b'
+			},
+			{
+				value: 12,
+				label: '12%-George',
+				color: '#d14700'
+			},
+		];
+		</script> 
+	<script src="js/svg-donut-chart-framework.js"></script>
+    <script type="text/javascript">
+    
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-36251023-1']);
+		  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+		  _gaq.push(['_trackPageview']);
+		
+		  (function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+    
+    </script>
+    
+    <!-- contacts chart -->
+    <script>
+	
+		$(document).ready(function(){
+			$('#green-crossbtn').click(function(){
+				$('.top-greenbar').hide();
+				$('.dataconsulate-detail .dataconsulate-left').css( 'top', '0' );
+				$('.dataconsulate-detail .dataconsulate-right .right-topmenu').css( 'top', '0' );
+				$('.dataconsulate-detail .dataconsulate-right .dashboard-cont').css( 'padding-top', '110px' )
+			});
+		});
+	
+		var randomScalingFactor = function(){ return Math.round(Math.random()*40)};
+	
+		var barChartData = {
+			labels : ["January","February","March","April","May","June","July"],
+			datasets : [
+				{
+					fillColor : "rgba(0,152,101,1)",
+					strokeColor : "rgba(3,156,105,1)",
+					highlightFill: "rgba(80,232,155,1)",
+					highlightStroke: "rgba(84,233,138,1)",
+					data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
+				},
+				{
+					fillColor : "rgba(209,71,0,1)",
+					strokeColor : "rgba(214,75,5,1)",
+					highlightFill : "rgba(224,91,22,1)",
+					highlightStroke : "rgba(219,83,13,1)",
+					data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
+				}
+			]
+	
+		};
+		var doughnutData = [
+				{
+					value: 123,
+					color: "#d14700",
+					highlight: "#5AD3D1",
+					label: "In Progress"
+					
+				},
+				{
+					value: 79,
+					color:"#00cc65",
+					highlight: "#FF5A5E",
+					label: "Completed"
+				},
+			];
+		
+		window.onload = function(){
+			var ctx1 = document.getElementById("canvas2").getContext("2d");
+			var ctx2 = document.getElementById("chart-area").getContext("2d");
+			
+			window.myBar = new Chart(ctx1).Bar(barChartData, { responsive : true });
+			window.myDoughnut = new Chart(ctx2).Doughnut(doughnutData, {responsive : true});
+			
+		}
+		
+		$(function () {
+			$('#container').highcharts({
+				chart: {
+					plotBackgroundColor: null,
+					plotBorderWidth: 0,
+					plotShadow: false,
+					// Edit chart spacing
+					spacingBottom: 0,
+					spacingTop: 0,
+					spacingLeft: 0,
+					spacingRight: 0,
+					marginTop:0,
+					// Explicitly tell the width and height of a chart
+					width: 226,
+					height: 220
+				},
+				title: {
+					style:{
+						fontWeight: 'bold',
+						fontFamily: 'Montserrat, sans-serif'
+					},
+					text: '3,288',
+					align: 'center',
+					verticalAlign: 'middle',
+					y: 30
+				},
+				credits: {
+					enabled: false
+				},				
+				colors: ['#00cc65', '#d4d4d4'],
+				tooltip: {
+					pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+				},
+				plotOptions: {
+					pie: {
+						dataLabels: {
+							enabled: true,
+							distance: -50,
+							style: {
+								fontWeight: 'bold',
+								color: 'white',
+								textShadow: '0px 1px 2px black',
+								
+							}
+						},
+						startAngle: -90,
+						endAngle: 90,
+						center: ['50%', '75%']
+					}
+				},
+				series: [{
+					type: 'pie',
+					name: '',
+					innerSize: '50%',
+					data: [
+						['',   1],
+						
+						{
+							name: 'Proprietary or Undetectable',
+							y: 0.2,
+							dataLabels: {
+								enabled: false
+							}
+						}
+					]
+				}]
+			});
+		});
+
+
+	
+	</script>
+
+  </body>
+</html>

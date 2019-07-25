@@ -1,0 +1,2994 @@
+<!DOCTYPE html>
+<!--[if IE 6]>
+<html id="ie6">
+<![endif]-->
+<!--[if IE 7]>
+<html id="ie7">
+<![endif]-->
+<!--[if IE 8]>
+<html id="ie8">
+<![endif]-->
+<!--[if !(IE 6) | !(IE 7) | !(IE 8)  ]><!-->
+<html>
+<!--<![endif]-->
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    
+    <title>More Fiber</title>
+    
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    
+    <link rel="stylesheet" href="css/chosen.css"/>
+    
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.css" />
+    <link type="text/css" rel="stylesheet" href="css/bootstrap-theme.css" />
+    <link type="text/css" rel="stylesheet" href="css/font-awesome.css" />
+    
+    <link rel="stylesheet" type="text/css" href="css/dragtable.css">
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
+    
+    <!--[if lte IE 8]>
+    <link type="text/css" rel="stylesheet" href="css/ie.css" />
+    <script type="text/javascript" src="js/modernizr.min.js"></script>
+    <![endif]-->
+    
+    <!--[if lte IE 6]>
+    <script type="text/javascript" src="js/belated.js"></script>
+    <![endif]-->
+    
+    <!--<script type="text/javascript" src="js/jquery.js"></script>-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
+    <script src="js/jquery.dragtable.js"></script>
+    <script type="text/javascript" src="js/jquery.tablesorter.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/custom-form-elements.js"></script>
+  
+    
+    <script type="text/javascript">
+		$(function () {
+			$('[data-toggle="tooltip"]').tooltip();
+			
+		});
+	</script>
+    
+    
+    <script type="text/javascript">
+		$(function () {
+			$('.table-section td').hover(function() {
+				var t = parseInt($(this).index()) + 1;
+				$('.table-section td:nth-child(' + t + ')').addClass('highlighted');
+				
+				if(t>1){
+					var t1 = t -1;
+					//alert("T:" + t + "<br/> T1:" + t1);
+					$('.table-section td:nth-child(' + t1 + ')').addClass('highlightedPrev');
+				}
+			},
+			function() {
+				var t = parseInt($(this).index()) + 1;
+				$('.table-section td:nth-child(' + t + ')').removeClass('highlighted ');
+					if(t>1){
+					 var t1 = t -1;
+					 $('.table-section td:nth-child(' + t1 + ')').removeClass('highlightedPrev');
+				}
+			});
+			
+			
+			
+			// table click to add hilight
+			$(function() {
+			  var rows = $('.table-section .table-head');  
+			  rows.children().click(function() {
+				$(".table-section tr").children().removeClass('highlight');  
+				var index = $(this).prevAll().length; 
+				$(".table-section tr").find(':nth-child(' + (index + 1) + ')').addClass('highlight');
+			  });
+			});
+			
+		});
+	</script>
+    
+    
+    <script src="js/chosen.jquery.js"></script>
+	<script>
+		jQuery(document).ready(function(){
+			jQuery(".chosen").data("placeholder","Select Team").chosen();
+		});
+	</script>
+    
+    
+    <script type="text/javascript" src="js/scrool-bar.js"></script>
+	<script type="text/javascript">
+    	$(document).ready(function(){
+    		$('.scrollbar1').tinyscrollbar();
+    	});
+    </script>
+    
+    
+    
+    <script type='text/javascript'>
+	(function (d, t) {
+	  var bh = d.createElement(t), s = d.getElementsByTagName(t)[0];
+	  bh.type = 'text/javascript';
+	  bh.src = '//www.bugherd.com/sidebarv2.js?apikey=0xs5chpyrah3ixf4negmnw';
+	  s.parentNode.insertBefore(bh, s);
+	  })(document, 'script');
+	</script> 
+   
+    
+</head>
+
+<body id="page-name">
+
+<div class="blur-overlay"></div>
+
+
+
+<div id="container-fluid">
+
+
+
+
+<!--header start -->
+<div id="header-wrap">
+	<div class="container">
+        <header id="header" class="clearfix">
+            
+            <div class="row">
+            	<div class="col-sm-6">
+                	<div class="logo clearfix">
+                    	<a href="#"><img src="images/header/logo-fcm.svg" alt=""></a>
+                        <span>Quote Portal</span>
+                    </div>
+                    <div class="search-seciton">
+                    	<input type="text" placeholder="Search" class="search-field">
+                        <span class="search"></span>
+                    </div>
+                    <div class="cl"></div>
+                </div>
+                <div class="col-sm-6">
+                	<div class="header-right clearfix">
+                    	<ul class="clearfix">
+                        	
+                            <li class="dropdown dropdown-noimg" role="presentation">
+                                <a aria-expanded="false" aria-haspopup="true" role="button" 
+                                data-toggle="dropdown" class="dropdown-toggle" href="#" id="drop4">
+                                	John Appleseed<span class="dropdown-item mr-10"></span>
+                                </a>
+                                <ul aria-labelledby="drop4" class="dropdown-menu" id="menu1">
+                                    <li>
+                                    	<div class="user-wrap clearfix">
+                                        	<div class="user-img"><img src="images/user-img.jpg" alt=""></div>
+                                            <div class="user-info">
+                                            	<h4>John Applessed</h4>
+                                                <p>Sales Manager</p>
+                                                <p><a href="#">j.appleseed@domain.com</a></p>
+                                            </div>
+                                        </div>
+                                        <div class="nav-secondary">
+                                        	<ul>
+                                            	<li>
+                                                	<a href="#">
+                                                    	<img src="images/icon-setting.png" alt="" class="icon-left">
+                                                        <span>Account Settings</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                	<a href="#">
+                                                    	<img src="images/icon-logout.png" alt="" class="icon-left">
+                                                        <span>Log out</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            
+                            
+                            
+                            <li class="dropdown dropdown-center combine-item" role="presentation">
+                                <a aria-expanded="false" aria-haspopup="true" role="button" 
+                                data-toggle="dropdown" class="dropdown-toggle" href="#" id="drop4">
+                                	Admin <span class="dropdown-item mr-10"></span>
+                                    <img src="images/header/profile.svg" alt="">
+                                </a>
+                                <ul aria-labelledby="drop4" class="dropdown-menu" id="menu1">
+                                    <li>
+                                    	<div class="manage-top-wrap clearfix">
+                                        	<div class="manage-left">Manage your role</div>	
+                                            <div class="manage-right">
+                                            	<a href="#"><img src="images/icon-setting.png" alt=""></a>
+                                            </div>	
+                                        </div>
+                                        <div class="list-section">
+                                        	<ul>
+                                            	<li class="active">
+                                                	<a href="#">
+                                                    	<strong>Admin</strong> <span>last login 6:13pm 3h ago</span>
+                                                        <em class="tick"></em>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                	<a href="#">
+                                                    	<strong>Sales Manager</strong> <span>last login 10:45pm 3h ago</span>
+                                                        <em class="tick"></em>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                	<a href="#">
+                                                    	<strong>Wholesaler</strong> <span>last login 11:26pm 3h ago</span>
+                                                        <em class="tick"></em>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                	<a href="#">
+                                                    	<strong>Retailer</strong> <span>last login 3:25pm 3h ago</span>
+                                                        <em class="tick"></em>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            
+                            
+                            
+                            <li><a href="#"><img src="images/header/help.svg" alt=""></a></li>
+                            <li>
+                            	<a href="#">
+                                	<img src="images/header/notification.svg" alt="">
+                                    <span class="alert-up"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+        </header>
+    </div>
+</div>
+<!--header end -->
+
+
+
+<!--main start -->
+<div id="main-wrap">
+	<div class="container">
+        <div id="main" class="clearfix">
+        	
+            <div class="sidebar">
+                <div class="sidebar-section">
+                    <h3>Products by Type</h3>
+                    <ul>
+                        <li class="dropdown-sidebar">
+                            <a href="#"><span>Fiber</span></a>
+                            <ul class="dropdown-submenu">
+                                <li><a href="#"><span>Fiber Jumpers</span></a></li>
+                                <li><a href="#"><span>MTP/MPO Fiber</span></a></li>
+                                <li><a href="#"><span>Multistrand</span></a></li>
+                                <li><a href="#"><span>Mode Conditioning</span></a></li>
+                                <li><a href="#"><span>Fiber Attenuators</span></a></li>
+                                <li><a href="#"><span>Fiber Couplers</span></a></li>
+                                <li><a href="#"><span>Media Converters</span></a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-sidebar">
+                            <a href="#"><span>Cisco Compatible</span></a>
+                            <ul class="dropdown-submenu">
+                                <li><a href="#"><span>Cisco Compatible 1</span></a></li>
+                                <li><a href="#"><span>Cisco Compatible 2</span></a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-sidebar">
+                            <a href="#"><span>Transceivers</span></a>
+                            <ul class="dropdown-submenu">
+                                <li><a href="#"><span>Transceivers 1</span></a></li>
+                                <li><a href="#"><span>Transceivers 2</span></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="sidebar-section">
+                    <h3>Reports</h3>
+                    <ul>
+                        <li><a href="#">Back Order Report</a></li>
+                        <li><a href="#">Order History</a></li>
+                    </ul>
+                </div>
+                
+                <div class="sidebar-section">
+                    <h3>Contacts</h3>
+                    <ul>
+                        <li><a href="#" class="edit">Add/Edit Contacts</a></li>
+                    </ul>
+                </div>
+                
+                <div class="sidebar-section">
+                    <h3>Pages</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div><!--sidebar -->
+                
+                
+            <div class="content-right">
+                <ol class="breadcrumb">
+                    <li><a href="#">Home</a></li>
+                    <li class="active">Fiber</li>
+                </ol>
+                
+                <div class="fiber-section-wrap">
+                	<div class="fiber-title">
+                    	<h2>Fiber <span>(3 subcatgories)</span></h2>
+                        <div class="fiber-options clearfix">
+                        	<a href="#" class="icon-collapse"><span></span></a>
+                            <a href="#" class="icon-expand"><span></span></a>
+                        </div>
+                    </div>
+                    
+                    <div class="fiber-section-contain fiber-scroll">
+                    
+                    <div class="scrollbar1">
+                        <div class="scrollbar"><div class="track"><div class="thumb"><div class="end"></div></div></div></div>
+                        <div class="viewport">
+                            <div class="overview">
+                            	
+                                
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <div class="fiber-section">
+                                            <div class="fiber-img">
+                                                <a href="#" class="filter-popup"><img src="images/fiber-1.png" alt=""></a>
+                                            </div>
+                                            <div class="fibter-bot clearfix">
+                                                <div class="fiber-link-wrap">
+                                                    <a href="#" class="fiber-link fiber-show">
+                                                        <span>
+                                                            Fiber Jumpers <strong class="fiber-cirlce">538 items</strong>
+                                                        </span>
+                                                    </a>
+                                                    <a href="#" class="star-fiber"><span></span></a>
+                                                </div>
+                                                <div class="fiber-hidden-content">
+                                                    <div class="fiber-inner">
+                                                        <ul>
+                                                            <li>
+                                                                <a href="#">
+                                                                    <img src="images/menu-subcategory.svg" alt="" class="fb">
+                                                                    FMS Fiber Jumper
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">
+                                                                    <img src="images/menu-subcategory.svg" alt="" class="fb">
+                                                                    LTN Fiber Jumper
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">
+                                                                    <img src="images/menu-subcategory.svg" alt="" class="fb">
+                                                                    Domestic Fiber Jumper
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                    <div class="col-sm-4">
+                                        <div class="fiber-section">
+                                            <div class="fiber-img">
+                                                <a href="#" class="filter-popup"><img src="images/fiber-2.png" alt=""></a>
+                                            </div>
+                                            <div class="fibter-bot clearfix">
+                                                <div class="fiber-link-wrap">
+                                                    <a href="#" class="fiber-link fiber-show">
+                                                        <span>
+                                                            MTP/MPO Fiber <strong class="fiber-cirlce">54 items</strong>
+                                                        </span>
+                                                    </a>
+                                                    <a href="#" class="star-fiber"><span></span></a>
+                                                </div>
+                                                <div class="fiber-hidden-content">
+                                                    <div class="fiber-inner">
+                                                        <ul>
+                                                            <li>
+                                                                <a href="#">
+                                                                    <img src="images/menu-subcategory.svg" alt="" class="fb">
+                                                                    C2C
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">
+                                                                    <img src="images/menu-subcategory.svg" alt="" class="fb">
+                                                                    LTN
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                    <div class="col-sm-4">
+                                        <div class="fiber-section">
+                                            <div class="fiber-img">
+                                                <a href="#" class="filter-popup"><img src="images/fiber-3.png" alt=""></a>
+                                            </div>
+                                            <div class="fibter-bot clearfix">
+                                                <div class="fiber-link-wrap">
+                                                    <a href="#" class="fiber-link fiber-show">
+                                                        <span>
+                                                            MTP/MPO Breakout <strong class="fiber-cirlce">54 items</strong>
+                                                        </span>
+                                                    </a>
+                                                    <a href="#" class="star-fiber"><span></span></a>
+                                                </div>
+                                                <div class="fiber-hidden-content">
+                                                    <div class="fiber-inner">
+                                                        <ul>
+                                                            <li>
+                                                                <a href="#">
+                                                                    <img src="images/menu-subcategory.svg" alt="" class="fb">
+                                                                    C2C
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">
+                                                                    <img src="images/menu-subcategory.svg" alt="" class="fb">
+                                                                    LTN
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                
+                                
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <div class="fiber-section">
+                                            <div class="fiber-img">
+                                                <a href="#" class="filter-popup"><img src="images/fiber-4.png" alt=""></a>
+                                            </div>
+                                            <div class="fibter-bot clearfix">
+                                                <div class="fiber-link-wrap">
+                                                    <a href="#" class="fiber-link fiber-show">
+                                                        <span>
+                                                            Fiber Jumpers <strong class="fiber-cirlce">538 items</strong>
+                                                        </span>
+                                                    </a>
+                                                    <a href="#" class="star-fiber"><span></span></a>
+                                                </div>
+                                                <div class="fiber-hidden-content">
+                                                    <div class="fiber-inner">
+                                                        <ul>
+                                                            <li>
+                                                                <a href="#">
+                                                                    <img src="images/menu-subcategory.svg" alt="" class="fb">
+                                                                    FMS Fiber Jumper
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">
+                                                                    <img src="images/menu-subcategory.svg" alt="" class="fb">
+                                                                    LTN Fiber Jumper
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">
+                                                                    <img src="images/menu-subcategory.svg" alt="" class="fb">
+                                                                    Domestic Fiber Jumper
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                    <div class="col-sm-4">
+                                        <div class="fiber-section">
+                                            <div class="fiber-img">
+                                                <a href="#" class="filter-popup"><img src="images/fiber-5.png" alt=""></a>
+                                            </div>
+                                            <div class="fibter-bot clearfix">
+                                                <div class="fiber-link-wrap">
+                                                    <a href="#" class="fiber-link fiber-show">
+                                                        <span>
+                                                            MTP/MPO Fiber <strong class="fiber-cirlce">54 items</strong>
+                                                        </span>
+                                                    </a>
+                                                    <a href="#" class="star-fiber"><span></span></a>
+                                                </div>
+                                                <div class="fiber-hidden-content">
+                                                    <div class="fiber-inner">
+                                                        <ul>
+                                                            <li>
+                                                                <a href="#">
+                                                                    <img src="images/menu-subcategory.svg" alt="" class="fb">
+                                                                    C2C
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">
+                                                                    <img src="images/menu-subcategory.svg" alt="" class="fb">
+                                                                    LTN
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                    <div class="col-sm-4">
+                                        <div class="fiber-section">
+                                            <div class="fiber-img">
+                                                <a href="#" class="filter-popup"><img src="images/fiber-6.png" alt=""></a>
+                                            </div>
+                                            <div class="fibter-bot clearfix">
+                                                <div class="fiber-link-wrap">
+                                                    <a href="#" class="fiber-link fiber-show">
+                                                        <span>
+                                                            MTP/MPO Breakout <strong class="fiber-cirlce">54 items</strong>
+                                                        </span>
+                                                    </a>
+                                                    <a href="#" class="star-fiber"><span></span></a>
+                                                </div>
+                                                <div class="fiber-hidden-content">
+                                                    <div class="fiber-inner">
+                                                        <ul>
+                                                            <li>
+                                                                <a href="#">
+                                                                    <img src="images/menu-subcategory.svg" alt="" class="fb">
+                                                                    C2C
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">
+                                                                    <img src="images/menu-subcategory.svg" alt="" class="fb">
+                                                                    LTN
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>    
+                                </div>
+                                
+                                
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <div class="fiber-section">
+                                            <div class="fiber-img">
+                                                <a href="#" class="filter-popup"><img src="images/fiber-7.png" alt=""></a>
+                                            </div>
+                                            <div class="fibter-bot clearfix">
+                                                <div class="fiber-link-wrap">
+                                                    <a href="#" class="fiber-link fiber-show">
+                                                        <span>
+                                                            Fiber Jumpers <strong class="fiber-cirlce">538 items</strong>
+                                                        </span>
+                                                    </a>
+                                                    <a href="#" class="star-fiber"><span></span></a>
+                                                </div>
+                                                <div class="fiber-hidden-content">
+                                                    <div class="fiber-inner">
+                                                        <ul>
+                                                            <li>
+                                                                <a href="#">
+                                                                    <img src="images/menu-subcategory.svg" alt="" class="fb">
+                                                                    FMS Fiber Jumper
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">
+                                                                    <img src="images/menu-subcategory.svg" alt="" class="fb">
+                                                                    LTN Fiber Jumper
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">
+                                                                    <img src="images/menu-subcategory.svg" alt="" class="fb">
+                                                                    Domestic Fiber Jumper
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                    <div class="col-sm-4">
+                                        <div class="fiber-section">
+                                            <div class="fiber-img">
+                                                <a href="#" class="filter-popup"><img src="images/fiber-8.png" alt=""></a>
+                                            </div>
+                                            <div class="fibter-bot clearfix">
+                                                <div class="fiber-link-wrap">
+                                                    <a href="#" class="fiber-link fiber-show">
+                                                        <span>
+                                                            MTP/MPO Fiber <strong class="fiber-cirlce">54 items</strong>
+                                                        </span>
+                                                    </a>
+                                                    <a href="#" class="star-fiber"><span></span></a>
+                                                </div>
+                                                <div class="fiber-hidden-content">
+                                                    <div class="fiber-inner">
+                                                        <ul>
+                                                            <li>
+                                                                <a href="#">
+                                                                    <img src="images/menu-subcategory.svg" alt="" class="fb">
+                                                                    C2C
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">
+                                                                    <img src="images/menu-subcategory.svg" alt="" class="fb">
+                                                                    LTN
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                    <div class="col-sm-4">
+                                        <div class="fiber-section">
+                                            <div class="fiber-img">
+                                                <a href="#" class="filter-popup"><img src="images/fiber-9.png" alt=""></a>
+                                            </div>
+                                            <div class="fibter-bot clearfix">
+                                                <div class="fiber-link-wrap">
+                                                    <a href="#" class="fiber-link fiber-show">
+                                                        <span>
+                                                            MTP/MPO Breakout <strong class="fiber-cirlce">54 items</strong>
+                                                        </span>
+                                                    </a>
+                                                    <a href="#" class="star-fiber"><span></span></a>
+                                                </div>
+                                                <div class="fiber-hidden-content">
+                                                    <div class="fiber-inner">
+                                                        <ul>
+                                                            <li>
+                                                                <a href="#">
+                                                                    <img src="images/menu-subcategory.svg" alt="" class="fb">
+                                                                    C2C
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">
+                                                                    <img src="images/menu-subcategory.svg" alt="" class="fb">
+                                                                    LTN
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            
+                            </div><!--overview -->
+                        </div>
+                    </div><!--scrollbar1 -->
+                    
+                    </div><!--fiber-section-contain -->
+                    
+                    
+                </div><!--fiber-section-wrap -->
+                
+                
+                
+                <div class="selection-wrap">
+                    <div class="row overflow">
+                        <div class="col-sm-12"><h2>Selections <span>(6 items)</span></h2></div>
+                    </div>
+                    <div class="table-options">
+                        <div class="clearfix">
+                            <div class="reset">
+                                <button class="btn btn-default reset-table" data-toggle="tooltip" data-placement="top" 
+                                data-original-title="Reset" data-trigger="hover"> 
+                                    <img alt="" src="images/reset.svg">
+                                </button>
+                            </div>
+                            <div class="btn-group">
+                              <button class="btn btn-default" data-toggle="tooltip" data-placement="top" 
+                              data-original-title="Undo" data-trigger="hover"> 
+                                <img alt="" src="images/undo.svg">
+                              </button>
+                              <button class="btn btn-default btn-redo" data-toggle="tooltip" data-placement="top" 
+                              data-original-title="Redo" data-trigger="hover"> 
+                                <img alt="" src="images/redo.svg">
+                              </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="table-section">
+                <div id="tableContainer1">
+                    <table class="sorted_table scroll">
+                        
+                        <thead>
+                            <tr class="table-head">
+                                <th class="th-1" style="overflow:hidden; cursor:auto; position:relative; padding-left:0; padding-right:0;">
+                                	<span class="th-handle" style="cursor:auto; position:absolute; left:0; right:0; top:0; bottom:0; width:100%; height:100%; display:block; margin:0;">
+                                    	<span data-original-title="Drag" type="button" data-toggle="tooltip" data-placement="top">
+                                        	<img src="images/dragable.svg" alt="" style="visibility:hidden;">
+                                        </span>
+                                    </span>
+                                </th>
+                                <th class="th-2" style="overflow:hidden; cursor:auto; position:relative; padding-left:0; padding-right:0;">
+                                    
+                                    <span class="th-handle" style="cursor:auto; position:absolute; left:0; right:0; top:0; bottom:0; width:100%; height:100%; display:block; margin:0;">
+                                    	<span data-original-title="Drag" type="button" data-toggle="tooltip" data-placement="top">
+                                        	<img src="images/dragable.svg" alt="" style="visibility:hidden;">
+                                        </span>
+                                    </span>
+                                </th>
+                                
+                                
+                                
+                                <th data-sort="alias" class="th-3">
+                                    <span class="th-handle">
+                                    	<span data-original-title="Drag" type="button" data-toggle="tooltip" data-placement="top">
+                                        	<img src="images/dragable.svg" alt="">
+                                        </span>
+                                    </span>
+                                    <br> Alias #
+                                    <div class="sorting-arrow">
+                                    	<img src="images/sorting arrow-up.svg" alt="" class="sorting-icon-down">
+                                        <img src="images/sorting arrow.svg" alt="" class="sorting-icon-up">
+                                    </div>
+                                </th>
+                                <th data-sort="part" class="th-4">
+                                	<span class="th-handle">
+                                    	<span data-original-title="Drag" type="button" data-toggle="tooltip" data-placement="top">
+                                        	<img src="images/dragable.svg" alt="">
+                                        </span>
+                                    </span>
+                                    <br>Part # 
+                                    <div class="sorting-arrow">
+                                    	<img src="images/sorting arrow-up.svg" alt="" class="sorting-icon-down">
+                                        <img src="images/sorting arrow.svg" alt="" class="sorting-icon-up">
+                                    </div>
+                                </th>
+                                <th class="th-5">
+                                	<span class="th-handle">
+                                    	<span data-original-title="Drag" type="button" data-toggle="tooltip" data-placement="top">
+                                        	<img src="images/dragable.svg" alt="">
+                                        </span>
+                                    </span>
+                                    <br> Description
+                                    <div class="sorting-arrow">
+                                    	<img src="images/sorting arrow-up.svg" alt="" class="sorting-icon-down">
+                                        <img src="images/sorting arrow.svg" alt="" class="sorting-icon-up">
+                                    </div>
+                                </th>
+                                <th class="th-6">
+                                	<span class="th-handle">
+                                    	<span data-original-title="Drag" type="button" data-toggle="tooltip" data-placement="top">
+                                        	<img src="images/dragable.svg" alt="">
+                                        </span>
+                                    </span>
+                                    <br> Price Level
+                                    <div class="sorting-arrow">
+                                    	<img src="images/sorting arrow-up.svg" alt="" class="sorting-icon-down">
+                                        <img src="images/sorting arrow.svg" alt="" class="sorting-icon-up">
+                                    </div>
+                                </th>
+                                <th class="th-7">
+                                	<span class="th-handle">
+                                    	<span data-original-title="Drag" type="button" data-toggle="tooltip" data-placement="top">
+                                        	<img src="images/dragable.svg" alt="">
+                                        </span>
+                                    </span>
+                                    <br> QTY
+                                    <div class="sorting-arrow">
+                                    	<img src="images/sorting arrow-up.svg" alt="" class="sorting-icon-down">
+                                        <img src="images/sorting arrow.svg" alt="" class="sorting-icon-up">
+                                    </div>
+                                </th>
+                                <th class="th-8">
+                                	<span class="th-handle">
+                                    	<span data-original-title="Drag" type="button" data-toggle="tooltip" data-placement="top">
+                                        	<img src="images/dragable.svg" alt="">
+                                        </span>
+                                    </span>
+                                    <br> Avl
+                                    <div class="sorting-arrow">
+                                    	<img src="images/sorting arrow-up.svg" alt="" class="sorting-icon-down">
+                                        <img src="images/sorting arrow.svg" alt="" class="sorting-icon-up">
+                                    </div>
+                                </th>
+                                <th class="th-9">
+                                	<span class="th-handle">
+                                    	<span data-original-title="Drag" type="button" data-toggle="tooltip" data-placement="top">
+                                        	<img src="images/dragable.svg" alt="">
+                                        </span>
+                                    </span>
+                                    <br> On Hand
+                                    <div class="sorting-arrow">
+                                    	<img src="images/sorting arrow-up.svg" alt="" class="sorting-icon-down">
+                                        <img src="images/sorting arrow.svg" alt="" class="sorting-icon-up">
+                                    </div>
+                                </th>
+                                <th class="th-10">
+                                	<span class="th-handle">
+                                    	<span data-original-title="Drag" type="button" data-toggle="tooltip" data-placement="top">
+                                        	<img src="images/dragable.svg" alt="">
+                                        </span>
+                                    </span>
+                                    <br> On Order
+                                    <div class="sorting-arrow">
+                                    	<img src="images/sorting arrow-up.svg" alt="" class="sorting-icon-down">
+                                        <img src="images/sorting arrow.svg" alt="" class="sorting-icon-up">
+                                    </div>
+                                </th>
+                                <th class="th-11">
+                                	<span class="th-handle">
+                                    	<span data-original-title="Drag" type="button" data-toggle="tooltip" data-placement="top">
+                                        	<img src="images/dragable.svg" alt="">
+                                        </span>
+                                    </span>
+                                    <br> Unit Price
+                                    <div class="sorting-arrow">
+                                    	<img src="images/sorting arrow-up.svg" alt="" class="sorting-icon-down">
+                                        <img src="images/sorting arrow.svg" alt="" class="sorting-icon-up">
+                                    </div>
+                                </th>
+                                <th class="th-12">
+                                	<span class="th-handle">
+                                    	<span data-original-title="Drag" type="button" data-toggle="tooltip" data-placement="top">
+                                        	<img src="images/dragable.svg" alt="">
+                                        </span>
+                                    </span>
+                                    <br> 
+                                	Ext. Price
+                                    <div class="sorting-arrow">
+                                    	<img src="images/sorting arrow-up.svg" alt="" class="sorting-icon-down">
+                                        <img src="images/sorting arrow.svg" alt="" class="sorting-icon-up">
+                                    </div>
+                                </th>
+                                <th class="th-13">
+                                	<span class="th-handle">
+                                    	<span data-original-title="Drag" type="button" data-toggle="tooltip" data-placement="top">
+                                        	<img src="images/dragable.svg" alt="">
+                                        </span>
+                                    </span>
+                                    <br>
+                                    Unit Cost
+                                    <div class="sorting-arrow">
+                                    	<img src="images/sorting arrow-up.svg" alt="" class="sorting-icon-down">
+                                        <img src="images/sorting arrow.svg" alt="" class="sorting-icon-up">
+                                    </div>
+                                </th>
+                                <th class="th-14">
+                                	<span class="th-handle">
+                                    	<span data-original-title="Drag" type="button" data-toggle="tooltip" data-placement="top">
+                                        	<img src="images/dragable.svg" alt="">
+                                        </span>
+                                    </span>
+                                    <br>
+                                    Ext. Cost
+                                    <div class="sorting-arrow">
+                                    	<img src="images/sorting arrow-up.svg" alt="" class="sorting-icon-down">
+                                        <img src="images/sorting arrow.svg" alt="" class="sorting-icon-up">
+                                    </div>
+                                </th>
+                                <th class="th-15">
+                                	<span class="th-handle">
+                                    	<span data-original-title="Drag" type="button" data-toggle="tooltip" data-placement="top">
+                                        	<img src="images/dragable.svg" alt="">
+                                        </span>
+                                    </span>
+                                    <br>
+                                    Int Cost
+                                    <div class="sorting-arrow">
+                                    	<img src="images/sorting arrow-up.svg" alt="" class="sorting-icon-down">
+                                        <img src="images/sorting arrow.svg" alt="" class="sorting-icon-up">
+                                    </div>
+                                </th>
+                                <th class="th-16">
+                                	<span class="th-handle">
+                                    	<span data-original-title="Drag" type="button" data-toggle="tooltip" data-placement="top">
+                                        	<img src="images/dragable.svg" alt="">
+                                        </span>
+                                    </span>
+                                    <br> 
+                                    Margin
+                                    <div class="sorting-arrow">
+                                    	<img src="images/sorting arrow-up.svg" alt="" class="sorting-icon-down">
+                                        <img src="images/sorting arrow.svg" alt="" class="sorting-icon-up">
+                                    </div>
+                                </th>
+                                <th class="th-17">
+                                	<span class="th-handle">
+                                    	<span data-original-title="Drag" type="button" data-toggle="tooltip" data-placement="top">
+                                        	<img src="images/dragable.svg" alt="">
+                                        </span>
+                                    </span>
+                                    <br> 
+                                    Margin (%)
+                                    <div class="sorting-arrow">
+                                    	<img src="images/sorting arrow-up.svg" alt="" class="sorting-icon-down">
+                                        <img src="images/sorting arrow.svg" alt="" class="sorting-icon-up">
+                                    </div>
+                                </th>
+                                <th class="th-18">
+                                	<span class="th-handle">
+                                    	<span data-original-title="Drag" type="button" data-toggle="tooltip" data-placement="top">
+                                        	<img src="images/dragable.svg" alt="">
+                                        </span>
+                                    </span>
+                                    <br>
+                                    Location Code
+                                    <div class="sorting-arrow">
+                                    	<img src="images/sorting arrow-up.svg" alt="" class="sorting-icon-down">
+                                        <img src="images/sorting arrow.svg" alt="" class="sorting-icon-up">
+                                    </div>
+                                </th>
+                                
+                                <th class="th-19 center">
+                                	<span class="th-handle">
+                                    	<span data-original-title="Drag" type="button" data-toggle="tooltip" data-placement="top">
+                                        	<img src="images/dragable.svg" alt="">
+                                        </span>
+                                    </span>
+                                    <br>
+                                    Stk
+                                    <div class="sorting-arrow">
+                                    	<img src="images/sorting arrow-up.svg" alt="" class="sorting-icon-down">
+                                        <img src="images/sorting arrow.svg" alt="" class="sorting-icon-up">
+                                    </div>
+                                </th>
+                                
+                                
+                                <th class="th-20">
+                                	<span class="th-handle">
+                                    	<span data-original-title="Drag" type="button" data-toggle="tooltip" data-placement="top">
+                                        	<img src="images/dragable.svg" alt="">
+                                        </span>
+                                    </span>
+                                    <br> 
+                                    Notes
+                                    <div class="sorting-arrow">
+                                    	<img src="images/sorting arrow-up.svg" alt="" class="sorting-icon-down">
+                                        <img src="images/sorting arrow.svg" alt="" class="sorting-icon-up">
+                                    </div>
+                                </th>
+                                
+                                
+                                <th class="th-21">
+                                	<span class="th-handle">
+                                    	<span data-original-title="Drag" type="button" data-toggle="tooltip" data-placement="top">
+                                        	<img src="images/dragable.svg" alt="">
+                                        </span>
+                                    </span>
+                                    <br> 
+                                    Edit
+                                </th>
+                                
+                                <th class="th-22" style="overflow:hidden; cursor:auto;">
+                                	<span class="th-handle" style="visibility:hidden;">
+                                    	<span data-original-title="Drag" type="button" data-toggle="tooltip" data-placement="top">
+                                        	<img src="images/dragable.svg" alt="">
+                                        </span>
+                                    </span>
+                                    <br>
+                                    <a href="#"><img src="images/del.svg" alt=""></a>
+                                </th>
+                            </tr>
+                        </thead>    
+                            
+                            
+                            <tr>
+                                <td class="td-1"><div class="dragable-icon"><img src="images/dragable.svg" alt=""></div></td>
+                                <td class="td-2"><div class="count-decimal">1</div></td>
+                                <td class="td-3 breakword">+ZDS5-LCPLCP3PA-01</td>
+                                <td class="td-4 breakword">HMS5-LCPLCP3PA-01</td>
+                                <td class="td-5">LC/PC to LC/PC 10-GiG (OM3) MM Simplex 3mm Plenum Aqua - 3.28 ft - 1 Meter</td>
+                                <td class="td-6">
+                                    <form>
+                                    	<select name="select1" class="styled" style="width:auto;">
+                                            <option>Q624</option>
+                                            <option>Q623</option>
+                                            <option>Q622</option>
+                                            <option>Q621</option>
+                                        </select>
+                                    </form>
+                                </td>
+                                <td class="td-7"><input type="text" value="13,234" class="field-table"> <div class="hidden">1</div></td>
+                                <td class="td-8">0</td>
+                                <td class="td-9">0</td>
+                                <td class="td-10">0</td>
+                                <td class="td-11">3.45</td>
+                                <td class="td-12">38.30</td>
+                                <td class="td-13">3.86</td>
+                                <td class="td-14">14.30</td>
+                                <td class="td-15">12,345.0</td>
+                                <td class="td-16 center">24.56</td>
+                                <td class="td-17">63.41%</td>
+                                <td class="td-18">None</td>
+                                <td class="td-19"><span class="circle circle-success"></span> <div class="hidden">2</div></td>
+                                <td class="td-20">5 Bkordr 3-5 Days</td>
+                                <td class="td-21"><a href="#"><img src="images/edit.svg"></a></td>
+                                <td class="td-22"><a href="#"><img src="images/del.svg" alt=""></a></td>
+                            </tr>
+                            
+                            <tr>
+                                <td class="td-1"><div class="dragable-icon"><img src="images/dragable.svg" alt=""></div></td>
+                                <td class="td-2"><div class="count-decimal">2as d</div></td>
+                                <td class="td-3 breakword">+XDS5-LCPLCP3PA-01 asdf </td>
+                                <td class="td-4 breakword">GMS5-LCPLCP3PA-01 asdf</td>
+                                <td class="td-5">LC/PC to LC/PC 10-GiG (OM3) MM Simplex 3mm asdf asdf Plenum Aqua - 3.28 ft - 1 Meter</td>
+                                <td class="td-6">
+                                    <form>
+                                    	<select name="select2" class="styled" style="width:auto;">
+                                            <option>Q624</option>
+                                            <option>Q614</option>
+                                            <option>Q654</option>
+                                            <option>Q664</option>
+                                        </select>
+                                    </form>
+                                </td>
+                                <td class="td-7"><input type="text" value="26,154" class="field-table"> <div class="hidden">2</div></td>
+                                <td class="td-8">0</td>
+                                <td class="td-9">05</td>
+                                <td class="td-10">02</td>
+                                <td class="td-11">3.45</td>
+                                <td class="td-12">48.30</td>
+                                <td class="td-13">6.86</td>
+                                <td class="td-14">24.30</td>
+                                <td class="td-15">45,140.2</td>
+                                <td class="td-16 center">12.16</td>
+                                <td class="td-17">14.41%</td>
+                                <td class="td-18">None</td>
+                                <td class="td-19"><span class="circle circle-warning"></span> <div class="hidden">1</div></td>
+                                <td class="td-20">8 Bkordr 3-5 Days</td>
+                                <td class="td-21"><a href="#"><img src="images/edit.svg"></a></td>
+                                <td class="td-22"><a href="#"><img src="images/del.svg" alt=""></a></td>
+                            </tr>
+                            
+                            <tr>
+                                <td class="td-1"><div class="dragable-icon"><img src="images/dragable.svg" alt=""></div></td>
+                                <td class="td-2"><div class="count-decimal">3</div></td>
+                                <td class="td-3 breakword">+XDS5-LCPLCP3PA-01</td>
+                                <td class="td-4 breakword">GMS5-LCPLCP3PA-01</td>
+                                <td class="td-5">LC/PC to LC/PC 10-GiG (OM3) MM Simplex 3mm Plenum Aqua - 3.28 ft - 1 Meter</td>
+                                <td class="td-6">
+                                    <form>
+                                    	<select name="select3" class="styled" style="width:auto;">
+                                            <option>Q624</option>
+                                            <option>Q024</option>
+                                            <option>Q225</option>
+                                            <option>Q608</option>
+                                        </select>
+                                    </form>
+                                </td>
+                                <td class="td-7"><input type="text" value="58,139" class="field-table"></td>
+                                <td class="td-8">0</td>
+                                <td class="td-9">2</td>
+                                <td class="td-10">02</td>
+                                <td class="td-11">3.45</td>
+                                <td class="td-12">28.30</td>
+                                <td class="td-13">6.86</td>
+                                <td class="td-14">124.30</td>
+                                <td class="td-15">98,244.5</td>
+                                <td class="td-16 center">99.16</td>
+                                <td class="td-17">15.25%</td>
+                                <td class="td-18">None</td>
+                                <td class="td-19"><span class="circle circle-danger"></span></td>
+                                <td class="td-20">7 Bkordr 2-8 Days</td>
+                                <td class="td-21"><a href="#"><img src="images/edit.svg"></a></td>
+                                <td class="td-22"><a href="#"><img src="images/del.svg" alt=""></a></td>
+                            </tr>
+                            <tr>
+                                <td class="td-1"><div class="dragable-icon"><img src="images/dragable.svg" alt=""></div></td>
+                                <td class="td-2"><div class="count-decimal">4</div></td>
+                                <td class="td-3 breakword">+XDS5-LCPLCP3PA-01</td>
+                                <td class="td-4 breakword">GMS5-LCPLCP3PA-01</td>
+                                <td class="td-5">LC/PC to LC/PC 10-GiG (OM3) MM Simplex 3mm Plenum Aqua - 3.28 ft - 1 Meter</td>
+                                <td class="td-6">
+                                    <form>
+                                    	<select name="select4" class="styled" style="width:auto;">
+                                            <option>Q624</option>
+                                            <option>Q004</option>
+                                            <option>Q333</option>
+                                            <option>Q222</option>
+                                        </select>
+                                    </form>
+                                </td>
+                                <td class="td-7"><input type="text" value="00,234" class="field-table"></td>
+                                <td class="td-8">0</td>
+                                <td class="td-9">2</td>
+                                <td class="td-10">02</td>
+                                <td class="td-11">3.45</td>
+                                <td class="td-12">28.30</td>
+                                <td class="td-13">6.86</td>
+                                <td class="td-14">124.30</td>
+                                <td class="td-15">89,142.0</td>
+                                <td class="td-16 center">65.06</td>
+                                <td class="td-17">99.05%</td>
+                                <td class="td-18">None</td>
+                                <td class="td-19"><span class="circle circle-success"></span></td>
+                                <td class="td-20">8 Bkordr 1-9 Days</td>
+                                <td class="td-21"><a href="#"><img src="images/edit.svg"></a></td>
+                                <td class="td-22"><a href="#"><img src="images/del.svg" alt=""></a></td>
+                            </tr>
+                            <tr>
+                                <td class="td-1"><div class="dragable-icon"><img src="images/dragable.svg" alt=""></div></td>
+                                <td class="td-2"><div class="count-decimal">5</div></td>
+                                <td class="td-3 breakword">+XDS5-LCPLCP3PA-01</td>
+                                <td class="td-4 breakword">GMS5-LCPLCP3PA-01</td>
+                                <td class="td-5">LC/PC to LC/PC 10-GiG (OM3) MM Simplex 3mm Plenum Aqua - 3.28 ft - 1 Meter</td>
+                                <td class="td-6">
+                                    <form>
+                                    	<select name="select5" class="styled" style="width:auto;">
+                                            <option>Q624</option>
+                                            <option>Q620</option>
+                                            <option>Q604</option>
+                                            <option>Q004</option>
+                                        </select>
+                                    </form>
+                                </td>
+                                <td class="td-7"><input type="text" value="99,224" class="field-table"></td>
+                                <td class="td-8">0</td>
+                                <td class="td-9">2</td>
+                                <td class="td-10">02</td>
+                                <td class="td-11">3.45</td>
+                                <td class="td-12">28.30</td>
+                                <td class="td-13">6.86</td>
+                                <td class="td-14">124.30</td>
+                                <td class="td-15">89,125.0</td>
+                                <td class="td-16 center">59.56</td>
+                                <td class="td-17">39.58%</td>
+                                <td class="td-18">None</td>
+                                <td class="td-19"><span class="circle circle-success"></span></td>
+                                <td class="td-20">5 Bkordr 3-5 Days</td>
+                                <td class="td-21"><a href="#"><img src="images/edit.svg"></a></td>
+                                <td class="td-22"><a href="#"><img src="images/del.svg" alt=""></a></td>
+                            </tr>
+                            <tr>
+                                <td class="td-1"><div class="dragable-icon"><img src="images/dragable.svg" alt=""></div></td>
+                                <td class="td-2"><div class="count-decimal">6</div></td>
+                                <td class="td-3 breakword">+XDS5-LCPLCP3PA-01</td>
+                                <td class="td-4 breakword">GMS5-LCPLCP3PA-01</td>
+                                <td class="td-5">LC/PC to LC/PC 10-GiG (OM3) MM Simplex 3mm Plenum Aqua - 3.28 ft - 1 Meter</td>
+                                <td class="td-6">
+                                    <form>
+                                    	<select name="select6" class="styled" style="width:auto;">
+                                            <option>Q624</option>
+                                            <option>Q600</option>
+                                            <option>Q224</option>
+                                        </select>
+                                    </form>
+                                </td>
+                                <td class="td-7"><input type="text" value="99,224" class="field-table"></td>
+                                <td class="td-8">0</td>
+                                <td class="td-9">2</td>
+                                <td class="td-10">02</td>
+                                <td class="td-11">3.45</td>
+                                <td class="td-12">28.30</td>
+                                <td class="td-13">6.86</td>
+                                <td class="td-14">124.30</td>
+                                <td class="td-15">89,125.0</td>
+                                <td class="td-16 center">59.56</td>
+                                <td class="td-17">39.58%</td>
+                                <td class="td-18">None</td>
+                                <td class="td-19"><span class="circle circle-success"></span></td>
+                                <td class="td-20">6 Bkordr 1-2 Days</td>
+                                <td class="td-21"><a href="#"><img src="images/edit.svg"></a></td>
+                                <td class="td-22"><a href="#"><img src="images/del.svg" alt=""></a></td>
+                            </tr>
+                            
+                    </table>
+                </div>    
+                </div><!--table-section -->
+                
+                <div class="table-bot">
+                	<div class="row">
+                    	<div class="col-sm-4">
+                        	<div class="link-section">
+                            	<ul class="clearfix">
+                                	<li><a href="#">Save</a></li>
+                                    <li><a href="#">Export</a></li>
+                                    <li class="active"><a href="#">Send</a></li>
+                                    <li><a href="#">Push</a></li>
+                                    <li><a href="#">Share</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="col-sm-8">
+                        	<div class="table-total-wrap">
+                            	<div class="total-top">
+                                	<div class="row">
+                                    	<div class="col-sm-7">
+                                        	<div class="mathod">
+                                            	<form>
+                                            	<label>Select Shipping Method</label>
+                                                <div class="clearfix">
+                                                	<div class="fl-wrap">
+                                                        <select name="selecta" class="styled" style="width:auto;">
+                                                            <option>UPS Ground (Customer)</option>
+                                                            <option>UPS Ground Customer 2</option>
+                                                            <option>UPS Ground Customer 3</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="fl-wrap select-60">
+                                                    	<select name="selectb" class="styled" style="width:60px;">
+                                                            <option>FL</option>
+                                                            <option>FM</option>
+                                                            <option>FC</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="fl-wrap last">
+                                                    	<input type="text" value="33186" class="field field-75">
+                                                    </div>
+                                                </div>
+                                                </form>
+                                                <div class="total-weight">
+                                                	<p>total weight: 1 lb (2.2 kg)</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="col-sm-5">
+                                        	<div class="total-summary">
+                                            	<ul class="clearfix">
+                                                	<li class="clearfix"><span>Sub-Total</span> <strong>$20.16</strong></li>
+                                                    <li class="clearfix"><span>Shipping</span> <strong>$09.54</strong></li>
+                                                    <li class="clearfix"><span>Sales Tax</span> <strong>0.00</strong></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div><!--total-top -->
+                                
+                                <div class="total-mid">
+                                	<div class="row">
+                                    	<div class="col-sm-7">
+                                        	<div class="info-item">
+                                            	<ul class="clearfix">
+                                                	<li><span>SELL</span> <strong>$29.00</strong></li>
+                                                    <li><span>COST</span> <strong>$15.00</strong></li>
+                                                    <li><span>MARGIN</span> <strong>$14.00</strong></li>
+                                                    <li><span>MARGIN %</span> <strong>90.56%</strong></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-5">
+                                        	<div class="total-summary">
+                                            	<ul class="clearfix">
+                                                	<li class="clearfix"><span>Total</span> <strong>$29.07</strong></li>
+                                                </ul>
+                                            </div>
+                                            <p><a href="#" class="btn btn-block btn-warning">Checkout <img src="images/checkout-icon.svg" alt=""></a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                
+                            </div><!--table-total-wrap -->
+                        </div>
+                    </div>
+                </div><!--table-bot -->
+                
+            </div><!--content-right -->
+            
+            
+            
+        </div>
+    </div>
+</div>
+<!--main end -->
+
+
+</div><!--container-fluid -->
+
+
+
+<div class="popup-section" id="add-edit-popup">
+	<div class="popup-header">
+    	<a href="#" class="cancel"></a>
+        <a href="#" class="menu-popup" id="menu-edit"><img src="images/header/menu-popup.png" alt=""></a>
+    	<div class="row">
+        	<div class="col-sm-3">
+            	<div class="hide-compressed">
+            		<a href="#"><img src="images/header/logo-fcm.svg" alt=""></a>
+                </div>
+            </div>
+            <div class="col-sm-9">
+            	<div class="row">
+                	<div class="col-sm-3">
+                    	<h3>Add/Edit Contacts</h3>
+                    </div>
+                    
+                    <div class="col-sm-9">
+                    	<div class="right-info clearfix">
+                            
+                            <div class="btn-right">
+                                <a href="#" class="btn btn-default">CLEAR</a>
+                                <a href="#" class="btn btn-default btn-warning save-update">SAVE / UPDATE</a>
+                            </div>
+                            
+                            <div class="btn-group">
+                              <button data-original-title="Undo" type="button" class="btn btn-default" data-toggle="tooltip" data-placement="bottom" data-trigger="hover"> <img src="images/undo.svg" alt=""></button>
+                              <button data-original-title="Redo" type="button" class="btn btn-default btn-redo" data-toggle="tooltip" data-placement="bottom" data-trigger="hover"><img src="images/redo.svg" alt=""></button>
+                            </div>
+                            
+                            <a href="#" class="btn btn-default fr filter-popup">
+                                <img src="images/icon-left.png" alt=""> <span>Back to Configurator</span>
+                            </a>
+                            
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div><!--popup-header -->
+    
+    
+    <div class="popup-content scroll-default1">
+    	<div class="row">
+        	<div class="col-sm-3 hide-compressed">
+                <div class="sidebar">
+                    <div class="sidebar-section">
+                        <h3>Products by Type</h3>
+                        <ul>
+                            <li class="dropdown-sidebar">
+                                <a href="#"><span>Fiber</span></a>
+                                <ul class="dropdown-submenu">
+                                    <li><a href="#"><span>Fiber Jumpers</span></a></li>
+                                    <li><a href="#"><span>MTP/MPO Fiber</span></a></li>
+                                    <li><a href="#"><span>Multistrand</span></a></li>
+                                    <li><a href="#"><span>Mode Conditioning</span></a></li>
+                                    <li><a href="#"><span>Fiber Attenuators</span></a></li>
+                                    <li><a href="#"><span>Fiber Couplers</span></a></li>
+                                    <li><a href="#"><span>Media Converters</span></a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-sidebar">
+                                <a href="#"><span>Cisco Compatible</span></a>
+                                <ul class="dropdown-submenu">
+                                    <li><a href="#"><span>Cisco Compatible 1</span></a></li>
+                                    <li><a href="#"><span>Cisco Compatible 2</span></a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-sidebar">
+                                <a href="#"><span>Transceivers</span></a>
+                                <ul class="dropdown-submenu">
+                                    <li><a href="#"><span>Transceivers 1</span></a></li>
+                                    <li><a href="#"><span>Transceivers 2</span></a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="sidebar-section">
+                        <h3>Reports</h3>
+                        <ul>
+                            <li><a href="#">Back Order Report</a></li>
+                            <li><a href="#">Order History</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="sidebar-section">
+                        <h3>Contacts</h3>
+                        <ul>
+                            <li><a href="#" class="edit">Add/Edit Contacts</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="col-sm-9 extand-compressed">
+            	<div id="content-coming---">
+
+
+<form class="form-section">
+	
+    <div class="wrap">
+        <div class="row">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-9">
+            	
+                
+                <div class="alert alert-success alert-save">
+                  <button aria-label="Close" data-dismiss="alert" class="close" type="button">
+                  	<span aria-hidden="true">×</span>
+                  </button>
+                  <p><strong>Success:</strong> The page has been Saved/Updated.</p>
+                </div>
+                
+                
+            </div>
+        </div>
+    </div>
+    
+    <div class="wrap">
+        <div class="row">
+            <div class="col-sm-3"><label>Enter Email or Search</label></div>
+            <div class="col-sm-9">
+                <input type="text" value="dayanaj@fcmproducts.com" class="field">
+                <div class="enable-wrap">
+                    <input type="checkbox" class="checkbox" id="enable">
+                    <label for="enable">Enable Self Registration for this Domain</label>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="wrap">
+        <div class="row">
+            <div class="col-sm-3"><label>Company Name</label></div>
+            <div class="col-sm-9">
+                <input type="text" value="C18028 Atlantech Resellers Inc. (Cablesandkits.com)" class="field">
+            </div>
+        </div>
+    </div>
+    <div class="wrap">
+        <div class="row">
+            <div class="col-sm-3"><label>Name</label></div>
+            <div class="col-sm-9">
+                <div class="row">
+                    <div class="col-sm-6"><input type="text" value="Dayana" class="field"></div>
+                    <div class="col-sm-6"><input type="text" value="Chavarria" class="field"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="wrap">
+        <div class="row">
+            <div class="col-sm-3"><label>Title</label></div>
+            <div class="col-sm-9">
+                <input type="text" value="Sales Manager" class="field">
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="wrap">
+        <div class="row">
+            <div class="col-sm-3"><label>Address</label></div>
+            <div class="col-sm-9">
+            	<div class="wrap">
+                	<input type="text" value="10802 College Place, Cerritos, CA 90703" class="field">
+                </div>
+                <div class="row">
+                	<div class="col-xs-4 select-140">
+                        <select name="selectCountry" class="styled">
+                            <option>Miami</option>
+                        </select>
+                    </div>
+                    <div class="col-xs-4 select-140">
+                        <select name="selectCount" class="styled">
+                            <option>Florida</option>
+                        </select>
+                    </div>
+                    <div class="col-xs-4"><input type="text" value="33177" class="field"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="wrap">
+        <div class="row">
+            <div class="col-sm-3"><label>Team</label></div>
+            <div class="col-sm-9">
+                <div class="row">
+                	<div class="col-xs-3 select-116">
+                        <select name="selectTeam" class="styled">
+                            <option>Team A</option>
+                        </select>
+                    </div>
+                    <div class="col-xs-9 select-full">
+                        <select class="chosen" multiple="true" style="width:400px;">
+                            <option>John A.</option>
+                            <option>Larry H.</option>
+                            <option>Edward M.</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="wrap">
+        <div class="row">
+            <div class="col-sm-3"><label>Office Number</label></div>
+            <div class="col-sm-9">
+                <input type="text" value="(786) 797-6300" class="field">
+            </div>
+        </div>
+    </div>
+    
+    <div class="wrap">
+        <div class="row">
+            <div class="col-sm-3"><label>Mobile Number</label></div>
+            <div class="col-sm-9">
+                <input type="text" value="" class="field">
+            </div>
+        </div>
+    </div>
+    
+    <div class="wrap">
+        <div class="row">
+            <div class="col-sm-3"><label>FCM Sales Rep</label></div>
+            <div class="col-sm-9">
+            	<select class="chosen" multiple="true">
+                    <option>John A.</option>
+                    <option>Larry H.</option>
+                    <option>Edward M.</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    
+    <div class="wrap">
+        <div class="row">
+            <div class="col-sm-3"><label>Select Pricing Template</label></div>
+            <div class="col-sm-9">
+            	
+                <div class="select-478">
+                    <select name="selectFiber" class="styled">
+                        <option>Reseller</option>
+                        <option>Retailer</option>
+                    </select>
+                </div>
+                
+                <div class="select-pricing-wrap">
+                    <div class="select-pricing-option">
+                        <div class="scrollbar1">
+                            <div class="scrollbar"><div class="track"><div class="thumb"><div class="end"></div></div></div></div>
+                            <div class="viewport">
+                                <div class="overview">
+                                    
+                                    
+                                    <div class="option-inner">
+                                        <ul>
+                                            <li class="clearfix">
+                                                <div class="fl left-price">Fiber Main 1 to 10</div> 
+                                                <div class="fr select-116">
+                                                    <select name="selectFiber" class="styled">
+                                                        <option>Q-150</option>
+                                                    </select>
+                                                </div>
+                                            </li>
+                                            <li class="clearfix">
+                                                <div class="fl left-price">Fiber Main 11+</div> 
+                                                <div class="fr select-116">
+                                                    <select name="selectQet" class="styled">
+                                                        <option>Q-150</option>
+                                                    </select>
+                                                </div>
+                                            </li>
+                                            <li class="clearfix">
+                                                <div class="fl left-price">Fiber Main mode Cond</div> 
+                                                <div class="fr select-116">
+                                                    <select name="selectQs" class="styled">
+                                                        <option>Q-650</option>
+                                                    </select>
+                                                </div>
+                                            </li>
+                                            
+                                            
+                                            <li class="clearfix">
+                                                <div class="fl left-price">Fiber Main 1 to 10</div> 
+                                                <div class="fr select-116">
+                                                    <select name="selectStyle" class="styled">
+                                                        <option>Q-150</option>
+                                                    </select>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    
+                                    
+                                
+                                </div><!--overview -->
+                            </div>
+                        </div><!--scrollbar1 -->
+                        
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    <div class="wrap">
+        <div class="row">
+            <div class="col-sm-3"><label>Terms</label></div>
+            <div class="col-sm-9">
+                <div class="select-478">
+                    <select name="selectTerm" class="styled">
+                        <option>Term 1</option>
+                        <option>Term 2</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="wrap">
+        <div class="row">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-9">
+            	<div class="product-desc">
+                	<h3>Enable Product</h3>
+                    <ul>
+                    	<li>
+                            <input type="checkbox" class="checkbox" id="checkbox1">
+                            <label for="checkbox1">Fiber Jumpersr</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" class="checkbox" id="checkbox2">
+                            <label for="checkbox2">MTP</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" class="checkbox" id="checkbox3">
+                            <label for="checkbox3">Cisco Compatible</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" class="checkbox" id="checkbox4">
+                            <label for="checkbox4">Send Intro Login</label>
+                        </li>
+                    </ul>
+                </div>
+                
+                <a href="#" class="btn btn-default btn-warning mr-7">SAVE/UPDATE</a>
+                <a href="#" class="btn btn-default">CLEAR</a>
+                
+            </div>
+        </div>
+    </div>
+    
+    
+</form>
+
+                
+                
+                
+                
+                </div><!--content-coming -->
+            </div>
+        </div>
+    </div>
+    
+    
+</div><!--popup-section -->
+
+
+
+
+
+
+<div class="popup-section" id="fiber-jumper-popup">
+	<div class="popup-header">
+    	<a href="#" class="cancel"></a>
+        <a href="#" class="menu-popup" id="menu-configrator"><img src="images/header/menu-popup.png" alt=""></a>
+        
+    	<div class="row">
+            <div class="col-sm-12">
+                <div class="popup-title-wrap clearfix">
+                	<div class="fl-section fl-no-bdr">
+                    	<h3>Fiber Jumpers</h3>
+                    </div>
+                    <div class="fl-section">
+                    	<div class="sidebar-fiber">
+                            <li class="clearfix">
+                                <label>Origin</label>
+                                <div class="label-front">
+                                    <div class="clearfix">
+                                        <div class="fiber-select-wrap select-125" style="font-size:12px;">
+                                            <select name="selectCountry" class="styled">
+                                                <option>C2C -TCL &amp; AFOP</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </div>
+                    </div>
+                    
+                    <div class="right-info">
+                    	<div class="clearfix info-static edit-content">
+                            <div class="info-btn">
+                            	<a href="#" class="btn btn-default edit-title"><img src="images/edit.svg" alt=""></a>
+                            </div>
+                            <div class="info-contain">
+                                <h4>Dayana@customer.com</h4>
+                                <p>C21014 Dayana Fiber Cables Emprium</p>
+                            </div>
+                        </div>
+                        <div class="info-edit edit-done-wrap clearfix">
+                        	<input type="text" value="Dayana@customer.com" class="field">
+                            <a href="#" class="btn btn-warning edit-done">Update</a>
+                            <a href="#" class="btn btn-default edit-done">Cancel</a>
+                        </div>
+                    </div>
+                    
+                    
+                    
+                    <div class="fr clearfix">
+                    	
+                        <div class="fl-section">
+                            <div class="option-contain">
+                                <input type="checkbox" class="checkbox" id="include">
+                    			<label for="include" class="label-txt">Include Stocked items</label>
+                            </div>
+                        </div>
+                        
+                        <div class="fl-section">
+                        	<div class="quick-spect"><a href="#">Quick Specs</a></div>
+                        </div>
+                        
+                        
+                        <div class="fl-section last-section">
+                        	<div class="btn-group">
+                              <button class="btn btn-default"><img src="images/undo.svg" alt=""></button>
+                              <button class="btn btn-default"><img src="images/redo.svg" alt=""></button>
+                            </div>
+                            
+                            <div class="reset-popup">
+                                <button class="btn btn-default"><img src="images/reset.svg" alt=""></button>
+                            </div>
+                            
+                        </div>
+                        
+                        
+                        <div class="fl-section">
+                            <div class="select-85 fl">
+                                <select name="selectBasic" class="styled" style="width:85px;">
+                                    <option>Advanced</option>
+                                    <option>Basic</option>
+                                </select>
+                            </div>
+                            
+                            <div class="select-110 fl select-view">
+                                <select name="select-z" class="styled" style="width:110px;">
+                                    <option value="power-view" selected>PowerView</option>
+                                    <option value="standard-view">StandardView</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        
+                    </div>
+                    
+                    
+                </div>
+            </div>
+        </div>
+    </div><!--popup-header -->
+    
+    
+    
+    <div class="sidebar sidebar-overlay">
+        <div class="sidebar-logo">
+            <a href="#"><img src="images/header/logo-fcm.svg" alt=""></a>
+        </div>
+        <div class="sidebar-inner">
+            <div class="sidebar-section">
+                <h3>Products by Type</h3>
+                <ul>
+                    <li class="dropdown-sidebar">
+                        <a href="#"><span>Fiber</span></a>
+                        <ul class="dropdown-submenu">
+                            <li><a href="#"><span>Fiber Jumpers</span></a></li>
+                            <li><a href="#"><span>MTP/MPO Fiber</span></a></li>
+                            <li><a href="#"><span>Multistrand</span></a></li>
+                            <li><a href="#"><span>Mode Conditioning</span></a></li>
+                            <li><a href="#"><span>Fiber Attenuators</span></a></li>
+                            <li><a href="#"><span>Fiber Couplers</span></a></li>
+                            <li><a href="#"><span>Media Converters</span></a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown-sidebar">
+                        <a href="#"><span>Cisco Compatible</span></a>
+                        <ul class="dropdown-submenu">
+                            <li><a href="#"><span>Cisco Compatible 1</span></a></li>
+                            <li><a href="#"><span>Cisco Compatible 2</span></a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown-sidebar">
+                        <a href="#"><span>Transceivers</span></a>
+                        <ul class="dropdown-submenu">
+                            <li><a href="#"><span>Transceivers 1</span></a></li>
+                            <li><a href="#"><span>Transceivers 2</span></a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="sidebar-section">
+                <h3>Reports</h3>
+                <ul>
+                    <li><a href="#">Back Order Report</a></li>
+                    <li><a href="#">Order History</a></li>
+                </ul>
+            </div>
+        
+            <div class="sidebar-section">
+                <h3>Contacts</h3>
+                <ul>
+                    <li><a href="#" class="edit">Add/Edit Contacts</a></li>
+                </ul>
+            </div>
+        </div>    
+    </div><!--sidebar-overlay -->
+    
+    
+    
+    
+    <div class="popup-content scroll-default1">
+    	<div class="row">
+            <div class="col-sm-9  col-normal-full">
+            	
+                <div class="fiber-content">
+                    <div class="fiber-jumper-img">
+                        <img alt="" src="images/fiber-img.jpg">
+                        <div class="visual-cable">
+                        	<img src="images/visual-cable.jpg" alt="">
+                       	</div>
+                    </div>
+                    
+                    <div class="options-section-wrap clearfix">
+                   	  <div class="option-contain">
+                        	<label>Options:</label>
+                        	<input type="checkbox" class="checkbox" id="label">
+                            <label for="label" class="label-txt">Labeling</label>
+                        </div>
+                        <div class="option-contain">
+                            <input type="checkbox" class="checkbox" id="pulling">
+                            <label for="pulling" class="label-txt">Pulling Eye</label>
+                        </div>
+                        <div class="option-contain">
+                            <input type="checkbox" class="checkbox" id="stay">
+                            <label for="stay" class="label-txt">Stay on dust cap</label>
+                            
+                            <div class="info-section">
+                                <a class="question-link" href="#"><img alt="" src="images/info-icon.png"></a>
+                                <div class="popup-mini">
+                                    
+                                    <h3>Fiber Core</h3>
+                                    <h4 class="title-sb">10Gb Multimode (OM3)</h4>
+                                    
+                                    <div class="info-sm">
+                                    <div class="scrollbar1">
+                                        <div class="scrollbar" style="height: 0px;"><div class="track" style="height: 0px;"><div class="thumb">
+                                        <div class="end"></div></div></div></div>
+                                        <div class="viewport">
+                                            <div class="overview" style="top: 0px;">
+                                            
+                                                  <p><span class="textblue">Type: </span>Multimode Fiber OM3 Laser Enhanced 50/125 aka 10G MM, Laser Optimized OM3</p>
+                                                  <p><span class="textblue">Jacket Color: </span>Aqua</p>
+                                                  <p><span class="textblue">Used for:  </span>Short distances up to 300 Meters @ 10GB speeds </p>
+                                                  <p><span class="textblue">Usually used with: </span>Usually used with:</p>
+                                                  <p><span class="textblue">Benefit:  </span>Great for short runs within datacenters / backwards compatible to slower legacy speeds such as 2.5gb, 1gb, 100mb Drawbacks: OM3's 10GB 300 meter distance limit is</p>	
+                                                
+                                                
+                                            </div>
+                                        </div>
+                                    </div><!--scrollbar1 -->  
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div><!--options-section-wrap -->
+                	
+
+<!--hidden right sidear for noarmal view -->
+<div class="sidebar-fiber sidebar-normal-view">
+    <ul class="conn-a">
+        
+        <li class="clearfix">
+            <label>Conn. A Type</label>
+            <div class="label-front">
+                <div class="clearfix">
+                    <div class="fiber-select-wrap select-90">
+                        <select name="selectCountry" class="styled">
+                            <option>LC</option>
+                        </select>
+                    </div>
+                    <div class="info-section">
+                        <a href="#" class="question-link"><img src="images/info-icon.png" alt=""></a>
+                        <div class="popup-mini">
+                            
+                            <h3>Fiber Core</h3>
+                            <h4 class="title-sb">10Gb Multimode (OM3)</h4>
+                            
+                            <div class="info-sm">
+                            <div class="scrollbar1">
+                                <div class="scrollbar"><div class="track"><div class="thumb">
+                                <div class="end"></div></div></div></div>
+                                <div class="viewport">
+                                    <div class="overview">
+                                    
+                                          <p><span class="textblue">Type: </span>Multimode Fiber OM3 Laser Enhanced 50/125 aka 10G MM, Laser Optimized OM3</p>
+                                          <p><span class="textblue">Jacket Color: </span>Aqua</p>
+                                          <p><span class="textblue">Used for:  </span>Short distances up to 300 Meters @ 10GB speeds </p>
+                                          <p><span class="textblue">Usually used with: </span>Usually used with:</p>
+                                          <p><span class="textblue">Benefit:  </span>Great for short runs within datacenters / backwards compatible to slower legacy speeds such as 2.5gb, 1gb, 100mb Drawbacks: OM3's 10GB 300 meter distance limit is</p>	
+                                        
+                                        
+                                    </div>
+                                </div>
+                            </div><!--scrollbar1 -->  
+                            </div>
+                        </div>
+                    </div><!--info-section -->
+                </div>
+            </div>
+        </li>
+        <li class="clearfix">
+            <label>Conn. A Polish</label>
+            <div class="label-front">
+                <div class="clearfix">
+                    <div class="fiber-select-wrap select-90">
+                        <select name="selectCountry" class="styled">
+                            <option>PC</option>
+                        </select>
+                    </div>
+                    <div class="info-section">
+                        <a href="#" class="question-link"><img src="images/info-icon.png" alt=""></a>
+                        <div class="popup-mini">
+                            
+                            <h3>Fiber Core</h3>
+                            <h4 class="title-sb">10Gb Multimode (OM3)</h4>
+                            
+                            <div class="info-sm">
+                            <div class="scrollbar1">
+                                <div class="scrollbar"><div class="track"><div class="thumb">
+                                <div class="end"></div></div></div></div>
+                                <div class="viewport">
+                                    <div class="overview">
+                                    
+                                          <p><span class="textblue">Type: </span>Multimode Fiber OM3 Laser Enhanced 50/125 aka 10G MM, Laser Optimized OM3</p>
+                                          <p><span class="textblue">Jacket Color: </span>Aqua</p>
+                                          <p><span class="textblue">Used for:  </span>Short distances up to 300 Meters @ 10GB speeds </p>
+                                          <p><span class="textblue">Usually used with: </span>Usually used with:</p>
+                                          <p><span class="textblue">Benefit:  </span>Great for short runs within datacenters / backwards compatible to slower legacy speeds such as 2.5gb, 1gb, 100mb Drawbacks: OM3's 10GB 300 meter distance limit is</p>	
+                                        
+                                        
+                                    </div>
+                                </div>
+                            </div><!--scrollbar1 -->  
+                            </div>
+                        </div>
+                    </div><!--info-section -->
+                </div>
+            </div>
+        </li>
+    </ul>
+    
+    <ul class="conn-mid">
+    
+        <li class="clearfix">
+            <label>Fiber Core</label>
+            <div class="label-front">
+                <div class="clearfix">
+                    <div class="fiber-select-wrap select-135">
+                        <select name="selectCountry" class="styled">
+                            <option>10GB Multimedia</option>
+                        </select>
+                    </div>
+                    
+                    <div class="info-section">
+                        <a href="#" class="question-link"><img src="images/info-icon.png" alt=""></a>
+                        <div class="popup-mini">
+                            
+                            <h3>Fiber Core</h3>
+                            <h4 class="title-sb">10Gb Multimode (OM3)</h4>
+                            
+                            <div class="info-sm">
+                            <div class="scrollbar1">
+                                <div class="scrollbar"><div class="track"><div class="thumb">
+                                <div class="end"></div></div></div></div>
+                                <div class="viewport">
+                                    <div class="overview">
+                                    
+                                          <p><span class="textblue">Type: </span>Multimode Fiber OM3 Laser Enhanced 50/125 aka 10G MM, Laser Optimized OM3</p>
+                                          <p><span class="textblue">Jacket Color: </span>Aqua</p>
+                                          <p><span class="textblue">Used for:  </span>Short distances up to 300 Meters @ 10GB speeds </p>
+                                          <p><span class="textblue">Usually used with: </span>Usually used with:</p>
+                                          <p><span class="textblue">Benefit:  </span>Great for short runs within datacenters / backwards compatible to slower legacy speeds such as 2.5gb, 1gb, 100mb Drawbacks: OM3's 10GB 300 meter distance limit is</p>	
+                                        
+                                        
+                                    </div>
+                                </div>
+                            </div><!--scrollbar1 -->  
+                            </div>
+                        </div>
+                    </div><!--info-section -->
+                    
+                    
+                </div>
+            </div>
+        </li>
+        <li class="clearfix">
+            <label>Strands</label>
+            <div class="label-front">
+                <div class="clearfix">
+                    <div class="fiber-select-wrap select-135">
+                        <select name="selectCountry" class="styled">
+                            <option>Duplex</option>
+                        </select>
+                    </div>
+                    <div class="info-section">
+                        <a href="#" class="question-link"><img src="images/info-icon.png" alt=""></a>
+                        <div class="popup-mini">
+                            
+                            <h3>Fiber Core</h3>
+                            <h4 class="title-sb">10Gb Multimode (OM3)</h4>
+                            
+                            <div class="info-sm">
+                            <div class="scrollbar1">
+                                <div class="scrollbar"><div class="track"><div class="thumb">
+                                <div class="end"></div></div></div></div>
+                                <div class="viewport">
+                                    <div class="overview">
+                                    
+                                          <p><span class="textblue">Type: </span>Multimode Fiber OM3 Laser Enhanced 50/125 aka 10G MM, Laser Optimized OM3</p>
+                                          <p><span class="textblue">Jacket Color: </span>Aqua</p>
+                                          <p><span class="textblue">Used for:  </span>Short distances up to 300 Meters @ 10GB speeds </p>
+                                          <p><span class="textblue">Usually used with: </span>Usually used with:</p>
+                                          <p><span class="textblue">Benefit:  </span>Great for short runs within datacenters / backwards compatible to slower legacy speeds such as 2.5gb, 1gb, 100mb Drawbacks: OM3's 10GB 300 meter distance limit is</p>	
+                                        
+                                        
+                                    </div>
+                                </div>
+                            </div><!--scrollbar1 -->  
+                            </div>
+                        </div>
+                    </div><!--info-section -->
+                </div>
+            </div>
+        </li>
+        
+        <li class="clearfix">
+            <label>Jacket Color</label>
+            <div class="label-front">
+                <div class="clearfix">
+                    <div class="fiber-select-wrap select-135">
+                        <select name="selectCountry" class="styled">
+                            <option>Aqua</option>
+                        </select>
+                    </div>
+                    <div class="info-section">
+                        <a href="#" class="question-link"><img src="images/info-icon.png" alt=""></a>
+                        <div class="popup-mini">
+                            
+                            <h3>Fiber Core</h3>
+                            <h4 class="title-sb">10Gb Multimode (OM3)</h4>
+                            
+                            <div class="info-sm">
+                            <div class="scrollbar1">
+                                <div class="scrollbar"><div class="track"><div class="thumb">
+                                <div class="end"></div></div></div></div>
+                                <div class="viewport">
+                                    <div class="overview">
+                                    
+                                          <p><span class="textblue">Type: </span>Multimode Fiber OM3 Laser Enhanced 50/125 aka 10G MM, Laser Optimized OM3</p>
+                                          <p><span class="textblue">Jacket Color: </span>Aqua</p>
+                                          <p><span class="textblue">Used for:  </span>Short distances up to 300 Meters @ 10GB speeds </p>
+                                          <p><span class="textblue">Usually used with: </span>Usually used with:</p>
+                                          <p><span class="textblue">Benefit:  </span>Great for short runs within datacenters / backwards compatible to slower legacy speeds such as 2.5gb, 1gb, 100mb Drawbacks: OM3's 10GB 300 meter distance limit is</p>	
+                                        
+                                        
+                                    </div>
+                                </div>
+                            </div><!--scrollbar1 -->  
+                            </div>
+                        </div>
+                    </div><!--info-section -->
+                </div>
+            </div>
+        </li>
+        <li class="clearfix">
+            <label>Jacket Type</label>
+            <div class="label-front">
+                <div class="clearfix">
+                    <div class="fiber-select-wrap select-135">
+                        <select name="selectCountry" class="styled">
+                            <option>PVC(OFNR)</option>
+                        </select>
+                    </div>
+                    <div class="info-section">
+                        <a href="#" class="question-link"><img src="images/info-icon.png" alt=""></a>
+                        <div class="popup-mini">
+                            
+                            <h3>Fiber Core</h3>
+                            <h4 class="title-sb">10Gb Multimode (OM3)</h4>
+                            
+                            <div class="info-sm">
+                            <div class="scrollbar1">
+                                <div class="scrollbar"><div class="track"><div class="thumb">
+                                <div class="end"></div></div></div></div>
+                                <div class="viewport">
+                                    <div class="overview">
+                                    
+
+                                          <p><span class="textblue">Type: </span>Multimode Fiber OM3 Laser Enhanced 50/125 aka 10G MM, Laser Optimized OM3</p>
+                                          <p><span class="textblue">Jacket Color: </span>Aqua</p>
+                                          <p><span class="textblue">Used for:  </span>Short distances up to 300 Meters @ 10GB speeds </p>
+                                          <p><span class="textblue">Usually used with: </span>Usually used with:</p>
+                                          <p><span class="textblue">Benefit:  </span>Great for short runs within datacenters / backwards compatible to slower legacy speeds such as 2.5gb, 1gb, 100mb Drawbacks: OM3's 10GB 300 meter distance limit is</p>	
+                                        
+                                        
+                                    </div>
+                                </div>
+                            </div><!--scrollbar1 -->  
+                            </div>
+                        </div>
+                    </div><!--info-section -->
+                </div>
+            </div>
+        </li>
+        <li class="clearfix">
+            <label>Jacket Dia</label>
+            <div class="label-front">
+                <div class="clearfix">
+                    <div class="fiber-select-wrap select-135">
+                        <select name="selectCountry" class="styled">
+                            <option>2mm</option>
+                        </select>
+                    </div>
+                    <div class="info-section">
+                        <a href="#" class="question-link"><img src="images/info-icon.png" alt=""></a>
+                        <div class="popup-mini">
+                            
+                            <h3>Fiber Core</h3>
+                            <h4 class="title-sb">10Gb Multimode (OM3)</h4>
+                            
+                            <div class="info-sm">
+                            <div class="scrollbar1">
+                                <div class="scrollbar"><div class="track"><div class="thumb">
+                                <div class="end"></div></div></div></div>
+                                <div class="viewport">
+                                    <div class="overview">
+                                    
+                                          <p><span class="textblue">Type: </span>Multimode Fiber OM3 Laser Enhanced 50/125 aka 10G MM, Laser Optimized OM3</p>
+                                          <p><span class="textblue">Jacket Color: </span>Aqua</p>
+                                          <p><span class="textblue">Used for:  </span>Short distances up to 300 Meters @ 10GB speeds </p>
+                                          <p><span class="textblue">Usually used with: </span>Usually used with:</p>
+                                          <p><span class="textblue">Benefit:  </span>Great for short runs within datacenters / backwards compatible to slower legacy speeds such as 2.5gb, 1gb, 100mb Drawbacks: OM3's 10GB 300 meter distance limit is</p>	
+                                        
+                                        
+                                    </div>
+                                </div>
+                            </div><!--scrollbar1 -->  
+                            </div>
+                        </div>
+                    </div><!--info-section -->
+                </div>
+            </div>
+        </li>
+        <li class="clearfix">
+            <label>Length</label>
+            <div class="label-front">
+                <div class="clearfix">
+                    <div class="fiber-field auto">
+                        <div class="count-section">
+                            <a href="#"><img src="images/minus.svg" alt=""></a>
+                            <input type="text" value="1" class="field-count">
+                            <a href="#"><img src="images/plus.svg" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="fiber-select-wrap w-60 select-60">
+                        <select name="selectCountry" class="styled">
+                            <option>Meters</option>
+                        </select>
+                    </div>
+                    <div class="info-section">
+                        <a href="#" class="question-link"><img src="images/info-icon.png" alt=""></a>
+                        <div class="popup-mini">
+                            
+                            <h3>Fiber Core</h3>
+                            <h4 class="title-sb">10Gb Multimode (OM3)</h4>
+                            
+                            <div class="info-sm">
+                            <div class="scrollbar1">
+                                <div class="scrollbar"><div class="track"><div class="thumb">
+                                <div class="end"></div></div></div></div>
+                                <div class="viewport">
+                                    <div class="overview">
+                                    
+                                          <p><span class="textblue">Type: </span>Multimode Fiber OM3 Laser Enhanced 50/125 aka 10G MM, Laser Optimized OM3</p>
+                                          <p><span class="textblue">Jacket Color: </span>Aqua</p>
+                                          <p><span class="textblue">Used for:  </span>Short distances up to 300 Meters @ 10GB speeds </p>
+                                          <p><span class="textblue">Usually used with: </span>Usually used with:</p>
+                                          <p><span class="textblue">Benefit:  </span>Great for short runs within datacenters / backwards compatible to slower legacy speeds such as 2.5gb, 1gb, 100mb Drawbacks: OM3's 10GB 300 meter distance limit is</p>	
+                                        
+                                        
+                                    </div>
+                                </div>
+                            </div><!--scrollbar1 -->  
+                            </div>
+                        </div>
+                    </div><!--info-section -->
+                </div>
+            </div>
+        </li>
+
+    </ul>
+    
+    <ul class="conn-b">
+        
+        <li class="clearfix">
+            <label>Conn B. Type</label>
+            <div class="label-front">
+                <div class="clearfix">
+                    <div class="fiber-select-wrap select-90">
+                        <select name="selectCountry" class="styled">
+                            <option>SC</option>
+                        </select>
+                    </div>
+                    <div class="info-section">
+                        <a href="#" class="question-link"><img src="images/info-icon.png" alt=""></a>
+                        <div class="popup-mini">
+                            
+                            <h3>Fiber Core</h3>
+                            <h4 class="title-sb">10Gb Multimode (OM3)</h4>
+                            
+                            <div class="info-sm">
+                            <div class="scrollbar1">
+                                <div class="scrollbar"><div class="track"><div class="thumb">
+                                <div class="end"></div></div></div></div>
+                                <div class="viewport">
+                                    <div class="overview">
+                                    
+                                          <p><span class="textblue">Type: </span>Multimode Fiber OM3 Laser Enhanced 50/125 aka 10G MM, Laser Optimized OM3</p>
+                                          <p><span class="textblue">Jacket Color: </span>Aqua</p>
+                                          <p><span class="textblue">Used for:  </span>Short distances up to 300 Meters @ 10GB speeds </p>
+                                          <p><span class="textblue">Usually used with: </span>Usually used with:</p>
+                                          <p><span class="textblue">Benefit:  </span>Great for short runs within datacenters / backwards compatible to slower legacy speeds such as 2.5gb, 1gb, 100mb Drawbacks: OM3's 10GB 300 meter distance limit is</p>	
+                                        
+                                        
+                                    </div>
+                                </div>
+                            </div><!--scrollbar1 -->  
+                            </div>
+                        </div>
+                    </div><!--info-section -->
+                </div>
+            </div>
+        </li>
+        <li class="clearfix">
+            <label>Conn. B Polish</label>
+            <div class="label-front">
+                <div class="clearfix">
+                    <div class="fiber-select-wrap select-90">
+                        <select name="selectCountry" class="styled">
+                            <option>PC</option>
+                        </select>
+                    </div>
+                    <div class="info-section">
+                        <a href="#" class="question-link"><img src="images/info-icon.png" alt=""></a>
+                        <div class="popup-mini">
+                            
+                            <h3>Fiber Core</h3>
+                            <h4 class="title-sb">10Gb Multimode (OM3)</h4>
+                            
+                            <div class="info-sm">
+                            <div class="scrollbar1">
+                                <div class="scrollbar"><div class="track"><div class="thumb">
+                                <div class="end"></div></div></div></div>
+                                <div class="viewport">
+                                    <div class="overview">
+                                    
+                                          <p><span class="textblue">Type: </span>Multimode Fiber OM3 Laser Enhanced 50/125 aka 10G MM, Laser Optimized OM3</p>
+                                          <p><span class="textblue">Jacket Color: </span>Aqua</p>
+                                          <p><span class="textblue">Used for:  </span>Short distances up to 300 Meters @ 10GB speeds </p>
+                                          <p><span class="textblue">Usually used with: </span>Usually used with:</p>
+                                          <p><span class="textblue">Benefit:  </span>Great for short runs within datacenters / backwards compatible to slower legacy speeds such as 2.5gb, 1gb, 100mb Drawbacks: OM3's 10GB 300 meter distance limit is</p>	
+                                        
+                                        
+                                    </div>
+                                </div>
+                            </div><!--scrollbar1 -->  
+                            </div>
+                        </div>
+                    </div><!--info-section -->
+                </div>
+            </div>
+        </li>
+        
+        <li>
+            <div class="option-wrap clearfix">
+                <label>Options:</label>
+                <div class="label-front">
+                    <p><input type="checkbox" class="checkbox"> <span>Stay on dust cap</span></p>
+                    <p><input type="checkbox" class="checkbox"> <span>Labeling</span></p>
+                    <p><input type="checkbox" class="checkbox"> <span>Clear Tubees</span></p>
+                    <p><input type="checkbox" class="checkbox"> <span>Pulling Eye</span></p>
+                </div>
+            </div>    
+        </li>
+    </ul>
+    <div class="cl"></div>
+</div><!--sidebar-normal-view -->
+
+<!--hidden right sidebar for normal view -->
+                    
+                    
+                    
+                    <div class="table-strip-top">
+                        <table class="table">
+                            <tr>
+                                <th class="th-first">
+                                	<div class="part-number edit-content">
+                                        <h5>Part Number <a href="#" class="load edit-title">(Load)</a></h5>
+                                        <p>GMS5-LCPLCP3PA-01</p>
+                                    </div>
+                                    <div class="clearfix part-number-edit edit-done-wrap">
+                                    	<label>Load Part Number</label>
+                                        <input type="text" class="field" value="Dayana@customer.com">
+                                        <a class="btn btn-warning edit-done" href="#">Update</a>
+                                        <a class="btn btn-default edit-done" href="#">Cancel</a>
+                                    </div>
+                                </th>
+                                <th class="th-second">
+                                    <h5>Description</h5>
+                                    <p>Tekcell 10Gb (OM3) MMLC/PC to LC/PC Aqua - 3.28ft-01 M</p>
+                                </th>
+                                <th>
+                                    <h5>Stock</h5>
+                                    <span class="circle circle-success"></span>
+                                </th>
+                                <th><h5>Available</h5> 105</th>
+                                <th><h5>On Hand</h5> 49</th>
+                                <th><h5>On Order</h5> 300</th>
+                                <th><h5>Unit Price</h5> $10.69</th>
+                                <th class="th-last">
+                                    <h5>QTY.</h5>
+                                    <div class="count-section">
+                                        <a href="#"><img src="images/minus.svg" alt=""></a>
+                                        <input type="text" value="1" class="field-count">
+                                        <a href="#"><img src="images/plus.svg" alt=""></a>
+                                    </div>
+                                </th>
+                                <th class="hidden-for-cloest-match">
+                                	<h5>Select</h5>
+                                    <input type="checkbox" class="checkbox">
+                                </th>
+                                <th class="hidden-for-normal">
+                                	<a href="#" class="btn btn-warning btn-block">ADD TO LIST</a>
+                                </th>
+                            </tr>
+                        </table>
+                    </div><!--table-strip-top -->
+                
+                    <div class="closest-match-wrap">
+                        <div class="closest-match-top">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <a href="#" class="closest-match"><span>Show CLOSEST MATCH</span></a>
+                                </div>
+                                
+                                <div class="col-sm-9 closest-hide">
+                                    <div class="clearfix">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        <div class="select-float">
+                                            <input type="checkbox" class="checkbox" id="available-only">
+                            				<label for="available-only" class="available">Available Only</label>
+                                            
+                                        </div>
+                                        <div class="select-float">
+                                            <div class="select-90">
+                                                <select name="selectCountry" class="styled">
+                                                    <option>Jacket Color</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="select-float">
+                                            <div class="select-90">
+                                                <select name="selectCountry" class="styled">
+                                                    <option>Fiber Core</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="select-float">
+                                            <div class="select-90">
+                                                <select name="selectCountry" class="styled">
+                                                    <option>Jacket Dia</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="select-float">
+                                            <div class="select-90">
+                                                <select name="selectCountry" class="styled">
+                                                    <option>Length</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!--closest-match-top -->    
+                        
+                        <div class="table-section closest-hide">
+                            <table>
+                                <tr>
+                                    <th class="close-1">Part Number</th>
+                                    <th class="close-2">Description</th>
+                                    <th>Stock</th>
+                                    <th>Avl.</th>
+                                    <th>On Hand</th>
+                                    <th>On Order</th>
+                                    <th>Unit Price</th>
+                                    <th class="close-8">Qty.</th>
+                                    <th>Select</th>
+                                </tr>
+                                <tr>
+                                    <td class="close-1">CMS5-LCPLCP3PA-01</td>
+                                    <td class="close-2">LC/PC to LC/PC 10-GiG (OM3) MM Simplex 3.28 - 0.1 M</td>
+                                    <td><span class="circle circle-success"></span></td>
+                                    <td>105</td>
+                                    <td>49</td>
+                                    <td>300</td>
+                                    <td>$10.69</td>
+                                    <td class="close-8">	
+                                        <div class="count-section">
+                                            <a href="#"><img src="images/minus.svg" alt=""></a>
+                                            <input type="text" value="1" class="field-count">
+                                            <a href="#"><img src="images/plus.svg" alt=""></a>
+                                        </div>
+                                    </td>
+                                    <td><input type="checkbox" class="checkbox"></td>
+                                </tr>
+                                <tr>
+                                    <td class="close-1">CMS5-LCPLCP3PA-01</td>
+                                    <td class="close-2">LC/PC to LC/PC 10-GiG (OM3) MM Simplex 3.28 - 0.1 M</td>
+                                    <td><span class="circle circle-success"></span></td>
+                                    <td>105</td>
+                                    <td>49</td>
+                                    <td>300</td>
+                                    <td>$10.69</td>
+                                    <td class="close-8">	
+                                        <div class="count-section">
+                                            <a href="#"><img src="images/minus.svg" alt=""></a>
+                                            <input type="text" value="1" class="field-count">
+                                            <a href="#"><img src="images/plus.svg" alt=""></a>
+                                        </div>
+                                    </td>
+                                    <td><input type="checkbox" class="checkbox"></td>
+                                </tr>
+                                <tr>
+                                    <td class="close-1">CMS5-LCPLCP3PA-01</td>
+                                    <td class="close-2">LC/PC to LC/PC 10-GiG (OM3) MM Simplex 3.28 - 0.1 M</td>
+                                    <td><span class="circle circle-success"></span></td>
+                                    <td>105</td>
+                                    <td>49</td>
+                                    <td>300</td>
+                                    <td>$10.69</td>
+                                    <td class="close-8">	
+                                        <div class="count-section">
+                                            <a href="#"><img src="images/minus.svg" alt=""></a>
+                                            <input type="text" value="1" class="field-count">
+                                            <a href="#"><img src="images/plus.svg" alt=""></a>
+                                        </div>
+                                    </td>
+                                    <td><input type="checkbox" class="checkbox"></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div><!--closest-match-wrap -->
+                </div>    
+                
+            </div><!--col-sm-6 -->
+            
+            <div class="col-sm-3 col-normal-full">
+            	<div class="sidebar-fiber sidebar-power-view">
+                	
+                	<ul>
+                    
+                    	<li class="clearfix">
+                        	<label>Fiber Core</label>
+                            <div class="label-front">
+                                <div class="clearfix">
+                                    <div class="fiber-select-wrap select-135">
+                                        <select name="selectCountry" class="styled">
+                                            <option>10GB Multimedia</option>
+                                        </select>
+                                    </div>
+                                    
+                                    <div class="info-section">
+                                        <a href="#" class="question-link"><img src="images/info-icon.png" alt=""></a>
+                                        <div class="popup-mini">
+                                        	
+                                            <h3>Fiber Core</h3>
+                                            <h4 class="title-sb">10Gb Multimode (OM3)</h4>
+											
+                                            <div class="info-sm">
+                                            <div class="scrollbar1">
+                                                <div class="scrollbar"><div class="track"><div class="thumb">
+                                                <div class="end"></div></div></div></div>
+                                                <div class="viewport">
+                                                    <div class="overview">
+                                                    
+                                                          <p><span class="textblue">Type: </span>Multimode Fiber OM3 Laser Enhanced 50/125 aka 10G MM, Laser Optimized OM3</p>
+                                                          <p><span class="textblue">Jacket Color: </span>Aqua</p>
+                                                          <p><span class="textblue">Used for:  </span>Short distances up to 300 Meters @ 10GB speeds </p>
+                                                          <p><span class="textblue">Usually used with: </span>Usually used with:</p>
+                                                          <p><span class="textblue">Benefit:  </span>Great for short runs within datacenters / backwards compatible to slower legacy speeds such as 2.5gb, 1gb, 100mb Drawbacks: OM3's 10GB 300 meter distance limit is</p>	
+                                                        
+                                                        
+                                                    </div>
+                                                </div>
+                                            </div><!--scrollbar1 -->  
+                                            </div>
+                                        </div>
+                                    </div><!--info-section -->
+                                    
+                                    
+                                </div>
+                            </div>
+                        </li>
+                        <li class="clearfix">
+                        	<label>Strands</label>
+                            <div class="label-front">
+                                <div class="clearfix">
+                                    <div class="fiber-select-wrap select-135">
+                                        <select name="selectCountry" class="styled">
+                                            <option>Duplex</option>
+                                        </select>
+                                    </div>
+                                    <div class="info-section">
+                                        <a href="#" class="question-link"><img src="images/info-icon.png" alt=""></a>
+                                        <div class="popup-mini">
+                                        	
+                                            <h3>Fiber Core</h3>
+                                            <h4 class="title-sb">10Gb Multimode (OM3)</h4>
+											
+                                            <div class="info-sm">
+                                            <div class="scrollbar1">
+                                                <div class="scrollbar"><div class="track"><div class="thumb">
+                                                <div class="end"></div></div></div></div>
+                                                <div class="viewport">
+                                                    <div class="overview">
+                                                    
+                                                          <p><span class="textblue">Type: </span>Multimode Fiber OM3 Laser Enhanced 50/125 aka 10G MM, Laser Optimized OM3</p>
+                                                          <p><span class="textblue">Jacket Color: </span>Aqua</p>
+                                                          <p><span class="textblue">Used for:  </span>Short distances up to 300 Meters @ 10GB speeds </p>
+                                                          <p><span class="textblue">Usually used with: </span>Usually used with:</p>
+                                                          <p><span class="textblue">Benefit:  </span>Great for short runs within datacenters / backwards compatible to slower legacy speeds such as 2.5gb, 1gb, 100mb Drawbacks: OM3's 10GB 300 meter distance limit is</p>	
+                                                        
+                                                        
+                                                    </div>
+                                                </div>
+                                            </div><!--scrollbar1 -->  
+                                            </div>
+                                        </div>
+                                    </div><!--info-section -->
+                                </div>
+                            </div>
+                        </li>
+                        
+                        
+                        <li class="clearfix">
+                        	<label>Conn A. Type</label>
+                            <div class="label-front">
+                                <div class="clearfix">
+                                    <div class="fiber-select-wrap select-90">
+                                        <select name="selectCountry" class="styled">
+                                            <option>LC</option>
+                                        </select>
+                                    </div>
+                                    <div class="info-section">
+                                        <a href="#" class="question-link"><img src="images/info-icon.png" alt=""></a>
+                                        <div class="popup-mini">
+                                        	
+                                            <h3>Fiber Core</h3>
+                                            <h4 class="title-sb">10Gb Multimode (OM3)</h4>
+											
+                                            <div class="info-sm">
+                                            <div class="scrollbar1">
+                                                <div class="scrollbar"><div class="track"><div class="thumb">
+                                                <div class="end"></div></div></div></div>
+                                                <div class="viewport">
+                                                    <div class="overview">
+                                                    
+                                                          <p><span class="textblue">Type: </span>Multimode Fiber OM3 Laser Enhanced 50/125 aka 10G MM, Laser Optimized OM3</p>
+                                                          <p><span class="textblue">Jacket Color: </span>Aqua</p>
+                                                          <p><span class="textblue">Used for:  </span>Short distances up to 300 Meters @ 10GB speeds </p>
+                                                          <p><span class="textblue">Usually used with: </span>Usually used with:</p>
+                                                          <p><span class="textblue">Benefit:  </span>Great for short runs within datacenters / backwards compatible to slower legacy speeds such as 2.5gb, 1gb, 100mb Drawbacks: OM3's 10GB 300 meter distance limit is</p>	
+                                                        
+                                                        
+                                                    </div>
+                                                </div>
+                                            </div><!--scrollbar1 -->  
+                                            </div>
+                                        </div>
+                                    </div><!--info-section -->
+                                </div>
+                            </div>
+                        </li>
+                        <li class="clearfix">
+                        	<label>Conn. A Polish</label>
+                            <div class="label-front">
+                                <div class="clearfix">
+                                    <div class="fiber-select-wrap select-90">
+                                        <select name="selectCountry" class="styled">
+                                            <option>PC</option>
+                                        </select>
+                                    </div>
+                                    <div class="info-section">
+                                        <a href="#" class="question-link"><img src="images/info-icon.png" alt=""></a>
+                                        <div class="popup-mini">
+                                        	
+                                            <h3>Fiber Core</h3>
+                                            <h4 class="title-sb">10Gb Multimode (OM3)</h4>
+											
+                                            <div class="info-sm">
+                                            <div class="scrollbar1">
+                                                <div class="scrollbar"><div class="track"><div class="thumb">
+                                                <div class="end"></div></div></div></div>
+                                                <div class="viewport">
+                                                    <div class="overview">
+                                                    
+                                                          <p><span class="textblue">Type: </span>Multimode Fiber OM3 Laser Enhanced 50/125 aka 10G MM, Laser Optimized OM3</p>
+                                                          <p><span class="textblue">Jacket Color: </span>Aqua</p>
+                                                          <p><span class="textblue">Used for:  </span>Short distances up to 300 Meters @ 10GB speeds </p>
+                                                          <p><span class="textblue">Usually used with: </span>Usually used with:</p>
+                                                          <p><span class="textblue">Benefit:  </span>Great for short runs within datacenters / backwards compatible to slower legacy speeds such as 2.5gb, 1gb, 100mb Drawbacks: OM3's 10GB 300 meter distance limit is</p>	
+                                                        
+                                                        
+                                                    </div>
+                                                </div>
+                                            </div><!--scrollbar1 -->  
+                                            </div>
+                                        </div>
+                                    </div><!--info-section -->
+                                </div>
+                            </div>
+                        </li>
+                        
+                        
+                        <li class="clearfix">
+                        	<label>Conn B. Type</label>
+                            <div class="label-front">
+                                <div class="clearfix">
+                                    <div class="fiber-select-wrap select-90">
+                                        <select name="selectCountry" class="styled">
+                                            <option>SC</option>
+                                        </select>
+                                    </div>
+                                    <div class="info-section">
+                                        <a href="#" class="question-link"><img src="images/info-icon.png" alt=""></a>
+                                        <div class="popup-mini">
+                                        	
+                                            <h3>Fiber Core</h3>
+                                            <h4 class="title-sb">10Gb Multimode (OM3)</h4>
+											
+                                            <div class="info-sm">
+                                            <div class="scrollbar1">
+                                                <div class="scrollbar"><div class="track"><div class="thumb">
+                                                <div class="end"></div></div></div></div>
+                                                <div class="viewport">
+                                                    <div class="overview">
+                                                    
+                                                          <p><span class="textblue">Type: </span>Multimode Fiber OM3 Laser Enhanced 50/125 aka 10G MM, Laser Optimized OM3</p>
+                                                          <p><span class="textblue">Jacket Color: </span>Aqua</p>
+                                                          <p><span class="textblue">Used for:  </span>Short distances up to 300 Meters @ 10GB speeds </p>
+                                                          <p><span class="textblue">Usually used with: </span>Usually used with:</p>
+                                                          <p><span class="textblue">Benefit:  </span>Great for short runs within datacenters / backwards compatible to slower legacy speeds such as 2.5gb, 1gb, 100mb Drawbacks: OM3's 10GB 300 meter distance limit is</p>	
+                                                        
+                                                        
+                                                    </div>
+                                                </div>
+                                            </div><!--scrollbar1 -->  
+                                            </div>
+                                        </div>
+                                    </div><!--info-section -->
+                                </div>
+                            </div>
+                        </li>
+                        <li class="clearfix">
+                        	<label>Conn. B Polish</label>
+                            <div class="label-front">
+                                <div class="clearfix">
+                                    <div class="fiber-select-wrap select-90">
+                                        <select name="selectCountry" class="styled">
+                                            <option>PC</option>
+                                        </select>
+                                    </div>
+                                    <div class="info-section">
+                                        <a href="#" class="question-link"><img src="images/info-icon.png" alt=""></a>
+                                        <div class="popup-mini">
+                                        	
+                                            <h3>Fiber Core</h3>
+                                            <h4 class="title-sb">10Gb Multimode (OM3)</h4>
+											
+                                            <div class="info-sm">
+                                            <div class="scrollbar1">
+                                                <div class="scrollbar"><div class="track"><div class="thumb">
+                                                <div class="end"></div></div></div></div>
+                                                <div class="viewport">
+                                                    <div class="overview">
+                                                    
+                                                          <p><span class="textblue">Type: </span>Multimode Fiber OM3 Laser Enhanced 50/125 aka 10G MM, Laser Optimized OM3</p>
+                                                          <p><span class="textblue">Jacket Color: </span>Aqua</p>
+                                                          <p><span class="textblue">Used for:  </span>Short distances up to 300 Meters @ 10GB speeds </p>
+                                                          <p><span class="textblue">Usually used with: </span>Usually used with:</p>
+                                                          <p><span class="textblue">Benefit:  </span>Great for short runs within datacenters / backwards compatible to slower legacy speeds such as 2.5gb, 1gb, 100mb Drawbacks: OM3's 10GB 300 meter distance limit is</p>	
+                                                        
+                                                        
+                                                    </div>
+                                                </div>
+                                            </div><!--scrollbar1 -->  
+                                            </div>
+                                        </div>
+                                    </div><!--info-section -->
+                                </div>
+                            </div>
+                        </li>
+                        
+                        
+                        <li class="clearfix">
+                        	<label>Jacket Color</label>
+                            <div class="label-front">
+                                <div class="clearfix">
+                                    <div class="fiber-select-wrap select-135">
+                                        <select name="selectCountry" class="styled">
+                                            <option>Aqua</option>
+                                        </select>
+                                    </div>
+                                    <div class="info-section">
+                                        <a href="#" class="question-link"><img src="images/info-icon.png" alt=""></a>
+                                        <div class="popup-mini">
+                                        	
+                                            <h3>Fiber Core</h3>
+                                            <h4 class="title-sb">10Gb Multimode (OM3)</h4>
+											
+                                            <div class="info-sm">
+                                            <div class="scrollbar1">
+                                                <div class="scrollbar"><div class="track"><div class="thumb">
+                                                <div class="end"></div></div></div></div>
+                                                <div class="viewport">
+                                                    <div class="overview">
+                                                    
+                                                          <p><span class="textblue">Type: </span>Multimode Fiber OM3 Laser Enhanced 50/125 aka 10G MM, Laser Optimized OM3</p>
+                                                          <p><span class="textblue">Jacket Color: </span>Aqua</p>
+                                                          <p><span class="textblue">Used for:  </span>Short distances up to 300 Meters @ 10GB speeds </p>
+                                                          <p><span class="textblue">Usually used with: </span>Usually used with:</p>
+                                                          <p><span class="textblue">Benefit:  </span>Great for short runs within datacenters / backwards compatible to slower legacy speeds such as 2.5gb, 1gb, 100mb Drawbacks: OM3's 10GB 300 meter distance limit is</p>	
+                                                        
+                                                        
+                                                    </div>
+                                                </div>
+                                            </div><!--scrollbar1 -->  
+                                            </div>
+                                        </div>
+                                    </div><!--info-section -->
+                                </div>
+                            </div>
+                        </li>
+                        <li class="clearfix">
+                        	<label>Jacket Type</label>
+                            <div class="label-front">
+                                <div class="clearfix">
+                                    <div class="fiber-select-wrap select-135">
+                                        <select name="selectCountry" class="styled">
+                                            <option>PVC(OFNR)</option>
+                                        </select>
+                                    </div>
+                                    <div class="info-section">
+                                        <a href="#" class="question-link"><img src="images/info-icon.png" alt=""></a>
+                                        <div class="popup-mini">
+                                        	
+                                            <h3>Fiber Core</h3>
+                                            <h4 class="title-sb">10Gb Multimode (OM3)</h4>
+											
+                                            <div class="info-sm">
+                                            <div class="scrollbar1">
+                                                <div class="scrollbar"><div class="track"><div class="thumb">
+                                                <div class="end"></div></div></div></div>
+                                                <div class="viewport">
+                                                    <div class="overview">
+                                                    
+                                                          <p><span class="textblue">Type: </span>Multimode Fiber OM3 Laser Enhanced 50/125 aka 10G MM, Laser Optimized OM3</p>
+                                                          <p><span class="textblue">Jacket Color: </span>Aqua</p>
+                                                          <p><span class="textblue">Used for:  </span>Short distances up to 300 Meters @ 10GB speeds </p>
+                                                          <p><span class="textblue">Usually used with: </span>Usually used with:</p>
+                                                          <p><span class="textblue">Benefit:  </span>Great for short runs within datacenters / backwards compatible to slower legacy speeds such as 2.5gb, 1gb, 100mb Drawbacks: OM3's 10GB 300 meter distance limit is</p>	
+                                                        
+                                                        
+                                                    </div>
+                                                </div>
+                                            </div><!--scrollbar1 -->  
+                                            </div>
+                                        </div>
+                                    </div><!--info-section -->
+                                </div>
+                            </div>
+                        </li>
+                        <li class="clearfix">
+                        	<label>Jacket Dia</label>
+                            <div class="label-front">
+                                <div class="clearfix">
+                                    <div class="fiber-select-wrap select-135">
+                                        <select name="selectCountry" class="styled">
+                                            <option>2mm</option>
+                                        </select>
+                                    </div>
+                                    <div class="info-section">
+                                        <a href="#" class="question-link"><img src="images/info-icon.png" alt=""></a>
+                                        <div class="popup-mini">
+                                        	
+                                            <h3>Fiber Core</h3>
+                                            <h4 class="title-sb">10Gb Multimode (OM3)</h4>
+											
+                                            <div class="info-sm">
+                                            <div class="scrollbar1">
+                                                <div class="scrollbar"><div class="track"><div class="thumb">
+                                                <div class="end"></div></div></div></div>
+                                                <div class="viewport">
+                                                    <div class="overview">
+                                                    
+                                                          <p><span class="textblue">Type: </span>Multimode Fiber OM3 Laser Enhanced 50/125 aka 10G MM, Laser Optimized OM3</p>
+                                                          <p><span class="textblue">Jacket Color: </span>Aqua</p>
+                                                          <p><span class="textblue">Used for:  </span>Short distances up to 300 Meters @ 10GB speeds </p>
+                                                          <p><span class="textblue">Usually used with: </span>Usually used with:</p>
+                                                          <p><span class="textblue">Benefit:  </span>Great for short runs within datacenters / backwards compatible to slower legacy speeds such as 2.5gb, 1gb, 100mb Drawbacks: OM3's 10GB 300 meter distance limit is</p>	
+                                                        
+                                                        
+                                                    </div>
+                                                </div>
+                                            </div><!--scrollbar1 -->  
+                                            </div>
+                                        </div>
+                                    </div><!--info-section -->
+                                </div>
+                            </div>
+                        </li>
+                        <li class="clearfix">
+                        	<label>Length</label>
+                            <div class="label-front">
+                                <div class="clearfix">
+                                    <div class="fiber-field auto">
+                                        <div class="count-section">
+                                            <a href="#"><img src="images/minus.svg" alt=""></a>
+                                            <input type="text" value="1" class="field-count">
+                                            <a href="#"><img src="images/plus.svg" alt=""></a>
+                                        </div>
+                                    </div>
+                                    <div class="fiber-select-wrap w-60 select-60">
+                                        <select name="selectCountry" class="styled">
+                                            <option>Meters</option>
+                                        </select>
+                                    </div>
+                                    <div class="info-section">
+                                        <a href="#" class="question-link"><img src="images/info-icon.png" alt=""></a>
+                                        <div class="popup-mini">
+                                        	
+                                            <h3>Fiber Core</h3>
+                                            <h4 class="title-sb">10Gb Multimode (OM3)</h4>
+											
+                                            <div class="info-sm">
+                                            <div class="scrollbar1">
+                                                <div class="scrollbar"><div class="track"><div class="thumb">
+                                                <div class="end"></div></div></div></div>
+                                                <div class="viewport">
+                                                    <div class="overview">
+                                                    
+                                                          <p><span class="textblue">Type: </span>Multimode Fiber OM3 Laser Enhanced 50/125 aka 10G MM, Laser Optimized OM3</p>
+                                                          <p><span class="textblue">Jacket Color: </span>Aqua</p>
+                                                          <p><span class="textblue">Used for:  </span>Short distances up to 300 Meters @ 10GB speeds </p>
+                                                          <p><span class="textblue">Usually used with: </span>Usually used with:</p>
+                                                          <p><span class="textblue">Benefit:  </span>Great for short runs within datacenters / backwards compatible to slower legacy speeds such as 2.5gb, 1gb, 100mb Drawbacks: OM3's 10GB 300 meter distance limit is</p>	
+                                                        
+                                                        
+                                                    </div>
+                                                </div>
+                                            </div><!--scrollbar1 -->  
+                                            </div>
+                                        </div>
+                                    </div><!--info-section -->
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                        	<a href="#" class="btn btn-warning btn-block">ADD TO CART</a>
+                        </li>        
+                    </ul>
+                </div><!--sidebar-power-view -->
+                
+                
+                
+            </div><!--col-sm-3 -->
+            
+            
+        </div>
+    </div>
+</div><!--popup-section -->
+
+
+
+
+<script type="text/javascript">
+    $(document).ready(function() {      
+							   
+		$('.sorted_table').dragtable({
+			dragHandle:'.th-handle',
+			start: function(e, ui ){
+				ui.placeholder.height(ui.helper.outerHeight());
+				ui.placeholder.width(ui.helper.outerWidth());
+			},
+		});
+		$('.sorted_table').tablesorter(); 
+		$(".sorted_table tbody").sortable({
+			handle: ".dragable-icon",
+			start: function(e, ui ){
+				ui.placeholder.height(ui.helper.outerHeight());
+				ui.placeholder.width(ui.helper.outerWidth());
+			},
+		});
+
+    });
+	
+	
+	
+	
+	
+    </script>
+
+</body>
+</html>

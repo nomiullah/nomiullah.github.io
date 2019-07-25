@@ -1,0 +1,18 @@
+@import "partials/mixins.scss";
+@import "partials/variables.scss";
+@import "partials/header.scss";
+@import "partials/banner.scss";
+@import "partials/content.scss";
+@import "partials/footer.scss";
+
+
+.container{
+    max-width: 1118px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}

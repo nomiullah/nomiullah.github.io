@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<!--[if IE 6]>
+<html id="ie6">
+<![endif]-->
+<!--[if IE 7]>
+<html id="ie7">
+<![endif]-->
+<!--[if IE 8]>
+<html id="ie8">
+<![endif]-->
+<!--[if !(IE 6) | !(IE 7) | !(IE 8)  ]><!-->
+<html>
+<!--<![endif]-->
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Links_MyClick</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="css/font-awesome.min.css" />
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
+    
+    <!--[if lte IE 8]>
+    <link type="text/css" rel="stylesheet" href="css/ie.css" />
+    <script type="text/javascript" src="js/modernizr.min.js"></script>
+    <![endif]-->
+    
+    <!--[if lte IE 6]>
+    <script type="text/javascript" src="js/belated.js"></script>
+    <![endif]-->
+    
+</head>
+
+<body>
+    <!---Header--->
+    <header class="header profile-header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="logo">
+                        <a href="#">
+                            <img src="images/logo.png">
+                            <span>Keeping your clicks connected</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="header-right">
+                        <div class="profile">
+                            <div class="profile-img">
+                                <img src="images/girl-img.png">
+                            </div>
+                            <span>Name</span>
+                            <i class="fa fa-angle-down" aria-hidden="true"></i>
+
+                            <div class="profille-dropdown">
+                                <ul>
+                                    <li><a href="#">Link 1</a></li>
+                                    <li><a href="#">Link 2</a></li>
+                                    <li><a href="#">Link 3</a></li>
+                                    <li><a href="#" data-toggle="modal" data-target="#exampleModal">Log Out</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!---Header_End--->
+
+    <!-- Content Start -->
+    <div class="content">
+        <div class="tabs-outer">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-2">
+                        <div class="tab-sidebar">
+                            <span>Name</span>
+                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-selected="true">
+                                    <i class="fa fa-user" aria-hidden="true"></i>
+                                        Profile
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab"  aria-selected="false">
+                                    <i class="fa fa-link" aria-hidden="true"></i>
+                                        Links
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-selected="false">
+                                        <i class="fa fa-cog" aria-hidden="true"></i>
+                                        settings
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="billing-tab" data-toggle="tab" href="#billing" role="tab" aria-selected="false">
+                                        <img src="images/dollar-icon.png">
+                                        billing
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="stats-tab" data-toggle="tab" href="#stats" role="tab" aria-selected="false">
+                                        <img src="images/stats-icon.png">
+                                        stats
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="affiliates-tab" data-toggle="tab" href="#affiliates" role="tab" aria-selected="false">
+                                        <img src="images/affialates-icon.png">
+                                        Affiliates
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-10">
+                        <div class="tabs-view">
+                            <div class="tab-content" id="myTabContent">
+                                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                    <div class="row">
+                                        <div class="col-8">
+                                            <div class="tab-inner clickBox stats">
+                                                <h2>Profile</h2>
+                                            </div>  
+                                        </div>
+                                        <div class="col-4 d-none d-lg-block text-right">
+                                            <img src="images/profile-mob.png">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                    <div class="row">
+                                        <div class="col-lg-8">
+                                            <div class="tab-inner clickBox links">
+                                                <h2>Links</h2>
+                                                <form>
+                                                    <div class="form-group">
+                                                        <label>My link link is:</label>
+                                                        <div class="input-wrap">
+                                                            <input type="text" class="form-control" value="http://joinmyclick/kajshduihsaiu">
+                                                            <button class="copy-text"><img src="images/copy-icon.png"></button>
+                                                        </div>
+                                                    </div>
+                                                    <button class="btn btn-danger link-btn"><i class="fa fa-plus-circle" aria-hidden="true"></i>Add new link</button>
+                                                    <div class="radiobtn">
+                                                        <span>Have link my click logo</span>
+                                                    </div>
+                                                </form>
+                                                <div class="link-boxes">
+                                                    <div class="link-box">
+                                                        <div class="link-arrows">
+                                                            <i class="fa fa-angle-up" aria-hidden="true"></i>
+                                                            <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                                        </div>
+                                                        <div class="row align-items-center">
+                                                            <div class="col-sm-8 d-flex link-col">
+                                                                <div class="icon">
+                                                                    <img src="images/insta-icon.png">
+                                                                </div>
+                                                                <div class="link-info">
+                                                                    <div class="title">
+                                                                        <i class="fa fa-pencil" aria-hidden="true"></i>
+                                                                        <h4>My Title</h4>
+                                                                    </div>
+                                                                    <div class="link">
+                                                                        <i class="fa fa-pencil" aria-hidden="true"></i>
+                                                                        <a href="#">http://instagram/kajshduihsaiu</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-4">
+                                                                <div class="links-click text-right">
+                                                                    <span>18 clickes</span>    
+                                                                    <div class="slideThree">
+                                                                        <input type="checkbox" value="None" id="linksThree" name="check" checked="">
+                                                                        <label for="linksThree"></label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="link-box">
+                                                        <div class="link-arrows">
+                                                            <i class="fa fa-angle-up" aria-hidden="true"></i>
+                                                            <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                                        </div>
+                                                        <div class="row align-items-center">
+                                                            <div class="col-sm-7 d-flex link-col">
+                                                                <div class="icon">
+                                                                    <img src="images/twitter-icon.png">
+                                                                </div>
+                                                                <div class="link-info">
+                                                                    <div class="title">
+                                                                        <i class="fa fa-pencil" aria-hidden="true"></i>
+                                                                        <h4>My Title</h4>
+                                                                    </div>
+                                                                    <div class="link">
+                                                                        <i class="fa fa-pencil" aria-hidden="true"></i>
+                                                                        <a href="#">http://twitter/kajshduihsaiu</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-5">
+                                                                <div class="links-click text-right">
+                                                                    <span>18 clickes</span>    
+                                                                    <div class="slideThree">
+                                                                        <input type="checkbox" value="None" id="links2Three" name="check" checked="">
+                                                                        <label for="links2Three"></label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>  
+                                        </div>
+                                        <div class="col-4 d-none d-lg-block text-right">
+                                            <img src="images/links-mob.png">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                                    <div class="row">
+                                        <div class="col-lg-8">
+                                            <div class="tab-inner clickBox">
+                                                <h2>Settings</h2>
+                                                <form>
+                                                    <div class="form-group">
+                                                        <label>My profile link is:</label>
+                                                        <div class="input-wrap">
+                                                            <input type="text" class="form-control" value="http://linkmyclick.com/kajshduihsaiu">
+                                                            <button class="copy-text"><img src="images/copy-icon.png"></button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="radiobtn">
+                                                        <span>Have link my click logo</span>
+                                                        <div class="slideThree">
+                                                            <input type="checkbox" value="None" id="slideThree" name="check" checked="">
+                                                            <label for="slideThree"></label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="radiobtn">
+                                                        <span>Show link my click affiliate link</span>
+                                                        <div class="slideThree">
+                                                            <input type="checkbox" value="None" id="slideFour" name="check" checked="">
+                                                            <label for="slideFour"></label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="radiobtn mb-0">
+                                                        <span>show video on my profile</span>
+                                                        <div class="slideThree">
+                                                            <input type="checkbox" value="None" id="slideFive" name="check" checked="">
+                                                            <label for="slideFive"></label>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <small>Paste Link From Your YouTube, Video or FB Video below</small>
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="mb-0">Analytics:</label>
+                                                        <small>Google Analytics ID: <em>ex: UA-000000-2</em></small>
+                                                        <input type="text" class="form-control">
+                                                    </div>
+
+                                                    <div class="radiobtn mb-1">
+                                                        <span>UTM Parameters</span>
+                                                        <div class="slideThree">
+                                                            <input type="checkbox" value="None" id="slideSix" name="check" checked="">
+                                                            <label for="slideSix"></label>
+                                                        </div>
+                                                    </div>
+                                                    <label>Title: <b>sex social</b></label>
+                                                    <label>Source: <b>Link my click</b></label>     
+                                                    <label class="mb-4">Facebook: <b>Pixel ID</b></label>
+
+                                                    <div class="form-group">
+                                                        <label class="mb-0">Search engine settings</label>
+                                                        <label class="pl-3">Page title:</label>
+                                                        <input type="text" class="form-control" placeholder="Title">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="pl-3">Page description:</label>
+                                                        <input type="text" class="form-control" placeholder="Description">
+                                                    </div>
+                                                    <button class="btn btn-danger mt-5">Save</button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 d-lg-block d-none text-right">
+                                            <img src="images/settings-mob.png">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="billing" role="tabpanel" aria-labelledby="billing-tab">
+                                    <div class="tab-inner clickBox billing">
+                                        <h2>Billing</h2>
+                                        <div class="billing-top">
+                                            <div class="label-group mb-4 d-flex">
+                                                <label>Your subscription:     <b>pro $6.99/mo</b></label>
+                                                <a href="#" class="downgrade">Downgrade to free</a>
+                                            </div>
+                                            <h3>Billing details</h3>
+                                            <form>
+                                                <div class="form-group">
+                                                    <label>Name:</label>
+                                                    <input type="email" class="form-control ml-0" placeholder="Name">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Email Address:</label>
+                                                    <input type="email" class="form-control ml-0" placeholder="Email">
+                                                </div>
+                                                <div class="label-group mb-5 d-flex">
+                                                    <label>Payment: <b>MC ending in 1234</b></label>
+                                                </div>
+                                                <a href="#" class="add-newCard">Add New Card</a>
+                                                <a href="#" class="btn btn-danger mt-5">Save Updates</a>
+                                            </form>
+                                        </div>
+                                        <div class="billing-history">
+                                            <h3>Billing history</h3>
+                                            <table class="table" align="center"  style="overflow-x:auto;">
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Date</td>
+                                                        <td class="danger-txt">$6.99</td>
+                                                        <td>LMC Pro</td>
+                                                        <td><button class="btn btn-success">View receipt</button></td>
+                                                        <td><button class="btn btn-primary">Download pdf</button></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Date</td>
+                                                        <td class="danger-txt">$6.99</td>
+                                                        <td>LMC Pro</td>
+                                                        <td><button class="btn btn-success">View receipt</button></td>
+                                                        <td><button class="btn btn-primary">Download pdf</button></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="stats" role="tabpanel" aria-labelledby="stats-tab">
+                                    <div class="row">
+                                        <div class="col-lg-8">
+                                            <div class="tab-inner clickBox stats">
+                                                <h2>Stats</h2>
+                                            </div>  
+                                        </div>
+                                        <div class="col-lg-4 d-none d-lg-block text-right">
+                                            <img src="images/links-mob.png">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="affiliates" role="tabpanel" aria-labelledby="affiliates-tab">
+                                    <div class="row">
+                                        <div class="col-lg-8">
+                                            <div class="tab-inner clickBox affiliates">
+                                                <h2>Affiliates</h2>
+                                                <form>
+                                                    <div class="form-group">
+                                                        <label>My link link is:</label>
+                                                        <div class="input-wrap mb-5">
+                                                            <input type="text" class="form-control" value="http://joinmyclick/kajshduihsaiu">
+                                                            <button class="copy-text"><img src="images/copy-icon.png"></button>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                                <div class="affiliates-info">
+                                                    <h2>Affiliate stats</h2>
+                                                </div>
+                                                <div class="row mb-4">
+                                                    <div class="col-4">
+                                                        <div class="affiliates-count">
+                                                            <p>
+                                                                Clicks <br>today
+                                                            </p>
+                                                            <span>14</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <div class="affiliates-count">
+                                                            <p>
+                                                                Clicks past <br>7 days
+                                                            </p>
+                                                            <span>9</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <div class="affiliates-count">
+                                                            <p>
+                                                                Clicks <br>all time
+                                                            </p>
+                                                            <span>31</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="cahrt-img text-center mb-5">
+                                                    <img src="images/chart1.png">
+                                                </div>
+                                                <div class="row mb-5">
+                                                    <div class="col-4">
+                                                        <div class="affiliates-count">
+                                                            <p>
+                                                                earnings <br>today
+                                                            </p>
+                                                            <span>$14.99</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <div class="affiliates-count">
+                                                            <p>
+                                                                earnings past <br>7 days
+                                                            </p>
+                                                            <span>$9.99</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <div class="affiliates-count">
+                                                            <p>
+                                                                earnings <br>all time
+                                                            </p>
+                                                            <span>$31.99</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="cahrt-img text-center mb-5">
+                                                    <img src="images/chart2.png">
+                                                </div>
+
+                                                <div class="label-group mb-4">
+                                                    <label>All time earnings:   <b>$132.97</b></label>
+                                                    <label>Next payout amount:    <b>$132.97</b></label>
+                                                </div>
+
+                                                <div class="pay-form">
+                                                    <label>payout details:</label>
+                                                    <form>
+                                                        <div class="paypal-input">
+                                                            <div class="custom-control custom-radio custom-control-inline">
+                                                                <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
+                                                                <label class="custom-control-label" for="customRadioInline1">Paypal</label>
+                                                            </div>
+                                                            <input type="text" class="form-control" placeholder="Paypal email address">
+                                                        </div>
+                                                        <div class="direct-deposit">
+                                                            <div class="custom-control custom-radio custom-control-inline">
+                                                                <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
+                                                                <label class="custom-control-label" for="customRadioInline2">Direct deposit</label>
+                                                            </div>
+                                                            <div class="form-group mb-5 deposit-group">
+                                                                <input type="email" class="form-control"  placeholder="Name">
+                                                                <input type="email" class="form-control"  placeholder="Bank name">
+                                                                <input type="email" class="form-control"  placeholder="Bank account number">
+                                                                <input type="email" class="form-control"  placeholder="Checking your savings">
+                                                                <input type="email" class="form-control"  placeholder="Routing number">
+                                                            </div>
+                                                            <button class="btn btn-danger mt-5">Save</button>
+                                                        </div>
+                                                    </form>
+                                                    <div class="bottom-info mt-5">
+                                                        <span>Want to earn more?</span>
+                                                        <a href="#" class="danger-txt">Click here for our affiliate tips!</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Content End -->
+
+    <footer>
+        <div class="container">
+            <div class="ftr-nav text-center">
+                <ul>
+                    <li><a href="#">2257</a></li>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Terms</a></li>
+                    <li><a href="#">Support</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+
+    <div class="modal-wrap">
+        <div class="logout-modal">
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                        <div class="modal-body">
+                            <p>
+                                Are you sure you want to <br>log out?
+                            </p>
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">No, keep me logged in</button>
+                            <button type="button" class="btn btn-light">Yes, log me out</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/custom.js"></script>
+</body>
+</html>

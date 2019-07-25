@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<!--[if IE 6]>
+<html id="ie6">
+<![endif]-->
+<!--[if IE 7]>
+<html id="ie7">
+<![endif]-->
+<!--[if IE 8]>
+<html id="ie8">
+<![endif]-->
+<!--[if !(IE 6) | !(IE 7) | !(IE 8)  ]><!-->
+<html>
+<!--<![endif]-->
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <title>Search Page</title>
+    
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.css" />
+    <link type="text/css" rel="stylesheet" href="css/bootstrap-theme.css" />
+    <link type="text/css" rel="stylesheet" href="css/font-awesome.css" />
+    <link type="text/css" rel="stylesheet" href="css/jquery.bxslider.css" />
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
+    
+    <!--[if lte IE 8]>
+    <link type="text/css" rel="stylesheet" href="css/ie.css" />
+    <script type="text/javascript" src="js/modernizr.min.js"></script>
+    <![endif]-->
+    
+    <!--[if lte IE 7]>
+    <script type="text/css" src="css/font-awesome-ie7"></script>
+    <![endif]-->
+    <!--[if lte IE 6]>
+	    <script type="text/javascript" src="js/belated.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/holder.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+</head>
+
+<body id="page-name">
+
+<div id="container-fluid">
+
+<!--header start -->
+<div id="header-wrap">
+	<div class="share-this-bar">
+    	<div class="container">
+        	<div class="row">
+        		<div class="col-xs-4">
+                	<a href="#">Home</a>
+                </div>
+                <div class="col-xs-8 text-right">
+                    <ul class="list-inline">
+                    	<li><a href="#"><span class="icon-youtube-sign"></span></a></li>
+                        <li><a href="#"><span class="icon-google-plus-sign"></span></a></li>
+                        <li><a href="#"><span class="icon-tumblr-sign"></span></a></li>
+                        <li><a href="#"><span class="icon-twitter-sign"></span></a></li>
+                        <li><a href="#"><span class="icon-facebook-sign"></span></a></li>
+                        <li><a href="#"><span class="icon-pinterest-sign"></span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div><!--share-this-bar-->
+    <div class="container logo-wrap">
+    	<div class="row">
+        	<div class="col-sm-4">
+            	<div class="logo-wrap">
+	            	<a href="#"><img src="images/logo.png" alt="Logo"></a>
+                 </div>
+            </div>
+            <div class="col-sm-8 placeholer">
+            	<img data-src="holder.js/100%x90/#fff:#dfdfdf/text:728 x 90">
+            </div>
+        </div>
+    </div>
+    
+    <div class="navbar navigation">
+      <div class="container">
+	       <form class="navbar-form-search navbar-right">
+	          <a class="pull-right" href="#myModal" role="button"  data-toggle="modal">REGISTER / SIGN IN</a>
+          </form>
+        <div class="navbar-header">
+       
+          <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="clearfix visible-sm visible-xs"></div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+              <li><a href="#">HOME</a></li>
+              <li><a href="#">LYRICS</a></li>
+              <li><a href="#">ARTISTS</a></li>
+              <li><a href="#">GENRES</a></li>
+              <li><a href="#">SUBMIT A LYRIC</a></li>
+          </ul>
+          
+        </div><!--/.navbar-collapse -->
+      </div>
+    </div>
+    <div class="header-bottom-wrap">
+    	<div class="container">
+            <h1>Search Results for "chicken"</h1>
+		</div><!-- container -->
+	</div><!-- pagination-wrap navbar -->
+</div>
+<!--header end -->
+<!--main start -->
+<div id="main-wrap">
+	<div class="container">
+        <div id="main" class="clearfix row">
+        	<section id="contents" class="col-sm-9 left-column">
+                <div class="row">
+                	<div class="col-sm-12">
+                          <ul class="nav nav-custom" id="myTab">
+                            <li class="active"><a data-toggle="tab" href="#tab-1">Recipes <span>(79, 054)</span></a></li>
+                            <li><a data-toggle="tab" href="#tab-2">Photos <span>(23, 090)</span></a></li>
+                            <li><a data-toggle="tab" href="#tab-3">Cookbooks <span>(727)</span></a></li>
+                            <li><a data-toggle="tab" href="#tab-4">Menus <span>(117)</span></a></li>
+                            <li><a data-toggle="tab" href="#tab-5">Ingredients <span>(50)</span></a></li>
+                          </ul>
+                          <div class="tab-content" id="myTabContent">
+                            <div id="tab-1" class="tab-pane fade in active">
+                            	<h2 class="tab-heading">79, 054 Recipes</h2>
+                                <div class="row">
+                                	<div class="col-sm-6">
+                                    	<a href="#" class="theme-btn theme-btn-success">Narrow Search <span class="icon-chevron-right"></span></a>
+                                    </div>
+                                    <div class="col-sm-6 text-right">
+                                    	<div class="form-horizontal row">
+                                            <label for="sortby" class="col-sm-4 control-label">Sort by</label>
+                                            <div class="col-sm-8">
+                                            <select id="sortby" class="form-control">
+                                                <option>Most Popular</option>
+                                            </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                	<div class="col-sm-12">
+                                    	<div class="theme-box double-border">
+                                        	<div class="row">
+                                                <div class="col-sm-2 ">
+                                                <img src="images/item.png" class="thumbnail" alt="">
+                                                </div>
+                                                <div class="col-sm-10">
+                                                	<h3>Top Chicken Recipes</h3>
+                                                    <p>A sweet and refreshing papaya is excellent for this time of the year. It can be turned into many dishes and drinks. Perfect for the season!</p>
+                                                    <p class="last-para"><a href="#">Get Top Chicken Recipes Now</a></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                	<div class="col-sm-12">
+                                    	<div class="left-img">
+		                                    <h3>Bourbon <strong class="search-reslt">Chicken</strong></h3>
+                                        
+                                            <div class="row">
+                                                <div class="col-sm-2 ">
+                                                <img alt="" class="thumbnail" src="images/item.png">
+                                                <p>Recipe #45809</p>
+                                                </div>
+                                                <div class="col-sm-10">
+                                                    <p class="star-row red last-para">
+                                                        <a class="icon-star" href="#"></a>
+                                                        <a class="icon-star" href="#"></a>
+                                                        <a class="icon-star" href="#"></a>
+                                                        <a class="icon-star" href="#"></a>
+                                                        <a class="icon-star" href="#"></a>
+                                                        <a href="#">2,689 Reviews</a>
+                                                    </p>
+                                                    <p>Prep Time: 15 mins | Cook Time: 20 mins</p>
+                                                    <div class="theme-box">
+                                                        <p><a href="#">LinMarie</a>  
+                                                        says:</p> 
+                                                        <p>A sweet and refreshing papaya is excellent for this time of the year. It can be turned into many dishes and drinks. Perfect for the season!</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+										</div>
+                                    </div><!-- Col-Sm-12-->
+                                    
+                                    <div class="col-sm-12">
+                                    	<div class="left-img">
+		                                    <h3>Bourbon <strong class="search-reslt">Chicken</strong> </h3>
+                                        
+                                            <div class="row">
+                                                <div class="col-sm-2 ">
+                                                <img alt="" class="thumbnail" src="images/item.png">
+                                                <p>Recipe #45809</p>
+                                                </div>
+                                                <div class="col-sm-10">
+                                                    <p class="star-row red last-para">
+                                                        <a class="icon-star" href="#"></a>
+                                                        <a class="icon-star" href="#"></a>
+                                                        <a class="icon-star" href="#"></a>
+                                                        <a class="icon-star" href="#"></a>
+                                                        <a class="icon-star" href="#"></a>
+                                                        <a href="#">2,689 Reviews</a>
+                                                    </p>
+                                                    <p>Prep Time: 15 mins | Cook Time: 20 mins</p>
+                                                    <div class="theme-box">
+                                                        <p><a href="#">LinMarie </a>
+                                                        says:</p> 
+                                                        <p>A sweet and refreshing papaya is excellent for this time of the year. It can be turned into many dishes and drinks. Perfect for the season!</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+										</div>
+                                    </div><!-- Col-Sm-12-->
+                                    
+                                    <div class="col-sm-12">
+                                    	<div class="left-img">
+		                                    <h3>Bourbon <strong class="search-reslt">Chicken</strong></h3>
+                                        
+                                            <div class="row">
+                                                <div class="col-sm-2 ">
+                                                <img alt="" class="thumbnail" src="images/item.png">
+                                                <p>Recipe #45809</p>
+                                                </div>
+                                                <div class="col-sm-10">
+                                                    <p class="star-row red last-para">
+                                                        <a class="icon-star" href="#"></a>
+                                                        <a class="icon-star" href="#"></a>
+                                                        <a class="icon-star" href="#"></a>
+                                                        <a class="icon-star" href="#"></a>
+                                                        <a class="icon-star" href="#"></a>
+                                                        <a href="#">2,689 Reviews</a>
+                                                    </p>
+                                                    <p>Prep Time: 15 mins | Cook Time: 20 mins</p>
+                                                    <div class="theme-box">
+                                                        <p><a href="#">LinMarie</a>
+                                                        says:</p> 
+                                                        <p>A sweet and refreshing papaya is excellent for this time of the year. It can be turned into many dishes and drinks. Perfect for the season!</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+										</div>
+                                    </div><!-- Col-Sm-12-->
+                                    <div class="col-sm-12">
+                                    	<div class="left-img last-item">
+		                                    <h3>Bourbon <strong class="search-reslt">Chicken</strong></h3>
+                                        
+                                            <div class="row">
+                                                <div class="col-sm-2 ">
+                                                <img alt="" class="thumbnail" src="images/item.png">
+                                                <p>Recipe #45809</p>
+                                                </div>
+                                                <div class="col-sm-10">
+                                                    <p class="star-row red last-para">
+                                                        <a class="icon-star" href="#"></a>
+                                                        <a class="icon-star" href="#"></a>
+                                                        <a class="icon-star" href="#"></a>
+                                                        <a class="icon-star" href="#"></a>
+                                                        <a class="icon-star" href="#"></a>
+                                                        <a href="#">2,689 Reviews</a>
+                                                    </p>
+                                                    <p>Prep Time: 15 mins | Cook Time: 20 mins</p>
+                                                    <div class="theme-box">
+                                                        <p><a href="#">LinMarie <span class="icon-caret-down green"></span></a>
+                                                        says:</p> 
+                                                        <p>A sweet and refreshing papaya is excellent for this time of the year. It can be turned into many dishes and drinks. Perfect for the season!</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+										</div>
+                                    </div><!-- Col-Sm-12-->
+                                </div>
+                            </div>
+                            <div id="tab-2" class="tab-pane fade">
+                              <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggiar helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson 8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.</p>
+                            </div>
+                            <div id="tab-3" class="tab-pane fade">
+                              <p>Food truck fixie localkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson 8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.</p>
+                            </div>
+                            <div id="tab-4" class="tab-pane fade">
+                              <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggi jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.</p>
+                            </div>
+                            <div id="tab-5" class="tab-pane fade">
+                              <p>Food truck fixie loca jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.</p>
+                            </div>
+                          </div>
+                    </div>
+                </div>
+            </section><!--contents -->
+            <aside id="sidebar" class="col-sm-3 sidebar">
+            	<div class="post-add">
+                    <img src="images/add.png" alt="">
+                    <div class="row">
+                        <div class="col-xs-6"><a href="#">ADVERTISE WITH US</a></div>
+                        <div class="col-xs-6 text-right">ADVERTISE</div>
+                    </div>
+				</div>
+                <h3 class="blue-box">Photos</h3>
+                <div class="newest-photo-section row">
+                	<h5><a href="#" class="icon-caret-down"></a>
+                    	<strong>Newest Chicken Photos</strong>
+                    </h5>
+                    <ul class="list-inline">
+                        <li><a href="#"><img src="images/item.png" alt=""></a></li>
+                        <li><a href="#"><img src="images/item.png" alt=""></a></li>
+                        <li><a href="#"><img src="images/item.png" alt=""></a></li>
+                        <li><a href="#"><img src="images/item.png" alt=""></a></li>
+                        <li><a href="#"><img src="images/item.png" alt=""></a></li>
+                        <li><a href="#"><img src="images/item.png" alt=""></a></li>
+                    </ul>
+                </div>
+                <h3 class="blue-box">What everyone's cooking</h3>
+                <div class="row">
+                	<div class="col-lg-12">
+                        <ul class="nav nav-custom">
+                          <li class="active"><a href="#highest-rated" data-toggle="tab">Highest Rated</a></li>
+                          <li><a href="#recently-rated" data-toggle="tab">Recently rated</a></li>
+                        </ul>
+                    </div>
+                 </div>
+                 
+                 <div class="row">
+                 	<div class="col-sm-12">
+                        <div class="tab-content">
+                            <div class="tab-pane fade in active" id="highest-rated">
+                                <div class="left-img">
+                                    <div class="clearfix">
+                                        <img alt="" src="images/item.png">
+                                        <p class="item-name"><a href="#">Honey fritters with honey Honey fritters with </a></p>
+                                        <p class="star-row">
+                                            <a href="#" class="icon-star"></a>
+                                            <a href="#" class="icon-star"></a>
+                                            <a href="#" class="icon-star"></a>
+                                            <a href="#" class="icon-star"></a>
+                                            <a href="#" class="icon-star"></a>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="left-img">
+                                    <div class="clearfix">
+                                        <img alt="" src="images/item.png">
+                                        <p class="item-name"><a href="#">Honey fritters with honey Honey fritters with </a></p>
+                                        <p class="star-row">
+                                            <a href="#" class="icon-star"></a>
+                                            <a href="#" class="icon-star"></a>
+                                            <a href="#" class="icon-star"></a>
+                                            <a href="#" class="icon-star"></a>
+                                            <a href="#" class="icon-star"></a>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="left-img">
+                                    <div class="clearfix">
+                                        <img alt="" src="images/item.png">
+                                        <p class="item-name"><a href="#">Honey fritters with honey Honey fritters with </a></p>
+                                        <p class="star-row">
+                                            <a href="#" class="icon-star"></a>
+                                            <a href="#" class="icon-star"></a>
+                                            <a href="#" class="icon-star"></a>
+                                            <a href="#" class="icon-star"></a>
+                                            <a href="#" class="icon-star"></a>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="left-img">
+                                    <div class="clearfix">
+                                        <img alt="" src="images/item.png">
+                                        <p class="item-name"><a href="#">Honey fritters with honey Honey fritters with </a></p>
+                                        <p class="star-row">
+                                            <a href="#" class="icon-star"></a>
+                                            <a href="#" class="icon-star"></a>
+                                            <a href="#" class="icon-star"></a>
+                                            <a href="#" class="icon-star"></a>
+                                            <a href="#" class="icon-star"></a>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="left-img">
+                                    <div class="clearfix">
+                                        <img alt="" src="images/item.png">
+                                        <p class="item-name"><a href="#">Honey fritters with honey Honey fritters with </a></p>
+                                        <p class="star-row">
+                                            <a href="#" class="icon-star"></a>
+                                            <a href="#" class="icon-star"></a>
+                                            <a href="#" class="icon-star"></a>
+                                            <a href="#" class="icon-star"></a>
+                                            <a href="#" class="icon-star"></a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="recently-rated">
+                                Some thing Add Here
+                            </div>
+                        </div>
+					</div>
+                </div>
+            </aside><!--sidebar -->
+        </div>
+    </div>
+</div>
+<!--main end -->
+
+
+<!--footer start -->
+<div id="footer-wrap">
+	<div class="container">
+        <footer id="footer" class="clearfix">
+        	<div class="row nav-footer">
+                <div class="col-sm-3">
+                	<img src="images/footer-logo.png" alt="">
+                </div>
+                <div class="col-sm-9 text-right">
+                	<ul class="list-inline">
+                    	<li><a href="#">WHAT'S NEW</a></li>
+                        <li class="divider">|</li>
+                        <li><a href="#">TOP RECIPES</a></li>
+                        <li class="divider">|</li>
+                        <li><a href="#">HOLIDAYS</a></li>
+                        <li class="divider">|</li>
+                        <li><a href="#">MEAL PLANNING</a></li>
+                        <li class="divider">|</li>
+                        <li><a href="#">TALKS &amp; TIPS</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row nav-footer-bottom">
+                <div class="col-sm-4">
+                	<p>&copy; 2013 <a href="#">Scripps Networks</a>, LLC. All Rights Reseved</p>
+                </div>
+                <div class="col-sm-8 text-right">
+                	<ul class="list-inline">
+                    	<li><a href="#">WHAT'S NEW</a></li>
+                        <li class="divider">|</li>
+                        <li><a href="#">TOP RECIPES</a></li>
+                        <li class="divider">|</li>
+                        <li><a href="#">HOLIDAYS</a></li>
+                        <li class="divider">|</li>
+                        <li><a href="#">MEAL PLANNING</a></li>
+                        <li class="divider">|</li>
+                        <li><a href="#">TALKS &amp; TIPS</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </div>
+</div>
+<!--footer end -->
+
+</div><!--container-fluid -->
+<!-- Modal -->
+<div id="myModal" class="modal fade signin-model" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+<h3 id="myModalLabel">Log In / Sign Up</h3>
+</div>
+<div class="modal-body">
+	<form  class="row">
+	    <div class="col-sm-6 col-border">
+        	<h3>Sign Up</h3>
+	        <label>Name</label>    
+            <p><input type="text" placeholder="Full Name" class="form-control"></p>
+            <label>User Name</label>    
+            <p><input type="text" placeholder="Choose a User Name" class="form-control"></p>
+            <label>Email Address</label>    
+            <p><input type="text" placeholder="Plese Enter Your Email Address" class="form-control"></p>
+            <label>Password</label>    
+            <p><input type="text" placeholder="Password" class="form-control"></p>
+            <label>Confirm Password</label>    
+            <p><input type="text" placeholder="Confirm Password" class="form-control"></p>
+            <button class="btn btn-primary col-lg-6">Sign Up</button>
+        </div>
+    	<div class="col-sm-6">
+        <h3>Log In</h3>
+		<label>Enter Your Email Address</label>    
+    	<p><input type="text" placeholder="Plese Enter Your Email Address" class="form-control"></p>
+        <label>Enter Your Password</label>    
+    	<p><input type="text" placeholder="Password" class="form-control"></p>
+        <p class="clearfix"><button class="btn btn-primary col-lg-6">Log In</button></p>
+        <p><label>OR</label></p>
+        <p class="clearfix"><button class="btn btn-primary col-lg-8"><span class="icon-facebook"></span> Log In with Facebook</button></p>
+        <p class="clearfix"><button class="btn btn-twitter col-lg-8"><span class="icon-twitter"></span> Log In with Twitter </button></p>
+        </div>
+    </form>
+</div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,117 @@
+@import "partials/variables";
+
+/*-- Methodology modal Start --*/
+/*.body-fixed {
+	position: fixed;
+	width: 100%;
+}*/
+.popup-wrap {
+	background: rgba(21, 23, 25, 0.8);
+	height: 608;
+	width: 100%;
+	position: fixed;
+	right: 0;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	z-index: 200;
+	display: none;
+}
+.methodology-steps {
+	max-width: 1120px;
+	width: 100%;
+	background: $color_light;
+	border-radius: 2px;
+	padding: 65px 120px 60px 100px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	@media (max-width: $large_break){
+		max-width: 900px;
+		padding: 50px 50px 50px 50px;
+	}
+	@media (max-width: $medium_break) {
+		max-width: 730px;
+		padding: 20px 50px 20px 50px;
+	}
+	@media (max-width: $small_break) {
+		max-width: 450px;
+		padding: 20px 20px 20px 20px;
+	}
+	@media (max-width: $xsmall_break) {
+		max-width: 300px;
+	}
+	&__heading {
+		font-size: 24px;
+		font-weight: 500;
+		line-height: 28px;
+		color: $dark_blue;
+		margin-bottom: 19px;
+		@media (max-width: $xsmall_break) {
+			font-size: 20px;
+			margin-bottom: 10px;
+		}
+	}
+	.steps-list {
+		list-style-type: none;
+		margin-bottom: 40px;
+		counter-reset: xmy-badass-counter; 
+		@media (max-width: $small_break) {
+			margin-bottom: 20px;
+		} 
+		&__list-item {
+			font-size: 18px;
+			line-height: 27px;
+			color: $dark_blue;
+			position: relative;
+			padding-left: 27px;
+			margin-bottom: 10px;
+			@media (max-width: $small_break) {
+				font-size: 16px;
+				margin-bottom: 5px;
+			}
+			@media (max-width: $xsmall_break) {
+				font-size: 14px;
+				padding-left: 15px;
+			}
+			&::before {
+				content: counter(xmy-badass-counter) ". ";
+				counter-increment: xmy-badass-counter;
+			    color: $dark_blue;
+			    position: absolute;
+			    left: 0;
+			    top: 0;
+			    font-size: 18px;
+			    @media (max-width: $small_break) {
+					font-size: 16px;
+				}
+			@media (max-width: $xsmall_break) {
+				font-size: 14px;
+			}
+			}
+			.feature-text {
+				color: $purple_color;
+			}
+		}
+	}
+	&__note {
+		font-size: 14px;
+		line-height: 22px;
+		color: $dark_blue;
+	}
+	&__close-icon {
+		background: url(../images/cross-icon.svg) center center no-repeat;
+		width: 20px;
+		height: 20px;
+		display: block;
+		position: absolute;
+		right: 16px;
+		top: 16px;
+		@media (max-width: $small_break) {
+			right: 7px;
+			top: 7px;
+		}
+	}
+}
+/*-- Methodology modal End --*/

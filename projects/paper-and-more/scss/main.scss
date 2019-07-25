@@ -1,0 +1,260 @@
+// variables
+$themeColor : #33a5e1;
+$textColor : #555;
+$borderColor : #dfe4e7;
+
+// colors[]
+$red : #eb5d5d;
+$green : #d0de87;
+$gray : #959595;
+// typography
+$baseFont : 13px;
+$baseFamily : sans-serif;
+$altFamly : serif;
+// mixins
+
+@mixin css3($a, $b){
+	-moz-#{$a} : $b;
+	-webkit-#{$a} : $b;
+	#{$a} : $b;
+}
+@mixin clearfix(){
+	&:before,&:after{
+		content: '';
+		display: block;
+		clear: both;
+	}
+}
+@function em($value) {
+    @return ($value / $baseFont) * 1em;
+}
+// require syles
+
+body{
+	font-size: $baseFont;
+	color: $textColor;
+}
+
+// lists
+ul{
+	font-size: 1em;			
+}
+.list-unstyled{
+	list-style: none;
+	margin: 0;
+}
+.inline-list{
+	margin: 0;
+	li{
+		margin-left: 0;
+		padding-left: 15px;
+		margin-left: 10px;
+		background: url(../images/disk.png) left center no-repeat;
+		&:first-child{
+			padding-left: 0;
+			margin-left: 0;
+			background: none;
+		}
+	}
+}
+
+// header 
+#header{
+	padding: 20px 0;
+}
+
+// style change according to requiments
+.top-bar{
+	margin-bottom: 20px;
+}
+.top-bar-section{
+	text-align: center;
+	border: 1px solid $borderColor;
+	border-bottom-width: 4px;
+	@include css3(border-radius, 2px 2px 5px 5px);
+}
+.top-bar-section li:not(.has-form) a:not(.button),
+.top-bar-section ul,
+.top-bar{
+	background: none;
+}
+.top-bar-section ul li{
+	display: inline;
+	display: inline-block;
+	float: none;
+	min-width: 135px;
+	border-left: 1px dotted;
+	line-height: 1;
+	&:first-child{
+		border-left: none;
+	}
+	&:hover a{
+		background: none;
+	}
+}
+.top-bar-section ul li:hover:not(.has-form) > a,
+.top-bar-section li:not(.has-form) a:not(.button),
+.top-bar-section ul li > a{
+	font-size: 16px;
+	color: $textColor;
+	background: none;
+	line-height: 1;
+	&.red-link{
+		color: $red;
+		&:hover, &:active,&:focus{
+			color: $red;
+		}
+	}
+	&:hover, &:active,&:focus{
+		color: $themeColor;
+		background: none;
+	}
+}
+
+// green ribbon
+.green-ribbon{
+	background: $green;
+	text-align: center;
+	margin-bottom: 20px;
+	p{
+		font-size: 18px;		
+		margin: 0;
+	}
+}
+.for-right-corner{
+	background: url(../images/right-corner.png) no-repeat right center;
+	padding: 7px 0 7px;
+	margin-right: -15px;
+	padding-right: 15px;
+}
+.for-left-corner{
+	background: url(../images/left-corner.png) no-repeat left center;
+	margin-left: -15px;
+	padding-left: 15px;
+}
+// breadcurmb
+.breadcrumb{
+	color: $gray;
+	border-bottom: 1px dotted;
+	ul{
+		list-style: none;
+		margin: 0 0 20px;
+	}
+	li{
+		display: inline;
+		display: inline-block;
+		padding-left: 34px;
+		background: url(../images/divider.png) no-repeat 13px center;
+		&:first-child{
+			padding-left: 0;
+			background: none;
+		}
+	}
+}
+// main-wrap
+#main-wrap{
+	min-height: 500px;
+}
+// footer
+#footer-wrap{
+	background: url(../images/footer.png);
+	padding: 25px 0;
+}
+.footer-top{
+	border-bottom: 1px dotted #fff;
+}
+// share this
+.share-this{
+	color: #fff;
+	a{
+		display: inline-block;
+		background: white;
+		font-size: em(20px);
+		line-height: 1.75;
+		margin: 0 2px;
+		text-align: center;
+		height: 1.75em;
+		width: 1.75em;
+		vertical-align: middle;
+		@include css3(border-radius, 50%);
+	}
+	.fa-facebook{
+		color: #46629c;
+	}
+	.fa-twitter{
+		color: #32a5e0;
+	}
+	.fa-pinterest{
+		color: #c9292f;
+	}
+	.fa-google-plus{
+		color: #d23e2b;
+	}
+}
+#footer{
+	color: #fff;
+	padding: 30px 0;	
+	strong{
+		font-size: em(15px);
+		display: block;
+		margin-bottom: 10px;
+	}
+	a{
+		font-size: em(14px);
+		color: #fff;
+		line-height: 1;
+	}
+}
+.white-box{
+	background: white;
+	border:1px solid #6c6b6b;
+	border-bottom-width: 4px;
+	@include css3(border-radius, 3px 3px 5px 5px);
+	padding: 10px 20px;
+	a{
+		color: $textColor;
+	}
+}
+/* setting grid system */
+.row{
+	width: em(1000px);
+}
+p{
+	margin-bottom: em(20px);
+	font-size: 1em;
+}
+.column, .columns{
+	padding-left: em(15px);
+	padding-right: em(15px);
+}
+.column.small-centered, .columns.small-centered{
+	float: none;
+	margin-left: auto;
+	margin-right: auto;
+}
+.top-bar-section ul li a,
+.top-bar-section ul,
+.top-bar{
+	background: none;
+
+}
+.top-bar-section ul li a{
+    color: $textColor;
+    font-size: 16px;
+    line-height: 1;
+    &:hover, &:active,&:focus{
+		color: $themeColor;
+		background: none;
+	}
+    &.red-link{
+    	color: $red;
+    	&:hover{
+    		color: $red;
+    	}
+    }
+}
+@for $i from 1 through 12 {
+	.small-#{$i}{
+		width: 8.33333 * $i * 1%;
+	}
+}

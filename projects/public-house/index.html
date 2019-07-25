@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<!--[if IE 6]>
+<html id="ie6">
+<![endif]-->
+<!--[if IE 7]>
+<html id="ie7">
+<![endif]-->
+<!--[if IE 8]>
+<html id="ie8">
+<![endif]-->
+<!--[if !(IE 6) | !(IE 7) | !(IE 8)  ]><!-->
+<html>
+<!--<![endif]-->
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    
+    <title>Home Page</title>
+    <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,200,300,700' rel='stylesheet' type='text/css'>
+    <link type="text/css" rel="stylesheet" href="css/font-awesome.css" />
+    <link type="text/css" rel="stylesheet" href="css/jquery.bxslider.css" />
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
+    <!--[if lte IE 8]>
+    <link type="text/css" rel="stylesheet" href="css/ie.css" />
+    <script type="text/javascript" src="js/modernizr.min.js"></script>
+    <![endif]-->
+    
+    <!--[if lte IE 7]>
+    <link type="text/css" rel="stylesheet" href="css/font-awesome-ie7.css" />
+    <![endif]-->
+    
+    <!--[if lte IE 6]>
+    <script type="text/javascript" src="js/belated.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/jquery.bxslider.js"></script>
+    <script type="text/javascript">
+		$(function(){
+			controls = null;
+			controls = true;
+			$('.home-slider').bxSlider({
+				auto: true,
+				pager: false,
+				mode: 'fade',
+				controls: controls
+				
+			});
+			$('.menu-btn').click(function(){
+				$(this).parent().children('#nav').stop(true, true).slideToggle();
+				return false;
+			});
+			
+			$('.home-slider-wrap .bx-controls-direction .bx-next').click(function(){
+				$('#header-wrap + .home-slider-wrap .bx-next').trigger('click');
+			});
+			$('.home-slider-wrap .bx-controls-direction .bx-prev').click(function(){
+				$('#header-wrap + .home-slider-wrap .bx-prev').trigger('click');
+			});
+		});
+    </script>
+    
+</head>
+
+<body id="page-name">
+
+<div id="container-fluid">
+
+<!--header start -->
+<div id="header-wrap">
+	<div class="content-width">
+        <header id="header" class="clearfix">
+            <div id="header-left">
+            	<a href="index.html"><img src="images/logo.png" alt=""></a>
+            </div>
+            <div id="header-right">
+            <!--navigation start -->
+                <div id="nav-wrap">
+                    <nav>
+                        <a href="#" class="menu-btn">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </a>
+                        <ul id="nav">
+                            <li><a href="about.html">About</a></li>
+                            <li><span class="icon-star"></span><a href="menu.html">Menu</a></li>
+                            <li><span class="icon-star"></span><a href="#">Events</a></li>
+                            <li><a href="#">Photos</a></li>
+                            <li><span class="icon-star"></span><a href="press.html">Press</a></li>
+                            <li><span class="icon-star"></span><a href="#">Location</a></li>
+                        </ul>
+                    </nav>
+                </div>
+				<!--navigation end -->
+                <ul class="contant-us-list">
+                    <li>954-555-5555</li>
+                    <li>201 SW 2nd ST, FT LAUDERDALE FL 33304</li>
+                    <li><a href="#" class="icon-facebook-sign"></a> / PublichouseFTL</li>
+                    <li><a href="#" class="icon-instagram"></a> / PublichouseFTL</li>
+                    <li><a href="#" class="icon-twitter-sign"></a> / PublichouseFTL</li>
+                </ul>
+            </div>
+        </header>
+    </div>
+</div>
+<!--header end -->
+<div class="slider-wrap slider-top home-slider-wrap">
+<div class="slider-in">
+	<ul class="home-slider">
+    	<li>
+            <img src="images/home-slide-3.jpg" alt="">
+        </li>
+        <li>
+        	<img src="images/home-slide-2.jpg" alt="">
+        </li>
+    </ul>
+    <span class="left-shadow"></span>	
+    <span class="right-shadow"></span>
+</div>    
+</div>
+
+
+<!-- slider bottom -->
+<div class="slider-wrap home-slider-wrap">
+    <ul class="home-slider">
+    	<li>
+            <div class="slide-caption">
+	            <h1>Downtown Is Back!</h1>
+                <p>South Florida's first sporting lounge<br>
+30 HDTV's / Live Music / DJ's</p>
+            </div>
+        </li>
+        <li>
+            <div class="slide-caption">
+	            <h1>Downtown Back!</h1>
+                <p>South Florida's sporting lounge<br>
+30 HDTV's / Live Music / DJ's</p>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<!--main start -->
+<div id="main-wrap">
+    <div id="main" class="clearfix">
+    	<div class="column-wrap clearfix">
+            <div class="absolute-left-column">
+                <img src="images/img-2.jpg" alt="">
+                <div class="column-content">
+                    <h2>Global Modern Comfort Food</h2>
+                    <p>A delicious array of scratch-made<br>
+                    food and drinks.</p>
+                </div>
+            </div>
+            <div class="absolute-left-column first-right">
+            	<img src="images/img-3.jpg" alt="">
+                <div class="column-content">
+                </div>
+            </div>
+		</div>
+        <div class="column-wrap clearfix">
+            <div class="absolute-left-column second-left">
+                <div class="absolute-left-column second-sub-left">
+                	<img src="images/img-1.png" alt="">
+                    <div class="column-content">
+                    	<h2>Events</h2>
+                        <h3>Mon-Fri</h3>
+                        <p>Social Hour 5pm-7pm<br>
+                        buy one, get one</p>
+                        <h3>Monday</h3>
+                        <p>$5 Craft Burgers<br>
+                        4pm - close</p>
+                        <h3>Wednesday</h3>
+                        <p>Wine Down<br>
+                        1/2 off all bottles of wine<br>
+                        5pm- close</p>
+                        <h3>Thursday</h3>
+                        <p>Ladies Night.<br>
+                        Ladies drink free from<br>
+                        5pm- close</p>
+                        <h3>Sunday</h3>
+                        <p>Social Brunch<br>
+                        Special Menu - Live Music</p>
+                    </div>
+                </div>
+
+                <div class="absolute-left-column second-sub-right">
+	                <img src="images/img-1.jpg" alt="">
+                    <div class="column-content">
+                    	<h2>Cocktails <a href="#" class="icon-star"></a>Taps</h2>
+                        <p>View our curated<br>
+                        selection of<br>
+                        craft beers & <br>
+                        signature cocktails</p>
+                    </div>
+                </div>
+            </div>
+            <div class="absolute-left-column second-sub-top">
+            	<img src="images/img-4.jpg" alt="">
+            	<div class="column-content">
+                	<h2>#PublicHouseFTL</h2>
+                    <p>Social Brunch<br>
+                        Special Menu - Live Music</p>
+                </div>
+            </div>
+            <div class="absolute-left-column second-sub-bottom">
+            	<img src="images/img-2.png" alt="">
+            	<div class="column-content">
+                    <h3><span class="icon-twitter"></span> Paul Rubio <small>@PaulRubioTravel</small> 18 Sep</h3>
+                    <p>Downtown Fort Laud is getting 3 major new bars/pubs for grown-ups this fall: 
+                    Himmarshee Public House, Taps, and Stache. #prayersanswered</p>
+                    <p class="right"><a href="#">Reply</a>  |  <a href="#">Retweet</a>  |  <a href="#">Favorite</a></p>
+
+
+                </div>
+            </div>
+		</div>
+        
+        <div class="cl"></div>
+        <div class="signup-wrap content-wrap">
+        	<input type="text" placeholder="Sign-up to receive updates and special offers">
+            <button class="btn"><span class="icon-star"></span> Sign Up</button>
+        </div>
+    </div>
+</div>
+<!--main end -->
+
+
+<!--footer start -->
+<div id="footer-wrap">
+	<div class="content-width">
+        <footer id="footer" class="clearfix">
+        	<div id="footer-left" class="left-column">
+            	<div class="time-schedule">
+                    <h3>Hours of operation</h3>
+                    <p>Sun - Wed  11:30am – 2am<br>
+                    Thurs - Sat  11:30am – 4am</p>
+				</div>
+            </div>
+            <div id="footer-center" class="right-column">
+	            <div class="time-schedule">
+                    <h3>Hours of operation</h3>
+                    <p>Sun - Wed  11:30am – 2am<br>
+                    Thurs - Sat  11:30am – 4am</p>
+				</div>
+            </div>
+            <div id="footer-right">
+	            <div class="time-schedule">
+                    <p>
+                    <a href="#" class="icon-facebook-sign"></a> / PublichouseFTL<br>
+                    <a href="#" class="icon-instagram"></a> / PublichouseFTL<br>
+                    <a href="#" class="icon-twitter-sign"></a> / PublichouseFTL
+					</p>
+				</div>
+            </div>
+        </footer>
+        <ul class="contant-us-list">
+        	<li>Copyright &copy; 2013 Himmershee Public House.</li>
+            <li>brought to you by JEY Hospitality</li>
+            <li>Employment Opportunities</li>
+        </ul>
+        <div class="powered-by">
+	        <p>powered by <a href="#"><img src="images/web-diner.png" alt=""></a></p>
+        </div>
+    </div>
+</div>
+<!--footer end -->
+
+</div><!--container-fluid -->
+
+</body>
+</html>

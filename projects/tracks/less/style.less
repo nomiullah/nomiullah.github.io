@@ -1,0 +1,321 @@
+
+
+@import "partials/variables.less";
+@import "partials/header.less";
+@import "partials/footer.less";
+@import "partials/banner.less";
+
+* {
+  font-family: @themefont;
+  font-size: 14px;
+}
+button:focus , a:focus {
+  outline: none;
+}
+
+
+.section {
+  &__headingWrap {
+    margin-bottom: 90px;
+    @media @break-sm {
+      margin-bottom: 35px;
+    }
+  }
+  &__heading {
+    color: @white;
+    letter-spacing: 1.1px;
+    font-size: 22px;
+    line-height: 1.2;
+    background-color: @darkgray;
+    margin: 0 auto;
+    display: block;
+    text-transform: uppercase;
+    font-weight: 300;
+    text-align: center;
+    padding: 2px 20px;
+    position: relative;
+    max-width: 660px;
+    @media @break-sm {
+      color: @darkblue;
+      background-color: transparent;
+      font-size: 18px;
+      font-weight: 500;
+    }
+    &:after {
+      content: '';
+      height: 100%;
+      display: inline-block;
+      width: 15px;
+      transform: skew(-16deg);
+      position: absolute;
+      right: -7px;
+      top: 0;
+      background-color: @darkgray;
+      @media @break-sm {
+        content: none;
+      }
+    }
+    &:before {
+      content: '';
+      height: 100%;
+      display: inline-block;
+      width: 15px;
+      transform: skew(16deg);
+      position: absolute;
+      left: -7px;
+      top: 0;
+      background-color: @darkgray;
+      @media @break-sm {
+        content: none;
+      }
+    }
+  }
+}
+
+// tracked section start
+.tracked {
+   padding: 80px 0;
+   background-color: @lightgray;
+   border-bottom: 2px solid @bordercolor;
+   @media @break-sm {
+    padding: 50px 0;
+  }
+   &__row {
+     position: relative;
+     padding-top: 45px;
+      @media @break-md {
+        padding-top: 32px;
+      }
+      @media @break-mobile {
+        text-align: center;
+        padding-top: 0;
+      }
+    .tracked__col {
+      @media @break-sm {
+        max-width: 400px;
+        margin: 50px auto 0;
+      }
+      .text {
+        @media @break-sm {
+          text-align: center;
+          font-size: 13px;
+          padding: 0 30px;
+        }
+      }
+      @media @break-sm {
+        &:before {
+          content:'1';
+          color: @lightgray;
+          font-size: 22px;
+          margin: 10px auto 20px;
+          line-height: 38px;
+          background-color:@darkred;
+          height: 38px;
+          width: 38px;
+          text-align: center;
+          display: block;
+          border-radius: 50%;
+  
+        }
+      }
+    }
+    .offset-bottom {
+      margin-bottom: 100px;
+      @media @break-lg {
+        margin-bottom: 20px;;
+      }
+      @media @break-sm {
+        margin-bottom: 0;;
+      }
+    }
+    .offset-top {
+      padding-top: 35px;
+      @media @break-md {
+        padding-top: 23px;
+      }
+      @media @break-sm {
+        padding-top: 0;;
+      }
+    }
+    .text {
+      font-size: 13px;
+      color: @darkblue;
+      letter-spacing: -0.1px;
+      line-height: 1.4;
+      @media @break-md {
+        font-size: 12px;
+      }
+    }
+   }
+   &__imgWrap {
+     position: absolute;
+     left: 50%;
+     top: 0;
+     transform: translateX(-50%);
+     width: 57%;
+     .imgText {
+       text-align: center;
+       margin-top: 15px;
+     }
+     @media @break-sm {
+      position: relative;
+      left: auto;
+      transform: none;
+      margin: 0 auto 40px;
+      max-width: 215px;
+    }
+   }
+   &__img {
+      width: 100%;
+   }
+}
+// tracked section end
+
+// protected section start
+.protected {
+  padding-top: 80px;
+  background-color: @bglightblue;
+  border-bottom: 2px solid @bordercolor;
+  @media @break-sm {
+    padding-top: 50px;
+
+  }
+  &__card {
+    background-color: @white;
+    box-shadow: 0 1px 5px 0 rgba(0,0,0,0.14);
+    position: relative;
+    padding: 65px 20px 25px;
+    @media @break-md {
+      min-height: 157px;
+    }
+    @media @break-sm {
+      max-width: 325px;
+      margin: 0 auto;
+      min-height: auto;
+    }
+    .icon-wrapper {
+      width: 82px;
+      height: 82px;
+      border: 1px solid @darkgray;
+      border-radius: 50%;
+      position: absolute;
+      left: 50%;
+      top: -42px;
+      transform: translateX(-50%);
+      background-color: @lightblue;
+      .icon {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+    .text {
+      font-size: 14px;
+      text-align: center;
+      letter-spacing: -0.3px;
+      line-height: 1.4;
+      color: @darkgray;
+      font-weight: 500px;
+    }
+  }
+  &__row {
+    padding: 40px 130px 0px;
+    background-image: url(../images/lined-cloud-1.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 60%;
+    position: relative;
+    @media @break-lg {
+      padding: 40px 24px 0px;
+    }
+    @media @break-md {
+      padding: 40px 0 0px;
+    }
+    @media @break-sm {
+      padding: 40px 0 0px;
+      background-repeat: repeat;
+      background-size: 200%;
+    }
+    &:before {
+      content: '';
+      width: 100%;
+      height: 100%;
+      background-color: rgba(230, 235, 245, 0.9);
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      right: 0;
+  }
+  }
+  &__col {
+    padding-bottom: 75px;
+    @media @break-sm {
+      &:last-child {
+        padding-bottom: 50px;
+      }
+    }
+    
+  }
+}
+// protected section end
+
+// callToAction section start
+.callToAction {
+  text-align: center;
+  background-color: @lightgray;
+  &__container {
+    background-image: url(../images/lined-cloud.svg);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: 100%;
+    padding: 80px 0;
+    @media @break-md {
+      padding: 50px 0;
+    }
+    @media @break-sm {
+      background-size: 200%;
+      padding: 40px 0;
+    }
+  }
+  &__btn {
+    font-size: 14px;
+    line-height: 15px;
+    font-weight: 500;
+    background-color: @green;
+    color: @white;
+    text-transform: uppercase;
+    padding: 12px 45px;
+    box-shadow: 0 10px 20px 0 rgba(19,23,32,0.2);
+    border-radius: 5px;
+    &:focus {
+      outline: none;
+      color: @white;
+    }
+    &:active {
+        outline: none;
+        &:focus {
+          outline: none;
+        }
+    }
+    &:hover {
+        color: @white;
+    }
+  }
+  .heading {
+    font-size: 33px;
+    font-weight: 500;
+    color: @darkblue;
+    margin-bottom: 50px;
+    margin-top:0;
+    @media @break-md {
+      margin-bottom: 30px;
+    }
+    @media @break-mobile {
+      font-size: 30px;
+    }
+  }
+}
+// callToAction section end

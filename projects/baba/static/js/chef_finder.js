@@ -1,0 +1,431 @@
+$(function(){  
+
+    var cntrlr = this;
+    cntrlr.pageSize = 5;
+
+    var chefsGallery = $('.ad-gallery').adGallery()[0]; 
+
+    initFilterSliders();
+
+    initFilterSlidersApplyButtons();
+
+    performSearch(getSearchObject(true),1,createThumbnails);
+    //fetchDefaultChefs();
+   
+   //This is not production quality, its just demo code.
+  function cookieList(cookieName) {
+      var cookie = $.cookie(cookieName);
+      //Load the items or a new array if null.
+      var items
+      if(cookie && cookie != "null"){
+        items = cookie.split(/,/);
+        for(var i = 0 ; i<items.length; i++){
+            items[i] = parseInt(items[i]);
+        }
+      }else{
+        items = new Array();
+      }
+      //var items = cookie ? cookie.split(/,/) : new Array();
+      return {
+          "add": function(val) {
+              items.push(val);
+              $.cookie(cookieName, items.join(','), { path:'/'});
+          },
+          "remove": function (val) { 
+              indx = items.indexOf(val); 
+              if(indx!=-1) items.splice(indx, 1); 
+              $.cookie(cookieName, items.join(','), { path:'/'});        },
+          "clear": function() {
+              items = null;
+              $.cookie(cookieName, null);
+          },
+          "items": function() {
+              return items;
+          }
+        }
+  }
+
+    var shuttleDishes = new cookieList("ShuttleDishes");
+
+    $('#confirm-inhouse-btn').on('click', function(ev){
+        var emailModal = $(".inhouse-modal");
+        emailModal.modal('hide');
+        performSearch(getSearchObject(),1,createThumbnails);
+    });
+
+    $('.add-recipe-to-cart-btn').on('click', function(ev){
+      
+      var addRecipeToCartBtn = this;
+      var selIdx = chefsGallery.current_index
+      
+      if(chefsGallery.images[selIdx].recSelected == true){
+        console.log('removed');
+        $(addRecipeToCartBtn).html('Book');
+        //shuttleDishes.remove(chefsGallery.images[selIdx].dish_data.dish_id);
+        chefsGallery.images[selIdx].recSelected = false;
+      }
+      else{
+        console.log('added');
+        $(addRecipeToCartBtn).html('Less');
+        //shuttleDishes.add(chefsGallery.images[selIdx].dish_data.dish_id);
+        chefsGallery.images[selIdx].recSelected = true;
+      }
+    })
+
+    //Recipe Email Modal Listeneres
+    $("#email-btn").click(function(e){
+
+      var emailModal = $(".chef-finder-email-modal");
+      emailModal.find('#email-title').text(chefsGallery.dishTitle);
+
+      var emailForm = $('form.email-chef');
+      
+      var msgField = emailForm.find('textarea[name="message"]');
+      msgField.text('Check out this dish on Neptune. Please let me know what you think.');
+
+      emailModal.modal({
+        backdrop: 'static'
+      });
+    });
+    $("#cancel-chef-finder-email").click(function(e){
+      $(".chef-finder-email-modal").modal('hide');
+      //failed = true;
+    });
+
+    $("input#submit").click(function(){
+
+      var emailForm = $('form.email-chef');
+      var emailField = emailForm.find('input[name="email"]');
+      var subjectField = emailForm.find('input[name="subject"]');
+      var msgField = emailForm.find('textarea[name="message"]');
+      var showErrorMsg = emailForm.find('#show-email-error');
+      if(!emailField.val()){
+        showErrorMsg.html('Email field cannot be empty');
+      }
+      else if(!subjectField.val()){
+        showErrorMsg.html('Subject field cannot be empty');
+      }
+      else if(!msgField.val()){
+        showErrorMsg.html('Message field cannot be empty');
+      }
+      else{
+         showErrorMsg.html('');
+         $(".recipe-email-modal").modal('hide');
+         var loadingMask = $('#pleaseWaitDialog');
+         loadingMask.modal();
+
+        $.ajax({
+          type: "POST",
+          url: "/users/email_dish/", //process to mail
+          data: $('form.email-recipe').serialize(),
+          success: function(response){
+              loadingMask.modal('hide');
+              //$("#thanks").html(msg) //hide button and show thank you
+              
+              alert(response.message)
+          },
+          error: function(){
+              loadingMask.modal('hide');
+              $(".recipe-email-modal").modal();
+              alert("failure");
+          }
+      });
+      }
+      
+    });
+   
+
+    $("#chef-finder-btn").click(function(){
+        performSearch(getSearchObject(),1,createThumbnails);
+
+    });
+
+
+
+    function createThumbnails(data){
+
+      $( ".ad-thumb-list" ).empty();
+      var chefs = data.chefs;
+      if(data.chefs && data.chefs.length > 0){
+        $("#gallery-empty-msg").hide();
+        $('.recipe').show();
+
+        for(i=0;i<chefs.length;i++){
+            var chef_data = chefs[i]
+            
+
+            chef_data.thumb_url = "/_uploads/photos/"+chef_data.profile_pic;
+            chef_data.image_url = "/_uploads/photos/"+chef_data.profile_pic;
+            chef_data.image_id = chef_data.user_id;
+            chef_data.title = chef_data.fullname;
+            chef_data.description = chef_data.profile_description;
+
+            chefsGallery.addChefRecord(chef_data);
+        }
+        
+        if(chefs.length == 5){
+          chefsGallery.showImage(2,undefined,true);
+        }
+        else{
+          chefsGallery.showImage(0,undefined,true);
+        }
+      }else{
+        $("#gallery-empty-msg").show();
+      }
+      
+        
+        
+    }
+
+    function getSearchObject(telepathyAlert){
+
+      var sel_gender_id = parseInt($("#gender_choices").find("input:radio[name=gender]:checked").val());
+      var sel_gender_val = $("#gender_choices").find("input:radio[name=gender]:checked").next().text();
+
+      var sel_inhouse_id = parseInt($("#in-house-deliver").find("input:radio[name=house]:checked").val());
+
+      if(!telepathyAlert && (sel_inhouse_id == 2)){
+          alert("Please select inhouse or delivery")
+          return false;
+      }
+
+      var in_house = false;
+      if(sel_inhouse_id === 0)
+        in_house = true
+
+      var post_cleanup = false;
+      if(in_house){
+         post_cleanup = ($("#post-event-cleanup").prop('checked'))?true:false;
+      }
+
+      var sel_lang_val = $("#language_choices").find(":selected").text();
+
+      var sel_lang_id = parseInt($("#language_choices").find("input:radio[name=language]:checked").val());
+      var sel_lang_val = $("#language_choices").find("input:radio[name=language]:checked").next().text();
+      
+      var rank_score_filter = $("#rank-slider").data("apply");
+      var rank_slider_min_val = $("#rank-slider").data('slider').getValue()[0];
+      var rank_slider_max_val =  $("#rank-slider").data('slider').getValue()[1];
+
+      var feedback_score_filter = $("#feed-score-slider").data("apply");
+      var feedback_slider_min_val = $("#feed-score-slider").data('slider').getValue()[0];
+      var feedback_slider_max_val =  $("#feed-score-slider").data('slider').getValue()[1]
+
+      var reliablilty_score_filter = $("#reliability-score-slider").data("apply");
+      var reliablilty_score_slider_min_val = $("#reliability-score-slider").data('slider').getValue()[0];
+      var reliablilty_score_slider_max_val =  $("#reliability-score-slider").data('slider').getValue()[1];
+
+      var activity_score_filter = $("#activity-score-slider").data("apply");
+      var activity_score_slider_min_val = $("#activity-score-slider").data('slider').getValue()[0];
+      var activity_score_slider_max_val =  $("#activity-score-slider").data('slider').getValue()[1];
+
+      var sort_by = $("input:radio[name=sort]:checked").val();
+
+      var searchObj = {
+
+             sort_by : sort_by,
+
+             gender_id : sel_gender_id,
+             gender_val: sel_gender_val,
+
+             in_house : in_house,
+
+             post_cleanup : post_cleanup,
+
+             lang_id    : sel_lang_id,
+             lang_val   : sel_lang_val,
+
+             rank_score_filter : rank_score_filter,
+             rank_min_val : rank_slider_min_val,
+             rank_max_val : rank_slider_max_val,
+
+             feedback_score_filter : feedback_score_filter,
+             feedback_min_val : feedback_slider_min_val,
+             feedback_max_val : feedback_slider_max_val,
+
+             reliablilty_score_filter : reliablilty_score_filter,
+             reliablilty_score_min_val : reliablilty_score_slider_min_val,
+             reliablilty_score_max_val : reliablilty_score_slider_max_val,
+
+             activity_score_filter : activity_score_filter,
+             activity_score_min_val : activity_score_slider_min_val,
+             activity_score_max_val : activity_score_slider_max_val
+        }
+
+        return searchObj;
+    }
+    function getURLParameter(name) {
+        return decodeURI(
+            (RegExp(name + '=' + '(.+?)(&|$)').exec(location.search)||[,null])[1]
+        );
+    }
+
+    function fetchDefaultChefs(){
+      console.log('fetchDefaultChefs called')
+      var url,searchObj;
+      var dish_id = chefsGallery.getIndexFromHash();
+      var eventId = getURLParameter('eventId');
+      var data;
+      //data = {dishId:dish_id};
+      url = "/users/get_default_chefs/"+eventId;
+
+      $.ajax({
+              type: "GET",
+              //data: data,
+              url: url,
+              success: function(data){
+                //Clear previous data
+                console.log(data)
+                if(data){
+                  chefsGallery.images = [];
+
+                  createThumbnails(data);
+                  if(data.total > cntrlr.pageSize){
+                    createPagingbar(1,Math.ceil(data.total/cntrlr.pageSize));
+                  }
+                  else{
+                    $('#pagingBar').hide();
+                  }
+                }
+                
+              }
+              
+            });
+    }
+
+    function performSearch(searchObj,pageNo,callback){
+        if(searchObj){
+          clearPreviousGallery(); 
+        $.ajax({
+                type: "POST",
+                url: "/users/get_chefs/"+pageNo,
+                data: searchObj,
+                dataType: "json",
+                success: function(data){
+                  console.log(data)
+                  callback(data);
+                  if(data.total > cntrlr.pageSize){
+                    createPagingbar(pageNo,Math.ceil(data.total/cntrlr.pageSize));
+                  }
+                  else{
+                    $('#pagingBar').hide();
+                  }
+                  
+                }
+                
+        });
+        }
+    }
+
+    function clearPreviousGallery(){
+      chefsGallery.images = [];
+      $('.recipe').hide();
+    }
+
+    function createPagingbar(currentPage,TotalPages){
+      var options = {
+                    currentPage: currentPage,
+                    totalPages: TotalPages,
+                    alignment:"center",
+                    onPageClicked: function(e,originalEvent,type,page){
+                      performSearch(getSearchObject(),page,createThumbnails);
+                    }
+                }
+      $('#pagingBar').bootstrapPaginator(options);
+      $('#pagingBar').show();
+    }
+
+    function initFilterSliders(){
+
+      $('#rank-slider').slider({
+        min: 0,
+        max: 102,
+        value:[0,102],
+        step: 17,
+        tooltip:'show',
+        selection:'after',
+        /*
+        formater: function(value){
+          console.log(value);
+          if(value == 500){
+            return "<= 500"
+          }
+          else if(value == 1000){
+            return "<= 1000"
+          }
+          else if(value == 1500){
+            return "<= 1500"
+          }
+          else if(value == 2000){
+            return "<= 2000"
+          }
+          else if(value > 2000){
+            return "> 2000"
+          }
+        }
+        */
+      });
+
+      $('#feed-score-slider').slider({
+        min: 0,
+        max: 100,
+        value:[0,100],
+        step: 25,
+        tooltip:'show',
+        selection:'after',
+        
+      });
+
+      $('#reliability-score-slider').slider({
+        min: 0,
+        max: 100,
+        value:[0,100],
+        step: 25,
+        tooltip:'show',
+        selection:'after',
+        
+      });
+
+      $('#activity-score-slider').slider({
+        min: 0,
+        max: 100,
+        value:[0,100],
+        step: 25,
+        tooltip:'show',
+        selection:'after',
+        
+      });
+
+       $(".slider").data("apply",false);
+    } 
+    
+    function initFilterSlidersApplyButtons(){
+
+        var applyBtnsDivs = $('.add-filter-to-search-btn');
+
+        applyBtnsDivs.on('click', function(ev){
+
+            var addFilterToSearchBtn = this;
+            var filterSlider = $(this).parent().find('.slider');
+            var applyFilter = filterSlider.data("apply");
+
+            if(applyFilter){
+              console.log('not applied');
+              filterSlider.data("apply",false);
+            }
+            else{
+              console.log('applied');
+              filterSlider.data("apply",true);
+            }
+          
+        });
+
+        
+    }
+
+})
+
+
+
+
+

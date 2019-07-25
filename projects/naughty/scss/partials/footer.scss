@@ -1,0 +1,41 @@
+@import "partials/variables";
+
+/*-- Footer Start --*/
+.footer {
+	/*background: url(../images/footer-bg.png) center center no-repeat;*/
+	background-color: $dark_color;
+	background-size: cover;
+	padding: 25px 0 27px;
+	.footer-list {
+		list-style-type: none;
+		@media (max-width: $small_break) {
+			margin-bottom: 20px;
+		}
+		.list-item {
+			display: inline-block;
+			vertical-align: top;
+			color: $color_light;
+			&__footer-link {
+				font-size: 12px;
+				line-height: 18px;
+				color: $color_light;
+				text-decoration: underline;
+				display: inline-block;
+				margin-right: 25px;
+				@media (max-width: $xsmall_break) {
+					margin-bottom: 10px;
+				}
+			}
+		}
+	}
+	&__trackoff-rights {
+		font-size: 12px;
+		line-height: 18px;
+		text-align: right;
+		color: $color_light;
+		@media (max-width: $small_break) {
+			text-align: left;
+		}
+	}
+}
+/*-- Footer End --*/

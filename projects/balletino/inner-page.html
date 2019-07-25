@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<!--[if IE 6]>
+<html id="ie6">
+<![endif]-->
+<!--[if IE 7]>
+<html id="ie7">
+<![endif]-->
+<!--[if IE 8]>
+<html id="ie8">
+<![endif]-->
+<!--[if !(IE 6) | !(IE 7) | !(IE 8)  ]><!-->
+<html>
+<!--<![endif]-->
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    
+    <title>Inner</title>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    
+    <link type="text/css" rel="stylesheet" href="css/icon-font.css" />
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
+    
+    <!--[if lte IE 8]>
+    <link type="text/css" rel="stylesheet" href="css/ie.css" />
+    <script type="text/javascript" src="js/modernizr.min.js"></script>
+    <![endif]-->
+    <!--[if lte IE 7]>
+    <script type="text/javascript" src="js/lte-ie7.js"></script>
+    <![endif]-->
+    
+    <!--[if lte IE 6]>
+    <script type="text/javascript" src="js/belated.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript">
+	$(document).ready(function() {
+		
+		$(".menu").click (function () {
+			if ( $(this).hasClass('exp') ) {
+				$(this).removeClass('exp');
+				$(this).next().stop(true,true).slideUp();
+			}
+			else{
+				$(this).addClass('exp');
+				$(this).next().stop(true,true).slideDown();
+			}
+			return false;
+		});
+		
+        $('input:not(input[type="submit"], input[type="button"])').on('focus', function() {
+            // On first focus, check to see if we have the default text saved
+            // If not, save current value to data()
+            if (!$(this).data('defaultText')) $(this).data('defaultText', $(this).val());
+    
+            // check to see if the input currently equals the default before clearing it
+            if ($(this).val()==$(this).data('defaultText')) $(this).val('');
+        });
+        $('input:not(input[type="submit"], input[type="button"])').on('blur', function() {
+            // on blur, if there is no value, set the defaultText
+            if ($(this).val()=='') $(this).val($(this).data('defaultText')); 
+        });
+    });
+    </script>
+	
+</head>
+
+<body id="page-name">
+
+<div id="container-fluid">
+
+<!--header start -->
+<div id="header-wrap">
+	<div class="content-width">
+        <header id="header">
+        	<div class="header-top clearfix">
+                <div class="order-now">
+                    <a href="#">Order Now</a>
+                </div>
+                <div class="social-section">
+                    <a href="#"><img src="images/social-1.png" alt=""></a>
+                    <a href="#"><img src="images/social-2.png" alt=""></a>
+                    <a href="#"><img src="images/social-3.png" alt=""></a>
+                </div>
+			</div>
+            <div class="logo">
+            	<a href="#"><img src="images/logo.png" alt="Logo"></a>
+            </div>
+        </header>
+    </div>
+</div>
+<!--header end -->
+<!--navigation start -->
+<div id="nav-wrap">
+	<div class="content-width">
+        <nav>
+        	<a class="menu" href="#"><span class="icon-menu-2"></span>MENU</a>
+        	<ul id="nav" class="clearfix">
+            	<li class="nav-first"><a href="#">Home</a></li>
+                <li class="divider"><span class="icon-star"></span></li>
+                <li><a href="#">About Us</a></li>
+                <li class="divider"><span class="icon-star"></span></li>
+                <li><a href="#">Menu</a></li>
+                <li class="divider"><span class="icon-star"></span></li>
+                <li><a href="#">Catering</a></li>
+                <li class="divider"><span class="icon-star"></span></li>
+                <li><a href="#">Media</a></li>
+                <li class="divider"><span class="icon-star"></span></li>
+                <li class="nav-last"><a href="#">Contact Us</a></li>
+            </ul>
+        </nav>
+    </div>
+</div>
+<!--navigation end -->
+
+
+<!--main start -->
+<div id="main-wrap">
+	<div class="content-width">
+        <div id="main" class="clearfix">
+	        <section id="contents" class="clearfix">
+            <div class="clearfix section-wrap">
+                <div class="section-heading">
+                    <h1><span class="icon-calendar-alt-fill" aria-hidden="true"></span> Weekly Schedule</h1>
+                </div>
+                <p>BellaTrino's is open for lunch and dinner 7 days/week, with 3 gourmet trucks serving the Dallas/Fort
+                 Worth area. Our schedule sometimes changes at the last minute, so please check our daily updates 
+                 venturing out. We look forward to serving you soon</p>
+                <div class="section-heading">
+                    <h2>Monday  1<sup>st</sup></h2>
+                </div>
+                    <div class="left-column">
+                        <div class="section-heading">
+                            <h3><span>9am - 7pm</span>
+                            	<a href="#"><span class="icon-location"></span><span>Map This Location</span></a>
+                                <small>Klyde Warren Park - 2012 Woodall Rodgers Fwy, Dallas, TX</small>
+                            </h3>
+                        </div>
+                        <div class="section-heading">
+                            <h3><span>9am - 7pm</span>
+                            	<a href="#"><span class="icon-location"></span><span>Map This Location</span></a>
+                                <small>Klyde Warren Park - 2012 Woodall Rodgers Fwy, Dallas, TX</small>
+                            </h3>
+                        </div>
+                        <div class="section-heading last-section">
+                            <h3><span>9am - 7pm</span>
+                            	<a href="#"><span class="icon-location"></span><span>Map This Location</span></a>
+                                <small>Klyde Warren Park - 2012 Woodall Rodgers Fwy, Dallas, TX</small>
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="right-column">
+                        <div class="section-heading">
+                            <h3><span>9am - 7pm</span>
+                            	<a href="#"><span class="icon-location"></span><span>Map This Location</span></a>
+                                <small>Klyde Warren Park - 2012 Woodall Rodgers Fwy, Dallas, TX</small>
+                            </h3>
+                        </div>
+                        <div class="section-heading">
+                            <h3><span>9am - 7pm</span>
+                            	<a href="#"><span class="icon-location"></span><span>Map This Location</span></a>
+                                <small>Klyde Warren Park - 2012 Woodall Rodgers Fwy, Dallas, TX</small>
+                            </h3>
+                        </div>
+                        <div class="section-heading last-section">
+                            <h3><span>9am - 7pm</span>
+                            	<a href="#"><span class="icon-location"></span><span>Map This Location</span></a>
+                                <small>Klyde Warren Park - 2012 Woodall Rodgers Fwy, Dallas, TX</small>
+                            </h3>
+                        </div>
+                    </div><!-- right-column -->
+            	</div><!-- clearfix section-wrap -->
+                <div class="section-wrap clearfix">
+                    <div class="section-heading">
+                        <h2>Tuesday  2<sup>nd</sup></h2>
+                    </div>
+                    <div class="left-column">
+                        <div class="section-heading">
+                            <h3><span>9am - 7pm</span>
+                            	<a href="#"><span class="icon-location"></span><span>Map This Location</span></a>
+                                <small>Klyde Warren Park - 2012 Woodall Rodgers Fwy, Dallas, TX</small>
+                            </h3>
+                        </div>
+                        <div class="section-heading">
+                            <h3><span>9am - 7pm</span>
+                            	<a href="#"><span class="icon-location"></span><span>Map This Location</span></a>
+                                <small>Klyde Warren Park - 2012 Woodall Rodgers Fwy, Dallas, TX</small>
+                            </h3>
+                        </div>
+                        <div class="section-heading last-section">
+                            <h3><span>9am - 7pm</span>
+                            	<a href="#"><span class="icon-location"></span><span>Map This Location</span></a>
+                                <small>Klyde Warren Park - 2012 Woodall Rodgers Fwy, Dallas, TX</small>
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="right-column">
+                        <div class="section-heading">
+                            <h3><span>9am - 7pm</span>
+                            	<a href="#"><span class="icon-location"></span><span>Map This Location</span></a>
+                                <small>Klyde Warren Park - 2012 Woodall Rodgers Fwy, Dallas, TX</small>
+                            </h3>
+                        </div>
+                        <div class="section-heading">
+                            <h3><span>9am - 7pm</span>
+                            	<a href="#"><span class="icon-location"></span><span>Map This Location</span></a>
+                                <small>Klyde Warren Park - 2012 Woodall Rodgers Fwy, Dallas, TX</small>
+                            </h3>
+                        </div>
+                        <div class="section-heading last-section">
+                            <h3><span>9am - 7pm</span>
+                            	<a href="#"><span class="icon-location"></span><span>Map This Location</span></a>
+                                <small>Klyde Warren Park - 2012 Woodall Rodgers Fwy, Dallas, TX</small>
+                            </h3>
+                        </div>
+                    </div><!-- right-column -->
+            	</div><!-- clearfix section-wrap -->
+                <div class="section-wrap clearfix">
+                    <div class="section-heading">
+                        <h2>Wednesday 3<sup>rd</sup></h2>
+                    </div>
+                    <div class="left-column">
+                        <div class="section-heading">
+                            <h3><span>9am - 7pm</span>
+                            	<a href="#"><span class="icon-location"></span><span>Map This Location</span></a>
+                                <small>Klyde Warren Park - 2012 Woodall Rodgers Fwy, Dallas, TX</small>
+                            </h3>
+                        </div>
+                        <div class="section-heading">
+                            <h3><span>9am - 7pm</span>
+                            	<a href="#"><span class="icon-location"></span><span>Map This Location</span></a>
+                                <small>Klyde Warren Park - 2012 Woodall Rodgers Fwy, Dallas, TX</small>
+                            </h3>
+                        </div>
+                        <div class="section-heading last-section">
+                            <h3><span>9am - 7pm</span>
+                            	<a href="#"><span class="icon-location"></span><span>Map This Location</span></a>
+                                <small>Klyde Warren Park - 2012 Woodall Rodgers Fwy, Dallas, TX</small>
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="right-column">
+                        <div class="section-heading">
+                            <h3><span>9am - 7pm</span>
+                            	<a href="#"><span class="icon-location"></span><span>Map This Location</span></a>
+                                <small>Klyde Warren Park - 2012 Woodall Rodgers Fwy, Dallas, TX</small>
+                            </h3>
+                        </div>
+                        <div class="section-heading">
+                            <h3><span>9am - 7pm</span>
+                            	<a href="#"><span class="icon-location"></span><span>Map This Location</span></a>
+                                <small>Klyde Warren Park - 2012 Woodall Rodgers Fwy, Dallas, TX</small>
+                            </h3>
+                        </div>
+                        <div class="section-heading last-section">
+                            <h3><span>9am - 7pm</span>
+                            	<a href="#"><span class="icon-location"></span><span>Map This Location</span></a>
+                                <small>Klyde Warren Park - 2012 Woodall Rodgers Fwy, Dallas, TX</small>
+                            </h3>
+                        </div>
+                    </div><!-- right-column -->
+            	</div><!-- clearfix section-wrap -->
+                
+                <div class="section-wrap clearfix">
+                    <div class="section-heading">
+                        <h2>Thursday  4<sup>th</sup></h2>
+                    </div>
+                    <div class="left-column">
+                        <div class="section-heading">
+                            <h3><span>9am - 7pm</span>
+                            	<a href="#"><span class="icon-location"></span><span>Map This Location</span></a>
+                                <small>Klyde Warren Park - 2012 Woodall Rodgers Fwy, Dallas, TX</small>
+                            </h3>
+                        </div>
+                        <div class="section-heading">
+                            <h3><span>9am - 7pm</span>
+                            	<a href="#"><span class="icon-location"></span><span>Map This Location</span></a>
+                                <small>Klyde Warren Park - 2012 Woodall Rodgers Fwy, Dallas, TX</small>
+                            </h3>
+                        </div>
+                        <div class="section-heading last-section">
+                            <h3><span>9am - 7pm</span>
+                            	<a href="#"><span class="icon-location"></span><span>Map This Location</span></a>
+                                <small>Klyde Warren Park - 2012 Woodall Rodgers Fwy, Dallas, TX</small>
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="right-column">
+                        <div class="section-heading">
+                            <h3><span>9am - 7pm</span>
+                            	<a href="#"><span class="icon-location"></span><span>Map This Location</span></a>
+                                <small>Klyde Warren Park - 2012 Woodall Rodgers Fwy, Dallas, TX</small>
+                            </h3>
+                        </div>
+                        <div class="section-heading">
+                            <h3><span>9am - 7pm</span>
+                            	<a href="#"><span class="icon-location"></span><span>Map This Location</span></a>
+                                <small>Klyde Warren Park - 2012 Woodall Rodgers Fwy, Dallas, TX</small>
+                            </h3>
+                        </div>
+                        <div class="section-heading last-section">
+                            <h3><span>9am - 7pm</span>
+                            	<a href="#"><span class="icon-location"></span><span>Map This Location</span></a>
+                                <small>Klyde Warren Park - 2012 Woodall Rodgers Fwy, Dallas, TX</small>
+                            </h3>
+                        </div>
+                    </div><!-- right-column -->
+            	</div><!-- clearfix section-wrap -->
+                
+            </section><!--contents -->
+            <aside id="sidebar">
+            
+            </aside><!--sidebar -->
+        </div>
+    </div>
+</div>
+<!--main end -->
+
+
+<!--footer start -->
+<div id="footer-wrap">
+	<div class="content-width">
+        <footer id="footer" class="clearfix">
+	        <div class="right-column">
+            	<h3>Sign up for special deals & promotions</h3>
+                <form>
+                	<input type="text" class="input-text" value="Email Address">
+                    <!-- <input type="submit" class="submit icon-check-alt" value="&#xe267; SIGN UP"> -->
+                    <a href="#" class="icon-check submit"><span class="icon-checkmark"></span>SIGN UP</a>
+                </form>
+                <p><strong>(555) 555-5555</strong></p>
+                <br class="break">
+                <p><span class="icon-thumbs-up"></span>Like us on:&nbsp;&nbsp;
+                <span class="icon-facebook-2"></span><strong>Facebook</strong></p>
+                <p>
+                	<span class="icon-point-right"></span>Follow us on: &nbsp;&nbsp;<span class="icon-twitter"></span><strong>Twitter</strong></p>
+            </div>
+        	<div class="left-column">
+            	<p><a href="#"><span class="icon-instagram"></span>Instagram @BELLATRINOS</a></p>
+                <div class="image-gallery">
+                	<a href="#"><img src="images/gallery-1.jpg" alt=""></a>
+                    <a href="#"><img src="images/gallery-2.jpg" alt=""></a>
+                    <a href="#"><img src="images/gallery-3.jpg" alt=""></a>
+                    <a href="#"><img src="images/gallery-4.jpg" alt=""></a>
+                    <a href="#"><img src="images/gallery-5.jpg" alt=""></a>
+                    <a href="#"><img src="images/gallery-6.jpg" alt=""></a>
+                    <a href="#"><img src="images/gallery-7.jpg" alt=""></a>
+                    <a href="#"><img src="images/gallery-8.jpg" alt=""></a>
+                    <a href="#"><img src="images/gallery-9.jpg" alt=""></a>
+                    <a href="#"><img src="images/gallery-10.jpg" alt=""></a>
+                </div>
+            </div>
+            
+        </footer>
+    </div>
+</div>
+<!--footer end -->
+
+</div><!--container-fluid -->
+
+</body>
+</html>

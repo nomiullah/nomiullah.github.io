@@ -1,0 +1,575 @@
+﻿<?php
+session_start();
+
+Include("v4config/Includes/db.php");
+Include("v4config/Includes/functions.php");
+
+if(!isset($_SESSION['registrationID']))
+{
+
+   header('location: tekcell_signup.php');
+      exit;
+}    
+
+
+?>
+<!doctype html>
+<!--[if IE 7 ]>    <html lang="en-gb" class="isie ie7 oldie no-js"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en-gb" class="isie ie8 oldie no-js"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en-gb" class="isie ie9 no-js"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en-gb" class="no-js"> <!--<![endif]-->
+
+<head>
+	<title>Video</title>
+	
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
+    
+    <!-- Favicon --> 
+	<link rel="shortcut icon" href="images/favicon.ico">
+    
+    <!-- this styles only adds some repairs on idevices  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Google fonts - witch you want to use - (rest you can just remove) -->
+   	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Dancing+Script:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Josefin+Sans:400,100,100italic,300,300italic,400italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
+    
+    <!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+    
+    <!-- ######### CSS STYLES ######### -->
+	
+    <link rel="stylesheet" href="css/reset.css" type="text/css" />
+	<link rel="stylesheet" href="css/style.css" type="text/css" />
+    
+    <!-- font awesome icons -->
+    <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
+	
+    <!-- simple line icons -->
+	<link rel="stylesheet" type="text/css" href="css/simpleline-icons/simple-line-icons.css" media="screen" />
+    
+    <!-- animations -->
+    <link href="js/animations/css/animations.min.css" rel="stylesheet" type="text/css" media="all" />
+    
+    <!-- responsive devices styles -->
+	<link rel="stylesheet" media="screen" href="css/responsive-leyouts.css" type="text/css" />
+    
+    <!-- shortcodes -->
+    <link rel="stylesheet" media="screen" href="css/shortcodes.css" type="text/css" /> 
+    
+<!-- just remove the below comments witch color skin you want to use -->
+    <!--<link rel="stylesheet" href="css/colors/blue.css" />-->
+    <!--<link rel="stylesheet" href="css/colors/green.css" />-->
+    <!--<link rel="stylesheet" href="css/colors/cyan.css" />-->
+    <!--<link rel="stylesheet" href="css/colors/orange.css" />-->
+    <!--<link rel="stylesheet" href="css/colors/lightblue.css" />-->
+    <!--<link rel="stylesheet" href="css/colors/pink.css" />-->
+    <!--<link rel="stylesheet" href="css/colors/purple.css" />-->
+    <!--<link rel="stylesheet" href="css/colors/bridge.css" />-->
+    <!--<link rel="stylesheet" href="css/colors/slate.css" />-->
+    <!--<link rel="stylesheet" href="css/colors/yellow.css" />-->
+    <!--<link rel="stylesheet" href="css/colors/darkred.css" />-->
+
+<!-- just remove the below comments witch bg patterns you want to use --> 
+    <!--<link rel="stylesheet" href="css/bg-patterns/pattern-default.css" />-->
+    <!--<link rel="stylesheet" href="css/bg-patterns/pattern-one.css" />-->
+    <!--<link rel="stylesheet" href="css/bg-patterns/pattern-two.css" />-->
+    <!--<link rel="stylesheet" href="css/bg-patterns/pattern-three.css" />-->
+    <!--<link rel="stylesheet" href="css/bg-patterns/pattern-four.css" />-->
+    <!--<link rel="stylesheet" href="css/bg-patterns/pattern-five.css" />-->
+    <!--<link rel="stylesheet" href="css/bg-patterns/pattern-six.css" />-->
+    <!--<link rel="stylesheet" href="css/bg-patterns/pattern-seven.css" />-->
+    <!--<link rel="stylesheet" href="css/bg-patterns/pattern-eight.css" />-->
+    <!--<link rel="stylesheet" href="css/bg-patterns/pattern-nine.css" />-->
+    <!--<link rel="stylesheet" href="css/bg-patterns/pattern-ten.css" />-->
+    <!--<link rel="stylesheet" href="css/bg-patterns/pattern-eleven.css" />-->
+    <!--<link rel="stylesheet" href="css/bg-patterns/pattern-twelve.css" />-->
+    <!--<link rel="stylesheet" href="css/bg-patterns/pattern-thirteen.css" />-->
+    
+    <!-- mega menu -->
+    <link href="js/mainmenu/bootstrap.min.css" rel="stylesheet">
+    <link href="js/mainmenu/menu-2.css" rel="stylesheet">
+    
+    <!-- slide panel -->
+    <link rel="stylesheet" type="text/css" href="js/slidepanel/slidepanel.css">
+    
+    <!-- MasterSlider -->
+	<link rel="stylesheet" href="js/masterslider/style/masterslider.css" />
+    <link rel="stylesheet" href="js/masterslider/skins/default/style.css" />
+	
+    <!-- owl carousel -->
+    <link href="js/carouselowl/owl.transitions.css" rel="stylesheet">
+    <link href="js/carouselowl/owl.carousel.css" rel="stylesheet">
+    
+    <!-- icon hover -->
+    <link rel="stylesheet" href="js/iconhoverefs/component.css" />
+    
+  	<!-- basic slider -->
+    <link rel="stylesheet" href="js/basicslider/bacslider.css" />
+    
+    <!-- cubeportfolio -->
+    <link rel="stylesheet" type="text/css" href="js/cubeportfolio/cubeportfolio.min.css">
+    
+    <!-- flexslider -->
+    <link rel="stylesheet" href="js/flexslider/flexslider.css" type="text/css" media="screen" />
+ 	<link rel="stylesheet" type="text/css" href="js/flexslider/skin.css" />
+    
+    <!-- tabs -->
+    <link rel="stylesheet" type="text/css" href="js/tabs/assets/css/responsive-tabs3.css">
+    
+    <!-- accordion -->
+    <link rel="stylesheet" type="text/css" href="js/accordion/style.css" />
+    
+    <!-- forms -->
+    <link rel="stylesheet" href="js/form/sky-forms.css" type="text/css" media="all">
+    
+    
+    <link rel="stylesheet" type="text/css" href="css/custom.css" />
+    
+    
+    <!-- classyloader-->
+    <script type="text/javascript" src="js/universal/jquery.js"></script>
+    <script src="js/classyloader/jquery.classyloader.min.js"></script>
+    
+    
+    <script src="js/script.js"></script>
+    
+    <script type="text/javascript" src="http://cdn.jsdelivr.net/jquery.validation/1.14.0/jquery.validate.min.js"></script>
+     <script type="text/javascript">
+
+     function setValidationEmail()
+
+     {
+
+         $.ajax({
+                     type: "POST",
+                      url: "v4config/sendValidationEmail.php",
+                       data: {build:'321sdsda'},
+                          success: function(data)
+                           {
+                            
+                             
+                              alert(data);
+                          }//
+                    
+                    });// saving cisco ID   
+
+
+     }
+	 
+	 	// popup code
+		$( document ).ready(function() {
+			$(".popup-btn").click (function () {
+				var popupVal = $(this).attr('href').slice(1);
+				$('#'+popupVal).show();							 
+				$(".blur-overlay").show();
+				$("#container-fluid").addClass('blur-text');
+				return false;
+			});
+			$(".popup-btn-close").click (function () {
+				$(this).parents(".popup-custom").hide();
+				$("#container-fluid").removeClass('blur-text');
+				$(".blur-overlay").hide();
+				return false;
+			});		
+			
+			// btn show cable img
+			$(".btn-cable").click (function () {
+				$("#masterslider").hide();
+				$(".cable-img").show();
+				$("html, body").animate({ scrollTop: 0 }, 0);
+			});			
+			
+			//skip-video
+			$(".skip-video").click (function () {
+				$("#video-popup").hide();
+				$("#video-validation").show();
+				return false;
+			});			
+			
+		});
+	 
+	 
+     </script>
+     
+
+<style type="text/css">
+.blur-overlay,
+#video-popup{
+	display:block;
+}
+	.cable-img{
+		display:block;
+	}
+#masterslider,
+.header,
+.footer{
+	display:none !important;
+}
+</style>
+     
+  
+</head>
+
+<body style="background:#B6B6B6;">
+
+<div class="site_wrapper" id="container-fluid">
+
+
+
+<div class="clearfix"></div>
+
+<!-- Slider
+======================================= -->  
+
+<div class="cable-img">
+	<img src="images/cable.png" alt="">
+</div>
+
+<div class="clearfix"></div>
+
+
+<footer class="footer style2">
+
+<div class="container">
+
+    <div class="one_fourth animate" data-anim-type="fadeIn" data-anim-delay="100">
+        <ul class="faddress">
+            <li><img src="images/logo-2.png" alt="" style="opacity:0.25" width="100" height="auto" /></li>
+            <li><i class="fa fa-map-marker fa-lg"></i>&nbsp; 2901 Marmora Road, Glassgow,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Seattle, WA 98122-1090</li>
+            <li><i class="fa fa-phone"></i>&nbsp; 1 -234 -456 -7890</li>
+            <li><i class="fa fa-print"></i>&nbsp; 1 -234 -456 -7890</li>
+            <li><a href="mailto:info@yourdomain.com"><i class="fa fa-envelope"></i>&nbsp; info@yourdomain.com</a></li>
+            <li><img src="images/footer-wmap.png" alt="" /></li>
+        </ul>
+	</div><!-- end address -->
+    
+    <div class="one_fourth animate" data-anim-type="fadeIn" data-anim-delay="300">
+    <div class="qlinks">
+    
+    	<h4 class="lmb">Products</h4>
+        
+        <ul>
+            <li><a href="#"><i class="fa fa-angle-right"></i> Fiber Jumpers</a></li>
+            <li><a href="#"><i class="fa fa-angle-right"></i> MTP/MPO</a></li>
+            <li><a href="#video-validation" class="popup-btn"><i class="fa fa-angle-right"></i> Video Popup Validation Email Screen</a></li>
+            <li><a href="#set-password" class="popup-btn btn-cable"><i class="fa fa-angle-right"></i> Password Screen</a></li>
+        </ul>
+        
+    </div>
+	</div><!-- end address -->
+    
+        
+    <div class="one_fourth animate" data-anim-type="fadeIn" data-anim-delay="500">
+    <div class="siteinfo">
+    
+    	<h4 class="lmb">About Us</h4>
+        
+        <p>Tekcell supplies fiber connectivity products to technology users who want a no-nonsense approach to sourcing and purchasing.</p>
+        <br>
+        <p>
+        	Tekcell offers high quality fiber optic cables & accessories. Our products work and stay working.
+        </p>
+               
+	</div>
+    </div><!-- end site info -->
+    
+    <div class="one_fourth last">
+        
+        <h4>Feedback</h4>
+        
+        
+        
+        <div class="fform">
+        
+		<form action="demo-contacts.php" method="post" id="sky-form" class="sky-form">
+          <fieldset style="padding-top:0;">
+            <div class="row">
+                        
+              <div class="col">
+                <label class="input">
+                  <input type="text" name="name" id="name" value="Your Name" onFocus="if (this.value == 'Your Name') {this.value = '';}" onBlur="if (this.value == '') {this.value = 'Your Name';}">
+                </label>
+              </div>
+              
+              <div class="col">
+                <label class="input">
+                  <input type="email" name="email" id="email" value="Your E-mail" onFocus="if (this.value == 'Your E-mail') {this.value = '';}" onBlur="if (this.value == '') {this.value = 'Your E-mail';}">
+                </label>
+              </div>
+            
+            </div>
+  			    
+            <div>
+              <label class="textarea">
+                <textarea rows="4" name="message" id="message" value="Message" onFocus="if (this.value == 'Message') {this.value = '';}" onBlur="if (this.value == '') {this.value = 'Message';}"></textarea>
+              </label>
+            </div>
+            
+          </fieldset>
+          
+			<button type="submit" class="subbutton">Submit Now!</button>
+            
+          <div class="message"> <i class="icon-ok"></i>
+            <p>Your message was successfully sent!</p>
+          </div>
+        </form>
+        
+        </div>
+        
+          
+    </div><!-- end about -->
+
+ </div><!-- end footer -->
+
+<div class="clearfix"></div>
+
+<div class="copyright_info two">
+<div class="container">
+
+	<div class="clearfix divider_dashed10"></div>
+    
+    <div class="one_half animate" data-anim-type="fadeInRight">
+    
+        Copyright © 2016 tekcell.com. All rights reserved.  <a href="#">Terms of Use</a> | <a href="#">Privacy Policy</a>
+        
+    </div>
+    
+    <div class="one_half last">
+        
+        <ul class="footer_social_links two">
+            <li class="animate" data-anim-type="zoomIn"><a href="#"><i class="fa fa-facebook"></i></a></li>
+            <li class="animate" data-anim-type="zoomIn"><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li class="animate" data-anim-type="zoomIn"><a href="#"><i class="fa fa-google-plus"></i></a></li>
+            <li class="animate" data-anim-type="zoomIn"><a href="#"><i class="fa fa-linkedin"></i></a></li>
+            <li class="animate" data-anim-type="zoomIn"><a href="#"><i class="fa fa-skype"></i></a></li>
+            <li class="animate" data-anim-type="zoomIn"><a href="#"><i class="fa fa-flickr"></i></a></li>
+            <li class="animate" data-anim-type="zoomIn"><a href="#"><i class="fa fa-html5"></i></a></li>
+            <li class="animate" data-anim-type="zoomIn"><a href="#"><i class="fa fa-youtube"></i></a></li>
+            <li class="animate" data-anim-type="zoomIn"><a href="#"><i class="fa fa-rss"></i></a></li>
+        </ul>
+            
+    </div>
+    
+</div>
+</div><!-- end copyright info -->
+
+
+</footer>
+
+
+<a href="#" class="scrollup">Scroll</a><!-- end scroll to top of the page-->
+
+
+
+</div><!--site_wrapper -->
+
+
+<div class="blur-overlay"></div>
+<div class="popup-custom" id="set-password">
+
+
+    <div class="inner-body set-password-body">
+    	<a class="close-popup close-password" href="#"><img alt="" src="images/img/close-popup.png"></a>
+        <div class="set-password section center">
+            <h3>
+                <span>SET A PASSWORD</span>
+            </h3>
+            <p>
+                Lorem ipsum dolor sit amet, <br>
+                consectetuer adipiscing elit, sed diam nonummy nibh.
+            </p>
+            
+            <p><input type="text" value="" class="field"></p>
+                
+            <p><a class="btn btn-success" href="http://dev.fcmquote.net/BackOffice/Configurator/html/index.html" target="_blank">CONTIUE</a></p>
+        </div>
+    </div>
+    
+    
+    
+    <div class="inner-body leaving-body" style="display:none;">
+    	<a class="close-popup popup-btn-close" href="#"><img alt="" src="images/img/close-popup.png"></a>
+        <div class="set-password section center">
+        	<h3><img src="images/img/emotion.jpg" alt=""></h3>
+            <h3>
+                <span>SORRY! YOU ARE LEAVING</span>
+            </h3>
+            <p>
+                Lorem ipsum dolor sit amet, <br>
+                consectetuer adipiscing elit, sed diam nonummy nibh.
+            </p>
+            <p><a class="btn btn-success" href="http://dev.fcmquote.net/BackOffice/Configurator/html/index.html" target="_blank">VISIT OUR WEBSITE</a></p>
+        </div>
+    </div>
+    
+    
+</div><!--popup-custom -->
+
+
+<div class="popup-custom" id="video-validation">
+    <div class="inner-body">
+    	<!--<a class="close-popup popup-btn-close" href="#"><img alt="" src="images/img/close-popup.png"></a> -->
+        
+        <div class="video-complete">
+        	<p><img src="images/email_sent_icon.png" alt=""></p>
+            <h3>
+                <span>To Activate Your Account Please Validate Your Email</span>
+            </h3>
+            <div class="gap">
+                <p>
+                    Please check your e-mail inbox. You should find an activation e-mail
+                </p>
+            </div>
+        </div>
+    </div>
+</div><!--popup-custom -->
+
+
+<div class="popup-custom popup-inverse" id="video-popup">
+    <div class="inner-body">
+    	
+        <div>
+        <video width="600" controls id="demoVideo">
+                    <source src="http://tekcell.com/tekcell-theme/tekcell_demo_video.mp4" type="video/mp4">
+                   <!-- <source src="http://tekcell.com/tekcell-theme/tekcell_demo_video.ogg" type="video/ogg">-->
+                    Your browser does not support HTML5 video.
+                </video>
+			
+                   <script type='text/javascript'>
+                    document.getElementById('demoVideo').addEventListener('ended',myHandler,false);
+                     function myHandler(e) {
+                        if(!e) { e = window.event; }
+                         	$("#video-popup").hide();
+							$("#video-validation").show();
+                        }
+                        </script>
+		</div>		
+    </div>
+    <p class="center skip-wrap"><a class="btn btn-lg btn-red skip-video" style="background:#599F18;">Skip Video & Get Started</a></p>
+</div><!--popup-custom -->
+
+
+
+    
+<!-- ######### JS FILES ######### -->
+<!-- get jQuery from the google apis -->
+<script type="text/javascript" src="js/universal/jquery.js"></script>
+
+<!-- style switcher -->
+<script src="js/style-switcher/jquery-1.js"></script>
+<script src="js/style-switcher/styleselector.js"></script>
+
+<!-- animations -->
+<script src="js/animations/js/animations.min.js" type="text/javascript"></script>
+
+<!-- slide panel -->
+<script type="text/javascript" src="js/slidepanel/slidepanel.js"></script>
+
+<!-- mega menu -->
+<script src="js/mainmenu/bootstrap.min.js"></script> 
+<script src="js/mainmenu/customeUI.js"></script> 
+
+<!-- MasterSlider -->
+<script src="js/masterslider/jquery.easing.min.js"></script>
+<script src="js/masterslider/masterslider.min.js"></script>
+
+<script type="text/javascript">
+(function($) {
+ "use strict";
+
+	var slider = new MasterSlider();
+	// adds Arrows navigation control to the slider.
+	slider.control('arrows');
+	slider.control('bullets');
+
+	 slider.setup('masterslider' , {
+		 width:1400,    // slider standard width
+		 height:750,   // slider standard height
+		 space:0,
+		 speed:45,
+		 layout:'fullwidth',
+		 loop:true,
+		 preload:0,
+		 autoplay:true,
+		 view:"basic"
+	});
+	
+})(jQuery);
+</script>
+
+
+<!-- scroll up -->
+<script src="js/scrolltotop/totop.js" type="text/javascript"></script>
+
+<!-- sticky menu -->
+<script type="text/javascript" src="js/mainmenu/sticky-main.js"></script>
+<script type="text/javascript" src="js/mainmenu/modernizr.custom.75180.js"></script>
+
+<!-- forms -->
+<script src="js/form/jquery.form.min.js"></script>
+<script src="js/form/jquery.validate.min.js"></script>
+
+
+<!-- cubeportfolio -->
+<script type="text/javascript" src="js/cubeportfolio/jquery.cubeportfolio.min.js"></script>
+<script type="text/javascript" src="js/cubeportfolio/main.js"></script>
+<script type="text/javascript" src="js/cubeportfolio/main2.js"></script>
+
+<!-- flexslider -->
+<script defer src="js/flexslider/jquery.flexslider.js"></script>
+<script defer src="js/flexslider/custom.js"></script>
+
+<!-- owl carousel -->
+<script src="js/carouselowl/owl.carousel.js"></script>
+
+<!-- basic slider -->
+<script type="text/javascript" src="js/basicslider/bacslider.js"></script>
+<script type="text/javascript">
+(function($) {
+ "use strict";
+ 
+	$(document).ready(function() {
+		$(".main-slider-container").sliderbac();
+
+         
+         document.getElementById('myVideo').addEventListener('ended',myHandler,false);
+    function myHandler(e) {
+        
+        alert("Video Finished");
+    }
+
+	});
+	
+})(jQuery);
+</script>
+
+<!-- tabs -->
+<script src="js/tabs/assets/js/responsive-tabs.min.js" type="text/javascript"></script>
+
+<!-- Accordion-->
+<script type="text/javascript" src="js/accordion/jquery.accordion.js"></script>
+<script type="text/javascript" src="js/accordion/custom.js"></script>
+
+<!-- animate number -->
+<script src="js/aninum/jquery.animateNumber.min.js"></script>
+
+<script type="text/javascript" src="js/universal/custom.js"></script>
+
+
+
+
+ 
+   
+
+
+
+</body>
+</html>

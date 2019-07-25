@@ -1,0 +1,188 @@
+@import "variable.scss";
+@import "mixins.scss";
+@import "fonts.scss";
+
+.sidebar{
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 560px;
+	width: 70px;
+	z-index: 2;
+	background: $whiteColor;
+	border: 1px solid $lightergray;
+	border-top: none;
+	text-align: left;
+	&:hover{
+		width: 225px;
+		@include css3(box-shadow, 0 14px 14px rgba(0,0,0, 0.2));
+		.active{
+			a{
+				background: #f0fafc;
+				color: $linkColor;
+				font-weight: bold;
+			}
+		}
+		em{
+			display: inline-block;
+			font-style: normal;
+			vertical-align: middle;
+			padding-left: 10px;
+		}
+	}
+	ul,li{
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+	a{
+		display: block;
+		padding: 5px 15px;
+		color: $secondaryColor;
+		font-weight: normal;
+		font-size: 16px;
+		position: relative;
+		&:hover{
+			background: #f0fafc;
+			color: $linkColor;
+		}
+		em{
+			display: none;
+		}
+		i{
+			position: absolute;
+    		left: 36px;
+    		top: 6px;
+    		font-style: normal;
+    		font-size: 10px;
+    		border: 2px solid $whiteColor;
+    		@include css3(border-radius, 50%);
+    		width: 18px;
+    		line-height: 15px;
+    		height: 18px;
+    		color: $whiteColor;
+    		background: $dangerColor;
+    		text-align: center;
+    		font-weight: bold;
+    		font-family: $fontProximaBold;
+		}
+	}
+	.active{
+		a{
+			color: $linkColor;
+			font-weight: bold;
+		}
+	}
+}
+
+.side-icon{
+	background: url(../images/sidebar.png) no-repeat;
+	display: inline-block;
+	vertical-align: middle;
+}
+.bg-sidebar_1 {
+    width: 38px; height: 38px;
+    background-position:-10px -10px;
+}
+a:hover .bg-sidebar_1,
+.active .bg-sidebar_1 {
+    width: 38px; height: 38px;
+    background-position:-68px -10px;
+}
+.bg-sidebar_2 {
+    width: 38px; height: 38px;
+    background-position:-10px -68px;
+}
+a:hover .bg-sidebar_2,
+.active .bg-sidebar_2 {
+    width: 38px; height: 38px;
+    background-position:-68px -68px;
+}
+.bg-sidebar_3 {
+    width: 38px; height: 38px;
+    background-position:-126px -10px;
+}
+a:hover .bg-sidebar_3,
+.active .bg-sidebar_3 {
+    width: 38px; height: 38px;
+    background-position:-126px -68px;
+}
+.bg-sidebar_4 {
+    width: 38px; height: 38px;
+    background-position:-10px -126px;
+}
+a:hover .bg-sidebar_4,
+.active .bg-sidebar_4 {
+    width: 38px; height: 38px;
+    background-position:-68px -126px;
+}
+.bg-sidebar_5 {
+    width: 38px; height: 38px;
+    background-position:-126px -126px;
+}
+a:hover .bg-sidebar_5,
+.active .bg-sidebar_5 {
+    width: 38px; height: 38px;
+    background-position:-184px -10px;
+}
+.bg-sidebar_6 {
+    width: 38px; height: 38px;
+    background-position:-184px -68px;
+}
+a:hover .bg-sidebar_6,
+.active .bg-sidebar_6 {
+    width: 38px; height: 38px;
+    background-position:-184px -126px;
+}
+.bg-sidebar_7 {
+    width: 38px; height: 38px;
+    background-position:-10px -184px;
+}
+a:hover .bg-sidebar_7,
+.active .bg-sidebar_7 {
+    width: 38px; height: 38px;
+    background-position:-68px -184px;
+}
+.bg-sidebar_8 {
+    width: 38px; height: 38px;
+    background-position:-126px -184px;
+}
+a:hover .bg-sidebar_8,
+.active .bg-sidebar_8 {
+    width: 38px; height: 38px;
+    background-position:-184px -184px;
+}
+.bg-sidebar_9 {
+    width: 38px; height: 38px;
+    background-position:-242px -10px;
+}
+a:hover .bg-sidebar_9,
+.active .bg-sidebar_9 {
+    width: 38px; height: 38px;
+    background-position:-242px -68px;
+}
+.bg-sidebar_10 {
+    width: 38px; height: 38px;
+    background-position:-242px -126px;
+}
+a:hover .bg-sidebar_10,
+.active .bg-sidebar_10 {
+    width: 38px; height: 38px;
+    background-position:-242px -184px;
+}
+.bg-sidebar_11 {
+    width: 38px; height: 38px;
+    background-position:-10px -242px;
+}
+a:hover .bg-sidebar_11,
+.active .bg-sidebar_11 {
+    width: 38px; height: 38px;
+    background-position:-68px -242px;
+}
+
+@media screen and (max-width: 767px) {
+	.sidebar{
+		left: -15px;
+		height: 100%;
+	}
+}

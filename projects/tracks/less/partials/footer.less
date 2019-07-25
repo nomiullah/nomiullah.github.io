@@ -1,0 +1,27 @@
+
+.footer {
+    background-color: @darkblue;
+    text-align: center;
+    padding: 25px 0;
+    @media @break-mobile {
+        padding:18px 0;
+    }
+    &__logo {
+        margin-bottom: 35px;
+        @media @break-mobile {
+            margin-bottom: 15px;
+            .logo {
+                max-width:210px;
+            }
+        }
+    }
+    .copyWrite {
+        letter-spacing: -0.32px;
+        font-size: 14px;
+        line-height: 1.3;
+        color: @lightgray;
+        @media @break-mobile {
+            font-size: 12px;
+        }
+    }
+}

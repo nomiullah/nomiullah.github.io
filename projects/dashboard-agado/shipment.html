@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>        
+        <!-- META SECTION -->
+        <title>Shipment</title>            
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        
+        <link rel="icon" href="favicon.ico" type="image/x-icon" />
+        <!-- END META SECTION -->
+        
+        <!-- CSS INCLUDE -->
+        <link rel="stylesheet" type="text/css" href="css/ion/ion.rangeSlider.css"/>
+        <link rel="stylesheet" type="text/css" href="css/ion/ion.rangeSlider.skinFlat.css"/>
+        
+        <link rel="stylesheet" type="text/css" id="theme" href="css/theme-default.css"/>
+		<link rel="stylesheet" type="text/css" id="theme" href="css/style.css"/>
+        <!-- EOF CSS INCLUDE -->         
+    
+                                   
+    </head>
+    <body>
+        <!-- START PAGE CONTAINER -->
+        <div class="page-container">
+            
+            <!-- START PAGE SIDEBAR -->
+            <div class="page-sidebar">
+                <!-- START X-NAVIGATION -->
+                <ul class="x-navigation">
+                    <li class="xn-logo">
+                        <a href="#">Agodo</a>
+                        <a href="#" class="x-navigation-control"></a>
+                    </li>
+                    <li>
+                        <div class="social-item">
+                            <a href="#" class="fa fa-info"></a>
+                            <a href="#" class="fa fa-plus"></a>
+                            <a href="#" class="fa fa-envelope"></a>
+                        </div>
+                    </li>
+                    <li class="xn-title"><strong>Main Nav.</strong></li>
+                    <li>
+                        <a href="index.html"><em class="sp-sidebar dashboard-icon"></em> <span class="xn-text">Dashboard</span></a>                        
+                    </li>
+                    <li class="active"><a href="shipment.html"><em class="sp-sidebar shipment-overview-icon"></em> <span class="xn-text">Shipment Overview</span></a></li>
+                    <li><a href="manage-users.html"><em class="sp-sidebar users-icon"></em> <span class="xn-text">Manage Users</span></a></li>
+                    <li><a href="#"><em class="sp-sidebar messages-icon"></em> <span class="xn-text">Messages</span></a></li>
+                    <li><a href="reports.html"><em class="sp-sidebar reports-icon"></em> <span class="xn-text">Reports</span></a></li>
+
+                    <li class="xn-title">Settings</li>
+                    <li><a href="#"><em class="sp-sidebar setting-icon"></em> <span class="xn-text">Account Settings</span></a></li>
+                    <li><a href="#"><em class="sp-sidebar billing-icon"></em> <span class="xn-text">Billing</span></a></li>
+                    <li><a href="#"><em class="sp-sidebar password-icon"></em> <span class="xn-text">Change Password</span></a></li>
+
+
+                </ul>
+                <!-- END X-NAVIGATION -->
+            </div>
+            <!-- END PAGE SIDEBAR -->
+            
+            <!-- PAGE CONTENT -->
+            <div class="page-content">
+                
+                <!-- START X-NAVIGATION VERTICAL -->
+                <ul class="x-navigation x-navigation-horizontal x-navigation-panel">
+                    <!-- TOGGLE NAVIGATION -->
+                    <li class="xn-icon-button">
+                        <a href="#" class="x-navigation-minimize"><span class="fa fa-bars"></span></a>
+                    </li>
+                    <!-- END TOGGLE NAVIGATION -->
+                    <!-- SEARCH -->
+                    <li class="xn-search">
+                        <form role="form">
+                            <input type="text" name="search" placeholder="Search..."/>
+                        </form>
+                    </li>   
+                    <li class="logout-wrap pull-right">
+                        <a href="#">LOGOUT <img src="img/logout.png" alt=""></a>
+                    </li> 
+                </ul>
+                <!-- END X-NAVIGATION VERTICAL -->                     
+
+                                   
+                
+                <!-- PAGE CONTENT WRAPPER -->
+                <div class="page-content-wrap">
+                	
+                    <div class="top-space"></div>
+                
+                    <div class="row">
+                    	<div class="col-md-5">
+                        	<div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <div class="tabs margin-0">
+                                    	<ul class="nav nav-tabs tabs-theme tabs-3item">
+                                            <li class="active"><a data-toggle="tab" href="#tab1" aria-expanded="true">Status</a></li>
+                                            <li class=""><a data-toggle="tab" href="#tab2" aria-expanded="false">Statistics</a></li>
+                                            <li class=""><a data-toggle="tab" href="#tab3" aria-expanded="false">Performance</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="panel-body">
+                                	<div class="panel-body tab-content padding-0">
+                                        <div id="tab1" class="tab-pane active">
+                                            <div class="chart-wrap">
+                                            	<div id="container" style="min-width: 250px; height: 210px; max-width: 600px; margin: 0 auto"></div>
+                                            </div>
+                                        </div>
+                                        <div id="tab2" class="tab-pane">
+                                            <div class="chart-wrap"><img src="img/chart.png" alt=""></div>
+                                        </div>
+                                        <div id="tab3" class="tab-pane">
+                                            <div class="chart-wrap"><img src="img/chart.png" alt=""></div>
+                                        </div>                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-7">
+                        	<div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <div class="deliverd-seciton">
+                                        <strong><em><img src="img/icons/table-icon-1.png" alt=""></em> 447727733 </strong>
+                                        <span>Delivered</span>
+                                    </div>
+                                    
+                                    <div class="mid-btn">
+                                    	<div class="btn-group">
+                                            <a href="#" data-toggle="dropdown" class="btn btn-primary dropdown-toggle">Mark as <span class="caret"></span></a>
+                                            <ul class="dropdown-menu" role="menu">
+                                                <li><a href="#">Delivered</a></li>
+                                                <li><a href="#">Not delivered</a></li>
+                                                <li><a href="#">Claim</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="tabs tabs-right margin-0">
+                                    	<ul class="nav nav-tabs tabs-theme tabs-4item">
+                                            <li class="active"><a data-toggle="tab" href="#tab4" aria-expanded="true">Check Points</a></li>
+                                            <li class=""><a data-toggle="tab" href="#tab5" aria-expanded="false">Notes</a></li>
+                                            <li class=""><a data-toggle="tab" href="#tab6" aria-expanded="false">Details</a></li>
+                                            <li class=""><a data-toggle="tab" href="#tab7" aria-expanded="false">Files</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                                
+                                <div class="tab-content">
+                                	
+                                    <div class="clearfix"></div>
+                                	<!--check point tabs start -->
+                                    <div class="tab-pane active" id="tab4">
+                                        <div class="top-info">
+                                            <div class="row">
+                                                <div class="col-sm-4">
+                                                    <img src="img/top-icon-1.png" alt="">
+                                                    <strong>
+                                                        <span>10 Dec. 2014</span> <em>Ship Date</em>
+                                                    </strong>
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <img src="img/top-icon-2.png" alt="">
+                                                    <strong>
+                                                        <span>Denmark</span> <em>Delivery Location</em>
+                                                    </strong>
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <img src="img/top-icon-3.png" alt="">
+                                                    <strong>
+                                                        <span>12 Dec. 2014</span> <em>Estimated D. Date</em>
+                                                    </strong>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="slider-outer clearfix">
+                                            <div class="slider-in">
+                                                <input type="text" id="ise_custom_values" name="ise_custom_values" value="" />
+                                                <em class="slider-hardle slider-first"></em>
+                                                <em class="slider-hardle slider-second"></em>
+                                                <em class="slider-hardle slider-third"></em>
+                                                <em class="slider-hardle slider-forth"></em>
+                                                <em class="slider-hardle slider-fifth"></em>
+                                            </div>
+                                            <div class="slider-info">
+                                                <span>10 Dec. 2014</span> <span>3:35pm</span>
+                                            </div>
+                                            
+                                            <div class="slider-wrap">
+                                                <label>Notify someone</label>
+                                                <label class="switch switch-small">
+                                                    <input type="checkbox" value="1" class="switch">
+                                                    <span></span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--check point tabs end -->
+                                    
+                                    
+                                    <!--notes tabs start -->
+                                    <div class="tab-pane" id="tab5">
+                                        <div class="panel-body">
+                                            <div class="messages messages-img messages-tabs">
+                                                <div class="item item-visible">
+                                                    <div class="image">
+                                                        <div class="msg-txt">Khalid</div>
+                                                    </div>
+                                                    <div class="text">
+                                                        <div class="heading">
+                                                            <a href="#">Lorem ipsum dolor sit amet, consectetur...</a>
+                                                            <span class="date">08:39pm 26/11/14</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="item in item-visible">
+                                                    <div class="image">
+                                                        <div class="msg-txt">Mark</div>
+                                                    </div>
+                                                    <div class="text">
+                                                        <div class="heading">
+                                                            <a href="#">Nullam quis risus eget urna mollis ornare vel eu leo. </a>
+                                                            <span class="date">08:39pm 26/11/14</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="item item-visible">
+                                                    <div class="image">
+                                                        <div class="msg-txt">Khalid</div>
+                                                    </div>
+                                                    <div class="text">
+                                                        <div class="heading">
+                                                            <a href="#">Lorem ipsum dolor sit amet, consectetur...</a>
+                                                            <span class="date">08:39pm 26/11/14</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="item in item-visible">
+                                                    <div class="image">
+                                                        <div class="msg-txt">Mark</div>
+                                                    </div>
+                                                    <div class="text">
+                                                        <div class="heading">
+                                                            <a href="#">Nullam quis risus eget urna mollis ornare vel eu leo. </a>
+                                                            <span class="date">08:39pm 26/11/14</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel-footer">
+                                            <div class="input-group">                                    
+                                                <input type="text" placeholder="Type a message..." class="form-control">
+                                                <span class="input-group-btn">
+                                                    <button type="button" class="btn btn-default">Send</button>
+                                                </span>                                    
+                                            </div>    
+                                        </div>
+                                    </div>
+                                    <!--notes tabs end -->
+                                    
+                                    
+                                    <!--detail tabs start -->
+                                    <div class="tab-pane" id="tab6">
+                                        <div class="panel-body">
+                                            <div class="detail-content">
+                                                <div class="row">
+                                                    <div class="col-sm-4">
+                                                        <h3><img src="img/head-icon-1.png" alt=""> <span>Shipper</span></h3>
+                                                        <p>Camille J.</p>
+                                                        <p>House 123, Street 456, royal county Denmark</p>
+                                                        <p>Postal Code. 34002</p>
+                                                        <p>Denmark (DNK)</p>
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <h3><img src="img/head-icon-2.png" alt=""> <span>Receiver</span></h3>
+                                                        <p>Camille J.</p>
+                                                        <p>House 123, Street 456, royal county Denmark</p>
+                                                        <p>Postal Code. 34002</p>
+                                                        <p>Denmark (DNK)</p>
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <h3><img src="img/head-icon-3.png" alt=""> <span>Details</span></h3>
+                                                        <p>Colli</p>
+                                                        <p>Kilo</p>
+                                                        <p>CBM</p>
+                                                        <p class="clearfix"><span class="pull-left">Transit:</span> <span class="pull-right">Shipment Delivered</span></p>
+                                                    </div>
+                                                </div>
+                                            </div>    
+                                        </div>
+                                    </div>
+                                    <!--detail tabs end -->
+                                    
+                                    
+                                    <!--files tabs start -->
+                                    <div class="tab-pane" id="tab7">
+                                        <div class="panel-body">
+                                            <div class="files-wrap">
+                                            	<div class="row">
+                                                	<div class="col-sm-8">
+                                                    	<table>
+                                                            <tr>
+                                                                <td class="left">
+                                                                    <a href="#" class="doc">
+                                                                        <img src="img/doc.png" alt="">
+                                                                        <span>User_Manual_Version_1.34.1.doc</span>
+                                                                    </a>
+                                                                </td>
+                                                                <td>8.4 mb</td>
+                                                                <td><a href="#" class="fa fa-edit link"></a></td>
+                                                                <td><a href="#" class="fa fa-trash-o link"></a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="left">
+                                                                    <a href="#" class="doc">
+                                                                        <img src="img/doc.png" alt="">
+                                                                        <span>Invoice_Product_Name_Version_1.pdf</span>
+                                                                    </a>    
+                                                                </td>
+                                                                <td>8.4 mb</td>
+                                                                <td><a href="#" class="fa fa-edit link"></a></td>
+                                                                <td><a href="#" class="fa fa-trash-o link"></a></td>
+                                                            </tr>
+                                                        </table>
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <h3><span class="fa fa-download"></span> Mini dropzone</h3>
+                                                        <form action="#" class="dropzone dropzone-mini"></form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--files tabs end -->
+                                    
+                                </div><!--tab-content -->
+                                
+                                
+                                
+                                
+                                
+                                
+                            </div><!--panel -->
+                        </div>    
+                    </div>
+                    
+                    
+                    <div class="row">
+                    	<div class="col-sm-12">
+                        	
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <div class="header-icons clearfix">
+                                    
+                                    	<div class="shipment-search">
+                                        	<input type="text" placeholder="Search Shipment" class="field-search">
+                                            <input type="submit" value="" class="submit-search">
+                                            <a href="#" class="btn btn-default">
+                                                <img src="img/icons/icon-shipment.png" alt="">
+                                                Add Shipment
+                                            </a>
+                                        </div>
+                                        
+                                        <div class="all-section">
+                                        	<a href="#" class="active"><span class="fa fa-navicon"></span> All</a>
+                                            <a href="#"><img src="img/icons/table-icon-1.png" alt=""></a>
+                                            <a href="#"><img src="img/icons/table-icon-2.png" alt=""></a>
+                                            <a href="#"><img src="img/icons/table-icon-3.png" alt=""></a>
+                                            <a href="#"><img src="img/icons/table-icon-4.png" alt=""></a>
+                                        </div>
+                                        
+                                        <div class="date-wrap">
+                                        	<input type="text" value="01-30-2014 " class="datepicker-double" id="datepicker">
+                                            <span class="datepicker-icon"></span>
+                                        </div>
+                                        
+                                        <div class="btn-contain">
+                                        	<ul class="clearfix">
+                                            	<li>
+                                                	<a href="#" class="btn btn-default">
+                                                        <img src="img/icons/icon-import.png" alt="">
+                                                        Import
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                	<a href="#" class="btn btn-default">
+                                                        <img src="img/icons/icon-export.png" alt="">
+                                                        Export
+                                                    </a>
+                                                    <div class="btn-group">
+                                                        <a class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
+                                                        	<img src="img/icons/icon-export.png" alt=""> Export
+                                                        </a>
+                                                        <ul role="menu" class="dropdown-menu">
+                                                            <li><a href="#"><img src="img/ms-excel.png" alt=""> <span>MS Excel</span></a></li>
+                                                            <li><a href="#"><img src="img/ms-word.png" alt=""> <span>MS Excel</span></a></li>
+                                                            <li><a href="#"><img src="img/ms-pdf.png" alt=""> <span>MS Excel</span></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                	<a href="#" class="btn btn-default">
+                                                        <img src="img/icons/icon-setting.png" alt="">
+                                                        Settings
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                
+                                <div class="panel-body scroll padding-0" style="height: 516px;">
+                                    <div class="table-responsive datatable-seciton">
+                                        <table class="table">
+                                            <tr>
+                                                <th>
+                                                    <div class="mail-checkbox">
+                                                        <input type="checkbox" class="icheckbox"/>
+                                                    </div>
+                                                </th>
+                                                <th>
+                                                    <div class="mail-item">
+                                                        <div class="mail-star"><span class="fa fa-star-o"></span></div>
+                                                    </div>
+                                                </th>
+                                                <th>Date</th>
+                                                <th>Status</th>
+                                                <th>Track #</th>
+                                                <th>Courior</th>
+                                                <th>Shipper</th>
+                                                <th>Dest. Country</th>
+                                                <th>+ Add Col.</th>
+                                            </tr>
+                                            
+                                            <tr class="select-wrap">
+                                            	<td>&nbsp;</td>
+                                                <td>&nbsp;</td>
+                                                <td>&nbsp;</td>
+                                            	<td>
+                                                    <select>
+                                                    	<option value="select">Select</option>
+                                                    </select>
+                                                </td>
+                                                <td><input type="text" placeholder="Track No." class="field"></td>
+                                                <td>
+                                                	<select>
+                                                    	<option value="select">Select</option>
+                                                    </select>
+                                                </td>
+                                                <td colspan="3">
+                                                	<select>
+                                                    	<option value="select">Select</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                            	<td><div class="mail-checkbox"><input type="checkbox" class="icheckbox"/></div></td>
+                                                <td>
+                                                	<div class="mail-item">
+                                                    	<div class="mail-star"><span class="fa fa-star-o"></span></div>
+                                                    </div>
+                                                </td>    
+                                                <td>04/07/2014</td>
+                                                <td>
+                                                	<img src="img/icons/table-icon-1.png" alt="">
+                                                    <span>Delivered in good condition</span>
+                                                </td>
+                                                <td>447727733</td>
+                                                <td>
+                                                	<div class="logo-sm">
+                                                    	<a href="#"><img src="img/icons/logo-dhl.png" alt=""></a>
+                                                    </div>
+                                                </td>
+                                                <td>Robert H.</td>
+                                                <td>
+                                                	<div class="flag-wrap">
+                                                        <input type="text" value="USA" class="field-flag">
+                                                        <img src="img/icons/flag-usa.png" alt="">
+                                                    </div>
+                                                </td>
+                                                <td class="table-hover-icons">
+                                                	<div class="table-in-icons">
+                                                        <a href="#"><span class="fa fa-comment-o"></span></a>
+                                                        <a href="#"><span class="fa fa-envelope"></span></a>
+                                                        <a href="#"><span class="fa fa-trash-o"></span></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                            	<td><div class="mail-checkbox"><input type="checkbox" class="icheckbox"/></div></td>
+                                                <td>
+                                                	<div class="mail-item">
+                                                    	<div class="mail-star starred"><span class="fa fa-star-o"></span></div>
+                                                    </div>
+                                                </td>
+                                                <td>04/07/2014</td>
+                                                <td>
+                                                	<img src="img/icons/table-icon-1.png" alt="">
+                                                    <span>Delivered in good condition</span>
+                                                </td>
+                                                <td>447727733</td>
+                                                <td>
+                                                	<div class="logo-sm">
+                                                    	<a href="#"><img src="img/icons/logo-dhl.png" alt=""></a>
+                                                    </div>
+                                                </td>
+                                                <td>Clark V.</td>
+                                                <td>
+                                                	<div class="flag-wrap">
+                                                        <input type="text" value="DNK" class="field-flag">
+                                                        <img src="img/icons/flag-dnk.png" alt="">
+                                                    </div>
+                                                </td>
+                                                <td class="table-hover-icons">
+                                                	<div class="table-in-icons">
+                                                        <a href="#"><span class="fa fa-comment-o"></span></a>
+                                                        <a href="#"><span class="fa fa-envelope"></span></a>
+                                                        <a href="#"><span class="fa fa-trash-o"></span></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                            	<td><div class="mail-checkbox"><input type="checkbox" class="icheckbox"/></div></td>
+                                                <td>
+                                                	<div class="mail-item">
+                                                    	<div class="mail-star starred"><span class="fa fa-star-o"></span></div>
+                                                    </div>
+                                                </td>
+                                                <td>04/07/2014</td>
+                                                <td>
+                                                	<img src="img/icons/table-icon-3.png" alt="">
+                                                    <span>No Data</span>
+                                                </td>
+                                                <td>447727733</td>
+                                                <td>
+                                                	<div class="logo-sm">
+                                                    	<a href="#"><img src="img/icons/logo-ups.png" alt=""></a>
+                                                    </div>
+                                                </td>
+                                                <td>Clark V.</td>
+                                                <td>
+                                                	<div class="flag-wrap">
+                                                        <input type="text" value="DNK" class="field-flag">
+                                                        <img src="img/icons/flag-nld.png" alt="">
+                                                    </div>
+                                                </td>
+                                                <td class="table-hover-icons">
+                                                	<div class="table-in-icons">
+                                                        <a href="#"><span class="fa fa-comment-o"></span></a>
+                                                        <a href="#"><span class="fa fa-envelope"></span></a>
+                                                        <a href="#"><span class="fa fa-trash-o"></span></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            
+                                            <tr>
+                                            	<td><div class="mail-checkbox"><input type="checkbox" class="icheckbox"/></div></td>
+                                                <td>
+                                                	<div class="mail-item">
+                                                    	<div class="mail-star"><span class="fa fa-star-o"></span></div>
+                                                    </div>
+                                                </td>    
+                                                <td>04/07/2014</td>
+                                                <td>
+                                                	<img src="img/icons/table-icon-1.png" alt="">
+                                                    <span>Delivered in good condition</span>
+                                                </td>
+                                                <td>447727733</td>
+                                                <td>
+                                                	<div class="logo-sm">
+                                                    	<a href="#"><img src="img/icons/flag-usa.png" alt=""></a>
+                                                    </div>
+                                                </td>
+                                                <td>Robert H.</td>
+                                                <td>
+                                                	<div class="flag-wrap">
+                                                        <input type="text" value="USA" class="field-flag">
+                                                        <img src="img/icons/flag-usa.png" alt="">
+                                                    </div>
+                                                </td>
+                                                <td class="table-hover-icons">
+                                                	<div class="table-in-icons">
+                                                        <a href="#"><span class="fa fa-comment-o"></span></a>
+                                                        <a href="#"><span class="fa fa-envelope"></span></a>
+                                                        <a href="#"><span class="fa fa-trash-o"></span></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                            	<td><div class="mail-checkbox"><input type="checkbox" class="icheckbox"/></div></td>
+                                                <td>
+                                                	<div class="mail-item">
+                                                    	<div class="mail-star starred"><span class="fa fa-star-o"></span></div>
+                                                    </div>
+                                                </td>
+                                                <td>04/07/2014</td>
+                                                <td>
+                                                	<img src="img/icons/table-icon-1.png" alt="">
+                                                    <span>Delivered in good condition</span>
+                                                </td>
+                                                <td>447727733</td>
+                                                <td>
+                                                	<div class="logo-sm">
+                                                    	<a href="#"><img src="img/icons/logo-dhl.png" alt=""></a>
+                                                    </div>
+                                                </td>
+                                                <td>Clark V.</td>
+                                                <td>
+                                                	<div class="flag-wrap">
+                                                        <input type="text" value="DNK" class="field-flag">
+                                                        <img src="img/icons/flag-dnk.png" alt="">
+                                                    </div>
+                                                </td>
+                                                <td class="table-hover-icons">
+                                                	<div class="table-in-icons">
+                                                        <a href="#"><span class="fa fa-comment-o"></span></a>
+                                                        <a href="#"><span class="fa fa-envelope"></span></a>
+                                                        <a href="#"><span class="fa fa-trash-o"></span></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                            	<td><div class="mail-checkbox"><input type="checkbox" class="icheckbox"/></div></td>
+                                                <td>
+                                                	<div class="mail-item">
+                                                    	<div class="mail-star starred"><span class="fa fa-star-o"></span></div>
+                                                    </div>
+                                                </td>
+                                                <td>04/07/2014</td>
+                                                <td>
+                                                	<img src="img/icons/table-icon-3.png" alt="">
+                                                    <span>No Data</span>
+                                                </td>
+                                                <td>447727733</td>
+                                                <td>
+                                                	<div class="logo-sm">
+                                                    	<a href="#"><img src="img/icons/logo-ups.png" alt=""></a>
+                                                    </div>
+                                                </td>
+                                                <td>John D.</td>
+                                                <td>
+                                                	<div class="flag-wrap">
+                                                        <input type="text" value="DNK" class="field-flag">
+                                                        <img src="img/icons/flag-dnk.png" alt="">
+                                                    </div>
+                                                </td>
+                                                <td class="table-hover-icons">
+                                                	<div class="table-in-icons">
+                                                        <a href="#"><span class="fa fa-comment-o"></span></a>
+                                                        <a href="#"><span class="fa fa-envelope"></span></a>
+                                                        <a href="#"><span class="fa fa-trash-o"></span></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                            	<td><div class="mail-checkbox"><input type="checkbox" class="icheckbox"/></div></td>
+                                                <td>
+                                                	<div class="mail-item">
+                                                    	<div class="mail-star"><span class="fa fa-star-o"></span></div>
+                                                    </div>
+                                                </td>    
+                                                <td>04/07/2014</td>
+                                                <td>
+                                                	<img src="img/icons/table-icon-1.png" alt="">
+                                                    <span>Delivered in good condition</span>
+                                                </td>
+                                                <td>447727733</td>
+                                                <td>
+                                                	<div class="logo-sm">
+                                                    	<a href="#"><img src="img/icons/logo-dhl.png" alt=""></a>
+                                                    </div>
+                                                </td>
+                                                <td>Peter R.</td>
+                                                <td>
+                                                	<div class="flag-wrap">
+                                                        <input type="text" value="USA" class="field-flag">
+                                                        <img src="img/icons/flag-usa.png" alt="">
+                                                    </div>
+                                                </td>
+                                                <td class="table-hover-icons">
+                                                	<div class="table-in-icons">
+                                                        <a href="#"><span class="fa fa-comment-o"></span></a>
+                                                        <a href="#"><span class="fa fa-envelope"></span></a>
+                                                        <a href="#"><span class="fa fa-trash-o"></span></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                            	<td><div class="mail-checkbox"><input type="checkbox" class="icheckbox"/></div></td>
+                                                <td>
+                                                	<div class="mail-item">
+                                                    	<div class="mail-star"><span class="fa fa-star-o"></span></div>
+                                                    </div>
+                                                </td>
+                                                <td>04/07/2014</td>
+                                                <td>
+                                                	<img src="img/icons/table-icon-1.png" alt="">
+                                                    <span>Delivered in good condition</span>
+                                                </td>
+                                                <td>447727733</td>
+                                                <td>
+                                                	<div class="logo-sm">
+                                                    	<a href="#"><img src="img/icons/logo-dhl.png" alt=""></a>
+                                                    </div>
+                                                </td>
+                                                <td>Camille J.</td>
+                                                <td>
+                                                	<div class="flag-wrap">
+                                                        <input type="text" value="DNK" class="field-flag">
+                                                        <img src="img/icons/flag-dnk.png" alt="">
+                                                    </div>
+                                                </td>
+                                                <td class="table-hover-icons">
+                                                	<div class="table-in-icons">
+                                                        <a href="#"><span class="fa fa-comment-o"></span></a>
+                                                        <a href="#"><span class="fa fa-envelope"></span></a>
+                                                        <a href="#"><span class="fa fa-trash-o"></span></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                            	<td><div class="mail-checkbox"><input type="checkbox" class="icheckbox"/></div></td>
+                                                <td>
+                                                	<div class="mail-item">
+                                                    	<div class="mail-star"><span class="fa fa-star-o"></span></div>
+                                                    </div>
+                                                </td>
+                                                <td>04/07/2014</td>
+                                                <td>
+                                                	<img src="img/icons/table-icon-4.png" alt="">
+                                                    <span>In Transit</span>
+                                                </td>
+                                                <td>447727733</td>
+                                                <td>
+                                                	<div class="logo-sm">
+                                                    	<a href="#"><img src="img/icons/logo-ups.png" alt=""></a>
+                                                    </div>
+                                                </td>
+                                                <td>Clark V.</td>
+                                                <td>
+                                                	<div class="flag-wrap">
+                                                        <input type="text" value="DNK" class="field-flag">
+                                                        <img src="img/icons/flag-dnk.png" alt="">
+                                                    </div>
+                                                </td>
+                                                <td class="table-hover-icons">
+                                                	<div class="table-in-icons">
+                                                        <a href="#"><span class="fa fa-comment-o"></span></a>
+                                                        <a href="#"><span class="fa fa-envelope"></span></a>
+                                                        <a href="#"><span class="fa fa-trash-o"></span></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                            	<td><div class="mail-checkbox"><input type="checkbox" class="icheckbox"/></div></td>
+                                                <td>
+                                                	<div class="mail-item">
+                                                    	<div class="mail-star"><span class="fa fa-star-o"></span></div>
+                                                    </div>
+                                                </td>    
+                                                <td>04/07/2014</td>
+                                                <td>
+                                                	<img src="img/icons/table-icon-1.png" alt="">
+                                                    <span>Delivered in good condition</span>
+                                                </td>
+                                                <td>447727733</td>
+                                                <td>
+                                                	<div class="logo-sm">
+                                                    	<a href="#"><img src="img/icons/logo-dhl.png" alt=""></a>
+                                                    </div>
+                                                </td>
+                                                <td>Robert H.</td>
+                                                <td>
+                                                	<div class="flag-wrap">
+                                                        <input type="text" value="USA" class="field-flag">
+                                                        <img src="img/icons/flag-usa.png" alt="">
+                                                    </div>
+                                                </td>
+                                                <td class="table-hover-icons">
+                                                	<div class="table-in-icons">
+                                                        <a href="#"><span class="fa fa-comment-o"></span></a>
+                                                        <a href="#"><span class="fa fa-envelope"></span></a>
+                                                        <a href="#"><span class="fa fa-trash-o"></span></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                            	<td><div class="mail-checkbox"><input type="checkbox" class="icheckbox"/></div></td>
+                                                <td>
+                                                	<div class="mail-item">
+                                                    	<div class="mail-star"><span class="fa fa-star-o"></span></div>
+                                                    </div>
+                                                </td>
+                                                <td>04/07/2014</td>
+                                                <td>
+                                                	<img src="img/icons/table-icon-1.png" alt="">
+                                                    <span>Delivered in good condition</span>
+                                                </td>
+                                                <td>447727733</td>
+                                                <td>
+                                                	<div class="logo-sm">
+                                                    	<a href="#"><img src="img/icons/logo-dhl.png" alt=""></a>
+                                                    </div>
+                                                </td>
+                                                <td>Clark V.</td>
+                                                <td>
+                                                	<div class="flag-wrap">
+                                                        <input type="text" value="DNK" class="field-flag">
+                                                        <img src="img/icons/flag-dnk.png" alt="">
+                                                    </div>
+                                                </td>
+                                                <td class="table-hover-icons">
+                                                	<div class="table-in-icons">
+                                                        <a href="#"><span class="fa fa-comment-o"></span></a>
+                                                        <a href="#"><span class="fa fa-envelope"></span></a>
+                                                        <a href="#"><span class="fa fa-trash-o"></span></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                            	<td><div class="mail-checkbox"><input type="checkbox" class="icheckbox"/></div></td>
+                                                <td>
+                                                	<div class="mail-item">
+                                                    	<div class="mail-star starred"><span class="fa fa-star-o"></span></div>
+                                                    </div>
+                                                </td>
+                                                <td>04/07/2014</td>
+                                                <td>
+                                                	<img src="img/icons/table-icon-3.png" alt="">
+                                                    <span>No Data</span>
+                                                </td>
+                                                <td>447727733</td>
+                                                <td>
+                                                	<div class="logo-sm">
+                                                    	<a href="#"><img src="img/icons/logo-ups.png" alt=""></a>
+                                                    </div>
+                                                </td>
+                                                <td>Clark V.</td>
+                                                <td>
+                                                	<div class="flag-wrap">
+                                                        <input type="text" value="DNK" class="field-flag">
+                                                        <img src="img/icons/flag-dnk.png" alt="">
+                                                    </div>
+                                                </td>
+                                                <td class="table-hover-icons">
+                                                	<div class="table-in-icons">
+                                                        <a href="#"><span class="fa fa-comment-o"></span></a>
+                                                        <a href="#"><span class="fa fa-envelope"></span></a>
+                                                        <a href="#"><span class="fa fa-trash-o"></span></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                            	<td><div class="mail-checkbox"><input type="checkbox" class="icheckbox"/></div></td>
+                                                <td>
+                                                	<div class="mail-item">
+                                                    	<div class="mail-star"><span class="fa fa-star-o"></span></div>
+                                                    </div>
+                                                </td>
+                                                <td>04/07/2014</td>
+                                                <td>
+                                                	<img src="img/icons/table-icon-1.png" alt="">
+                                                    <span>Delivered in good condition</span>
+                                                </td>
+                                                <td>447727733</td>
+                                                <td>
+                                                	<div class="logo-sm">
+                                                    	<a href="#"><img src="img/icons/logo-dhl.png" alt=""></a>
+                                                    </div>
+                                                </td>
+                                                <td>Clark V.</td>
+                                                <td>
+                                                	<div class="flag-wrap">
+                                                        <input type="text" value="DNK" class="field-flag">
+                                                        <img src="img/icons/flag-dnk.png" alt="">
+                                                    </div>
+                                                </td>
+                                                <td class="table-hover-icons">
+                                                	<div class="table-in-icons">
+                                                        <a href="#"><span class="fa fa-comment-o"></span></a>
+                                                        <a href="#"><span class="fa fa-envelope"></span></a>
+                                                        <a href="#"><span class="fa fa-trash-o"></span></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                            	<td><div class="mail-checkbox"><input type="checkbox" class="icheckbox"/></div></td>
+                                                <td>
+                                                	<div class="mail-item">
+                                                    	<div class="mail-star"><span class="fa fa-star-o"></span></div>
+                                                    </div>
+                                                </td>
+                                                <td>04/07/2014</td>
+                                                <td>
+                                                	<img src="img/icons/table-icon-3.png" alt="">
+                                                    <span>No Data</span>
+                                                </td>
+                                                <td>447727733</td>
+                                                <td>
+                                                	<div class="logo-sm">
+                                                    	<a href="#"><img src="img/icons/logo-ups.png" alt=""></a>
+                                                    </div>
+                                                </td>
+                                                <td>Clark V.</td>
+                                                <td>
+                                                	<div class="flag-wrap">
+                                                        <input type="text" value="DNK" class="field-flag">
+                                                        <img src="img/icons/flag-nld.png" alt="">
+                                                    </div>
+                                                </td>
+                                                <td class="table-hover-icons">
+                                                	<div class="table-in-icons">
+                                                        <a href="#"><span class="fa fa-comment-o"></span></a>
+                                                        <a href="#"><span class="fa fa-envelope"></span></a>
+                                                        <a href="#"><span class="fa fa-trash-o"></span></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            
+                                        </table>
+                                    </div>
+                                    
+                                    
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>    
+
+                    
+                    <!-- START DASHBOARD CHART -->
+                    <div class="block-full-width"  style="visibility:hidden; height:1px;">
+                        <div id="dashboard-chart" style="height: 250px; width: 100%; float: left;"></div>
+                        <div class="chart-legend">
+                            <div id="dashboard-legend"></div>
+                        </div>                                                
+                    </div>                    
+                    <!-- END DASHBOARD CHART -->
+                    
+                </div>
+                <!-- END PAGE CONTENT WRAPPER -->                                
+            </div>            
+            <!-- END PAGE CONTENT -->
+        </div>
+        <!-- END PAGE CONTAINER -->
+
+        <!-- MESSAGE BOX-->
+        <div class="message-box animated fadeIn" data-sound="alert" id="mb-signout">
+            <div class="mb-container">
+                <div class="mb-middle">
+                    <div class="mb-title"><span class="fa fa-sign-out"></span> Log <strong>Out</strong> ?</div>
+                    <div class="mb-content">
+                        <p>Are you sure you want to log out?</p>                    
+                        <p>Press No if youwant to continue work. Press Yes to logout current user.</p>
+                    </div>
+                    <div class="mb-footer">
+                        <div class="pull-right">
+                            <a href="pages-login.html" class="btn btn-success btn-lg">Yes</a>
+                            <button class="btn btn-default btn-lg mb-control-close">No</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END MESSAGE BOX-->
+        
+		 
+
+
+
+		
+		<script type="text/javascript" src="js/plugins/jquery/jquery.min.js"></script>
+        <script type="text/javascript" src="js/plugins/jquery/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="js/plugins/bootstrap/bootstrap.min.js"></script>        
+        
+        <script type='text/javascript' src='js/plugins/icheck/icheck.min.js'></script>
+        <script type="text/javascript" src="js/plugins/mcustomscrollbar/jquery.mCustomScrollbar.min.js"></script>
+        
+        <script type="text/javascript" src="js/plugins/datatables/jquery.dataTables.min.js"></script>    
+        <script type="text/javascript" src="js/plugins/bootstrap/bootstrap-datepicker.js"></script>     
+        
+        <script type="text/javascript" src="js/plugins/rangeslider/jQAllRangeSliders-min.js"></script>       
+        <script type="text/javascript" src="js/plugins/knob/jquery.knob.min.js"></script>
+        <script type="text/javascript" src="js/plugins/ion/ion.rangeSlider.min.js"></script>
+        
+        <script type="text/javascript" src="js/settings.js"></script>
+        
+        <script type="text/javascript" src="js/plugins.js"></script>        
+        <script type="text/javascript" src="js/actions.js"></script> 
+        
+        <script type="text/javascript" src="js/plugins/dropzone/dropzone.min.js"></script>
+        <!-- END TEMPLATE -->
+        
+        <script type="text/javascript" src="js/demo_sliders.js"></script>
+        
+        
+        <script src="http://code.highcharts.com/highcharts.js"></script>
+        <script type="text/javascript">
+            $(function () {
+        
+            // Radialize the colors
+            Highcharts.getOptions().colors = Highcharts.map(Highcharts.getOptions().colors, function (color) {
+                return {
+                    radialGradient: { cx: 0.5, cy: 0.3, r: 0.7 },
+                    stops: [
+                        [0, color],
+                        [1, Highcharts.Color(color).brighten(-0.3).get('rgb')] // darken
+                    ]
+                };
+            });
+        
+            // Build the chart
+            $('#container').highcharts({
+                chart: {
+                    plotBackgroundColor: null,
+                    plotBorderWidth: null,
+                    plotShadow: false
+                },
+                title: {
+                    text: ''
+                },
+                tooltip: {
+                    pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                },
+                plotOptions: {
+                    pie: {
+                        allowPointSelect: true,
+                        cursor: 'pointer',
+                        dataLabels: {
+                            enabled: true,
+                            format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                            style: {
+                                color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                            },
+                            connectorColor: 'silver'
+                        }
+                    }
+                },
+                series: [{
+                    type: 'pie',
+                    name: 'Browser share',
+                    data: [
+                        ['Firefox',   45.0],
+                        ['IE',       26.8],
+                        {
+                            name: 'Chrome',
+                            y: 12.8,
+                            sliced: true,
+                            selected: true
+                        },
+                        ['Safari',    8.5],
+                        ['Opera',     6.2],
+                        ['Others',   0.7]
+                    ]
+                }]
+            });
+        });
+    </script>
+    
+     <script type="text/javascript">
+        $(function() {
+            $( "#datepicker" ).datepicker();
+            
+            $(".datatable-seciton tr").hover(function() {
+                $(this).children('.table-hover-icons').children(".table-in-icons").animate({right: "0"},200);
+            },
+                function() {
+                    $(this).children('.table-hover-icons').children(".table-in-icons").animate({right: "-104px"},200);
+                }
+            );
+        });
+    </script>
+        
+
+        <!-- END TEMPLATE -->
+    <!-- END SCRIPTS -->         
+    </body>
+</html>
+
+
+
+
+
+

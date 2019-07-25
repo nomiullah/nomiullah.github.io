@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<!--[if IE 6]>
+<html id="ie6">
+<![endif]-->
+<!--[if IE 7]>
+<html id="ie7">
+<![endif]-->
+<!--[if IE 8]>
+<html id="ie8">
+<![endif]-->
+<!--[if !(IE 6) | !(IE 7) | !(IE 8)  ]><!-->
+<html>
+<!--<![endif]-->
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    
+    <title>After Login</title>
+    
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800,300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    
+    
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/jquery-ui.custom.min.css"/>
+    <link rel="stylesheet" href="css/ace.min.css"/>
+    
+    
+    <link type="text/css" rel="stylesheet" href="css/font-awesome.css" />
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
+    
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+    
+    <!--[if lte IE 8]>
+    <link type="text/css" rel="stylesheet" href="css/ie.css" />
+    <script type="text/javascript" src="js/modernizr.min.js"></script>
+    <![endif]-->
+    
+    <!--[if lte IE 6]>
+    <script type="text/javascript" src="js/belated.js"></script>
+    <![endif]-->
+    
+	<script src="js/jquery.js"></script>
+    <script src="js/jquery.flexslider.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/home.js"></script>
+    
+    
+    
+    <script type="text/javascript" src="js/new.js"></script>
+    <script src="js/assets/bootstrap.min.js"></script>
+    
+</head>
+
+<body class="home">
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+var js, fjs = d.getElementsByTagName(s)[0];
+if (d.getElementById(id)) return;
+js = d.createElement(s); js.id = id;
+js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+<div id="container-fluid">
+
+<!--header start -->
+<div id="header-wrap">
+	<div class="">
+        <header id="header" class="clearfix">
+            <div id="header-left"><a href="index.html"><img src="images/logo.png" alt=""></a></div>
+            <div id="header-right">
+            	<a href="#" id="menu"><span class="fa fa-navicon"></span></a>
+            	<div id="nav">
+                	<ul class="clearfix">
+                    	<li class="active"><a href="index.html">Home</a></li>
+                        <li><a href="pet-search.html">Pet Search</a></li>
+                        <li><a href="pet-detail.html">My Pet</a></li>
+                        <li class="dropdown-menu">
+                        	<a href="organizations.html">
+                            	<em class="fa fa-angle-up nav-arrow"></em>
+                                <em class="fa fa-angle-down nav-arrow"></em>
+                            	Organizations 
+                            </a>
+                            <ul><li><a href="organization-content.html">Messages</a></li></ul>
+                        </li>
+                        <li><a class="popup-link" href="#popup">Login</a></li>
+                        <li class="right-item"><a href="information.html">Post a Pet</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+    </div>
+</div>
+<!--header end -->
+
+
+<div class="slider-wrap slider-wrap-afterlogin">
+    
+    <div class="slider-overlay slider-overlay-afterlogin">
+        <div class="secondary-nav-wrap clearfix">
+            <div class="navbar-buttons navbar-header pull-right" role="navigation">
+            <ul class="nav ace-nav">
+            
+            <li class="light-blue">
+                <a data-toggle="dropdown" href="#" class="dropdown-toggle">
+                    <img class="nav-user-photo" src="images/user.jpg" alt="Jason"/>
+                    <span class="user-info"> <small>Welcome,</small>Jason</span>
+                    <i class="ace-icon fa fa-caret-down"></i>
+                </a>
+                <ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
+                    <li><a href="#"><i class="ace-icon fa fa-cog"></i>Take the Quiz</a></li>
+                    <li><a href="profile.html"><i class="ace-icon fa fa-user"></i>My Profile</a></li>
+                </ul>
+            </li>
+            
+            <li class="purple">
+                <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                    <i class="ace-icon fa fa-bell icon-animated-bell"></i>
+                    <span class="badge badge-important">8</span>
+                </a>
+                <ul class="dropdown-menu-right dropdown-navbar navbar-pink dropdown-menu dropdown-caret dropdown-close">
+                    <li class="dropdown-header"><i class="ace-icon fa fa-exclamation-triangle"></i>8 Notifications</li>
+                    <li>
+                        <a href="#">
+                            <div class="clearfix">
+                                <span class="pull-left"><i class="btn btn-xs no-hover btn-pink fa fa-comment"></i> New Comments</span>
+                                <span class="pull-right badge badge-info">+12</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li><a href="#"><i class="btn btn-xs btn-primary fa fa-user"></i> Bob just signed up as an editor ...</a></li>
+                    <li>
+                        <a href="#">
+                            <div class="clearfix">
+                                <span class="pull-left"><i class="btn btn-xs no-hover btn-success fa fa-shopping-cart"></i> New Orders</span>
+                                <span class="pull-right badge badge-success">+8</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                        <div class="clearfix">
+                        <span class="pull-left">
+                        <i class="btn btn-xs no-hover btn-info fa fa-twitter"></i>
+                        Followers
+                        </span>
+                        <span class="pull-right badge badge-info">+11</span>
+                        </div>
+                        </a>
+                    </li>
+                    <li class="dropdown-footer"><a href="#">See all notifications<i class="ace-icon fa fa-arrow-right"></i></a></li>
+              </ul>
+            </li>
+            
+            <li class="green">
+                <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                    <i class="ace-icon fa fa-envelope icon-animated-vertical"></i>
+                    <span class="badge badge-success">5</span>
+                </a>
+              <ul class="dropdown-menu-right dropdown-navbar dropdown-menu dropdown-caret dropdown-close">
+                <li class="dropdown-header"><i class="ace-icon fa fa-envelope-o"></i>5 Messages</li>
+            
+                <li class="dropdown-content">
+                  <ul class="dropdown-menu dropdown-navbar">
+                    <li>
+                        <a href="#"><img src="images/avatar.png" class="msg-photo" alt="Avatar"/>
+                        <span class="msg-body">
+                        <span class="msg-title">
+                        <span class="blue">Alex:</span>
+                        Ciao sociis natoque penatibus et auctor ...
+                        </span>
+                        
+                        <span class="msg-time">
+                        <i class="ace-icon fa fa-clock-o"></i>
+                        <span>a moment ago</span>
+                        </span>
+                        </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="images/avatar.png" class="msg-photo" alt="Avatar"/>
+                        <span class="msg-body">
+                        <span class="msg-title">
+                        <span class="blue">Susan:</span>
+                        Vestibulum id ligula porta felis euismod ...
+                        </span>
+                        
+                        <span class="msg-time">
+                        <i class="ace-icon fa fa-clock-o"></i>
+                        <span>20 minutes ago</span>
+                        </span>
+                        </span>
+                        </a>
+                    </li>
+            
+                    <li>
+                        <a href="#"><img src="images/avatar.png" class="msg-photo" alt="Avatar"/>
+                        <span class="msg-body">
+                        <span class="msg-title">
+                        <span class="blue">Bob:</span>
+                        Nullam quis risus eget urna mollis ornare ...
+                        </span>
+                        
+                        <span class="msg-time">
+                        <i class="ace-icon fa fa-clock-o"></i>
+                        <span>3:15 pm</span>
+                        </span>
+                        </span>
+                        </a>
+                    </li>
+            
+                    <li>
+                        <a href="#"><img src="images/avatar.png" class="msg-photo" alt="Avatar"/>
+                        <span class="msg-body">
+                        <span class="msg-title">
+                        <span class="blue">Kate:</span>
+                        Ciao sociis natoque eget urna mollis ornare ...
+                        </span>
+                        
+                        <span class="msg-time">
+                        <i class="ace-icon fa fa-clock-o"></i>
+                        <span>1:33 pm</span>
+                        </span>
+                        </span>
+                        </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="dropdown-footer">
+                  <a href="inbox.html">
+                    See all messages
+                    <i class="ace-icon fa fa-arrow-right"></i>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            
+            </ul>
+            </div>
+        </div><!--secondary-nav-wrap -->
+        
+        <div class="for-mobile">
+            <div class="flexslider slider">
+                <ul class="slides">
+                    <li><img src="images/dog-1.jpg" alt=""></li>
+                    <li><img src="images/dog-2.jpg" alt=""></li>
+                    <li><img src="images/dog-3.jpg" alt=""></li>
+                </ul>
+            </div>
+            <div class="top-section"><h3>The Virtual Shelter with a Twist</h3></div>
+        </div>
+
+    
+		<div class="tabs-wrap">
+            <div class="tabs">
+                <ul class="clearfix">
+                    <li class="first active"><a href="#content-a"><span>Pet Search</span></a></li>
+                    <li class="second"><a href="#content-b"><span>My Pets</span> </a></li>
+                    <li class="third"><a href="#content-c"><span>Tails wags</span></a></li>
+                </ul>
+            </div>
+            <div class="tabs-content" id="content-a" style="display:block;">  
+            	<div class="white-section-wrap for-desktop">
+                	<div class="white-title clearfix">
+                    	<h3>Pets Like You!</h3>
+                        <p>
+                        	New Adoptale pets based on your profile
+                            <a href="#" class="btn">View All Pets <span class="fa fa-search"></span></a>
+                        </p>
+                    </div>
+                    <div class="white-inner clearfix">
+                    	<div class="map-white"><img src="images/map-white.png" alt="" width="100%" height="378"></div>
+                        <div class="white-pets">
+                        	<a href="#" class="btn btn-small more">More <span class="fa fa-search"></span></a>
+                        	<ul class="clearfix slides">
+                                <li>
+                                    <div class="box">
+                                        <div class="pet-section">
+                                            <div class="pet-img"><a href="pet-detail.html"><img src="images/pet-1.png" alt=""></a></div>
+                                            <div class="pet-inner">
+                                                <div class="percentage-section-wrap">
+                                                    <div class="percentage"><div class="percentage-inner" style="width:95%"></div></div>
+                                                    <span>95%</span>
+                                                </div>
+                                            <h3>Bluto</h3>
+                                                <p>65 lbs | 4 years old</p>
+                                                <p>Neutered</p>
+                                                <p>Distance: 6 miles</p>
+                                                <p>I am so sweet and just want to be your best friend...</p>
+                                                <p><a href="#" class="readmore">Read more...</a></p>
+                                                <div class="social-section">
+                                                    <a href="#" class="fb" title="facebook"><span class="fa fa-facebook"></span></a>
+                                                    <a href="#" class="tw" title="Twitter"><span class="fa fa-twitter"></span></a>
+                                                    <a href="#" class="en" title="Mail"><span class="fa fa-envelope"></span></a>
+                                                    <a href="#" class="pin" title="Pinterest"><span class="fa fa-pinterest"></span></a>
+                                                    <a href="#" class="gp" title="Google Plus"><span class="fa fa-google-plus"></span></a>
+                                                </div>
+                                                <div class="pet-link">
+                                                    <a href="#" class="apply">Apply to Adopt <em class="fa fa-bug"></em></a>
+                                                    <a href="#" class="heart-btn right" title="Add to Favourite"><span class="fa fa-heart"></span></a>
+                                                </div>
+                                            </div>
+                                        </div>    
+                                    </div>
+                                </li>
+                                <li>    
+                                    <div class="box selected-box">
+                                        <div class="pet-section">
+                                        	<span class="fa fa-paw icon-top"></span>
+                                            <div class="pet-img"><a href="pet-detail.html"><img src="images/pet-2.png" alt=""></a></div>
+                                            <div class="pet-inner">
+                                                <div class="percentage-section-wrap">
+                                                    <div class="percentage"><div class="percentage-inner" style="width:75%"></div></div>
+                                                    <span>75%</span>
+                                                </div>
+                                            <h3>Sage</h3>
+                                                <p>65 lbs | 4 years old</p>
+                                                <p>Neutered</p>
+                                                <p>Distance: 6 miles</p>
+                                                <p>I am so sweet and just want to be your best friend...</p>
+                                                <p><a href="#" class="readmore">Read more...</a></p>
+                                                <div class="social-section">
+                                                    <a href="#" class="fb" title="facebook"><span class="fa fa-facebook"></span></a>
+                                                    <a href="#" class="tw" title="Twitter"><span class="fa fa-twitter"></span></a>
+                                                    <a href="#" class="en" title="Mail"><span class="fa fa-envelope"></span></a>
+                                                    <a href="#" class="pin" title="Pinterest"><span class="fa fa-pinterest"></span></a>
+                                                    <a href="#" class="gp" title="Google Plus"><span class="fa fa-google-plus"></span></a>
+                                                </div>
+                                                <div class="pet-link">
+                                                    <a href="#" class="apply">Apply to Adopt <em class="fa fa-bug"></em></a>
+                                                    <a href="#" class="heart-btn right" title="Add to Favourite"><span class="fa fa-heart"></span></a>
+                                                </div>
+                                            </div>
+                                        </div>    
+                                    </div>
+                                </li>
+                                <li>    
+                                    <div class="box">
+                                        <div class="pet-section">
+                                            <div class="pet-img"><a href="pet-detail.html"><img src="images/pet-3.png" alt=""></a></div>
+                                            <div class="pet-inner">
+                                                <div class="percentage-section-wrap">
+                                                    <div class="percentage"><div class="percentage-inner" style="width:15%"></div></div>
+                                                    <span>15%</span>
+                                                </div>
+                                            <h3>Dawn</h3>
+                                                <p>65 lbs | 4 years old</p>
+                                                <p>Neutered</p>
+                                                <p>Distance: 6 miles</p>
+                                                <p>I am so sweet and just want to be your best friend...</p>
+                                                <p><a href="#" class="readmore">Read more...</a></p>
+                                                <div class="social-section">
+                                                    <a href="#" class="fb" title="facebook"><span class="fa fa-facebook"></span></a>
+                                                    <a href="#" class="tw" title="Twitter"><span class="fa fa-twitter"></span></a>
+                                                    <a href="#" class="en" title="Mail"><span class="fa fa-envelope"></span></a>
+                                                    <a href="#" class="pin" title="Pinterest"><span class="fa fa-pinterest"></span></a>
+                                                    <a href="#" class="gp" title="Google Plus"><span class="fa fa-google-plus"></span></a>
+                                                </div>
+                                                <div class="pet-link">
+                                                    <a href="#" class="apply">Apply to Adopt <em class="fa fa-bug"></em></a>
+                                                    <a href="#" class="heart-btn right" title="Add to Favourite"><span class="fa fa-heart"></span></a>
+                                                </div>
+                                            </div>
+                                        </div>    
+                                    </div>
+                                </li>
+                                <li>    
+                                    <div class="box">
+                                        <div class="pet-section">
+                                            <div class="pet-img"><a href="pet-detail.html"><img src="images/pet-4.png" alt=""></a></div>
+                                            <div class="pet-inner">
+                                                <div class="percentage-section-wrap">
+                                                    <div class="percentage"><div class="percentage-inner" style="width:100%"></div></div>
+                                                    <span>100%</span>
+                                                </div>
+                                            <h3>Tressle</h3>
+                                                <p>65 lbs | 4 years old</p>
+                                                <p>Neutered</p>
+                                                <p>Distance: 6 miles</p>
+                                                <p>I am so sweet and just want to be your best friend...</p>
+                                                <p><a href="#" class="readmore">Read more...</a></p>
+                                                <div class="social-section">
+                                                    <a href="#" class="fb" title="facebook"><span class="fa fa-facebook"></span></a>
+                                                    <a href="#" class="tw" title="Twitter"><span class="fa fa-twitter"></span></a>
+                                                    <a href="#" class="en" title="Mail"><span class="fa fa-envelope"></span></a>
+                                                    <a href="#" class="pin" title="Pinterest"><span class="fa fa-pinterest"></span></a>
+                                                    <a href="#" class="gp" title="Google Plus"><span class="fa fa-google-plus"></span></a>
+                                                </div>
+                                                <div class="pet-link">
+                                                    <a href="#" class="apply">Apply to Adopt <em class="fa fa-bug"></em></a>
+                                                    <a href="#" class="heart-btn right" title="Add to Favourite"><span class="fa fa-heart"></span></a>
+                                                </div>
+                                            </div>
+                                        </div>    
+                                    </div>
+                                </li>
+                                
+                                
+                                
+                                
+                                <li>
+                                    <div class="box">
+                                        <div class="pet-section">
+                                            <div class="pet-img"><a href="pet-detail.html"><img src="images/pet-1.png" alt=""></a></div>
+                                            <div class="pet-inner">
+                                                <div class="percentage-section-wrap">
+                                                    <div class="percentage"><div class="percentage-inner" style="width:95%"></div></div>
+                                                    <span>95%</span>
+                                                </div>
+                                            <h3>Bluto</h3>
+                                                <p>65 lbs | 4 years old</p>
+                                                <p>Neutered</p>
+                                                <p>Distance: 6 miles</p>
+                                                <p>I am so sweet and just want to be your best friend...</p>
+                                                <p><a href="#" class="readmore">Read more...</a></p>
+                                                <div class="social-section">
+                                                    <a href="#" class="fb" title="facebook"><span class="fa fa-facebook"></span></a>
+                                                    <a href="#" class="tw" title="Twitter"><span class="fa fa-twitter"></span></a>
+                                                    <a href="#" class="en" title="Mail"><span class="fa fa-envelope"></span></a>
+                                                    <a href="#" class="pin" title="Pinterest"><span class="fa fa-pinterest"></span></a>
+                                                    <a href="#" class="gp" title="Google Plus"><span class="fa fa-google-plus"></span></a>
+                                                </div>
+                                                <div class="pet-link">
+                                                    <a href="#" class="apply">Apply to Adopt <em class="fa fa-bug"></em></a>
+                                                    <a href="#" class="heart-btn right" title="Add to Favourite"><span class="fa fa-heart"></span></a>
+                                                </div>
+                                            </div>
+                                        </div>    
+                                    </div>
+                                </li>
+                                <li>    
+                                    <div class="box">
+                                        <div class="pet-section">
+                                            <div class="pet-img"><a href="pet-detail.html"><img src="images/pet-2.png" alt=""></a></div>
+                                            <div class="pet-inner">
+                                                <div class="percentage-section-wrap">
+                                                    <div class="percentage"><div class="percentage-inner" style="width:75%"></div></div>
+                                                    <span>75%</span>
+                                                </div>
+                                            <h3>Sage</h3>
+                                                <p>65 lbs | 4 years old</p>
+                                                <p>Neutered</p>
+                                                <p>Distance: 6 miles</p>
+                                                <p>I am so sweet and just want to be your best friend...</p>
+                                                <p><a href="#" class="readmore">Read more...</a></p>
+                                                <div class="social-section">
+                                                    <a href="#" class="fb" title="facebook"><span class="fa fa-facebook"></span></a>
+                                                    <a href="#" class="tw" title="Twitter"><span class="fa fa-twitter"></span></a>
+                                                    <a href="#" class="en" title="Mail"><span class="fa fa-envelope"></span></a>
+                                                    <a href="#" class="pin" title="Pinterest"><span class="fa fa-pinterest"></span></a>
+                                                    <a href="#" class="gp" title="Google Plus"><span class="fa fa-google-plus"></span></a>
+                                                </div>
+                                                <div class="pet-link">
+                                                    <a href="#" class="apply">Apply to Adopt <em class="fa fa-bug"></em></a>
+                                                    <a href="#" class="heart-btn right" title="Add to Favourite"><span class="fa fa-heart"></span></a>
+                                                </div>
+                                            </div>
+                                        </div>    
+                                    </div>
+                                </li>
+                                <li>    
+                                    <div class="box">
+                                        <div class="pet-section">
+                                            <div class="pet-img"><a href="pet-detail.html"><img src="images/pet-3.png" alt=""></a></div>
+                                            <div class="pet-inner">
+                                                <div class="percentage-section-wrap">
+                                                    <div class="percentage"><div class="percentage-inner" style="width:15%"></div></div>
+                                                    <span>15%</span>
+                                                </div>
+                                            <h3>Dawn</h3>
+                                                <p>65 lbs | 4 years old</p>
+                                                <p>Neutered</p>
+                                                <p>Distance: 6 miles</p>
+                                                <p>I am so sweet and just want to be your best friend...</p>
+                                                <p><a href="#" class="readmore">Read more...</a></p>
+                                                <div class="social-section">
+                                                    <a href="#" class="fb" title="facebook"><span class="fa fa-facebook"></span></a>
+                                                    <a href="#" class="tw" title="Twitter"><span class="fa fa-twitter"></span></a>
+                                                    <a href="#" class="en" title="Mail"><span class="fa fa-envelope"></span></a>
+                                                    <a href="#" class="pin" title="Pinterest"><span class="fa fa-pinterest"></span></a>
+                                                    <a href="#" class="gp" title="Google Plus"><span class="fa fa-google-plus"></span></a>
+                                                </div>
+                                                <div class="pet-link">
+                                                    <a href="#" class="apply">Apply to Adopt <em class="fa fa-bug"></em></a>
+                                                    <a href="#" class="heart-btn right" title="Add to Favourite"><span class="fa fa-heart"></span></a>
+                                                </div>
+                                            </div>
+                                        </div>    
+                                    </div>
+                                </li>
+                                <li>    
+                                    <div class="box">
+                                        <div class="pet-section">
+                                            <div class="pet-img"><a href="pet-detail.html"><img src="images/pet-4.png" alt=""></a></div>
+                                            <div class="pet-inner">
+                                                <div class="percentage-section-wrap">
+                                                    <div class="percentage"><div class="percentage-inner" style="width:100%"></div></div>
+                                                    <span>100%</span>
+                                                </div>
+                                            <h3>Tressle</h3>
+                                                <p>65 lbs | 4 years old</p>
+                                                <p>Neutered</p>
+                                                <p>Distance: 6 miles</p>
+                                                <p>I am so sweet and just want to be your best friend...</p>
+                                                <p><a href="#" class="readmore">Read more...</a></p>
+                                                <div class="social-section">
+                                                    <a href="#" class="fb" title="facebook"><span class="fa fa-facebook"></span></a>
+                                                    <a href="#" class="tw" title="Twitter"><span class="fa fa-twitter"></span></a>
+                                                    <a href="#" class="en" title="Mail"><span class="fa fa-envelope"></span></a>
+                                                    <a href="#" class="pin" title="Pinterest"><span class="fa fa-pinterest"></span></a>
+                                                    <a href="#" class="gp" title="Google Plus"><span class="fa fa-google-plus"></span></a>
+                                                </div>
+                                                <div class="pet-link">
+                                                    <a href="#" class="apply">Apply to Adopt <em class="fa fa-bug"></em></a>
+                                                    <a href="#" class="heart-btn right" title="Add to Favourite"><span class="fa fa-heart"></span></a>
+                                                </div>
+                                            </div>
+                                        </div>    
+                                    </div>
+                                </li>
+                                
+                                
+                            </ul>
+                        </div><!--white-pets -->
+                    </div><!--white-inner -->
+                </div><!--white-section-wrap (for desktop) -->
+                
+                <div class="for-mobile">
+                	<div class="form-section pet-search-form">
+                        <div class="map-contain"><img src="images/map.jpg" alt=""></div>
+                        <form action="pet-search.html">
+                            <div class=""></div>
+                            <div class="pet-search-btn">
+                                <input type="submit" value="View ALl Matches" class="btn">
+                                <a href="#" class="btn btn-blue" id="quiz">Take the Quiz</a>
+                            </div>
+                        </form>    
+                    </div><!--form-section -->
+                    <div class="quiz-expand">
+                        <div class="collapse-wrap">
+                            <a href="#" class="collapse"><span class="fa fa-angle-double-left"></span> Collapse</a>
+                        </div>
+                        <div class="pet-title">
+                            <div class="row-fluid">
+                                <div class="span4"><h2>Pet Compatibilit Quiz</h2></div>
+                                <div class="span8">
+                                    <div class="progress progress-striped">
+                                        <div style="width: 70%;" class="bar bar-success"><span>70%</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pet-subtitle">
+                            <h4>Complete the quiz to get matches. Estimated 2-3 minuts</h4>
+                            <a href="#" class="btn btn-blue arrow-left"><span class="fa fa-arrow-left"></span> Prev</a>
+                            <a href="#" class="btn btn-blue arrow-right">Next <span class="fa fa-arrow-right"></span></a>
+                        </div>
+                        <div class="quiz-info">
+                            <h3>Which (if any) of the following are regular residental of your household?</h3>
+                            <ul>
+                                <li><input type="checkbox"> <span>Youn children (> 6 years)</span></li>
+                                <li><input type="checkbox"> <span>Children 6-12</span></li>
+                                <li><input type="checkbox"> <span>Adults</span></li>
+                                <li><input type="checkbox"> <span>Seniors 65+</span></li>
+                                <li><input type="checkbox"> <span>People with mental or physical disabilies</span></li>
+                            </ul>
+                        </div>
+                        <div class="quiz-btn">
+                            <a href="#" class="btn btn-blue">Get Pet Matches!</a>
+                        </div>
+                    </div><!--quiz-expand -->
+                </div><!--for-mobile -->
+                
+          	</div><!--content-a -->
+            <div class="tabs-content" id="content-b">
+                <div class="form-section">
+                <div class="max-height">
+                	<div class="inner-info last">
+                    	<h3>Desi</h3>
+                        <div class="pet-tabs">
+                            <div class="clearfix">
+                                <div class="pet-left"><img src="images/pet-3.png" alt=""></div>
+                                <div class="pet-left-info">
+                                    <p>
+                                        Aka "My baby girl" #Photos: <a href="#">36</a> Social Likes: <a href="#">127</a> Social Rank: 
+                                        <span class="label-inline">Top 40%</span> Friends: <a href="#">12</a> Age/Sex: 4 Yr / F.
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="section-defalt center">
+                                <p class="gray small-para">Overall: Good Match</p>
+                                <img alt="" src="images/graph2.png">
+                            </div>
+                            
+                            <div class="sidebar-section seciton-commen">
+                                <h3>Your Match Profile</h3>
+                                <div class="percentage-sidebar">
+                                    <div class="percent-wrap clearfix">
+                                        <div class="label-percent">Energy</div>
+                                        <div class="percent-right">
+                                            <div class="percentage-section-wrap sidebar-1">
+                                                <div class="percentage"><div class="percentage-inner" style="width:30%"></div></div>
+                                                <span>30%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="percent-wrap clearfix">
+                                        <div class="label-percent">Focus</div>
+                                        <div class="percent-right">
+                                            <div class="percentage-section-wrap sidebar-2">
+                                                <div class="percentage"><div class="percentage-inner" style="width:70%"></div></div>
+                                                <span>70%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="percent-wrap clearfix">
+                                        <div class="label-percent">Confidence</div>
+                                        <div class="percent-right">
+                                            <div class="percentage-section-wrap sidebar-3">
+                                                <div class="percentage"><div class="percentage-inner" style="width:85%"></div></div>
+                                                <span>85%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="percent-wrap clearfix">
+                                        <div class="label-percent">Independence</div>
+                                        <div class="percent-right">
+                                            <div class="percentage-section-wrap sidebar-4">
+                                                <div class="percentage"><div class="percentage-inner" style="width:50%"></div></div>
+                                                <span>50%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--inner-info -->
+                    
+                    
+                    <!--new-content -->
+                    <div style="display:none">
+                        <div class="inner-info">
+                            <h3>Desi</h3>
+                            <div class="pet-tabs">
+                                <div class="clearfix">
+                                    <div class="pet-left"><img src="images/pet-3.png" alt=""></div>
+                                    <div class="pet-left-info">
+                                        <p>
+                                            Aka "My baby girl" #Photos: <a href="#">36</a> Social Likes: <a href="#">127</a> Social Rank: 
+                                            <span class="label-inline">Top 40%</span> Friends: <a href="#">12</a> Age/Sex: 4 Yr / F.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="inner-info last">
+                            <h3>Maxwell</h3>
+                            <div class="pet-tabs">
+                                <div class="clearfix">
+                                    <div class="pet-left"><img src="images/pet-1.png" alt=""></div>
+                                    <div class="pet-left-info">
+                                        <p>
+                                            Aka "My baby girl" #Photos: <a href="#">36</a> Social Likes: <a href="#">127</a> Social Rank: 
+                                            <span class="label-inline">Top 60%</span> Friends: <a href="#">12</a> Age/Sex: 4 Yr / F.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>    
+                    
+                    
+                    <!--new-content -->
+                    <div style="display:none;">
+                        <div class="section-white mb-10">
+                            <div class="btn-section">
+                                <p><a href="#" class="btn btn-success btn-full">Create a profile for your pet</a></p>
+                                <a href="#" class="btn btn-blue btn-full">Post a pet for adoption</a>
+                            </div>
+                        </div>
+                        
+                        <div class="popup-section popup-for-content">
+                            <div class="popup-header">
+                                <h3>Paws-Like-Me Login</h3>
+                            </div>
+                            <div class="popup-inner">
+                                <p>
+                                    <label>Your Email Address</label>
+                                    <input type="text" class="field">
+                                </p>
+                                <div class="fl-outer clearfix">
+                                    <label class="fl">Password</label>
+                                    <a href="#" class="fr">Forget Password</a>
+                                </div>
+                                <p>
+                                    <input type="password" class="field">
+                                </p>
+                            </div>
+                            <div class="popup-footer clearfix">
+                                <div class="fl"><a href="#" class="btn btn-success">Create Account</a></div>
+                                <div class="fr">
+                                    <a href="#" class="btn btn-blue">OK</a>
+                                    <a href="#" class="btn btn-danger">Cancel</a>
+                                </div>    
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    
+                </div>        
+                </div>
+            </div><!--content-b -->
+            <div class="tabs-content" id="content-c">
+            	<div class="form-section">
+                	<div class="max-height center">
+                		<div class="social-plugin"><img src="images/social-fb.png" alt="" height="380"></div>
+                    </div>
+                </div>
+            </div><!--content-c -->
+    	</div>
+        
+    </div>
+    
+</div><!--slider-wrap -->
+
+<br><br><br>
+
+<div class="section-wrap">
+	<div class="content-width">
+    	<div class="section">
+        	<h3>PET REHOMING OPTIONS ARE SLIM difficult, emotional and limited.</h3>
+            <p>
+            	Everyone is eligible to post their pet for adoption on Paws-Like-Me. We will help you find the right 
+                home and donate your adoption fee to a non-profit pet rescue or shelter in your area.
+            </p>
+            <h4>Yup that’s right; you re-home your pet without guilt and simultaneously support a good cause.</h4>
+            <a href="#" class="btn">POST A PET</a>
+        </div>
+    </div>
+</div><!--section-wrap -->
+
+<div class="girl-dog" id="first"></div>
+<div class="content-width">
+	<div class="title-section right bg-mobile"><h2>What? Pet matching?!</h2></div>
+</div>
+
+
+
+<div class="content-width">
+<div class="main center-mobile">
+    <h3 class="blue">Pet Matching Algorithm</h3>
+    <p>
+    	Paws-Like-Me creates a complex matching score by combining four core personality quadrants for canine and human 
+        and then applying scoring weights based on environmental and special factors combined with pre-filtering based 
+        on your specific needs.
+    </p>
+    <div class="photo-section"><img src="images/algorithm.gif" alt=""></div>
+    
+    <h3>The 4 Core Personality Quadrants</h3>
+    <p>
+    	The quadrants represent canine personality traits that humans are aligned with, and offer a unique perspective 
+        into human/ canine compatibility.
+    </p>
+    
+    <div class="article-wrap">
+        <div class="row-fluid">
+            <div class="span3">
+                <div class="article">
+                    <h4>Energy</h4>
+                    <p>
+                        Energy measures physical as well as mental energy. A dog with high energy tends to be very 
+                        motivated and active. A dog with low energy prefers the lazy life and won't go out of his way to 
+                        keep himself entertained.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="span3">
+                <div class="article article2">
+                    <h4>Confidence</h4>
+                    <p>
+                        Confidence measures the dog's level of security. A dog with high confidence will confront new
+                         situations and people with no hesitation. A dog with low confidence will need more guidance and 
+                         reassurance in their daily life.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="span3">
+                <div class="article article3">
+                    <h4>Focus</h4>
+                    <p>
+                        Focus measures a dog's ability to concentrate on a given task. A high focus dog is not easily 
+                        distracted and is well suited for advanced training. A low focus dog is spontaneous in play 
+                        and easily distracted. g 
+                    </p>
+                </div>
+            </div>
+            
+            <div class="span3">
+                <div class="article article4">
+                    <h4>Independence</h4>
+                    <p>
+                        Independence measures a dog's level of affection. A very independent dog is happy with minimal
+                        physical contact; a glance or kind word makes him happy. A dog with low independence thrives 
+                        on petting, giving kisses, and being in contact with someone as frequently as possible.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <p><a href="#">More About the Matching System</a></p>
+    </div><!--article-wrap -->    
+</div>    
+</div>
+
+
+<div class="section-wrap section-orange">
+	<div class="content-width">
+    	<div class="section">
+        	<h3>A single web-based solution that  addresses Pet Adoption and Ownership from A-Z</h3>
+            <div class="ultra-bold">
+                <p>
+                    Paws-Like-Me offers easy online submit of adoption applications, payment processing and electronic signature 
+                    for your adoption contract. After adoption you’ll receive an adoption kit that includes a full profile for
+                    your new dog, training tips & local resources.
+                </p>
+            </div>
+        </div>
+    </div>
+</div><!--section-wrap -->
+
+<div class="man-dog" id="second"></div>
+<div class="content-width">
+	<div class="title-section right bg-mobile"><h2>Pets are unique individuals </h2></div>
+</div>
+
+<div class="content-width">
+    <div class="main center-mobile">
+        <div class="row-fluid">
+            <div class="span7">
+                <div class="individual-info">
+                    <h3 class="blue">Share with friends</h3>
+                    <p>
+                        Paws-Like-Me has revolutionized the way we find pets! Know someone looking for a new best friend? Want 
+                        to tell your animal loving friends about getting matched to the right pet? Curious about seeing which 
+                        pets match you? Think this is seriously cool? Then what are you waiting for? Tell your friends 
+                        and family and help adoptable pets by spreading the word :) 
+                    </p>
+                    <div class="like-section">
+                    	<div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+                    </div>
+                </div>    
+            </div>
+            <div class="span5"><img src="images/bgrd.jpg" alt=""></div>
+        </div>
+    </div>    
+</div>
+
+
+<div class="section-wrap section-orange">
+	<div class="content-width">
+    	<div class="section">
+        	<h3>
+            	<span>•• We Believe ••</span> All life is valuable •• Pets are family members •• Rescued pets are 
+                thankful • • Overpopulation = Suffering •• We believe in taking 
+                Responsibility <span>•• We believe in YOU too ••</span>
+            </h3>
+        </div>
+    </div>
+</div><!--section-wrap -->
+
+
+<!--footer start -->
+<div id="footer-wrap">
+	<div class="content-width">
+        <footer id="footer" class="clearfix">
+        	<p> ©2014 Paws-Like-Me. All Rights Reserved</p>
+            <div class="footer-nav">
+            	<a href="privacy.html">Privacy Policy</a> <span>|</span>
+                <a href="privacy.html">Terms of use</a>
+            </div>
+            <div class="social-footer"><a href="#"><span class="fa fa-envelope"></span></a></div>
+            <div class="footer-logo"><img src="images/footer-logo.gif" alt=""></div>
+        </footer>
+    </div>
+</div>
+<!--footer end -->
+
+
+
+
+<div class="overlay"></div>
+<div class="popup-section" id="popup">
+	<div class="popup-header">
+    	<a href="index.html" class="cancel">x</a>
+        <h3>Paws-Like-Me Login</h3>
+    </div>
+	<div class="popup-inner">
+  <p>
+        	<label>Your Email Address</label>
+            <input type="text" class="field">
+        </p>
+        <div class="fl-outer clearfix">
+            <label class="fl">Password</label>
+            <a href="#" class="fr">Forget Password</a>
+        </div>
+        <p>
+            <input type="password" class="field">
+        </p>
+    </div>
+    <div class="popup-footer clearfix">
+    	<div class="fl"><a href="#" class="btn btn-success">Create Account</a></div>
+    	<div class="fr">
+        	<a href="#" class="btn btn-blue">OK</a>
+        	<a href="#" class="btn btn-danger">Cancel</a>
+        </div>    
+    </div>
+</div>
+
+
+
+</div><!--container-fluid -->
+
+
+
+</body>
+</html>

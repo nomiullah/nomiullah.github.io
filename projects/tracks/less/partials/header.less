@@ -1,0 +1,84 @@
+.header {
+    text-align: center;
+    background-color: @darkblue;
+    &__container {
+        position: relative;
+    }
+    &__wrapper {
+        display: inline-block;
+        &:after {
+            content: '';
+            display: inline-block;
+            clear: both;
+        }
+    }
+    &__menu {
+        padding-left:0;
+        margin-bottom:0;
+        float:left;
+        @media @break-mobile{
+            display: none;
+        }
+    }
+    &__item {
+        display: inline-block;
+    }
+    &__link {
+        font-size: 14px;
+        line-height: 1;
+        padding: 42px 20px;
+        color: @white;
+        text-transform: uppercase;
+        display: inline-block;
+        &:hover {
+            text-decoration: none;
+            color: @darkred;
+        }
+    }
+    &__brandWrapper {
+        float:left;
+        margin: 18px 20px;
+        @media @break-mobile {
+            margin: 12px;
+        }
+    }
+    &__brand {
+        width: 63px;
+        padding: 0;
+        display: inline-block;
+    }
+    &__btn {
+        float: right;
+        border-radius: 5px;
+        background-color:@green;	
+        box-shadow: 0 10px 20px 0 rgba(19,23,32,0.2);
+        color: @white;
+        text-transform: uppercase;
+        padding: 12px 25px;
+        line-height: 15px;
+        font-size: 14px;
+        font-weight: 500;
+        margin: 30px 0;
+        position: absolute;
+        right: 0;
+        &:focus {
+            outline: none;
+            color: @white;
+        }
+        &:active {
+            outline: none;
+            &:focus {
+              outline: none;
+            }
+        }
+        &:hover {
+            color: @white;
+        }
+        @media @break-md{
+            display: none;
+        }
+    }
+    &__logoImg {
+        width: 100%;
+    }
+}

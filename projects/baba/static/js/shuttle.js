@@ -1,0 +1,902 @@
+$(function(){ 
+
+  var cntrlr = this;
+
+	fetchShuttleDishes();
+
+  initializeMap();
+
+  initDateTimePicker();
+
+  $(document).ready(function() {   
+    $('#basket-form').bind("change", function() { 
+       //alert('form changed')
+       setConfirmUnload(true); 
+    }); // Prevent accidental navigation away
+  });
+
+  function setConfirmUnload(on) {
+     // To avoid IE7 and prior jQuery version issues   
+     // we are directly using window.onbeforeunload event
+     window.onbeforeunload = (on) ? unloadMessage : null;
+  }
+
+  function unloadMessage() {
+      return "Your changes are not saved. Are you sure you want to move away?"
+  }
+
+	function fetchShuttleDishes(){
+      var selDishIds = $.cookie("ShuttleDishes"); 
+      var eventId = $.cookie("ShuttleEvent");      
+      console.log(selDishIds);
+      $.ajax({
+          type: "GET",
+          data: {dishId:selDishIds},
+          url: "/users/get_event_dishes/",
+          success: function(data){
+            console.log(data)
+            loadedEvent = data
+            //initDateTimePicker(new Date(loadedEvent.eventDate+' '+loadedEvent.eventTime));
+            loadEventInfo(data);
+
+            if(data.totalDishes && data.totalDishes > 0){
+              displayShuttleDishes(data);
+            }
+            else{
+              $('#shuttle-dish-table').hide();
+              $('#no-dishes-msg').show();
+            }
+          }
+      });
+      
+  }
+
+  function displayShuttleDishes(data){
+    console.log(data)
+    var dishes = data.eventDishes;
+   
+    if(dishes.length == 0){
+      $('#shuttle-dish-table').hide();
+      $('#no-dishes-msg').show();
+    }
+    else{
+
+      setDishesTable(dishes);
+
+      deleteDishesListener();
+
+      setExpandSpecialityListener();
+
+      setSpecialyConfirmBtnListener();
+
+      setSpecialyValueChangeListener();
+
+      setTutorialCheckBoxChangeListener();
+    }
+    
+  }
+
+  function loadEventInfo(event){
+    if(event.eventName)
+      $('#eventName').val(event.eventName)
+    if(event.noOfGuests)
+      $('#noOfGuests').val(event.noOfGuests)
+    if(event.eventLocation)
+      $('#user-loc').val(event.eventLocation)
+  }
+
+  function handleImageError(thumbImg) {
+    console.log(thumbImg)
+    console.log(thumbImg.attr('src'))
+    //thumbImg.onerror = "";
+    thumbImg.attr('src', "/static/images/noimage.png");
+    //return true;
+  }
+
+  function setDishesTable(dishes){
+
+    var table = $('#shuttle-dish-table');
+
+    for (i = 0; i < dishes.length; i++) {
+
+      var dishDetail = dishes[i].dishDetails;
+
+      dishDetail.thumb_url = "/static/dish-images/"+dishDetail.recipe_name+".png";
+
+        var rowStr = '<tr class="dish-row">'+
+                          '<td ><div class="expand-btn btn" style="40px">+</div></td>'+
+
+                          '<td class="dish-index-no" style="white-space:nowrap;">Dish-'+(i+1)+'</td>'+
+
+                          '<td ><div class="shuttle-dish-thumb" style="100px">'+
+
+
+                          '<img class="dish-thumb-img" src="'+ dishDetail.thumb_url +'">'+
+
+
+                          '</div></td>'+
+
+                            
+                            "<td>"+
+                                dishDetail.recipe_name+
+                            "</td>";
+        rowStr +=   '<td style="width: 150px;">'+
+                        '<select class="serving-selector" style="width: 150px;">';
+                        for(var j=2;j <= 100;j++){
+                            if(dishes[i].totalQuantity == j){
+                              rowStr += '<option selected="selected" value="'+j+'">'+j+' Servings</option>';
+                            }
+                            else{
+                              rowStr += '<option value="'+j+'">'+j+' Servings</option>';
+                            }
+                             
+                        }
+                           
+        rowStr +=  "</select>"+
+                    "</td>";
+
+        rowStr +=  '<td style="width: 150px;">'+
+                        '<div><select class="speciality-selector" style="width: 150px;">'+
+                           '<option value="0">None</option>'+
+                           '<option value="1">Organic</option>'+
+                           '<option value="2">Kosher</option>'+
+                           '<option value="3">Halal</option>'+
+                           '<option value="4">Gluten Free</option>'+
+                           '<option value="5">Mixed</option>'+
+                        '</select></div>'+
+                        '<div class="speciality-breakdown-div" style="color: #2d7de9;font-size: 12px; line-height:1.2;"></div>'+
+                    '</td>';
+
+        if(dishDetail.in_house_label){
+            if(dishes[i].tutorials){
+              rowStr += '<td><input type="checkbox" class="tutorial-chk" checked></td>';
+            }else{
+              rowStr += '<td><input type="checkbox" class="tutorial-chk" ></td>';
+            }   
+        }
+        else{
+          rowStr += "<td>Not IH</td>";
+        }
+
+        rowStr  +=  "<td>"+
+                        "<button class=\"dish-del-btn btn\" style=\"margin: 0 auto;width: inherit;\" type=\"button\">Delete</button>"+
+                    "</td>"+
+                    "<td>"+
+                      '<input type="text" class="table-field notes-text-input" value="'+dishes[i].notes+'">'+
+                    "</td>"+
+                  "</tr>";
+
+        rowStr += '<tr  id="specialtiy-detail-row-'+i+'" class="specialtiy-detail-row hide" style="background-color: aliceblue;"><td colspan=\"9\">';
+          rowStr += '<div style="margin:auto;height: 270px;width: 500px;" >';
+
+          rowStr += '<div><table class="shuttle-inner-table">';
+
+            rowStr += '<tr style="background-color: lightsalmon;">'+
+                          '<th></th>'+
+                          '<th style="text-overflow: ellipsis;overflow: hidden;">Dish'+(i+1)+'-'+dishDetail.recipe_name+'</th>'+
+                          '<th>Quantity</th>'+
+                      '<th>Specialty</th></tr>';
+
+            rowStr += "<tr>"+
+                          "<td>Item-1</td>"+
+                          '<td style="text-overflow: ellipsis;overflow: hidden;">'+dishDetail.recipe_name+'</td>'+
+                          '<td><input class="specialty-input kosher-input" style="width: 80px;" type="number" value="0" min="0" max="100"></td>'+
+                          '<td>Kosher</td>'+
+                      '</tr>';
+
+            rowStr += "<tr>"+
+                          "<td>Item-2</td>"+
+                          '<td style="text-overflow: ellipsis;overflow: hidden;">'+dishDetail.recipe_name+'</td>'+
+                          '<td><input class="specialty-input halal-input" style="width: 80px;" type="number" value="0" min="0" max="100"></td>'+
+                          "<td>Halal</td></tr>";
+
+            rowStr += "<tr>"+
+                          '<td>Item-3</td>'+
+                          '<td style="text-overflow: ellipsis;overflow: hidden;">'+dishDetail.recipe_name+'</td>'+
+                          '<td><input class="specialty-input organic-input" style="width: 80px;" type="number" value="0" min="0" max="100"></td>'+
+                          "<td>Organic</td>"+
+                      "</tr>";
+
+            rowStr += "<tr>"+
+                          "<td>Item-4</td>"+
+                          '<td style="text-overflow: ellipsis;overflow: hidden;">'+dishDetail.recipe_name+'</td>'+
+                          '<td><input class="specialty-input glueten-input" style="width: 80px;" type="number" value="0" min="0" max="100"></td>'+
+                          "<td>Gluten Free</td>"+
+                      "</tr>";
+
+            rowStr += "<tr>"+
+                          "<td>Item-5</td>"+
+                          '<td style="text-overflow: ellipsis;overflow: hidden;">'+dishDetail.recipe_name+'</td>'+
+                          '<td><input class="specialty-input none-input" style="width: 80px;" type="number" value="0" min="0" max="100"></td>'+
+                          "<td>None</td>"+
+                      "</tr>";
+
+          rowStr +="</table></div>";
+          
+          rowStr += '<div class="speciality-confirm-btn btn btn-success" style="margin:5px;float: right;" type="button">Confirm</div></div>';
+
+          
+        rowStr += '</td></tr>';
+
+        var row = $(rowStr);
+        row.data('dishData',dishDetail);
+        var specialityData = {}
+        row.data('specialityData',dishDetail);
+
+        dishDiv = row.find(".shuttle-dish-thumb")
+        dishImg = dishDiv.find('img');        
+        dishDiv.nailthumb();
+
+        table.append(row);
+
+    }
+
+    $('img').error(function(){
+        $(this).attr('src', '/static/images/noimage.png');
+}   );
+
+  }
+
+  function setTutorialCheckBoxChangeListener(){
+    var tutCheckBoxes = $('.tutorial-chk');
+    tutCheckBoxes.on('change', function(ev){
+        
+        var thisChkBox = $(this);
+        var tutCheckedCheckBoxes = $('.tutorial-chk:checked');
+        
+        if(tutCheckedCheckBoxes.length > 2){
+            bootbox.alert("You cannot select tutorials for more than 2 Dishes",function(){
+               thisChkBox.prop('checked', false);
+            })
+        }   
+
+    });
+  }
+
+  function setSpecialyValueChangeListener(){
+       $('.speciality-selector').on('change', function(ev){
+            console.log('value changed');   
+            var specialySelector = $(this);
+            var rowNode = specialySelector.parents('tr');
+            var expandBtn = rowNode.find('.expand-btn');
+            var specialityDetailNode = rowNode.next();
+
+            setSpecialtyBreakdownDefaultValues(rowNode,specialityDetailNode)
+
+            specialityDetailNode.show();
+           
+            expandBtn.html('-');
+      })
+  }
+
+  function setSpecialyConfirmBtnListener(){
+       $('.speciality-confirm-btn').on('click', function(ev){
+           var specialtyConfirmBtn = $(this);
+           var specialyDetailNode = specialtyConfirmBtn.parents('tr');
+           var rowNode = specialyDetailNode.prev();
+           var expandBtn = rowNode.find('.expand-btn');
+           
+           validateSpecialityDetails(rowNode,specialyDetailNode);
+           
+           if(specialyDetailNode.is(":visible")){
+              expandBtn.html('-');
+           }
+           else{
+              expandBtn.html('+');
+           }
+           
+      })
+  }
+
+  function validateSpecialityDetails(rowNode,specialyDetailNode){
+
+      var dishId  = specialyDetailNode.data("dishData").dish_id
+      var totalServing = rowNode.find('.serving-selector').val();
+      totalServing = parseInt(totalServing);
+      var totalServingCounter = 0;
+      specialyDetailNode.find('.specialty-input').each(function(idx,input){
+          var inputValue = parseInt(input.value);
+          totalServingCounter = totalServingCounter+inputValue
+      })
+       
+      if(totalServing != totalServingCounter){
+           bootbox.alert("Total Quantity must be equal to the original Quantity")
+      }
+      else{
+        rowNode.find('.speciality-selector').val('5');
+
+        var kosherVal = specialyDetailNode.find('.kosher-input').val();
+        var halalVal = specialyDetailNode.find('.halal-input').val();
+        var organicVal = specialyDetailNode.find('.organic-input').val();
+        var gluetenVal = specialyDetailNode.find('.glueten-input').val();
+        var noneVal = specialyDetailNode.find('.none-input').val();
+
+        var breakDownStr = kosherVal+' Kosher, '+halalVal+' Halal, '+organicVal+' Organic, '+gluetenVal+' Glueten Free, '+noneVal+' None';
+
+        rowNode.find('.speciality-breakdown-div').html(breakDownStr);
+        specialyDetailNode.hide();
+      }
+  }
+
+  function setSpecialtyBreakdownDefaultValues(rowNode,specialityDetailNode){
+        var totalServing = rowNode.find('.serving-selector').val();
+           if(rowNode.find('.speciality-selector').val() == '0'){
+              specialityDetailNode.find('.specialty-input').val(0);
+              specialityDetailNode.find('.none-input').val(totalServing);
+           }
+           else if(rowNode.find('.speciality-selector').val() == '1'){
+              specialityDetailNode.find('.specialty-input').val(0);
+              specialityDetailNode.find('.organic-input').val(totalServing);
+           }
+           else if(rowNode.find('.speciality-selector').val() == '2'){
+              specialityDetailNode.find('.specialty-input').val(0);
+              specialityDetailNode.find('.kosher-input').val(totalServing);
+           }
+           else if(rowNode.find('.speciality-selector').val() == '3'){
+              specialityDetailNode.find('.specialty-input').val(0);
+              specialityDetailNode.find('.halal-input').val(totalServing);
+           }
+           else if(rowNode.find('.speciality-selector').val() == '4'){
+              specialityDetailNode.find('.specialty-input').val(0);
+              specialityDetailNode.find('.glueten-input').val(totalServing);
+           }
+  }
+
+  function setExpandSpecialityListener(){
+      $('.expand-btn').on('click', function(ev){
+           var expandBtn = $(this);
+           var rowNode = expandBtn.parents('tr');
+           var specialityDetailNode = rowNode.next();
+
+           setSpecialtyBreakdownDefaultValues(rowNode,specialityDetailNode);
+
+           specialityDetailNode.toggle();
+           
+           var dishId  = rowNode.data("dishData").dish_id
+
+           if(specialityDetailNode.is(":visible")){
+              expandBtn.html('-');
+           }
+           else{
+              expandBtn.html('+');
+           }
+           
+      })
+  }
+
+  function deleteDishesListener(){
+      
+      $('.dish-del-btn').on('click', function(ev){
+        var delBtn = $(this);
+        bootbox.confirm("Are you sure?", function(result) {
+            
+            if(result){
+                  var rowNode = delBtn.parents('tr');
+                  var dishId  = rowNode.data("dishData").dish_id
+
+
+
+                  var selDishIds = $.cookie("ShuttleDishes"); 
+                  if(selDishIds){
+                    var selDishIds = selDishIds.split(/,/);
+                    
+                    for(var i = 0 ; i<selDishIds.length; i++){
+                      if(typeof selDishIds[i] == "string"){
+                        selDishIds[i] = parseInt(selDishIds[i]);
+                      }
+                        
+                    }
+                    
+                    var indx = selDishIds.indexOf(dishId); 
+                    if(indx!=-1) selDishIds.splice(indx, 1); 
+                    $.cookie("ShuttleDishes", selDishIds.join(','), { path:'/'});
+
+                  }
+
+                  deleteEventDish(loadedEvent.eventId,dishId,function(){
+                      var specialityDetailNode = rowNode.next();
+                      specialityDetailNode.remove();
+                      rowNode.remove();
+
+                      //loadedEvent.eventDishes.splice(indx, 1); 
+                      loadedEvent.eventDishes = jQuery.grep(loadedEvent.eventDishes , function (dishObj) {
+                              return dishObj.dishId != dishId;
+                      })
+
+
+                      if(loadedEvent.eventDishes.length == 0 && !$.cookie("ShuttleDishes")){
+                        $('#shuttle-dish-table').hide();
+                        $('#no-dishes-msg').show();
+                      }
+                  })
+
+                  
+            }
+        });
+    });
+  }
+
+  function deleteEventDish(eventId,dishId,callback){
+    console.log(typeof eventId);
+     console.log(typeof parseInt(dishId));
+    $.ajax({
+            type: "GET",
+            url: "/users/delete_event_dish/"+eventId+"/"+parseInt(dishId),
+            success: function(data){
+              console.log(data)
+              if(data.success){
+                bootbox.alert(data.message);
+                callback();
+              }
+            }
+        });
+  }
+
+  function initDateTimePicker(dateTime){
+      console.log(dateTime)
+      var currentDataTime = new Date();
+      currentDataTime.setHours(currentDataTime.getHours()+72);
+
+      if(!dateTime)
+        dateTime = currentDataTime
+ 
+      $('#datetimepicker').datetimepicker({
+          language: 'pt-BR',
+          startDate: currentDataTime,      // set a minimum date
+          endDate: Infinity          // set a maximum date
+      });
+      dateTimePicker = $('#datetimepicker').data('datetimepicker');
+      //dateTimePicker.setLocalDate(dateTime);
+  }
+
+  function initializeMap(){
+      
+      var gmapModal = $(".gmap-modal");
+      gmapModal.modal({
+        backdrop: false
+      });
+      $(".gmap-modal").modal('hide');
+
+      var searchTextField = $('#searchTextField');
+      
+      searchTextField.geocomplete({
+        map: $("#map_canvas"),
+        details: $("#location-info"),
+        location: $('#user-loc').val(),
+        markerOptions: {
+          draggable: true
+        },
+      }).bind("geocode:dragged", function(event, result){
+          searchTextField.geocomplete("find", result.k+","+result.A);
+      }).one("geocode:result", function(event, result){
+        $('#user-loc').val(result.formatted_address);
+      });
+      
+      $('#change-user-loc-btn').click(function(){
+          searchTextField.geocomplete("find", $('#user-loc').val());
+          var gmapModal = $(".gmap-modal");
+          $(".gmap-modal").modal('show');
+      })
+      $("#cancelNewLoc").click(function(e){
+          searchTextField.geocomplete("find", $('#user-loc').val());
+          $(".gmap-modal").modal('hide');
+      });
+      $("#confirmNewLoc").click(function(e){
+          $(".gmap-modal").modal('hide');
+          $('#user-loc').val(searchTextField.val()).change();
+          setStaticMapLocation(searchTextField.val());
+      });
+
+      setStaticMapLocation($('#user-loc').val());
+    
+  }
+  
+  $('.shuttle-save-btn').on('click',function(){
+      validateServingsBreakdown();
+      $.ajax({
+            type: "POST",
+            url: "/users/save_event/",
+            data: JSON.stringify(getEventObject()),
+            processData: false,
+            contentType: 'application/json',
+            dataType: "json",
+            success: function(data){
+              console.log(data)
+              if(data.success){
+                bootbox.alert(data.message);
+              }
+            }
+        });
+  });
+
+   $('.save-move-btn').on('click',function(){
+      validateServingsBreakdown();
+      $.ajax({
+            type: "POST",
+            url: "/users/save_event/",
+            data: JSON.stringify(getEventObject()),
+            processData: false,
+            contentType: 'application/json',
+            dataType: "json",
+            success: function(data){
+              console.log(data)
+              if(data.success){
+                bootbox.alert(data.message,function(){
+                  window.onbeforeunload = null;
+                  $(location).attr('href','/users/chef_finder/?eventId='+data.eventId);
+                });
+                
+              }
+            }
+        });
+  });
+
+  function setStaticMapLocation(loc){
+    $(".static-mini-map").geocomplete({
+        map: ".static-mini-map",
+        location: loc,
+        markerOptions: {
+          icon: 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png',
+          draggable: false
+        },
+        mapOptions:{
+          draggable: false,zoomControl: false, scrollwheel: false, disableDoubleClickZoom: true
+        },
+      });
+    $(".static-mini-map").geocomplete("find", loc);
+  }
+
+  function getEventObject(){
+
+      var eventObj = {}
+      if(loadedEvent && loadedEvent.eventId)
+        eventObj.eventId = loadedEvent.eventId 
+
+      eventObj.eventName     = $("#eventName").val();
+
+      var myDate = dateTimePicker.getLocalDate();
+      eventObj.event_date = myDate
+      eventObj.event_time     = myDate.getHours()+':'+myDate.getMinutes()
+      var weekday=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+      eventObj.event_day = weekday[myDate.getDay()];
+      eventObj.eventLocation = $("#location-info").find('input[name="formatted_address"]').val();
+      eventObj.event_latitude = $("#location-info").find('input[name="lat"]').val();
+      eventObj.event_longitude = $("#location-info").find('input[name="lng"]').val();
+      eventObj.noOfGuest     = parseInt($("#noOfGuests").val());
+      eventObj.total_tutorials     = $('#summ-tuts').data('total_tuts'); 
+     
+      eventObj.eventDishes = [];
+      var dish;
+      var specialityDetail;
+
+      var shuttleDishTableRows = $('#shuttle-dish-table tr.dish-row');
+      var specialityDetailRows = $('#shuttle-dish-table tr.specialtiy-detail-row');
+
+      for(var i=0; i< shuttleDishTableRows.length; i++){
+
+          dish = {};
+
+          var rowNode = $(shuttleDishTableRows[i]);
+          var specialyDetailNode = $(specialityDetailRows[i]);
+          var specialyDetailRows = specialyDetailNode.find('tr');
+          var dishData = rowNode.data('dishData');
+
+          dish.dishId = dishData.dish_id;
+          dish.totalQuantity = parseInt(rowNode.find('.serving-selector').val());
+          dish.tutorials = (rowNode.find('.tutorial-chk').prop('checked'))?true:false;
+          dish.notes = rowNode.find('.notes-text-input').val();
+          dish.specialityDetails = [];
+          
+          var newSet = specialyDetailRows.filter(function() {
+            var val = $(this).find('.specialty-input').val();
+            var bool = parseInt(val) > 0;
+            return bool;
+          });
+
+          newSet.each(function(idx,trNode){
+              var specialityDetail = {};
+              specialityDetail.quantity = parseInt($(trNode).find('.specialty-input').val());
+              specialityDetail.speciality = $(trNode).find('td').eq(3).text();
+
+              dish.specialityDetails.push(specialityDetail);
+          })
+              
+          eventObj.eventDishes.push(dish);
+    }
+
+    console.log(eventObj);
+    return eventObj;
+  }
+
+  $('.shuttle-confirm-btn').on('click',function(){
+      console.log('confirm clicked');
+
+      $(".gmap-modal").modal('hide');
+
+      var isValidOrder = true;
+      var eventName = $('#eventName').val();
+
+      var shuttleDishTableRows = $('#shuttle-dish-table tr.dish-row');
+      var containsMainCourse = false;
+      for(var i=0; i< shuttleDishTableRows.length; i++){
+          var rowNode = $(shuttleDishTableRows[i]);
+          var dishData = rowNode.data('dishData');
+          if(dishData.main_course_label){
+              containsMainCourse = true;
+              break;
+          }
+      }
+      if(!containsMainCourse){
+        bootbox.alert("Cart must have atleast one MainCourse Dish");
+        return ;
+      }
+
+      if(!eventName){
+        bootbox.alert("Please give your event a name");
+        return ;
+      }
+
+      var myDate = $('#datetimepicker').find('input').val();
+      if(!myDate){
+        bootbox.alert("Please enter a date for your event");
+        return ;
+      }
+
+      var noOfGuests = $('#noOfGuests').val();
+      if(!noOfGuests){
+        bootbox.alert("Please enter number of guests");
+        return ;
+      }
+
+      isValidOrder = validateServingsBreakdown();
+
+      if(isValidOrder){
+        generateSummary();
+
+        $(this).hide();
+        $('.save-move-btn').show();
+        $('#shuttle-dish-container').hide();
+        $('#shuttle-summary-container').show();
+        $('.move-back-btn').show();
+        
+      }
+      
+  });
+
+  function validateServingsBreakdown(){
+    console.log('validateServingsBreakdown');
+
+     var shuttleDishTableRows = $('#shuttle-dish-table tr.dish-row,#shuttle-dish-table tr.specialtiy-detail-row');
+
+     var rowNode, specialyDetailNode,totalServing,totalServingCounter;
+     for(var i=0; i< shuttleDishTableRows.length; i++){
+          rowNode = $(shuttleDishTableRows[i]);
+          specialyDetailNode = $(shuttleDishTableRows[i+1]);
+          setSpecialtyBreakdownDefaultValues(rowNode,specialyDetailNode);
+     }
+
+     for(var i=0; i< shuttleDishTableRows.length; i++){
+        rowNode = $(shuttleDishTableRows[i]);
+        var dishNo = rowNode.find('.dish-index-no').text();
+        specialyDetailNode = $(shuttleDishTableRows[i+1]);
+
+        totalServing = rowNode.find('.serving-selector').val();
+
+        totalServingCounter = 0;
+        specialyDetailNode.find('.specialty-input').each(function(idx,input){
+          var inputValue = parseInt(input.value);
+          totalServingCounter = totalServingCounter+inputValue
+        })
+
+        if(totalServing != totalServingCounter){
+           bootbox.alert("Total serving quantity of "+dishNo+" must be equal to the breakdown quantity");
+           return false;
+        }
+
+        i = i+1;
+
+     }
+
+     return true;
+
+  }
+
+  function generateSummary(){
+      console.log('generateSummary called')
+      var shuttleDishTableRows = $('#shuttle-dish-table tr.dish-row');
+      var specialityDetailRows = $('#shuttle-dish-table tr.specialtiy-detail-row');
+      var orderDetailsTable = $('#shuttle-order-details');
+      var summaryTable = $('#shuttle-summary-table');
+      summaryTable.find("tr:gt(0)").empty();
+      var totalItems = 0,totalServings = 0,totalTuts = 0;
+
+      for(var i=0; i< shuttleDishTableRows.length; i++){
+          var rowNode = $(shuttleDishTableRows[i]);
+          var specialyDetailNode = $(specialityDetailRows[i]);
+          var specialyDetailRows = specialyDetailNode.find('tr');
+          var dishData = rowNode.data('dishData');
+          
+          var newSet = specialyDetailRows.filter(function() {
+            var val = $(this).find('.specialty-input').val();
+            var bool = parseInt(val) > 0;
+            return bool;
+          });
+
+          totalItems = totalItems + newSet.length;
+
+          var dishNo = rowNode.find('.dish-index-no').text();
+          var getTut = rowNode.find('.tutorial-chk').prop('checked');
+          if(getTut){
+            totalTuts = totalTuts + 1;
+          }
+          var note   = rowNode.find('.notes-text-input').val();
+
+          var rowStr = '<tr class="dish-row">';
+          
+          if(dishData.main_course_label){
+              rowStr  +=   '<td  rowspan="'+newSet.length+'" style="vertical-align: middle;">Y</td>';
+          }else{
+              rowStr  +=   '<td rowspan="'+newSet.length+'"></td>';
+          }
+
+          rowStr  +=  '<td rowspan="'+newSet.length+'" style="white-space:nowrap;vertical-align: middle;">'+dishNo+'</td>'+
+                      '<td rowspan="'+newSet.length+'" style="vertical-align: middle;">'+
+                            dishData.recipe_name+
+                      '</td>';
+
+          newSet.each(function(idx,trNode){
+              var specialityNo = $(trNode).find('td:first-child').text();
+              var specialityValue = $(trNode).find('.specialty-input').val();
+              var specialityTxt = $(trNode).find('td').eq(3).text();
+
+              totalServings = totalServings + parseInt(specialityValue);
+              
+              if(idx == 0){
+                  rowStr  +=  '<td style="white-space:nowrap;">'+specialityNo+'</td>'+
+                          '<td style="white-space:nowrap;">'+specialityValue+'</td>'+
+                          '<td style="white-space:nowrap;">'+specialityTxt+'</td>'+
+                          '<td rowspan="'+newSet.length+'" style="white-space:nowrap;vertical-align: middle;">'+dishData.cuisine+'</td>'+
+                          '<td rowspan="'+newSet.length+'" style="white-space:nowrap;vertical-align: middle;">'+dishData.menu+'</td>';
+                          
+
+                  if(getTut){
+                      rowStr  +=  '<td rowspan="'+newSet.length+'" style="vertical-align: middle;">1</td>';
+                  }else{
+                      rowStr  +=  '<td rowspan="'+newSet.length+'"></td>';
+                  }
+
+                  rowStr  += '<td rowspan="'+newSet.length+'" style="vertical-align: middle;white-space:nowrap;">'+note+'</td>';
+                  rowStr  += '</tr>';
+              }
+              else{
+                  rowStr  =  '<tr>'+
+                                '<td style="white-space:nowrap;">'+specialityNo+'</td>'+
+                                '<td style="white-space:nowrap;">'+specialityValue+'</td>'+
+                                '<td style="white-space:nowrap;">'+specialityTxt+'</td>'+
+                              '</tr>';
+              }
+
+              var row = $(rowStr);
+              summaryTable.append(row);
+          })
+              
+
+     }
+
+      var eventDateTime = dateTimePicker.getLocalDate();
+      var eventTime = eventDateTime.toString().split(' ');
+      var eventDate = eventTime.splice(0,4);
+      $('#summ-cart-title').text($('#eventName').val());
+      $('#summ-basket-id').text('124234636');
+      $('#summ-status').text('Confirmed Basket');
+      $('#summ-loc').text($('#user-loc').val());
+      $('#summ-create-data').text(new Date());
+      $('#summ-event-time').text(eventTime.join(' '));
+      $('#summ-event-date').text(eventDate.join(' '));
+      $('#summ-no-of-guests').text($('#noOfGuests').val()+" People");
+      $('#summ-summary').text(shuttleDishTableRows.length+' Dishes '+totalItems+' Items '+totalServings+' Servings');
+      $('#summ-tuts').text(totalTuts); 
+      $('#summ-tuts').data('total_tuts',totalTuts); 
+
+
+  } 
+  
+  $(".move-back-btn").click(function(e){
+      $('.move-back-btn').hide()
+      $('.save-move-btn').hide()
+      $('.shuttle-confirm-btn').show()
+      $('#shuttle-summary-container').hide();
+      $('#shuttle-dish-container').show();
+  });
+  //Recipe Email Modal Listeneres
+    $("#shuttle-email-btn").click(function(e){
+
+      var emailModal = $(".shuttle-email-modal");
+      emailModal.find('#email-title').text("sdfsdsdsgsdgsdg");
+
+      var emailForm = $('form.email-shuttle');
+      
+      var msgField = emailForm.find('textarea[name="message"]');
+      msgField.text('Check out this dish on Neptune. Please let me know what you think.');
+
+      emailModal.modal();
+    });
+    $("#cancel-shuttle-email").click(function(e){
+      $(".shuttle-email-modal").modal('hide');
+    });
+
+    $(".shuttle-email-modal input#submit").click(function(){
+      console.log('sefsdfsd')
+      var emailForm = $('form.email-shuttle');
+      var emailField = emailForm.find('input[name="email"]');
+      var subjectField = emailForm.find('input[name="subject"]');
+      var msgField = emailForm.find('textarea[name="message"]');
+      var showErrorMsg = emailForm.find('#show-email-error');
+      if(!emailField.val()){
+        showErrorMsg.html('Email field cannot be empty');
+      }
+      else if(!subjectField.val()){
+        showErrorMsg.html('Subject field cannot be empty');
+      }
+      else if(!msgField.val()){
+        showErrorMsg.html('Message field cannot be empty');
+      }
+      else{
+         showErrorMsg.html('');
+         $(".shuttle-email-modal").modal('hide');
+         var loadingMask = $('#pleaseWaitDialog');
+         loadingMask.modal();
+
+        $.ajax({
+          type: "POST",
+          url: "/users/email_dish/", //process to mail
+          data: $('form.email-recipe').serialize(),
+          success: function(response){
+              loadingMask.modal('hide');
+              //$("#thanks").html(msg) //hide button and show thank you
+              
+              alert(response.message)
+          },
+          error: function(){
+              loadingMask.modal('hide');
+              $(".shuttle-email-modal").modal();
+              alert("failure");
+          }
+      });
+      }
+      
+    });
+    ///////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+});

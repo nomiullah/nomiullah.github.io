@@ -1,0 +1,1422 @@
+/* $Id: example.css,v 1.5 2006/03/27 02:44:36 pat Exp $ */
+
+/*--------------------------------------------------
+  REQUIRED to hide the non-active tab content.
+  But do not hide them in the print stylesheet!
+  --------------------------------------------------*/
+.tabberlive .tabbertabhide {
+   display:none;
+}
+
+/*--------------------------------------------------
+  .tabber = before the tabber interface is set up
+  .tabberlive = after the tabber interface is set up
+  --------------------------------------------------*/
+.tabber {
+}
+.tabberlive {
+   margin-top:1em;
+}
+
+/*--------------------------------------------------
+  ul.tabbernav = the tab navigation list
+  li.tabberactive = the active tab
+  --------------------------------------------------*/
+ul.tabbernav
+{
+   margin:0;
+   padding: 3px 0;
+   border-bottom: 1px solid #778;
+   font: bold 12px Verdana, sans-serif;
+}
+
+ul.tabbernav li
+{
+   list-style: none;
+   margin: 0;
+   display: inline;
+}
+
+ul.tabbernav li a
+{
+   padding: 3px 0.5em;
+   margin-left: 1px;
+   border: 1px solid #778;
+   border-bottom: none;
+   background: #DDE;
+   text-decoration: none;
+}
+
+ul.tabbernav li a:link { color: #448; }
+ul.tabbernav li a:visited { color: #667; }
+
+ul.tabbernav li a:hover
+{
+   color: #000;
+   background: #AAE;
+   border-color: #227;
+}
+
+ul.tabbernav li.tabberactive a
+{
+   background-color: #fff;
+   border-bottom: 1px solid #fff;
+}
+
+ul.tabbernav li.tabberactive a:hover
+{
+   color: #000;
+   background: white;
+   border-bottom: 1px solid white;
+}
+
+/*--------------------------------------------------
+  .tabbertab = the tab content
+  Add style only after the tabber interface is set up (.tabberlive)
+  --------------------------------------------------*/
+.tabberlive .tabbertab {
+   padding:5px;
+   border:1px solid #aaa;
+   border-top:0;
+
+   /* If you don't want the tab size changing whenever a tab is changed
+      you can set a fixed height */
+
+   /* height:200px; */
+
+   /* If you set a fix height set overflow to auto and you will get a
+      scrollbar when necessary */
+
+   /* overflow:auto; */
+}
+
+/* If desired, hide the heading since a heading is provided by the tab */
+.tabberlive .tabbertab h2 {
+   display:none;
+}
+.tabberlive .tabbertab h3 {
+   display:none;
+}
+
+/* Example of using an ID to set different styles for the tabs on the page */
+.tabberlive#tab1 {
+}
+.tabberlive#tab2 {
+}
+.tabberlive#tab2 .tabbertab {
+   height:200px;
+   overflow:auto;
+}
+
+
+/* added by waqas ali */
+/* quote box styles */
+
+.quotebox_value_table_container
+{
+   border: 1px solid #808080;
+   border-radius: 7px 7px 0px 7px;
+   clear: both;
+   height: auto;
+   overflow: hidden;
+   width: 100%;
+   zoom: 1;
+   position: relative;
+}
+.quoteBoxHeaderTable
+{
+   background-color: gray;
+   color: #FFFFFF;
+   max-width: 1712px;
+   padding-right: 16px;
+   table-layout: fixed;
+   width: 100%;
+}
+
+.quoteBoxHeaderRow
+{
+   background-color: gray;
+   color: gray;
+}
+.quoteBoxHeader
+{
+   text-align: left;
+   height: 30px;
+}
+.quoteBoxHeader_no,.quoteBoxHeader_setQp
+{
+   width:22px;
+}
+.quoteBoxHeader_no
+{
+   width:20px;
+}
+.quoteBoxHeader_partNo
+{
+   width:170px;
+   text-align: left !important;
+   padding-left: 5px !important;
+}
+.quoteBoxHeader_description
+{
+   width:490px;
+   text-align: left !important;
+   padding-left: 5px !important;
+}
+.quoteBoxHeader_aliasPartNo{
+   width:122px;
+}
+.quoteBoxHeader_aliasDescription
+{
+   width:75px;
+}
+.quoteBoxHeader_priceLevel
+{
+   width:35px;
+}
+.quoteBoxHeader_qty
+{
+   width:53px;
+}
+
+.quoteBoxHeader_available
+{
+   width:23px;
+}
+.quoteBoxHeader_unitSell{
+   width:59px;
+}
+.quoteBoxHeader_extSell{
+   width:57px;
+}
+.quoteBoxHeader_unitCost{
+   width:35px;
+}
+.quoteBoxHeader_extCost{
+   width:35px;
+}
+.quoteBoxHeader_margin{
+   width:35px;
+}
+.quoteBoxHeader_stock{
+   width:55px;
+}
+.quoteBoxHeader_delete
+{
+   padding-right: 20px !important;
+   padding-top: 4px !important;
+   width: 52px;
+}
+.quoteBoxHeader_marginPercent
+{
+   width:52px;
+}
+.quoteBoxHeader_locationCode
+{
+   width:56px;
+}
+.quoteBoxHeader_notes
+{
+   width:53px;
+}
+.quoteBoxHeader_unitPrice
+{
+   width:65px;
+}
+.quoteBoxHeader_extPrice
+{
+   width:54px;
+}
+.quoteBoxValuesTable
+{
+   border-collapse: collapse;
+   table-layout: fixed;
+   width: 100%;
+}
+.quotebox_value
+{
+   text-align: left;
+   height: 30px;
+   /*border: 1px solid #d3d3d3;*/
+}
+.quotebox_values_row
+{
+   min-height: 33px;
+   height: 33px;
+}
+.quotebox_values_row:hover
+{
+   background-color: #FCF8DC;
+}
+.quotebox_value_no,.quotebox_value_setQp
+{
+   width:20px;
+   text-align: center;
+}
+.quotebox_value_no
+{
+   background-color: gray !important;
+   color: white !important;
+   font-weight: bold;
+   cursor: move;
+   border: 1px solid #d3d3d3;
+}
+.nodrag .quotebox_value_no
+{
+   cursor: default;
+}
+.quotebox_value_setQp
+{
+   width:20px;
+}
+.quotebox_value_partno
+{
+   max-width: 171px;
+   overflow: hidden;
+   text-align: center;
+   width: 171px;
+}
+.quotebox_value_description
+{
+   width: 490px;
+}
+.quotebox_value_aliasPartNo
+{
+   width:124px;
+}
+.quotebox_value_aliasDescription
+{
+   width: 75px;
+}
+.quotebox_value_priceLevel,
+.quotebox_value_qty,
+.quotebox_value_available,
+.quotebox_value_unitSell,
+.quotebox_value_extSell,
+.quotebox_value_unitCost,
+.quotebox_value_extCost,
+.quotebox_value_margin
+{
+   width:53px;
+   text-align: center;
+}
+.quotebox_value_available
+{
+   width:20px;
+}
+.quotebox_value_unitSell
+{
+   width:59px;
+}
+.quotebox_value_extSell
+{
+   width:57px;
+}
+.quotebox_value_marginPercent,
+.quotebox_value_locationCode,
+.quotebox_value_notes
+{
+   width:51px;
+   text-align: center;
+}
+.quotebox_value_stock,
+.quotebox_value_delete
+{
+   width:53px;
+   text-align: center;
+}
+.quotebox_value_delete
+{
+   width:37px;
+}
+.quotebox_value_delete img
+{
+   cursor: pointer;
+}
+/* quotebox styles end */
+
+.new_gray_button
+{
+   background: #D3D3D3;
+   border: 1px solid #666666;
+   color: #666666 !important;
+   float: left;
+   font-family: Arial,Helvetica,sans-serif;
+   font-size: 10px;
+   height: 17px;
+   padding-top: 4px;
+   text-decoration: none;
+   width: 120px;
+   margin-bottom: 2px;
+}
+.new_gray_button:hover
+{
+   background: none repeat scroll 0 0 gray;
+   font-weight: bold;
+   color:white !important;
+}
+
+.quoteTotals_value
+{
+   color:#FFE4B5;
+   font-size: 15px;
+   text-align: center;
+}
+
+.quoteTotals_table
+{
+   background-color: #FFFFFF;
+   border-bottom: 1px solid gray;
+   border-left: 1px solid gray;
+   border-radius: 0 0 7px 7px;
+   border-right: 1px solid gray;
+   color: gray;
+   max-width: 575px;
+   text-align: center;
+   width: auto;
+   float:right;
+}
+.deleteQuoteButton
+{
+   color: #CD0000;
+   cursor: pointer;
+}
+
+.quote_item_placeholder
+{
+   height: 33px;
+   width: 100%;
+   background-color: #000;
+   border:1px solid gray;
+}
+.quoteboxDraggingItem
+{
+   background-color: gray !important;
+   border-color: Grey;
+   border-style: groove;
+   border-width: 3px;
+   color: white;
+}
+.clear_both
+{
+   clear: both;
+}
+.sendQuoteContainer
+{
+   float: right;
+   width: 376px;
+}
+.sendQuoteContainer input
+{
+   float:left;
+
+}
+
+.sendQuoteContainer Button
+{
+   float:left;
+   width: 80px;
+}
+
+.checkBoxValue
+{
+   float: left;
+   font-weight: bold;
+   padding-top: 3px;
+   width: auto;
+}
+.sendQuoteButton
+{
+   background: none repeat scroll 0 0 #D3D3D3;
+   border: 1px solid #666666;
+   color: #666666 !important;
+   cursor: pointer;
+   float: left;
+   font-family: Arial,Helvetica,sans-serif;
+   font-size: 10px;
+   height: 17px;
+   margin-left: 10px;
+   margin-top: 2px;
+   text-decoration: none;
+   width: 88px;
+}
+
+/* new configurator design */
+.configurator_area_container
+{
+
+}
+
+.configurator_wrapper_for_IE
+{
+   /*   
+     box-shadow: -6px 4px 56px 40px #818181;
+     float: none;
+     margin-top: 10px;
+     padding: 10px;
+   */
+
+   margin:80px;
+   margin-right: 0px;
+   margin-bottom: 0px;
+   position: relative; /* This protects the inner element from being blurred */
+
+
+   height: 535px;
+   width: 893px;
+   border-radius: 5px 5px 5px 5px;
+}
+.new_configurator_updated
+{
+   /*   background-color: #818181;  Needed for IEs 
+      -moz-box-shadow: -6px 4px 56px 40px #818181;
+      -webkit-box-shadow: -6px 4px 56px 40px #818181;*/
+/*   box-shadow: -6px 4px 56px 40px #818181;*/
+   /*progid:DXImageTransform.Microsoft.Blur(PixelRadius=40,MakeShadow=true,ShadowOpacity=0.30)*/
+   /*   filter: 
+         progid:DXImageTransform.Microsoft.dropshadow(positive='true', color='#818181', offX='0', offY='0'),
+         progid:DXImageTransform.Microsoft.Blur(PixelRadius='40', MakeShadow='true', ShadowOpacity='0.50')
+         ;*/
+   /* progid:DXImageTransform.Microsoft.Glow(color='#818181', Strength='20') */
+   /*-ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius=40,MakeShadow=true,ShadowOpacity=0.30)";*/
+   /*   zoom: 1;*/
+
+   /* my styles */
+/*   border-radius: 5px 5px 5px 5px;*/
+/*   padding: 10px;*/
+   font-family: verdana;
+   font-size: 10px;
+   text-align: center;
+   height: 535px;
+   width: 100%;
+   /*   height: 645px;
+      width: 983px;*/
+   /*   margin-bottom: 20px;*/
+   /*   margin-left: -40px;*/
+   background-color: #fff;
+/*   border:1px solid #818181;*/
+   behavior: url(css/PIE-1.0.0/PIE.htc);
+}
+.configurator_preview_quatity
+{
+   width:163px;
+}
+.new_configurator
+{
+
+   border: 10px groove gray;
+   float: left;
+   padding: 20px;
+   text-align: center;
+   margin-top: 10px;
+}
+.new_configurator select, .new_configurator input
+{
+   color:black;
+}
+.configurator_adv_options
+{
+   /*
+   border-bottom: 1px dashed gray;
+   */
+
+   float: left;
+   text-align: left;
+   width: 98%;
+}
+.configurator_heading
+{
+   color: #4683D2;
+   float: left;
+   font-size: 12px;
+   font-weight: bold;
+}
+.configurator_topfont
+{
+   font-size: 7px;
+   font-weight: bold;
+   vertical-align: super;
+}
+.configurator_adv_options_container
+{
+   float: left;
+   margin-left: 15px;
+   margin-top: 0;
+   text-align: left;
+   width: 76%;
+   font-size: 11px;
+}
+.configurator_adv_option
+{
+   float: left;
+   font-weight: normal;
+   width: 100px;
+}
+.configurator_adv_option_basic
+{
+   width:69px;
+}
+.configurator_adv_option_wide_and_right
+{
+   float: right;
+   font-weight: bold;
+   width: auto;
+
+}
+.configurator_images{
+   height: auto;
+   text-align: center;
+   width:715px;
+   min-height:175px;
+   margin:0 auto;
+   padding:0 0 0 10px;
+   
+   width:650px;
+}
+.configurator_options
+{
+   border-top: 1px dashed lightgray;
+   float: left;
+   width: 86%;
+}
+.configurator_preview
+{
+   border-top: 2px solid lightgray;
+   float: left;
+   height: 70px;
+   width: 100%;
+}
+.configurator_options_connectorA
+{
+   float: left;
+   height: auto;
+   padding: 10px;
+   width: 29%;
+}
+.configurator_options_connectorB
+{
+   float: left;
+   height: auto;
+   padding: 10px;
+   width: 29%;
+}
+.configurator_options_container
+{
+   border-left: 1px dashed lightgray;
+   border-right: 1px dashed lightgray;
+   float: left;
+   padding: 10px;
+   width: 42%;
+}
+.configurator_options_connector_option,.configurator_options_option
+{
+   float: left;
+   margin-bottom: 4px;
+   margin-top: 4px;
+   width: 87%;
+   margin-left: 7.5%;
+}
+.configurator_field
+{
+   float:right;
+   text-align: right;
+}
+.configurator_field_heading{
+   color: #7D7D7D;
+   float: left;
+   font-size: 10px;
+   font-weight: normal;
+}
+.configurator_field_center
+{
+   float:right;
+   text-align: center;
+}
+.configurator_connector_heading
+{
+   color: #AA0048;
+   font-size: 14px;
+   font-variant: small-caps;
+   font-weight: bold;
+   margin-bottom: 10px;
+   margin-top: 0;
+   text-align: center;
+}
+.configurator_options_option .configurator_field select
+{
+   color: #1E1F21;
+   font-size: 10px;
+   font-weight: normal;
+   width: 180px;
+}
+.configurator_options_option .configurator_field_center select
+{
+   width:147px;
+}
+.configurator_preview_partNumber_container
+{
+   border-right: 2px solid lightgray;
+   float: left;
+   padding-bottom: 10px;
+   padding-right: 10px;
+   padding-top: 10px;
+   width: 20%;
+   min-height: 45px;
+}
+.configurator_preview_description_container
+{
+   float: left;
+   padding: 10px 10px 13px;
+   width: 51%;
+}
+.configurator_preview_unit_container
+{
+   border-left: 2px solid lightgray;
+   border-right: 2px solid lightgray;
+   float: left;
+   padding: 10px 10px 15px;
+   width: 10%;
+}
+.configurator_preview_qty_container
+{
+   float: left;
+   padding-left: 6px;
+   padding-top: 10px;
+   vertical-align: middle;
+   width: 17%;
+}
+
+.configurator_preview_heading
+{
+   color: #676767;
+   float: left;
+   font-size: 12px;
+   font-style: normal;
+   font-variant: small-caps;
+   font-weight: bold;
+   width: auto;
+}
+.configurator_preview_heading_quantity
+{
+   margin-bottom: 10px;
+   padding-left: 0;
+   text-align: left;
+   width: 100%;
+}
+.configurator_preview_heading_unit
+{
+   width:100%;
+   text-align: center;
+}
+.preview_part_number
+{
+   color: #13699A;
+   float: left;
+   font-size: 11px;
+   font-weight: bold;
+   margin-top: 10px;
+   width: 72%;
+   text-align: left;
+}
+.write_partnumber
+{
+   color:#c9bebe;
+   font-size: 10px;
+   font-weight: normal;
+   font-style: italic;
+}
+.item_preview_button
+{
+   float:right;
+}
+.configurator_preview_item_description
+{
+   clear: both;
+   color: #1E1F21;
+   float: left;
+   font-size: 10px;
+   font-weight: normal;
+   margin-top: 13px;
+   text-align: left;
+   width: 100%;
+}
+.configurator_preview_unit
+{
+   color: #1E1F21;
+   float: left;
+   font-size: 10px;
+   font-weight: normal;
+   margin-top: 13px;
+   text-align: center;
+   width: 100%;
+}
+.google_checkout_button_container
+{
+   left: 857px;
+   position: absolute;
+   top: 1189px;
+   display: none;
+}
+
+.google_checkout_button_container_tekcell{
+   top:956px;
+}
+.topImageA
+{
+   float: left;
+   margin-left: -15px;
+   width: auto;
+}
+.topLengthContainer
+{
+   display: table-cell;
+   height: 30px;
+   padding-top: 0;
+   text-align: center;
+   vertical-align: middle;
+   width: 118px;
+   color:#5d656e;
+}
+.topImageB
+{
+   float: right;
+   margin-right: 86px;
+   width: auto;
+}
+.config_trigger
+{
+   background-color: #CD0000;
+   color: white;
+   float: none;
+   padding: 3px;
+   width: 100px;
+   cursor: pointer;
+   margin-top: 250px;
+   margin-bottom: 240px;
+}
+.config_closer
+{
+   background-color: #FFFFFF;
+   border: 1px solid #D2D2D2;
+   border-radius: 3px 3px 3px 3px;
+   color: #4F4F4F;
+   cursor: pointer;
+   float: right;
+   font-size: 15px;
+   font-weight: bold;
+   padding: 0 2px;
+}
+.config_closer:hover
+{
+   background-color: #4F4F4F;
+   color:#fff;
+}
+.config_info_icon
+{
+   background-image: url("../images/info_tool_tip.png");
+   float: left;
+   height: 20px;
+   margin-left: 5px;
+   margin-top: -2px;
+   width: 20px;
+   cursor: default;
+}
+/* end of new configurator design */
+
+.tooltip_update_button
+{
+   color: #7D7D7D !important;
+   display: block;
+   float: left;
+   margin-right: 0px;
+   margin-top: 2px;
+   text-decoration: underline;
+}
+
+/* configurator inlines styles shifted here */
+.tbox {
+   border: 1px solid lightgray;
+   color: #1E1F21;
+   font-family: Verdana,Arial,Helvetica,sans-serif;
+   font-size: 10px;
+   font-weight: normal;
+   width: 87px;
+}
+.tboxtemp {
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 11px;
+   color: #666666;
+   border: 1px solid #cccccc;
+   height: 13px;
+   width: 120px;
+}
+
+.tbox2 {
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 9px;
+   color: #666666;
+   border: 1px solid #666666;
+   height: 16px;
+   width: 100px;
+}
+.tbox3 {
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 9px;
+   color: #666666;
+   border: 1px solid #666666;
+   height: 16px;
+   width: 60px;
+}
+.ebutton {
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 10px;
+   color: #666666;
+   border: 1px solid #666666;
+   height: 16px;
+   width: 40px;
+}
+.edittable {
+   height: 16px;
+   width: 600px;
+}
+
+.abutton {
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 10px;
+   color: #666666;
+   border: 1px solid #666666;
+   height: 16px;
+   width: 80px;
+}
+
+.sbutton, .sbutton_v2, .sbutton_v3,.sbutton_v4 {
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 10px;
+   color: #666666;
+   border: 1px solid #666666;
+   height: 17px;
+   width: 120px;
+}
+.sbutton_v2,.sbutton_v3,.sbutton_v4
+{
+   background-color: #D0D0C7;
+   border-color: #B3B4B1;
+   color: black;
+   cursor: pointer;
+   font-weight: bold;
+   height: 19px;
+   padding-top: 0;
+   width: 36px;
+   margin-right: 2px;
+}
+.sbutton_v2
+{
+
+}
+.sbutton_v3
+{
+   height: 21px;
+   margin-left: 3px;
+   width: 68px;
+   margin-right: 0px;
+}
+.sbutton_v4
+{
+   margin-top: 5px;
+   background-color:#ffcc00; 
+}
+.find_button_status_disabled
+{
+   opacity:0.5;
+   cursor: default;
+}
+.sbutton_v4:hover
+{
+   /* background-color:#ffcc00; */
+}
+.find_button_status_disabled:hover
+{
+   background-color: #D0D0C7;
+}
+.grayline {
+   background-color: #f0f0f0;
+}
+.whiteline {
+   background-color: #FFFFFF;
+}
+/* configurator inline styles ends here */
+/* tooltip styles */
+.qtip-content
+{
+   overflow: auto !important;
+   max-height: 100px !important;
+   /*   padding-bottom: 10px !important;*/
+}
+.qtip-title
+{
+   background-color: #4F4F4F !important;
+   max-height: 20px;
+   padding-left: 5px !important;
+   padding-right: 5px !important;
+   padding-top: 3px !important;
+}
+.qtip-button
+{
+
+   border-radius: 2px 2px 2px 2px;
+
+   padding-left: 2px;
+   padding-right: 2px;
+   background-color: #4F4F4F;
+   /*background-color: #AA0048;*/
+   color:#fff;
+}
+.qtip-button:hover
+{
+
+   font-weight: bold;
+   color: #4F4F4F;
+   background-color: #fff;
+}
+.qtip-contentWrapper
+{
+   border-radius: 5px 5px 5px 5px !important;
+}
+.qtip
+{
+   border-radius: 5px 5px 5px 5px !important;
+   box-shadow: 0 0 7px 4px #818181 !important;
+   opacity: 0.9 !important;
+   behavior: url(css/PIE-1.0.0/PIE.htc);
+}
+.cart_tooltip
+{
+   margin-top: 25px;
+}
+.tooltip_text_title
+{
+   font-weight: bold;
+   color:#AA0048;
+}
+.tooltip_text_container
+{
+   margin-bottom: 5px;
+}
+
+/* end of tooltip styles */
+
+.cableForm
+{
+   float:left;
+   margin-top: -5px;
+   margin-right: 25px;
+}
+
+/* new configurator styles for adding new elements */
+.configurator_quick_specs
+{
+   float:right;
+   font-size: 10px;
+}
+.config_quick_specs_box
+{
+   background-color: #FFFFFF;
+   border-radius: 5px 5px 5px 5px;
+   box-shadow: 0 0 4px 2px #818181;
+   height: 216px;
+   margin-top: 7px;
+   width: 118px;
+   font-size: 8px;
+   border:1px solid #818181;
+   behavior: url(css/PIE-1.0.0/PIE.htc);
+}
+.config_quick_specs_title
+{
+   color: #4683D2;
+   font-size: 10px;
+   font-weight: bold;
+   padding-top: 3px;
+   text-align: center;
+}
+.quick_specs{
+   height: 174px;
+   margin-bottom: 5px;
+   margin-top: 5px;
+   overflow: auto;
+   padding-left: 5px;
+   padding-right: 5px;
+   text-align: left;
+}
+.quick_specs li{
+   list-style-type: none;
+   float:left;
+   width:100%;
+}
+.specs_heading
+{
+   float: left;
+   text-align: left;
+   width: 70px;
+}
+.specs_value
+{
+   float: right;
+   text-align: left;
+   width: 60px;
+}
+.configurator_distance_box
+{
+   background-color: #FFFFFF;
+   border-radius: 5px 5px 5px 5px;
+   box-shadow: 0 0 4px 2px #818181;
+   float: right;
+   font-size: 8px;
+   height: 194px;
+   margin-top: 7px;
+   width: 118px;
+   border:1px solid #818181;
+   behavior: url(css/PIE-1.0.0/PIE.htc);
+}
+.config_distance_box_title
+{
+   color: #4683D2;
+   font-size: 10px;
+   font-weight: bold;
+   padding-left: 5px;
+   padding-right: 5px;
+   padding-top: 3px;
+   text-align: center;
+}
+.distance_box_details
+{
+   height: 146px;
+   margin-bottom: 0;
+   margin-top: 5px;
+   overflow: hidden;
+   padding-left: 5px;
+   padding-right: 5px;
+   text-align: left;
+}
+.distance_box_details li{
+   float: left;
+   list-style-type: none;
+   margin-bottom: 1px;
+   margin-top: 1px;
+   width: 100%;
+}
+.distance_heading{
+   float: left;
+   text-align: left;
+   width: 58px;
+}
+.distance_value
+{
+   float: right;
+   text-align: left;
+   width: 42px;
+}
+.length_options_container
+{
+   float: none;
+   width: 174px;
+}
+.length_option
+{
+   float: left;
+   margin-right: 20px;
+   margin-top: 3px;
+   text-align: left;
+   width: 66px;
+}
+.config_length_value
+{
+   float: left;
+   font-size: 10px;
+   font-weight: normal;
+/*   height: 10px;*/
+   margin-left: -5px;
+   width: 91px;
+   margin-right: 10px;
+}
+
+/* end of new configurator styles for adding new elements */
+
+/* new image preview styles */
+
+.fsImage
+{
+   min-width: 268px;
+   text-align: left\0/IE8+9; /* IE8 + 9 + IE10pp4  */
+   min-width: 298px\0/IE8+9; /* IE8 + 9 + IE10pp4  */
+   
+}
+.pbImagePolish
+{
+   min-width: 70px;
+}
+.paImage
+{
+   min-width: 273px;
+   min-width: 251px\0/IE8+9; /* IE8 + 9 + IE10pp4  */
+}
+.preview_captions_table
+{
+   margin-left: -10px;
+}
+
+/* end of new image preview styles */
+
+/* quick specs and estimated distances styles */
+.estimated_distances_update_button,.quick_specs_update_button
+{
+   color: #AA0048 !important;
+   float: right;
+   font-size: 10px !important;
+   margin-right: 5px;
+   text-decoration: none;
+}
+.topLengthContainer_c
+{
+   float: left;
+   margin-top: 8px;
+}
+.image_previews_container
+{
+   float: left;
+   margin-top: -10px;
+   width: auto;
+   color:#a29999;
+   font-size:12px;
+}
+/* end of quick specs and estimated distances styles */
+
+.tooltip_more_button{
+   color:green !important;text-decoration:none !important;font-size:11px !important;
+}
+
+/* new cart design */
+.cart_operations_container
+{
+   float: left;
+   font-family: verdana;
+   margin-bottom: 0px;
+   margin-top: 5px;
+}
+.cart_button
+{
+   background-color: #F0F0F0;
+
+
+   color: #000000 !important;
+   cursor: pointer;
+   display: table-cell;
+   float: left;
+   font-size: 10px !important;
+   font-weight: bold !important;
+   margin-left: 5px;
+   margin-right: 5px;
+   min-width: 95px;
+   padding: 5px 3px;
+   text-decoration: none;
+   border-radius: 3px 3px 3px 3px;
+   border: 1px solid gray;
+   zoom:1;
+   position:relative;
+}
+.cart_button:hover
+{
+   background-color: #778899 !important;
+   color:#fff !important;
+}
+.proceed_enabled
+{
+   opacity:1;
+}
+.proceed_disabled
+{
+   opacity:0.5;
+}
+.proceed_disabled:hover
+{
+   background-color: #F0F0F0 !important;
+   color: #000000 !important;
+   cursor: default !important;
+}
+.cart_quotes_total_heading
+{
+   color: #000000;
+   float: left;
+   font-weight: bold;
+   font-size: 13px;
+   margin-left: 15px;
+   padding-top: 4px;
+}
+.cart_quotes_total
+{
+   color: #AD1A20;
+   float: left;
+   font-weight: bold;
+   padding-top: 5px;
+   text-align: center;
+   font-size: 12px;
+   min-width: 15%;
+   margin-left: 8%;
+}
+.quotes_total_area
+{
+   float: left;
+   margin-bottom: 5px;
+   width: 100%;
+}
+.cart_quotes_totals_values
+{
+   float: left;
+   width: 100%;
+}
+.cart_quotes_totals_title
+{
+   color: #174F82;
+   float: left;
+   font-size: 12px;
+   font-weight: bold;
+   margin-left: 8%;
+   min-width: 15%;
+   text-align: center;
+}
+.cart_quotes_totals_titles
+{
+   float: left;
+   width: 100%;
+}
+.cart_quotes_total_values_box
+{
+   float: left;
+   margin-left: 10px;
+   width: 78%;
+}
+.sales_header
+{
+   background-color: black;
+   color: white;
+   float: left;
+   height: 17px;
+   padding: 1% 1%;
+   text-align: right;
+   width: 98%;
+}
+.sales_header_left
+{
+   color: #FFF284;
+   float: left;
+   font-size: 12px;
+   font-weight: bold;
+   padding-left: 3px;
+   padding-right: 3px;
+   padding-top: 1px;
+}
+.sales_header_right
+{
+   float:right;
+}
+.default_part_number
+{
+   float: left;
+   margin-top: 13px;
+   text-align: left;
+   width: 100%;
+   color: #13699A;
+   font-size: 12px;
+   font-weight: normal;
+}
+.not_editable_tooltip_title
+{
+   font-family: Arial,Helvetica,sans-serif;
+   font-size: 11px;
+   font-weight: normal;
+   text-decoration: none;
+   color: #7D7D7D !important;
+   display: block;
+   float: left;
+   margin-right: 5px;
+   margin-top: 2px;
+}
+.cofigurator_top_container
+{
+   float: left;
+   margin-top: 10px;
+}
+.cable_product_td
+{
+   float: left;
+   margin-right: 20px;
+   width: auto;
+}
+.cable_product_drop_container
+{
+   float: left;
+}
+.site_top_text,.cable_product_top_text,.customer_email_text
+{
+   float: left;
+   font-size: 12px;
+   font-weight: bold;
+   margin-right: 5px;
+}
+.site_top_drop_container
+{
+   float:left;
+}
+.partFormClass
+{
+/*   display: inline-block;
+   float: none;
+   margin-left: auto;
+   margin-right: auto;
+   margin-top: 17px;
+   width: 100%;*/
+}
+.email_address_set_container
+{
+   float: right;
+   margin-top: -35px;
+   position: absolute;
+   right: 8px;
+}
+.customer_email_address_field
+{
+   float:left;
+   width: 150px;
+   margin-right: 5px;
+}
+.customer_email_save_button,.customer_email_edit_button
+{
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 10px;
+   color: #666666;
+   border: 1px solid #666666;
+   height: 16px;
+   width: 80px;
+   float: left;
+   margin-right: 5px;
+}
+.cable_product_dropdown
+{
+   width:185px;
+}
+.confData
+{
+   display: inline-block;
+   float: none;
+   margin-left: auto;
+   margin-right: auto;
+   text-align: center;
+   width: 100%;
+}
+.configurator_area_container
+{
+   display: inline-block;
+   float: none;
+   margin-bottom: 20px;
+   margin-left: auto;
+   margin-right: auto;
+}

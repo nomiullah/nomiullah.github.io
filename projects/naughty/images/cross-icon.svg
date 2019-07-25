@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>63272ED5-DB33-4333-8BDB-B1AE7A0649EB</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <path d="M10,0 C4.4775,0 0,4.4775 0,10 C0,15.5225 4.4775,20 10,20 C15.5225,20 20,15.5225 20,10 C20,4.4775 15.5225,0 10,0 Z M15.3025,13.53625 L13.535,15.30375 L10,11.7675 L6.465,15.3025 L4.6975,13.535 L8.2325,10 L4.6975,6.46375 L6.465,4.69625 L10,8.2325 L13.535,4.6975 L15.3025,6.465 L11.7675,10 L15.3025,13.53625 Z" id="path-1"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Naughty-or-nice-lander-(methodology)" transform="translate(-1164.000000, -96.000000)">
+            <g id="close" transform="translate(1164.000000, 96.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="cross" fill="#676778" fill-rule="nonzero" xlink:href="#path-1"></use>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<!--[if IE 6]>
+<html id="ie6">
+<![endif]-->
+<!--[if IE 7]>
+<html id="ie7">
+<![endif]-->
+<!--[if IE 8]>
+<html id="ie8">
+<![endif]-->
+<!--[if !(IE 6) | !(IE 7) | !(IE 8)  ]><!-->
+<html>
+<!--<![endif]-->
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    
+    <title>Home Page</title>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700' rel='stylesheet' type='text/css'>
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.css" />
+    <link type="text/css" rel="stylesheet" href="css/bootstrap-responsive.css" />
+    <link href="css/bootstrap-modal.css" rel="stylesheet" />
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
+    <link type="text/css" rel="stylesheet" href="css/datepicker.css" />
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
+    <!--[if lte IE 8]>
+    <link type="text/css" rel="stylesheet" href="css/ie.css" />
+    <script type="text/javascript" src="js/modernizr.min.js"></script>
+    <![endif]-->
+    
+    <!--[if lte IE 6]>
+    <script type="text/javascript" src="js/belated.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/bootstrap-datepicker.js"></script>
+    <script type="text/javascript" src="js/jquery.slimscroll.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('.customScroll').slimscroll({
+                size: '5px',
+                railSize: '1px',
+                color: '#c3cfd1',
+                opacity : 1,
+                railOpacity: 1,
+                railVisible: true,
+                railColor: '#c3cfd1',
+                height : 'auto',
+                wheelStep: 2,
+                distance: 0,
+                railDistance: 2,
+            });
+            $('.datepicker').datepicker();
+            $(function() {
+                $( "#slider-range-min" ).slider({
+                range: "min",
+                value: 37,
+                min: 1,
+                max: 700,
+                slide: function( event, ui ) {
+                    $( "#amount" ).val( "$" + ui.value );
+                }
+                });
+                $( "#amount" ).val( "$" + $( "#slider-range-min" ).slider( "value" ) );
+                });
+            $(function() {
+                $( "#slider-range-min2" ).slider({
+                range: "min",
+                value: 37,
+                min: 1,
+                max: 700,
+                slide: function( event, ui ) {
+                    $( "#amount2" ).val( "$" + ui.value );
+                }
+                });
+                $( "#amount2" ).val( "$" + $( "#slider-range-min2" ).slider( "value" ) );
+                });
+            $(function() {
+                $( "#slider-range-min3" ).slider({
+                range: "min",
+                value: 37,
+                min: 1,
+                max: 700,
+                slide: function( event, ui ) {
+                    $( "#amount3" ).val( "$" + ui.value );
+                }
+                });
+                $( "#amount3" ).val( "$" + $( "#slider-range-min3" ).slider( "value" ) );
+                });
+
+
+
+            $('.btn-group-transparent .btn').click(function () {
+                if($(this).hasClass('active')){
+                }
+                else{
+                    $(this).parent('.btn-group-transparent').children().removeClass('active');
+                    $(this).addClass('active');
+                }
+            })
+        });
+        $(window).bind('scroll resize', function() {    
+            var hight = $(window).height();
+            var lastSection = $('.navigation li:last a').attr('href');
+            $(lastSection).css('min-height', hight);
+            var currentSection = null;
+            $('.section').each(function(){
+                var element = $(this).attr('id');   
+                if ($('#'+element).is('*')){
+                    if($(window).scrollTop() >= $('#'+element).offset().top - 10)
+                    {
+                        currentSection = element;
+                    }
+                }
+            });
+            $('.navigation li').removeClass('active').find('a[href="#'+currentSection+'"]').parent().addClass('active');
+        });
+
+        $(function () {
+            $('.navigation a, .scroll-to a, .scrollToSlider').click(function () {
+                $('html, body').stop().animate({
+                    'scrollTop': $(this.hash).position().top
+                })
+                return false;
+            })
+        });
+    </script>
+</head>
+
+<body id="page-name">
+
+<div class="site-container">
+<div class="left-column"></div>
+<div class="right-column">
+    <div class="day-status">
+    <a href="#sliderTop" class="scrollToSlider"></a>
+        <h4>Your day looks</h4>
+        <div class="rozy clearfix">
+            <div class="img-section">
+                <img src="images/rozy.png" alt="">
+            </div>
+            <div class="text-section">
+                <h2>Rozy...</h2>
+                <p><em>Watch out for thorns!</em></p>
+
+            </div>
+        </div>
+        <div class="calm clearfix" style="display:none;">
+            <div class="img-section">
+                <img src="images/calm.png" alt="">
+            </div>
+            <div class="text-section">
+                <h2>Calm...</h2>
+                <p><em>Relax &amp; Enjoy</em></p>
+
+            </div>
+        </div>
+        <div class="throny clearfix" style="display:none;">
+            <div class="img-section">
+                <img src="images/thorny.png" alt="">
+            </div>
+            <div class="text-section">
+                <h2>Thorny...</h2>
+                <p><em>Buckle Up!</em></p>
+            </div>
+        </div>
+    </div>
+    <ul class="navigation">
+        <li class="active">
+            <a href="#page1">
+                <span class="title">todays Appointments</span>
+                <strong class="num">14</strong>
+                <span class="related-img">
+                    <img class="inactive" class="" src="images/link1.png" alt="">
+                    <img class="active" class="" src="images/link1a.png" alt="">
+                </span>
+            </a>
+        </li>
+        <li>
+            <a href="#page2">
+                <small>Patients with</small>
+                <span class="title">todays Appointments</span>
+                <span class="related-img">
+                    <span>0</span><img class="active" src="images/link2.png" alt="">
+                    <img class="inactive" src="images/link2a.png" alt=""><span>19</span>
+                </span>
+            </a>
+        </li>
+        <li>
+            <a href="#page3">
+                <span class="title">Compliance level</span>
+                <span class="related-img">
+                    <img class="active" src="images/link3.png" alt="">
+                    <img class="inactive" src="images/link3a.png" alt="">
+                </span>
+            </a>
+        </li>
+        <li>
+            <a href="#page4">
+                <span class="title">utilization</span>
+                <span class="related-img">
+                    <img class="active" src="images/link4.png" alt="">
+                    <img class="inactive" src="images/link4a.png" alt="">
+                </span>
+            </a>
+        </li>
+        <li>
+            <a href="#page5">
+                <span class="title">Overstay</span>
+                <span class="related-img">
+                    <img class="active" src="images/link5.png" alt="">
+                    <img class="inactive" src="images/link5a.png" alt="">
+                </span>
+            </a>
+        </li>
+    </ul>
+</div>
+<div id="main-wrap">
+    <div class="slider-wrap" id="sliderTop">
+        <ul class="clearfix unstyled">
+            <li class="green">
+                <div class="slide-content clearfix row-fluid">
+                    <div class="img-section span3 text-right">
+                        <img src="images/rozy-w.png" alt="">
+                    </div>
+                    <div class="text-section span9">
+                        <h2>It looks like a <strong>Rozy day!</strong></h2>
+                        <p><em>Watch out for thorns</em></p>
+                        <p>Patients with Chronic Conditions, low compliance level and possibility of overstay.</p>
+                    </div>
+                </div>
+            </li>
+            <li class="orange" style="display: none;">
+                <div class="slide-content clearfix">
+                    <div class="img-section span3 text-right">
+                        <img src="images/flower.png" alt="">
+                    </div>
+                    <div class="text-section span9">
+                        <h2>It looks like a <strong>Calm day!</strong></h2>
+                        <p><em>Relax &amp; Enjoy</em></p>
+                        <p>Patients with Chronic Conditions, low compliance level and possibility of overstay.</p>
+                    </div>
+                </div>
+            </li>
+            <li class="red" style="display: none;">
+                <div class="slide-content clearfix">
+                    <div class="img-section span3 text-right">
+                        <img src="images/patients.png" alt="">
+                    </div>
+                    <div class="text-section span9">
+                        <h2>It looks like a <strong>Rozy day!</strong></h2>
+                        <p><em>Watch out for thorns</em></p>
+                        <p>Patients with Chronic Conditions, low compliance level and possibility of overstay.</p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <div class="scroll-to">
+            <a href="#page1">Scroll down to know more <em class="fa fa-chevron-down"></em></a>
+        </div>
+        <div class="today-btn-section">
+            <a href="#" class="btn btn-white">Today <em class="fa fa-caret-down"></em></a>
+        </div>
+    </div>
+    <div class="section section-appointment" id="page1">
+        <div class="container-fluid">
+            <h2>todays Appointments</h2>
+            <div class="row-fluid">
+                <div class="span6 break-md">
+                    <div class="app-box clearfix">
+                        <div class="left-box span4 text-center">
+                            <p><strong>New cases</strong></p>
+                            <div class="related-icon"><img src="images/app-icon-1.png" alt=""></div>
+                            <p class="num"><a data-toggle="modal" data-target="#myModalFullscreen
+            ">7</a></p>
+                        </div>
+                        <div class="right-box span8 no-margin">
+                            <div class="customScroll">
+                                <ul class="unstyled">
+                                    <li>
+                                        <span class="user-img"><img src="images/user1.jpg" alt=""></span>
+                                        <span class="title">Stephen McKinney</span>
+                                        <span class="gray-text">11:00am</span>
+                                    </li>
+                                    <li>
+                                        <span class="user-img"><img src="images/user-img.jpg" alt=""></span>
+                                        <span class="title">Willie Sherer</span>
+                                        <span class="gray-text">11:30am</span>
+                                    </li>
+                                    <li>
+                                        <span class="user-img"><img src="images/user2.jpg" alt=""></span>
+                                        <span class="title">Shawn Andre</span>
+                                        <span class="gray-text">12:10pm</span>
+                                    </li>
+                                    <li>
+                                        <span class="user-img"><img src="images/user3.jpg" alt=""></span>
+                                        <span class="title">Stanley Miller</span>
+                                        <span class="gray-text">01:00pm</span>
+                                    </li>
+                                    <li>
+                                        <span class="user-img"><img src="images/user-img.jpg" alt=""></span>
+                                        <span class="title">Kathleen Samson</span>
+                                        <span class="gray-text">11:00am</span>
+                                    </li>
+                                    <li>
+                                        <span class="user-img"><img src="images/user-img.jpg" alt=""></span>
+                                        <span class="title">Kathleen Samson</span>
+                                        <span class="gray-text">11:00am</span>
+                                    </li>
+                                    <li>
+                                        <span class="user-img"><img src="images/user-img.jpg" alt=""></span>
+                                        <span class="title">Kathleen Samson</span>
+                                        <span class="gray-text">11:00am</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div><!-- app-box -->
+                </div><!-- span6 -->
+                <div class="span6 break-md">
+                    <div class="app-box clearfix">
+                        <div class="left-box span4 text-center">
+                            <p><strong>Followup cases</strong></p>
+                            <div class="related-icon"><img src="images/app-icon-2.png" alt=""></div>
+                            <p class="num"><a data-toggle="modal" data-target="#myModalFullscreen
+            ">2</a></p>
+                        </div>
+                        <div class="right-box span8 no-margin">
+                            <div class="customScroll">
+                                <ul class="unstyled">
+                                    <li>
+                                        <span class="user-img"><img src="images/user4.jpg" alt=""></span>
+                                        <span class="title">Kathleen Samson</span>
+                                        <span class="gray-text">11:00am</span>
+                                    </li>
+                                    <li>
+                                        <span class="user-img"><img src="images/user-img.jpg" alt=""></span>
+                                        <span class="title">Kevin Hogans</span>
+                                        <span class="gray-text">11:00am</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div><!-- app-box -->
+                </div><!-- span6 -->
+            </div><!-- row-fluid -->
+            <div class="row-fluid">
+                <div class="span6 break-md">
+                    <div class="app-box clearfix">
+                        <div class="left-box span4 text-center">
+                            <p><strong>New Patients</strong></p>
+                            <div class="related-icon"><img src="images/app-icon-3.png" alt=""></div>
+                            <p class="num"><a data-toggle="modal" data-target="#myModalFullscreen
+            ">1</a></p>
+                        </div>
+                        <div class="right-box span8 no-margin">
+                            <div class="customScroll">
+                                <ul class="unstyled">
+                                    <li>
+                                        <span class="user-img"><img src="images/user5.jpg" alt=""></span>
+                                        <span class="title">Harvey Wheeler</span>
+                                        <span class="gray-text">11:00am</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div><!-- app-box -->
+                </div><!-- span6 -->
+                <div class="span6 break-md">
+                    <div class="app-box clearfix">
+                        <div class="left-box span4 text-center">
+                            <p><strong>Repeat Patients</strong></p>
+                            <div class="related-icon"><img src="images/app-icon-4.png" alt=""></div>
+                            <p class="num"><a data-toggle="modal" data-target="#myModalFullscreen
+            ">4</a></p>
+                        </div>
+                        <div class="right-box span8 no-margin">
+                            <div class="customScroll">
+                                <ul class="unstyled">
+                                    <li>
+                                        <img src="images/user6.jpg" alt="">
+                                        <span class="title">Matthew Claypool</span>
+                                        <span class="gray-text">11:00am</span>
+                                    </li>
+                                    <li>
+                                        <span class="user-img"><img src="images/user-img.jpg" alt=""></span>
+                                        <span class="title">Randy Morris</span>
+                                        <span class="gray-text">11:30am</span>
+                                    </li>
+                                    <li>
+                                        <span class="user-img"><img src="images/user-img.jpg" alt=""></span>
+                                        <span class="title">Leon Crockett</span>
+                                        <span class="gray-text">12:10am</span>
+                                    </li>
+                                    <li>
+                                        <span class="user-img"><img src="images/user-img.jpg" alt=""></span>
+                                        <span class="title">James W. Passarelli</span>
+                                        <span class="gray-text">01:00pm</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div><!-- app-box -->
+                </div><!-- span6 -->
+            </div><!-- row-fluid -->
+        </div><!-- container-fluid -->
+    </div><!-- section section-appointment -->
+    <div class="section section-chronic" id="page2">
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span6 break-sm">
+                    <p class="head-lebel">Patients with</p>
+                    <h2> Chronic Conditions</h2>
+                </div>
+                <div class="span6 text-right break-sm">
+                    <div class="btn-group btn-group-transparent btn-group-justified">
+                        <a href="#tab1" data-toggle="tab" class="btn active">All</a>
+                        <a href="#tab2" data-toggle="tab" class="btn">1 to 3</a>
+                        <a href="#tab3" data-toggle="tab" class="btn">4 to 10</a>
+                        <a href="#tab4" data-toggle="tab" class="btn">10+</a>
+                    </div>
+                </div>
+            </div><!-- row-fluid -->
+            <div class="tab-content">
+                <div class="tab-pane active" id="tab1">
+                    <div class="text-center">
+                        <img src="images/chornic.png" alt="">
+                    </div>
+                    <p>Color shows amount of conditions</p>
+                    <table class="status-table">
+                        <tr>
+                            <td><span class="orange-sign sign"></span> 0 to 3</td>
+                            <td><span class="red-sign sign"></span> 4 to 10</td>
+                            <td><span class="green-sign sign"></span> 10+</td>
+                            <td><strong>M</strong>- mALE<br><strong>M</strong>- FEmALE</td>
+
+                        </tr>
+                    </table>
+                </div>
+                <div class="tab-pane" id="tab2">
+                    <p>Color shows amount of conditions 2</p>
+                    <p>Color shows amount of conditions 2</p>
+                    <p>Color shows amount of conditions 2</p>
+                    <p>Color shows amount of conditions 2</p>
+                    <p>Color shows amount of conditions 2</p>
+                    <p>Color shows amount of conditions 2</p>
+                    <table class="status-table">
+                        <tr>
+                            <td><span class="orange-sign sign"></span> 0 to 3</td>
+                            <td><span class="red-sign sign"></span> 4 to 10</td>
+                            <td><span class="green-sign sign"></span> 10+</td>
+                            <td><strong>M</strong>- mALE<br><strong>M</strong>- FEmALE</td>
+
+                        </tr>
+                    </table>
+                </div>
+                <div class="tab-pane" id="tab3">
+                    <div class="text-center">
+                        <img src="images/chornic.png" alt="">
+                    </div>
+                    <p>Color shows amount of conditions 3</p>
+                    <table class="status-table">
+                        <tr>
+                            <td><span class="orange-sign sign"></span> 0 to 3</td>
+                            <td><span class="red-sign sign"></span> 4 to 10</td>
+                            <td><span class="green-sign sign"></span> 10+</td>
+                            <td><strong>M</strong>- mALE<br><strong>M</strong>- FEmALE</td>
+
+                        </tr>
+                    </table>
+                </div>
+                <div class="tab-pane" id="tab4">
+                    <p>Color shows amount of conditions 4</p>
+                    <p>Color shows amount of conditions 4</p>
+                    <p>Color shows amount of conditions 4</p>
+                    <p>Color shows amount of conditions 4</p>
+                    <p>Color shows amount of conditions 4</p>
+                    <p>Color shows amount of conditions 4</p>
+                    <p>Color shows amount of conditions 4</p>
+                    <p>Color shows amount of conditions 4</p>
+                    <p>Color shows amount of conditions 4</p>
+                    <p>Color shows amount of conditions 4</p>
+                    <p>Color shows amount of conditions 4</p>
+                    <table class="status-table">
+                        <tr>
+                            <td><span class="orange-sign sign"></span> 0 to 3</td>
+                            <td><span class="red-sign sign"></span> 4 to 10</td>
+                            <td><span class="green-sign sign"></span> 10+</td>
+                            <td><strong>M</strong>- mALE<br><strong>M</strong>- FEmALE</td>
+
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div><!-- container-fluid -->
+    </div>
+    
+	<div class="section section-complaince" id="page3">
+        <div class="container-fluid">
+            <h2>Compliance level</h2>
+            <div class="text-center">
+                <p><img src="images/complains-barchart.jpg" alt=""></p>
+            </div>
+        </div><!-- container-fluid -->
+    </div><!-- section section-complaince -->
+    <div class="section section-utilization" id="page4">
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span6 bdr-right break-md">
+                    <div class="row-fluid">
+                        <div class="span5">
+                            <h2>utilization</h2>
+                        </div>
+                        <div class="span7 text-right">
+                            <div class="btn-group btn-group-transparent btn-group-justified">
+                              <a href="#tab21" data-toggle="tab"  class="btn active">3 month</a>
+                              <a href="#tab22" data-toggle="tab" class="btn">6 month</a>
+                              <a href="#tab23" data-toggle="tab" class="btn">12 month</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="tab21">
+                            <div class="box-wrap">
+                                <div class="box">
+                                    <a href="#">
+                                        <strong class="title">Hospital Visit Count</strong>
+                                        <span class="related-img"><img src="images/uti-icon-1.png"></span>
+                                        <span class="num">3</span>
+                                    </a>
+                                </div>
+                                <div class="box">
+                                    <a href="#">
+                                        <strong class="title">ER Count</strong>
+                                        <span class="related-img"><img src="images/uti-icon-2.png"></span>
+                                        <span class="num">6</span>
+                                    </a>
+                                </div>
+                                <div class="box">
+                                    <a href="#">
+                                        <strong class="title">Home Health Visit Count</strong>
+                                        <span class="related-img"><img src="images/uti-icon-3.png"></span>
+                                        <span class="num">1</span>
+                                    </a>
+                                </div>
+                                <div class="box">
+                                    <a href="#">
+                                        <strong class="title">Skilled Nursing Home <br> Visit count</strong>
+                                        <span class="related-img"><img src="images/uti-icon-4.png"></span>
+                                        <span class="num">2</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="tab22">
+                            <p>Hospital Visit Count</p>
+                            <p>Hospital Visit Count</p>
+                            <p>Hospital Visit Count</p>
+                            <p>Hospital Visit Count</p>
+                            <p>Hospital Visit Count</p>
+                            <p>Hospital Visit Count</p>
+                            <p>Hospital Visit Count</p>
+                            <p>Hospital Visit Count</p>
+                            <p>Hospital Visit Count</p>
+                        </div>
+                        <div class="tab-pane" id="tab23">
+                            <p>Hospital Visit Count 2</p>
+                            <p>Hospital Visit Count 2</p>
+                            <p>Hospital Visit Count 2</p>
+                            <p>Hospital Visit Count 2</p>
+                            <p>Hospital Visit Count 2</p>
+                            <p>Hospital Visit Count 2</p>
+                            <p>Hospital Visit Count 2</p>
+                            <p>Hospital Visit Count 2</p>                            
+                        </div>
+                    </div><!-- tab-content -->
+                </div>
+                <div class="span6 break-md">
+                    <div class="row-fluid">
+                        <div class="span5">
+                            <h2>Cost of care</h2>
+                        </div>
+                        <div class="span7 text-right">
+                            <div class="btn-group btn-group-transparent btn-group-justified">
+                              <a href="#tab31" data-toggle="tab" class="btn active">3 month</a>
+                              <a href="#tab32" data-toggle="tab" class="btn">6 month</a>
+                              <a href="#tab33" data-toggle="tab" class="btn">12 month</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="tab31">
+                            <ul class="cost-list unstyled">
+                                <li class="span4 bdr-right">
+                                    <a href="#">
+                                        <span class="related-img"><img src="images/cost-1.png" alt=""></span>
+                                        <span class="num">6</span>
+                                        <span class="range">$0-$1000</span>
+                                    </a>
+                                </li>
+                                <li class="span4 bdr-right">
+                                    <a href="#">
+                                        <span class="related-img"><img src="images/cost-2.png" alt=""></span>
+                                        <span class="num">4</span>
+                                        <span class="range">$0-$1000</span>
+                                    </a>
+                                </li>
+                                <li class="span4">
+                                    <a href="#">
+                                        <span class="related-img"><img src="images/cost-3.png" alt=""></span>
+                                        <span class="num">2</span>
+                                        <span class="range">$0-$1000</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tab-pane" id="tab32">
+                            <ol>
+                                <li>list item 21</li>
+                                <li>list item 22</li>
+                                <li>list item 23</li>
+                                <li>list item 24</li>
+                                <li>list item 25</li>
+                                <li>list item 26</li>
+                                <li>list item 27</li>
+                                <li>list item 28</li>
+                                <li>list item 29</li>
+                                <li>list item 210</li>
+                            </ol>
+                        </div>
+                        <div class="tab-pane" id="tab33">
+                            <ol>
+                                <li>list item 31</li>
+                                <li>list item 32</li>
+                                <li>list item 33</li>
+                                <li>list item 34</li>
+                                <li>list item 35</li>
+                                <li>list item 36</li>
+                                <li>list item 37</li>
+                                <li>list item 38</li>
+                                <li>list item 39</li>
+                                <li>list item 310</li>
+                            </ol>
+                        </div>
+                    </div><!-- tab-content -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section section-overstay" id="page5">
+        <div class="container-fluid text-center">
+            <h2 class="text-left">overstay</h2>
+
+            <div class="overlay-graph-section">
+                <p><img src="images/overstay-graph.png" alt=""></p>
+                <p><img src="images/overstay-img.png" alt=""></p>
+                <p class="abs-text">
+                    <strong class="theme-text num">2</strong>
+                    <span>Out of <strong>12 Patients</strong> may overstay</span></p>
+            </div>
+        </div><!-- container-fluid -->
+    </div><!-- section section-overstay -->
+</div>
+<!--main end -->
+
+
+</div><!--container-fluid -->
+
+
+<div class="modal modal-fullscreen  " id="myModalFullscreen"  tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-left-column">
+            <div class="col-head">
+                <h4>Patients</h4>
+            </div>
+            <ul class="members-list">
+                <li>
+                    <a href="#">
+                        <span class="member-img">
+                            <img src="images/user8.jpg" alt="">
+                        </span>
+                        <span class="member-data">
+                            <strong class="title">Michael Gould</strong>
+                            <span class="gray-text">55 Yrs, M </span>
+                        </span>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="#">
+                        <span class="member-img">
+                            <img src="images/user9.jpg" alt="">
+                        </span>
+                        <span class="member-data">
+                            <strong class="title">Sarah Fabre</strong>
+                            <span class="gray-text">21 Yrs, F</span>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="member-img">
+                            <img src="images/member.png" alt="">
+                        </span>
+                        <span class="member-data">
+                            <strong class="title">Bruce Madison</strong>
+                            <span class="gray-text">45 Yrs, M</span>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="member-img">
+                            <img src="images/user10.jpg" alt="">
+                        </span>
+                        <span class="member-data">
+                            <strong class="title">Thomas Smith</strong>
+                            <span class="gray-text">45 Yrs, M</span>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="member-img">
+                            <img src="images/member.png" alt="">
+                        </span>
+                        <span class="member-data">
+                            <strong class="title">Amy Parker</strong>
+                            <span class="gray-text">45 Yrs, F</span>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="member-img">
+                            <img src="images/member.png" alt="">
+                        </span>
+                        <span class="member-data">
+                            <strong class="title">Robert Le</strong>
+                            <span class="gray-text">45 Yrs, M</span>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="member-img">
+                            <img src="images/user11.jpg" alt="">
+                        </span>
+                        <span class="member-data">
+                            <strong class="title">Dorothy Obrien</strong>
+                            <span class="gray-text">55 Yrs, F</span>
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="modal-right-column">
+            <div class="dismis-bar">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><img src="images/close.png" alt=""></button>
+            </div>
+            <div class="container-fluid">
+                <div class="row-fluid">
+                    <div class="span6">
+                        <div class="selected-user clearfix">
+                            <div class="img-section">
+                                <img src="images/selected-user.jpg" alt="">
+                            </div>
+                            <div class="info-section">
+                                <h2>Thomas Smith</h2>
+                                <p><span class="gray-text">45 Yrs, Male</span>
+                                <span class="gray-text"><em class="fa fa-map-marker"></em> Bethlehem</span></p>
+                                <p><strong>292444006A</strong></p>
+                            </div>
+                        </div>
+                    </div><!-- span6 -->
+                    <div class="span6">
+                        <div class="board">
+                            <em class="status">New Cases</em>
+                            <p><span class="gray-text">Appointment Details</span></p>
+                            <p><strong>Monday, 27th July 2014</strong> <a href="#" class="time"><strong>11:30am to 12:30pm</strong></a></p>
+                        </div>
+                    </div><!-- span6 -->
+                </div><!-- row-fluid -->
+                <div class="row-fluid selected-bottom-section">
+                    <div class="price-section first-item">
+                        <span class="gray-text">PCP</span>
+                        <strong class="price-text">Genelia Smith</strong>
+                    </div>
+                    <div class="price-section">
+                        <span class="gray-text">In-patient</span>
+                        <strong class="price-text"><img src="images/dollor.jpg" alt=""> $2,487.2</strong>
+                    </div>
+                    <div class="price-section">
+                        <span class="gray-text">Out-patient</span>
+                        <strong class="price-text"><img src="images/dollor.jpg" alt=""> $5.259.8</strong>
+                    </div>
+                    <div class="price-section">
+                        <span class="gray-text">Expected Cost</span>
+                        <strong class="price-text"><img src="images/dollor.jpg" alt=""> $20,000 - $25,000</strong>
+                    </div>
+                    <div class="price-section">
+                        <span class="gray-text">Chornic Conditions</span>
+                        <strong class="price-text">2</strong>
+                    </div>
+                </div><!-- row-fluid -->
+                <div class="row-fluid feedback-section">
+                    <div class="span6 break-md bdr-right">
+                        <div class="text-center">
+                            <p><span class="fa text-error fa-3x circle"><img src="images/bad.jpg" alt=""></span></p>
+                        </div>
+                        <div class="row-fluid">
+                            <div class="span6">
+                                <p class="label-text"><strong>Compliance level</strong></p>
+                            </div>
+                            <div class="span6">
+                                <span class="text-large text-error right-label"><strong>Bad (20%)</strong></span>
+                            </div>
+                        </div>
+                        <div class="row-fluid">
+                            <div class="span6">
+                                <p class="label-text"><strong>Compliance level</strong></p>
+                            </div>
+                            <div class="span6">
+                                <p class="right-label">
+                                    Asthma (since 6 years)<br>
+                                    Hypertension (since 14 months)
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row-fluid bdr-bottom-md">
+                            <div class="box-wrap clearfix">
+                                <div class="box">
+                                    <a href="#">
+                                        <strong class="title">Hospital Visit Count</strong>
+                                        <span class="related-img"><img src="images/uti-icon-1.png"></span>
+                                        <span class="num">2 Times</span>
+                                    </a>
+                                </div>
+                                <div class="box">
+                                    <a href="#">
+                                        <strong class="title">ER Count</strong>
+                                        <span class="related-img"><img src="images/uti-icon-2.png"></span>
+                                        <span class="num">1 Time</span>
+                                    </a>
+                                </div>
+                                <div class="box">
+                                    <a href="#">
+                                        <strong class="title">Home Health Visit Count</strong>
+                                        <span class="related-img"><img src="images/uti-icon-3.png"></span>
+                                        <span class="num">0 Visits</span>
+                                    </a>
+                                </div>
+                                <div class="box">
+                                    <a href="#">
+                                        <strong class="title">Skilled Nursing Home <br> Visit count</strong>
+                                        <span class="related-img"><img src="images/uti-icon-4.png"></span>
+                                        <span class="num">0 Visits</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="notification-box">
+                                <div class="left-section">
+                                    <span class="fa text-error fa-clock-o fa-3x"></span>
+                                </div>
+                                <div class="text-section">
+                                    <p>Thomas Stayed back 20 mins over in last visit <br>Avg 12 min overstay (past 5 visits)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span6 break-md">
+                        <div class="text-center">
+                            <p><span class="fa text-success fa-3x circle"><img src="images/good.jpg" alt=""></span></p>
+                        </div>
+                        <div class="row-fluid">
+                            <div class="span6">
+                                <p class="label-text"><strong>Activity level</strong></p>
+                            </div>
+                            <div class="span6">
+                                <span class="text-large right-label text-success"><strong>High</strong></span>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- row-fluid -->
+                <!-- row-fluid -->
+                <div class="row-fluid">
+                    <div class="graph-box span6 break-md">
+                       <div class="box-head">
+                           <div class="top-section clearfix">
+                                <h2 class="pull-left">Blood Pressure &nbsp; </h2>
+                                <h2 class="dropdown pull-left">
+                                    <a class="btn btn btn-small fa fa-caret-down" data-toggle="dropdown" href="#"></a>
+                                    <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                                        <li><a href="#">High</a></li>
+                                        <li><a href="#">Low</a></li>
+                                        <li><a href="#">Normal</a></li>
+                                    </ul>
+                                </h2>
+                               <h2 class="pull-right"><small>Last Avg:</small> <span>120/139</span></h2>
+                           </div>
+                           <div class="bottom-section clearfix">
+                               <div class="form-inline">
+                                    <div class="pull-left">
+                                        <p>
+                                            <label>Date</label>
+                                            <span class="with-icon">
+                                                <input type="text" placeholder="From" class="input-small datepicker" >
+                                                <em class="fa fa-calendar-o"></em>
+                                            </span>
+                                            <span class="with-icon">
+                                                <input type="text" placeholder="To" class="input-small datepicker">
+                                                <em class="fa fa-calendar-o"></em>
+                                            </span>
+                                        </p>
+                                        <p><label><input type="checkbox"> <span>Values On graph</span></label>
+                                        <label><input type="checkbox"> <span>Remember</span></label></p>
+                                    </div>
+                                    <p class="hide">
+                                        <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
+                                    </p>
+                                    <div class="pull-right">
+                                        <div id="slider-range-min" class="input-medium display-inline"></div> <em> Last 5 Report</em>
+                                    </div>
+                                    <p class="text-center hide-sm"><label>OR</label></p>
+                               </div>
+                           </div>
+                       </div>
+                       <div class="box-body">
+                           <img class="img-center" src="images/graph.jpg" alt="">
+                       </div>
+                    </div>
+                    <div class="graph-box span6 break-md">
+                       <div class="box-head">
+                           <div class="top-section clearfix">
+                                <h2 class="pull-left">Blood Sugar &nbsp; </h2>
+                                <h2 class="dropdown pull-left">
+                                    <a class="btn btn btn-small fa fa-caret-down" data-toggle="dropdown" href="#"></a>
+                                    <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                                        <li><a href="#">High</a></li>
+                                        <li><a href="#">Low</a></li>
+                                        <li><a href="#">Normal</a></li>
+                                    </ul>
+                                </h2>
+                               <h2 class="pull-right"><small>Last Avg:</small> <span>125/185</span></h2>
+                           </div>
+                           <div class="bottom-section clearfix">
+                               <div class="form-inline">
+                                    <div class="pull-left">
+                                        <p>
+                                            <label>Date</label>
+                                            <span class="with-icon">
+                                                <input type="text" placeholder="From" class="input-small datepicker" >
+                                                <em class="fa fa-calendar-o"></em>
+                                            </span>
+                                            <span class="with-icon">
+                                                <input type="text" placeholder="To" class="input-small datepicker">
+                                                <em class="fa fa-calendar-o"></em>
+                                            </span>
+                                        </p>
+                                        <p><label><input type="checkbox"> <span>Values On graph</span></label>
+                                        <label><input type="checkbox"> <span>Remember</span></label></p>
+                                    </div>
+                                    <p class="hide">
+                                        <input type="text" id="amount2" readonly style="border:0; color:#f6931f; font-weight:bold;">
+                                    </p>
+                                    <div class="pull-right">
+                                        <div id="slider-range-min2" class="input-medium display-inline"></div> <em> Last 5 Report</em>
+                                    </div>
+                                    <p class="text-center hide-sm"><label>OR</label></p>
+                               </div>
+                           </div>
+                       </div>
+                       <div class="box-body">
+                           <img class="img-center" src="images/graph.jpg" alt="">
+                       </div>
+                    </div>
+                </div>
+                <div class="row-fluid">
+                    <div class="graph-box span6 break-md">
+                       <div class="box-head">
+                           <div class="top-section clearfix">
+                               <h2>Labs Report Name Here... <a href="#" class="btn btn fa fa-search pull-right"></a></h2>
+                           </div>
+                           <div class="bottom-section clearfix">
+                               <div class="form-inline">
+                                    <div class="pull-left">
+                                        <p>
+                                            <label>Date</label>
+                                            <span class="with-icon">
+                                                <input type="text" placeholder="From" class="input-small datepicker" >
+                                                <em class="fa fa-calendar-o"></em>
+                                            </span>
+                                            <span class="with-icon">
+                                                <input type="text" placeholder="To" class="input-small datepicker">
+                                                <em class="fa fa-calendar-o"></em>
+                                            </span>
+                                        </p>
+                                        <p><label><input type="checkbox"> <span>Values On graph</span></label>
+                                        <label><input type="checkbox"> <span>Remember</span></label></p>
+                                    </div>
+                                    <p class="hide">
+                                        <input type="text" id="amount3" readonly style="border:0; color:#f6931f; font-weight:bold;">
+                                    </p>
+                                    <div class="pull-right">
+                                        <div id="slider-range-min3" class="input-medium display-inline"></div> <em> Last 5 Report</em>
+                                    </div>
+                                    <div class="clearfix-lg"></div>
+                                    <select class="modal-select pull-right">
+                                        <option value="1">2 Selected</option>
+                                    </select>
+                                    <p class="text-center hide-sm"><label>OR</label></p>
+                               </div>
+                           </div>
+                        </div>
+                       <div class="box-body">
+                           <img class="img-center" src="images/graph.jpg" alt="">
+                       </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+</body>
+</html>

@@ -1,0 +1,8 @@
+.cuisine-td td {
+	height: 100px;
+	width: 120px;
+	cursor: pointer;
+}
+.cuisine-bg-color{
+	background-color: yellow;
+}

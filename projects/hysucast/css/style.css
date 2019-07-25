@@ -1,0 +1,728 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body,
+input,
+textarea {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.5;
+    font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+    font-size: 43px;
+}
+h2 {
+    font-size: 39px;
+}
+h3 {
+    font-size: 33px;
+}
+h4 {
+    font-size: 24px;
+}
+h1,h2,h3,h4,h5,h6 {
+    color: #0c466f;
+    margin: 0;
+}
+h4 {
+    font-size: 28px;
+    color: #1e1e1e;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: #ef1f1e;
+    outline: none;
+    transition: 0.3s all ease;
+}
+
+a:hover,
+a:focus {
+    text-decoration: none;
+    color: #fff;
+}
+
+p {
+    margin: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+a {
+    color: #8aa027;
+    transition: 0.3s all ease;
+}
+a:hover {
+    text-decoration: none;
+    outline: none;
+    color: #0c466f;
+}
+.btn-outline-light {
+    border: none;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    border-radius: 0;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 1;
+}
+.btn-outline-light:hover {
+    color: #0c466f;
+    border-color: transparent;
+}
+.btn-outline-primary {
+    text-transform: uppercase;
+    text-align: center;
+    border: none;
+    color: #0c466f;
+    border-top: 1px solid #0c466f;
+    border-bottom: 1px solid #0c466f;
+    border-radius: 0;
+    display: block;
+    line-height: 1;
+    letter-spacing: 2px;
+}
+.btn-outline-primary:hover {
+    background: #0c466f;
+    color: #fff;
+    border-color: transparent;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+/* Body CSS End */
+
+
+/*_-_Header CSS Start_-_*/
+header.header {
+    padding: 9px 0 0 0;
+    position: relative;
+}
+header .logo {
+    margin-bottom: -45px;
+    z-index: 100;
+    position: relative; 
+}
+header.header:after {
+    content: ' ';
+    background: url(../images/header-strip.png) center center no-repeat;
+    width: 100%;
+    height: 7px;
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+}
+
+/*-_- Nav CSS Start _-_*/
+header .nav-wrap {
+    text-align: center;
+}
+header .nav-wrap .navbar-expand-lg {
+    padding: 0;
+}
+header .nav-wrap .navbar-light .navbar-nav .nav-link {
+    color: #0c466f;
+    text-transform: uppercase;
+    margin-right: 35px;
+    padding: 0;
+}
+header .nav-wrap .navbar-expand-lg .navbar-collapse {
+    justify-content: center;
+}
+header .nav-wrap .navbar-light .navbar-nav .nav-link:hover {
+    font-weight: 700;
+}
+header .nav-wrap .navbar-light .navbar-nav .nav-item:last-child .nav-link{
+    margin-right: 0;
+}
+
+header .contact-number {
+    text-align: right;
+}
+header .contact-number a {
+    font-size: 22px;
+    color: #8aa027;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+/*-_- Nav CSS End -_-*/
+
+/*_-_Header CSS End_-_*/
+
+
+
+/*_-Slider CSS Start-_*/
+.banner-wrap {
+    position: relative;
+}
+.banner-wrap .icon-slider-sec {
+    overflow: hidden;
+}
+
+.sliderview:after {
+    content: ' ';
+    background: url(../images/slider-after.png) center center no-repeat;
+    width: 43%;
+    height: 100%;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-size: cover;
+}
+.banner-wrap .flexslider {
+    margin: 0;
+    border: none;
+}
+.banner-wrap .icon-outer {
+    background: #0c466f;
+    padding: 14px 45px 16px 45px;
+    border-radius: 0;
+}
+.icon-outer .flex-direction-nav {
+    display: none;
+}
+
+.banner-wrap .flex-direction-nav .flex-prev,
+.banner-wrap .flex-direction-nav .flex-next {
+    width: 33px;
+    height: 63px;
+    opacity: 1 !important;
+    font-size: 0;
+    z-index: 1;
+}
+.banner-wrap .flex-direction-nav .flex-prev,
+.flexslider:hover .flex-direction-nav .flex-prev {
+    background: url(../images/prev-arrow.png) center center no-repeat;
+    left: 20%;
+    opacity: 1;
+}
+.banner-wrap .flex-direction-nav .flex-next,
+.flexslider:hover .flex-direction-nav .flex-next {
+    background: url(../images/next-arrow.png) center center no-repeat;
+    right: 20%;
+    opacity: 1;
+}
+
+.banner-wrap .flex-direction-nav a {
+    color: transparent;
+}
+.banner-wrap .flex-direction-nav a:before {
+    content: none;
+}
+.slide-content {
+    max-width: 232px;
+    margin-left: auto;
+    position: absolute;
+    right: 22%;
+    top: 40.5%;
+    z-index: 200;
+}
+.slide-content h2 {
+    font-size: 43px;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 45px;
+    font-weight: 400;
+}
+.banner-wrap .icon-outer .slides {
+    position: relative;
+    cursor: pointer;
+}
+.banner-wrap .icon-outer .slides li {
+    position: relative;
+}
+.boat-type {
+    background: rgba(19, 23, 44, 0.9);
+    position: absolute;
+    width: 208px;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    min-height: 214px;
+    padding: 45px 0;
+    text-align: center;
+    opacity: 0;
+    transition: 0.5s all ease;
+}
+.banner-wrap .icon-outer .slides li:hover > .boat-type {
+    opacity: 1;
+}
+.boat-type h4 {
+    font-size: 22px;
+    color: #fff;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-weight: 400;
+    display: block;
+}
+.boat-type .btn-outline-light {
+    font-weight: 600;
+    font-size: 16px;
+    width: 145px;
+    margin: 0 auto;
+}
+/*_-Slider CSS End_-_*/
+
+
+/*_-Content CSS Start_-_*/
+
+/*_-Tech Sec CSS Start_-_*/
+.tech-box-sec {
+    background: url(../images/tech-bg.png) center center no-repeat;
+    background-size: cover;
+    padding: 74px 0 32px;
+} 
+.tech-box {
+    max-width: 1341px;
+    margin: 0 auto;
+    border: 2px solid #8aa027;
+    padding: 58px 70px 60px 70px;
+    margin-bottom: 37px;
+}
+.tech-box h2 {
+    margin-bottom: 30px;
+    font-weight: 400;
+    letter-spacing: 3px;
+    word-spacing: 5px;
+}
+.tech-box h2 span {
+    font-weight: 600;
+}
+.tech-box p {
+    margin-bottom: 43px;
+    line-height: 1.9;
+    text-transform: uppercase;
+}
+
+.tech-box-sec  .btn-outline-primary {
+    font-size: 22px;
+    font-weight: 600;
+    width: 205px;    
+    padding: 10px 0;
+    margin: 0 auto;
+}
+/*_-Tech Sec CSS End_-_*/
+
+/*_-Info Sec CSS Start_-_*/
+.info-section {
+    padding: 85px 0 77px;
+}
+.info-section > .container {
+    position: relative;
+}
+.hydro-heading {
+    position: absolute;
+    left: -300px;
+    top: 0;
+    bottom: 0;
+    transform: rotate(270deg);
+}
+.hydro-heading h1 {
+    font-size: 107px;
+    font-weight: 600;
+    color: rgba(102, 102, 102, 0.1);
+    text-transform: uppercase;
+    line-height: 1;
+    letter-spacing: 4px;
+}
+
+.info-box .info-img {
+    margin-bottom: 28px;
+    position: relative;
+}
+.info-box h3 {
+    font-size: 33px;
+    margin-bottom: 13px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+.info-box p {
+    text-transform: uppercase;
+    line-height: 31px;
+    margin-bottom: 18px;
+}
+.info-box .btn-outline-primary {
+    font-size: 19px;
+    font-weight: 600;
+    width: 175px;
+    padding: 7px 0 10px;
+}
+.search-overlay {
+    background: rgba(12, 70, 111, 0.4);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    transition: 0.5s all ease;
+}
+.search-overlay .search-btn {
+    border-left: 100px solid transparent;
+    border-right: 100px solid #90a62d;
+    border-top: 100px solid transparent;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background: transparent;
+}
+.search-btn button {
+    background: url(../images/search-icon.png) center center no-repeat;
+    z-index: 100;
+    background-size: cover;
+    width: 48px;
+    height: 44px;
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    bottom: 10px;
+    right: -90px;
+    display: inline-block;
+    cursor: pointer;
+}
+.info-box .info-img:hover .search-overlay {
+    opacity: 1;
+}
+/*_-Info Sec CSS End_-_*/
+
+
+/*_-Article Sec CSS Start_-_*/
+.article-sec {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.article-box {
+    height: 100%;
+}
+.article-box:first-child {
+    background: url(../images/artticle-box-bg.png) center center no-repeat;
+    background-size: cover;
+    width: 37%;
+    border-bottom: 11px solid #90a62d;
+}
+.article-box:nth-child(2){
+    background: #90a62d;
+    width: 26%;
+    border-bottom: 11px solid #141d33;
+}
+.article-box:last-child {
+    width: 37%;
+    border-bottom: 11px solid #144e77;
+    background: #141d33;
+}
+.article-content {
+    max-width: 430px;
+    padding: 30px 0 30px 40px;
+} 
+.article-content h4 {
+    color: #fff;
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+.article-content p {
+    color: #fff;
+    margin-bottom: 20px;
+    line-height: 1.7;
+}
+.article-content h4 span {
+    font-weight: 600;
+}
+.article-content .btn-outline-light {
+    width: 157px;
+    font-weight: 700;
+    font-size: 17px;
+    padding: 7px 0;
+}
+.with-border {
+    margin: 13px 20px 10px 20px;
+    padding: 17px 35px 18px 25px;
+    border: 1px solid #99af36;
+    max-width: 478px;
+    margin-left: auto;
+    height: 100%;
+}
+/*_-Article Sec CSS End_-_*/
+
+/*_-Hysucat Sec CSS End_-_*/
+.hysucat-sec {
+    background: url(../images/hysucat-bg.png) center center no-repeat;
+    min-height: 735px;
+    position: relative;
+    background-attachment: fixed;
+}
+.hysucat-logo {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    text-align: center;
+    margin: 0 auto;
+}
+/*_-Hysucat Sec CSS End_-_*/
+
+/*_-Buying Sec CSS Start_-_*/
+.buying-sec {
+    background: url(../images/buying-bg.png) center center no-repeat;
+    background-size: cover;
+    padding: 115px 0 93px;
+}
+.buying-content {
+    max-width: 975px;
+    margin: 0 auto;
+    text-align: center;
+}
+.buying-content h2 {
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 3px;
+    line-height: 1.3;
+    margin-bottom: 31px;
+}
+
+.buying-content .btn-outline-primary {
+    font-size: 19px;
+    font-weight: 600;
+    width: 315px;
+    margin: 0 auto;
+    display: block;
+    padding: 10px 0 7px;
+}
+/*_-Buying Sec CSS End_-_*/
+
+/*_-Post Sec CSS Start_-_*/
+.post-sec  {
+    background: #144e77;
+    overflow: hidden;
+}
+.post-sec > .container {
+    position: relative;
+}
+.post-inner {
+    display: flex;
+    flex-wrap: wrap;
+    z-index: 100;
+    position: relative;
+    z-index: 150;
+}
+.post-box {
+    width: 32%;
+    padding: 50px 0 60px 23px;
+    position: relative;
+}
+.post-box::before {
+    content: "";
+    position: absolute;
+    background: url(../images/hover-bg-green.png);
+    background-size: contain;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: all ease .5s;
+}
+ .post-box.active::before{
+    content: "";
+    position: absolute;
+    background: url(../images/hover-bg-green.png);
+    background-size: contain;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    transition: all ease .5s;
+}
+.post-box:hover::before {
+    opacity: 1;
+}
+.post-box:last-child {
+    margin-right: 0;
+}
+.post-box .post-img {
+    min-height: 263px;
+}
+.post-box .post-img img {
+    height: 100%;
+}
+.post-box span {
+    font-size: 14px;
+    color: #fff;
+    padding: 5px 0 13px 0;
+    text-transform: uppercase;
+    font-style: italic;
+    display: block;
+}
+.post-box h5 {
+    font-size: 19px;
+    color: #fff;
+    font-weight: 600;
+    margin-bottom: 22px;
+    letter-spacing: 1px;
+}
+.post-box .btn-outline-light {
+    font-size: 16px;
+    font-weight: 700;
+    width: 150px;
+    padding: 7px 0;
+}
+
+.hysucat-txt {
+    position: absolute;
+    bottom: -17px;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    text-align: center;
+}
+.hysucat-txt h1 {
+    font-size: 120px;
+    text-transform: uppercase;
+    color: #356083;
+    font-weight: 700;
+    letter-spacing: 8px;
+}
+/*_-Post Sec CSS End_-_*/
+
+/*_-Content CSS End_-_*/
+
+
+
+/*_-Footer CSS Start_-_*/
+footer .footer-top {
+    background: url(../images/footer-bg.png) center center no-repeat;
+    background-size: cover;
+    padding: 90px 0 60px;
+    margin-top: -17px;
+    z-index: 100;
+    position: relative;
+}
+
+footer .ftr-logo {
+    padding-top: 85px;
+}
+footer .ftr-list {
+    padding-bottom: 30px;
+}
+footer .ftr-list h6,
+footer .social-list h6 {
+    font-size: 16px;
+    color: #0c466f;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 7px;
+    text-transform: uppercase;
+}
+footer .ftr-list li {
+    color: #0c466f;
+    line-height: ;
+    margin-bottom: 7px;
+    text-transform: uppercase;
+}
+footer .ftr-list li a {
+    color: #0c466f;
+    font-weight: 400;
+}
+
+footer .social-list ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+footer .social-list a {
+    width: 27px;
+    line-height: 27px;
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    border-radius: 50%;
+    background: #064d7a;
+    margin-right: 4px;
+}
+footer .social-list a:hover,
+ .social-list li.active a{
+    background: #90a62d;
+}
+
+footer .footer-bottom {
+    background: #99af36;
+    padding: 10px 0;
+}
+footer .copyright p {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 400;
+    word-spacing: 3px;
+}
+footer .footer-bottom ul {
+    text-align: right;
+}
+footer .footer-bottom ul li {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 400;
+    word-spacing: 3px;
+}
+/*_-Footer CSS End_-_*/
+
+
+@media (max-width: 1400px){
+    .banner-wrap .flex-direction-nav .flex-prev, 
+    .flexslider:hover .flex-direction-nav .flex-prev {
+        left: 7%;
+    }
+    .banner-wrap .flex-direction-nav .flex-next, 
+    .flexslider:hover .flex-direction-nav .flex-next {
+        right: 7%;
+     }
+    .tech-box-sec {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    .tech-box {
+        padding: 58px 70px 30px 70px;
+    }
+    .tech-box p {
+        margin-bottom: 30px;
+    }
+    .info-section > .container {
+        max-width: 1000px;
+    }
+    .hydro-heading {
+        left: -170px;
+    }
+    .hydro-heading h1 {
+        font-size: 83px;
+    }
+    .slide-content {
+        right: 10%;
+    }
+    .article-box {
+        min-height: 295px;
+    }
+    .with-border {
+        margin: 13px 20px 10px 20px;
+    }
+    .hysucat-logo img {
+        width: 70%;
+    }
+}

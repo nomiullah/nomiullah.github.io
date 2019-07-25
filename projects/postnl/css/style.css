@@ -1,0 +1,616 @@
+html {
+    scroll-behavior: smooth;
+}
+body {
+    padding: 0;
+    margin: 0;
+    line-height: 1.5;
+    font-family: 'PostNL';
+}
+h1,h2,h3,h4,h5,h6 {
+    padding: 0;
+    margin: 0;
+}
+img {
+    max-width: 100%;
+}
+a {
+    transition: 0.5s all ease;
+}
+a:hover {
+    text-decoration: none;
+}
+ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.clear {
+    clear: both;
+}
+@font-face {
+    font-family: 'PostNL';
+    src: url('../fonts/PostNL-Medium.eot');
+    src: url('../fonts/PostNL-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/PostNL-Medium.woff2') format('woff2'),
+        url('../fonts/PostNL-Medium.woff') format('woff'),
+        url('../fonts/PostNL-Medium.ttf') format('truetype'),
+        url('../fonts/PostNL-Medium.svg#PostNL-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PostNL';
+    src: url('../fonts/PostNL-Light.eot');
+    src: url('../fonts/PostNL-Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/PostNL-Light.woff2') format('woff2'),
+        url('../fonts/PostNL-Light.woff') format('woff'),
+        url('../fonts/PostNL-Light.ttf') format('truetype'),
+        url('../fonts/PostNL-Light.svg#PostNL-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PostNL';
+    src: url('../fonts/PostNL-Bold.eot');
+    src: url('../fonts/PostNL-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/PostNL-Bold.woff2') format('woff2'),
+        url('../fonts/PostNL-Bold.woff') format('woff'),
+        url('../fonts/PostNL-Bold.ttf') format('truetype'),
+        url('../fonts/PostNL-Bold.svg#PostNL-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+/* Body CSS End */
+
+/*--- Header CSS Start ---*/
+.header {
+    background: #fff;
+    padding: 20px 0;
+    border-bottom: 1px solid #C9C9C9;
+    transition: 0.5s all ease;
+}
+.header-fixed {
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    border: none;
+    -webkit-box-shadow: 0px 1px 7px -1px rgba(0,0,0,0.30);
+    -moz-box-shadow: 0px 1px 7px -1px rgba(0,0,0,0.30);
+    box-shadow: 0px 1px 7px -1px rgba(0,0,0,0.30);
+    transition: 0.5s all ease;
+}
+.header .navbar-expand-lg {
+    padding: 0;
+}
+.header .navbar-expand-lg .navbar-nav .nav-link {
+    font-size: 18px;
+    font-weight: 500;
+    color: #061C6E;
+    padding: 0;
+    margin-right: 35px;
+}
+.header .navbar-expand-lg .navbar-nav .nav-link:hover {
+    color: #E08F3E;
+}
+.navbar-light .navbar-brand {
+    background-color: transparent;
+    color: inherit;
+    padding: 0;
+    margin-right: 50px;
+}
+.navbar-light .navbar-brand img {
+    width: 100%;
+}
+.head-right {
+    text-align: right;
+}
+.head-right a {
+    font-size: 18px;
+    font-weight: 300;
+    color: #E08F3E;
+    text-align: right;
+}
+/*--- Header CSS End ---*/
+
+/*--- Banner CSS Start ---*/
+.banner {
+    background: url(../images/banner-bg.png) center center no-repeat;
+    background-size: cover;
+    min-height: 680px;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 120px;
+}
+.banner h1 {
+    font-size: 94px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1;
+    margin-bottom: 0;
+}
+.banner h3 {
+    font-size: 52px;
+    color: #fff;
+    font-weight: 500;
+}
+.banner-wrap .carousel-control-prev,
+.banner-wrap .carousel-control-next {
+    display: none;
+}
+.banner-wrap .carousel-indicators li {
+    width: 7.7px;
+    height: 7.7px;
+    border-radius: 50%;
+    background: #fff;
+    opacity: 1;
+    margin: 0 4px;
+    padding: 0;
+    border: none;
+}
+.banner-wrap .carousel-indicators li.active {
+    background: #E08F3E;
+}
+/*--- Banner CSS End ---*/
+
+/*--- Content Start ---*/
+.content {
+    padding: 30px 0 0 0;
+}
+.content-seacrh {
+    padding-bottom: 30px;
+}
+.content-seacrh form {
+   max-width: 335px;
+   margin: 0 auto;
+   border: 1px solid #C9C9C9;
+   border-radius: 3px;
+}
+.form-group {
+    display: flex;
+    margin: 0;
+}
+.content-seacrh input {
+    font-size: 14px;
+    font-weight: 300;
+    color: #434343;
+    border: none;
+    padding: 10px 15px;
+    width: 88%;
+}
+.content-seacrh input:placeholder {
+    font-size: 14px;
+    font-weight: 300;
+    color: #434343;
+}
+.content-seacrh input:focus {
+    outline: none;
+    box-shadow: none;
+    border-color: #C9C9C9;
+}
+.content-seacrh button {
+    width: 12%;
+    /*background: url(../images/search-icon.png) center center no-repeat;*/
+    background-color: #E08F3E;
+    border-color: #E08F3E;
+    box-shadow: none;
+    position: relative;
+    border-color: transparent;
+    border: none;
+}
+.content-seacrh button:focus {
+    outline: none;
+    box-shadow: none;
+    border-color: transparent;
+    border: none;
+}
+.content-seacrh button:after {
+    content: "\f002";
+    display: inline-block;
+    font: normal normal normal 20px/1 FontAwesome;
+    color: #fff;
+    position: absolute;
+    left: 11px;
+    top: 11px;
+}
+
+
+/*--- Well_Come Sec CSS Start---*/
+.wc-section {
+    padding: 70px 0;
+}
+.wc-info {
+    padding-right: 50px;
+}
+.wc-section h3 {
+    font-size: 35px;
+    font-weight: 500;
+    color: #061C6E;
+    margin-bottom: 30px;
+}
+.wc-section p {
+    font-size: 17px;
+    font-weight: 500;
+    color: #434343;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+.wc-section p:nth-child(2) {
+    font-size: 20px;
+}
+.video-img {
+    position: relative;
+}
+.video-img img {
+    width: 100%;
+}
+.video-img .video-btn {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.wc-video span {
+    text-align: center;
+    display: block;
+    margin-bottom: 15px;
+    font-size: 17px;
+    font-weight: 300;
+    color: #E08F3E;
+}
+/*--- Well_Come Sec CSS Start---*/
+
+
+.accordion-sec {
+    padding: 70px 0;
+    background: #F4F4F4;
+}
+.accordion-sec .accordion>.card {
+    width: 31.3%;
+    margin-right: 32px;
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 35px;
+}
+.accordion-sec .accordion>.card:nth-child(3),
+.accordion-sec .accordion>.card:nth-child(6) {
+    margin-right: 0;
+}
+.accordion>.card .card-header {
+    height: auto;
+    width: 100%;
+    padding: 0;
+    background: transparent;
+    border: none;
+}
+.accordion>.card .card-header button,
+.hulp-tag {
+    padding: 15px 15px;
+    width: 100%;
+    text-align: left;
+    font-size: 28px;
+    font-weight: 500;
+    color: #061C6E;
+    line-height: 1;
+    transition: 0.5s all ease;
+    background: #fff;
+}
+.accordion>.card .card-header button span,
+.hulp-tag span  {
+    font-size: 16px;
+    font-weight: 300;
+    color: #434343;
+    display: block;
+    line-height: 1;
+    padding-top: 7px;
+}
+.accordion>.card .card-header button:after {
+    content: '';
+    width: 30px;
+    height: 1px;
+    background: #434343;
+    display: inline-block;
+    position: absolute;
+    right: 20px;
+    top: 40px;
+}
+.accordion>.card .card-header button.collapsed:before {
+    content: '';
+    width: 1px;
+    height: 30px;
+    background: #434343;
+    display: inline-block;
+    position: absolute;
+    right: 35px;
+    top: 25px;
+}
+.accordion>.card .card-header button:hover {
+    text-decoration: none;
+}
+.accordion-sec .card {
+    border: 1px solid #D0D0D0 !important;
+    border-radius: 10px 10px 0 10px !important;
+}
+.accordion>.card p {
+    font-size: 16px;
+    font-weight: 300;
+    margin-bottom: 0;
+}
+.btn-toon {
+    text-align: center;
+    width: 100%;
+}
+.accordion-sec .btn-warning {
+    background: #E08F3E;
+    border-color: #E08F3E;
+    font-size: 20px;
+    font-weight: 300;
+    color: #fff;
+    border-radius: 10px 10px 0 10px;
+    width: 100%;
+    max-width: 176px;
+    line-height: 53px;
+    padding: 0;
+    margin: 0 auto;
+    text-align: center;
+    display: inline-block;
+}
+/*--- Accordion Sec CSS End ---*/
+
+.hulp-sec {
+    padding: 50px 0;
+    background: #E08F3E;
+    text-align: center;
+    position: relative;
+}
+.hulp-sec h3 {
+    font-size: 25px;
+    font-weight: 300;
+    color: #fff;
+    margin-bottom: 20px;
+}
+.hulp-tag {
+    max-width: 334px;
+    margin: 0 auto;
+    border: 1px solid #D0D0D0;
+    border-radius: 10px 10px 0 10px;
+    position: relative;
+}
+.hulp-tag img {
+    position: absolute;
+    right: 15px;
+    top: 20px;
+}
+.hulp-sec:before {
+    content: '';
+    background: url(../images/tri-img.png) center center no-repeat;
+    width: 72px;
+    height: 19px;
+    display: inline-block;
+    position: absolute;
+    left: 50;
+    top: 0;
+    transform: translateX(-50%);
+}
+/*--- hulp Sec CSS End ---*/
+
+
+
+.mobile-sec {
+    background: #F4F4F4;
+    padding: 30px 0;
+    display: none;
+}
+.mobile-sec  h2 {
+    font-size: 25px;
+    font-weight: 300;
+    color: #434343;
+    margin-bottom: 25px;
+    text-align: center;
+}
+.mob-box {
+    border: 1px solid #D0D0D0;
+    border-bottom-left-radius: 10px;
+}
+.mob-box .video-img >img {
+    width: 100%;
+}
+.mob-vid-content {
+    padding: 10px 10px;
+}
+.mob-box h4 {
+    font-size: 14px;
+    font-weight: 500;
+    color: #061B6A;
+    line-height: 1.4;
+    margin-bottom: 10px;
+}
+.mob-box span {
+    font-size: 14px;
+    font-weight: 300;
+    color: #E08F3E;
+    text-align: center;
+    display: block;
+}
+/*--- Mobile Sec CSS End ---*/
+
+/*--- Content End ---*/
+
+
+/*--- Responsive Start ---*/
+@media (max-width: 1199px) {
+    .header .navbar-expand-lg .navbar-nav .nav-link {
+        font-size: 16px;
+        margin-right: 20px;
+    }
+    .banner {
+        min-height: 570px;
+    }
+    .banner h1 {
+        font-size: 76px;
+    }
+    .banner h3 {
+        font-size: 42px;
+    }
+
+    .accordion-sec .accordion>.card {
+        margin-right: 25px;
+    }
+}
+
+
+@media (max-width: 991px) {
+    .header-nav {
+        flex-direction: row-reverse;
+        justify-content: flex-start;
+    }
+
+    .header {
+        padding: 30px 0;
+    }
+    .navbar-light .navbar-brand {
+        position: absolute;
+        left: 56%;
+    }
+    .navbar-collapse {
+        position: absolute;
+        top: 50px;
+        background: rgb(255, 255, 255);
+        width: 100%;
+        padding: 15px 0 0 0;
+    }
+    .navbar-toggler {
+        padding: 0;
+        order: -1;
+    }
+    .header .navbar-expand-lg .navbar-nav .nav-link {
+        width: 100%;
+        margin-right: 0;
+        border-bottom: 1px solid #061C6E;
+        margin-bottom: 10px;
+        padding: 3px 15px;
+    }
+    .header .navbar-expand-lg .navbar-nav li:last-child a {
+        border-bottom: none;
+    }
+    .navbar-toggler:focus {
+        outline: none;
+    }
+    .navbar-light .navbar-toggler-icon,
+    .navbar-light .navbar-toggler {
+        background-image: none;
+        padding: 0;
+        border: none;
+        height: 22px;
+        z-index: 100;
+        position: relative;
+    }
+    .navbar .menu-btn span {
+        width: 30px;
+        height: 3px;
+        background-color: #E08F3E;
+        margin-bottom: 6px;
+        -webkit-transition: 1s all ease;
+        transition: 1s all ease;
+        display: block;
+    }
+    .navbar .menu-btn span:last-child {
+        margin-bottom: 0;
+    }
+    .navbar  .change-btn span:nth-child(1) {
+        -webkit-transform: rotate(-50deg) translate(-5px, 8px);
+        transform: rotate(-50deg) translate(-5px, 8px);
+    }
+    .navbar  .change-btn span:nth-child(2) {
+        opacity: 0;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    }
+    .navbar  .change-btn span:nth-child(3) {
+        -webkit-transform: rotate(47deg) translate(-5px, -8px);
+        transform: rotate(47deg) translate(-5px, -8px);
+    }
+    .accordion-sec .accordion>.card {
+        width: 46%;
+    }
+    .accordion-sec .accordion>.card {
+        margin: 0 10px 30px !important;
+    }
+    .wc-info {
+        padding-right: 0;
+    }
+    .wc-section {
+        padding: 40px 0;
+    }
+    .accordion>.card .card-header button, .hulp-tag {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 767px) {
+    .head-right a {
+        position: relative;
+        font-size: 0;
+    }
+    .head-right a:after {
+        content: '';
+        background: url(../images/mobile-button.png) center center no-repeat;
+        width: 33px;
+        height: 32px;
+        display: inline-block;
+        position: absolute;
+        right: 0;
+    }
+    .banner {
+        padding-bottom: 60px;
+        min-height: 400px;
+    }
+    .banner h1 {
+        font-size: 60px;
+    }
+    .banner h3 {
+        font-size: 36px;
+        line-height: 1.5;
+    }
+    .accordion-sec {
+        padding: 40px 0;
+        background: #fff;
+    }
+    .accordion-sec .accordion>.card {
+        width: 100%;
+        margin:  0 auto 20px !important;
+        display: block;
+    }
+    .mobile-sec {
+        display: block;
+    }
+    .wc-section h3 {
+        text-align: center;
+    }
+}
+
+@media (max-width: 640px) {
+    .banner {
+        min-height: 330px;
+    }
+    .banner h1 {
+        font-size: 45px;
+    }
+    .banner h3,
+    .wc-section h3 {
+        font-size: 25px;
+        line-height: 1.5;
+    }
+    .wc-section h3 {
+        margin-bottom: 20px;
+    }
+    .wc-section p:nth-child(2) {
+        font-size: 16px;
+    }
+}
+/*--- Responsive End ---*/

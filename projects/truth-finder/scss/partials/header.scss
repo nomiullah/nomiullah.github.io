@@ -1,0 +1,46 @@
+@import "variables.scss";
+@import "mixins.scss";
+
+.header {
+    background: $white;
+    box-shadow: 0 2px 40px 0 rgba(0,0,0,0.08);
+    padding: 16px 0;
+    &__logo {
+        display: inline-block;
+    }
+    &__logo-link {
+        display: block;
+        max-width: 150px;
+    }
+    &__logo-img{
+        width: 100%;
+    }
+    .truthfinder {
+        display: inline-block;
+        margin-left: 22px;
+        &__tf-link {
+            display: block;
+            max-width: 150px;
+        }
+        &__tf-img {
+            width: 100%;
+        }
+    }
+    .trackoff-info {
+        display: block;
+        text-align: right;
+        &__paragrpgh {
+            color: $light_black;
+            font-family: $basefamily;
+            font-size: 16px;
+            line-height: 20px;
+            font-weight: 400;
+            max-width: 358px;
+            margin: 0 0 0 auto;
+        }
+        &__red-font {
+            color: $red;
+        }
+    }
+
+}
