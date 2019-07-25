@@ -176,8 +176,8 @@ body {
 }
 
 .button:hover {
-  background-color: #08d827;
-  border-color: #08d827;
+  background-color: #188038;
+  border-color: #188038;
 }
 
 .button .mdi {
@@ -217,7 +217,7 @@ body {
 }
 
 .hexagon {
-  background-color: #4167f7;
+  background-color: #188038;
   height: 100%;
   width: calc(100% * 0.57735);
   display: inline-block;
@@ -246,7 +246,7 @@ body {
 }
 
 .highlight {
-  color: #4167f7;
+  color: #08d827;
 }
 
 .header {
@@ -281,7 +281,7 @@ nav {
   height: 50px;
   width: 100%;
   background: #1B242F;
-  border-bottom: 3px solid #4167f7;
+  border-bottom: 3px solid #188038;
   text-align: left;
   z-index: 99;
 }
@@ -340,7 +340,7 @@ nav .mdi-menu, nav a.skype {
 }
 
 nav .active {
-  color: #4167f7;
+  color: #08d827;
 }
 
 .carousel-wrap {
@@ -376,7 +376,6 @@ nav .active {
   position: absolute;
   bottom: 0;
   background: rgba(0, 0, 0, 0.3);
-  background: #08d827;
   padding: 10px 15px;
   cursor: pointer;
   font-size: 14pt !important;
@@ -430,7 +429,7 @@ nav .active {
 }
 
 .modal-wrap .close {
-  color:#08d827;
+  color: #bbb;
   font-size: 20pt;
   font-weight: 800;
   cursor: pointer;
@@ -552,10 +551,6 @@ section .container {
   z-index: 1;
   pointer-events: none;
   min-height: 80px;
-}
-
-#home .text .highlight {
-  color: #08d827;
 }
 
 #home .text-type {
@@ -702,7 +697,6 @@ section .container {
   left: 0;
   position: absolute;
   background-color: #08d827;
-  background: url(../img/progress-br.png) center left repeat;
   padding: 0;
   opacity: 1;
 }
@@ -711,7 +705,7 @@ section .container {
   top: 0;
   left: 0;
   position: absolute;
-  background-color: #4167f7;
+  background-color: #188038;
   color: #fff;
   height: 100%;
   width: 110px;
@@ -761,7 +755,7 @@ section .container {
   overflow: hidden;
   height: 25px;
   border-radius: 1px;
-  background: #4167f7;
+  background: #08d827;
   transition: all .5s ease-in-out;
 }
 
@@ -808,9 +802,7 @@ section .container {
   bottom: 0;
   left: 0;
   position: absolute;
-  background: #4167f7;
-  border: 2px solid #4167f7;
-  color: #fff;
+  border: 2px solid #08d827;
   width: 170px;
   margin: 0 auto;
   font-size: 13pt;
@@ -827,7 +819,6 @@ section .container {
 }
 
 #portfolio #gallery .mix .button:hover {
-  border-color: #08d827;
   background: #08d827;
   color: #fff;
 }
@@ -926,7 +917,7 @@ section .flex-50-gt-sm {
 
 #contact .highlight {
   font-weight: 600;
-  color: #4167f7;
+  color: #188038;
 }
 
 #contact svg {
@@ -972,7 +963,6 @@ section .flex-50-gt-sm {
 
 #contact .button:hover {
   background: #08d827;
-  border-color: #08d827;
 }
 
 #contact #success {
@@ -1014,7 +1004,7 @@ footer {
 footer .mdi-chevron-double-up {
   position: absolute;
   top: -25px;
-  background: #4167f7;
+  background: #188038;
   font-size: 30pt;
   width: 47px;
   height: 50px;
@@ -1039,7 +1029,7 @@ footer .icon-wrap .icon {
   position: relative;
   text-align: center;
   margin: 0 15px;
-  background: #4167f7;
+  background: #262F38;
   font-size: 18pt;
 }
 
@@ -1077,7 +1067,7 @@ footer .footnote {
 
 footer .footnote .highlight {
   font-family: 'Open Sans';
-  color: #fff;
+  color: #08d827;
 }
 
 @media screen and (max-width: 400px) {
@@ -1376,7 +1366,7 @@ footer .footnote .highlight {
 }
 
 .tel-link i {
-  color: #4167f7;
+  color: #188038
 }
 
 .arrow-bounce {
@@ -1459,7 +1449,7 @@ footer .footnote .highlight {
 }
 
 .swiper-pagination-bullet-active {
-  background: #4167f7; 
+  background: #188038; 
 }
 
 .swiper-button-prev {
@@ -1482,8 +1472,8 @@ footer .footnote .highlight {
 .btn-clr {
   margin-top: 20px;
   color: #fff;
-  background-color: #4167f7;
-  border-color: #4167f7;
+  background-color: #188038;
+  border-color: #188038;
   position: relative;
   padding-right: 50px;
 }
