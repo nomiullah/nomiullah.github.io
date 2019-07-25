@@ -1,0 +1,763 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> -->
+
+<!--[if IE 6]>
+<html xmlns="http://www.w3.org/1999/xhtml" id="ie6">
+<![endif]-->
+<!--[if IE 7]>
+<html xmlns="http://www.w3.org/1999/xhtml" id="ie7">
+<![endif]-->
+<!--[if IE 8]>
+<html xmlns="http://www.w3.org/1999/xhtml" id="ie8">
+<![endif]-->
+<!--[if !(IE 6) | !(IE 7) | !(IE 8)  ]><!-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!--<![endif]-->
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    
+    <title>Home Page</title>
+    
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300italic,600,700' rel='stylesheet' type='text/css'>
+    
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.css" />
+    <link type="text/css" rel="stylesheet" href="css/bootstrap-theme.css" />
+    <link type="text/css" rel="stylesheet" href="css/font-awesome.css" />
+    <link type="text/css" rel="stylesheet" href="css/jquery.bxslider.css" />
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
+    <link type="text/css" rel="stylesheet" href="css/rtl.css" />
+    
+    <!--[if lte IE 8]>
+    <link type="text/css" rel="stylesheet" href="css/ie.css" />
+    <script type="text/javascript" src="js/modernizr.min.js"></script>
+    <![endif]-->
+    
+    <!--[if lte IE 6]>
+    <script type="text/javascript" src="js/belated.js"></script>
+    <![endif]-->
+    
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/jquery.bxslider.js"></script>
+    <script type="text/javascript">
+		$(function(){
+			$('.bx-slider').bxSlider({
+				auto: true,
+				minSlides: 6,
+				maxSlides: 6,
+				moveSlides: 1,
+				slideWidth: 170,
+				slideMargin: 10,
+				pager	:	false
+			});
+			$('#myTab a').click(function (e) {
+				  e.preventDefault()
+				  $(this).tab('show')
+				})
+
+		})
+    </script>
+    
+    
+    
+    
+</head>
+
+<body class="rtl">
+
+<div id="container-fluid">
+
+<!--header start -->
+<div id="header-wrap">
+	<div class="container">
+    	<div id="header">
+            <div class="row">
+                <div class="col-sm-4"><div class="logo"><a href="#"><img src="images/logo.png" alt="" /></a></div></div>
+                <div class="col-sm-5">
+                	<div class="input-group">
+                        <input type="text" class="form-control">
+                        <span class="input-group-btn">
+                            <button type="button" class="btn btn-warning">Search</button>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                	<div class="header-right">
+                    	<p>
+                        	<a href="#myModal" role="button"  data-toggle="modal" class="btn btn-primary btn-sm">Login</a>
+                            <a href="#myModal-2" role="button"  data-toggle="modal"  class="btn btn-primary btn-sm">Sign up</a>
+                        </p>
+                        <div class="social-bar hidden-sm hidden-xs">
+                            <a class="facebook" href="#"><span class="icon-facebook"></span></a>
+                            <a class="rss" href="#"><span class="icon-rss"></span></a>
+                            <a class="linkedin" href="#"><span class="icon-linkedin"></span></a>
+                            <a class="youtube" href="#"><span class="icon-youtube"></span></a>
+                            <a class="twitter" href="#"><span class="icon-twitter"></span></a>
+                            <a class="pinterest" href="#"><span class="icon-pinterest"></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--header end -->
+
+    
+<!--main start -->
+<div id="main-wrap">
+<div class="pattren-bg">
+    <div class="container">
+        <nav class="navbar theme-navigation navbar-inverse blue-gradient" role="navigation">
+          <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+        
+          <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="navbar-1">
+                <ul class="nav navbar-nav navigation">
+                    <li><a href="#">Recent Videos</a></li>
+                    <li class="dropdown">
+                            <a id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="#">
+                              Popular Videos  <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                              <li><a href="#">Menu Item</a></li>
+                              <li><a href="#">Menu Item</a></li>
+                              <li><a href="#">Menu Item</a></li>
+                            </ul>
+                        </li>
+                    <li><a href="#">Play Random</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </nav>
+    <div class="slider-shadow">
+        <div class="home-slider-wrap blue-gradient">
+        	<ul>
+            	<li>
+                	<div class="video-list clearfix">
+	                	<div class="large-video col-sm-7">
+	                        <a href="#"><img src="images/video-large.png" alt="" class="img-dull"><i class="icon-play"></i></a>
+                        </div>
+                        <div class="video-rated col-sm-5">
+                            <ul>
+                                <li>
+	                                <h4>TODAY'S TOP VIDEOS</h4>
+	                                <a href="#" class="btn btn-inside number">1</a>
+                                    <div class="video-rated-photo">
+                                        <a href="#">
+                                            <img class="img-dull" alt="" src="images/video-small.jpg">
+                                            <i class="icon-play"></i>
+                                        </a>
+                                    </div>
+                                    <div class="video-rated-info">
+                                        <p>Fail Compilation Week 1and 2 June 2013..</p>
+                                        <div class="video-status">
+                                            <p>
+                                            <span class="icon-time"></span>
+                                            <span><a href="#" class="time-txt">one day ago</a></span>&nbsp;&nbsp;&nbsp;
+                                            <span class="icon-eye-open"></span> 0</p>
+                                        </div>
+                                    </div>
+                                    <div class="cl"></div>
+                                </li>
+                                <li>
+	                                <a href="#" class="btn btn-inside number">2</a>
+                                    <div class="video-rated-photo">
+                                        <a href="#">
+                                            <img class="img-dull" alt="" src="images/video-small.jpg">
+                                            <i class="icon-play"></i>
+                                        </a>
+                                    </div>
+                                    <div class="video-rated-info">
+                                        <p>Fail Compilation Week 1and 2 June 2013..</p>
+                                        <div class="video-status">
+                                            <p>
+                                            <span class="icon-time"></span>
+                                            <span><a href="#" class="time-txt">one day ago</a></span>&nbsp;&nbsp;&nbsp;
+                                            <span class="icon-eye-open"></span> 0</p>
+                                        </div>
+                                    </div>
+                                    <div class="cl"></div>
+                                </li>
+                                <li>
+	                                <a href="#" class="btn btn-inside number">3</a>
+                                    <div class="video-rated-photo">
+                                        <a href="#">
+                                            <img class="img-dull" alt="" src="images/video-small.jpg">
+                                            <i class="icon-play"></i>
+                                        </a>
+                                    </div>
+                                    <div class="video-rated-info">
+                                        <p>Fail Compilation Week 1and 2 June 2013..</p>
+                                        <div class="video-status">
+                                            <p>
+                                            <span class="icon-time"></span>
+                                            <span><a href="#" class="time-txt">one day ago</a></span>&nbsp;&nbsp;&nbsp;
+                                            <span class="icon-eye-open"></span> 0</p>
+                                        </div>
+                                    </div>
+                                    <div class="cl"></div>
+                                </li>
+                                <li>
+	                                <a href="#" class="btn btn-inside number">3</a>
+                                    <div class="video-rated-photo">
+                                        <a href="#">
+                                            <img class="img-dull" alt="" src="images/video-small.jpg">
+                                            <i class="icon-play"></i>
+                                        </a>
+                                    </div>
+                                    <div class="video-rated-info">
+                                        <p>Fail Compilation Week 1and 2 June 2013..</p>
+                                        <div class="video-status">
+                                            <p>
+                                            <span class="icon-time"></span>
+                                            <span><a href="#" class="time-txt">one day ago</a></span>&nbsp;&nbsp;&nbsp;
+                                            <span class="icon-eye-open"></span> 0</p>
+                                        </div>
+                                    </div>
+                                    <div class="cl"></div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        </div>
+        
+        
+        <div class="clearfix video-thumb-wrap video-thumb-wrap-2 home-page-carosel ">
+            <ul class="bx-slider">
+                <li>
+                    <div class="photo-section photo-section-2">
+                        <a href="#"><img  class="img-dull img-thumbnail" src="images/video-large.png" alt="" />
+                            <i class="icon-play"></i>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="photo-section photo-section-2">
+                        <a href="#"><img  class="img-dull img-thumbnail" src="images/video-large.png" alt="" />
+                            <i class="icon-play"></i>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="photo-section photo-section-2">
+                        <a href="#"><img  class="img-dull img-thumbnail" src="images/video-large.png" alt="" />
+                            <i class="icon-play"></i>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="photo-section photo-section-2">
+                        <a href="#"><img  class="img-dull img-thumbnail" src="images/video-large.png" alt="" />
+                            <i class="icon-play"></i>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="photo-section photo-section-2">
+                        <a href="#"><img  class="img-dull img-thumbnail" src="images/video-large.png" alt="" />
+                            <i class="icon-play"></i>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="photo-section photo-section-2">
+                        <a href="#"><img  class="img-dull img-thumbnail" src="images/video-large.png" alt="" />
+                            <i class="icon-play"></i>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+            <img class="right-corner" src="images/slider-right-bottom.png" alt="" />
+            <img class="left-corner" src="images/slider-left-bottom.png" alt="" />
+        </div><!-- clearfix video-thumb-wrap -->
+        
+        
+        
+        <div id="main" class="index-main">
+            <div class="main-inner">
+                <div class="row">
+                    <div class="col-sm-8" id="contents">
+						<div class="section-heading">
+	                        <h3>
+                                <div class="row">
+                                    <div class="col-xs-9">
+                                    	<span>Recently Added Videos</span>
+                                    </div>
+                                    <div class="col-xs-3 text-right">
+                                    	<a href="#" class="btn btn-warning btn-xs">View All</a>
+                                    </div>
+                                </div>
+                            </h3>
+                        </div>
+                        <div class="thumbnail-wrap row">
+                        	<div class="col-sm-6">
+                            	<div class="thumbnail">
+                                	<a href="#">
+                                    	<img class="img-dull" src="images/video-large.png" alt="" />
+                                        <i class="icon-play"></i>
+                                    </a>
+                                    <div class="thumb-title clearfix">
+	                                    <div class="pull-right"><span class="s-no">1</span></div>
+                                    	<div>How animal eat their food</div>
+                                        
+                                    </div>
+                                </div><!-- thumbnail -->
+                                <div class="vertical-align clearfix">
+                                	<div class="left-col">
+    		                            <p><span class="time-txt">01:25 mins</span></p>
+	                                </div>
+                                    <div class="right-col text-right">
+    		                            <span class="icon-star yellow"></span>
+                                        <span class="icon-star yellow"></span>
+                                        <span class="icon-star yellow"></span>
+                                        <span class="icon-star yellow"></span>
+                                        <span class="icon-star"></span>
+	                                </div>
+                                </div><!-- vertical-align clearfix -->
+                            </div><!-- col-sm-6 -->
+                            <div class="col-sm-6">
+                            	<div class="thumbnail">
+                                	<a href="#">
+                                    	<img class="img-dull" src="images/video-large.png" alt="" />
+                                        <i class="icon-play"></i>
+                                    </a>
+                                    <div class="thumb-title clearfix">
+	                                    <div class="pull-right"><span class="s-no">1</span></div>
+                                    	<div>How animal eat their food</div>
+                                        
+                                    </div>
+                                </div><!-- thumbnail -->
+                                <div class="vertical-align clearfix">
+                                	<div class="left-col">
+    		                            <p><span class="time-txt">01:25 mins</span></p>
+	                                </div>
+                                    <div class="right-col text-right">
+    		                            <span class="icon-star yellow"></span>
+                                        <span class="icon-star yellow"></span>
+                                        <span class="icon-star yellow"></span>
+                                        <span class="icon-star yellow"></span>
+                                        <span class="icon-star"></span>
+	                                </div>
+                                </div><!-- vertical-align clearfix -->
+                            </div><!-- col-sm-6 -->
+                            <div class="col-sm-6">
+                            	<div class="thumbnail">
+                                	<a href="#">
+                                    	<img class="img-dull" src="images/video-large.png" alt="" />
+                                        <i class="icon-play"></i>
+                                    </a>
+                                    <div class="thumb-title clearfix">
+	                                    <div class="pull-right"><span class="s-no">1</span></div>
+                                    	<div>How animal eat their food</div>
+                                        
+                                    </div>
+                                </div><!-- thumbnail -->
+                                <div class="vertical-align clearfix">
+                                	<div class="left-col">
+    		                            <p><span class="time-txt">01:25 mins</span></p>
+	                                </div>
+                                    <div class="right-col text-right">
+    		                            <span class="icon-star yellow"></span>
+                                        <span class="icon-star yellow"></span>
+                                        <span class="icon-star yellow"></span>
+                                        <span class="icon-star yellow"></span>
+                                        <span class="icon-star"></span>
+	                                </div>
+                                </div><!-- vertical-align clearfix -->
+                            </div><!-- col-sm-6 -->
+                            <div class="col-sm-6">
+                            	<div class="thumbnail">
+                                	<a href="#">
+                                    	<img class="img-dull" src="images/video-large.png" alt="" />
+                                        <i class="icon-play"></i>
+                                    </a>
+                                    <div class="thumb-title clearfix">
+	                                    <div class="pull-right"><span class="s-no">1</span></div>
+                                    	<div>How animal eat their food</div>
+                                        
+                                    </div>
+                                </div><!-- thumbnail -->
+                                <div class="vertical-align clearfix">
+                                	<div class="left-col">
+    		                            <p><span class="time-txt">01:25 mins</span></p>
+	                                </div>
+                                    <div class="right-col text-right">
+    		                            <span class="icon-star yellow"></span>
+                                        <span class="icon-star yellow"></span>
+                                        <span class="icon-star yellow"></span>
+                                        <span class="icon-star yellow"></span>
+                                        <span class="icon-star"></span>
+	                                </div>
+                                </div><!-- vertical-align clearfix -->
+                            </div><!-- col-sm-6 -->
+                        </div><!-- thumbnail-wrap -->
+                        <!-- Nav tabs -->
+                        <div class="theme-tabs-wrap">
+                            <ul class="nav nav-tabs theme-tabs">
+                              <li class="active"><a href="#tab-1" data-toggle="tab">Funny Videos</a></li>
+                              <li><a href="#tab-2" data-toggle="tab">Kids Videos</a></li>
+                              <li><a href="#tab-3" data-toggle="tab">Dog Videos</a></li>
+                              <li><a href="#tab-4" data-toggle="tab">Sports Fails</a></li>
+                            </ul>
+                        
+                        <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div class="tab-pane active" id="tab-1">
+                                    <div class="clearfix video-thumb-wrap">
+                                        <div class="photo-section photo-section-2">	
+                                        	<a href="#">
+	                                            <img class="img-dull" alt="" src="images/img-1.png">
+                                                <i class="icon-play"></i>
+                                            </a>
+                                        </div>
+                                        <h4>The Office: Random Funny Momen</h4>
+                                        <div class="video-status">
+                                            <p><span class="icon-time"></span>
+                                            <span>5 Comments</span>
+                                            &nbsp;&nbsp;&nbsp;
+                                            <span class="icon-eye-open"></span> 500
+                                            &nbsp;&nbsp;&nbsp;
+                                            <span class="icon-thumbs-up"></span> 90</p>
+                                        </div><!-- video-status -->
+                                        <p>This might be the lowest standing back tuck ever. Really <br>
+                                            impressive.</p>
+                                    </div>
+                                    <div class="clearfix video-thumb-wrap">
+                                        <div class="photo-section photo-section-2">	
+                                        	<a href="#">
+	                                            <img class="img-dull" alt="" src="images/img-1.png">
+                                                <i class="icon-play"></i>
+                                            </a>
+                                        </div>
+                                        <h4>The Office: Random Funny Momen</h4>
+                                        <div class="video-status">
+                                            <p><span class="icon-time"></span>
+                                            <span>5 Comments</span>
+                                            &nbsp;&nbsp;&nbsp;
+                                            <span class="icon-eye-open"></span> 500
+                                            &nbsp;&nbsp;&nbsp;
+                                            <span class="icon-thumbs-up"></span> 90</p>
+                                        </div><!-- video-status -->
+                                        <p>This might be the lowest standing back tuck ever. Really <br>
+                                            impressive.</p>
+                                    </div>
+                                    <div class="clearfix video-thumb-wrap">
+                                        <div class="photo-section photo-section-2">	
+                                        	<a href="#">
+	                                            <img class="img-dull" alt="" src="images/img-1.png">
+                                                <i class="icon-play"></i>
+                                            </a>
+                                        </div>
+                                        <h4>The Office: Random Funny Momen</h4>
+                                        <div class="video-status">
+                                            <p><span class="icon-time"></span>
+                                            <span>5 Comments</span>
+                                            &nbsp;&nbsp;&nbsp;
+                                            <span class="icon-eye-open"></span> 500
+                                            &nbsp;&nbsp;&nbsp;
+                                            <span class="icon-thumbs-up"></span> 90</p>
+                                        </div><!-- video-status -->
+                                        <p>This might be the lowest standing back tuck ever. Really <br>
+                                            impressive.</p>
+                                    </div>
+                                    <div class="clearfix video-thumb-wrap last-item">
+                                        <div class="photo-section photo-section-2">	
+                                        	<a href="#">
+	                                            <img class="img-dull" alt="" src="images/img-1.png">
+                                                <i class="icon-play"></i>
+                                            </a>
+                                        </div>
+                                        <h4>The Office: Random Funny Momen</h4>
+                                        <div class="video-status">
+                                            <p><span class="icon-time"></span>
+                                            <span>5 Comments</span>
+                                            &nbsp;&nbsp;&nbsp;
+                                            <span class="icon-eye-open"></span> 500
+                                            &nbsp;&nbsp;&nbsp;
+                                            <span class="icon-thumbs-up"></span> 90</p>
+                                        </div><!-- video-status -->
+                                        <p>This might be the lowest standing back tuck ever. Really <br>
+                                            impressive.</p>
+                                    </div>
+                                    <div class="blue-gradient clearfix tab-footer">
+                                    	<a href="#" class="btn btn-inside btn-lg pull-right">View More</a>
+                                    </div>
+                                    
+                                </div>
+                                <div class="tab-pane" id="tab-2">
+                                	<div class="col-sm-12"><h1>Kids Video</h1></div>
+                                </div>
+                                <div class="tab-pane" id="tab-3">
+                                	<div class="col-sm-12"><h1>Dogs Video</h1></div>
+                                </div>
+                                <div class="tab-pane" id="tab-4">
+                                	<div class="col-sm-12"><h1>Sports Video</h1></div>
+                                </div>
+                            </div>
+						</div><!-- theme-tabs-wrap -->
+		            </div><!--contents -->
+                    <div class="col-sm-4" id="sidebar">
+                    	<div class="sidebar-section">
+                        	<div class="section-heading">
+	                        	<h3>Top rated Videos</h3>
+                            </div>
+                            <div class="video-rated">
+                            	<ul>
+                                	<li>
+                                    	<div class="video-rated-photo">
+                                        	<a href="#">
+                                            	<img src="images/video-small.jpg" alt="" class="img-dull" />
+                                                <i class="icon-play"></i>
+                                            </a>
+                                        </div>
+                                        <div class="video-rated-info">
+                                        	<h4>Messi goal Completion</h4>
+                                            <p><a href="#">September 22, 2013</a></p>
+                                            <div class="comment-section"><em class="icon-comment"></em> <span>5 comments</span></div>
+                                        </div>
+                                        <div class="cl"></div>
+                                    </li>
+                                    <li>
+                                    	<div class="video-rated-photo">
+                                        	<a href="#">
+                                            	<img src="images/video-small.jpg" alt="" class="img-dull" />
+                                                <i class="icon-play"></i>
+                                            </a>
+                                        </div>
+                                        <div class="video-rated-info">
+                                        	<h4>Messi goal Completion</h4>
+                                            <p><a href="#">September 22, 2013</a></p>
+                                            <div class="comment-section"><em class="icon-comment"></em> <span>5 comments</span></div>
+                                        </div>
+                                        <div class="cl"></div>
+                                    </li>
+                                    <li>
+                                    	<div class="video-rated-photo">
+                                        	<a href="#">
+                                            	<img src="images/video-small.jpg" alt="" class="img-dull" />
+                                                <i class="icon-play"></i>
+                                            </a>
+                                        </div>
+                                        <div class="video-rated-info">
+                                        	<h4>Messi goal Completion</h4>
+                                            <p><a href="#">September 22, 2013</a></p>
+                                            <div class="comment-section"><em class="icon-comment"></em> <span>5 comments</span></div>
+                                        </div>
+                                        <div class="cl"></div>
+                                    </li>
+                                    <li>
+                                    	<div class="video-rated-photo">
+                                        	<a href="#">
+                                            	<img src="images/video-small.jpg" alt="" class="img-dull" />
+                                                <i class="icon-play"></i>
+                                            </a>
+                                        </div>
+                                        <div class="video-rated-info">
+                                        	<h4>Messi goal Completion</h4>
+                                            <p><a href="#">September 22, 2013</a></p>
+                                            <div class="comment-section"><em class="icon-comment"></em> <span>5 comments</span></div>
+                                        </div>
+                                        <div class="cl"></div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div><!--sidebar-section -->
+                        
+                        <div class="sidebar-section">
+                        	<div class="section-heading"><h3>Categories</h3></div>
+                            <div id="categories">
+                            	<div class="row">
+                                	<div class="col-sm-6">
+                                    	<div class="cat-list">
+                                        	<li><a href="#">Funny Videos</a></li>
+                                            <li><a href="#">Kids Videos</a></li>
+                                            <li><a href="#">Explosions</a></li>
+                                            <li><a href="#">Dog Videos</a></li>
+                                            <li><a href="#">Funny Videos</a></li>
+                                            <li><a href="#">Kids Videos</a></li>
+                                            <li><a href="#">Explosions</a></li>
+                                            <li><a href="#">Dog Videos</a></li>
+                                            <li><a href="#">Funny Videos</a></li>
+                                            <li><a href="#">Kids Videos</a></li>
+                                            <li><a href="#">Explosions</a></li>
+                                            <li><a href="#">Dog Videos</a></li>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                    	<div class="cat-list">
+                                        	<li><a href="#">Funny Videos</a></li>
+                                            <li><a href="#">Kids Videos</a></li>
+                                            <li><a href="#">Explosions</a></li>
+                                            <li><a href="#">Dog Videos</a></li>
+                                            <li><a href="#">Funny Videos</a></li>
+                                            <li><a href="#">Kids Videos</a></li>
+                                            <li><a href="#">Explosions</a></li>
+                                            <li><a href="#">Dog Videos</a></li>
+                                            <li><a href="#">Funny Videos</a></li>
+                                            <li><a href="#">Kids Videos</a></li>
+                                            <li><a href="#">Explosions</a></li>
+                                            <li><a href="#">Dog Videos</a></li>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="add-section"><a href="#"><img src="images/add-sidebar.jpg" alt="" /></a></div>
+                    </div><!--sidebar -->
+                </div>
+            </div>
+            
+        </div><!--main -->
+    </div><!-- container -->
+</div><!-- pattren-bg -->
+</div>
+<!--main-->
+
+
+<!--footer start -->
+<div id="footer-wrap">
+	<div class="container">
+        <div id="footer">
+            
+            <div class="row">
+            	<div class="col-sm-9">
+                	<div class="row">
+                    	<div class="col-sm-3">
+                        	<h3>Site map</h3>
+                            <ul class="footer-list">
+                            	<li><a href="#">Home</a></li>
+                                <li><a href="#">Recent Videos</a></li>
+                                <li><a href="#">Popular videos</a></li>
+                                <li><a href="#">Play Random</a></li>
+                                <li><a href="#">Contact us</a></li>
+                                <li><a href="#">Terms of Use</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-3">
+                        	<h3>Categories</h3>
+                            <ul>
+                            	<li><a href="#">Funny Videos</a></li>
+                                <li><a href="#">Kids Videos</a></li>
+                                <li><a href="#">Explosions</a></li>
+                                <li><a href="#">Dog Videos</a></li>
+                                <li><a href="#">Accidents/Crashes</a></li>
+                                <li><a href="#">Pranks</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-3">
+                        	<h3 class="heading-empty"></h3>
+                            <ul>
+                            	<li><a href="#">Just for Laughs Gags</a></li>
+                                <li><a href="#"> Magic Tricks</a></li>
+                                <li><a href="#">Amazing</a></li>
+                                <li><a href="#">People are Awesome</a></li>
+                                <li><a href="#">Scary Videos</a></li>
+                                <li><a href="#">Sports Fails</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-3">
+                        	<h3 class="heading-empty"></h3>
+                            <ul>
+                            	<li><a href="#">Just Kidding</a></li>
+                                <li><a href="#">Commercials</a></li>
+                                <li><a href="#">Funny Cartoons</a></li>
+                                <li><a href="#">AFV</a></li>
+                                <li><a href="#">Indian Funny Videos</a></li>
+                                <li><a href="#">Pakistani Videos</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                	<h3>Follow us on</h3>
+                    <div class="social-bar">
+                    	<a class="youtube" href="#"><span class="icon-youtube"></span> <em>Youtube</em></a> <br />
+                        <a class="facebook" href="#"><span class="icon-facebook"></span> <em>Facebook</em></a> <br />
+                        <a class="twitter" href="#"><span class="icon-twitter"></span> <em>Twittter</em></a> <br />
+                        <a class="linkedin" href="#"><span class="icon-linkedin"></span> <em>Linked in</em></a> <br />
+                        <a class="pinterest" href="#"><span class="icon-pinterest"></span> <em>Pinterest</em></a> <br />
+                        <a class="rss" href="#"><span class="icon-rss"></span> <em>RSS</em></a> 
+                    </div>
+                </div>
+            </div>
+            
+        </div><!--footer -->
+    </div>
+</div>
+<!--footer end -->
+
+<div id="footer-bot-wrap">
+	<div class="container">
+    	&copy; 2013 -2014 Video basket. All rights reserved.
+    </div>
+</div>
+
+</div><!--container-fluid -->
+
+<div id="myModal" class="modal fade signin-model" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="model-wrap">
+    <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Log In</h3>
+    </div>
+    <div class="modal-body">
+        <form  class="row">
+            <div class="col-sm-12">
+            <label>Enter Your Email Address</label>    
+            <p><input type="text" placeholder="Plese Enter Your Email Address" class="form-control"></p>
+            <label>Enter Your Password</label>    
+            <p><input type="text" placeholder="Password" class="form-control"></p>
+            <p class="clearfix"><button class="btn btn-primary col-sm-6">Log In</button></p>
+            <p><label>OR</label></p>
+            <p class="clearfix"><button class="btn btn-primary col-sm-6"><span class="icon-facebook"></span> Log In with Facebook</button></p>
+            <p class="clearfix"><button class="btn btn-info col-sm-6"><span class="icon-twitter"></span> Log In with Twitter </button></p>
+            </div>
+        </form>
+    </div>
+</div>
+</div>
+
+
+
+<div id="myModal-2" class="modal fade signin-model" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="model-wrap">
+    <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Sign Up</h3>
+    </div>
+    <div class="modal-body">
+        <form  class="row">
+            <div class="col-sm-12">
+                <label>Name</label>    
+                <p><input type="text" placeholder="Full Name" class="form-control"></p>
+                <label>User Name</label>    
+                <p><input type="text" placeholder="Choose a User Name" class="form-control"></p>
+                <label>Email Address</label>    
+                <p><input type="text" placeholder="Plese Enter Your Email Address" class="form-control"></p>
+                <label>Password</label>    
+                <p><input type="text" placeholder="Password" class="form-control"></p>
+                <label>Confirm Password</label>    
+                <p><input type="text" placeholder="Confirm Password" class="form-control"></p>
+                <button class="btn btn-primary col-sm-6 col-xs-6">Sign Up</button>
+            </div>
+        </form>
+    </div>
+</div>
+</div>
+
+</body>
+</html>

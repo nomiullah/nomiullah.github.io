@@ -247,6 +247,6 @@ TxtType.prototype.tick = function() {
 };
 
 
-j(window).bind('load', function(e){
+jQuery(window).bind('load', function(e){
     $('#preload').html('<img src="img/slides/agency-0.jpg"/><img src="img/slides/agency-1.jpg"/><img src="img/slides/agency-2.jpg"/><img src="img/slides/hijabs-0.jpg"/><img src="img/slides/hijabs-1.jpg"/><img src="img/slides/hijabs-2.jpg"/><img src="img/slides/learning-0.jpg"/><img src="img/slides/learning-1.jpg"/><img src="img/slides/learning-2.jpg"/><img src="img/slides/ug-0.jpg"/><img src="img/slides/ug-1.jpg"/><img src="img/slides/ug-2.jpg"/><img src="img/slides/route-0.jpg"/><img src="img/slides/route-1.jpg"/><img src="img/slides/route-2.jpg"/><img src="img/slides/otrading-0.jpg"/><img src="img/slides/otrading-1.jpg"/><img src="img/slides/otrading-2.jpg"/><img src="img/slides/mystand-0.jpg"/><img src="img/slides/mystand-1.jpg"/><img src="img/slides/mystand-2.jpg"/><img src="img/slides/never-0.jpg"/><img src="img/slides/never-1.jpg"/><img src="img/slides/never-2.jpg"/><img src="img/slides/powur-0.jpg"/><img src="img/slides/powur-1.jpg"/><img src="img/slides/powur-2.jpg"/><img src="img/slides/roambi-0.jpg"/><img src="img/slides/roambi-1.jpg"/><img src="img/slides/roambi-2.jpg"/><img src="img/slides/themall-0.jpg"/><img src="img/slides/themall-1.jpg"/><img src="img/slides/themall-2.jpg"/><img src="img/slides/walker-0.jpg"/><img src="img/slides/walker-1.jpg"/><img src="img/slides/walker-2.jpg"/>');
 });

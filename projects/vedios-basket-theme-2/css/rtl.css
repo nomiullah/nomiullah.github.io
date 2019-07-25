@@ -1,0 +1,252 @@
+/*  default-theme-for-rtl  */
+.rtl{
+	direction:rtl;
+}
+.rtl .col-xs-1,
+.rtl .col-xs-2,
+.rtl .col-xs-3,
+.rtl .col-xs-4,
+.rtl .col-xs-5,
+.rtl .col-xs-6,
+.rtl .col-xs-7,
+.rtl .col-xs-8,
+.rtl .col-xs-9,
+.rtl .col-xs-10,
+.rtl .col-xs-11{
+  float: right;
+}
+.rtl .col-sm-1,
+.rtl .col-sm-2,
+.rtl .col-sm-3,
+.rtl .col-sm-4,
+.rtl .col-sm-5,
+.rtl .col-sm-6,
+.rtl .col-sm-7,
+.rtl .col-sm-8,
+.rtl .col-sm-9,
+.rtl .col-sm-10,
+.rtl .col-sm-11 {
+float: right;
+}
+.rtl .dropdown-menu{
+	float:right;
+}
+.rtl .nav-tabs > li,
+.rtl .nav-pills > li {
+	float:right;
+}
+.rtl .navbar-brand,
+.rtl .navbar-nav,
+.rtl .navbar-nav > li,
+.rtl .pager .previous > a,
+.rtl .pager .previous > span,
+.rtl .progress-bar{
+	float:right;
+}
+.rtl .pagination > li > a,
+.rtl .pagination > li > span{
+	 margin-left: 0;
+	  margin-right: -1px;
+}
+.rtl .pagination > li:first-child > a,
+.rtl .pagination > li:first-child > span {
+	margin-right:0;
+}
+.rtl .radio input[type="radio"],
+.rtl .radio-inline input[type="radio"],
+.rtl .checkbox input[type="checkbox"],
+.rtl .checkbox-inline input[type="checkbox"] {
+  float: right;
+  margin-left: 0;
+  margin-right: -20px;
+}
+.rtl .fl{
+	float:right;
+}
+.rtl .fr{
+	float:left;
+}
+.rtl .pull-right{
+	float:left !important;
+}
+.rtl h2 span{
+	padding:0 0 0 5px;
+}
+.rtl .icons-thumbs a span{
+	left: auto;
+	right:100%;
+}
+
+text-right
+.rtl .right,
+.rtl .text-right{
+	text-align:left;
+}
+/*  default-theme-for-rtl  */
+.rtl #main-wrap{
+	overflow:hidden;
+}
+.rtl .video-thumb-wrap .bx-wrapper,
+.rtl  .home-page-carosel{
+	direction:ltr;
+}
+
+.rtl .navigation > li{
+	border-left:1px groove #25A4F6;
+	border-right:none;
+}
+.rtl .cat-list{
+	padding:15px 14px 10px 0;
+}
+.rtl .cat-list li{
+	background-position:right 4px;
+	padding: 0 17px 5px 0;
+}
+.rtl .photo-section{
+	float:right;
+}
+.rtl #footer .footer-list{
+	margin:0 5px 0 0; 
+}
+.rtl #footer .footer-list li{
+	padding:0 15px 10px 0;
+}
+.rtl #footer .footer-list li{
+	background-position: right 6px;
+}
+
+.rtl #footer .social-bar em{
+	left:auto;
+	right: 34px;
+	text-align:right;
+}
+.rtl .list-item li{
+	padding:0 17px 12px 0;
+	background-position:right 4px; 
+}
+.rtl .input-group .form-control:last-child, 
+.rtl .input-group-addon:last-child, 
+.rtl .input-group-btn:last-child > .btn, 
+.rtl .input-group-btn:last-child > .dropdown-toggle, 
+.rtl .input-group-btn:first-child > .btn:not(:first-child){
+	-moz-border-radius:4px 0 0 4px;
+	-webkit-border-radius:4px 0 0 4px;
+	border-radius:4px 0 0 4px;
+}
+.rtl .input-group .form-control:first-child,
+.rtl .input-group-addon:first-child,
+.rtl .input-group-btn:first-child > .btn,
+.rtl .input-group-btn:first-child > .dropdown-toggle,
+.rtl .input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle){
+	-moz-border-radius:0 4px 4px 0;
+	-webkit-border-radius:0 4px 4px 0;
+	border-radius:0 4px 4px 0;;
+}
+.rtl .video-thumb-wrap .bx-wrapper .bx-next{
+	right:0;
+}
+.rtl .video-thumb-wrap .bx-wrapper .bx-prev,
+.rtl .video-thumb-wrap .bx-wrapper .bx-next{
+	opacity:0;
+}
+.rtl .home-page-carosel .bx-wrapper .bx-next{
+	right:-40px;
+}
+.rtl .home-page-carosel .bx-wrapper .bx-prev,
+.rtl .home-page-carosel .bx-wrapper .bx-next{
+	opacity:1;
+}
+
+.rtl .photo-section{
+	margin:	0 0 10px 15px;
+}
+.rtl .theme-tabs-wrap .photo-section{
+	margin: 0 15px 12px;
+}
+.rtl .video-rated-photo{
+	float:right;
+}
+.rtl .video-rated-info{
+	margin:0 95px 0 0;
+}
+.rtl .video-list .video-rated-info{
+	margin:0 135px 0 0;
+}
+.rtl .header-right{
+	text-align:left;
+}
+
+.rtl .list-item{
+	margin:0 55px 20px 0;
+}
+.rtl .video-list .number{
+	float:right;
+	margin:0 0 0 10px;
+}
+.rtl .close{
+	float:left;
+}
+
+@media (max-width: 979px) {
+.rtl .cat-list{	
+	padding:14px 14px 0;
+}
+.rtl .video-rated,
+.rtl .video-list .large-video{
+	float:none !important;
+	width: auto;
+}
+.rtl .navbar-nav{
+	float:none;
+}
+.rtl .navbar-toggle{
+	margin-right:0;
+	margin-left:15px;
+	float:left;
+}
+
+
+
+@media (max-width: 767px) {
+.rtl .row > div{
+	float:none;
+}
+.rtl #nav-wrap .navbar{
+	float:none;
+}
+.rtl .navbar-nav > li{
+	float:none;
+}
+.rtl .navbar-toggle{
+	right:auto;
+	left:0;
+}
+.rtl .fr,
+.rtl .fl{
+	float:none;
+}
+.rtl .right{
+	text-align:right;
+}
+
+.rtl .section-heading .row [class^="col-xs"]{
+	float:right;
+}
+.theme-tabs-wrap{
+	margin-bottom:20px;
+}
+/* Addtion style for web not global */
+.rtl .vertical-align .right-col,
+.rtl .vertical-align .left-col{
+	text-align:right;
+}
+.rtl .list-item{
+	margin:0 25px 0 0;
+}	
+}
+@media (max-width: 479px) {
+.rtl .photo-section {
+    float: none;
+    margin: 0 0 15px !important;
+}
+}
