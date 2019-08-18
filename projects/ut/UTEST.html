@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>UTEST</title>
+
+		<!-- CSS -->
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body id="body">
+	
+		<div class="header">
+		  <div class="logo">
+		    <a href="javascript:void(0)">LOGO</a>
+		  </div>
+
+		  <div class="menu-list">
+			  <ul id="menu-main">
+			    <li><a href="javascript:void(0)">Past Shows</a></li>  
+			    <li><a href="javascript:void(0)">Blog</a></li>
+			    <li><a href="javascript:void(0)">News &amp; Updates</a></li>
+			    <li><a href="javascript:void(0)">Shop</a></li>
+			    <li><a href="javascript:void(0)">Schedule</a></li>
+    			<li><a href="javascript:void(0)">Donate</a></li>
+			    <li><a href="javascript:void(0)">Log In</a></li>
+			  </ul>
+			  <div id="myDIV" class="btn"><a href="javascript:void(0)">JOIN</a></div>
+			  <div href="javascript:void(0)" onclick="myFunction()" id="menu-btn" class="hamby">
+			  	<span></span>
+			  	<span></span>
+			  	<span></span>
+			  </div>
+			</div>
+		</div>
+		
+		<div class="content">
+			<div class="video-col">
+				<iframe width="960" height="540" src="https://www.smashcast.tv/embed/treehousenews" frameborder="0" allowfullscreen></iframe> 
+			</div>
+
+			<div class="chat-col">
+				<!-- <iframe frameborder="0" scrolling="no" id="chat_embed" src="https://www.twitch.tv/embed/852plm/chat" height="700" width="350"></iframe> -->
+
+				<div id="chat-embed-wrapper">
+			        <script>
+			            let frame = document.createElement("iframe");
+			            frame.referrerPolicy = "origin";
+			            frame.src = "https://gaming.youtube.com/live_chat?v=bMuQ2TuHk08&embed_domain=" + window.location.hostname;
+			            frame.frameBorder = "0";
+			            frame.id = "chat-embed";
+			            let wrapper = document.getElementById("chat-embed-wrapper");
+			            wrapper.appendChild(frame);
+			            wrapper.removeChild(wrapper.firstChild);
+			       </script>
+			    </div>
+
+			</div>
+		</div>
+
+		<script src="https://apis.google.com/js/platform.js"></script>            
+		<script type="text/javascript">
+			function myFunction() {
+			  var x = document.getElementById("body");
+			  x.classList.toggle("open");
+			}
+		</script>
+	</body>
+</html>
