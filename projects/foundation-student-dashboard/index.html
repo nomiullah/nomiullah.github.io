@@ -1,0 +1,453 @@
+﻿<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,500,600,700&display=swap" rel="stylesheet">
+    <title>Studentensicht</title>
+    <link href="assets/css/foundation-icons/foundation-icons.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="grid-x full-width wrapper">
+        <div class="large-12 columns content-bg">
+            <div class="grid-x">
+
+                <!-- Left Panel -->
+                <div class="aside large-2 medium-12 small-12 columns">
+                    <form class="search-form" action="">
+                        <div class="side-search">
+                            <i class="icon-search fi-magnifying-glass"></i>
+                            <input id="Text1" type="text" class="search-text" placeholder="Search">
+                        </div>
+                        <button type="submit" class="search-btn">Suchen</button>
+                    </form>
+                    <a class="menu-toggles" href="#"><i class="fi-list toggles" data-toggle="hide"></i></a>
+                    <a class="menu-close" href="#"></a>
+                    <ul class="side-nav">
+                        <li>
+                            <a href="#">Performance<i class="arrow-right"></i></a>
+                            <ul class="submenu">
+                                <li><a href="#">Personal</a></li>
+                                <li><a href="#">PM-SoSe20-01</a></li>
+                                <li><a href="#">PBI-SoSe20-01</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Subjects<i class="arrow-right"></i></a>
+                            <ul class="submenu">
+                                <li><a href="#">PM-SoSe20-01</a></li>
+                                <li><a href="#">PBI-SoSe20-01</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <div class="aside-footer">
+                        <div class="grid-x row-ftr">
+                            <div class="medium-12">
+                                <a class="aside-user" href="#">
+                                    <i class="fi-torso"></i>
+                                    <span class="name">alan</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="aside-links">
+                            <ul>
+                                <li><a href="#"><i class="fi-home"></i></a></li>
+                                <li><a href="#"><i class="fi-pricetag-multiple"></i></a></li>
+                                <li><a href="#"><i class="fi-info"></i></a></li>
+                                <li><a href="#"><i class="fi-faq"></i></a></li>
+                                <li><a href="#"><i class="fi-page-export"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.Left Panel -->
+
+                <!-- Content -->
+                <div class="large-10 medium-12 small-12 columns light-grey-bg-pattern large-offset-2 content">
+                    <ul class="breadcrumbs">
+                        <li><a href="#">Startseite</a></li>
+                        <li class="active"><a href="#">Einführung in das Projektmanagement (PM)</a></li>
+                    </ul>
+                    <div class="content-head">
+                        <div class="head-title">
+                            <h2>Einführung in das Projektmanagement (PM)</h2>
+                            <ul>
+                                <li>
+                                    <div class="lab">Team-ID:</div>
+                                    <div class="name">PM-SoSe20-01</div>
+                                </li>
+                                <li>
+                                    <div class="lab">Team Members:</div>
+                                    <div class="name">alan, bert, carl, dave, emma, fred</div>
+                                </li>
+                                <li>
+                                    <div class="lab">Lecturer:</div>
+                                    <div class="name">Prof. Dr. Uwe Schneider</div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="review-box">
+                            <a href="#" class="info-i"><img src="assets/img/info.png" alt=""></a>
+                            <h4>Review Dates:</h4>
+                            <ul>
+                                <li class="light"><a href="#">05 Nov. 2019</a></li>
+                                <li class="light"><a href="#">19 Nov. 2019</a></li>
+                                <li class="light"><a href="#">03 Dec. 2019</a></li>
+                                <li><a href="#">17 Dec. 2019</a></li>
+                                <li><a href="#">07 Jan. 2019</a></li>
+                            </ul>
+                            <div class="box-nav">
+                                <a class="prev" href="#">< prev </a>
+                                <a href="#">next ></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content-body">
+                        <div class="content-inner">
+                           <div> 
+                               <ul class="tabs" data-tabs id="example-tabs">
+                                  <li class="tabs-title is-active">
+                                      <a aria-selected="true" href="#open">Open <span>(30)</span></a>
+                                  </li>
+                                  <li class="tabs-title">
+                                      <a href="#work">Work <span>(4)</span></a>
+                                  </li>
+                                  <li class="tabs-title">
+                                      <a href="#approval">Ready for Approval <span>(4)</span></a>
+                                  </li>
+                                  <li class="tabs-title">
+                                      <a href="#review">Ready for Review <span>(2)</span></a>
+                                  </li>
+                                  <li class="tabs-title">
+                                      <a href="#done">Done <span>(2)</span></a>
+                                  </li>
+                               </ul>   
+                           </div>   
+                           <div class="tabs-content" data-tabs-content="example-tabs">      
+
+                            <!-- Open Panel -->
+                              <div class="tabs-panel is-active" id="open">                            
+                                <table class="responsive">
+                                    <tr>
+                                        <th>Title <a href="#"><i class="fi-filter"></i></a></th>
+                                        <th>Assinge <a href="#"><i class="fi-faq"></i></a></th>
+                                        <th>Importance <a href="#"><i class="fi-faq"></i></a> <a href="#"><i class="fi-filter"></i></a></th>
+                                        <th>Tags <a href="#"><i class="fi-faq"></i></a> <a href="#"><i class="fi-filter"></i></a></th>
+                                    </tr>
+                                    <tr>
+                                        <td>PM-02. Ich verstehe die Bedeutung der Verben zum Thema "Lernen"</td>
+                                        <td>@kürzel <a class="edit" href="#">edit</a></td>
+                                        <td>Basic knowledge</td>
+                                        <td><span class="tag meta">meta</span> <span class="tag Kapitel-1 ">Kapitel 1 </span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>PM-05. Dieser Aufgabe müssen alle außer einer/m zustimmen</td>
+                                        <td>@kürzel <a class="edit" href="#">edit</a></td>
+                                        <td>Basic knowledge</td>
+                                        <td><span class="tag test">test</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>PM-11. Lorem ipsum dolor sit amet, consetetur sadipscing elitr</td>
+                                        <td>@kürzel <a class="edit" href="#">edit</a></td>
+                                        <td>Average knowledge</td>
+                                        <td><span class="tag definiton">definiton</span> <span class="tag Kapitel-1">Kapitel 1 </span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>PM-11. Lorem ipsum dolor sit amet, consetetur sadipscing elitr. Lorem ipsum dolor sit amet, consetetur sadipscing elitr. Lorem ipsum dolor sit amet</td>
+                                        <td>@kürzel <a class="edit" href="#">edit</a></td>
+                                        <td>Average knowledge</td>
+                                        <td><span class="tag definiton">definiton</span> <span class="tag todo">todo</span> <span class="tag meta">meta</span> <span class="tag grundlagen">grundlagen</span> <span class="tag test">test</span> <span class="tag Kapitel-2">Kapitel 2</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>PM-11. Lorem ipsum dolor sit amet, consetetur sadipscing elitr. Lorem ipsum dolor sit amet, consetetur sadipscing elitr. Lorem ipsum dolor sit amet  conset. . .</td>
+                                        <td>@kürzel <a class="edit" href="#">edit</a></td>
+                                        <td>Average knowledge</td>
+                                        <td><span class="tag definiton">definiton</span> <span class="tag todo">todo</span> <span class="tag meta">meta</span> <span class="tag grundlagen">grundlagen</span> <span class="tag test">test</span> <a href="#" class="view-more">view more...</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>PM-14. Lorem ipsum dolor sit amet, consetetur sadipscing elitr</td>
+                                        <td>@kürzel <a class="edit" href="#">edit</a></td>
+                                        <td>Special knowledge</td>
+                                        <td><span class="tag test">test</span> <span class="tag Kapitel-3">Kapitel 3</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>PM-19. Lorem ipsum dolor sit amet, consetetur sadipscing elitr</td>
+                                        <td>@kürzel <a class="edit" href="#">edit</a></td>
+                                        <td>Basic Knowledge</td>
+                                        <td><span class="tag todo">todo</span> <span class="tag meta">meta</span> <span class="tag definiton">definiton</span> <span class="tag Kapitel-5">Kapitel 5</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>PM-28 Lorem ipsum dolor sit amet</td>
+                                        <td>@kürzel <a class="edit" href="#">edit</a></td>
+                                        <td>Special knowledge</td>
+                                        <td><span class="tag todo">todo</span> <span class="tag meta">meta</span> <span class="tag definiton">definiton</span> <span class="tag Kapitel-10">Kapitel 10</span></td>
+                                    </tr>
+                                </table>
+                              </div>
+                              <!-- /.Open Panel -->
+
+                              <!-- Work Panel -->
+                              <div class="tabs-panel" id="work">
+                                 <table class="responsive">
+                                    <tr>
+                                        <th>Title <a href="#"><i class="fi-filter"></i></a></th>
+                                        <th>Assinge <a href="#"><i class="fi-faq"></i></a></th>
+                                        <th>Importance <a href="#"><i class="fi-faq"></i></a> <a href="#"><i class="fi-filter"></i></a></th>
+                                        <th>Tags <a href="#"><i class="fi-faq"></i></a> <a href="#"><i class="fi-filter"></i></a></th>
+                                    </tr>
+                                    <tr>
+                                        <td>PM-01. Ich verstehe die Bedeutung der Verben zum Thema "Studieren"</td>
+                                        <td>@alan <a class="edit" href="#">edit</a></td>
+                                        <td>Basic knowledge</td>
+                                        <td><span class="tag meta">meta</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>PM-02. Ich versehe meine Arbeiten mit Quellenangaben</td>
+                                        <td>@emma <a class="edit" href="#">edit</a></td>
+                                        <td>Basic knowledge</td>
+                                        <td><span class="tag reopened">reopened</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>PM-03. Ich weiß, wie ich Studienthemen so berarbeite, dass sie begutachtet werden</td>
+                                        <td>@carl <a class="edit" href="#">edit</a></td>
+                                        <td>Average knowledge</td>
+                                        <td><span class="tag meta">meta</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>PM-11. Lorem ipsum dolor sit amet, consetetur sadipscing elitr. Lorem ipsum dolor sit amet, consetetur sadipscing elitr. Lorem ipsum dolor sit amet  conset. . .</td>
+                                        <td>@bert <a class="edit" href="#">edit</a></td>
+                                        <td>Average knowledge</td>
+                                        <td><span class="tag definiton">definiton</span> <span class="tag todo">todo</span> <span class="tag meta">meta</span> <span class="tag grundlagen">grundlagen</span> <span class="tag test">test</span> <a class="view-more" href="#">view more...</a></td>
+                                    </tr>
+                                </table>       
+                              </div>
+                              <!-- /.Work Panel -->
+
+                              <!-- Approval Panel -->
+                              <div class="tabs-panel" id="approval">
+                                 <table class="responsive">
+                                    <tr>
+                                        <th>Title <a href="#"><i class="fi-filter"></i></a></th>
+                                        <th>Assinged <a href="#"><i class="fi-faq"></i></a></th>
+                                        <th>Approval <a href="#"><i class="fi-faq"></i></a></th>
+                                        <th>Importance <a href="#"><i class="fi-faq"></i></a> <a href="#"><i class="fi-filter"></i></a></th>
+                                        <th>Tags <a href="#"><i class="fi-faq"></i></a> <a href="#"><i class="fi-filter"></i></a></th>
+                                    </tr>
+                                    <tr>
+                                        <td>PM-05. Ich verstehe die Bedeutung der Verben zum Thema "PM"</td>
+                                        <td>@alan <a class="edit" href="#">edit</a></td>
+                                        <td>
+                                            <div class="appr-sec">
+                                                <ul class="appr">
+                                                    <li></li>
+                                                    <li></li>
+                                                </ul> 
+                                                <span class="appr-numb">(0/2)</span>
+                                            </div>
+                                        </td>
+                                        <td>Basic knowledge</td>
+                                        <td><span class="tag meta">meta</span> <span class="tag Kapitel-1 ">Kapitel 1</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>PM-04. Dieser Aufgabe müssen alle zustimmen</td>
+                                        <td>@alan <a class="edit" href="#">edit</a></td>
+                                        <td>
+                                            <div class="appr-sec">
+                                                <ul class="appr">
+                                                    <li class="active"></li>
+                                                    <li class="active"></li>
+                                                    <li></li>
+                                                    <li></li>
+                                                    <li></li>
+                                                    <li></li>
+                                                    <li></li>
+                                                </ul> 
+                                                <span class="appr-numb">(2/6)</span>
+                                            </div>
+                                        </td>
+                                        <td>Basic knowledge</td>
+                                        <td><span class="tag reopened">reopened</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>PM-08. Dieser Aufgabe müssen zwei Teilnehmer zustimmen</td>
+                                        <td>@emma <a class="edit" href="#">edit</a></td>
+                                        <td>
+                                            <div class="appr-sec">
+                                                <ul class="appr">
+                                                    <li></li>
+                                                    <li></li>
+                                                </ul> 
+                                                <span class="appr-numb">(0/2)</span>
+                                            </div>
+                                        </td>
+                                        <td>Basic knowledge</td>
+                                        <td><span class="tag test">test</span> <span class="tag definiton">definiton</span><span class="tag Kapitel-1">Kapitel 1</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>PM-07. Ich definiere den Begriff "Scrum"</td>
+                                        <td>@alan</td>
+                                        <td>
+                                            <div class="appr-sec">
+                                                <ul class="appr">
+                                                    <li class="active"></li>
+                                                    <li class="active"></li>
+                                                    <li></li>
+                                                    <li></li>
+                                                </ul> 
+                                                <span class="appr-numb">(2/4)</span>
+                                            </div>
+                                        </td>
+                                        <td>Basic knowledge</td>
+                                        <td><span class="tag grundlagen">grundlagen</span> <span class="tag definiton">definiton</span><span class="tag Kapitel-1">Kapitel 1</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>PM-07. Ich definiere den Begriff "Scrum"</td>
+                                        <td>@kürzel <a class="edit" href="#">edit</a></td>
+                                        <td>
+                                            <div class="appr-sec">
+                                                <ul class="appr">
+                                                    <li class="active"></li>
+                                                    <li class="active"></li>
+                                                    <li></li>
+                                                    <li></li>
+                                                    <li></li>
+                                                </ul> 
+                                                <span class="appr-numb">(2/6)</span>
+                                            </div>
+                                        </td>
+                                        <td>Basic knowledge</td>
+                                        <td><span class="tag definiton">definiton</span> <span class="tag todo">todo</span><span class="tag meta">meta</span> <span class="tag grundlagen">grundlagen</span> <a href="view-more">view more...</a></td>
+                                    </tr>
+                                </table>        
+                              </div>
+                              <!-- /.Approval Panel -->
+
+                              <!-- Review Panel -->
+                              <div class="tabs-panel" id="review">
+                                 <table class="responsive">
+                                    <tr>
+                                        <th>Title <a href="#"><i class="fi-filter"></i></a></th>
+                                        <th>Assinged <a href="#"><i class="fi-faq"></i></a></th>
+                                        <th>Approval <a href="#"><i class="fi-faq"></i></a></th>
+                                        <th>Importance <a href="#"><i class="fi-faq"></i></a> <a href="#"><i class="fi-filter"></i></a></th>
+                                        <th>Tags <a href="#"><i class="fi-faq"></i></a> <a href="#"><i class="fi-filter"></i></a></th>
+                                    </tr>
+                                    <tr>
+                                        <td>PM-09. Dieser Aufgabe muss die Hälfte der Gruppe zustimmen</td>
+                                        <td>@fred</td>
+                                        <td>
+                                            <div class="appr-sec">
+                                                <ul class="appr">
+                                                    <li class="active"></li>
+                                                    <li class="active"></li>
+                                                    <li class="active"></li>
+                                                </ul> 
+                                                <span class="appr-numb">(3/3)</span>
+                                            </div>
+                                        </td>
+                                        <td>Basic knowledge</td>
+                                        <td><span class="tag test">test</span> <span class="tag Kapitel-1 ">Kapitel 1</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>PM-10. Ich definiere den Begriff "Projektmanagement"</td>
+                                        <td>@carl</td>
+                                        <td>-</td>
+                                        <td>Basic knowledge</td>
+                                        <td><span class="tag grundlagen">grundlagen</span> <span class="tag definiton">definiton</span> <span class="tag Kapitel-1 ">Kapitel 1</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>PM-11. Lorem ipsum dolor sit amet, consetetur sadipscing elitr. Lorem ipsum dolor sit amet, consetetur sadipscing elitr. Lorem ipsum dolor sit amet  conset. . .</td>
+                                        <td>@bert <a class="edit" href="#">edit</a></td>
+                                        <td>
+                                            <div class="appr-sec">
+                                                <ul class="appr">
+                                                    <li class="active"></li>
+                                                    <li class="active"></li>
+                                                    <li class="active"></li>
+                                                    <li class="active"></li>
+                                                    <li class="active"></li>
+                                                    <li class="active"></li>
+                                                    <li></li>
+                                                    <li></li>
+                                                </ul> 
+                                                <span class="appr-numb">(6/8)</span>
+                                            </div>
+                                        </td>
+                                        <td>Average knowledge</td>
+                                       <td><span class="tag definiton">definiton</span> <span class="tag todo">todo</span><span class="tag meta">meta</span> <span class="tag grundlagen">grundlagen</span> <a href="view-more">view more...</a></td>
+                                    </tr>
+                                </table>    
+                              </div>
+                              <!-- /.Review Panel -->
+
+                              <!-- Done Panel -->
+                              <div class="tabs-panel" id="done">
+                                 <table class="responsive">
+                                    <tr>
+                                        <th>Title <a href="#"><i class="fi-filter"></i></a></th>
+                                        <th>Assinge <a href="#"><i class="fi-faq"></i></a></th>
+                                        <th>Approval <a href="#"><i class="fi-faq"></i></a></th>
+                                        <th>Importance <a href="#"><i class="fi-faq"></i></a> <a href="#"><i class="fi-filter"></i></a></th>
+                                        <th>Tags <a href="#"><i class="fi-faq"></i></a> <a href="#"><i class="fi-filter"></i></a></th>
+                                        <th>Rating <a href="#"><i class="fi-faq"></i></a> <a href="#"><i class="fi-filter"></i></a></th>
+                                    </tr>
+                                    <tr>
+                                        <td>PM-10. Ich definiere den Begriff "Projektmanagement"</td>
+                                        <td>@alan <a class="edit" href="#">edit</a></td>
+                                        <td>-</td>
+                                        <td>Basic knowledge</td>
+                                        <td><span class="tag grundlagen">grundlagen</span> <span class="tag definiton">definiton</span></td>
+                                        <td>minor issue <i class="fi-page-edit"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td>PM-11. Verweise auf ein anderes Thema</td>
+                                        <td>@fred</td>
+                                        <td>-</td>
+                                        <td>Basic knowledge</td>
+                                        <td><span class="tag todo">todo</span></td>
+                                        <td>solved</td>
+                                    </tr>
+                                    <tr>
+                                        <td>PM-11. Lorem ipsum dolor sit amet, consetetur sadipscing elitr. Lorem ipsum dolor sit amet, consetetur sadipscing elitr. Lorem ipsum dolor sit amet  conset. . .</td>
+                                        <td>@bert</td>
+                                        <td>
+                                            <div class="appr-sec">
+                                                <ul class="appr">
+                                                    <li class="active"></li>
+                                                    <li class="active"></li>
+                                                    <li class="active"></li>
+                                                    <li class="active"></li>
+                                                    <li class="active"></li>
+                                                    <li class="active"></li>
+                                                    <li></li>
+                                                    <li></li>
+                                                </ul> 
+                                                <span class="appr-numb">(6/8)</span>
+                                            </div>
+                                        </td>
+                                        <td>Average knowledge</td>
+                                       <td><span class="tag definiton">definiton</span> <span class="tag todo">todo</span> <span class="tag grundlagen">grundlagen</span> <a href="view-more">view more...</a></td>
+                                       <td>solved</td>
+                                    </tr>
+                                </table>         
+                              </div>
+                              <!-- /.Done Panel -->
+
+                           </div>      
+                        </div>
+                    </div>
+                </div>
+                <!-- /.Content -->
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
