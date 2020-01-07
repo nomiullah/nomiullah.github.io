@@ -127,6 +127,7 @@ button, .button { font-family: 'Montserrat', sans-serif; }
 	.menu-toggles { margin-right: 10px; }
 	
 	.grid-x { display: block; }
+	.tabs { display: block; }
 	.content-body { padding-top: 50px; }
 	.content-body .tabs-panel { width: 100%; overflow-x: scroll; }
 	.content-body table.responsive { width: 500px; }
