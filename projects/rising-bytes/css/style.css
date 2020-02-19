@@ -1,4 +1,5 @@
 html {
+  overflow-x: hidden;
   scroll-behavior: smooth; }
 
 /* devanagari */
@@ -481,7 +482,7 @@ body {
   padding: 100px 0; }
   @media screen and (max-width: 991px) {
     .services {
-      padding: 70px; } }
+      padding: 70px 0; } }
   .services .service-items {
     display: flex;
     margin-top: 170px; }
