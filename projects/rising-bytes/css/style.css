@@ -1135,7 +1135,8 @@ body {
   height: 31px; }
 
 .open-main-nav.is-open {
-  position: fixed; }
+  position: fixed;
+  top: 28px; }
 
 .open-main-nav:focus {
   outline: none; }
