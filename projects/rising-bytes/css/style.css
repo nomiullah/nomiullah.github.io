@@ -845,6 +845,8 @@ body {
               .contact .contact-detail .contact-form .form-inline .form-elem .form-control {
                 text-align: center;
                 font-size: 12px; } }
+            .contact .contact-detail .contact-form .form-inline .form-elem .form-control:focus {
+              border-color: #0A4479; }
           .contact .contact-detail .contact-form .form-inline .form-elem .form-control::-webkit-input-placeholder {
             /* Edge */
             color: rgba(0, 0, 0, 0.3); }

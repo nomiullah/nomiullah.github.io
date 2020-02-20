@@ -1005,18 +1005,21 @@ body {
 							text-align: center;
 							font-size: 12px;
 						}
+						&:focus {
+							border-color: $blue;
+						}
 					}
 					.form-control::-webkit-input-placeholder { /* Edge */
 						  color: rgba(0,0,0,0.3);
 						}
 
-						.form-control:-ms-input-placeholder { /* Internet Explorer 10-11 */
-						  color: rgba(0,0,0,0.3);
-						}
+					.form-control:-ms-input-placeholder { /* Internet Explorer 10-11 */
+					  color: rgba(0,0,0,0.3);
+					}
 
-						.form-control::placeholder {
-						  color: rgba(0,0,0,0.3);
-						}
+					.form-control::placeholder {
+					  color: rgba(0,0,0,0.3);
+					}
 					textarea.form-control {
 						resize: none;
 						min-height: 108px;
