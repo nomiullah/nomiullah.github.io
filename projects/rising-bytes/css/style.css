@@ -294,6 +294,39 @@ body {
         display: none; }
       body.header-fixed .header .logo .logo-y {
         display: block; } }
+  body #toTop {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    cursor: pointer;
+    display: none;
+    width: 35px;
+    height: 35px; }
+    body #toTop::before {
+      margin-left: -48%;
+      margin-top: -48%; }
+    body #toTop::after {
+      margin-left: -5%;
+      margin-top: -5%; }
+    body #toTop .icon-arrow {
+      width: 30px;
+      height: 30px; }
+      body #toTop .icon-arrow::before, body #toTop .icon-arrow::after {
+        width: 9px;
+        height: 9px;
+        border-left: 2px solid #2C436C;
+        border-bottom: 2px solid #2C436C;
+        -webkit-transform: rotate(135deg);
+        -moz-transform: rotate(135deg);
+        -ms-transform: rotate(135deg);
+        -o-transform: rotate(135deg);
+        transform: rotate(135deg); }
+      body #toTop .icon-arrow::before {
+        margin-top: 6px; }
+      body #toTop .icon-arrow::after {
+        margin-top: -1px; }
+    body #toTop:hover .icon-arrow::before, body #toTop:hover .icon-arrow::after {
+      border-color: #FAC900; }
 
 .header {
   position: absolute;

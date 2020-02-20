@@ -21,6 +21,24 @@ AOS.init();
 
 })(jQuery);
 
+// Back to top
+$(document).ready(function(){
+	$winHeight = $(window).height();
+      $('body').append('<div id="toTop" class="pulsating-circle"><div class="icon-arrow"></div></div>');
+    	$(window).scroll(function () {
+			if ($(this).scrollTop() >= $winHeight) {
+				$('#toTop').fadeIn();
+			} else {
+				$('#toTop').fadeOut();
+			}
+		}); 
+    $('#toTop').click(function(){
+        $("html, body").animate({ scrollTop: 0 }, 600);
+        return false;
+    });
+});
+
+
 // Header Fixed 
 function scrollHeader(){
 	if($(window).scrollTop() > 0){
