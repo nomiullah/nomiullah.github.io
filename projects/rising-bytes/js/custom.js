@@ -36,6 +36,13 @@ $(document).ready(function(){
         $("html, body").animate({ scrollTop: 0 }, 600);
         return false;
     });
+
+    $('#main-nav li a').click(function(){
+	console.log('asd');
+		$('.open-main-nav').removeClass('is-open');
+		$('.main-nav').removeClass('is-open');
+		$('body').removeClass('nav-open');
+	});
 });
 
 
@@ -63,6 +70,7 @@ let burger = document.getElementById('burger'),
 burger.addEventListener('click', function(e){
 	this.classList.toggle('is-open');
 	nav.classList.toggle('is-open');
+	$('body').toggleClass('nav-open');
 });
 
 // slowmo.addEventListener('click', function(e){
@@ -83,6 +91,7 @@ window.addEventListener('ready', function(e) {
 			slowmo.dispatchEvent(clickEvent);
 		}, 3500);
 	}, 5500);
+
 });
 
 

@@ -353,17 +353,25 @@ body {
 	}
 
 	&.header-fixed {
-		@media screen and (min-width: 992px){
-			.header {
-				background: $blue;
-				position: fixed;
-				.logo {
-					.logo-sm {
-						display: none;
-					}
-					.logo-y {
-						display: block;
-					}
+		.header {
+			background: $blue;
+			position: fixed;
+			@media screen and (max-width: 991px){
+				min-height: 67px;
+			}
+			.logo {
+				.logo-sm {
+					display: none;
+				}
+				.logo-y {
+					display: block;
+				}
+			}
+		}
+		&.nav-open {
+			.logo {
+				.logo-y {
+					display: none;
 				}
 			}
 		}
@@ -381,8 +389,8 @@ body {
 			margin-top: -48%;
 		}
 		&::after {
-			margin-left: -5%;
-			margin-top: -5%;
+			margin-left: -7%;
+			margin-top: -8%;
 		}
 		.icon-arrow {
 			width: 30px;
@@ -516,7 +524,7 @@ body {
 		justify-content: center;
 		align-items: center;
 		@media screen and (max-width: 991px){
-			width: 10%;
+			width: 0%;
 		}
 		.caption {
 			@media screen and (max-width: 991px){
@@ -568,7 +576,7 @@ body {
 			max-width: 67px;
 			position: absolute;
 			left: 0;
-			bottom: -15px;
+			top: -30px;
 			@media screen and (max-width: 991px){
 				display: inline-block;
 			}
@@ -588,7 +596,8 @@ body {
 		clip-path: polygon(0 0, 100% 0, 100% 100%, 30% 100%);
 		@extend .trns-1s;
 		@media screen and (max-width: 991px){
-			width: 90%;
+			width: 100%;
+			clip-path: polygon(44% 0, 100% 0, 100% 100%, 0 100%);
 		}
 		&::before {
 			content: '';
@@ -633,7 +642,7 @@ body {
 .services {
 	padding: 100px 0;
 	@media screen and (max-width: 991px){
-		padding: 70px 0;
+		padding: 70px 0 0 0;
 	}
 	.service-items	{
 		display: flex;
@@ -731,7 +740,7 @@ body {
 .team {
 	padding: 90px 0 0 0;
 	@media screen and (max-width: 991px){
-		padding-top: 10px;
+		padding-top: 80px;
 	}
 	h2 {
 	}
@@ -828,7 +837,7 @@ body {
 	background-color: $PurpleLight;
 	padding: 100px 0 0 0;
 	@media screen and (max-width: 991px){
-		padding-top: 35px;
+		padding-top: 75px;
 	}
 	h2 {
 		color: $white;
@@ -838,7 +847,7 @@ body {
 		display: flex;
 		@media screen and (max-width: 991px){
 			flex-wrap: wrap;
-			margin-top: 50px;
+			margin-top: 30px;
 		}
 		.about-blurb {
 			width: 100%;
@@ -862,6 +871,9 @@ body {
 					@media screen and (max-width: 991px){
 						font-size: 11px;
 						line-height: 1.8;
+					}
+					&:last-child {
+						margin-bottom: 0;
 					}
 				}
 			}
@@ -1316,6 +1328,7 @@ body {
     transform-origin: 0 0;
     transform: skew(-14deg) translateX(-120%);
     transition: all .275s .1s;
+    clip-path: polygon(100% 0, 100% 9%, 65% 100%, 0 100%, 0 0);
 }
 
 .main-nav.is-open::before {
@@ -1389,16 +1402,17 @@ body {
 	color: $yellow;
 }
 .main-nav .logo-menu {
-	max-width: 201px;
-	width: 100%;
-	height: 33px;
-	margin-bottom: 25%;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	max-width: 80px;
+	margin-right: 4%;
 }
 
 /* Burger Style: @see: https://codepen.io/CreativeJuiz/full/oMZNXy */
 .open-main-nav {
-	position: absolute;
-	top: 26px;
+	position: fixed;
+	top: 17px;
 	right: 25px;
 	padding-top: 20px;
 	right: 15px;
@@ -1410,7 +1424,7 @@ body {
 }
 .open-main-nav.is-open {
 	position: fixed;
-	top: 28px;
+	top: 18px;
 }
 .open-main-nav:focus {
 	outline: none;

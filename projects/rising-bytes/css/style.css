@@ -286,14 +286,18 @@ body {
     /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0a467a', endColorstr='#cde8fd',GradientType=1 );
     /* IE6-9 */ }
-  @media screen and (min-width: 992px) {
-    body.header-fixed .header {
-      background: #0A4479;
-      position: fixed; }
-      body.header-fixed .header .logo .logo-sm {
-        display: none; }
-      body.header-fixed .header .logo .logo-y {
-        display: block; } }
+  body.header-fixed .header {
+    background: #0A4479;
+    position: fixed; }
+    @media screen and (max-width: 991px) {
+      body.header-fixed .header {
+        min-height: 67px; } }
+    body.header-fixed .header .logo .logo-sm {
+      display: none; }
+    body.header-fixed .header .logo .logo-y {
+      display: block; }
+  body.header-fixed.nav-open .logo .logo-y {
+    display: none; }
   body #toTop {
     position: fixed;
     bottom: 10px;
@@ -306,8 +310,8 @@ body {
       margin-left: -48%;
       margin-top: -48%; }
     body #toTop::after {
-      margin-left: -5%;
-      margin-top: -5%; }
+      margin-left: -7%;
+      margin-top: -8%; }
     body #toTop .icon-arrow {
       width: 30px;
       height: 30px; }
@@ -420,7 +424,7 @@ body {
     align-items: center; }
     @media screen and (max-width: 991px) {
       .atf .atf-left {
-        width: 10%; } }
+        width: 0%; } }
     @media screen and (max-width: 991px) {
       .atf .atf-left .caption {
         position: absolute;
@@ -462,7 +466,7 @@ body {
       max-width: 67px;
       position: absolute;
       left: 0;
-      bottom: -15px; }
+      top: -30px; }
       @media screen and (max-width: 991px) {
         .atf .atf-left .logo-mobile {
           display: inline-block; } }
@@ -479,7 +483,8 @@ body {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 30% 100%); }
     @media screen and (max-width: 991px) {
       .atf .atf-right {
-        width: 90%; } }
+        width: 100%;
+        clip-path: polygon(44% 0, 100% 0, 100% 100%, 0 100%); } }
     .atf .atf-right::before {
       content: '';
       position: absolute;
@@ -515,7 +520,7 @@ body {
   padding: 100px 0; }
   @media screen and (max-width: 991px) {
     .services {
-      padding: 70px 0; } }
+      padding: 70px 0 0 0; } }
   .services .service-items {
     display: flex;
     margin-top: 170px; }
@@ -595,7 +600,7 @@ body {
   padding: 90px 0 0 0; }
   @media screen and (max-width: 991px) {
     .team {
-      padding-top: 10px; } }
+      padding-top: 80px; } }
   .team .our-team {
     margin-top: 160px;
     background-color: #F4F6F8;
@@ -686,7 +691,7 @@ body {
   padding: 100px 0 0 0; }
   @media screen and (max-width: 991px) {
     .about {
-      padding-top: 35px; } }
+      padding-top: 75px; } }
   .about h2 {
     color: #ffffff; }
   .about .about-inner {
@@ -695,7 +700,7 @@ body {
     @media screen and (max-width: 991px) {
       .about .about-inner {
         flex-wrap: wrap;
-        margin-top: 50px; } }
+        margin-top: 30px; } }
     .about .about-inner .about-blurb {
       width: 100%;
       display: flex;
@@ -719,6 +724,8 @@ body {
             .about .about-inner .about-blurb .blurb p {
               font-size: 11px;
               line-height: 1.8; } }
+          .about .about-inner .about-blurb .blurb p:last-child {
+            margin-bottom: 0; }
     .about .about-inner .about-display {
       width: 100%;
       display: flex;
@@ -1085,7 +1092,8 @@ body {
   background: #0A4479;
   transform-origin: 0 0;
   transform: skew(-14deg) translateX(-120%);
-  transition: all .275s .1s; }
+  transition: all .275s .1s;
+  clip-path: polygon(100% 0, 100% 9%, 65% 100%, 0 100%, 0 0); }
 
 .main-nav.is-open::before {
   transform: skew(0) translateX(0); }
@@ -1151,15 +1159,16 @@ body {
   color: #FAC900; }
 
 .main-nav .logo-menu {
-  max-width: 201px;
-  width: 100%;
-  height: 33px;
-  margin-bottom: 25%; }
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  max-width: 80px;
+  margin-right: 4%; }
 
 /* Burger Style: @see: https://codepen.io/CreativeJuiz/full/oMZNXy */
 .open-main-nav {
-  position: absolute;
-  top: 26px;
+  position: fixed;
+  top: 17px;
   right: 25px;
   padding-top: 20px;
   right: 15px;
@@ -1171,7 +1180,7 @@ body {
 
 .open-main-nav.is-open {
   position: fixed;
-  top: 28px; }
+  top: 18px; }
 
 .open-main-nav:focus {
   outline: none; }
