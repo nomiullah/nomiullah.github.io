@@ -1,6 +1,5 @@
 html {
 	overflow-x: hidden;
-	scroll-behavior: smooth;
 }
 /* devanagari */
 @font-face {
@@ -357,21 +356,50 @@ body {
 			background: $blue;
 			position: fixed;
 			@media screen and (max-width: 991px){
-				min-height: 67px;
+				height: 67px;
+				padding-left: 0;
+				-webkit-box-shadow: 0 1px 10px rgba(0,0,0,0.05);
+				-moz-box-shadow: 0 1px 10px rgba(0,0,0,0.05);
+				-ms-box-shadow: 0 1px 10px rgba(0,0,0,0.05);
+				-o-box-shadow: 0 1px 10px rgba(0,0,0,0.05);
+				box-shadow: 0 1px 10px rgba(0,0,0,0.05);
 			}
 			.logo {
+				@media screen and (max-width: 991px){
+					padding: 0 10%;
+					background: $white;
+					transform: translateX(-20%) skew(-40deg);
+					img {
+						transform: skew(40deg);
+					}
+				}
 				.logo-sm {
 					display: none;
+					@media screen and (max-width: 991px){
+						display: block;
+						top: 0; 
+						left: 0;
+						max-height: 70px;
+					}
 				}
 				.logo-y {
 					display: block;
+					min-width: 210px;
+					@media screen and (max-width: 991px){
+						display: none;
+					}
 				}
 			}
 		}
 		&.nav-open {
-			.logo {
-				.logo-y {
-					display: none;
+			.header {
+				.logo {
+					@media screen and (max-width: 991px){
+						display: none;
+					}
+					.logo-y {
+						display: none;
+					}
 				}
 			}
 		}
@@ -430,9 +458,10 @@ body {
 	width: 100%;
 	padding: 0 4%;
 	z-index: 1000;
-	min-height: 87px;
+	height: 87px;
 	display: flex;
 	align-items: center;
+	align-content: center;
 	justify-content: space-between;
 	-webkit-transition: all ease 0.0s;
 	-moz-transition: all ease 0.0s;
@@ -514,7 +543,7 @@ body {
 	position: relative;
 	overflow: hidden;
 	@media screen and (max-width: 991px){
-		max-height: 250px;
+		height: 100vh;
 	}
 	.atf-left {
 		width: 40%;
@@ -527,6 +556,9 @@ body {
 			width: 0%;
 		}
 		.caption {
+			@media screen and (max-width: 1100px) and (min-width: 992px){
+				padding-left: 20px;
+			}
 			@media screen and (max-width: 991px){
 				position: absolute;
 				right: 23px;
@@ -575,8 +607,8 @@ body {
 			display: none;
 			max-width: 67px;
 			position: absolute;
-			left: 0;
-			top: -30px;
+			left: 6%;
+    		top: 1%;
 			@media screen and (max-width: 991px){
 				display: inline-block;
 			}
@@ -593,7 +625,10 @@ body {
 		text-align: center;
 		position: relative;
 		align-items: center;
+		-webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 30% 100%);
 		clip-path: polygon(0 0, 100% 0, 100% 100%, 30% 100%);
+		// -webkit-clip-path: url(../images/bg-aft-1.png);
+		// clip-path: url(../images/bg-aft-1.png);
 		@extend .trns-1s;
 		@media screen and (max-width: 991px){
 			width: 100%;
@@ -606,9 +641,14 @@ body {
 			height: 100%;
 			background: $blue;
 			opacity: 0.7;
+			left: 0;
+			top: 0;
 		}
 		.caption {
 			padding-bottom: 150px;
+			@media screen and (max-width: 1100px) and (min-width: 992px){
+				padding-left: 50px;
+			}
 			@media screen and (max-width: 991px){
 				padding-bottom: 0;
 				.showme1{ 
@@ -1343,8 +1383,7 @@ body {
     height: 70%; /* Should be 100%, but we have a notice message :D */
     align-items: flex-end;
     align-items: center;
-    transform: translateX(-18%) skew(-16deg);
-    transform: none;
+    transform: translateX(-10%) skew(-10deg);
     justify-content: space-between;
 
 }
@@ -1353,8 +1392,7 @@ body {
     display: block;
     margin: .5rem 0;
     text-align: right;
-    transform: skew(16deg);
-    transform: none;
+    transform: skew(10deg);
 }
 
 /* Apparition effect on links */

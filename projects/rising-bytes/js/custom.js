@@ -6,7 +6,7 @@ AOS.init();
 	$(window).on("load",function(){
 		
 		/* Page Scroll to id fn call */
-		$("#navigation-menu a,a[href='#top'],a[rel='m_PageScroll2id']").mPageScroll2id({
+		$("#navigation-menu a,a[href='#top'],a[rel='m_PageScroll2id'],.pulsating-circle").mPageScroll2id({
 			highlightSelector:"#navigation-menu a"
 		});
 		
@@ -63,7 +63,7 @@ $(document).ready(function(){
 
 
 // Mobile Menu
-let burger = document.getElementById('burger'),
+var burger = document.getElementById('burger'),
 	 nav    = document.getElementById('main-nav'),
 	 slowmo = '';
 
@@ -78,7 +78,7 @@ burger.addEventListener('click', function(e){
 // });
 
 /* Onload demo - dirty timeout */
-let clickEvent = new Event('click');
+// clickEvent = new Event('click');
 
 window.addEventListener('ready', function(e) {
 	// slowmo.dispatchEvent(clickEvent);
