@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Noman Ullah Jannat - CV</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ink: #12121a;
+      --muted: #4b5563;
+      --line: rgb(15 23 42 / 0.12);
+      --accent: #0891b2;
+      --soft: rgb(8 145 178 / 0.1);
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; }
+    body {
+      color: var(--ink);
+      font: 9pt/1.36 Inter, ui-sans-serif, system-ui, sans-serif;
+      background: #fff;
+    }
+    .page { width: 188mm; margin: 0 auto; padding: 6mm 0 0; }
+    h1, h2, h3 { font-family: "Space Grotesk", Inter, sans-serif; letter-spacing: -0.03em; }
+    h1 { margin: 0; font-size: 20.5pt; line-height: 1; }
+    .role {
+      margin: 0.22rem 0 0;
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 9.4pt;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+    .contact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.15rem 0.8rem;
+      margin-top: 0.45rem;
+      color: var(--muted);
+      font-size: 8pt;
+    }
+    .contact a { color: inherit; text-decoration: none; }
+    .rule {
+      height: 2px;
+      margin: 0.48rem 0 0.48rem;
+      background: linear-gradient(90deg, var(--accent), transparent);
+    }
+    h2 {
+      margin: 0 0 0.3rem;
+      font-size: 8.4pt;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+    section { margin-bottom: 0.48rem; }
+    p { margin: 0; }
+    .profile { color: var(--muted); }
+    .services {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 0.38rem;
+    }
+    .service {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 0.35rem 0.45rem 0.4rem;
+      background: var(--soft);
+    }
+    .service strong { display: block; font-size: 9pt; }
+    .service span { color: var(--muted); font-size: 7.7pt; }
+    .job-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      align-items: baseline;
+    }
+    .job-head b { font-size: 9.6pt; }
+    .when { color: var(--muted); font-size: 7.8pt; white-space: nowrap; }
+    ul { margin: 0.18rem 0 0; padding-left: 1rem; }
+    li { margin: 0.05rem 0; }
+    .work {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 0.22rem 0.9rem;
+    }
+    .item b { font-size: 8.9pt; }
+    .item em { font-style: normal; color: var(--accent); font-size: 7.4pt; font-weight: 700; }
+    .item p { color: var(--muted); font-size: 7.8pt; }
+    .skills { display: grid; gap: 0.14rem; }
+    .skill-row { display: flex; gap: 0.4rem; align-items: baseline; }
+    .skill-row b {
+      flex: 0 0 7.4rem;
+      font-size: 7.6pt;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+    .split {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 0.5rem;
+    }
+    .edu p + p { margin-top: 0.22rem; }
+    .edu b { display: block; }
+    .edu span { color: var(--muted); font-size: 7.8pt; }
+    .certs { margin-top: 0.1rem; }
+    .certs li { color: var(--muted); }
+    .certs b { color: var(--ink); }
+    .quotes { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.3rem; }
+    .quote {
+      border-left: 2px solid var(--accent);
+      padding: 0 0 0 0.4rem;
+      color: var(--muted);
+      font-size: 7.5pt;
+    }
+    .quote b { display: block; color: var(--ink); margin-top: 0.1rem; font-size: 7.3pt; }
+    @page { size: A4; margin: 9mm 11mm; }
+    @media print {
+      body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+  </style>
+</head>
+<body>
+  <article class="page">
+    <header>
+      <h1>Noman Ullah Jannat</h1>
+      <p class="role">Full Stack Web Developer</p>
+      <p class="contact">
+        <a href="mailto:nomi.spyko@gmail.com">nomi.spyko@gmail.com</a>
+        <a href="tel:+923450571037">+92 345 0571037</a>
+        <span>Islamabad, Pakistan</span>
+        <a href="https://nomiullah.github.io/">nomiullah.github.io</a>
+        <a href="https://www.linkedin.com/in/noman-ullah-jannat/">linkedin.com/in/noman-ullah-jannat</a>
+        <a href="https://github.com/nomiullah/">github.com/nomiullah</a>
+      </p>
+    </header>
+    <div class="rule"></div>
+
+    <section>
+      <h2>Profile</h2>
+      <p class="profile">Full stack web developer available for part-time and full-time client work. I design and ship custom websites, Shopify stores, WordPress builds, and frontend systems that stay quick, clear, and easy to use on every screen.</p>
+    </section>
+
+    <section>
+      <h2>Services</h2>
+      <div class="services">
+        <div class="service"><strong>Web Development</strong><span>Custom sites, landing pages, and product UI built for speed.</span></div>
+        <div class="service"><strong>Shopify</strong><span>Themes, storefront UX, and checkout flows that convert.</span></div>
+        <div class="service"><strong>WordPress</strong><span>Elementor and custom WP builds editors can update safely.</span></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Experience</h2>
+      <div class="job-head">
+        <b>Full Stack Web Developer - Client and project work</b>
+        <span class="when">2019 - Present · Islamabad</span>
+      </div>
+      <ul>
+        <li>Build and refine custom websites, Shopify stores, and WordPress sites for fashion, retail, wellness, and service brands.</li>
+        <li>Own frontend systems - responsive layouts, performance, and storefront UX from first layout through launch.</li>
+        <li>Customize Shopify themes with Liquid, theme settings, and storefront APIs; ship Elementor and custom WordPress builds.</li>
+        <li>Work independently with clients on both part-time and full-time engagements, from brief to live site.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Selected work</h2>
+      <div class="work">
+        <div class="item">
+          <b>Johnsons Seeds</b> <em>Shopify - Garden</em>
+          <p>UK seed and plant storefront with seasonal merchandising and a clean checkout path.</p>
+        </div>
+        <div class="item">
+          <b>Nadine Merabi</b> <em>Shopify - Luxury fashion</em>
+          <p>High-end womenswear storefront for dresses, jumpsuits, and bridal.</p>
+        </div>
+        <div class="item">
+          <b>Closer Pets</b> <em>Shopify - Pet products</em>
+          <p>Pet-tech catalog for feeders and accessories with review-led trust.</p>
+        </div>
+        <div class="item">
+          <b>ICON Amsterdam</b> <em>Shopify - Menswear</em>
+          <p>Performance menswear store with worldwide shipping and athlete-led storytelling.</p>
+        </div>
+        <div class="item">
+          <b>puroBIO Cosmetics</b> <em>WordPress - Beauty</em>
+          <p>Italian organic makeup brand site with collection storytelling and a fast layout.</p>
+        </div>
+        <div class="item">
+          <b>Gateway Fleets</b> <em>WordPress - EV / logistics</em>
+          <p>Fleet electrification site covering vehicles, charging, and infrastructure.</p>
+        </div>
+        <div class="item">
+          <b>BKZ Financial</b> <em>WordPress - Finance</em>
+          <p>Bookkeeping and advisory site with clear service blocks and a calm tone.</p>
+        </div>
+        <div class="item">
+          <b>Atoms</b> <em>Custom frontend - Footwear</em>
+          <p>Product-led custom storefront for an everyday sneaker brand.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Skills</h2>
+      <div class="skills">
+        <div class="skill-row"><b>Core</b><span>HTML5, CSS3, JavaScript, TypeScript</span></div>
+        <div class="skill-row"><b>CSS / UI</b><span>Tailwind CSS, Bootstrap, Sass / SCSS, Material UI</span></div>
+        <div class="skill-row"><b>Frameworks</b><span>React, Next.js, Vue.js, Angular, Svelte</span></div>
+        <div class="skill-row"><b>Motion</b><span>GSAP, Framer Motion, Three.js</span></div>
+        <div class="skill-row"><b>Data &amp; APIs</b><span>REST APIs, GraphQL, Axios, Redux, React Context</span></div>
+        <div class="skill-row"><b>Shopify</b><span>Liquid, Themes, CLI, Functions, APIs, theme customization, responsive design</span></div>
+        <div class="skill-row"><b>Backend</b><span>Node.js, Express.js, PostgreSQL, MongoDB, Firebase</span></div>
+        <div class="skill-row"><b>Tools</b><span>Git, GitHub, Vite, npm, ESLint, Prettier</span></div>
+      </div>
+    </section>
+
+    <div class="split">
+      <section class="edu">
+        <h2>Education</h2>
+        <p><b>Bachelor of Software Engineering</b><span>Foundation University Rawalpindi - 2015-2019</span></p>
+        <p><b>Information Management</b><span>NetSol Technology Institute - 2015</span></p>
+        <p><b>Engineering Project</b><span>FAST-NU, Lahore Campus - 2013-2014</span></p>
+      </section>
+      <section>
+        <h2>Certifications</h2>
+        <ul class="certs">
+          <li><b>JavaScript (Intermediate)</b> - HackerRank - Sep 2023</li>
+          <li><b>CSS (Basic)</b> - HackerRank - Sep 2023</li>
+          <li><b>Claude Code 101</b> - Anthropic - May 2026</li>
+          <li><b>Claude + Amazon Bedrock</b> - Anthropic - Jun 2026</li>
+          <li><b>Claude 101</b> - Anthropic - May 2026</li>
+        </ul>
+      </section>
+    </div>
+
+    <section>
+      <h2>Client notes</h2>
+      <div class="quotes">
+        <p class="quote">"Professional - efficient and incredibly knowledgeable."<b>Michael</b></p>
+        <p class="quote">"Excellent work with strong attention to detail."<b>Irina</b></p>
+        <p class="quote">"Very impressive, responds well - easy to work with."<b>Paul</b></p>
+      </div>
+    </section>
+  </article>
+</body>
+</html>
