@@ -559,6 +559,7 @@
     var aboutLightbox = document.getElementById('about-lightbox');
     var aboutFull = document.getElementById('about-walkthrough-full');
     var aboutClose = aboutLightbox ? aboutLightbox.querySelector('.video-lightbox-close') : null;
+    var aboutHoldPlay = false;
 
     function syncMuteUi() {
       syncSoundBtn(aboutMute, !aboutVideo || aboutVideo.muted, 'Unmute walkthrough', 'Mute walkthrough');
@@ -567,7 +568,17 @@
     function setAboutMute(muted) {
       if (!aboutVideo) return;
       aboutVideo.muted = muted;
+      aboutVideo.loop = muted;
+      aboutHoldPlay = !muted;
       syncMuteUi();
+      if (muted) {
+        var box = aboutCover.getBoundingClientRect();
+        var onScreen = box.bottom > 80 && box.top < window.innerHeight - 80;
+        if (!onScreen) {
+          aboutVideo.pause();
+          return;
+        }
+      }
       aboutVideo.play().catch(function () {});
     }
 
@@ -599,6 +610,7 @@
 
     if (aboutVideo) {
       aboutVideo.muted = true;
+      aboutVideo.loop = true;
       syncMuteUi();
       aboutVideo.setAttribute('playsinline', '');
       if (site.walkthroughPoster) aboutVideo.setAttribute('poster', site.walkthroughPoster);
@@ -615,11 +627,18 @@
       }
       aboutVideo.addEventListener('loadeddata', playAbout);
       aboutVideo.addEventListener('canplay', playAbout);
+      aboutVideo.addEventListener('ended', function () {
+        aboutHoldPlay = false;
+        aboutVideo.pause();
+        aboutVideo.loop = true;
+        aboutVideo.muted = true;
+        syncMuteUi();
+      });
       var aboutWatch = new IntersectionObserver(function (entries) {
         entries.forEach(function (entry) {
           if (aboutLightbox && !aboutLightbox.hidden) return;
           if (entry.isIntersecting) playAbout();
-          else aboutVideo.pause();
+          else if (!aboutHoldPlay) aboutVideo.pause();
         });
       }, { threshold: 0.15 });
       aboutWatch.observe(aboutCover);

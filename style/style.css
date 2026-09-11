@@ -690,13 +690,22 @@ html.light .hero-float { opacity: 0.24; }
 .about-expand {
   position: static;
   flex: none;
+  display: grid;
+  place-items: center;
   width: 36px;
   height: 36px;
+  padding: 0;
   border: 0;
   border-radius: 999px;
   background: rgb(0 0 0 / 0.45);
   color: #fff;
   cursor: pointer;
+}
+
+.about-expand svg {
+  display: block;
+  width: 18px;
+  height: 18px;
 }
 
 .id-live {
