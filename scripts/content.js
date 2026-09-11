@@ -6,6 +6,8 @@ window.SITE = {
   walkthrough: 'video/walkthrough-v4.mp4',
   walkthroughFull: 'video/walkthrough-v4.mp4',
   walkthroughPoster: 'img/posters/walkthrough.jpg',
+  formTo: 'nomi.spyko@gmail.com',
+  formEndpoint: 'https://script.google.com/macros/s/AKfycbyqJQ3803DGM3P1eITV40Bh_J7UXDpRbRRnlbTLX8kRd9V5J6W_1rcePRxkzPFWyT5dig/exec',
   year: new Date().getFullYear(),
 
   featured: [

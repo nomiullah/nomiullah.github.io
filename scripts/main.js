@@ -1,6 +1,16 @@
 (function () {
   var site = window.SITE || {};
 
+  var ICON_MUTED = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H2v6h4l5 4V5z"/><path d="m23 9-6 6M17 9l6 6"/></svg>';
+  var ICON_SOUND = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H2v6h4l5 4V5z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M19 5a9 9 0 0 1 0 14"/></svg>';
+
+  function syncSoundBtn(btn, muted, unmuteLabel, muteLabel) {
+    if (!btn) return;
+    btn.innerHTML = muted ? ICON_MUTED : ICON_SOUND;
+    btn.classList.toggle('is-muted', muted);
+    btn.setAttribute('aria-label', muted ? unmuteLabel : muteLabel);
+  }
+
   var year = document.getElementById('year');
   if (year) year.textContent = site.year || new Date().getFullYear();
 
@@ -472,15 +482,27 @@
         '<article class="reel">' +
           '<div class="reel-frame" data-reel>' +
             '<video muted loop playsinline preload="none"' + poster + ' title="Video testimonial from ' + item.name + '" aria-label="Video testimonial from ' + item.name + '">' + source + '</video>' +
-            '<button class="play-reel" type="button" aria-label="Play testimonial from ' + item.name + ' with sound">▶</button>' +
-            '<button class="unmute" type="button" hidden aria-label="Mute testimonial from ' + item.name + '">🔊</button>' +
+            '<button class="sound-btn is-muted" type="button" aria-label="Unmute testimonial from ' + item.name + '">' + ICON_MUTED + '</button>' +
             '<div class="reel-meta"><strong>' + item.name + '</strong><span>' + item.title + '</span></div>' +
           '</div>' +
           quote +
         '</article>'
       );
     }).join('');
-    reels.scrollLeft = 0;
+
+    var reelMoved = false;
+    function showSecondReel() {
+      if (reelMoved || !window.matchMedia('(max-width: 980px)').matches) return;
+      var second = reels.querySelectorAll('.reel')[1];
+      if (!second) return;
+      reels.scrollLeft = second.offsetLeft;
+    }
+    requestAnimationFrame(function () {
+      showSecondReel();
+      requestAnimationFrame(showSecondReel);
+    });
+    window.addEventListener('load', showSecondReel);
+    reels.addEventListener('pointerdown', function () { reelMoved = true; }, { passive: true });
 
     var activeReel = null;
     var reelWatch = new IntersectionObserver(function (entries) {
@@ -498,53 +520,48 @@
 
     function setSound(frame, on) {
       var video = frame.querySelector('video');
-      var playBtn = frame.querySelector('.play-reel');
-      var muteBtn = frame.querySelector('.unmute');
+      var soundBtn = frame.querySelector('.sound-btn');
+      var name = frame.closest('.reel') ? frame.closest('.reel').querySelector('.reel-meta strong') : null;
+      var who = name ? name.textContent : 'testimonial';
       if (!video) return;
       video.muted = !on;
-      if (playBtn) playBtn.hidden = on;
-      if (muteBtn) muteBtn.hidden = !on;
+      syncSoundBtn(soundBtn, !on, 'Unmute testimonial from ' + who, 'Mute testimonial from ' + who);
       if (on) video.play().catch(function () {});
     }
 
     document.querySelectorAll('[data-reel]').forEach(function (frame) {
       reelWatch.observe(frame);
       var video = frame.querySelector('video');
-      var playBtn = frame.querySelector('.play-reel');
-      var muteBtn = frame.querySelector('.unmute');
+      var soundBtn = frame.querySelector('.sound-btn');
+      var name = frame.querySelector('.reel-meta strong');
+      var who = name ? name.textContent : 'testimonial';
       if (!video) return;
+      syncSoundBtn(soundBtn, true, 'Unmute testimonial from ' + who, 'Mute testimonial from ' + who);
 
-      function startWithSound() {
-        if (activeReel && activeReel !== frame) setSound(activeReel, false);
-        activeReel = frame;
-        setSound(frame, true);
+      function toggleSound(e) {
+        if (e) e.stopPropagation();
+        var next = video.muted;
+        if (next && activeReel && activeReel !== frame) setSound(activeReel, false);
+        setSound(frame, next);
+        activeReel = next ? frame : null;
       }
 
-      if (playBtn) playBtn.addEventListener('click', startWithSound);
-      video.addEventListener('click', startWithSound);
-      if (muteBtn) {
-        muteBtn.addEventListener('click', function (e) {
-          e.stopPropagation();
-          setSound(frame, false);
-          if (activeReel === frame) activeReel = null;
-        });
-      }
+      if (soundBtn) soundBtn.addEventListener('click', toggleSound);
+      video.addEventListener('click', toggleSound);
     });
   }
 
   var aboutCover = document.querySelector('[data-about-cover]');
   if (aboutCover) {
     var aboutVideo = aboutCover.querySelector('video');
-    var aboutMute = aboutCover.querySelector('.unmute');
+    var aboutMute = aboutCover.querySelector('.sound-btn');
     var aboutExpand = aboutCover.querySelector('.about-expand');
     var aboutLightbox = document.getElementById('about-lightbox');
     var aboutFull = document.getElementById('about-walkthrough-full');
     var aboutClose = aboutLightbox ? aboutLightbox.querySelector('.video-lightbox-close') : null;
 
     function syncMuteUi() {
-      if (!aboutMute || !aboutVideo) return;
-      aboutMute.textContent = aboutVideo.muted ? '♪' : '🔊';
-      aboutMute.setAttribute('aria-label', aboutVideo.muted ? 'Unmute walkthrough' : 'Mute walkthrough');
+      syncSoundBtn(aboutMute, !aboutVideo || aboutVideo.muted, 'Unmute walkthrough', 'Mute walkthrough');
     }
 
     function setAboutMute(muted) {
@@ -582,6 +599,7 @@
 
     if (aboutVideo) {
       aboutVideo.muted = true;
+      syncMuteUi();
       aboutVideo.setAttribute('playsinline', '');
       if (site.walkthroughPoster) aboutVideo.setAttribute('poster', site.walkthroughPoster);
       function ensureAboutSrc() {
@@ -674,16 +692,154 @@
   });
 
   var form = document.getElementById('contact-form');
-  var formNext = document.getElementById('form-next');
-  if (formNext) {
-    formNext.value = window.location.origin + window.location.pathname + '?sent=1#contact';
-  }
-  if (/[?&]sent=1/.test(window.location.search)) {
-    var note = document.getElementById('form-note');
-    if (note) {
-      note.hidden = false;
-      note.classList.add('is-on');
+  if (form) {
+    var nameInput = document.getElementById('contact-name');
+    var emailInput = document.getElementById('contact-email');
+    var messageInput = document.getElementById('contact-message');
+    var honeyInput = document.getElementById('contact-honey');
+    var humanInput = document.getElementById('contact-human');
+    var verifyBox = document.getElementById('form-verify');
+    var verifyQ = document.getElementById('verify-q');
+    var submitBtn = document.getElementById('contact-submit');
+    var formNote = document.getElementById('form-note');
+    var verifyAnswer = 0;
+    var inbox = site.formTo || 'nomi.spyko@gmail.com';
+
+    function setFieldError(input, message) {
+      var error = document.getElementById(input.id + '-error');
+      var invalid = !!message;
+      input.setAttribute('aria-invalid', invalid ? 'true' : 'false');
+      if (error) {
+        error.textContent = message || '';
+        error.hidden = !invalid;
+        error.classList.toggle('is-on', invalid);
+      }
     }
+
+    function setNote(message, isError) {
+      if (!formNote) return;
+      formNote.textContent = message;
+      formNote.hidden = !message;
+      formNote.classList.toggle('is-on', !!message);
+      formNote.classList.toggle('is-error', !!isError);
+    }
+
+    function newChallenge() {
+      var left = Math.floor(Math.random() * 10);
+      var right = Math.floor(Math.random() * 10);
+      var add = Math.random() > 0.5;
+      if (!add && right > left) {
+        var swap = left;
+        left = right;
+        right = swap;
+      }
+      verifyAnswer = add ? left + right : left - right;
+      if (verifyQ) verifyQ.textContent = left + (add ? ' + ' : ' − ') + right + ' = ?';
+      if (humanInput) humanInput.value = '';
+    }
+
+    function readFields() {
+      return {
+        name: (nameInput && nameInput.value || '').trim(),
+        email: (emailInput && emailInput.value || '').trim(),
+        message: (messageInput && messageInput.value || '').trim(),
+      };
+    }
+
+    function validateFields() {
+      var data = readFields();
+      var ok = true;
+      if (!data.name || data.name.length < 2) {
+        setFieldError(nameInput, 'Enter your name.');
+        ok = false;
+      } else setFieldError(nameInput, '');
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) {
+        setFieldError(emailInput, 'Enter a valid email.');
+        ok = false;
+      } else setFieldError(emailInput, '');
+      if (!data.message || data.message.length < 8) {
+        setFieldError(messageInput, 'Write a short message.');
+        ok = false;
+      } else setFieldError(messageInput, '');
+      return ok ? data : null;
+    }
+
+    function deliver(data) {
+      var endpoint = site.formEndpoint;
+      if (endpoint) {
+        return fetch(endpoint, {
+          method: 'POST',
+          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+          body: JSON.stringify({
+            name: data.name,
+            email: data.email,
+            message: data.message,
+          }),
+        });
+      }
+
+      var body = 'Name: ' + data.name + '\nEmail: ' + data.email + '\n\n' + data.message;
+      var href = 'mailto:' + inbox +
+        '?subject=' + encodeURIComponent('Portfolio message from ' + data.name) +
+        '&body=' + encodeURIComponent(body);
+      var link = document.createElement('a');
+      link.href = href;
+      link.style.display = 'none';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      return Promise.resolve();
+    }
+
+    newChallenge();
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      setNote('');
+      if (honeyInput && honeyInput.value) return;
+
+      var data = validateFields();
+      if (!data) {
+        if (verifyBox) verifyBox.hidden = true;
+        return;
+      }
+
+      if (verifyBox && verifyBox.hidden) {
+        verifyBox.hidden = false;
+        newChallenge();
+        setFieldError(humanInput, '');
+        if (humanInput) humanInput.focus();
+        return;
+      }
+
+      var guess = Number(String(humanInput && humanInput.value || '').trim());
+      if (!Number.isFinite(guess) || guess !== verifyAnswer) {
+        newChallenge();
+        setFieldError(humanInput, 'Try again.');
+        if (humanInput) humanInput.focus();
+        return;
+      }
+      setFieldError(humanInput, '');
+
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending…';
+      }
+
+      deliver(data).then(function () {
+        form.reset();
+        if (verifyBox) verifyBox.hidden = true;
+        newChallenge();
+        setNote('Sent. Thanks — I will get back to you at the email you provided.');
+      }).catch(function () {
+        setNote('Could not send. Email me at ' + inbox + ' or try again.', true);
+      }).then(function () {
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Send message';
+        }
+      });
+    });
   }
 
   if (site.whatsapp) {

@@ -686,7 +686,7 @@ html.light .hero-float { opacity: 0.24; }
   pointer-events: auto;
 }
 
-.about-cover-hud .unmute,
+.about-cover-hud .sound-btn,
 .about-expand {
   position: static;
   flex: none;
@@ -1219,32 +1219,34 @@ html.light .hero-float { opacity: 0.24; }
 
 .reel-frame video::-webkit-media-controls { display: none !important; }
 
-.play-reel,
-.unmute {
-  position: absolute;
-  z-index: 2;
-  border: 0;
-  color: #fff;
-  cursor: pointer;
-}
-
-.play-reel {
-  inset: 0;
-  width: 100%;
-  height: 100%;
+.sound-btn {
   display: grid;
   place-items: center;
-  background: rgb(0 0 0 / 0.18);
-  font-size: 1.6rem;
+  padding: 0;
 }
 
-.unmute {
+.sound-btn svg {
+  display: block;
+  width: 18px;
+  height: 18px;
+}
+
+.sound-btn.is-muted {
+  box-shadow: 0 0 0 1px rgb(255 255 255 / 0.28);
+}
+
+.reel-frame .sound-btn {
+  position: absolute;
+  z-index: 2;
   top: 0.7rem;
   right: 0.7rem;
   width: 36px;
   height: 36px;
+  border: 0;
   border-radius: 999px;
-  background: rgb(0 0 0 / 0.45);
+  background: rgb(0 0 0 / 0.5);
+  color: #fff;
+  cursor: pointer;
 }
 
 .reel-meta {
@@ -1271,13 +1273,13 @@ html.light .hero-float { opacity: 0.24; }
     gap: 0.9rem;
     overflow-x: auto;
     overscroll-behavior-x: contain;
-    webkit-overflow-scrolling: touch;
+    -webkit-overflow-scrolling: touch;
     scroll-snap-type: x mandatory;
     scroll-padding-inline: 0.2rem;
     padding-bottom: 0.4rem;
     scrollbar-width: none;
   }
-  .reel::-webkit-scrollbar { display: none; }
+  .reels::-webkit-scrollbar { display: none; }
   .reel {
     flex: 0 0 min(72vw, 260px);
     scroll-snap-align: start;
@@ -1453,6 +1455,30 @@ textarea:focus-visible {
 
 textarea { min-height: 130px; resize: vertical; }
 
+input[aria-invalid="true"],
+textarea[aria-invalid="true"] {
+  border-color: #f87171;
+}
+
+.field-error {
+  display: none;
+  margin: 0.35rem 0 0;
+  color: #f87171;
+  font-size: 0.78rem;
+}
+
+.field-error.is-on { display: block; }
+
+.form-verify {
+  margin-bottom: 0.95rem;
+  padding: 0.85rem 0.95rem 0.15rem;
+  border-radius: 1rem;
+  border: 1px dashed color-mix(in oklab, var(--accent) 45%, var(--border));
+  background: var(--accent-soft);
+}
+
+.form-verify strong { color: var(--accent); }
+
 .form-note {
   display: none;
   margin: 0.8rem 0 0;
@@ -1461,6 +1487,7 @@ textarea { min-height: 130px; resize: vertical; }
 }
 
 .form-note.is-on { display: block; }
+.form-note.is-error { color: #f87171; }
 
 .socials { display: grid; gap: 0.65rem; }
 

@@ -7,6 +7,7 @@
   var nodes = [];
   var floats = [];
   var floatDeck = null;
+  var visibleLayers = {};
   var mouse = { x: 0.5, y: 0.5 };
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var mobile = window.matchMedia('(max-width: 900px)').matches;
@@ -65,7 +66,11 @@
     FLOAT_ZONES.forEach(function (zone) {
       var layer = document.querySelector('.page-floats[data-float-zone="' + zone.id + '"]');
       if (!layer) return;
-      var size = { w: layer.clientWidth || window.innerWidth, h: layer.clientHeight || 400 };
+      var measured = layerSize(layer);
+      var size = {
+        w: measured.w || window.innerWidth,
+        h: measured.h || 400,
+      };
       var count = mobile ? zone.mobile : zone.count;
       var placed = 0;
       var guard = 0;
@@ -101,10 +106,13 @@
           fx: 0.0006 + Math.random() * 0.0011,
           fy: 0.0005 + Math.random() * 0.001,
           ph: Math.random() * Math.PI * 2,
+          ready: measured.w >= 8 && measured.h >= 8,
+          layerVisible: !!visibleLayers[zone.id],
         });
         placed += 1;
       }
     });
+    syncLayerFlags();
     placeFloats();
   }
 
@@ -115,13 +123,41 @@
     }
   }
 
+  function layerSize(layer) {
+    return {
+      w: layer.clientWidth || 0,
+      h: layer.clientHeight || 0,
+    };
+  }
+
+  function scatterLayer(layer) {
+    var size = layerSize(layer);
+    if (size.w < 8 || size.h < 8) return false;
+    for (var i = 0; i < floats.length; i += 1) {
+      var item = floats[i];
+      if (item.layer !== layer || item.ready) continue;
+      item.x = Math.random() * Math.max(1, size.w - item.size);
+      item.y = Math.random() * Math.max(1, size.h - item.size);
+      item.ready = true;
+    }
+    return true;
+  }
+
+  function syncLayerFlags() {
+    for (var i = 0; i < floats.length; i += 1) {
+      var item = floats[i];
+      var id = item.layer.getAttribute('data-float-zone');
+      item.layerVisible = !!visibleLayers[id];
+      if (item.layerVisible) scatterLayer(item.layer);
+    }
+  }
+
   function driftFloats(now) {
     for (var i = 0; i < floats.length; i += 1) {
       var item = floats[i];
-      var size = {
-        w: item.layer.clientWidth || window.innerWidth,
-        h: item.layer.clientHeight || 400,
-      };
+      if (!item.ready) continue;
+      var size = layerSize(item.layer);
+      if (size.w < 8 || size.h < 8) continue;
       item.x += item.vx + Math.sin(now * item.fx + item.ph) * 0.22;
       item.y += item.vy + Math.cos(now * item.fy + item.ph) * 0.22;
       item.rot += item.vr;
@@ -208,11 +244,11 @@
   var raf = 0;
 
   function loop(now) {
-    if (!pageVisible || !heroVisible) {
+    if (!pageVisible) {
       raf = 0;
       return;
     }
-    draw();
+    if (heroVisible) draw();
     driftFloats(now || 0);
     raf = requestAnimationFrame(loop);
   }
@@ -242,8 +278,24 @@
   if (canvas.parentElement && 'IntersectionObserver' in window) {
     new IntersectionObserver(function (entries) {
       heroVisible = entries.some(function (entry) { return entry.isIntersecting; });
-      if (heroVisible) startLoop();
     }, { threshold: 0.05 }).observe(canvas.parentElement);
+  }
+
+  if ('IntersectionObserver' in window) {
+    var layerWatch = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        var id = entry.target.getAttribute('data-float-zone');
+        visibleLayers[id] = entry.isIntersecting;
+        if (entry.isIntersecting) scatterLayer(entry.target);
+      });
+      syncLayerFlags();
+    }, { threshold: 0.05, rootMargin: '120px 0px' });
+    document.querySelectorAll('.page-floats').forEach(function (layer) {
+      layerWatch.observe(layer);
+    });
+  } else {
+    FLOAT_ZONES.forEach(function (zone) { visibleLayers[zone.id] = true; });
+    syncLayerFlags();
   }
 
   resize();
