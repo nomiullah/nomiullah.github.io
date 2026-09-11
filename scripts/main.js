@@ -480,6 +480,7 @@
         '</article>'
       );
     }).join('');
+    reels.scrollLeft = 0;
 
     var activeReel = null;
     var reelWatch = new IntersectionObserver(function (entries) {
