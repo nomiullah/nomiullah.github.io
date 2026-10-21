@@ -12,22 +12,22 @@ window.SITE = {
 
   featured: [
     {
-      name: 'Web Development',
+      name: 'Shopify Plus Checkout',
       role: 'Core service',
-      icon: 'web',
-      blurb: 'Custom sites, landing pages, and product UI — built to load fast and stay easy to use.',
-    },
-    {
-      name: 'Shopify',
-      role: 'Commerce service',
       icon: 'shopify',
-      blurb: 'Themes, storefront UX, and checkout flows for brands that need a shop that converts.',
+      blurb: 'Checkout UI extensions and Shopify Functions for discount, shipping and payment rules, including rebuilding old Scripts.',
     },
     {
-      name: 'WordPress',
-      role: 'Publishing service',
+      name: 'Themes & Speed',
+      role: 'Storefront service',
+      icon: 'web',
+      blurb: 'Online Store 2.0 sections, theme builds, redesigns and Core Web Vitals fixes that keep stores fast and editable.',
+    },
+    {
+      name: 'WordPress & Migrations',
+      role: 'Platform service',
       icon: 'wordpress',
-      blurb: 'Elementor and custom WP builds that editors can update without breaking the design.',
+      blurb: 'WordPress and WooCommerce builds, plus WooCommerce to Shopify migrations with SEO redirects.',
     },
   ],
 
@@ -203,14 +203,6 @@ window.SITE = {
       detail: 'Verified skill · Design patterns, memory, concurrency, and the event loop',
       image: 'img/certificates/js-intermediate.png',
       url: 'https://www.hackerrank.com/certificates/564ea1a87bbe',
-    },
-    {
-      name: 'CSS (Basic)',
-      issuer: 'HackerRank',
-      issued: 'Issued Sep 2023',
-      detail: 'Verified skill · Cascade, inheritance, typography, layout, and the box model',
-      image: 'img/certificates/css-basic.png',
-      url: 'https://www.hackerrank.com/certificates/632e42aaab61',
     },
     {
       name: 'Claude Code 101',

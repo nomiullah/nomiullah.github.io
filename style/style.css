@@ -1603,6 +1603,90 @@ textarea[aria-invalid="true"] {
   transform: none;
 }
 
+/* CALENDLY (stacked above WhatsApp) */
+.cal-bubble {
+  position: fixed;
+  right: 1.15rem;
+  bottom: calc(1.15rem + 58px + 0.8rem);
+  z-index: 50;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 10px 28px rgb(0 0 0 / 0.28);
+  text-decoration: none;
+}
+
+.cal-bubble:hover,
+.cal-bubble:focus-visible {
+  box-shadow: 0 0 0 1px var(--accent), 0 0 28px var(--accent-soft);
+  outline: none;
+}
+
+.cal-bubble:hover .wa-label,
+.cal-bubble:focus-visible .wa-label {
+  opacity: 1;
+  transform: none;
+}
+
+/* WORK WITH ME */
+.wwm-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.wwm-card {
+  border-radius: 1.1rem;
+  padding: 1.3rem 1.3rem 1.4rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.wwm-card h3 { margin: 0 0 0.7rem; font-size: 1.1rem; }
+
+.wwm-card ul {
+  margin: 0;
+  padding-left: 1.1rem;
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  line-height: 1.65;
+}
+
+.wwm-cta { margin-top: 1.1rem; align-self: flex-start; }
+
+/* RECOMMENDATIONS */
+.reco-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2.2rem;
+}
+
+.reco-card {
+  margin: 0;
+  border-radius: 1.1rem;
+  padding: 1.3rem 1.35rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.reco-card blockquote {
+  margin: 0;
+  font-size: 0.98rem;
+  line-height: 1.65;
+  color: var(--text);
+}
+
+.reco-card figcaption { display: flex; flex-direction: column; gap: 0.15rem; }
+.reco-card figcaption b { font-size: 0.95rem; }
+.reco-card figcaption span { font-size: 0.8rem; color: var(--text-muted); }
+
 @keyframes pulse {
   from { transform: scale(0.85); opacity: 0.8; }
   to { transform: scale(1.25); opacity: 0; }
