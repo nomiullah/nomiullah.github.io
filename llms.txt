@@ -1,0 +1,23 @@
+# Noman Ullah Jannat
+
+> Web developer and AI specialist based in Rawalpindi, Pakistan, with Shopify and e-commerce expertise. Building websites and online stores since 2013. Works remotely with brands and agencies in the UK, Europe and the US.
+
+## Services
+- Websites in WordPress, Next.js and React
+- Shopify and Shopify Plus stores: Online Store 2.0 themes, checkout extensions, Shopify Functions, site speed
+- WooCommerce to Shopify migrations
+- AI-assisted web development (Claude Code and other AI coding tools, with every change reviewed and tested)
+
+## Background
+- Senior Shopify developer work with UK Shopify agencies; team lead at Node
+- Passed Toptal's developer screening
+- BS Software Engineering, Foundation University Islamabad
+- Anthropic Academy courses: Claude 101, Claude Code 101, Claude with Amazon Bedrock
+
+## Contact
+- Website: https://nomiullah.github.io/
+- Email: nomi.spyko@gmail.com
+- Phone / WhatsApp: +92 345 0571037
+- LinkedIn: https://www.linkedin.com/in/noman-ullah-jannat/
+- Google Business Profile: https://www.google.com/search?kgmid=/g/11q41kh7bw
+- Book a call: https://calendly.com/nomiullah/shopify-consultations
